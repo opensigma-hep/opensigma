@@ -6,9 +6,9 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from scripts.phenomap.hepdata import curl_status
-from scripts.phenomap.load import load_repo
-from scripts.phenomap.refs import cache_key, collect_refs
+from scripts.opensigma.hepdata import curl_status
+from scripts.opensigma.load import load_repo
+from scripts.opensigma.refs import cache_key, collect_refs
 
 
 def url_for(ref: str) -> str:
@@ -26,7 +26,7 @@ def http_status(url: str) -> int:
     if urllib.parse.urlparse(url).hostname == "www.hepdata.net":
         return curl_status(url)  # Cloudflare blocks urllib
     for method in ("HEAD", "GET"):
-        req = urllib.request.Request(url, method=method, headers={"User-Agent": "pheno-map/0.1"})
+        req = urllib.request.Request(url, method=method, headers={"User-Agent": "opensigma/0.1"})
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
                 return r.status

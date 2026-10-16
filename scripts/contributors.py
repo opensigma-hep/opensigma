@@ -11,7 +11,7 @@ from pathlib import Path
 from ruamel.yaml import YAML
 
 from scripts.assign_uids import _provenances
-from scripts.phenomap.load import load_repo
+from scripts.opensigma.load import load_repo
 
 
 def zenodo_contributors(repo: dict) -> list[dict]:

@@ -1,5 +1,5 @@
 [project]
-name = "pheno-map"
+name = "opensigma"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = ["ruamel.yaml>=0.18", "jsonschema>=4.21"]

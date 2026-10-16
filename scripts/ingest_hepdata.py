@@ -8,7 +8,7 @@ from pathlib import Path
 
 from ruamel.yaml import YAML
 
-from scripts.phenomap import hepdata
+from scripts.opensigma import hepdata
 
 LABEL_MAP = Path(__file__).parent.parent / "data" / "hepdata_label_map.yaml"
 

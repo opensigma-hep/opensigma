@@ -14,7 +14,7 @@ const a = (href, text) => el('a', { href, textContent: text });
 
 export function render(main) {
   main.replaceChildren(
-    el('h1', {}, 'About pheno-map'),
+    el('h1', {}, 'About OpenSigma'),
     el('p', {}, 'For each observable: what has been measured, what theory has achieved, and a referenced uncertainty budget. Every number carries its source, its locator in that source, and a verification status.'),
     el('h2', {}, 'Coverage rule'),
     el('h3', {}, 'Measurements'),

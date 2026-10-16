@@ -3,7 +3,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from scripts.phenomap.refs import update_cache
+from scripts.opensigma.refs import update_cache
 
 
 def main(argv=None) -> int:

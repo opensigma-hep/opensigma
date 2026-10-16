@@ -5,7 +5,7 @@ from ruamel.yaml import YAML
 
 from scripts import machine_verify
 from scripts.assign_uids import _yaml
-from scripts.phenomap import hepdata
+from scripts.opensigma import hepdata
 
 FIX = Path(__file__).parent / "fixtures"
 TABLE = YAML(typ="safe").load(FIX / "hepdata" / "table.yaml")

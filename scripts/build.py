@@ -9,10 +9,10 @@ from pathlib import Path
 
 from ruamel.yaml import YAML
 
-from scripts.phenomap.derive import derive
-from scripts.phenomap.load import LoadError, load_repo
-from scripts.phenomap.refs import update_cache
-from scripts.phenomap.validate import _plain, validate
+from scripts.opensigma.derive import derive
+from scripts.opensigma.load import LoadError, load_repo
+from scripts.opensigma.refs import update_cache
+from scripts.opensigma.validate import _plain, validate
 
 
 def _git_sha() -> str | None:

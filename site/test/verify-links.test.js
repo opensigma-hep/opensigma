@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { issueUrl, refUrl } from '../js/verify-links.js';
 
-const R = 'https://github.com/pheno-map/pheno-map';
+const R = 'https://github.com/opensigma-hep/opensigma';
 
 test('issue url encodes', () => assert.match(
   issueUrl(R, 'verify', { uid: 'a1b2c3d4', value: '±0.4', locator: 'Table 3, row "scale"', link: 'x', page: '#/obs:a' }),

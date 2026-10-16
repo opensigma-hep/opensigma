@@ -5,7 +5,7 @@ argument-hint: <proc:id | INSPIRE recid of a candidate>
 
 # /draft-process $ARGUMENTS
 
-You draft pheno-map data as an agent. The owner starts this command by hand, or `/refresh` starts it in a subagent. It never runs on a schedule. Work from the repo root and use `.venv/bin/python` for every script.
+You draft OpenSigma data as an agent. The owner starts this command by hand, or `/refresh` starts it in a subagent. It never runs on a schedule. Work from the repo root and use `.venv/bin/python` for every script.
 
 The argument `$ARGUMENTS` is either:
 - a process id (`proc:...`): draft that process, or bring it up to the coverage rule, in `data/processes/<family>/<slug>.yaml`; or

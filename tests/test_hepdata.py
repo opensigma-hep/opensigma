@@ -4,7 +4,7 @@ from ruamel.yaml import YAML
 from pathlib import Path
 
 from scripts import ingest_hepdata, linkcheck
-from scripts.phenomap import hepdata
+from scripts.opensigma import hepdata
 
 ROOT = Path(__file__).parent.parent
 FIX = Path(__file__).parent / "fixtures"

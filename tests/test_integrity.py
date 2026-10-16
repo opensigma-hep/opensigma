@@ -3,8 +3,8 @@ from pathlib import Path
 
 import pytest
 
-from scripts.phenomap.load import load_repo
-from scripts.phenomap.validate import validate, validate_integrity
+from scripts.opensigma.load import load_repo
+from scripts.opensigma.validate import validate, validate_integrity
 
 ROOT = Path(__file__).parent
 MIN = ROOT / "fixtures" / "repo_min"

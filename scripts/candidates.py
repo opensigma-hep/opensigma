@@ -9,7 +9,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from scripts.phenomap.candidates import find
+from scripts.opensigma.candidates import find
 
 
 def main(argv=None) -> int:

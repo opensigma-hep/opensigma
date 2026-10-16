@@ -1,4 +1,4 @@
-# Pheno-map — design decisions log
+# OpenSigma (formerly pheno-map) — design decisions log
 
 Running record of decisions from the design grilling. Nothing is built until the design is confirmed.
 
@@ -89,10 +89,10 @@ uncertainty — repeated per observable.
 19. **License & citation (Q18):** data CC-BY 4.0, code MIT. Zenodo DOI per release via GitHub integration;
     releases cut manually by owner (e.g. v2026.11). Footer "cite this version" BibTeX (version + concept DOI).
     CITATION.cff in repo. Verifiers + family maintainers auto-listed as Zenodo contributors.
-20. **Repo (Q19):** new GitHub organisation `pheno-map` (name free as of 2026-10-16; note `phenomap` user exists —
-    minor confusion risk; no INSPIRE title clash). Repo github.com/pheno-map/pheno-map → served at pheno-map.github.io/pheno-map/ (a repo named
-    `pheno-map.github.io` would be needed for the bare org URL; site uses relative paths + hash routing so either works).
-    Setup step: install `gh` CLI (not present) for /refresh PRs.
+20. **Repo (Q19):** name **OpenSigma** (renamed from the placeholder pheno-map on 2026-10-16). GitHub organisation
+    `opensigma-hep` (`opensigma` and `open-sigma` were unavailable). Repo github.com/opensigma-hep/opensigma → served at
+    opensigma-hep.github.io/opensigma/ (site uses relative paths + hash routing, so a later move to the bare org URL works).
+    Setup step: install `gh` CLI for /refresh PRs (installed 2026-10-16).
 21. **Leaf (observable) page (Q20):** header (breadcrumb, coverage, last_reviewed, candidate count, deep link,
     copy-BibTeX) · headline strip (theory vs exp total vs theory_target) · measurements table · side-by-side
     exp/theory stacked uncertainty bars by category, expandable to specific/method/range/regions/locator, with

@@ -13,7 +13,7 @@ from typing import NamedTuple
 from ruamel.yaml import YAML
 
 from scripts.assign_uids import PATTERNS, _yaml
-from scripts.phenomap import hepdata
+from scripts.opensigma import hepdata
 
 LABEL_MAP = Path(__file__).parent.parent / "data" / "hepdata_label_map.yaml"
 HEP_REF = re.compile(r"^hepdata:ins(\d+)/(.+)$")

@@ -2,8 +2,8 @@ from copy import deepcopy
 from datetime import date
 from pathlib import Path
 
-from scripts.phenomap.derive import derive, is_stale, max_qcd_order, precision_ratio
-from scripts.phenomap.load import load_repo
+from scripts.opensigma.derive import derive, is_stale, max_qcd_order, precision_ratio
+from scripts.opensigma.load import load_repo
 
 MIN = Path(__file__).parent / "fixtures" / "repo_min"
 TODAY = date(2026, 10, 16)

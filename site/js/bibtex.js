@@ -19,14 +19,14 @@ export function collectBibtex(node, refs) {
 export function releaseBibtex(rel, year) {
   if (!rel) return '';
   const entry = (key, doi, extra = '') => `@misc{${key},
-  title = {pheno-map: a map of collider phenomenology},
-  author = {{pheno-map contributors}},
+  title = {OpenSigma: an open map of collider phenomenology},
+  author = {{OpenSigma contributors}},
   year = {${year}},${extra}
   doi = {${doi}},
   url = {https://doi.org/${doi}},
 }`;
   return [
-    entry(`pheno-map-${rel.version}`, rel.doi, `\n  version = {${rel.version}},`),
-    entry('pheno-map-concept', rel.concept_doi),
+    entry(`opensigma-${rel.version}`, rel.doi, `\n  version = {${rel.version}},`),
+    entry('opensigma-concept', rel.concept_doi),
   ].join('\n\n');
 }

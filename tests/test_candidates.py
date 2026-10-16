@@ -7,8 +7,8 @@ from pathlib import Path
 import pytest
 
 from scripts import build
-from scripts.phenomap import candidates
-from scripts.phenomap.candidates import find, query_for
+from scripts.opensigma import candidates
+from scripts.opensigma.candidates import find, query_for
 
 MIN = Path(__file__).parent / "fixtures" / "repo_min"
 DY = "processes/vector-bosons/dy-nc.yaml"

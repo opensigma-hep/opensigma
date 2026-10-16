@@ -1,7 +1,7 @@
 import shutil
 from pathlib import Path
 
-from scripts.phenomap.load import load_repo
+from scripts.opensigma.load import load_repo
 
 FIXTURE = Path(__file__).parent / "fixtures" / "repo_min"
 

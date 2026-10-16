@@ -3,7 +3,7 @@ import shutil
 from pathlib import Path
 
 from scripts import contributors
-from scripts.phenomap.load import load_repo
+from scripts.opensigma.load import load_repo
 
 MIN = Path(__file__).parent / "fixtures" / "repo_min"
 DY = "processes/vector-bosons/dy-nc.yaml"
@@ -38,6 +38,6 @@ def test_main_writes_zenodo_json_from_citation(tmp_path):
     z = json.loads(out.read_text(encoding="utf-8"))
     assert z["upload_type"] == "dataset" and z["license"] == "CC-BY-4.0"
     assert z["creators"][0] == {"name": "Gambuti, Giulio", "affiliation": "ETH Zürich"}
-    assert z["creators"][1]["name"] == "pheno-map contributors"
+    assert z["creators"][1]["name"] == "OpenSigma contributors"
     assert z["contributors"] == []
     assert (ROOT / ".zenodo.json").read_text(encoding="utf-8") == out.read_text(encoding="utf-8")  # committed file is current

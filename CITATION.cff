@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-message: "If you use pheno-map, please cite it. The DOI of the release you used is on the Zenodo record."
-title: "pheno-map: a map of collider phenomenology"
+message: "If you use OpenSigma, please cite it. The DOI of the release you used is on the Zenodo record."
+title: "OpenSigma: an open map of collider phenomenology"
 type: dataset
 authors:
   - family-names: Gambuti
     given-names: Giulio
     affiliation: "ETH Zürich"
-  - name: "pheno-map contributors"
+  - name: "OpenSigma contributors"
 license: [CC-BY-4.0, MIT]  # data CC-BY-4.0 (data/LICENSE), code MIT (LICENSE)
-repository-code: "https://github.com/pheno-map/pheno-map"
-url: "https://pheno-map.github.io/pheno-map/"
+repository-code: "https://github.com/opensigma-hep/opensigma"
+url: "https://opensigma-hep.github.io/opensigma/"

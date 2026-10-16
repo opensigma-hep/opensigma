@@ -20,7 +20,7 @@ const views = {
   search, collider: placeholder,
 };
 
-const THEME_KEY = 'pheno-map-theme';
+const THEME_KEY = 'opensigma-theme';
 const root = document.documentElement;
 const main = document.getElementById('main');
 const toggle = document.getElementById('theme-toggle');
@@ -85,8 +85,8 @@ function route() {
   const r = parseHash(location.hash, data.derived.aliases, idset, data.derived.parents);
   if (r.redirected) history.replaceState(null, '', toHash(r.id));
   views[r.view].render(main, data, r);
-  document.title = (r.id ?? r.q ?? r.view) + ' · pheno-map';
-  if (r.view === 'families') document.title = 'pheno-map';
+  document.title = (r.id ?? r.q ?? r.view) + ' · OpenSigma';
+  if (r.view === 'families') document.title = 'OpenSigma';
   if (!first) main.focus({ preventScroll: true });
   first = false;
   window.scrollTo(0, 0);

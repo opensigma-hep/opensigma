@@ -15,7 +15,7 @@ REF_KEYS = {"ref", "refs", "source", "full_table", "hepdata"}  # `source` is als
 
 def http_get_json(url: str):
     """GET url; parsed JSON, or raw text for BibTeX requests."""
-    req = urllib.request.Request(url, headers={"User-Agent": "pheno-map/0.1"})
+    req = urllib.request.Request(url, headers={"User-Agent": "opensigma/0.1"})
     with urllib.request.urlopen(req, timeout=30) as r:
         body = r.read().decode("utf-8")
     return body if "format=bibtex" in url else json.loads(body)

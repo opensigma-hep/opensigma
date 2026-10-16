@@ -6,15 +6,15 @@ import pytest
 from ruamel.yaml import YAML
 
 from scripts import apply_verification
-from scripts.phenomap import verify
-from scripts.phenomap.load import load_repo
-from scripts.phenomap.validate import validate_schema
+from scripts.opensigma import verify
+from scripts.opensigma.load import load_repo
+from scripts.opensigma.validate import validate_schema
 
 FIX = Path(__file__).parent / "fixtures"
 SCHEMA = Path(__file__).parent.parent / "data" / "schema"
 DY = "processes/vector-bosons/dy-nc.yaml"
 UID = "b2c3d4e5"  # a datum in dy-nc.yaml
-URL = "https://github.com/pheno-map/pheno-map/issues/7"
+URL = "https://github.com/opensigma-hep/opensigma/issues/7"
 TODAY = date(2026, 10, 16)
 
 

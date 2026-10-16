@@ -4,8 +4,8 @@ from pathlib import Path
 
 import pytest
 
-from scripts.phenomap import refs
-from scripts.phenomap.load import load_repo
+from scripts.opensigma import refs
+from scripts.opensigma.load import load_repo
 
 FIX = Path(__file__).parent / "fixtures"
 INSPIRE = FIX / "inspire"

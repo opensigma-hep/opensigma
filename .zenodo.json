@@ -1,5 +1,5 @@
 {
-  "title": "pheno-map: a map of collider phenomenology",
+  "title": "OpenSigma: an open map of collider phenomenology",
   "upload_type": "dataset",
   "license": "CC-BY-4.0",
   "creators": [
@@ -8,7 +8,7 @@
       "affiliation": "ETH Zürich"
     },
     {
-      "name": "pheno-map contributors"
+      "name": "OpenSigma contributors"
     }
   ],
   "contributors": []

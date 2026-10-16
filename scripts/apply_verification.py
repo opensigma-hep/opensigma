@@ -7,7 +7,7 @@ import argparse
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from scripts.phenomap import verify
+from scripts.opensigma import verify
 
 
 def main(argv=None) -> int:

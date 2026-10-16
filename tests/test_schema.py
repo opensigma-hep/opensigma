@@ -3,8 +3,8 @@ from pathlib import Path
 import pytest
 from ruamel.yaml import YAML
 
-from scripts.phenomap.load import load_repo
-from scripts.phenomap.validate import validate_schema
+from scripts.opensigma.load import load_repo
+from scripts.opensigma.validate import validate_schema
 
 ROOT = Path(__file__).parent
 MIN = ROOT / "fixtures" / "repo_min"
@@ -71,8 +71,8 @@ def test_unquoted_dates_accepted():
 
 
 @pytest.mark.parametrize("field, bad, good", [
-    ("issue", "javascript:alert(1)", "https://github.com/pheno-map/pheno-map/issues/3"),
-    ("issues", ["javascript:alert(1)"], ["https://github.com/pheno-map/pheno-map/issues/3"]),
+    ("issue", "javascript:alert(1)", "https://github.com/opensigma-hep/opensigma/issues/3"),
+    ("issues", ["javascript:alert(1)"], ["https://github.com/opensigma-hep/opensigma/issues/3"]),
 ])
 def test_provenance_issue_links_must_be_github(field, bad, good):
     proc = load_repo(MIN)["processes"][0]
