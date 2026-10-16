@@ -1,0 +1,115 @@
+import json
+from pathlib import Path
+
+import pytest
+
+from scripts.phenomap import refs
+from scripts.phenomap.load import load_repo
+
+FIX = Path(__file__).parent / "fixtures"
+INSPIRE = FIX / "inspire"
+ARXIV_TO_RECID = {"2001.00001": "1000001", "hep-ph/0201195": "1000002", "2003.00003": "1000003"}
+
+
+class FakeFetch:
+    def __init__(self):
+        self.urls = []
+
+    def __call__(self, url):
+        self.urls.append(url)
+        if "format=bibtex" in url:
+            return (INSPIRE / f"bibtex_{url.split('?')[0].rsplit('/', 1)[1]}.txt").read_text()
+        if "/arxiv/" in url:
+            recid = ARXIV_TO_RECID[url.split("/arxiv/")[1]]
+        else:
+            recid = url.split("?")[0].rsplit("/", 1)[1]
+        p = INSPIRE / f"{recid}.json"
+        if not p.exists():
+            raise OSError("404")
+        return json.loads(p.read_text())
+
+
+def test_resolve_inspire():
+    cache = {}
+    e = refs.resolve("inspire:1000001", cache, FakeFetch())
+    assert e == {
+        "recid": 1000001, "arxiv": "2001.00001", "doi": "10.1000/fake.1000001",
+        "title": "Measurement of the Drell-Yan cross section in pp collisions at 13 TeV",
+        "authors_short": "Fakeexp Collaboration", "year": 2020,
+        "bibtex": '@article{Fake:1000001,\n    title = "{Fake 1}",\n    year = "2020"\n}\n',
+    }
+    assert cache["inspire:1000001"] == e
+
+
+def test_resolve_arxiv_maps_to_recid():
+    cache = {}
+    e = refs.resolve("arXiv:hep-ph/0201195", cache, FakeFetch())
+    assert e["recid"] == 1000002 and e["arxiv"] == "hep-ph/0201195"
+    assert cache["arXiv:hep-ph/0201195"] == cache["inspire:1000002"] == e
+    # figure locator is stripped
+    cache2 = {}
+    assert refs.resolve("arXiv:2001.00001, Fig. 3", cache2, FakeFetch())["recid"] == 1000001
+    assert "arXiv:2001.00001" in cache2
+
+
+def test_hepdata_ref_resolves_parent():
+    cache = {}
+    e = refs.resolve("hepdata:ins1000003/Table 1", cache, FakeFetch())
+    assert e["recid"] == 1000003 and e["doi"] is None
+    assert "inspire:1000003" in cache
+
+
+def test_cache_hit_makes_no_calls():
+    f = FakeFetch()
+    cache = {}
+    refs.resolve("inspire:1000001", cache, f)
+    n = len(f.urls)
+    refs.resolve("hepdata:ins1000001/Table 2", cache, f)
+    assert len(f.urls) == n
+
+
+def test_authors_short():
+    f = FakeFetch()
+    assert refs.resolve("inspire:1000004", {}, f)["authors_short"] == "Solo"
+    assert refs.resolve("inspire:1000002", {}, f)["authors_short"] == "Alpha and Beta"
+    assert refs.resolve("inspire:1000003", {}, f)["authors_short"] == "Gamma et al."
+    assert refs.resolve("inspire:1000001", {}, f)["authors_short"] == "Fakeexp Collaboration"
+
+
+def test_collect_refs():
+    got = refs.collect_refs(load_repo(FIX / "repo_min"))
+    assert {"inspire:1000001", "inspire:1000002", "inspire:1000003", "arXiv:2001.00001",
+            "hepdata:ins1000001/Table 1", "hepdata:ins1000001/Table 2"} <= got
+    assert not any(r in ("agent", "hepdata", "human") for r in got)
+
+
+def _root(tmp_path, ref_list):
+    (tmp_path / "families.yaml").write_text("[]\n")
+    (tmp_path / "colliders.yaml").write_text("[]\n")
+    (tmp_path / "processes" / "x").mkdir(parents=True)
+    (tmp_path / "processes" / "x" / "p.yaml").write_text(json.dumps({"id": "proc:x", "refs": ref_list}))
+    return tmp_path
+
+
+def test_offline_reports_missing(tmp_path):
+    root = _root(tmp_path, ["inspire:1000001", "inspire:9"])
+    (root / "refs.json").write_text(json.dumps({"inspire:1000001": {"recid": 1000001}}))
+    f = FakeFetch()
+    assert refs.update_cache(root, offline=True, fetch=f) == ["inspire:9"]
+    assert f.urls == []
+
+
+def test_update_cache_online_writes_only_on_change(tmp_path):
+    root = _root(tmp_path, ["inspire:1000001", "arXiv:2003.00003, Fig. 1", "inspire:424242"])
+    sleeps = []
+    f = FakeFetch()
+    assert refs.update_cache(root, offline=False, fetch=f, sleep=sleeps.append) == ["inspire:424242"]
+    assert sleeps and all(s == 0.35 for s in sleeps) and len(sleeps) == len(f.urls)
+    path = root / "refs.json"
+    text = path.read_text()
+    data = json.loads(text)
+    assert list(data) == sorted(data) and text.endswith("\n")
+    assert {"inspire:1000001", "inspire:1000003", "arXiv:2003.00003"} <= set(data)
+    mtime = path.stat().st_mtime_ns
+    refs.update_cache(root, offline=True, fetch=f)
+    assert path.stat().st_mtime_ns == mtime and path.read_text() == text
