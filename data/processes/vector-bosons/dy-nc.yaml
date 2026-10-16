@@ -518,12 +518,12 @@ channels:
             refs: ["inspire:1753680", "inspire:1408300"]
             provenance: {uid: 6af9255c, ref: "inspire:1753680", locator: "Results section ('complete NNLO predictions of vector boson production in association with a jet [4, 5]') and Fig. 7 right", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NNLO QCD fixed order (FEWZ, NNPDF3.1), pT > 32 GeV"
-            accuracy: {qcd: NNLO, approximations: ["compared only for pT(ℓℓ) > 32 GeV"]}
+            accuracy: {qcd: NLO, approximations: ["compared only for pT(ℓℓ) > 32 GeV", "fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation"]}
             codes: ["FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
             compared_to: ["meas:dy-nc/lhc-13/cms-2019-diff"]
             refs: ["inspire:1753680", "inspire:877524"]
-            provenance: {uid: 1a1d17e4, ref: "inspire:1753680", locator: "Results section ('FEWZ predictions at NNLO in QCD') and Fig. 7 right", source: agent, status: cross-checked, date: "2026-10-16"}
+            provenance: {uid: 1a1d17e4, ref: "inspire:1753680", locator: "Results section ('FEWZ predictions at NNLO in QCD') and Fig. 7 right", source: agent, status: agent-draft, date: "2026-10-16"}
       - id: "obs:dy-nc/lhc-13/yll"
         name: "dσ/d|y(ℓℓ)|, Z-peak region"
         kind: differential
@@ -788,12 +788,12 @@ channels:
                 provenance: {uid: cce78ab3, ref: "hepdata:ins856972/Table 1", locator: "Table 1, error 'sys' (four components with the same label, pooled over all bins)", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD fixed order, O(αs²) (FEWZ2, MSTW2008 NNLO), CDF 2012 comparison"
-            accuracy: {qcd: NNLO, approximations: ["fixed order O(αs²); μR = μF = mZ; used as an inclusive calculation in 66–116 GeV"]}
+            accuracy: {qcd: NLO, approximations: ["fixed order O(αs²); μR = μF = mZ; used as an inclusive calculation in 66–116 GeV", "fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation"]}
             codes: ["FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
             compared_to: ["meas:dy-nc/tevatron-1960/cdf-2012-ptll"]
             refs: ["inspire:1124333", "inspire:877524"]
-            provenance: {uid: 9a76af16, ref: "inspire:1124333", locator: "Sec. II (QCD calculations: fewz2 NNLO, MSTW2008 NNLO PDFs, Gμ scheme, scales at mZ) and Sec. VI.4", source: agent, status: cross-checked, date: "2026-10-16"}
+            provenance: {uid: 9a76af16, ref: "inspire:1124333", locator: "Sec. II (QCD calculations: fewz2 NNLO, MSTW2008 NNLO PDFs, Gμ scheme, scales at mZ) and Sec. VI.4", source: agent, status: agent-draft, date: "2026-10-16"}
           - label: "CSS resummation matched to O(αs) with NNLO/NLO K-factors (ResBos, CTEQ6.6), CDF 2012 comparison"
             accuracy:
               qcd: NLO
@@ -878,12 +878,12 @@ channels:
                 provenance: {uid: e03d9ef4, ref: "inspire:894312", locator: "Table 1, pT > 55 GeV: ± 0.61 (stat) of 4.97 (×10⁻¹)", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD (FEWZ, MSTW2008 NNLO)"
-            accuracy: {qcd: NNLO}
+            accuracy: {qcd: NLO, approximations: ["fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation"]}
             codes: ["FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
             compared_to: ["meas:dy-nc/tevatron-1960/cdf-2011-ai"]
             refs: ["inspire:894312", "inspire:725573"]
-            provenance: {uid: ca24781e, ref: "inspire:894312", locator: "Fig. 3 caption (agreement with fewz and powheg) and Ref. [22] (FEWZ, MSTW2008 NNLO PDFs)", source: agent, status: cross-checked, date: "2026-10-16"}
+            provenance: {uid: ca24781e, ref: "inspire:894312", locator: "Fig. 3 caption (agreement with fewz and powheg) and Ref. [22] (FEWZ, MSTW2008 NNLO PDFs)", source: agent, status: agent-draft, date: "2026-10-16"}
           - label: "Z+jet NLO+PS (POWHEG V+jet, CTEQ6.6)"
             accuracy: {qcd: NLO, shower_matched: true, approximations: ["POWHEG vector boson plus one jet at NLO (Ref. [21])"]}
             codes: ["POWHEG-BOX"]
@@ -1119,12 +1119,12 @@ channels:
                 provenance: {uid: 0c2755df, ref: "hepdata:ins1373300/Table 2", locator: "Table 2, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD fixed order (FEWZ and DYNNLO, CT10), ATLAS 2014"
-            accuracy: {qcd: NNLO, approximations: ["fixed order O(αs²); no resummation, diverges at low pT(ℓℓ)"]}
+            accuracy: {qcd: NLO, approximations: ["fixed order O(αs²); no resummation, diverges at low pT(ℓℓ)", "fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation"]}
             codes: ["FEWZ", "DYNNLO"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
             compared_to: ["meas:dy-nc/lhc-7/atlas-2014-ptll"]
             refs: ["inspire:1300647", "inspire:877524", "inspire:815316"]
-            provenance: {uid: c6047625, ref: "inspire:1300647", locator: "Sec. 9 (Born-level combined result compared to Fewz and Dynnlo, CT10) and Fig. 7", source: agent, status: cross-checked, date: "2026-10-16"}
+            provenance: {uid: c6047625, ref: "inspire:1300647", locator: "Sec. 9 (Born-level combined result compared to Fewz and Dynnlo, CT10) and Fig. 7", source: agent, status: agent-draft, date: "2026-10-16"}
           - label: "ResBos-GNW (labelled NNLO+NNLL by ATLAS, CT10), ATLAS 2014"
             accuracy:
               qcd: NNLO
@@ -1405,12 +1405,7 @@ channels:
             uncertainties: []
           - measurement: "meas:dy-nc/lhc-8/atlas-2023-ptll-y"
             total: {value_pct: 0.17, provenance: {uid: 6a97a15f, ref: "hepdata:ins2698794/Table 10", locator: "Table 10, quadrature sum of all errors (bin 4); normalised (1/σ) dσ/dpT, full lepton phase space, |y| < 1.6, 80 < mℓℓ < 100 GeV, 8 < pT < 11.4 GeV: 0.0377257 ± 6.48e-5 (tot) GeV⁻¹", source: hepdata, status: machine-verified, date: "2026-10-16"}}
-            uncertainties:
-              - category: other
-                specific: tot
-                size: {range: [0.17, 1.5], asymmetric: false}
-                full_table: "hepdata:ins2698794/Table 10"
-                provenance: {uid: 69aad6a2, ref: "hepdata:ins2698794/Table 10", locator: "Table 10, error 'tot' (total uncertainty; HEPData v1, the record also has v2)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+            uncertainties: []
           - measurement: "meas:dy-nc/lhc-8/cms-2015-diff"
             total: {value_pct: 0.31, provenance: {uid: e166422a, ref: "hepdata:ins1359450/Table 1", locator: "HEPData v1 'Table 1', first dependent variable (normalised (1/σ) d²σ/dpT d|y|, μμ, 81 < mμμ < 101 GeV, |y| 0 to 0.4), bin 1 (0 < qT < 20 GeV): 0.02097 ± 6.563e-5 GeV⁻¹; single unlabelled total experimental error, so not ingestable", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties: []
@@ -1511,12 +1506,12 @@ channels:
             refs: ["inspire:1408516", "inspire:1252862"]
             provenance: {uid: 4c0b7b33, ref: "inspire:1408516", locator: "Sec. 3.2 (ResBos [49]: approximate NNLO, NNLL, GNW [50, 51], CT14 NNLO) and Sec. 5.2", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NNLO QCD + NLO EW virtual (DYNNLO 1.3, CT10 NNLO), ATLAS 2016"
-            accuracy: {qcd: NNLO, ew: NLO, approximations: ["fixed order; no soft-gluon resummation", "NLO EW: virtual corrections only, from Denner et al. (Ref. [56])"]}
+            accuracy: {qcd: NLO, ew: NLO, approximations: ["fixed order; no soft-gluon resummation", "NLO EW: virtual corrections only, from Denner et al. (Ref. [56])", "fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation"]}
             codes: ["DYNNLO"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
             compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
             refs: ["inspire:1408516", "inspire:815316", "inspire:891490"]
-            provenance: {uid: 632325ae, ref: "inspire:1408516", locator: "Sec. 3.2 (Dynnlo 1.3, CT10 NNLO, Gμ scheme, NLO EW virtual corrections [55, 56]) and Sec. 5.4", source: agent, status: cross-checked, date: "2026-10-16"}
+            provenance: {uid: 632325ae, ref: "inspire:1408516", locator: "Sec. 3.2 (Dynnlo 1.3, CT10 NNLO, Gμ scheme, NLO EW virtual corrections [55, 56]) and Sec. 5.4", source: agent, status: agent-draft, date: "2026-10-16"}
           - label: "NLO+PS QCD (POWHEG + Pythia 8, AZNLO tune), ATLAS 2016"
             accuracy: {qcd: NLO, shower_matched: true, approximations: ["AZNLO tune fitted to ATLAS 7 TeV pT(ℓℓ) and φ* data"]}
             codes: ["POWHEG-BOX", "Pythia8"]
@@ -1525,12 +1520,12 @@ channels:
             refs: ["inspire:1408516", "inspire:1300647", "inspire:787440"]
             provenance: {uid: 1ff434f5, ref: "inspire:1408516", locator: "Sec. 3.2 (additional Powheg + Pythia sample with the AZNLO tune [15]) and Sec. 5.3", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NNLO QCD + NLO EW (FEWZ 3.1.b2), CMS 2015"
-            accuracy: {qcd: NNLO, ew: NLO, approximations: ["computed per qT bin; includes initial-state photon radiation and photon-induced processes"]}
+            accuracy: {qcd: NLO, ew: NLO, approximations: ["computed per qT bin; includes initial-state photon radiation and photon-induced processes", "fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation"]}
             codes: ["FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
             compared_to: ["meas:dy-nc/lhc-8/cms-2015-diff"]
             refs: ["inspire:1359450", "inspire:1182519"]
-            provenance: {uid: 314f78fc, ref: "inspire:1359450", locator: "Sec. 0.3 (FEWZ 3.1.b2 [32] at NNLO with NLO EW corrections) and Abstract ('results agree with the NNLO predictions computed with the FEWZ program')", source: agent, status: cross-checked, date: "2026-10-16"}
+            provenance: {uid: 314f78fc, ref: "inspire:1359450", locator: "Sec. 0.3 (FEWZ 3.1.b2 [32] at NNLO with NLO EW corrections) and Abstract ('results agree with the NNLO predictions computed with the FEWZ program')", source: agent, status: agent-draft, date: "2026-10-16"}
           - label: "NLO+PS QCD (POWHEG + Pythia 6, CT10), CMS 2015"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["POWHEG-BOX", "Pythia6"]
@@ -1635,18 +1630,18 @@ channels:
                 provenance: {uid: a2421e91, ref: "hepdata:ins1359451/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "Fixed order O(αs²) (as described in the ATLAS abstract), ATLAS 2016"
-            accuracy: {qcd: NNLO, approximations: ["inclusive calculation formally accurate to O(αs²), but the coefficients as a function of pT(Z) are only NLO (Z+jet); cross-checked with FEWZ v3.1.b2 NNLO, agreement within uncertainties; CT10 NLO/NNLO PDFs, scale sqrt(mZ² + pT²)"]}
+            accuracy: {qcd: NLO, approximations: ["inclusive calculation formally accurate to O(αs²), but the coefficients as a function of pT(Z) are only NLO (Z+jet); cross-checked with FEWZ v3.1.b2 NNLO, agreement within uncertainties; CT10 NLO/NNLO PDFs, scale sqrt(mZ² + pT²)"]}
             codes: ["DYNNLO v1.3"]
             compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ai"]
             refs: ["inspire:1466778"]
             provenance: {uid: 7955c7b5, ref: "inspire:1466778", locator: "Sec. 2 (DYNNLO v1.3 [25] at NLO and NNLO, formally accurate to O(αs²); cross-checked with FEWZ v3.1.b2 [26–28]) and Abstract ('most precise fixed-order calculations currently available (O(αs²))')", source: agent, status: agent-draft, date: "2026-10-16"}
           - label: "NNLO QCD (FEWZ), CMS 2015"
-            accuracy: {qcd: NNLO, approximations: ["O(αs²) for the angular coefficients, i.e. NLO for Z+jet"]}
+            accuracy: {qcd: NLO, approximations: ["O(αs²) for the angular coefficients, i.e. NLO for Z+jet"]}
             codes: ["FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
             compared_to: ["meas:dy-nc/lhc-8/cms-2015-ai"]
             refs: ["inspire:1359451", "inspire:877524"]
-            provenance: {uid: 16bb392d, ref: "inspire:1359451", locator: "Introduction (compared with FEWZ at NNLO [18], POWHEG at NLO and MadGraph at LO; Ref. [18] = FEWZ 2.0)", source: agent, status: cross-checked, date: "2026-10-16"}
+            provenance: {uid: 16bb392d, ref: "inspire:1359451", locator: "Introduction (compared with FEWZ at NNLO [18], POWHEG at NLO and MadGraph at LO; Ref. [18] = FEWZ 2.0)", source: agent, status: agent-draft, date: "2026-10-16"}
           - label: "NLO+PS QCD (POWHEG), CMS 2015"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["POWHEG-BOX"]

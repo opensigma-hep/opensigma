@@ -35,6 +35,7 @@ Sources, in order of preference:
 - Ids are stable slugs (`proc: chan: meas: obs: amp: par:`). Never rename an existing id. If you must rename, keep the old one in `aliases:`.
 - Never store derived values (precision ratio, max order, process status, stats).
 - Do not change any datum whose status is above `agent-draft` (`cross-checked`, `machine-verified`, `human-verified`, `disputed`). If its source disagrees with it, report the disagreement instead of editing it.
+- **Order labels are per observable.** `accuracy.qcd` is the order of the observable the prediction targets, not the paper's naming: a fixed-order O(αs²) prediction for a distribution that is zero at Born level (pT(ℓℓ), φ*, angular coefficients A_i) is `qcd: NLO`, with an approximations note such as "fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation".
 - New processes get a `watch:` block: `recids:` (key papers whose citations signal new results) and `queries:` (INSPIRE search strings). Leave `last_run` out.
 
 **Candidates** (`data/candidates.json`, `{proc_id: [{recid, title, arxiv, matched_by, channels?}]}`):

@@ -74,6 +74,7 @@ Only after you have recorded all extractions, read the stored values (open the f
 ## 3. Compare and record
 
 - **Agreement**: the values match within rounding, meaning that rounded to the stored value's precision they are equal, or they differ by at most one unit in the last stored digit. Then change only that provenance's `status: agent-draft` to `status: cross-checked`. Do not touch any other field, and never set `verified_by`.
+  For orders, compare against the order of the observable (fixed-order O(αs²) for a distribution that is zero at Born level, e.g. pT(ℓℓ), φ*, A_i, is `qcd: NLO`), not the paper's naming.
 - **Disagreement**, or anything you could not extract: leave `status: agent-draft` and append one line to `crosscheck-report.md` at the repo root (create it if missing):
   `- <YYYY-MM-DD> <uid> <file> <path>: stored <stored>, re-extracted <yours> from <ref>, <locator> — <short reason>`
 
