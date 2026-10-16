@@ -1,0 +1,21 @@
+id: "proc:bad"
+name: "Bad fixture"
+family: "fam:vector-bosons"
+sector: SM
+channels:
+  - id: "chan:bad/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-01"
+    measurements:
+      - {id: "meas:bad/m1", experiment: "FakeExp", dataset: "x", ref: "inspire:1000001"}
+    observables:
+      - id: "obs:bad/lhc-13/sig"
+        name: "sig"
+        kind: total
+        results:
+          - measurement: "meas:bad/m1"
+            total: {value_pct: 0.5, provenance: {uid: "a1b2c3d4", ref: "inspire:1000001", locator: "Table 1", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - {category: stat, size: {range: [0.3, 0.6], asymmetric: false, regions: [{where: "mll > 1 TeV", value: "about 3%"}]}, provenance: {uid: "a1b2c3d4", ref: "inspire:1000001", locator: "Table 1", source: agent, status: agent-draft, date: "2026-10-16"}}

@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "process.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "family", "sector", "channels"],
+  "properties": {
+    "id": {"$ref": "common.schema.json#/$defs/id", "pattern": "^proc:"},
+    "name": {"type": "string", "minLength": 1},
+    "family": {"$ref": "common.schema.json#/$defs/id", "pattern": "^fam:"},
+    "also_in": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^fam:"}},
+    "sector": {"const": "SM"},
+    "aliases": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^proc:"}},
+    "description": {"type": "string"},
+    "watch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["recids", "queries"],
+      "properties": {
+        "recids": {"type": "array", "items": {"type": "integer"}},
+        "queries": {"type": "array", "items": {"type": "string"}},
+        "last_run": {"type": "string", "format": "date"}
+      }
+    },
+    "building_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["row", "cells"],
+        "properties": {
+          "row": {"enum": ["NLO QCD", "NNLO QCD", "N3LO QCD", "NLO EW", "NNLO EW", "NNLO QCD×EW"]},
+          "cells": {
+            "type": "object",
+            "propertyNames": {"enum": ["born", "1L", "2L", "3L", "RV", "RR", "RRR", "ir_scheme", "code"]},
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["status", "provenance"],
+              "properties": {
+                "status": {"enum": ["done", "partial", "missing"]},
+                "approximations": {"type": "array", "items": {"type": "string"}},
+                "amplitude": {"$ref": "common.schema.json#/$defs/id", "pattern": "^amp:"},
+                "refs": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/ref"}},
+                "provenance": {"$ref": "common.schema.json#/$defs/provenance"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "collider", "initial_state", "coverage", "last_reviewed"],
+        "properties": {
+          "id": {"$ref": "common.schema.json#/$defs/id", "pattern": "^chan:"},
+          "collider": {"$ref": "common.schema.json#/$defs/id", "pattern": "^col:"},
+          "initial_state": {"type": "string", "minLength": 1},
+          "coverage": {"enum": ["complete", "partial", "stub"]},
+          "last_reviewed": {"type": "string", "format": "date"},
+          "aliases": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^chan:"}},
+          "headline": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["observable", "region"],
+            "properties": {
+              "observable": {"$ref": "common.schema.json#/$defs/id", "pattern": "^obs:"},
+              "region": {"type": "string"}
+            }
+          },
+          "measurements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "experiment", "dataset", "ref"],
+              "properties": {
+                "id": {"$ref": "common.schema.json#/$defs/id", "pattern": "^meas:"},
+                "experiment": {"type": "string", "minLength": 1},
+                "dataset": {"type": "string"},
+                "ref": {"$ref": "common.schema.json#/$defs/ref"},
+                "hepdata": {"$ref": "common.schema.json#/$defs/ref"},
+                "projected": {"type": "boolean"},
+                "projection_source": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["ref", "date"],
+                  "properties": {
+                    "ref": {"$ref": "common.schema.json#/$defs/ref"},
+                    "date": {"type": "string", "format": "date"}
+                  }
+                },
+                "assumptions": {"type": "string"},
+                "superseded_by": {"$ref": "common.schema.json#/$defs/id", "pattern": "^meas:"},
+                "preliminary": {"type": "boolean"},
+                "aliases": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^meas:"}}
+              },
+              "if": {"properties": {"projected": {"const": true}}, "required": ["projected"]},
+              "then": {"required": ["projection_source"]}
+            }
+          },
+          "observables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "name", "kind"],
+              "properties": {
+                "id": {"$ref": "common.schema.json#/$defs/id", "pattern": "^obs:"},
+                "name": {"type": "string", "minLength": 1},
+                "kind": {"enum": ["total", "fiducial", "differential", "ratio", "asymmetry", "pseudo"]},
+                "variable": {"type": "string"},
+                "aliases": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^obs:"}},
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["measurement", "total", "uncertainties"],
+                    "properties": {
+                      "measurement": {"$ref": "common.schema.json#/$defs/id", "pattern": "^meas:"},
+                      "total": {"$ref": "common.schema.json#/$defs/total"},
+                      "uncertainties": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/uncertainty_exp"}}
+                    }
+                  }
+                },
+                "predictions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["label", "accuracy", "refs", "provenance"],
+                    "properties": {
+                      "label": {"type": "string", "minLength": 1},
+                      "accuracy": {"$ref": "common.schema.json#/$defs/accuracy"},
+                      "codes": {"type": "array", "items": {"type": "string"}},
+                      "uses_amplitudes": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^amp:"}},
+                      "total": {"$ref": "common.schema.json#/$defs/total"},
+                      "uncertainties": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/uncertainty_th"}},
+                      "compared_to": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^meas:"}},
+                      "refs": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/ref"}},
+                      "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+                      "headline": {"type": "boolean"}
+                    }
+                  }
+                },
+                "resummation_ingredients": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["name", "status", "refs", "provenance"],
+                    "properties": {
+                      "name": {"type": "string", "minLength": 1},
+                      "status": {"type": "string", "minLength": 1},
+                      "refs": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/ref"}},
+                      "provenance": {"$ref": "common.schema.json#/$defs/provenance"}
+                    }
+                  }
+                },
+                "theory_target": {"$ref": "common.schema.json#/$defs/theory_target"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

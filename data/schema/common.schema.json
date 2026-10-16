@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.schema.json",
+  "$defs": {
+    "id": {"type": "string", "pattern": "^(fam|proc|chan|meas|obs|amp|par|col):[A-Za-z0-9][A-Za-z0-9./+-]*$"},
+    "ref": {
+      "type": "string",
+      "pattern": "^(inspire:\\d+|arXiv:(\\d{4}\\.\\d{4,5}|[a-z-]+(\\.[A-Z]{2})?/\\d{7})(, .+)?|hepdata:ins\\d+/.+)$"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uid", "ref", "locator", "source", "status", "date"],
+      "properties": {
+        "uid": {"type": "string", "pattern": "^[0-9a-f]{8}$"},
+        "ref": {"$ref": "#/$defs/ref"},
+        "locator": {"type": "string", "minLength": 1},
+        "source": {"enum": ["hepdata", "agent", "human"]},
+        "status": {"enum": ["agent-draft", "cross-checked", "machine-verified", "human-verified", "disputed"]},
+        "date": {"type": "string", "format": "date"},
+        "verified_by": {"type": "string"},
+        "issue": {"type": "string"}
+      }
+    },
+    "size": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["range", "asymmetric"],
+      "properties": {
+        "range": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "unit": {"type": "string", "minLength": 1, "default": "%"},
+        "asymmetric": {"type": "boolean"},
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["where", "value"],
+            "properties": {
+              "where": {"type": "string", "minLength": 1},
+              "value": {"$ref": "#/$defs/region_value"}
+            }
+          }
+        }
+      }
+    },
+    "region_value": {"type": "string", "pattern": "^(±\\d+(\\.\\d+)?|\\+\\d+(\\.\\d+)?/[-−]\\d+(\\.\\d+)?)$"},
+    "uncertainty_exp": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category", "size", "provenance"],
+      "properties": {
+        "category": {"enum": ["stat", "lumi", "energy_scale", "efficiency", "unfolding_model", "background", "acceptance_extrapolation", "beam", "pileup", "other"]},
+        "specific": {"type": "string"},
+        "size": {"$ref": "#/$defs/size"},
+        "full_table": {"$ref": "#/$defs/ref"},
+        "provenance": {"$ref": "#/$defs/provenance"}
+      }
+    },
+    "uncertainty_th": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category", "size", "provenance"],
+      "properties": {
+        "category": {"enum": ["MHOU", "PDF", "alphas", "parametric", "nonpert", "matching_shower", "EW_missing", "approximation", "numerical"]},
+        "specific": {"type": "string"},
+        "method": {"type": "string", "minLength": 1},
+        "pdf_set": {"type": "string", "minLength": 1},
+        "size": {"$ref": "#/$defs/size"},
+        "full_table": {"$ref": "#/$defs/ref"},
+        "provenance": {"$ref": "#/$defs/provenance"}
+      },
+      "allOf": [
+        {"if": {"properties": {"category": {"enum": ["MHOU", "nonpert", "matching_shower"]}}, "required": ["category"]}, "then": {"required": ["method"]}},
+        {"if": {"properties": {"category": {"const": "PDF"}}, "required": ["category"]}, "then": {"required": ["pdf_set"]}}
+      ]
+    },
+    "total": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value_pct", "provenance"],
+      "properties": {
+        "value_pct": {"type": "number", "minimum": 0},
+        "provenance": {"$ref": "#/$defs/provenance"}
+      }
+    },
+    "accuracy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["qcd"],
+      "properties": {
+        "qcd": {"enum": ["LO", "NLO", "NNLO", "N3LO", "N4LO"]},
+        "ew": {"enum": ["LO", "NLO", "NNLO", "N3LO", "N4LO"]},
+        "mixed": {"type": "string"},
+        "resummation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["accuracy", "variable"],
+            "properties": {"accuracy": {"type": "string"}, "variable": {"type": "string"}}
+          }
+        },
+        "shower_matched": {"type": "boolean"},
+        "approximations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "theory_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required_total", "source", "provenance"],
+      "properties": {
+        "required_total": {"type": "string"},
+        "current_total": {"type": "string"},
+        "source": {"$ref": "#/$defs/ref"},
+        "provenance": {"$ref": "#/$defs/provenance"}
+      }
+    }
+  }
+}

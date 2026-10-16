@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "amplitude.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "process", "loops", "corrections", "status", "refs", "provenance"],
+  "properties": {
+    "id": {"$ref": "common.schema.json#/$defs/id", "pattern": "^amp:"},
+    "process": {"$ref": "common.schema.json#/$defs/id", "pattern": "^proc:"},
+    "loops": {"type": "integer", "minimum": 0},
+    "corrections": {"enum": ["QCD", "EW", "mixed"]},
+    "status": {"enum": ["done", "partial", "missing"]},
+    "approximations": {"type": "array", "items": {"type": "string"}},
+    "master_integrals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "refs"],
+      "properties": {
+        "status": {"enum": ["done", "partial", "missing"]},
+        "refs": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/ref"}}
+      }
+    },
+    "refs": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/ref"}},
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "aliases": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^amp:"}}
+  }
+}

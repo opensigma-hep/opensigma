@@ -1,0 +1,10 @@
+id: "proc:bad"
+name: "Bad fixture"
+family: "fam:vector-bosons"
+sector: BSM
+channels:
+  - id: "chan:bad/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-01"

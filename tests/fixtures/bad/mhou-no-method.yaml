@@ -1,0 +1,21 @@
+id: "proc:bad"
+name: "Bad fixture"
+family: "fam:vector-bosons"
+sector: SM
+channels:
+  - id: "chan:bad/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-01"
+    observables:
+      - id: "obs:bad/lhc-13/sig"
+        name: "sig"
+        kind: total
+        predictions:
+          - label: "NNLO QCD"
+            accuracy: {qcd: NNLO}
+            refs: ["inspire:1000002"]
+            provenance: {uid: "a1b2c3d4", ref: "inspire:1000001", locator: "Table 1", source: agent, status: agent-draft, date: "2026-10-16"}
+            uncertainties:
+              - {category: MHOU, size: {range: [0.5, 0.8], asymmetric: false}, provenance: {uid: "a1b2c3d4", ref: "inspire:1000001", locator: "Table 1", source: agent, status: agent-draft, date: "2026-10-16"}}
