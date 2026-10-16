@@ -1,0 +1,47 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: data
+        name: Detect data/ changes
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="origin/${{ github.base_ref }}"
+          else
+            base="${{ github.event.before }}"
+          fi
+          # all-zeros `before` (new branch) or unknown base: treat as changed
+          if [ -z "${base//0/}" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            changed=true
+          elif git diff --name-only "$base...HEAD" -- data/ | grep -q .; then
+            changed=true
+          else
+            changed=false
+          fi
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e '.[dev]'
+      - run: pytest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm test
+      - run: python -m scripts.build --check --offline
+      - name: machine_verify (report-only)
+        if: steps.data.outputs.changed == 'true'
+        run: python -m scripts.machine_verify
+      - name: linkcheck
+        if: steps.data.outputs.changed == 'true'
+        run: python -m scripts.linkcheck
