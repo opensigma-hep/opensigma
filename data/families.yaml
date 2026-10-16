@@ -1,0 +1,9 @@
+- {id: "fam:vector-bosons", name: "Vector bosons", sector: SM, order: 1, maintainers: []}
+- {id: "fam:top", name: "Top quark", sector: SM, order: 2, maintainers: []}
+- {id: "fam:higgs", name: "Higgs", sector: SM, order: 3, maintainers: []}
+- {id: "fam:jets-alphas", name: "Jets & αs", sector: SM, order: 4, maintainers: []}
+- {id: "fam:ee-hadronic", name: "e⁺e⁻ hadronic", sector: SM, order: 5, maintainers: []}
+- {id: "fam:ew-precision", name: "EW precision", sector: SM, order: 6, maintainers: []}
+- {id: "fam:photons", name: "Photons", sector: SM, order: 7, maintainers: []}
+- {id: "fam:heavy-flavour", name: "Heavy-flavour production", sector: SM, order: 8, maintainers: []}
+- {id: "fam:dis", name: "DIS", sector: SM, order: 9, maintainers: []}

@@ -1,0 +1,68 @@
+id: "proc:dy-nc"
+name: "Neutral-current Drell-Yan"
+family: "fam:vector-bosons"
+sector: SM
+description: "Minimal fixture process."
+building_blocks:
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/0-qqbarV"
+        refs: ["inspire:1000003"]
+        provenance: {uid: "a1b2c3d4", ref: "inspire:1000003", locator: "Sec. 3", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:dy-nc/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: complete
+    last_reviewed: "2026-10-01"
+    headline: {observable: "obs:dy-nc/lhc-13/sigma-fid", region: "66 < mll < 116 GeV"}
+    measurements:
+      - id: "meas:dy-nc/lhc-13/fakeexp-2020"
+        experiment: "FakeExp"
+        dataset: "13 TeV, 139 fb-1"
+        ref: "inspire:1000001"
+        hepdata: "hepdata:ins1000001/Table 1"
+    observables:
+      - id: "obs:dy-nc/lhc-13/sigma-fid"
+        name: "Fiducial cross section"
+        kind: fiducial
+        results:
+          - measurement: "meas:dy-nc/lhc-13/fakeexp-2020"
+            total: {value_pct: 0.5, provenance: {uid: "b2c3d4e5", ref: "inspire:1000001", locator: "Table 1", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.01, 0.01], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1000001/Table 2"
+                provenance: {uid: "c3d4e5f6", ref: "inspire:1000001", locator: "Table 2", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [0.4, 0.4], unit: "%", asymmetric: false}
+                full_table: "arXiv:2001.00001, Fig. 3"
+                provenance: {uid: "d4e5f6a7", ref: "arXiv:2001.00001", locator: "Fig. 3", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD"
+            accuracy: {qcd: NNLO}
+            uses_amplitudes: ["amp:2L/0-qqbarV"]
+            total: {value_pct: 1.0, provenance: {uid: "e5f6a7b8", ref: "inspire:1000002", locator: "Table 4", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Scale variation"
+                method: "7-point"
+                size: {range: [0.5, 0.8], unit: "%", asymmetric: false}
+                provenance: {uid: "f6a7b8c9", ref: "inspire:1000002", locator: "Sec. 5", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF set"
+                pdf_set: "FakePDF-NNLO"
+                size: {range: [0.3, 0.6], unit: "%", asymmetric: false}
+                provenance: {uid: "a7b8c9d0", ref: "inspire:1000002", locator: "Sec. 5", source: agent, status: agent-draft, date: "2026-10-16"}
+            refs: ["inspire:1000002"]
+            provenance: {uid: "b8c9d0e1", ref: "inspire:1000002", locator: "Sec. 2", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+  - id: "chan:dy-nc/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "ppbar"
+    coverage: stub
+    last_reviewed: "2026-10-01"

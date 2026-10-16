@@ -1,0 +1,7 @@
+id: "amp:2L/0-qqbarV"
+process: "proc:dy-nc"
+loops: 2
+corrections: QCD
+status: done
+refs: ["inspire:1000003"]
+provenance: {uid: "c9d0e1f2", ref: "inspire:1000003", locator: "Sec. 3", source: agent, status: agent-draft, date: "2026-10-16"}

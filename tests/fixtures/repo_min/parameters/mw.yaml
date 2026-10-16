@@ -1,0 +1,10 @@
+id: "par:mw"
+name: "W boson mass"
+symbol: "m_W"
+unit: "GeV"
+determinations:
+  - value: 80.369
+    uncertainty: 0.019
+    extracted_from: ["obs:dy-nc/lhc-13/sigma-fid"]
+    ref: "inspire:1000001"
+    provenance: {uid: "d0e1f2a3", ref: "inspire:1000001", locator: "Table 5", source: agent, status: agent-draft, date: "2026-10-16"}

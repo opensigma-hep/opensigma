@@ -1,0 +1,2 @@
+- {id: "fam:vector-bosons", name: "Vector bosons", sector: SM, order: 1, maintainers: []}
+- {id: "fam:top", name: "Top quark", sector: SM, order: 2, maintainers: []}

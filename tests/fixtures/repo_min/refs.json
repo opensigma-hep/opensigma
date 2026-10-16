@@ -1,0 +1,38 @@
+{
+  "inspire:1000001": {
+    "recid": 1000001,
+    "arxiv": "2001.00001",
+    "doi": "10.0000/fake.1000001",
+    "title": "Fake measurement of the Drell-Yan cross section",
+    "authors_short": "Fakeexp Collaboration",
+    "year": 2020,
+    "bibtex": "@article{Fake:1000001,\n    title = \"{Fake measurement of the Drell-Yan cross section}\",\n    year = \"2020\"\n}\n"
+  },
+  "inspire:1000002": {
+    "recid": 1000002,
+    "arxiv": "2002.00002",
+    "doi": "10.0000/fake.1000002",
+    "title": "Fake NNLO QCD predictions for Drell-Yan",
+    "authors_short": "Alpha and Beta",
+    "year": 2021,
+    "bibtex": "@article{Fake:1000002,\n    title = \"{Fake NNLO QCD predictions for Drell-Yan}\",\n    year = \"2021\"\n}\n"
+  },
+  "inspire:1000003": {
+    "recid": 1000003,
+    "arxiv": "2003.00003",
+    "doi": "10.0000/fake.1000003",
+    "title": "Fake two-loop amplitudes for q qbar to V",
+    "authors_short": "Gamma et al.",
+    "year": 2022,
+    "bibtex": "@article{Fake:1000003,\n    title = \"{Fake two-loop amplitudes for q qbar to V}\",\n    year = \"2022\"\n}\n"
+  },
+  "arXiv:2001.00001": {
+    "recid": 1000001,
+    "arxiv": "2001.00001",
+    "doi": "10.0000/fake.1000001",
+    "title": "Fake measurement of the Drell-Yan cross section",
+    "authors_short": "Fakeexp Collaboration",
+    "year": 2020,
+    "bibtex": "@article{Fake:1000001,\n    title = \"{Fake measurement of the Drell-Yan cross section}\",\n    year = \"2020\"\n}\n"
+  }
+}

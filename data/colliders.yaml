@@ -1,0 +1,20 @@
+- {id: "col:lep1", name: "LEP 1", beams: "e+e−", sqrts_gev: 91.2, status: past, order: 1}
+- {id: "col:lep2", name: "LEP 2", beams: "e+e−", sqrts_gev: [130, 209], status: past, order: 2}
+- {id: "col:slc", name: "SLC", beams: "e+e−", sqrts_gev: 91.2, status: past, order: 3}
+- {id: "col:belle2", name: "Belle II", beams: "e+e−", sqrts_gev: 10.58, status: running, order: 4}
+- {id: "col:tevatron-1960", name: "Tevatron 1.96 TeV", beams: "pp̄", sqrts_gev: 1960, status: past, order: 5}
+- {id: "col:hera", name: "HERA", beams: "e±p", sqrts_gev: [300, 320], status: past, order: 6}
+- {id: "col:lhc-7", name: "LHC 7 TeV", beams: "pp", sqrts_gev: 7000, status: past, order: 7}
+- {id: "col:lhc-8", name: "LHC 8 TeV", beams: "pp", sqrts_gev: 8000, status: past, order: 8}
+- {id: "col:lhc-13", name: "LHC 13 TeV", beams: "pp", sqrts_gev: 13000, status: running, order: 9}
+- {id: "col:lhc-13.6", name: "LHC 13.6 TeV", beams: "pp", sqrts_gev: 13600, status: running, order: 10}
+- {id: "col:lhc-hl", name: "HL-LHC", beams: "pp", sqrts_gev: 14000, status: future, order: 11}
+- {id: "col:fcc-ee-z", name: "FCC-ee Z", beams: "e+e−", sqrts_gev: 91.2, status: future, order: 12}
+- {id: "col:fcc-ee-ww", name: "FCC-ee WW", beams: "e+e−", sqrts_gev: 161, status: future, order: 13}
+- {id: "col:fcc-ee-zh", name: "FCC-ee ZH", beams: "e+e−", sqrts_gev: 240, status: future, order: 14}
+- {id: "col:fcc-ee-tt", name: "FCC-ee tt̄", beams: "e+e−", sqrts_gev: 365, status: future, order: 15}
+- {id: "col:fcc-hh", name: "FCC-hh", beams: "pp", sqrts_gev: 85000, status: future, order: 16}
+- {id: "col:eic", name: "EIC", beams: "e p", sqrts_gev: [29, 141], status: future, order: 17}
+- {id: "col:lhec", name: "LHeC", beams: "e p", sqrts_gev: 1200, status: future, order: 18}
+- {id: "col:muc-3", name: "Muon collider 3 TeV", beams: "μ+μ−", sqrts_gev: 3000, status: future, order: 19}
+- {id: "col:muc-10", name: "Muon collider 10 TeV", beams: "μ+μ−", sqrts_gev: 10000, status: future, order: 20}
