@@ -103,10 +103,19 @@ def validate_integrity(repo: dict) -> list[Issue]:
                     err(file, path + ("predictions",), f"{d.get('id')}: {len(heads)} headline predictions (max 1)")
 
     for file, root in roots:
+        at_collider = {}
         for chan in root.get("channels", []):
+            if (other := at_collider.setdefault(chan["collider"], chan["id"])) != chan["id"]:  # the matrix keys cells by process+collider
+                err(file, ("channels", chan["id"]), f"{file}: process {root['id']!r} has two channels at collider {chan['collider']!r}: {other!r}, {chan['id']!r}")
             head = (chan.get("headline") or {}).get("observable")
             if head in ids and head not in {o["id"] for o in chan.get("observables", [])}:  # unknown ids reported above
                 err(file, ("channels", chan["id"], "headline"), f"{file}: headline observable {head!r} is not an observable of {chan['id']!r}")
+            meas = {m["id"] for m in chan.get("measurements", [])}
+            for o in chan.get("observables", []):
+                for r in o.get("results", []):
+                    if r["measurement"] in ids and r["measurement"] not in meas:  # unknown ids reported above
+                        err(file, ("channels", chan["id"], "observables", o["id"], "results"),
+                            f"{file}: result of {o['id']!r} cites {r['measurement']!r}, which is not a measurement of {chan['id']!r}")
     for file, root in roots:
         if file.startswith("processes/"):
             folder, fam = file.split("/")[1], root["family"]

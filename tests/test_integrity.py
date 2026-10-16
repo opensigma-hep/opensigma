@@ -128,3 +128,19 @@ def test_headline_observable_must_belong_to_same_channel():
     other["headline"] = {"observable": obs["id"], "region": "x"}
     e = _one(repo, obs["id"])
     assert e.file == DY and other["id"] in e.msg
+
+
+def test_two_channels_same_process_and_collider():
+    repo, proc, _ = _repo()
+    proc["channels"][1]["collider"] = proc["channels"][0]["collider"]
+    e = _one(repo, "two channels at collider")
+    assert e.file == DY and proc["channels"][0]["id"] in e.msg and proc["channels"][1]["id"] in e.msg
+
+
+def test_result_measurement_must_belong_to_same_channel():
+    repo, proc, obs = _repo()
+    other = proc["channels"][1]
+    other["measurements"] = [{"id": "meas:dy-nc/tevatron-1960/x", "experiment": "X", "dataset": "d", "ref": "inspire:1000001"}]
+    obs["results"][0]["measurement"] = other["measurements"][0]["id"]
+    e = _one(repo, "not a measurement of")
+    assert e.file == DY and obs["id"] in e.msg and other["measurements"][0]["id"] in e.msg
