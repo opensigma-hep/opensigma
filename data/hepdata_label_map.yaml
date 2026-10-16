@@ -1,0 +1,9 @@
+# regex -> experimental uncertainty category; first match wins, no match -> other
+'(?i)^stat': stat
+'(?i)lumi': lumi
+'(?i)(jes|jet energy|scale)': energy_scale
+'(?i)unfold': unfolding_model
+'(?i)(bkg|background)': background
+'(?i)pile': pileup
+'(?i)beam': beam
+'(?i)(eff|trigger|id|iso|btag)': efficiency

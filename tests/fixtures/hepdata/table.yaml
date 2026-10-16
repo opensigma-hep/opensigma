@@ -1,0 +1,29 @@
+independent_variables:
+- header: {name: PT, units: GEV}
+  values:
+  - {low: 0.0, high: 10.0}
+  - {low: 10.0, high: 20.0}
+  - {low: 20.0, high: 30.0}
+dependent_variables:
+- header: {name: DSIG/DPT, units: PB/GEV}
+  qualifiers:
+  - {name: SQRT(S), units: GEV, value: '13000'}
+  values:
+  - value: 100.0
+    errors:
+    - {label: stat, symerror: 2.0}
+    - {label: Luminosity, symerror: 2.46%}
+    - {label: JES, asymerror: {plus: 5.0, minus: -3.0}}
+    - {label: weird, symerror: 1.0}
+  - value: 200.0
+    errors:
+    - {label: stat, symerror: 6.0}
+    - {label: Luminosity, symerror: 2.46%}
+    - {label: JES, asymerror: {plus: 4.0, minus: -8.0}}
+    - {label: weird, symerror: 1.0}
+  - value: 50.0
+    errors:
+    - {label: stat, symerror: 1.0}
+    - {label: Luminosity, symerror: 2.46%}
+    - {label: JES, asymerror: {plus: 1.5, minus: -1.5}}
+    - {label: weird, symerror: 0.5}
