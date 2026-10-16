@@ -1,0 +1,10 @@
+id: "amp:2L/qqbar-V"
+process: "proc:dy-nc"
+loops: 2
+corrections: QCD
+status: done
+master_integrals:
+  status: done
+  refs: ["inspire:686721"]
+refs: ["inspire:24603", "inspire:686721"]
+provenance: {uid: c9ece9f4, ref: "inspire:686721", locator: "Abstract (two-loop massless quark form factor γ*→qq̄ to all orders in ε; master integrals in closed form)", source: agent, status: agent-draft, date: "2026-10-16"}

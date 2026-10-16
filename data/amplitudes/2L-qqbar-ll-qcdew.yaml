@@ -1,0 +1,10 @@
+id: "amp:2L/qqbar-ll-qcdew"
+process: "proc:dy-nc"
+loops: 2
+corrections: mixed
+status: done
+master_integrals:
+  status: done
+  refs: ["inspire:2001831"]
+refs: ["inspire:1836186", "inspire:2001831"]
+provenance: {uid: 2f2a34d2, ref: "inspire:2001831", locator: "Abstract (two-loop mixed QCD-EW virtual corrections to NC Drell-Yan; all Feynman integrals with up to two internal massive lines evaluated, complex masses)", source: agent, status: agent-draft, date: "2026-10-16"}

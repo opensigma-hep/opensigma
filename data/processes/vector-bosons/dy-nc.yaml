@@ -1,0 +1,447 @@
+id: "proc:dy-nc"
+name: "Neutral-current Drell–Yan (Z/γ* → ℓℓ)"
+family: "fam:vector-bosons"
+sector: SM
+description: "Production of a charged-lepton pair through an s-channel photon or Z boson, pp/pp̄ → Z/γ* → ℓ+ℓ− + X (ℓ = e, μ). The standard candle of hadron colliders: luminosity and PDF benchmark, input to m_W, sin²θ_eff and αs determinations, and the first hadron-collider process known at N3LO QCD."
+watch:
+  recids: [1768911, 1753680, 2816048, 2818125, 2044884, 2112612, 1869719, 2861949]
+  queries:
+    - 't "Drell-Yan" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)'
+    - 't "Z boson" and t "13 TeV" and (collaboration:ATLAS or collaboration:CMS) and (t "cross section" or t "transverse momentum" or t "angular")'
+    - 't "Drell-Yan" and (t N3LO or t "third order" or t N3LL or t N4LL)'
+    - 't "Drell-Yan" and t "mixed" and (t "QCD-electroweak" or t "QCD-EW" or t "strong-electroweak")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        amplitude: "amp:1L/qqbar-V"
+        refs: ["inspire:140456"]
+        provenance: {uid: 7932967f, ref: "inspire:140456", locator: "Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-V"
+        refs: ["inspire:24603", "inspire:686721"]
+        provenance: {uid: 528f4e52, ref: "inspire:686721", locator: "Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+      RV:
+        status: done
+        refs: ["inspire:300492"]
+        provenance: {uid: 3bdfa20f, ref: "inspire:300492", locator: "Abstract (complete O(αs²) correction, all qq̄, qg, gg, qq subprocesses)", source: agent, status: agent-draft, date: "2026-10-16"}
+      RR:
+        status: done
+        refs: ["inspire:300492"]
+        provenance: {uid: 0b0c4756, ref: "inspire:300492", locator: "Abstract (complete O(αs²) correction, all qq̄, qg, gg, qq subprocesses)", source: agent, status: agent-draft, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT subtraction"]
+        refs: ["inspire:815316"]
+        provenance: {uid: 43fc8a35, ref: "inspire:815316", locator: "Abstract (fully exclusive NNLO with a recently proposed version of the subtraction formalism)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:725573", "inspire:815316"]
+        provenance: {uid: 24a7a80b, ref: "inspire:725573", locator: "Abstract (fully differential O(αs²) W/Z production with spin correlations, finite width, γ-Z interference, arbitrary lepton cuts; implemented in a numerical program)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "N3LO QCD"
+    cells:
+      3L:
+        status: done
+        amplitude: "amp:3L/qqbar-V"
+        refs: ["inspire:813829", "inspire:852545"]
+        provenance: {uid: 0b429106, ref: "inspire:852545", locator: "Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+      RV:
+        status: done
+        approximations: ["obtained from DY+jet at NNLO (O(αs³)) computed with NNLOJET"]
+        amplitude: "amp:2L/qqbar-Vg"
+        refs: ["inspire:2044884", "inspire:587998"]
+        provenance: {uid: bfe42da9, ref: "inspire:2044884", locator: "Methodology, Eq. (1) and text below (DY+jet at NNLO, O(αs³), from NNLOJET)", source: agent, status: agent-draft, date: "2026-10-16"}
+      RRR:
+        status: done
+        approximations: ["obtained from DY+jet at NNLO (O(αs³)) computed with NNLOJET"]
+        refs: ["inspire:2044884"]
+        provenance: {uid: 4be6c495, ref: "inspire:2044884", locator: "Methodology, Eq. (1) and text below (DY+jet at NNLO, O(αs³), from NNLOJET)", source: agent, status: agent-draft, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT slicing (subtraction) extended to N3LO; slicing error quoted separately"]
+        refs: ["inspire:1888733", "inspire:2044884"]
+        provenance: {uid: '72049802', ref: "inspire:1888733", locator: "Abstract (qT-subtraction method extended to N3LO for qq̄-initiated Born processes)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:2044884", "inspire:1850545", "inspire:2112612", "inspire:1973502"]
+        provenance: {uid: bb505395, ref: "inspire:1973502", locator: "Abstract (complete inclusive N3LO NC Drell-Yan incl. γ and Z exchange); fiducial: inspire:2044884 (NNLOJET+RadISH), inspire:1850545 (DYTurbo), inspire:2112612 (CuTe-MCFM) abstracts", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        amplitude: "amp:1L/qqbar-ll-ew"
+        refs: ["inspire:562246", "inspire:836737"]
+        provenance: {uid: 77daa8e4, ref: "inspire:562246", locator: "Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:1182519"]
+        provenance: {uid: 39a7a572, ref: "inspire:1182519", locator: "Abstract (NNLO QCD combined with NLO EW in FEWZ, complex-mass scheme)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD×EW"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-ll-qcdew"
+        refs: ["inspire:1836186", "inspire:2001831"]
+        provenance: {uid: 58fb0afb, ref: "inspire:2001831", locator: "Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+      RV:
+        status: done
+        refs: ["inspire:1869719"]
+        provenance: {uid: 5a9ed8a7, ref: "inspire:1869719", locator: "Sec. II (tree-level and one-loop amplitudes for double-real, real-virtual contributions computed with OpenLoops and Recola)", source: agent, status: agent-draft, date: "2026-10-16"}
+      RR:
+        status: done
+        refs: ["inspire:1869719"]
+        provenance: {uid: 05e2c7f2, ref: "inspire:1869719", locator: "Sec. II (tree-level and one-loop amplitudes for double-real, real-virtual contributions computed with OpenLoops and Recola)", source: agent, status: agent-draft, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT subtraction with massive final-state leptons (inspire:1869719)", "nested soft-collinear subtraction, massless leptons (inspire:2056855)"]
+        refs: ["inspire:1869719", "inspire:2056855"]
+        provenance: {uid: '51804342', ref: "inspire:1869719", locator: "Abstract (qT subtraction formalism valid with charged massive final-state particles)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:1869719"]
+        provenance: {uid: '5e196285', ref: "inspire:1869719", locator: "Sec. II (phase-space generation and integration within the Matrix framework)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:dy-nc/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:dy-nc/lhc-13/sigma-fid", region: "Z peak, 66 < mℓℓ < 116 GeV, pT(ℓ) > 27 GeV (ATLAS fiducial cuts)"}
+    measurements:
+      - id: "meas:dy-nc/lhc-13/atlas-2016-incl"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 81 pb⁻¹ (2015)"
+        ref: "inspire:1436497"
+      - id: "meas:dy-nc/lhc-13/atlas-2019-ptll"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 36.1 fb⁻¹ (2015–2016)"
+        ref: "inspire:1768911"
+      - id: "meas:dy-nc/lhc-13/cms-2019-diff"
+        experiment: "CMS"
+        dataset: "13 TeV, 35.9 fb⁻¹ (2016)"
+        ref: "inspire:1753680"
+      - id: "meas:dy-nc/lhc-13/cms-2024-lowpu"
+        experiment: "CMS"
+        dataset: "13 TeV, 206 pb⁻¹ (2017, low pileup)"
+        ref: "inspire:2816048"
+      - id: "meas:dy-nc/lhc-13/cms-2024-afb"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (2016–2018)"
+        ref: "inspire:2818125"
+      - id: "meas:dy-nc/lhc-13/cms-2026-ai"
+        experiment: "CMS"
+        dataset: "13 TeV, 140 fb⁻¹ (2016–2018), μμ"
+        ref: "inspire:3150032"
+    observables:
+      - id: "obs:dy-nc/lhc-13/sigma-fid"
+        name: "Fiducial σ × B(Z/γ* → ℓℓ), Z-peak region"
+        kind: fiducial
+        variable: "σ_fid (experiment-specific lepton cuts around the Z peak)"
+        results:
+          - measurement: "meas:dy-nc/lhc-13/atlas-2016-incl"
+            total: {value_pct: 2.2, provenance: {uid: 29d8a9d9, ref: "inspire:1436497", locator: "Table 3, Z fiducial (e+μ combined): 0.779 ± 0.003 (stat) ± 0.006 (syst) ± 0.016 (lumi) nb; stat, syst, lumi added in quadrature; pT(ℓ) > 25 GeV, 66 < mℓℓ < 116 GeV", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.39, 0.39], unit: "%", asymmetric: false}
+                provenance: {uid: e44e6357, ref: "inspire:1436497", locator: "Table 3, Z fiducial: ± 0.003 (stat) of 0.779 nb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                provenance: {uid: 7e3249d3, ref: "inspire:1436497", locator: "Table 3, Z fiducial: ± 0.016 (lumi) of 0.779 nb; Conclusion (global luminosity uncertainty of 2.1%)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-13/atlas-2019-ptll"
+            total: {value_pct: 2.3, provenance: {uid: 1573098e, ref: "inspire:1768911", locator: "Table 3, Z/γ*→ℓℓ combined, Born level: 736.2 ± 0.2 (stat) ± 6.4 (syst) ± 15.5 (lumi) pb; added in quadrature; 66 < mℓℓ < 116 GeV", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.027, 0.027], unit: "%", asymmetric: false}
+                provenance: {uid: 7b91670f, ref: "inspire:1768911", locator: "Table 3, ℓℓ combined: ± 0.2 (stat) of 736.2 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                provenance: {uid: 03ab81ac, ref: "inspire:1768911", locator: "Table 3, ℓℓ combined: ± 15.5 (lumi) of 736.2 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-13/cms-2019-diff"
+            total: {value_pct: 2.5, provenance: {uid: '45195941', ref: "inspire:1753680", locator: "Table of measured inclusive fiducial cross sections (Results section, after Table 2), σ(Z→ℓℓ) = 699 ± 5 (syst) ± 17 (lumi) pb; added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.4, 2.4], unit: "%", asymmetric: false}
+                provenance: {uid: de7f89b5, ref: "inspire:1753680", locator: "Table of measured inclusive fiducial cross sections (Results section), ℓℓ combined: ± 17 (lumi) of 699 pb (Table 2: 2.5% per channel)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-13/cms-2024-lowpu"
+            total: {value_pct: 2.3, provenance: {uid: 0e7466c3, ref: "inspire:2816048", locator: "Table 2, Z→ℓ+ℓ− data: 754 ± 2 (stat) ± 3 (syst) ± 17 (lumi) pb; added in quadrature; pT(ℓ) > 25 GeV, |η| < 2.4, 60 < mℓℓ < 120 GeV (Event selection section)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.27, 0.27], unit: "%", asymmetric: false}
+                provenance: {uid: 8f7c2fac, ref: "inspire:2816048", locator: "Table 2, Z→ℓ+ℓ−: ± 2 (stat) of 754 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.3, 2.3], unit: "%", asymmetric: false}
+                provenance: {uid: 26f0602f, ref: "inspire:2816048", locator: "Caption of the 13 TeV fiducial systematic-uncertainty table (2.3% integrated luminosity uncertainty)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Efficiency (stat)"
+                size: {range: [0.26, 0.26], unit: "%", asymmetric: false}
+                provenance: {uid: 0155f7bc, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Trigger prefire correction"
+                size: {range: [0.26, 0.26], unit: "%", asymmetric: false}
+                provenance: {uid: f463f32c, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Efficiency (syst)"
+                size: {range: [0.15, 0.15], unit: "%", asymmetric: false}
+                provenance: {uid: 1eccbe58, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: background
+                specific: "QCD multijet (syst)"
+                size: {range: [0.14, 0.14], unit: "%", asymmetric: false}
+                provenance: {uid: 00d6c871, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "MC sim. stat"
+                size: {range: [0.12, 0.12], unit: "%", asymmetric: false}
+                provenance: {uid: e9f77e16, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: acceptance_extrapolation
+                specific: "μR and μF scales"
+                size: {range: [0.07, 0.07], unit: "%", asymmetric: false}
+                provenance: {uid: f8dec343, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: acceptance_extrapolation
+                specific: "PDF + αS"
+                size: {range: [0.03, 0.03], unit: "%", asymmetric: false}
+                provenance: {uid: 3c064504, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: energy_scale
+                specific: "Hadronic recoil calibration"
+                size: {range: [0.02, 0.02], unit: "%", asymmetric: false}
+                provenance: {uid: 11cc87bd, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "N3LO+N3LL QCD (NNLOJET+RadISH), ATLAS cuts"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "N3LL", variable: "pT(ℓℓ)"}]
+            codes: ["NNLOJET", "RadISH"]
+            uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
+            total: {value_pct: 1.07, provenance: {uid: 1bd570d2, ref: "inspire:2044884", locator: "Table 1, symmetric cuts (Eq. 2a), k=3, N3LO+N3LL: 726.2(1.1) +1.07% −0.77% pb; larger side of the scale/matching envelope, PDF uncertainty not included", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF, resummation scale Q and matching-scheme variations"
+                method: "envelope of 36 variations: μR, μF ×2 with 1/2 ≤ μR/μF ≤ 2, Q ×2, additive-matching scale variations"
+                size: {range: [0.77, 1.07], unit: "%", asymmetric: true}
+                provenance: {uid: 455509d5, ref: "inspire:2044884", locator: "Table 1 (symmetric cuts, N3LO+N3LL) and Results paragraph on uncertainty estimate", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: numerical
+                specific: "Monte Carlo statistics"
+                size: {range: [0.15, 0.15], unit: "%", asymmetric: false}
+                provenance: {uid: cafe6bf6, ref: "inspire:2044884", locator: "Table 1, symmetric cuts, N3LO+N3LL: statistical error (1.1) pb on 726.2 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+            refs: ["inspire:2044884"]
+            provenance: {uid: 03a0025a, ref: "inspire:2044884", locator: "Table 1 and Eq. (2a) (ATLAS symmetric cuts, pT(ℓ) > 27 GeV, 66 < mℓℓ < 116 GeV, 13 TeV, NNPDF4.0 NNLO)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "N3LO QCD fixed order, ATLAS cuts"
+            accuracy: {qcd: N3LO}
+            codes: ["NNLOJET", "RadISH"]
+            uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
+            total: {value_pct: 1.1, provenance: {uid: 0d22308d, ref: "inspire:2044884", locator: "Table 1, symmetric cuts, k=3, N3LO: 722.9(1.1) +0.68% −1.09% ± 0.9 (slicing) pb; larger scale side, slicing and statistical errors added in quadrature; PDF uncertainty not included", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF scale variation"
+                method: "7-point, 1/2 ≤ μR/μF ≤ 2"
+                size: {range: [0.68, 1.09], unit: "%", asymmetric: true}
+                provenance: {uid: 725057a2, ref: "inspire:2044884", locator: "Table 1, symmetric cuts, N3LO", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: numerical
+                specific: "qT-slicing error"
+                size: {range: [0.12, 0.12], unit: "%", asymmetric: false}
+                provenance: {uid: 494166ff, ref: "inspire:2044884", locator: "Table 1, symmetric cuts, N3LO: ± 0.9 pb slicing error on 722.9 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+            refs: ["inspire:2044884"]
+            provenance: {uid: ee32dcb9, ref: "inspire:2044884", locator: "Table 1 and Eq. (2a)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "N4LLp+N3LO (CuTe-MCFM), CMS 2019 cuts"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "N4LLp", variable: "pT(ℓℓ)"}]
+              approximations: ["N4LL_p: α_s³ accurate up to missing exact N3LO PDF effects"]
+            codes: ["CuTe-MCFM"]
+            uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
+            total: {value_pct: 2.4, provenance: {uid: 8ada3a8f, ref: "inspire:2112612", locator: "Table 3, resummation-improved α_s³: 702 ± 1 (mat.) ± 1 (m.c.) ± 17 (sc.) pb; added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Hard, low (resummation) and rapidity scale variations"
+                method: "hard, low (resummation) and rapidity scale variation (Results section)"
+                size: {range: [2.4, 2.4], unit: "%", asymmetric: false}
+                provenance: {uid: 016579b6, ref: "inspire:2112612", locator: "Table 3, α_s³ resummation-improved: ± 17 (sc.) of 702 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: matching_shower
+                specific: "Matching to fixed order (transition function)"
+                method: "variation of the matching transition"
+                size: {range: [0.14, 0.14], unit: "%", asymmetric: false}
+                provenance: {uid: 66f8708a, ref: "inspire:2112612", locator: "Table 3, α_s³ resummation-improved: ± 1 (mat.) of 702 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: approximation
+                specific: "Neglected matching corrections"
+                size: {range: [0.14, 0.14], unit: "%", asymmetric: false}
+                provenance: {uid: b7d65de0, ref: "inspire:2112612", locator: "Table 3, α_s³ resummation-improved: ± 1 (m.c.) of 702 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-13/cms-2019-diff"]
+            refs: ["inspire:2112612"]
+            provenance: {uid: f193c642, ref: "inspire:2112612", locator: "Table 2 (CMS 13 TeV fiducial cuts) and Table 3", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO+NNLL QCD (DYTurbo 1.3.2, NNPDF4.0)"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(ℓℓ)"}]
+            codes: ["DYTurbo"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            total: {value_pct: 0.8, provenance: {uid: 19ec3039, ref: "inspire:2816048", locator: "Table 2, Z→ℓ+ℓ−, NNPDF4.0 column: 753.9 ± 6.0 pb (stat, PDF, αS, μR/μF combined)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            compared_to: ["meas:dy-nc/lhc-13/cms-2024-lowpu"]
+            refs: ["inspire:2816048"]
+            provenance: {uid: 4b3ecc28, ref: "inspire:2816048", locator: "Systematic uncertainties section (NNLO+NNLL QCD with DYTurbo v1.3.2, NNPDF3.1/4.0, CT18, MSHT20) and Table 2", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD + NLO EW (DYTurbo/DYNNLO 1.5 + FEWZ 3.1, CT14)"
+            accuracy: {qcd: NNLO, ew: NLO}
+            codes: ["DYTurbo", "DYNNLO", "FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
+            total: {value_pct: 3.8, provenance: {uid: 0a498833, ref: "inspire:1768911", locator: "Table 3, prediction 703 +19 −24 (PDF) +6 −8 (αS) +4 −6 (scale) ± 5 (intrinsic) pb; larger sides added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: PDF
+                specific: "CT14 eigenvectors rescaled to 68% CL"
+                pdf_set: "CT14nnlo"
+                size: {range: [2.7, 3.4], unit: "%", asymmetric: true}
+                provenance: {uid: 72eabecf, ref: "inspire:1768911", locator: "Table 3 (+19 −24 pb of 703 pb) and Sec. 5.2", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: alphas
+                specific: "αS ± 0.001"
+                size: {range: [0.85, 1.1], unit: "%", asymmetric: true}
+                provenance: {uid: 1d3fa78e, ref: "inspire:1768911", locator: "Table 3 (+6 −8 pb of 703 pb) and Sec. 5.2", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "factors of two with 0.5 ≤ μR/μF ≤ 2 around mℓℓ"
+                size: {range: [0.57, 0.85], unit: "%", asymmetric: true}
+                provenance: {uid: 18b4080e, ref: "inspire:1768911", locator: "Table 3 (+4 −6 pb of 703 pb) and Sec. 5.2", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: approximation
+                specific: "Intrinsic NNLO uncertainty (DYNNLO vs FEWZ difference)"
+                size: {range: [0.71, 0.71], unit: "%", asymmetric: false}
+                provenance: {uid: f0692ffa, ref: "inspire:1768911", locator: "Table 3 (± 5 pb of 703 pb) and Sec. 5.2", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-13/atlas-2019-ptll"]
+            refs: ["inspire:1768911", "inspire:815316", "inspire:1182519"]
+            provenance: {uid: 5e44fbe4, ref: "inspire:1768911", locator: "Sec. 5.2 and Table 3", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD + NLO EW (DYNNLO 1.5 + FEWZ 3.1, CT14nnlo)"
+            accuracy: {qcd: NNLO, ew: NLO}
+            codes: ["DYNNLO", "FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
+            total: {value_pct: 4.5, provenance: {uid: 67ab78d7, ref: "inspire:1436497", locator: "Table 3, Z fiducial prediction 0.74 +0.02 −0.03 (PDF) ± 0.01 (scale) ± 0.01 (other) nb; larger sides added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: PDF
+                specific: "CT14nnlo PDF uncertainty"
+                pdf_set: "CT14nnlo"
+                size: {range: [2.7, 4.1], unit: "%", asymmetric: true}
+                provenance: {uid: a856b5c6, ref: "inspire:1436497", locator: "Table 3, Z fiducial prediction (+0.02 −0.03 nb of 0.74 nb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: MHOU
+                specific: "Scale variation"
+                method: "μR, μF variation (theory-prediction paragraph)"
+                size: {range: [1.4, 1.4], unit: "%", asymmetric: false}
+                provenance: {uid: abc5252c, ref: "inspire:1436497", locator: "Table 3, Z fiducial prediction (± 0.01 nb of 0.74 nb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: parametric
+                specific: "αS and beam energy ('other')"
+                size: {range: [1.4, 1.4], unit: "%", asymmetric: false}
+                provenance: {uid: a5b66af2, ref: "inspire:1436497", locator: "Table 3, Z fiducial prediction (± 0.01 nb of 0.74 nb); caption: 'other' = αS and beam energy", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-13/atlas-2016-incl"]
+            refs: ["inspire:1436497", "inspire:815316", "inspire:1182519"]
+            provenance: {uid: 2fbc1f55, ref: "inspire:1436497", locator: "Theory-prediction paragraph following the fiducial definition (DYNNLO 1.5 central value, FEWZ 3.1 variations, NLO EW from FEWZ 3.1, Gμ scheme) and Table 3", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-13/ptll"
+        name: "dσ/dpT(ℓℓ), Z-peak region"
+        kind: differential
+        variable: "pT(ℓℓ)"
+        results:
+          - measurement: "meas:dy-nc/lhc-13/atlas-2019-ptll"
+            total: {value_pct: 0.094, provenance: {uid: 91dadf75, ref: "inspire:1768911", locator: "Table 4, normalized 1/σ dσ/dpT(ℓℓ), Born level: bin-to-bin correlated and uncorrelated uncertainties added in quadrature, minimum over bins (4–6 and 6–8 GeV: ±0.05% ⊕ ±0.08%)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties: []
+        predictions:
+          - label: "N3LO+N3LL QCD (NNLOJET+RadISH)"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "N3LL", variable: "pT(ℓℓ)"}]
+              approximations: ["order labelled by the inclusive integral; fixed order is DY+jet at NNLO, O(αs³)"]
+            codes: ["NNLOJET", "RadISH"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-13/atlas-2019-ptll"]
+            refs: ["inspire:2044884"]
+            provenance: {uid: 9b2b5bf4, ref: "inspire:2044884", locator: "Fig. 1 (fiducial pT(ℓℓ) at N3LO+N3LL vs ATLAS data, Ref. [112] = arXiv:1912.02844)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "N4LLp+N3LO (CuTe-MCFM)"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "N4LLp", variable: "pT(ℓℓ)"}]
+              approximations: ["N4LL_p: α_s³ accurate up to missing exact N3LO PDF effects"]
+            codes: ["CuTe-MCFM"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-13/cms-2019-diff"]
+            refs: ["inspire:2112612"]
+            provenance: {uid: 328c6141, ref: "inspire:2112612", locator: "Abstract and Results section (comparison with CMS 13 TeV fiducial and differential data, Ref. [3] = arXiv:1909.04133)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "N3LL′ + approx. N4LL matched to O(αs³) (SCETlib), ATLAS cuts"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "N3LL′ (approx. N4LL)", variable: "pT(ℓℓ)"}]
+            codes: ["SCETlib", "NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            refs: ["inspire:2851712"]
+            provenance: {uid: d6e29859, ref: "inspire:2851712", locator: "Abstract; Sec. 2.4 (ATLAS 13 TeV fiducial cuts, O(αs³) Z+jet input from NNLOJET)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO+N3LL QCD (RadISH with NNLOJET Z+jet)"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL", variable: "pT(ℓℓ)"}]
+              approximations: ["fixed order: Z+jet at NNLO, O(αs³)"]
+            codes: ["RadISH", "NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF and resummation-scale Q variations, correlated across the spectrum"
+                method: "μR, μF as for Sherpa (7-point) plus Q ×2"
+                size: {range: [1, 3], unit: "%", asymmetric: false}
+                provenance: {uid: d9e530ed, ref: "inspire:1768911", locator: "Sec. 5.2, RadISH paragraph ('uncertainties of typically 1–3%')", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-13/atlas-2019-ptll"]
+            refs: ["inspire:1734419", "inspire:1490040"]
+            provenance: {uid: cf319452, ref: "inspire:1768911", locator: "Sec. 5.2 and Fig. 5 (RadISH, NNPDF3.1nnlo, μR = μF = sqrt(mℓℓ² + pT²), Q = mℓℓ/2)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD + NLO EW fixed order (NNLOJET)"
+            accuracy: {qcd: NNLO, ew: NLO, approximations: ["fixed order: Z+jet at NNLO; valid for pT(ℓℓ) ≳ 15 GeV"]}
+            codes: ["NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-13/atlas-2019-ptll"]
+            refs: ["inspire:1490040", "inspire:891490"]
+            provenance: {uid: eeefce46, ref: "inspire:1768911", locator: "Sec. 5.2 and Fig. 6 (fixed-order NNLOJET with and without NLO EW corrections, Ref. [13])", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "Sherpa 2.2.1 MEPS@NLO (0,1,2j NLO + up to 4j LO)"
+            accuracy: {qcd: NLO, shower_matched: true, approximations: ["multi-jet merged, MEPS@NLO; merging scale 20 GeV"]}
+            codes: ["Sherpa", "Comix", "OpenLoops"]
+            uncertainties:
+              - category: MHOU
+                specific: "7-point μR, μF in the matrix elements, envelope, correlated across spectrum"
+                method: "7-point"
+                size: {range: [3, 25], unit: "%", asymmetric: false}
+                provenance: {uid: 5a32cfd2, ref: "inspire:1768911", locator: "Sec. 5.2, Sherpa paragraph ('3–4% at low pT(ℓℓ) and up to 25% at high pT(ℓℓ)')", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-13/atlas-2019-ptll"]
+            refs: ["inspire:1768911"]
+            provenance: {uid: ad3b941c, ref: "inspire:1768911", locator: "Sec. 5.2 and Fig. 5", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-13/yll"
+        name: "dσ/d|y(ℓℓ)|, Z-peak region"
+        kind: differential
+        variable: "|y(ℓℓ)|"
+        predictions:
+          - label: "NNLO QCD fixed order (FEWZ, NNPDF3.1)"
+            accuracy: {qcd: NNLO}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-13/cms-2019-diff"]
+            refs: ["inspire:1753680", "inspire:725573"]
+            provenance: {uid: bc2fc622, ref: "inspire:1753680", locator: "Results section (0.8) and Fig. 5 (absolute dσ/d|y| compared with FEWZ NNLO, NNPDF3.1 NNLO)", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-13/afb"
+        name: "Forward-backward asymmetry A_FB / A4 vs (mℓℓ, |yℓℓ|), Z-peak region"
+        kind: asymmetry
+        variable: "mℓℓ, |y(ℓℓ)|"
+        predictions:
+          - label: "NNLO+PS QCD (POWHEG MiNNLO_PS) with NLO+HO weak corrections (POWHEG-z_ew)"
+            accuracy: {qcd: NNLO, ew: NLO, shower_matched: true, approximations: ["EW corrections applied as reweighting from POWHEG-z_ew (NLO virtual weak + universal higher orders)"]}
+            codes: ["POWHEG-BOX", "MiNNLO_PS", "Pythia8", "POWHEG-z_ew"]
+            uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
+            refs: ["inspire:2818125", "inspire:1750311"]
+            provenance: {uid: 912d53f2, ref: "inspire:2818125", locator: "Sec. 3 (Simulation and corrections: MiNNLO_PS signal, NLO+HO EW weights from POWHEG-z_ew)", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-13/ai"
+        name: "Angular coefficients A0–A7 vs pT(ℓℓ) in two |y(ℓℓ)| bins (81 < mℓℓ < 101 GeV)"
+        kind: asymmetry
+        variable: "pT(ℓℓ), |y(ℓℓ)|"
+        predictions:
+          - label: "NNLO+PS QCD (POWHEG MiNNLO_PS + Pythia 8)"
+            accuracy: {qcd: NNLO, shower_matched: true}
+            codes: ["POWHEG-BOX", "MiNNLO_PS", "Pythia8"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-13/cms-2026-ai"]
+            refs: ["inspire:3150032", "inspire:1750311"]
+            provenance: {uid: 3b6fbac8, ref: "inspire:3150032", locator: "Sec. 3 (POWHEG v2.0 + MiNNLO, Pythia 8.240, Photos++) and Sec. 6, Figs. 3–7", source: agent, status: agent-draft, date: "2026-10-16"}

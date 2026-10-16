@@ -1,0 +1,7 @@
+id: "amp:1L/qqbar-V"
+process: "proc:dy-nc"
+loops: 1
+corrections: QCD
+status: done
+refs: ["inspire:140456"]
+provenance: {uid: f20f9c70, ref: "inspire:140456", locator: "Abstract (radiative corrections to the lowest-order qq̄ annihilation diagram, all terms up to O(αs))", source: agent, status: agent-draft, date: "2026-10-16"}

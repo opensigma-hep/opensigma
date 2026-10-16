@@ -1,0 +1,10 @@
+id: "amp:2L/qqbar-Vg"
+process: "proc:dy-nc"
+loops: 2
+corrections: QCD
+status: done
+master_integrals:
+  status: done
+  refs: ["inspire:587998"]
+refs: ["inspire:567814", "inspire:587998"]
+provenance: {uid: 2d9ef422, ref: "inspire:587998", locator: "Abstract (two-loop QCD helicity amplitudes for γ*→qq̄g, reduced to known master integrals; enters V+jet at NNLO and DY at N3LO by crossing)", source: agent, status: agent-draft, date: "2026-10-16"}

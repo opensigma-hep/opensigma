@@ -1,0 +1,10 @@
+id: "amp:3L/qqbar-V"
+process: "proc:dy-nc"
+loops: 3
+corrections: QCD
+status: done
+master_integrals:
+  status: done
+  refs: ["inspire:852545"]
+refs: ["inspire:813829", "inspire:852545"]
+provenance: {uid: a14dc060, ref: "inspire:852545", locator: "Abstract (three-loop quark form factor, reduced to known master integrals; confirms Baikov et al.)", source: agent, status: agent-draft, date: "2026-10-16"}
