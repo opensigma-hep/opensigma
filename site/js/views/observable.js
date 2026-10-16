@@ -149,7 +149,7 @@ function details(data, bar, color) {
         facts([
           ['Method', u.method], ['PDF set', u.pdf_set],
           ['Regions', u.size.regions?.length ? sep(u.size.regions.map((r) => `${r.where}: ${regionText(r.value)}`), '; ') : null],
-          ['Locator', `${u.provenance.ref}, ${u.provenance.locator}`],
+          ['Locator', [refLink(u.provenance.ref, data.refs), `, ${u.provenance.locator}`]],
           ['Full table', u.full_table ? refLink(u.full_table, data.refs) : null],
         ])))));
     byCat.set(g.cat, d);
