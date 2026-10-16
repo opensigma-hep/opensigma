@@ -17,7 +17,7 @@ import { releaseBibtex } from './bibtex.js';
 const views = {
   families, notfound,
   family, process, channel, observable, amplitude, parameter, about,
-  search, measurement: placeholder, collider: placeholder,
+  search, collider: placeholder,
 };
 
 const THEME_KEY = 'pheno-map-theme';
@@ -82,7 +82,7 @@ function fail(msg) {
 let first = true;
 function route() {
   const { data, idset } = window.PM;
-  const r = parseHash(location.hash, data.derived.aliases, idset);
+  const r = parseHash(location.hash, data.derived.aliases, idset, data.derived.parents);
   if (r.redirected) history.replaceState(null, '', toHash(r.id));
   views[r.view].render(main, data, r);
   document.title = (r.id ?? r.q ?? r.view) + ' · pheno-map';

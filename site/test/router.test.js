@@ -11,7 +11,7 @@ test('#/ → families, #/about → about', () => {
   assert.equal(parseHash('#/about', {}, new Set()).view, 'about');
 });
 test('every id prefix maps to its view', () => {
-  const m = {fam:'family', proc:'process', chan:'channel', obs:'observable', amp:'amplitude', par:'parameter', meas:'measurement', col:'collider'};
+  const m = {fam:'family', proc:'process', chan:'channel', obs:'observable', amp:'amplitude', par:'parameter', col:'collider'};
   for (const [p, view] of Object.entries(m)) {
     const id = `${p}:x`;
     assert.deepEqual(parseHash('#/' + id, {}, new Set([id])), {view, id});
@@ -24,3 +24,12 @@ test('search query keeps a literal +', () => {
   assert.equal(parseHash('#/search?q=a%20b&x=1', {}, new Set()).q, 'a b');
   assert.equal(parseHash('#/search?q=100%', {}, new Set()).q, '100%');
 });
+test('meas: id redirects to its parent channel', () => {
+  const ids = new Set(['meas:a', 'chan:a']);
+  assert.deepEqual(parseHash('#/meas:a', {}, ids, { 'meas:a': 'chan:a' }), { view: 'channel', id: 'chan:a', redirected: true });
+});
+test('meas: alias also lands on the channel', () => {
+  const ids = new Set(['meas:a', 'chan:a']);
+  assert.deepEqual(parseHash('#/meas:old', { 'meas:old': 'meas:a' }, ids, { 'meas:a': 'chan:a' }), { view: 'channel', id: 'chan:a', redirected: true });
+});
+test('meas: id without a parent → notfound', () => assert.equal(parseHash('#/meas:a', {}, new Set(['meas:a']), {}).view, 'notfound'));
