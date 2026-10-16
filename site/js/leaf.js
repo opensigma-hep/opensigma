@@ -1,6 +1,6 @@
 // DOM helpers shared by the leaf views (observable, channel, process, amplitude, parameter).
 import { toHash } from './router.js';
-import { statusBadge } from './format.js';
+import { statusBadge, refText } from './format.js';
 import { issueUrl, refUrl } from './verify-links.js';
 import { REPO } from './config.js';
 
@@ -53,7 +53,7 @@ export function refLink(ref, refs) {
   const [key, ...loc] = ref.split(', ');
   const hd = /^hepdata:ins(\d+)\/(.+)$/.exec(key);
   const r = refs[hd ? 'inspire:' + hd[1] : key];
-  const text = hd ? `HEPData ${hd[2]}` : r ? `${r.authors_short} (${r.year})` : key;
+  const text = hd ? `HEPData ${hd[2]}` : r ? refText(key, r) : key;
   const a = el('a', { href: refUrl(ref), textContent: text + (loc.length ? ', ' + loc.join(', ') : '') });
   if (r?.title) a.title = r.title;
   return a;

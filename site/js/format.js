@@ -37,3 +37,15 @@ export function fmtSize(size) {
   const [a, b] = size.range;
   return `${a === b ? num(a) : `${num(a)}–${num(b)}`} ${size.unit ?? '%'}`;
 }
+
+/** Target total as a bar length: only a plain number (optional leading ≤/<, optional %); ranges and prose give null. */
+export function parseTargetPct(s) {
+  const m = /^[≤<]?\s*(\d+(?:\.\d+)?)\s*%?$/.exec(s ?? '');
+  return m ? +m[1] : null;
+}
+
+/** Link text for a ref record: "Authors (year)", dropping what is missing (title, then the key, stand in for authors). */
+export function refText(key, r) {
+  const who = r.authors_short ?? (r.title ? (r.title.length > 60 ? r.title.slice(0, 59) + '…' : r.title) : key);
+  return r.year != null ? `${who} (${r.year})` : who;
+}
