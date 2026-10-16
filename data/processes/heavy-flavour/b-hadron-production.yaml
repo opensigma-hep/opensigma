@@ -1,0 +1,205 @@
+id: "proc:b-hadron-production"
+name: "Open b production (pp, pp̄ → b-hadron + X)"
+family: "fam:heavy-flavour"
+sector: SM
+description: "Inclusive production of hadrons containing a b quark in hadron collisions, pp/pp̄ → H_b + X. A classic test of perturbative QCD with a heavy quark (bottom mass m_b ~ 4–5 GeV gives slow perturbative convergence and large scale uncertainties), a probe of the low-x gluon PDF in the forward region, and the normalisation for b-flavour yields and backgrounds. Predictions exist at NNLO QCD for on-shell b quarks (no fragmentation) and as FONLL (NLO + next-to-leading-log resummation of ln(pT/m_b), with fragmentation) for b hadrons."
+watch:
+  recids: [1824426, 1504058, 1485195, 668026, 1384271]
+  queries:
+    - 't "b-hadron" and t "production cross" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)'
+    - 't "bottom" and t "production" and t "hadron colliders" and (t NNLO or t FONLL or t "fragmentation")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:251743", "inspire:277634", "inspire:264718"]
+        provenance: {uid: 9a9bca37, ref: "inspire:1824426", locator: "Sec. 1, second paragraph (NLO QCD predictions for bb̄ production available since refs. [21–23]: Nason–Dawson–Ellis 1988/89, Beenakker et al. 1989)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        approximations: ["FONLL: massive NLO matched to NLL resummation of ln(pT/m_b) with perturbative fragmentation, folded with non-perturbative fragmentation functions"]
+        refs: ["inspire:468385", "inspire:553013", "inspire:1116414"]
+        provenance: {uid: 3a92351c, ref: "inspire:1824426", locator: "Sec. 1, second paragraph (FONLL [29–32] is the standard reference for comparison with b-hadron data)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/gg-ttbar"
+        approximations: ["two-loop virtuals from a numerical grid (originally computed for tt̄)"]
+        refs: ["inspire:1273586", "inspire:1824426"]
+        provenance: {uid: 31bc0ab7, ref: "inspire:1824426", locator: "Sec. 1 (last paragraph) and Sec. 3 (paragraph on the two-loop virtual corrections)", source: agent, status: agent-draft, date: "2026-10-16"}
+      RV:
+        status: done
+        approximations: ["one-loop amplitudes from OpenLoops; bb̄+jet at NLO with dipole subtraction"]
+        refs: ["inspire:1824426"]
+        provenance: {uid: ce8a33f1, ref: "inspire:1824426", locator: "Sec. 2, Eq. (1) and following text", source: agent, status: agent-draft, date: "2026-10-16"}
+      RR:
+        status: done
+        approximations: ["bb̄+jet at NLO with dipole subtraction (real emission part), tree-level bb̄bb̄ contributions are at the per-mille level"]
+        refs: ["inspire:1824426"]
+        provenance: {uid: 8884de65, ref: "inspire:1824426", locator: "Sec. 2, Eq. (1) and Sec. 3 (four-bottom contributions)", source: agent, status: agent-draft, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT subtraction extended to heavy-quark production; r_cut → 0 extrapolation uncertainty of about 0.5% on the total cross section"]
+        refs: ["inspire:745577", "inspire:1824426"]
+        provenance: {uid: 654d01c2, ref: "inspire:1824426", locator: "Sec. 2 and Sec. 3.1 (r_cut → 0 extrapolation)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        approximations: ["four-flavour scheme, on-shell b quarks: no fragmentation or hadronisation, no resummation of ln(pT/m_b)"]
+        refs: ["inspire:1636973", "inspire:1824426"]
+        provenance: {uid: 2f433b54, ref: "inspire:1824426", locator: "Abstract and Sec. 2 (implemented in the MATRIX framework)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:b-hadron-production/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:b-hadron-production/lhc-13/sigma-hb-fwd", region: "2 < η < 5 (LHCb acceptance), all pT"}
+    measurements:
+      - id: "meas:b-hadron-production/lhc-13/lhcb-2017-hb"
+        experiment: "LHCb"
+        dataset: "13 TeV, 4.60 pb⁻¹ (special low-luminosity runs, 2015)"
+        ref: "inspire:1504058"
+        hepdata: "hepdata:ins1504058/Table 2"
+      - id: "meas:b-hadron-production/lhc-13/cms-2017-bplus"
+        experiment: "CMS"
+        dataset: "13 TeV, 48.1 pb⁻¹ (2015)"
+        ref: "inspire:1485195"
+        hepdata: "hepdata:ins1485195/Table 7"
+    observables:
+      - id: "obs:b-hadron-production/lhc-13/sigma-hb-fwd"
+        name: "σ(pp → H_b X), 2 < η < 5"
+        kind: fiducial
+        variable: "σ integrated over b-hadron pseudorapidity 2 < η < 5 and all pT; average of b and b̄ hadrons (H_b contains b or b̄, not both)"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-13/lhcb-2017-hb"
+            total: {value_pct: 15, provenance: {uid: ca7bc463, ref: "inspire:1504058", locator: "Abstract and text below Table 3: 144 ± 1 (stat) ± 21 (syst) µb; added in quadrature (14.6%)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.69, 0.69], unit: "%", asymmetric: false}
+                provenance: {uid: 4245d6bb, ref: "inspire:1504058", locator: "Abstract: ± 1 (stat) of 144 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [3.9, 3.9], unit: "%", asymmetric: false}
+                provenance: {uid: b1a40345, ref: "inspire:1504058", locator: "Table 4, 13 TeV column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Tracking efficiency"
+                size: {range: [6.3, 6.3], unit: "%", asymmetric: false}
+                provenance: {uid: 6dcc5dfb, ref: "inspire:1504058", locator: "Table 4, 13 TeV column", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD (MATRIX, nf = 4, μ0 = m_b), b quarks"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton-level b quark, no fragmentation; average of b and b̄ pseudorapidity (η_b^av) in 2 < η < 5", "m_b = 4.92 GeV pole mass, NNPDF3.1 NNLO nf = 4"]
+            codes: ["MATRIX"]
+            uses_amplitudes: ["amp:2L/gg-ttbar", "amp:2L/qqbar-ttbar"]
+            total: {value_pct: 30, provenance: {uid: '4443e076', ref: "inspire:1824426", locator: "Table 4, NNLO (μ0 = m_b), 13 TeV: 123.4(7) +30% −25% µb; larger side of the scale variation", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF scale variation"
+                method: "7-point variation of μR, μF by a factor of 2 around μ0 = m_b, 0.5 ≤ μR/μF ≤ 2"
+                size: {range: [25, 30], unit: "%", asymmetric: true}
+                provenance: {uid: '78481e91', ref: "inspire:1824426", locator: "Table 4, NNLO (μ0 = m_b), 13 TeV: +30% −25%", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: numerical
+                specific: "Monte Carlo and r_cut → 0 extrapolation"
+                size: {range: [0.57, 0.57], unit: "%", asymmetric: false}
+                provenance: {uid: '882e9474', ref: "inspire:1824426", locator: "Table 4, NNLO (μ0 = m_b), 13 TeV: numerical error (7) in the last digit of 123.4 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:b-hadron-production/lhc-13/lhcb-2017-hb"]
+            refs: ["inspire:1824426"]
+            provenance: {uid: 370a0930, ref: "inspire:1824426", locator: "Sec. 3.3, Table 4 (integral of the pseudorapidity distribution over 2 < η < 5; compared with the LHCb measurement)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "FONLL (NLO + NLL), b hadrons"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_b"}]
+            codes: ["FONLL"]
+            total: {value_pct: 46, provenance: {uid: ca58f62e, ref: "inspire:1504058", locator: "text after Table 3: FONLL prediction 111 +51 −44 µb at 13 TeV in 2 < η < 5; larger side of the quoted band", source: agent, status: agent-draft, date: "2026-10-16"}}
+            compared_to: ["meas:b-hadron-production/lhc-13/lhcb-2017-hb"]
+            refs: ["inspire:1384271", "inspire:1504058"]
+            provenance: {uid: 022299fd, ref: "inspire:1504058", locator: "text after Table 3 and Fig. 2 (FONLL prediction by Cacciari, Mangano, Nason)", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:b-hadron-production/lhc-13/sigma-bplus-fid"
+        name: "σ(pp → B⁺ X), CMS fiducial region"
+        kind: fiducial
+        variable: "σ summed over 10 ≤ pT(B⁺) < 17 GeV, |y| < 1.45 and 17 ≤ pT(B⁺) < 100 GeV, |y| < 2.1 (B⁺ → J/ψ K⁺, single charge state)"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-13/cms-2017-bplus"
+            total: {value_pct: 14, provenance: {uid: 5a4ecc6e, ref: "inspire:1485195", locator: "Table 2 (inclusive bin) and Summary: 15.3 ± 0.4 (stat) ± 2.1 (syst) ± 0.4 (lumi) µb; added in quadrature (14.2%)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [2.6, 2.6], unit: "%", asymmetric: false}
+                provenance: {uid: 2dfed6ce, ref: "inspire:1485195", locator: "Table 2 (inclusive bin): ± 0.4 (stat) of 15.3 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.3, 2.3], unit: "%", asymmetric: false}
+                provenance: {uid: 6be10acf, ref: "inspire:1485195", locator: "Table 1 and Sec. 6", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Muon trigger, identification and reconstruction"
+                size: {range: [6.0, 14], unit: "%", asymmetric: false}
+                provenance: {uid: 1e86b268, ref: "inspire:1485195", locator: "Table 1 (range over pT and y bins)", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "FONLL (NLO + NLL), NNPDF3.0, B⁺"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_b"}]
+            codes: ["FONLL"]
+            total: {value_pct: 33, provenance: {uid: 4fd9c5de, ref: "inspire:1485195", locator: "Table 2 (inclusive bin): FONLL 9.9 +3.3 −2.2 µb; larger side; band includes scale, b-mass and PDF variations", source: agent, status: agent-draft, date: "2026-10-16"}}
+            compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
+            refs: ["inspire:468385", "inspire:553013", "inspire:1485195"]
+            provenance: {uid: 7216b84d, ref: "inspire:1485195", locator: "Sec. 7 and Table 2 (FONLL with NNPDF3.0; uncertainties from scales, b-quark mass and PDFs)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - id: "chan:b-hadron-production/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:b-hadron-production/tevatron-1960/sigma-hb-central", region: "|y| < 0.6, all pT"}
+    measurements:
+      - id: "meas:b-hadron-production/tevatron-1960/cdf-2005-hb"
+        experiment: "CDF"
+        dataset: "1.96 TeV, 39.7 pb⁻¹ (Run II)"
+        ref: "inspire:668026"
+        hepdata: "hepdata:ins668026/Table 5"
+    observables:
+      - id: "obs:b-hadron-production/tevatron-1960/sigma-hb-central"
+        name: "σ(pp̄ → H_b X), |y| < 0.6"
+        kind: fiducial
+        variable: "σ for a single b-hadron (average of H_b and H̄_b) with |y| < 0.6, extracted from b → J/ψ X"
+        results:
+          - measurement: "meas:b-hadron-production/tevatron-1960/cdf-2005-hb"
+            total:
+              value_pct: 14.0
+              provenance: {uid: 409ea239, ref: "hepdata:ins668026/Table 5", locator: "Table 5, quadrature sum of all errors (bin 1)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [2.3, 2.3], asymmetric: false}
+                full_table: "hepdata:ins668026/Table 5"
+                provenance: {uid: f1342535, ref: "hepdata:ins668026/Table 5", locator: "Table 5, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [14.0, 14.0], asymmetric: true}
+                full_table: "hepdata:ins668026/Table 5"
+                provenance: {uid: c025a52a, ref: "hepdata:ins668026/Table 5", locator: "Table 5, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD (MATRIX, nf = 4, μ0 = m_b), b quarks"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton-level b quark with |y| < 0.6, no fragmentation; the b-hadron cross section is compared with the parton-level analogue", "m_b = 4.92 GeV pole mass, NNPDF3.1 NNLO nf = 4"]
+            codes: ["MATRIX"]
+            uses_amplitudes: ["amp:2L/gg-ttbar", "amp:2L/qqbar-ttbar"]
+            total: {value_pct: 22, provenance: {uid: ff35e06f, ref: "inspire:1824426", locator: "Sec. 3.2, Eq. (5): σ_NNLO(|y_b| < 0.6) = 17.87(12) +22% −21% µb; larger side of the scale variation", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF scale variation"
+                method: "7-point variation of μR, μF by a factor of 2 around μ0 = m_b, 0.5 ≤ μR/μF ≤ 2"
+                size: {range: [21, 22], unit: "%", asymmetric: true}
+                provenance: {uid: dc073bcb, ref: "inspire:1824426", locator: "Sec. 3.2, Eq. (5): +22% −21%", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: numerical
+                specific: "Monte Carlo and r_cut → 0 extrapolation"
+                size: {range: [0.67, 0.67], unit: "%", asymmetric: false}
+                provenance: {uid: 40717bba, ref: "inspire:1824426", locator: "Sec. 3.2, Eq. (5): numerical error (12) in the last digits of 17.87 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:b-hadron-production/tevatron-1960/cdf-2005-hb"]
+            refs: ["inspire:1824426"]
+            provenance: {uid: f7d7f4ad, ref: "inspire:1824426", locator: "Sec. 3.2, Eqs. (4)–(5) (comparison with the CDF measurement)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true

@@ -1,0 +1,183 @@
+id: "proc:vh"
+name: "Higgs-strahlung (WH and ZH production)"
+family: "fam:higgs"
+sector: SM
+description: "Production of the SM Higgs boson in association with a W or Z boson, qq̄ → V* → VH (plus the loop-induced gg → ZH): the Tevatron's main light-Higgs search channel (H → bb̄). Known at NNLO QCD with NLO electroweak corrections."
+watch:
+  recids: [1494411, 623567, 621983, 944447, 917260, 1225520, 2104706, 2104672]
+  queries:
+    - 't "Higgs" and (t "associated production" or t "Higgs-strahlung" or t "Higgsstrahlung") and (t "WH" or t "ZH" or t "vector boson") and (t NNLO or t N3LO or t "electroweak")'
+    - 't "Higgs" and (collaboration:ATLAS or collaboration:CMS) and (t "WH" or t "ZH" or t "VH") and t "cross section"'
+building_blocks:
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        approximations: ["Drell–Yan-like corrections plus heavy-quark-loop mediated contributions (gg → HZ), computed separately", "top-Yukawa-induced contributions in inspire:944447"]
+        refs: ["inspire:623567", "inspire:944447"]
+        provenance: {uid: 850a0510, ref: "inspire:623567", locator: "Abstract (two-loop corrections to the Drell–Yan process q q̄ → V*, and for Z final states the heavy-quark loop mediated processes, in particular gg → HZ)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:917260", "inspire:623567"]
+        provenance: {uid: 6f19bee8, ref: "inspire:917260", locator: "Abstract (fully exclusive NNLO QCD calculation for WH with finite-width effects, W and H decays; subtraction formalism)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:621983"]
+        provenance: {uid: 4c13f1f1, ref: "inspire:621983", locator: "Abstract (electroweak O(α) corrections to pp̄/pp → WH/ZH + X)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:vh/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:vh/lhc-13/sigma-zh", region: "m_H = 125 GeV, inclusive over production kinematics (ATLAS: ZH, |y_H| < 2.5, absolute σ; CMS: signal strength μ_ZH)"}
+    measurements:
+      - id: "meas:vh/lhc-13/atlas-2022-comb"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
+        ref: "inspire:2104706"
+        hepdata: "hepdata:ins2104706/Figure 2a"
+      - id: "meas:vh/lhc-13/cms-2022-comb"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
+        ref: "inspire:2104672"
+        hepdata: "hepdata:ins2104672/Production mode strength modifiers"
+    observables:
+      - id: "obs:vh/lhc-13/sigma-wh"
+        name: "σ(WH) in the Higgs decay-channel combination (ATLAS: σ(WH); CMS: μ_WH)"
+        kind: total
+        variable: "σ(pp → WH) at m_H ≈ 125 GeV; ATLAS in |y_H| < 2.5 assuming SM branching fractions; CMS as signal strength relative to the SM"
+        results:
+          - measurement: "meas:vh/lhc-13/atlas-2022-comb"
+            total: {value_pct: 19.7, provenance: {uid: d0b774d4, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 3 (WH): 1.4081 pb, 'Total uncertainty' +0.27684/−0.26364 pb; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [12.0, 13.1], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104706/Figure 2a"
+                provenance: {uid: 655fe280, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 3, error 'Syst. uncertainty': +0.1843/−0.16896 pb of 1.4081 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:vh/lhc-13/cms-2022-comb"
+            total: {value_pct: 18.1, provenance: {uid: 59bff918, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_WH = 1.44 +0.26/−0.25 (stat+syst), also Fig. 2 of arXiv:2207.00043; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [14.6, 14.6], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: 18d03805, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_WH: ±0.21 (stat) of 1.44", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [10.4, 11.1], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: 086554ab, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_WH: +0.16/−0.15 (syst) of 1.44", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD + NLO EW (LHC Higgs Working Group, YR4), m_H = 125 GeV"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["Drell–Yan-like NNLO QCD part plus top-loop terms and photon-induced contribution added linearly"]
+            codes: ["VH@NNLO", "HAWK"]
+            total: {value_pct: 2.0, provenance: {uid: a951d892, ref: "arXiv:1610.07922", locator: "Table 223 (13.0 TeV row): σ(WH) = 1373 fb, ∆scale +0.5/−0.7%, PDF⊕αs ±1.9%; derived here as the larger scale side and PDF⊕αs added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR = μF variation"
+                method: "factorization and renormalization scales varied by a factor of 3 around the central scale, eq. (I.5.11), evaluated without EW effects"
+                size: {range: [0.5, 0.7], unit: "%", asymmetric: true}
+                provenance: {uid: 67f56ae5, ref: "arXiv:1610.07922", locator: "Table 223, 13.0 TeV row; scale variation described in Sec. I.5.2.c", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "PDF4LHC15_nnlo_mc"
+                size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
+                provenance: {uid: 13686a1e, ref: "arXiv:1610.07922", locator: "Table 223, 13.0 TeV row (PDF ±1.7%, PDF⊕αs ±1.9%)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: alphas
+                specific: "αs uncertainty"
+                size: {range: [0.9, 0.9], unit: "%", asymmetric: false}
+                provenance: {uid: 76cd0dc0, ref: "arXiv:1610.07922", locator: "Table 223, 13.0 TeV row", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:vh/lhc-13/atlas-2022-comb", "meas:vh/lhc-13/cms-2022-comb"]
+            refs: ["arXiv:1610.07922"]
+            provenance: {uid: c6cf1bf3, ref: "arXiv:1610.07922", locator: "Sec. I.5.2.c, eq. (I.5.15) and Table 223; cited by both experiments as a source of the SM prediction", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+      - id: "obs:vh/lhc-13/sigma-zh"
+        name: "σ(ZH) in the Higgs decay-channel combination (ATLAS: σ(ZH); CMS: μ_ZH)"
+        kind: total
+        variable: "σ(pp → ZH) incl. gg → ZH at m_H ≈ 125 GeV; ATLAS in |y_H| < 2.5 assuming SM branching fractions; CMS as signal strength relative to the SM"
+        results:
+          - measurement: "meas:vh/lhc-13/atlas-2022-comb"
+            total: {value_pct: 23.0, provenance: {uid: 0e276a46, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 4 (ZH): 0.76578 pb, 'Total uncertainty' +0.17615/−0.16372 pb; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [13.7, 15.7], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104706/Figure 2a"
+                provenance: {uid: 65bcb6ed, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 4, error 'Syst. uncertainty': +0.12031/−0.10471 pb of 0.76578 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:vh/lhc-13/cms-2022-comb"
+            total: {value_pct: 19.4, provenance: {uid: 3c654c93, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ZH = 1.29 +0.22/−0.25 (stat+syst), also Fig. 2 of arXiv:2207.00043; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [15.5, 15.5], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: a313ef99, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ZH: ±0.20 (stat) of 1.29", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [7.0, 10.9], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: 37ffe810, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ZH: +0.09/−0.14 (syst) of 1.29", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD + NLO EW (LHC Higgs Working Group, YR4), m_H = 125 GeV"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["gg → ZH computed through NLO with NLL effects added", "Drell–Yan-like NNLO QCD part plus top-loop terms and photon-induced contribution added linearly"]
+            codes: ["VH@NNLO", "HAWK"]
+            total: {value_pct: 4.1, provenance: {uid: 7a1ef4d3, ref: "arXiv:1610.07922", locator: "Table 225 (13.0 TeV row): σ(ZH) = 883.7 fb, ∆scale +3.8/−3.1%, PDF⊕αs ±1.6%; derived here as the larger scale side and PDF⊕αs added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR = μF variation"
+                method: "factorization and renormalization scales varied by a factor of 3 around the central scale, eq. (I.5.11), evaluated without EW effects"
+                size: {range: [3.1, 3.8], unit: "%", asymmetric: true}
+                provenance: {uid: 0af57a1a, ref: "arXiv:1610.07922", locator: "Table 225, 13.0 TeV row; scale variation described in Sec. I.5.2.c", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "PDF4LHC15_nnlo_mc"
+                size: {range: [1.3, 1.3], unit: "%", asymmetric: false}
+                provenance: {uid: c8bd40bf, ref: "arXiv:1610.07922", locator: "Table 225, 13.0 TeV row (PDF ±1.3%, PDF⊕αs ±1.6%)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: alphas
+                specific: "αs uncertainty"
+                size: {range: [0.9, 0.9], unit: "%", asymmetric: false}
+                provenance: {uid: bad6d071, ref: "arXiv:1610.07922", locator: "Table 225, 13.0 TeV row", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:vh/lhc-13/atlas-2022-comb", "meas:vh/lhc-13/cms-2022-comb"]
+            refs: ["arXiv:1610.07922"]
+            provenance: {uid: df88d084, ref: "arXiv:1610.07922", locator: "Sec. I.5.2.c, eq. (I.5.16) and Table 225; cited by both experiments as a source of the SM prediction", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+  - id: "chan:vh/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:vh/tevatron-1960/sigma-vh-bb", region: "m_H = 125 GeV, (σ_WH + σ_ZH) × B(H → bb̄)"}
+    measurements:
+      - id: "meas:vh/tevatron-1960/cdf-d0-2013-comb"
+        experiment: "combination"
+        dataset: "1.96 TeV, Run II, up to 10 fb⁻¹ per experiment (CDF + D0 combination of Higgs searches)"
+        ref: "inspire:1225520"
+    observables:
+      - id: "obs:vh/tevatron-1960/sigma-vh-bb"
+        name: "(σ(WH) + σ(ZH)) × B(H → bb̄), CDF + D0 combination"
+        kind: total
+        variable: "(σ_WH + σ_ZH) × B(H → bb̄) at m_H = 125 GeV (best-fit cross section of the combined H → bb̄ searches)"
+        results:
+          - measurement: "meas:vh/tevatron-1960/cdf-d0-2013-comb"
+            total: {value_pct: 47, provenance: {uid: face2fa8, ref: "inspire:1225520", locator: "Results, 'H → bb̄ Decay Mode' (p. 16): best fit (σ_WH + σ_ZH) × B(H → bb̄) = 0.19 +0.08/−0.09 (stat + syst) pb; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties: []
+        predictions:
+          - label: "SM, WH/ZH at NNLO QCD + NLO EW, m_H = 125 GeV"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+            total: {value_pct: 8.3, provenance: {uid: 45372f78, ref: "inspire:1225520", locator: "Results, 'H → bb̄ Decay Mode' (p. 16): SM prediction (σ_WH + σ_ZH) × B(H → bb̄) = 0.12 ± 0.01 pb; relative uncertainty derived from the rounded ±0.01 pb", source: agent, status: agent-draft, date: "2026-10-16"}}
+            compared_to: ["meas:vh/tevatron-1960/cdf-d0-2013-comb"]
+            refs: ["inspire:1225520"]
+            provenance: {uid: 4c3ec75a, ref: "inspire:1225520", locator: "Sec. II (Event simulation): WH and ZH cross sections at NNLO precision in QCD and NLO in the electroweak corrections; Results, 'H → bb̄ Decay Mode' (p. 16)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true

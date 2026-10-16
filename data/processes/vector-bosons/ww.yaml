@@ -1,0 +1,180 @@
+id: "proc:ww"
+name: "W⁺W⁻ pair production (leptonic)"
+family: "fam:vector-bosons"
+sector: SM
+description: "Production of a W⁺W⁻ pair, pp → W⁺W⁻ → ℓνℓ′ν′ + X, from qq̄ annihilation and (loop-induced, including Higgs-mediated) gluon fusion. Probes the triple gauge couplings, is an irreducible background to H → WW* and the cleanest test of NNLO QCD plus NLO EW predictions for massive diboson production."
+watch:
+  recids: [1734263, 1814328, 1311991, 1353132, 1457600, 1636973, 2796231]
+  queries:
+    - 't "W+W-" and (collaboration:ATLAS or collaboration:CMS) and t "cross section" and not t "jets" and not t Higgs'
+    - 't "W+W-" and (t NNLO or t N3LO or t "electroweak corrections" or t resummation or t "gluon fusion") and not t "two jets"'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:467827"]
+        provenance: {uid: 88ee4bf9, ref: "inspire:467827", locator: "Abstract (one-loop QCD helicity amplitudes for q q̄ → W+W−, ZZ, W±Z including leptonic decays)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-VV"
+        refs: ["inspire:1353132"]
+        provenance: {uid: '90562084', ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2 → 4 leptons, arbitrary vector-boson virtualities)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:1311991", "inspire:1636973"]
+        provenance: {uid: '770736e3', ref: "inspire:1311991", locator: "Abstract (first QCD calculation up to NNLO for on-shell W+W− production); off-shell, all leptonic channels: inspire:1636973 (MATRIX) abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:1457600"]
+        provenance: {uid: c9e14bbb, ref: "inspire:1457600", locator: "Abstract (first NLO EW calculation for pp → W+W− → 4 leptons with full off-shell effects, complex-mass scheme)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:ww/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ww/lhc-13/sigma-tot", region: "Total inclusive pp → W⁺W⁻, 13 TeV (extrapolated to the full phase space)"}
+    measurements:
+      - id: "meas:ww/lhc-13/cms-2020-tot"
+        experiment: "CMS"
+        dataset: "13 TeV, 35.9 fb⁻¹ (2016)"
+        ref: "inspire:1814328"
+        hepdata: "hepdata:ins1814328/Table 5"
+      - id: "meas:ww/lhc-13/atlas-2019-fid"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 36.1 fb⁻¹ (2015–2016), eμ"
+        ref: "inspire:1734263"
+        hepdata: "hepdata:ins1734263/Table 1"
+    observables:
+      - id: "obs:ww/lhc-13/sigma-tot"
+        name: "Total σ(pp → W⁺W⁻)"
+        kind: total
+        variable: "σ_tot, all W decay modes (extrapolated from dilepton final states)"
+        results:
+          - measurement: "meas:ww/lhc-13/cms-2020-tot"
+            total: {value_pct: 5.8, provenance: {uid: fa20c75a, ref: "hepdata:ins1814328/Table 5", locator: "Table 5, quadrature sum of all errors (bin 7)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
+                provenance: {uid: 7fdbd09e, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: σ_tot = 117.6 ± 1.4 (stat) ± 5.5 (syst) ± 1.9 (thy) ± 3.2 (lum) pb; stat of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "Experimental systematics excluding luminosity (combined)"
+                size: {range: [4.7, 4.7], unit: "%", asymmetric: false}
+                provenance: {uid: b8c8f4ac, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 5.5 (syst) of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: acceptance_extrapolation
+                specific: "Theory modelling (acceptance extrapolation)"
+                size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
+                provenance: {uid: 7efdb37a, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 1.9 (thy) of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.7, 2.7], unit: "%", asymmetric: false}
+                provenance: {uid: d737e476, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 3.2 (lum) of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD qq̄ + NLO gg→WW + NLO EW (CMS)"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["qq̄ at NNLO QCD, gg → WW at LO scaled by the NLO/LO factor 1.4", "NLO EW as a −1.2% correction to the qq̄ channel"]
+            uses_amplitudes: ["amp:2L/qqbar-VV"]
+            total: {value_pct: 3.0, provenance: {uid: 8685ea69, ref: "inspire:1814328", locator: "Introduction, theory paragraph: σ_tot^NNLO = 118.8 ± 3.6 pb (scale, PDF and αS uncertainties; PDF + αS = 2.0 pb)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            compared_to: ["meas:ww/lhc-13/cms-2020-tot"]
+            refs: ["inspire:1814328", "inspire:1311991"]
+            provenance: {uid: 21b30ab3, ref: "inspire:1814328", locator: "Introduction, theory paragraph (σ_tot^NNLO = 118.8 ± 3.6 pb), qq̄ NNLO calculation of Gehrmann et al. (their ref. [8])", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+      - id: "obs:ww/lhc-13/sigma-fid-0jet"
+        name: "Fiducial σ(pp → W⁺W⁻ → eμνν), jet veto 35 GeV"
+        kind: fiducial
+        variable: "σ_fid with a jet-pT veto of 35 GeV"
+        results:
+          - measurement: "meas:ww/lhc-13/atlas-2019-fid"
+            total: {value_pct: 7.1, provenance: {uid: e1bde0db, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, quadrature sum of all errors (bin 2)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [1.3, 1.4], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: c13d57ff, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "JetRes"
+                size: {range: [0.13, 1.9], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: ccdded0d, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'JetRes'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: pileup
+                specific: "JetPileup"
+                size: {range: [1.2, 1.9], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: 6bb55866, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'JetPileup'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: background
+                specific: "Bkgtopsinglet"
+                size: {range: [2.6, 5.3], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: 261c5d48, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'Bkgtopsinglet'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: energy_scale
+                specific: "JetScaleOther"
+                size: {range: [1.2, 2.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: e6f3a217, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'JetScaleOther'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: pileup
+                specific: "Pileup"
+                size: {range: [1.3, 1.9], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: 6431f1dd, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'Pileup'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: stat
+                specific: "StatsBkgMC"
+                size: {range: [1.0, 1.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: 88ca17cb, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'StatsBkgMC'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "FTag"
+                size: {range: [2.4, 9.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: a42e0c15, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'FTag'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "ElMuMETUnfTheoLumi"
+                size: {range: [2.6, 3.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: 28eab568, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'ElMuMETUnfTheoLumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "JetFlav"
+                size: {range: [1.5, 2.5], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: f705cba7, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'JetFlav'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: background
+                specific: "BkgOther"
+                size: {range: [0.74, 1.2], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: 7788a58d, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'BkgOther'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: background
+                specific: "BkgWjets"
+                size: {range: [2.5, 3.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1734263/Table 1"
+                provenance: {uid: a01f5ad4, ref: "hepdata:ins1734263/Table 1", locator: "Table 1, error 'BkgWjets'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD qq̄ + NLO gg→WW, × NLO EW (MATRIX)"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["gg → WW at NLO QCD", "NLO EW applied multiplicatively to the sum of qq̄ and gg channels", "scale uncertainty evaluated according to the jet-veto prescription of their ref. [108] (Stewart and Tackmann)"]
+            codes: ["MATRIX", "OpenLoops"]
+            uses_amplitudes: ["amp:2L/qqbar-VV"]
+            total: {value_pct: 5.8, provenance: {uid: a2377c19, ref: "inspire:1734263", locator: "Table 5, (MATRIX NNLO qq̄ and gg @ NLO) × NLO EW: 347 ± 20 fb (PDF + scale); NNPDF3.1 LUXqed, μ = mWW/2", source: agent, status: agent-draft, date: "2026-10-16"}}
+            compared_to: ["meas:ww/lhc-13/atlas-2019-fid"]
+            refs: ["inspire:1734263", "inspire:1636973", "inspire:1353132", "inspire:1457600"]
+            provenance: {uid: 9ab19db7, ref: "inspire:1734263", locator: "Sec. 8, Table 5 (refs. [101]–[105] therein)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO QCD qq̄ + NLO gg→WW (MATRIX), no EW"
+            accuracy:
+              qcd: NNLO
+              approximations: ["gg → WW at NLO QCD", "no EW corrections"]
+            codes: ["MATRIX", "OpenLoops"]
+            uses_amplitudes: ["amp:2L/qqbar-VV"]
+            total: {value_pct: 5.7, provenance: {uid: 9a81da9d, ref: "inspire:1734263", locator: "Table 5, MATRIX NNLO qq̄ → WW and gg → WW @ NLO: 368 ± 21 fb (PDF + scale)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            compared_to: ["meas:ww/lhc-13/atlas-2019-fid"]
+            refs: ["inspire:1734263", "inspire:1636973"]
+            provenance: {uid: 55b7ee1a, ref: "inspire:1734263", locator: "Sec. 8, Table 5", source: agent, status: agent-draft, date: "2026-10-16"}

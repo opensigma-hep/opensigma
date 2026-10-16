@@ -1,4 +1,229 @@
 {
+ "arXiv:0707.1285": {
+  "arxiv": "0707.1285",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2007nzq,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{Second-order QCD corrections to the thrust distribution}\",\n    eprint = \"0707.1285\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-16-07, IPPP-07-36, EDINBURGH-2007-10, HEPTOOLS-07-016\",\n    doi = \"10.1103/PhysRevLett.99.132002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"99\",\n    pages = \"132002\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1103/PhysRevLett.99.132002",
+  "recid": 755338,
+  "title": "Second-order QCD corrections to the thrust distribution",
+  "year": 2007
+ },
+ "arXiv:0710.0346": {
+  "arxiv": "0710.0346",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2007foh,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{Infrared structure of e+ e- ---{\\ensuremath{>}} 3 jets at NNLO}\",\n    eprint = \"0710.0346\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-18-07, IPPP-07-62, EDINBURGH-2007-26, HEPTOOLS-07-020\",\n    doi = \"10.1088/1126-6708/2007/11/058\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"058\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1088/1126-6708/2007/11/058",
+  "recid": 762655,
+  "title": "Infrared structure of e+ e- ---> 3 jets at NNLO",
+  "year": 2007
+ },
+ "arXiv:0711.4711": {
+  "arxiv": "0711.4711",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2007vsv,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{NNLO corrections to event shapes in e+ e- annihilation}\",\n    eprint = \"0711.4711\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-27-07, IPPP-07-90, EDINBURGH-2007-47\",\n    doi = \"10.1088/1126-6708/2007/12/094\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"094\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1088/1126-6708/2007/12/094",
+  "recid": 769010,
+  "title": "NNLO corrections to event shapes in e+ e- annihilation",
+  "year": 2007
+ },
+ "arXiv:0802.0813": {
+  "arxiv": "0802.0813",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2008qsl,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{Jet rates in electron-positron annihilation at O(alpha(s)**3) in QCD}\",\n    eprint = \"0802.0813\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-03-08, IPPP-08-05\",\n    doi = \"10.1103/PhysRevLett.100.172001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"100\",\n    pages = \"172001\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevLett.100.172001",
+  "recid": 778905,
+  "title": "Jet rates in electron-positron annihilation at O(alpha(s)**3) in QCD",
+  "year": 2008
+ },
+ "arXiv:0803.0695": {
+  "arxiv": "0803.0695",
+  "authors_short": "Gehrmann et al.",
+  "bibtex": "@article{Gehrmann:2008kh,\n    author = \"Gehrmann, T. and Luisoni, G. and Stenzel, H.\",\n    title = \"{Matching NLLA + NNLO for event shape distributions}\",\n    eprint = \"0803.0695\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-04-08\",\n    doi = \"10.1016/j.physletb.2008.05.023\",\n    journal = \"Phys. Lett. B\",\n    volume = \"664\",\n    pages = \"265--273\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1016/j.physletb.2008.05.023",
+  "recid": 780765,
+  "title": "Matching NLLA + NNLO for event shape distributions",
+  "year": 2008
+ },
+ "arXiv:0807.3241": {
+  "arxiv": "0807.3241",
+  "authors_short": "Weinzierl",
+  "bibtex": "@article{Weinzierl:2008iv,\n    author = \"Weinzierl, Stefan\",\n    title = \"{NNLO corrections to 3-jet observables in electron-positron annihilation}\",\n    eprint = \"0807.3241\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MZ-TH-08-22\",\n    doi = \"10.1103/PhysRevLett.101.162001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"101\",\n    pages = \"162001\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevLett.101.162001",
+  "recid": 791166,
+  "title": "NNLO corrections to 3-jet observables in electron-positron annihilation",
+  "year": 2008
+ },
+ "arXiv:0904.1077": {
+  "arxiv": "0904.1077",
+  "authors_short": "Weinzierl",
+  "bibtex": "@article{Weinzierl:2009ms,\n    author = \"Weinzierl, Stefan\",\n    title = \"{Event shapes and jet rates in electron-positron annihilation at NNLO}\",\n    eprint = \"0904.1077\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MZ-TH-09-13\",\n    doi = \"10.1088/1126-6708/2009/06/041\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"041\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1088/1126-6708/2009/06/041",
+  "recid": 817454,
+  "title": "Event shapes and jet rates in electron-positron annihilation at NNLO",
+  "year": 2009
+ },
+ "arXiv:1005.1481": {
+  "arxiv": "1005.1481",
+  "authors_short": "Botje",
+  "bibtex": "@article{Botje:2010ay,\n    author = \"Botje, M.\",\n    title = \"{QCDNUM: Fast QCD Evolution and Convolution}\",\n    eprint = \"1005.1481\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"NIKHEF-10-002\",\n    doi = \"10.1016/j.cpc.2010.10.020\",\n    journal = \"Comput. Phys. Commun.\",\n    volume = \"182\",\n    pages = \"490--532\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1016/j.cpc.2010.10.020",
+  "recid": 854529,
+  "title": "QCDNUM: Fast QCD Evolution and Convolution",
+  "year": 2010
+ },
+ "arXiv:1006.3080": {
+  "arxiv": "1006.3080",
+  "authors_short": "Abbate et al.",
+  "bibtex": "@article{Abbate:2010xh,\n    author = \"Abbate, Riccardo and Fickinger, Michael and Hoang, Andre H. and Mateu, Vicent and Stewart, Iain W.\",\n    title = \"{Thrust at $N^{3}LL$ with Power Corrections and a Precision Global Fit for $\\alpha_{s}(mZ)$}\",\n    eprint = \"1006.3080\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP-4101, MPP-2010-7\",\n    doi = \"10.1103/PhysRevD.83.074021\",\n    journal = \"Phys. Rev. D\",\n    volume = \"83\",\n    pages = \"074021\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1103/PhysRevD.83.074021",
+  "recid": 858620,
+  "title": "Thrust at $N^{3}LL$ with Power Corrections and a Precision Global Fit for $\\alpha_{s}(mZ)$",
+  "year": 2010
+ },
+ "arXiv:1606.00840": {
+  "arxiv": "1606.00840",
+  "authors_short": "Dreyer and Karlberg",
+  "bibtex": "@article{Dreyer:2016oyx,\n    author = \"Dreyer, Fr{\\'e}d{\\'e}ric A. and Karlberg, Alexander\",\n    title = \"{Vector-Boson Fusion Higgs Production at Three Loops in QCD}\",\n    eprint = \"1606.00840\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2016-127, OUTP-16-12P\",\n    doi = \"10.1103/PhysRevLett.117.072001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"117\",\n    number = \"7\",\n    pages = \"072001\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevLett.117.072001",
+  "recid": 1467221,
+  "title": "Vector-Boson Fusion Higgs Production at Three Loops in QCD",
+  "year": 2016
+ },
+ "arXiv:1607.03111": {
+  "arxiv": "1607.03111",
+  "authors_short": "Banfi et al.",
+  "bibtex": "@article{Banfi:2016zlc,\n    author = \"Banfi, Andrea and McAslan, Heather and Monni, Pier Francesco and Zanderighi, Giulia\",\n    title = \"{The two-jet rate in $e^+e^-$ at next-to-next-to-leading-logarithmic order}\",\n    eprint = \"1607.03111\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2016-149, OUTP-16-19P\",\n    doi = \"10.1103/PhysRevLett.117.172001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"117\",\n    number = \"17\",\n    pages = \"172001\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevLett.117.172001",
+  "recid": 1475281,
+  "title": "The two-jet rate in $e^+e^-$ at next-to-next-to-leading-logarithmic order",
+  "year": 2016
+ },
+ "arXiv:1610.07922": {
+  "arxiv": "1610.07922",
+  "authors_short": "LHC Higgs Cross Section Working Group Collaboration",
+  "bibtex": "@book{LHCHiggsCrossSectionWorkingGroup:2016ypw,\n    author = \"de Florian, D. and others\",\n    collaboration = \"LHC Higgs Cross Section Working Group\",\n    title = \"{Handbook of LHC Higgs Cross Sections: 4. Deciphering the Nature of the Higgs Sector}\",\n    eprint = \"1610.07922\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-2017-002-M, CERN-2017-002\",\n    doi = \"10.23731/CYRM-2017-002\",\n    series = \"CERN Yellow Reports: Monographs\",\n    volume = \"2\",\n    year = \"2017\"\n}\n",
+  "doi": "10.23731/CYRM-2017-002",
+  "recid": 1494411,
+  "title": "Handbook of LHC Higgs Cross Sections: 4. Deciphering the Nature of the Higgs Sector",
+  "year": 2016
+ },
+ "arXiv:1902.08158": {
+  "arxiv": "1902.08158",
+  "authors_short": "Verbytskyi et al.",
+  "bibtex": "@article{Verbytskyi:2019zhh,\n    author = \"Verbytskyi, Andrii and Banfi, Andrea and Kardos, Adam and Monni, Pier Francesco and Kluth, Stefan and Somogyi, G{\\'a}bor and Sz{\\H{o}}r, Zolt{\\'a}n and Tr{\\'o}cs{\\'a}nyi, Zolt{\\'a}n and Tulip{\\'a}nt, Zolt{\\'a}n and Zanderighi, Giulia\",\n    title = \"{High precision determination of $\\alpha_s$ from a global fit of jet rates}\",\n    eprint = \"1902.08158\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MPP-2019-37, CERN-TH-2019-015, MITP/19-012\",\n    doi = \"10.1007/JHEP08(2019)129\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"129\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1007/JHEP08(2019)129",
+  "recid": 1721113,
+  "title": "High precision determination of $\\alpha_s$ from a global fit of jet rates",
+  "year": 2019
+ },
+ "arXiv:2503.15043": {
+  "arxiv": "2503.15043",
+  "authors_short": "Balsach et al.",
+  "bibtex": "@article{Balsach:2025jcw,\n    author = \"Balsach, Roger and others\",\n    title = \"{State-of-the-art cross sections for $t\\bar t H$: NNLO predictions matched with NNLL resummation and EW corrections}\",\n    eprint = \"2503.15043\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"LHCHWG-2025-001, IPPP/25/01, TUM-HEP-1549/25, UWThPh 2024-25, TTK-25-01, P3H-25-001, TIF-UNIMI-2025-3, MS-TP-25-02, PSI-PR-25-03, ZU-TH 08/25\",\n    doi = \"10.21468/SciPostPhysCommRep.10\",\n    month = \"3\",\n    year = \"2025\"\n}\n",
+  "doi": "10.21468/SciPostPhysCommRep.10",
+  "recid": 2902128,
+  "title": "State-of-the-art cross sections for $t\\bar t H$: NNLO predictions matched with NNLL resummation and EW corrections",
+  "year": 2025
+ },
+ "arXiv:hep-ph/0112081": {
+  "arxiv": "hep-ph/0112081",
+  "authors_short": "Garland et al.",
+  "bibtex": "@article{Garland:2001tf,\n    author = \"Garland, L. W. and Gehrmann, T. and Glover, E. W. Nigel and Koukoutsakis, A. and Remiddi, E.\",\n    title = \"{The Two loop QCD matrix element for e+ e- ---{\\ensuremath{>}} 3 jets}\",\n    eprint = \"hep-ph/0112081\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"IPPP-01-59, DCPT-01-118, CERN-TH-2001-348\",\n    doi = \"10.1016/S0550-3213(02)00057-3\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"627\",\n    pages = \"107--188\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1016/S0550-3213(02)00057-3",
+  "recid": 567814,
+  "title": "The Two loop QCD matrix element for e+ e- ---> 3 jets",
+  "year": 2001
+ },
+ "arXiv:hep-ph/0206067": {
+  "arxiv": "hep-ph/0206067",
+  "authors_short": "Garland et al.",
+  "bibtex": "@article{Garland:2002ak,\n    author = \"Garland, L. W. and Gehrmann, T. and Glover, E. W. Nigel and Koukoutsakis, A. and Remiddi, E.\",\n    title = \"{Two loop QCD helicity amplitudes for e+ e- ---{\\ensuremath{>}} three jets}\",\n    eprint = \"hep-ph/0206067\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"IPPP-02-28, DCPT-02-56, CERN-TH-2002-122\",\n    doi = \"10.1016/S0550-3213(02)00627-2\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"642\",\n    pages = \"227--262\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1016/S0550-3213(02)00627-2",
+  "recid": 587998,
+  "title": "Two loop QCD helicity amplitudes for e+ e- ---> three jets",
+  "year": 2002
+ },
+ "arXiv:hep-ph/0505111": {
+  "arxiv": "hep-ph/0505111",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2005btv,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. Nigel\",\n    title = \"{Antenna subtraction at NNLO}\",\n    eprint = \"hep-ph/0505111\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"ZU-TH-07-05, IPPP-05-18\",\n    doi = \"10.1088/1126-6708/2005/09/056\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"056\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1088/1126-6708/2005/09/056",
+  "recid": 682504,
+  "title": "Antenna subtraction at NNLO",
+  "year": 2005
+ },
+ "arXiv:hep-ph/9609474": {
+  "arxiv": "hep-ph/9609474",
+  "authors_short": "Glover and Miller",
+  "bibtex": "@article{Glover:1996eh,\n    author = \"Glover, E. W. Nigel and Miller, D. J.\",\n    title = \"{The One loop QCD corrections for gamma* ---{\\ensuremath{>}} Q anti-Q q anti-q}\",\n    eprint = \"hep-ph/9609474\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DTP-96-66\",\n    doi = \"10.1016/S0370-2693(97)00113-5\",\n    journal = \"Phys. Lett. B\",\n    volume = \"396\",\n    pages = \"257--263\",\n    year = \"1997\"\n}\n",
+  "doi": "10.1016/S0370-2693(97)00113-5",
+  "recid": 423775,
+  "title": "The One loop QCD corrections for gamma* ---> Q anti-Q q anti-q",
+  "year": 1996
+ },
+ "arXiv:hep-ph/9610370": {
+  "arxiv": "hep-ph/9610370",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:1996ka,\n    author = \"Bern, Zvi and Dixon, Lance J. and Kosower, David A. and Weinzierl, Stefan\",\n    title = \"{One loop amplitudes for e+ e- ---{\\ensuremath{>}} anti-q q anti-Q Q}\",\n    eprint = \"hep-ph/9610370\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-7316, SACLAY-SPH-T-96-111, UCLA-96-TEP-33\",\n    doi = \"10.1016/S0550-3213(96)00703-1\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"489\",\n    pages = \"3--23\",\n    year = \"1997\"\n}\n",
+  "doi": "10.1016/S0550-3213(96)00703-1",
+  "recid": 424596,
+  "title": "One loop amplitudes for e+ e- ---> anti-q q anti-Q Q",
+  "year": 1996
+ },
+ "arXiv:hep-ph/9706297": {
+  "arxiv": "hep-ph/9706297",
+  "authors_short": "Campbell et al.",
+  "bibtex": "@article{Campbell:1997tv,\n    author = \"Campbell, John M. and Glover, E. W. Nigel and Miller, D. J.\",\n    title = \"{The One loop QCD corrections for gamma* ---{\\ensuremath{>}} q anti-q g g}\",\n    eprint = \"hep-ph/9706297\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DTP-97-44, RAL-TR-97-027\",\n    doi = \"10.1016/S0370-2693(97)00909-X\",\n    journal = \"Phys. Lett. B\",\n    volume = \"409\",\n    pages = \"503--508\",\n    year = \"1997\"\n}\n",
+  "doi": "10.1016/S0370-2693(97)00909-X",
+  "recid": 444097,
+  "title": "The One loop QCD corrections for gamma* ---> q anti-q g g",
+  "year": 1997
+ },
+ "arXiv:hep-ph/9708239": {
+  "arxiv": "hep-ph/9708239",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:1997sc,\n    author = \"Bern, Zvi and Dixon, Lance J. and Kosower, David A.\",\n    title = \"{One loop amplitudes for e+ e- to four partons}\",\n    eprint = \"hep-ph/9708239\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-7529, SACLAY-SPH-T-97-090, UCLA-97-TEP-10\",\n    doi = \"10.1016/S0550-3213(97)00703-7\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"513\",\n    pages = \"3--86\",\n    year = \"1998\"\n}\n",
+  "doi": "10.1016/S0550-3213(97)00703-7",
+  "recid": 446755,
+  "title": "One loop amplitudes for e+ e- to four partons",
+  "year": 1997
+ },
+ "inspire:1082926": {
+  "arxiv": "1112.5675",
+  "authors_short": "Czakon and Mitov",
+  "bibtex": "@article{Czakon:2011xx,\n    author = \"Czakon, Michal and Mitov, Alexander\",\n    title = \"{Top++: A Program for the Calculation of the Top-Pair Cross-Section at Hadron Colliders}\",\n    eprint = \"1112.5675\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2011-303, TTK-11-58\",\n    doi = \"10.1016/j.cpc.2014.06.021\",\n    journal = \"Comput. Phys. Commun.\",\n    volume = \"185\",\n    pages = \"2930\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1016/j.cpc.2014.06.021",
+  "recid": 1082926,
+  "title": "Top++: A Program for the Calculation of the Top-Pair Cross-Section at Hadron Colliders",
+  "year": 2011
+ },
+ "inspire:1086186": {
+  "arxiv": "1201.5804",
+  "authors_short": "Baikov et al.",
+  "bibtex": "@article{Baikov:2012er,\n    author = \"Baikov, P. A. and Chetyrkin, K. G. and Kuhn, J. H. and Rittinger, J.\",\n    title = \"{Complete ${\\cal O}(\\alpha_s^4)$ QCD Corrections to Hadronic $Z$-Decays}\",\n    eprint = \"1201.5804\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"SFB-CPP-12-05, TTP11-31\",\n    doi = \"10.1103/PhysRevLett.108.222003\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"108\",\n    pages = \"222003\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1103/PhysRevLett.108.222003",
+  "recid": 1086186,
+  "title": "Complete ${\\cal O}(\\alpha_s^4)$ QCD Corrections to Hadronic $Z$-Decays",
+  "year": 2012
+ },
+ "inspire:1087276": {
+  "arxiv": "1202.0439",
+  "authors_short": "Kniehl et al.",
+  "bibtex": "@article{Kniehl:2012ti,\n    author = \"Kniehl, B. A. and Kramer, G. and Schienbein, I. and Spiesberger, H.\",\n    title = \"{Inclusive Charmed-Meson Production at the CERN LHC}\",\n    eprint = \"1202.0439\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-12-013, MZ-TH-12-07, LPSC-12019\",\n    doi = \"10.1140/epjc/s10052-012-2082-2\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"72\",\n    pages = \"2082\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1140/epjc/s10052-012-2082-2",
+  "recid": 1087276,
+  "title": "Inclusive Charmed-Meson Production at the CERN LHC",
+  "year": 2012
+ },
+ "inspire:1112110": {
+  "arxiv": "1204.5201",
+  "authors_short": "Bärnreuther et al.",
+  "bibtex": "@article{Barnreuther:2012wtj,\n    author = {B{\\\"a}rnreuther, Peter and Czakon, Michal and Mitov, Alexander},\n    title = \"{Percent Level Precision Physics at the Tevatron: First Genuine NNLO QCD Corrections to $q \\bar{q} \\to t \\bar{t} + X$}\",\n    eprint = \"1204.5201\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2012-092\",\n    doi = \"10.1103/PhysRevLett.109.132001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"109\",\n    pages = \"132001\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1103/PhysRevLett.109.132001",
+  "recid": 1112110,
+  "title": "Percent Level Precision Physics at the Tevatron: First Genuine NNLO QCD Corrections to $q \\bar{q} \\to t \\bar{t} + X$",
+  "year": 2012
+ },
  "inspire:1115605": {
   "arxiv": "1205.4760",
   "authors_short": "Banfi et al.",
@@ -6,6 +231,24 @@
   "doi": "10.1016/j.physletb.2012.07.035",
   "recid": 1115605,
   "title": "Predictions for Drell-Yan $\\phi^*$ and $Q_T$ observables at the LHC",
+  "year": 2012
+ },
+ "inspire:1116414": {
+  "arxiv": "1205.6344",
+  "authors_short": "Cacciari et al.",
+  "bibtex": "@article{Cacciari:2012ny,\n    author = \"Cacciari, Matteo and Frixione, Stefano and Houdeau, Nicolas and Mangano, Michelangelo L. and Nason, Paolo and Ridolfi, Giovanni\",\n    title = \"{Theoretical predictions for charm and bottom production at the LHC}\",\n    eprint = \"1205.6344\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2011-227\",\n    doi = \"10.1007/JHEP10(2012)137\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"137\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1007/JHEP10(2012)137",
+  "recid": 1116414,
+  "title": "Theoretical predictions for charm and bottom production at the LHC",
+  "year": 2012
+ },
+ "inspire:1120738": {
+  "arxiv": "1207.0236",
+  "authors_short": "Czakon and Mitov",
+  "bibtex": "@article{Czakon:2012zr,\n    author = \"Czakon, Michal and Mitov, Alexander\",\n    title = \"{NNLO corrections to top-pair production at hadron colliders: the all-fermionic scattering channels}\",\n    eprint = \"1207.0236\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2012-181\",\n    doi = \"10.1007/JHEP12(2012)054\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"054\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1007/JHEP12(2012)054",
+  "recid": 1120738,
+  "title": "NNLO corrections to top-pair production at hadron colliders: the all-fermionic scattering channels",
   "year": 2012
  },
  "inspire:1124333": {
@@ -35,6 +278,24 @@
   "title": "Merging meets matching in MC@NLO",
   "year": 2012
  },
+ "inspire:1188853": {
+  "arxiv": "1210.0438",
+  "authors_short": "Dittmaier et al.",
+  "bibtex": "@article{Dittmaier:2012kx,\n    author = \"Dittmaier, Stefan and Huss, Alexander and Speckner, Christian\",\n    title = \"{Weak radiative corrections to dijet production at hadron colliders}\",\n    eprint = \"1210.0438\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FR-PHENO-2012-024\",\n    doi = \"10.1007/JHEP11(2012)095\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"095\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1007/JHEP11(2012)095",
+  "recid": 1188853,
+  "title": "Weak radiative corrections to dijet production at hadron colliders",
+  "year": 2012
+ },
+ "inspire:1193346": {
+  "arxiv": "1210.6832",
+  "authors_short": "Czakon and Mitov",
+  "bibtex": "@article{Czakon:2012pz,\n    author = \"Czakon, Michal and Mitov, Alexander\",\n    title = \"{NNLO corrections to top pair production at hadron colliders: the quark-gluon reaction}\",\n    eprint = \"1210.6832\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2012-286\",\n    doi = \"10.1007/JHEP01(2013)080\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"080\",\n    year = \"2013\"\n}\n",
+  "doi": "10.1007/JHEP01(2013)080",
+  "recid": 1193346,
+  "title": "NNLO corrections to top pair production at hadron colliders: the quark-gluon reaction",
+  "year": 2012
+ },
  "inspire:1204784": {
   "arxiv": "1211.6899",
   "authors_short": "ATLAS Collaboration",
@@ -53,6 +314,42 @@
   "title": "Merging H/W/Z + 0 and 1 jet at NLO with no merging scale: a path to parton shower + NNLO matching",
   "year": 2012
  },
+ "inspire:1215307": {
+  "arxiv": "1301.4536",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2013gxo,\n    author = \"Abazov, V. M. and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the Differential Cross Sections for Isolated Direct Photon Pair Production in $p \\bar p$ Collisions at $\\sqrt{s} = 1.96$ TeV}\",\n    eprint = \"1301.4536\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-13-022-E\",\n    doi = \"10.1016/j.physletb.2013.06.036\",\n    journal = \"Phys. Lett. B\",\n    volume = \"725\",\n    pages = \"6--14\",\n    year = \"2013\"\n}\n",
+  "doi": "10.1016/j.physletb.2013.06.036",
+  "recid": 1215307,
+  "title": "Measurement of the Differential Cross Sections for Isolated Direct Photon Pair Production in $p \\bar p$ Collisions at $\\sqrt{s} = 1.96$ TeV",
+  "year": 2013
+ },
+ "inspire:1219330": {
+  "arxiv": "1302.3415",
+  "authors_short": "ALEPH Collaboration",
+  "bibtex": "@article{ALEPH:2013dgf,\n    author = \"Schael, S. and others\",\n    collaboration = \"ALEPH, DELPHI, L3, OPAL, LEP Electroweak\",\n    title = \"{Electroweak Measurements in Electron-Positron Collisions at W-Boson-Pair Energies at LEP}\",\n    eprint = \"1302.3415\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-PH-EP-2013-022\",\n    doi = \"10.1016/j.physrep.2013.07.004\",\n    journal = \"Phys. Rept.\",\n    volume = \"532\",\n    pages = \"119--244\",\n    year = \"2013\"\n}\n",
+  "doi": "10.1016/j.physrep.2013.07.004",
+  "recid": 1219330,
+  "title": "Electroweak Measurements in Electron-Positron Collisions at W-Boson-Pair Energies at LEP",
+  "year": 2013
+ },
+ "inspire:1225282": {
+  "arxiv": "1303.6254",
+  "authors_short": "Czakon et al.",
+  "bibtex": "@article{Czakon:2013goa,\n    author = \"Czakon, Micha{\\l} and Fiedler, Paul and Mitov, Alexander\",\n    title = \"{Total Top-Quark Pair-Production Cross Section at Hadron Colliders\nThrough $O(\\alpha^4_S)$}\",\n    eprint = \"1303.6254\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2013-056, TTK-13-08\",\n    doi = \"10.1103/PhysRevLett.110.252004\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"110\",\n    pages = \"252004\",\n    year = \"2013\"\n}\n",
+  "doi": "10.1103/PhysRevLett.110.252004",
+  "recid": 1225282,
+  "title": "Total Top-Quark Pair-Production Cross Section at Hadron Colliders\nThrough $O(\\alpha^4_S)$",
+  "year": 2013
+ },
+ "inspire:1225520": {
+  "arxiv": "1303.6346",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2013kiv,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF, D0\",\n    title = \"{Higgs Boson Studies at the Tevatron}\",\n    eprint = \"1303.6346\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-13-081-E\",\n    doi = \"10.1103/PhysRevD.88.052014\",\n    journal = \"Phys. Rev. D\",\n    volume = \"88\",\n    number = \"5\",\n    pages = \"052014\",\n    year = \"2013\"\n}\n",
+  "doi": "10.1103/PhysRevD.88.052014",
+  "recid": 1225520,
+  "title": "Higgs Boson Studies at the Tevatron",
+  "year": 2013
+ },
  "inspire:1252862": {
   "arxiv": "1309.1393",
   "authors_short": "Guzzi et al.",
@@ -62,6 +359,51 @@
   "title": "Nonperturbative contributions to a resummed leptonic angular distribution in inclusive neutral vector boson production",
   "year": 2013
  },
+ "inspire:1256082": {
+  "arxiv": "1309.7570",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2013hmv,\n    author = \"Aaltonen, Timo Antero and others\",\n    collaboration = \"CDF, D0\",\n    title = \"{Combination of Measurements of the Top-Quark Pair Production Cross Section from the Tevatron Collider}\",\n    eprint = \"1309.7570\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-13-432-E\",\n    doi = \"10.1103/PhysRevD.89.072001\",\n    journal = \"Phys. Rev. D\",\n    volume = \"89\",\n    number = \"7\",\n    pages = \"072001\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1103/PhysRevD.89.072001",
+  "recid": 1256082,
+  "title": "Combination of Measurements of the Top-Quark Pair Production Cross Section from the Tevatron Collider",
+  "year": 2013
+ },
+ "inspire:1273586": {
+  "arxiv": "1312.6279",
+  "authors_short": "Bärnreuther et al.",
+  "bibtex": "@article{Barnreuther:2013qvf,\n    author = {B{\\\"a}rnreuther, P. and Czakon, M. and Fiedler, P.},\n    title = \"{Virtual amplitudes and threshold behaviour of hadronic top-quark pair-production cross sections}\",\n    eprint = \"1312.6279\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"TTK-13-28\",\n    doi = \"10.1007/JHEP02(2014)078\",\n    journal = \"JHEP\",\n    volume = \"02\",\n    pages = \"078\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1007/JHEP02(2014)078",
+  "recid": 1273586,
+  "title": "Virtual amplitudes and threshold behaviour of hadronic top-quark pair-production cross sections",
+  "year": 2013
+ },
+ "inspire:1285360": {
+  "arxiv": "1403.2641",
+  "authors_short": "Campbell and Williams",
+  "bibtex": "@article{Campbell:2014yka,\n    author = \"Campbell, John M. and Williams, Ciaran\",\n    title = \"{Triphoton Production at Hadron Colliders}\",\n    eprint = \"1403.2641\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FERMILAB-PUB-14-033-T\",\n    doi = \"10.1103/PhysRevD.89.113001\",\n    journal = \"Phys. Rev. D\",\n    volume = \"89\",\n    number = \"11\",\n    pages = \"113001\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1103/PhysRevD.89.113001",
+  "recid": 1285360,
+  "title": "Triphoton Production at Hadron Colliders",
+  "year": 2014
+ },
+ "inspire:1292824": {
+  "arxiv": "1404.7116",
+  "authors_short": "Brucherseifer et al.",
+  "bibtex": "@article{Brucherseifer:2014ama,\n    author = \"Brucherseifer, Mathias and Caola, Fabrizio and Melnikov, Kirill\",\n    title = \"{On the NNLO QCD corrections to single-top production at the LHC}\",\n    eprint = \"1404.7116\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"SFB-CPP-14-23\",\n    doi = \"10.1016/j.physletb.2014.06.075\",\n    journal = \"Phys. Lett. B\",\n    volume = \"736\",\n    pages = \"58--63\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1016/j.physletb.2014.06.075",
+  "recid": 1292824,
+  "title": "On the NNLO QCD corrections to single-top production at the LHC",
+  "year": 2014
+ },
+ "inspire:1295500": {
+  "arxiv": "1405.2219",
+  "authors_short": "Cascioli et al.",
+  "bibtex": "@article{Cascioli:2014yka,\n    author = {Cascioli, F. and Gehrmann, T. and Grazzini, M. and Kallweit, S. and Maierh{\\\"o}fer, P. and von Manteuffel, A. and Pozzorini, S. and Rathlev, D. and Tancredi, L. and Weihs, E.},\n    title = \"{ZZ production at hadron colliders in NNLO QCD}\",\n    eprint = \"1405.2219\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-19-14, MITP-14-033\",\n    doi = \"10.1016/j.physletb.2014.06.056\",\n    journal = \"Phys. Lett. B\",\n    volume = \"735\",\n    pages = \"311--313\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1016/j.physletb.2014.06.056",
+  "recid": 1295500,
+  "title": "ZZ production at hadron colliders in NNLO QCD",
+  "year": 2014
+ },
  "inspire:1300647": {
   "arxiv": "1406.3660",
   "authors_short": "ATLAS Collaboration",
@@ -70,6 +412,69 @@
   "recid": 1300647,
   "title": "Measurement of the $Z/\\gamma^*$ boson transverse momentum distribution in $pp$ collisions at $\\sqrt{s}$ = 7 TeV with the ATLAS detector",
   "year": 2014
+ },
+ "inspire:1300820": {
+  "arxiv": "1406.4403",
+  "authors_short": "Kant et al.",
+  "bibtex": "@article{Kant:2014oha,\n    author = {Kant, P. and Kind, O. M. and Kintscher, T. and Lohse, T. and Martini, T. and M{\\\"o}lbitz, S. and Rieck, P. and Uwer, P.},\n    title = \"{HatHor  for single top-quark production: Updated predictions and uncertainty estimates for single top-quark production in hadronic collisions}\",\n    eprint = \"1406.4403\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"HU-EP-14-22\",\n    doi = \"10.1016/j.cpc.2015.02.001\",\n    journal = \"Comput. Phys. Commun.\",\n    volume = \"191\",\n    pages = \"74--89\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1016/j.cpc.2015.02.001",
+  "recid": 1300820,
+  "title": "HatHor  for single top-quark production: Updated predictions and uncertainty estimates for single top-quark production in hadronic collisions",
+  "year": 2014
+ },
+ "inspire:130340": {
+  "arxiv": null,
+  "authors_short": "Bardeen et al.",
+  "bibtex": "@article{Bardeen:1978yd,\n    author = \"Bardeen, William A. and Buras, A. J. and Duke, D. W. and Muta, T.\",\n    title = \"{Deep Inelastic Scattering Beyond the Leading Order in Asymptotically Free Gauge Theories}\",\n    reportNumber = \"FERMILAB-PUB-78-042-T\",\n    doi = \"10.1103/PhysRevD.18.3998\",\n    journal = \"Phys. Rev. D\",\n    volume = \"18\",\n    pages = \"3998\",\n    year = \"1978\"\n}\n",
+  "doi": "10.1103/PhysRevD.18.3998",
+  "recid": 130340,
+  "title": "Deep Inelastic Scattering Beyond the Leading Order in Asymptotically Free Gauge Theories",
+  "year": 1978
+ },
+ "inspire:1304696": {
+  "arxiv": "1407.0823",
+  "authors_short": "Frixione et al.",
+  "bibtex": "@article{Frixione:2014qaa,\n    author = \"Frixione, S. and Hirschi, V. and Pagani, D. and Shao, H. S. and Zaro, M.\",\n    title = \"{Weak corrections to Higgs hadroproduction in association with a top-quark pair}\",\n    eprint = \"1407.0823\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2014-123, CP3-14-49\",\n    doi = \"10.1007/JHEP09(2014)065\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"065\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1007/JHEP09(2014)065",
+  "recid": 1304696,
+  "title": "Weak corrections to Higgs hadroproduction in association with a top-quark pair",
+  "year": 2014
+ },
+ "inspire:1311991": {
+  "arxiv": "1408.5243",
+  "authors_short": "Gehrmann et al.",
+  "bibtex": "@article{Gehrmann:2014fva,\n    author = {Gehrmann, T. and Grazzini, M. and Kallweit, S. and Maierh{\\\"o}fer, P. and von Manteuffel, A. and Pozzorini, S. and Rathlev, D. and Tancredi, L.},\n    title = \"{$W^+W^-$ Production at Hadron Colliders in Next to Next to Leading Order QCD}\",\n    eprint = \"1408.5243\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-29-14, MITP-14-053\",\n    doi = \"10.1103/PhysRevLett.113.212001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"113\",\n    number = \"21\",\n    pages = \"212001\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1103/PhysRevLett.113.212001",
+  "recid": 1311991,
+  "title": "$W^+W^-$ Production at Hadron Colliders in Next to Next to Leading Order QCD",
+  "year": 2014
+ },
+ "inspire:1353120": {
+  "arxiv": "1503.05027",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2015gsg,\n    author = \"Aaltonen, Timo Antero and others\",\n    collaboration = \"CDF, D0\",\n    title = \"{Tevatron Combination of Single-Top-Quark Cross Sections and Determination of the Magnitude of the Cabibbo-Kobayashi-Maskawa Matrix Element $\\bf V_{tb}$}\",\n    eprint = \"1503.05027\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-15-088-E\",\n    doi = \"10.1103/PhysRevLett.115.152003\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"115\",\n    number = \"15\",\n    pages = \"152003\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1103/PhysRevLett.115.152003",
+  "recid": 1353120,
+  "title": "Tevatron Combination of Single-Top-Quark Cross Sections and Determination of the Magnitude of the Cabibbo-Kobayashi-Maskawa Matrix Element $\\bf V_{tb}$",
+  "year": 2015
+ },
+ "inspire:1353132": {
+  "arxiv": "1503.04812",
+  "authors_short": "Gehrmann et al.",
+  "bibtex": "@article{Gehrmann:2015ora,\n    author = \"Gehrmann, Thomas and von Manteuffel, Andreas and Tancredi, Lorenzo\",\n    title = \"{The two-loop helicity amplitudes for $ q\\overline{q}^{\\prime}\\to {V}_1{V}_2\\to 4 $ leptons}\",\n    eprint = \"1503.04812\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-03-15, MITP-15-011, TTP15-011\",\n    doi = \"10.1007/JHEP09(2015)128\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"128\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1007/JHEP09(2015)128",
+  "recid": 1353132,
+  "title": "The two-loop helicity amplitudes for $ q\\overline{q}^{\\prime}\\to {V}_1{V}_2\\to 4 $ leptons",
+  "year": 2015
+ },
+ "inspire:1353668": {
+  "arxiv": "1503.06056",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2015vya,\n    author = \"Anastasiou, Charalampos and Duhr, Claude and Dulat, Falko and Herzog, Franz and Mistlberger, Bernhard\",\n    title = \"{Higgs Boson Gluon-Fusion Production in QCD at Three Loops}\",\n    eprint = \"1503.06056\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2015-055, CP3-15-07\",\n    doi = \"10.1103/PhysRevLett.114.212001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"114\",\n    pages = \"212001\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1103/PhysRevLett.114.212001",
+  "recid": 1353668,
+  "title": "Higgs Boson Gluon-Fusion Production in QCD at Three Loops",
+  "year": 2015
  },
  "inspire:1359450": {
   "arxiv": "1504.03511",
@@ -98,6 +503,60 @@
   "title": "Measurement of the forward $Z$ boson production cross-section in $pp$ collisions at $\\sqrt{s}=7$ TeV",
   "year": 2015
  },
+ "inspire:1375305": {
+  "arxiv": "1506.02660",
+  "authors_short": "Cacciari et al.",
+  "bibtex": "@article{Cacciari:2015jma,\n    author = \"Cacciari, Matteo and Dreyer, Fr{\\'e}d{\\'e}ric A. and Karlberg, Alexander and Salam, Gavin P. and Zanderighi, Giulia\",\n    title = \"{Fully Differential Vector-Boson-Fusion Higgs Production at Next-to-Next-to-Leading Order}\",\n    eprint = \"1506.02660\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2015-127, OUTP-15-12P\",\n    doi = \"10.1103/PhysRevLett.115.082002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"115\",\n    number = \"8\",\n    pages = \"082002\",\n    year = \"2015\",\n    note = \"[Erratum: Phys.Rev.Lett. 120, 139901 (2018)]\"\n}\n",
+  "doi": "10.1103/PhysRevLett.115.082002",
+  "recid": 1375305,
+  "title": "Fully Differential Vector-Boson-Fusion Higgs Production at Next-to-Next-to-Leading Order",
+  "year": 2015
+ },
+ "inspire:1376011": {
+  "arxiv": "1506.04072",
+  "authors_short": "Kidonakis",
+  "bibtex": "@article{Kidonakis:2015nna,\n    author = \"Kidonakis, Nikolaos\",\n    title = \"{Theoretical results for electroweak-boson and single-top production}\",\n    eprint = \"1506.04072\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.22323/1.247.0170\",\n    journal = \"PoS\",\n    volume = \"DIS2015\",\n    pages = \"170\",\n    year = \"2015\"\n}\n",
+  "doi": "10.22323/1.247.0170",
+  "recid": 1376011,
+  "title": "Theoretical results for electroweak-boson and single-top production",
+  "year": 2015
+ },
+ "inspire:1377206": {
+  "arxiv": "1506.06042",
+  "authors_short": "H1 Collaboration",
+  "bibtex": "@article{H1:2015ubc,\n    author = \"Abramowicz, H. and others\",\n    collaboration = \"H1, ZEUS\",\n    title = \"{Combination of measurements of inclusive deep inelastic ${e^{\\pm }p}$ scattering cross sections and QCD analysis of HERA data}\",\n    eprint = \"1506.06042\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"DESY-15-039\",\n    doi = \"10.1140/epjc/s10052-015-3710-4\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"75\",\n    number = \"12\",\n    pages = \"580\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1140/epjc/s10052-015-3710-4",
+  "recid": 1377206,
+  "title": "Combination of measurements of inclusive deep inelastic ${e^{\\pm }p}$ scattering cross sections and QCD analysis of HERA data",
+  "year": 2015
+ },
+ "inspire:1379948": {
+  "arxiv": "1506.08025",
+  "authors_short": "Gauld et al.",
+  "bibtex": "@article{Gauld:2015yia,\n    author = \"Gauld, Rhorry and Rojo, Juan and Rottoli, Luca and Talbert, Jim\",\n    title = \"{Charm production in the forward region: constraints on the small-x gluon and backgrounds for neutrino astronomy}\",\n    eprint = \"1506.08025\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"OUTP-15-06P, DCPT-15-32, IPPP-15-16\",\n    doi = \"10.1007/JHEP11(2015)009\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"009\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1007/JHEP11(2015)009",
+  "recid": 1379948,
+  "title": "Charm production in the forward region: constraints on the small-x gluon and backgrounds for neutrino astronomy",
+  "year": 2015
+ },
+ "inspire:1384271": {
+  "arxiv": "1507.06197",
+  "authors_short": "Cacciari et al.",
+  "bibtex": "@article{Cacciari:2015fta,\n    author = \"Cacciari, Matteo and Mangano, Michelangelo L. and Nason, Paolo\",\n    title = \"{Gluon PDF constraints from the ratio of forward heavy-quark production at the LHC at $\\sqrt{S}=7$ and 13 TeV}\",\n    eprint = \"1507.06197\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2015-171\",\n    doi = \"10.1140/epjc/s10052-015-3814-x\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"75\",\n    number = \"12\",\n    pages = \"610\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1140/epjc/s10052-015-3814-x",
+  "recid": 1384271,
+  "title": "Gluon PDF constraints from the ratio of forward heavy-quark production at the LHC at $\\sqrt{S}=7$ and 13 TeV",
+  "year": 2015
+ },
+ "inspire:1384273": {
+  "arxiv": "1507.06257",
+  "authors_short": "Grazzini et al.",
+  "bibtex": "@article{Grazzini:2015hta,\n    author = \"Grazzini, Massimiliano and Kallweit, Stefan and Rathlev, Dirk\",\n    title = \"{ZZ production at the LHC: fiducial cross sections and distributions in NNLO QCD}\",\n    eprint = \"1507.06257\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.physletb.2015.09.055\",\n    journal = \"Phys. Lett. B\",\n    volume = \"750\",\n    pages = \"407--410\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1016/j.physletb.2015.09.055",
+  "recid": 1384273,
+  "title": "ZZ production at the LHC: fiducial cross sections and distributions in NNLO QCD",
+  "year": 2015
+ },
  "inspire:1386859": {
   "arxiv": "1508.01475",
   "authors_short": "Alioli et al.",
@@ -105,6 +564,33 @@
   "doi": "10.1103/PhysRevD.92.094020",
   "recid": 1386859,
   "title": "Drell-Yan production at NNLL′+NNLO matched to parton showers",
+  "year": 2015
+ },
+ "inspire:1394395": {
+  "arxiv": "1509.06734",
+  "authors_short": "Caola et al.",
+  "bibtex": "@article{Caola:2015psa,\n    author = {Caola, Fabrizio and Melnikov, Kirill and R{\\\"o}ntsch, Raoul and Tancredi, Lorenzo},\n    title = \"{QCD corrections to ZZ production in gluon fusion at the LHC}\",\n    eprint = \"1509.06734\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"TTP15-035, CERN-PH-TH-2015-226, FERMILAB-PUB-15-398-T\",\n    doi = \"10.1103/PhysRevD.92.094028\",\n    journal = \"Phys. Rev. D\",\n    volume = \"92\",\n    number = \"9\",\n    pages = \"094028\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1103/PhysRevD.92.094028",
+  "recid": 1394395,
+  "title": "QCD corrections to ZZ production in gluon fusion at the LHC",
+  "year": 2015
+ },
+ "inspire:1396331": {
+  "arxiv": "1510.01707",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2015swx,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurements of prompt charm production cross-sections in $pp$ collisions at $ \\sqrt{s}=13 $ TeV}\",\n    eprint = \"1510.01707\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"LHCB-PAPER-2015-041, CERN-PH-EP-2015-272\",\n    doi = \"10.1007/JHEP03(2016)159\",\n    journal = \"JHEP\",\n    volume = \"03\",\n    pages = \"159\",\n    year = \"2016\",\n    note = \"[Erratum: JHEP 09, 013 (2016), Erratum: JHEP 05, 074 (2017)]\"\n}\n",
+  "doi": "10.1007/JHEP03(2016)159",
+  "recid": 1396331,
+  "title": "Measurements of prompt charm production cross-sections in $pp$ collisions at $ \\sqrt{s}=13 $ TeV",
+  "year": 2015
+ },
+ "inspire:1402357": {
+  "arxiv": "1511.00549",
+  "authors_short": "Czakon et al.",
+  "bibtex": "@article{Czakon:2015owf,\n    author = \"Czakon, Michal and Heymes, David and Mitov, Alexander\",\n    title = \"{High-precision differential predictions for top-quark pairs at the LHC}\",\n    eprint = \"1511.00549\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CAVENDISH-HEP-15-10, TTK-15-34\",\n    doi = \"10.1103/PhysRevLett.116.082003\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"116\",\n    number = \"8\",\n    pages = \"082003\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevLett.116.082003",
+  "recid": 1402357,
+  "title": "High-precision differential predictions for top-quark pairs at the LHC",
   "year": 2015
  },
  "inspire:140456": {
@@ -143,6 +629,33 @@
   "title": "Measurement of the transverse momentum and $\\phi ^*_{\\eta }$ distributions of Drell–Yan lepton pairs in proton–proton collisions at $\\sqrt{s}=8$  TeV with the ATLAS detector",
   "year": 2015
  },
+ "inspire:1418197": {
+  "arxiv": "1601.07787",
+  "authors_short": "Biedermann et al.",
+  "bibtex": "@article{Biedermann:2016yvs,\n    author = {Biedermann, B. and Denner, A. and Dittmaier, S. and Hofer, L. and J{\\\"a}ger, B.},\n    title = \"{Electroweak corrections to $pp \\to \\mu^+\\mu^-e^+e^- + X$ at the LHC: a Higgs background study}\",\n    eprint = \"1601.07787\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FR-PHENO-2016-002, ICCUB-16-003\",\n    doi = \"10.1103/PhysRevLett.116.161803\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"116\",\n    number = \"16\",\n    pages = \"161803\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevLett.116.161803",
+  "recid": 1418197,
+  "title": "Electroweak corrections to $pp \\to \\mu^+\\mu^-e^+e^- + X$ at the LHC: a Higgs background study",
+  "year": 2016
+ },
+ "inspire:1419073": {
+  "arxiv": "1602.00695",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2016cez,\n    author = \"Anastasiou, Charalampos and Duhr, Claude and Dulat, Falko and Furlan, Elisabetta and Gehrmann, Thomas and Herzog, Franz and Lazopoulos, Achilleas and Mistlberger, Bernhard\",\n    title = \"{High precision determination of the gluon fusion Higgs boson cross-section at the LHC}\",\n    eprint = \"1602.00695\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CP3-16-01, ZU-TH-27-15, NIKHEF-2016-004, CERN-TH-2016-006\",\n    doi = \"10.1007/JHEP05(2016)058\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"058\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1007/JHEP05(2016)058",
+  "recid": 1419073,
+  "title": "High precision determination of the gluon fusion Higgs boson cross-section at the LHC",
+  "year": 2016
+ },
+ "inspire:1426698": {
+  "arxiv": "1603.02663",
+  "authors_short": "Campbell et al.",
+  "bibtex": "@article{Campbell:2016yrh,\n    author = \"Campbell, John M. and Ellis, R. Keith and Li, Ye and Williams, Ciaran\",\n    title = \"{Predictions for diphoton production at the LHC through NNLO in QCD}\",\n    eprint = \"1603.02663\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-16-16, FERMILAB-PUB-16-074-T, IPPP/16/16, FERMILAB-PUB-16-074-T\",\n    doi = \"10.1007/JHEP07(2016)148\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"148\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1007/JHEP07(2016)148",
+  "recid": 1426698,
+  "title": "Predictions for diphoton production at the LHC through NNLO in QCD",
+  "year": 2016
+ },
  "inspire:1436497": {
   "arxiv": "1603.09222",
   "authors_short": "ATLAS Collaboration",
@@ -150,6 +663,15 @@
   "doi": "10.1016/j.physletb.2016.06.023",
   "recid": 1436497,
   "title": "Measurement of $W^{\\pm}$ and $Z$-boson production cross sections in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector",
+  "year": 2016
+ },
+ "inspire:1452811": {
+  "arxiv": "1604.08576",
+  "authors_short": "Grazzini et al.",
+  "bibtex": "@article{Grazzini:2016swo,\n    author = \"Grazzini, Massimiliano and Kallweit, Stefan and Rathlev, Dirk and Wiesemann, Marius\",\n    title = \"{$W^{\\pm}Z$ production at hadron colliders in NNLO QCD}\",\n    eprint = \"1604.08576\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-15-16, MITP-16-037, NSF-KITP-16-046, DESY-16-074\",\n    doi = \"10.1016/j.physletb.2016.08.017\",\n    journal = \"Phys. Lett. B\",\n    volume = \"761\",\n    pages = \"179--183\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1016/j.physletb.2016.08.017",
+  "recid": 1452811,
+  "title": "$W^{\\pm}Z$ production at hadron colliders in NNLO QCD",
   "year": 2016
  },
  "inspire:1456804": {
@@ -161,6 +683,15 @@
   "title": "Measurement of $\\sin^2\\theta^{\\rm lept}_{\\rm eff}$ using $e^+e^-$ pairs from $\\gamma^*/Z$ bosons produced in $p\\bar{p}$ collisions at a center-of-momentum energy of 1.96 TeV",
   "year": 2016
  },
+ "inspire:1457600": {
+  "arxiv": "1605.03419",
+  "authors_short": "Biedermann et al.",
+  "bibtex": "@article{Biedermann:2016guo,\n    author = {Biedermann, Benedikt and Billoni, Marina and Denner, Ansgar and Dittmaier, Stefan and Hofer, Lars and J{\\\"a}ger, Barbara and Salfelder, Lukas},\n    title = \"{Next-to-leading-order electroweak corrections to $pp \\to W^+W^-\\to$ 4 leptons at the LHC}\",\n    eprint = \"1605.03419\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FR-PHENO-2016-005, ICCUB-16-021\",\n    doi = \"10.1007/JHEP06(2016)065\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"065\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1007/JHEP06(2016)065",
+  "recid": 1457600,
+  "title": "Next-to-leading-order electroweak corrections to $pp \\to W^+W^-\\to$ 4 leptons at the LHC",
+  "year": 2016
+ },
  "inspire:1466778": {
   "arxiv": "1606.00689",
   "authors_short": "ATLAS Collaboration",
@@ -168,6 +699,60 @@
   "doi": "10.1007/JHEP08(2016)159",
   "recid": 1466778,
   "title": "Measurement of the angular coefficients in $Z$-boson events using electron and muon pairs from data taken at $\\sqrt{s}=8$ TeV with the ATLAS detector",
+  "year": 2016
+ },
+ "inspire:1467221": {
+  "arxiv": "1606.00840",
+  "authors_short": "Dreyer and Karlberg",
+  "bibtex": "@article{Dreyer:2016oyx,\n    author = \"Dreyer, Fr{\\'e}d{\\'e}ric A. and Karlberg, Alexander\",\n    title = \"{Vector-Boson Fusion Higgs Production at Three Loops in QCD}\",\n    eprint = \"1606.00840\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2016-127, OUTP-16-12P\",\n    doi = \"10.1103/PhysRevLett.117.072001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"117\",\n    number = \"7\",\n    pages = \"072001\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevLett.117.072001",
+  "recid": 1467221,
+  "title": "Vector-Boson Fusion Higgs Production at Three Loops in QCD",
+  "year": 2016
+ },
+ "inspire:1468062": {
+  "arxiv": "1606.01915",
+  "authors_short": "Pagani et al.",
+  "bibtex": "@article{Pagani:2016caq,\n    author = \"Pagani, Davide and Tsinikos, Ioannis and Zaro, Marco\",\n    title = \"{The impact of the photon PDF and electroweak corrections on $t \\bar{t}$ distributions}\",\n    eprint = \"1606.01915\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CP3-16-28\",\n    doi = \"10.1140/epjc/s10052-016-4318-z\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"76\",\n    number = \"9\",\n    pages = \"479\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1140/epjc/s10052-016-4318-z",
+  "recid": 1468062,
+  "title": "The impact of the photon PDF and electroweak corrections on $t \\bar{t}$ distributions",
+  "year": 2016
+ },
+ "inspire:1472815": {
+  "arxiv": "1606.08463",
+  "authors_short": "Berger et al.",
+  "bibtex": "@article{Berger:2016oht,\n    author = \"Berger, Edmond L. and Gao, Jun and Yuan, C. -P. and Zhu, Hua Xing\",\n    title = \"{NNLO QCD Corrections to t-channel Single Top-Quark Production and Decay}\",\n    eprint = \"1606.08463\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevD.94.071501\",\n    journal = \"Phys. Rev. D\",\n    volume = \"94\",\n    number = \"7\",\n    pages = \"071501\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevD.94.071501",
+  "recid": 1472815,
+  "title": "NNLO QCD Corrections to t-channel Single Top-Quark Production and Decay",
+  "year": 2016
+ },
+ "inspire:1472971": {
+  "arxiv": "1606.08907",
+  "authors_short": "Davies et al.",
+  "bibtex": "@article{Davies:2016ruz,\n    author = \"Davies, J. and Vogt, A. and Moch, S. and Vermaseren, J. A. M.\",\n    title = \"{Non-singlet coefficient functions for charged-current deep-inelastic scattering to the third order in QCD}\",\n    eprint = \"1606.08907\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"LTH-1089, DESY-16-110, NIKHEF-2016-030, LTH 1089, DESY 16-110, Nikhef 2016-030\",\n    doi = \"10.22323/1.265.0059\",\n    journal = \"PoS\",\n    volume = \"DIS2016\",\n    pages = \"059\",\n    year = \"2016\"\n}\n",
+  "doi": "10.22323/1.265.0059",
+  "recid": 1472971,
+  "title": "Non-singlet coefficient functions for charged-current deep-inelastic scattering to the third order in QCD",
+  "year": 2016
+ },
+ "inspire:1475281": {
+  "arxiv": "1607.03111",
+  "authors_short": "Banfi et al.",
+  "bibtex": "@article{Banfi:2016zlc,\n    author = \"Banfi, Andrea and McAslan, Heather and Monni, Pier Francesco and Zanderighi, Giulia\",\n    title = \"{The two-jet rate in $e^+e^-$ at next-to-next-to-leading-logarithmic order}\",\n    eprint = \"1607.03111\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2016-149, OUTP-16-19P\",\n    doi = \"10.1103/PhysRevLett.117.172001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"117\",\n    number = \"17\",\n    pages = \"172001\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevLett.117.172001",
+  "recid": 1475281,
+  "title": "The two-jet rate in $e^+e^-$ at next-to-next-to-leading-logarithmic order",
+  "year": 2016
+ },
+ "inspire:1485195": {
+  "arxiv": "1609.00873",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2016plw,\n    author = \"Khachatryan, Vardan and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the total and differential inclusive $B^+$ hadron cross sections in pp collisions at $\\sqrt{s}$ = 13 TeV}\",\n    eprint = \"1609.00873\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-BPH-15-004, CERN-EP-2016-198\",\n    doi = \"10.1016/j.physletb.2017.05.074\",\n    journal = \"Phys. Lett. B\",\n    volume = \"771\",\n    pages = \"435--456\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1016/j.physletb.2017.05.074",
+  "recid": 1485195,
+  "title": "Measurement of the total and differential inclusive $B^+$ hadron cross sections in pp collisions at $\\sqrt{s}$ = 13 TeV",
   "year": 2016
  },
  "inspire:1490040": {
@@ -179,6 +764,42 @@
   "title": "NNLO QCD corrections for Drell-Yan $p_T^Z$ and $\\phi^*$ observables at the LHC",
   "year": 2016
  },
+ "inspire:1492553": {
+  "arxiv": "1610.05497",
+  "authors_short": "Bonetti et al.",
+  "bibtex": "@article{Bonetti:2016brm,\n    author = \"Bonetti, Marco and Melnikov, Kirill and Tancredi, Lorenzo\",\n    title = \"{Two-loop electroweak corrections to Higgs{\\textendash}gluon couplings to higher orders in the dimensional regularization parameter}\",\n    eprint = \"1610.05497\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"TTP16-045\",\n    doi = \"10.1016/j.nuclphysb.2017.01.020\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"916\",\n    pages = \"709--726\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1016/j.nuclphysb.2017.01.020",
+  "recid": 1492553,
+  "title": "Two-loop electroweak corrections to Higgs–gluon couplings to higher orders in the dimensional regularization parameter",
+  "year": 2016
+ },
+ "inspire:1494411": {
+  "arxiv": "1610.07922",
+  "authors_short": "LHC Higgs Cross Section Working Group Collaboration",
+  "bibtex": "@book{LHCHiggsCrossSectionWorkingGroup:2016ypw,\n    author = \"de Florian, D. and others\",\n    collaboration = \"LHC Higgs Cross Section Working Group\",\n    title = \"{Handbook of LHC Higgs Cross Sections: 4. Deciphering the Nature of the Higgs Sector}\",\n    eprint = \"1610.07922\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-2017-002-M, CERN-2017-002\",\n    doi = \"10.23731/CYRM-2017-002\",\n    series = \"CERN Yellow Reports: Monographs\",\n    volume = \"2\",\n    year = \"2017\"\n}\n",
+  "doi": "10.23731/CYRM-2017-002",
+  "recid": 1494411,
+  "title": "Handbook of LHC Higgs Cross Sections: 4. Deciphering the Nature of the Higgs Sector",
+  "year": 2016
+ },
+ "inspire:1495841": {
+  "arxiv": "1611.01460",
+  "authors_short": "Currie et al.",
+  "bibtex": "@article{Currie:2016bfm,\n    author = \"Currie, J and Glover, E. W. N. and Pires, J\",\n    title = \"{Next-to-Next-to Leading Order QCD Predictions for Single Jet Inclusive Production at the LHC}\",\n    eprint = \"1611.01460\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-16-110, MPP-2016-322\",\n    doi = \"10.1103/PhysRevLett.118.072002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"118\",\n    number = \"7\",\n    pages = \"072002\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1103/PhysRevLett.118.072002",
+  "recid": 1495841,
+  "title": "Next-to-Next-to Leading Order QCD Predictions for Single Jet Inclusive Production at the LHC",
+  "year": 2016
+ },
+ "inspire:1498315": {
+  "arxiv": "1611.05338",
+  "authors_short": "Biedermann et al.",
+  "bibtex": "@article{Biedermann:2016lvg,\n    author = \"Biedermann, Benedikt and Denner, Ansgar and Dittmaier, Stefan and Hofer, Lars and Jager, Barbara\",\n    title = \"{Next-to-leading-order electroweak corrections to the production of four charged leptons at the LHC}\",\n    eprint = \"1611.05338\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FR-PHENO-2016-013, ICCUB-16-036\",\n    doi = \"10.1007/JHEP01(2017)033\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"033\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1007/JHEP01(2017)033",
+  "recid": 1498315,
+  "title": "Next-to-leading-order electroweak corrections to the production of four charged leptons at the LHC",
+  "year": 2016
+ },
  "inspire:1502620": {
   "arxiv": "1612.03016",
   "authors_short": "ATLAS Collaboration",
@@ -187,6 +808,69 @@
   "recid": 1502620,
   "title": "Precision measurement and interpretation of inclusive $W^+$ , $W^-$ and $Z/\\gamma ^*$ production cross sections with the ATLAS detector",
   "year": 2016
+ },
+ "inspire:1503171": {
+  "arxiv": "1612.04333",
+  "authors_short": "Campbell et al.",
+  "bibtex": "@article{Campbell:2016lzl,\n    author = \"Campbell, John M. and Ellis, R. Keith and Williams, Ciaran\",\n    title = \"{Direct Photon Production at Next-to{\\textendash}Next-to-Leading Order}\",\n    eprint = \"1612.04333\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-16-115, FERMILAB-PUB-16-585-T\",\n    doi = \"10.1103/PhysRevLett.118.222001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"118\",\n    number = \"22\",\n    pages = \"222001\",\n    year = \"2017\",\n    note = \"[Erratum: Phys.Rev.Lett. 124, 259901 (2020)]\"\n}\n",
+  "doi": "10.1103/PhysRevLett.118.222001",
+  "recid": 1503171,
+  "title": "Direct Photon Production at Next-to–Next-to-Leading Order",
+  "year": 2016
+ },
+ "inspire:1504058": {
+  "arxiv": "1612.05140",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2016qpe,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurement of the $b$-quark production cross-section in 7 and 13 TeV $pp$ collisions}\",\n    eprint = \"1612.05140\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2016-201, LHCB-PAPER-2016-031\",\n    doi = \"10.1103/PhysRevLett.118.052002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"118\",\n    number = \"5\",\n    pages = \"052002\",\n    year = \"2017\",\n    note = \"[Erratum: Phys.Rev.Lett. 119, 169901 (2017)]\"\n}\n",
+  "doi": "10.1103/PhysRevLett.118.052002",
+  "recid": 1504058,
+  "title": "Measurement of the $b$-quark production cross-section in 7 and 13 TeV $pp$ collisions",
+  "year": 2016
+ },
+ "inspire:1504215": {
+  "arxiv": "1612.05582",
+  "authors_short": "d'Enterria and Snigirev",
+  "bibtex": "@article{dEnterria:2016ids,\n    author = \"d'Enterria, David and Snigirev, Alexander M.\",\n    title = \"{Triple parton scatterings in high-energy proton-proton collisions}\",\n    eprint = \"1612.05582\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevLett.118.122001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"118\",\n    number = \"12\",\n    pages = \"122001\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1103/PhysRevLett.118.122001",
+  "recid": 1504215,
+  "title": "Triple parton scatterings in high-energy proton-proton collisions",
+  "year": 2016
+ },
+ "inspire:154571": {
+  "arxiv": null,
+  "authors_short": "Ellis et al.",
+  "bibtex": "@article{Ellis:1980wv,\n    author = \"Ellis, R. Keith and Ross, D. A. and Terrano, A. E.\",\n    title = \"{The Perturbative Calculation of Jet Structure in e+ e- Annihilation}\",\n    reportNumber = \"CALT-68-785\",\n    doi = \"10.1016/0550-3213(81)90165-6\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"178\",\n    pages = \"421--456\",\n    year = \"1981\"\n}\n",
+  "doi": "10.1016/0550-3213(81)90165-6",
+  "recid": 154571,
+  "title": "The Perturbative Calculation of Jet Structure in e+ e- Annihilation",
+  "year": 1980
+ },
+ "inspire:1599076": {
+  "arxiv": "1705.04105",
+  "authors_short": "Czakon et al.",
+  "bibtex": "@article{Czakon:2017wor,\n    author = \"Czakon, Michal and Heymes, David and Mitov, Alexander and Pagani, Davide and Tsinikos, Ioannis and Zaro, Marco\",\n    title = \"{Top-pair production at the LHC through NNLO QCD and NLO EW}\",\n    eprint = \"1705.04105\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CAVENDISH-HEP-17-07, CP3-17-12, TUM-HEP-1084-17, TTK-17-15\",\n    doi = \"10.1007/JHEP10(2017)186\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"186\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1007/JHEP10(2017)186",
+  "recid": 1599076,
+  "title": "Top-pair production at the LHC through NNLO QCD and NLO EW",
+  "year": 2017
+ },
+ "inspire:1601511": {
+  "arxiv": "1705.10271",
+  "authors_short": "Currie et al.",
+  "bibtex": "@article{Currie:2017eqf,\n    author = \"Currie, James and Gehrmann-De Ridder, Aude and Gehrmann, Thomas and Glover, E. W. N. and Huss, Alexander and Pires, Joao\",\n    title = \"{Precise predictions for dijet production at the LHC}\",\n    eprint = \"1705.10271\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-17-45, ZU-TH-13-17, MPP-2017-107\",\n    doi = \"10.1103/PhysRevLett.119.152001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"119\",\n    number = \"15\",\n    pages = \"152001\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1103/PhysRevLett.119.152001",
+  "recid": 1601511,
+  "title": "Precise predictions for dijet production at the LHC",
+  "year": 2017
+ },
+ "inspire:1618343": {
+  "arxiv": "1708.06938",
+  "authors_short": "Biedermann et al.",
+  "bibtex": "@article{Biedermann:2017oae,\n    author = \"Biedermann, Benedikt and Denner, Ansgar and Hofer, Lars\",\n    title = \"{Next-to-leading-order electroweak corrections to the production of three charged leptons plus missing energy at the LHC}\",\n    eprint = \"1708.06938\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ICCUB-17-016\",\n    doi = \"10.1007/JHEP10(2017)043\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"043\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1007/JHEP10(2017)043",
+  "recid": 1618343,
+  "title": "Next-to-leading-order electroweak corrections to the production of three charged leptons plus missing energy at the LHC",
+  "year": 2017
  },
  "inspire:1629966": {
   "arxiv": "1710.03951",
@@ -204,6 +888,15 @@
   "doi": "10.1007/JHEP12(2017)059",
   "recid": 1630886,
   "title": "Measurement of the Drell-Yan triple-differential cross section in $pp$ collisions at $\\sqrt{s} = 8$ TeV",
+  "year": 2017
+ },
+ "inspire:1634970": {
+  "arxiv": "1711.02692",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2017ble,\n    author = \"Aaboud, M. and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of inclusive jet and dijet cross-sections in proton-proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector}\",\n    eprint = \"1711.02692\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2017-157\",\n    doi = \"10.1007/JHEP05(2018)195\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"195\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1007/JHEP05(2018)195",
+  "recid": 1634970,
+  "title": "Measurement of inclusive jet and dijet cross-sections in proton-proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector",
   "year": 2017
  },
  "inspire:1636973": {
@@ -233,6 +926,42 @@
   "title": "Tevatron Run II combination of the effective leptonic electroweak mixing angle",
   "year": 2018
  },
+ "inspire:1649956": {
+  "arxiv": "1801.07284",
+  "authors_short": "Liu et al.",
+  "bibtex": "@article{Liu:2018ktv,\n    author = \"Liu, Xiaohui and Moch, Sven-Olaf and Ringer, Felix\",\n    title = \"{Phenomenology of single-inclusive jet production with jet radius and threshold resummation}\",\n    eprint = \"1801.07284\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-18-007\",\n    doi = \"10.1103/PhysRevD.97.056026\",\n    journal = \"Phys. Rev. D\",\n    volume = \"97\",\n    number = \"5\",\n    pages = \"056026\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1103/PhysRevD.97.056026",
+  "recid": 1649956,
+  "title": "Phenomenology of single-inclusive jet production with jet radius and threshold resummation",
+  "year": 2018
+ },
+ "inspire:1651501": {
+  "arxiv": "1801.10403",
+  "authors_short": "Bonetti et al.",
+  "bibtex": "@article{Bonetti:2018ukf,\n    author = \"Bonetti, Marco and Melnikov, Kirill and Tancredi, Lorenzo\",\n    title = \"{Higher order corrections to mixed QCD-EW contributions to Higgs boson production in gluon fusion}\",\n    eprint = \"1801.10403\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2018-011, TTP18-004\",\n    doi = \"10.1103/PhysRevD.97.056017\",\n    journal = \"Phys. Rev. D\",\n    volume = \"97\",\n    number = \"5\",\n    pages = \"056017\",\n    year = \"2018\",\n    note = \"[Erratum: Phys.Rev.D 97, 099906 (2018)]\"\n}\n",
+  "doi": "10.1103/PhysRevD.97.056017",
+  "recid": 1651501,
+  "title": "Higher order corrections to mixed QCD-EW contributions to Higgs boson production in gluon fusion",
+  "year": 2018
+ },
+ "inspire:1653133": {
+  "arxiv": "1802.00833",
+  "authors_short": "Mistlberger",
+  "bibtex": "@article{Mistlberger:2018etf,\n    author = \"Mistlberger, Bernhard\",\n    title = \"{Higgs boson production at hadron colliders at N$^{3}$LO in QCD}\",\n    eprint = \"1802.00833\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2018-018\",\n    doi = \"10.1007/JHEP05(2018)028\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"028\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1007/JHEP05(2018)028",
+  "recid": 1653133,
+  "title": "Higgs boson production at hadron colliders at N$^{3}$LO in QCD",
+  "year": 2018
+ },
+ "inspire:1670617": {
+  "arxiv": "1804.10236",
+  "authors_short": "Dubovyk et al.",
+  "bibtex": "@article{Dubovyk:2018rlg,\n    author = \"Dubovyk, Ievgen and Freitas, Ayres and Gluza, Janusz and Riemann, Tord and Usovitsch, Johann\",\n    title = \"{Complete electroweak two-loop corrections to Z boson production and decay}\",\n    eprint = \"1804.10236\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.physletb.2018.06.037\",\n    journal = \"Phys. Lett. B\",\n    volume = \"783\",\n    pages = \"86--94\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1016/j.physletb.2018.06.037",
+  "recid": 1670617,
+  "title": "Complete electroweak two-loop corrections to Z boson production and decay",
+  "year": 2018
+ },
  "inspire:1670818": {
   "arxiv": "1804.11152",
   "authors_short": "Bermudez Martinez et al.",
@@ -260,6 +989,51 @@
   "title": "Measurement of the weak mixing angle using the forward-backward asymmetry of Drell-Yan events in pp collisions at 8 TeV",
   "year": 2018
  },
+ "inspire:1680459": {
+  "arxiv": "1807.00782",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2018qao,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of differential cross sections for inclusive isolated-photon and photon+jets production in proton-proton collisions at $\\sqrt{s} =$ 13 TeV}\",\n    eprint = \"1807.00782\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-16-003, CERN-EP-2018-167\",\n    doi = \"10.1140/epjc/s10052-018-6482-9\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"79\",\n    number = \"1\",\n    pages = \"20\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1140/epjc/s10052-018-6482-9",
+  "recid": 1680459,
+  "title": "Measurement of differential cross sections for inclusive isolated-photon and photon+jets production in proton-proton collisions at $\\sqrt{s} =$ 13 TeV",
+  "year": 2018
+ },
+ "inspire:1681639": {
+  "arxiv": "1807.03692",
+  "authors_short": "Currie et al.",
+  "bibtex": "@article{Currie:2018xkj,\n    author = \"Currie, James and Gehrmann-De Ridder, Aude and Gehrmann, Thomas and Glover, E. W. Nigel and Huss, Alexander and Pires, Jo{\\~a}o\",\n    title = \"{Infrared sensitivity of single jet inclusive production at hadron colliders}\",\n    eprint = \"1807.03692\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-18-38, ZU-TH-24-18, CFTP-18-010, IPPP/18/38, ZU-TH 24/18, CFTP/18-010, CERN-TH-2018-159\",\n    doi = \"10.1007/JHEP10(2018)155\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"155\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1007/JHEP10(2018)155",
+  "recid": 1681639,
+  "title": "Infrared sensitivity of single jet inclusive production at hadron colliders",
+  "year": 2018
+ },
+ "inspire:1711626": {
+  "arxiv": "1812.10505",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2018fks,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the $\\mathrm{t}\\overline{\\mathrm{t}}$ production cross section, the top quark mass, and the strong coupling constant using dilepton events in pp collisions at $\\sqrt{s} =$ 13 TeV}\",\n    eprint = \"1812.10505\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-17-001, CERN-EP-2018-317\",\n    doi = \"10.1140/epjc/s10052-019-6863-8\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"79\",\n    number = \"5\",\n    pages = \"368\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1140/epjc/s10052-019-6863-8",
+  "recid": 1711626,
+  "title": "Measurement of the $\\mathrm{t}\\overline{\\mathrm{t}}$ production cross section, the top quark mass, and the strong coupling constant using dilepton events in pp collisions at $\\sqrt{s} =$ 13 TeV",
+  "year": 2018
+ },
+ "inspire:1712748": {
+  "arxiv": "1812.10514",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2018lgn,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the single top quark and antiquark production cross sections in the $t$ channel and their ratio in proton-proton collisions at $\\sqrt{s}=$ 13 TeV}\",\n    eprint = \"1812.10514\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-17-011, CERN-EP-2018-321\",\n    doi = \"10.1016/j.physletb.2019.135042\",\n    journal = \"Phys. Lett. B\",\n    volume = \"800\",\n    pages = \"135042\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1016/j.physletb.2019.135042",
+  "recid": 1712748,
+  "title": "Measurement of the single top quark and antiquark production cross sections in the $t$ channel and their ratio in proton-proton collisions at $\\sqrt{s}=$ 13 TeV",
+  "year": 2018
+ },
+ "inspire:1713542": {
+  "arxiv": "1901.04005",
+  "authors_short": "Catani et al.",
+  "bibtex": "@article{Catani:2019iny,\n    author = \"Catani, Stefano and Devoto, Simone and Grazzini, Massimiliano and Kallweit, Stefan and Mazzitelli, Javier and Sargsyan, Hayk\",\n    title = \"{Top-quark pair hadroproduction at next-to-next-to-leading order in QCD}\",\n    eprint = \"1901.04005\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH 02/19\",\n    doi = \"10.1103/PhysRevD.99.051501\",\n    journal = \"Phys. Rev. D\",\n    volume = \"99\",\n    number = \"5\",\n    pages = \"051501\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1103/PhysRevD.99.051501",
+  "recid": 1713542,
+  "title": "Top-quark pair hadroproduction at next-to-next-to-leading order in QCD",
+  "year": 2019
+ },
  "inspire:1720009": {
   "arxiv": "1902.04070",
   "authors_short": "Azzi et al.",
@@ -267,6 +1041,42 @@
   "doi": "10.23731/CYRM-2019-007.1",
   "recid": 1720009,
   "title": "Report from Working Group 1",
+  "year": 2019
+ },
+ "inspire:1720438": {
+  "arxiv": "1902.05759",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2019bsc,\n    author = \"Aaboud, Morad and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of $W^{\\pm}Z$ production cross sections and gauge boson polarisation in $pp$ collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector}\",\n    eprint = \"1902.05759\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2018-327\",\n    doi = \"10.1140/epjc/s10052-019-7027-6\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"79\",\n    number = \"6\",\n    pages = \"535\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1140/epjc/s10052-019-7027-6",
+  "recid": 1720438,
+  "title": "Measurement of $W^{\\pm}Z$ production cross sections and gauge boson polarisation in $pp$ collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector",
+  "year": 2019
+ },
+ "inspire:1721113": {
+  "arxiv": "1902.08158",
+  "authors_short": "Verbytskyi et al.",
+  "bibtex": "@article{Verbytskyi:2019zhh,\n    author = \"Verbytskyi, Andrii and Banfi, Andrea and Kardos, Adam and Monni, Pier Francesco and Kluth, Stefan and Somogyi, G{\\'a}bor and Sz{\\H{o}}r, Zolt{\\'a}n and Tr{\\'o}cs{\\'a}nyi, Zolt{\\'a}n and Tulip{\\'a}nt, Zolt{\\'a}n and Zanderighi, Giulia\",\n    title = \"{High precision determination of $\\alpha_s$ from a global fit of jet rates}\",\n    eprint = \"1902.08158\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MPP-2019-37, CERN-TH-2019-015, MITP/19-012\",\n    doi = \"10.1007/JHEP08(2019)129\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"129\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1007/JHEP08(2019)129",
+  "recid": 1721113,
+  "title": "High precision determination of $\\alpha_s$ from a global fit of jet rates",
+  "year": 2019
+ },
+ "inspire:1727794": {
+  "arxiv": "1904.01044",
+  "authors_short": "Chen et al.",
+  "bibtex": "@article{Chen:2019zmr,\n    author = {Chen, Xuan and Gehrmann, Thomas and Glover, Nigel and H{\\\"o}fer, Marius and Huss, Alexander},\n    title = \"{Isolated photon and photon+jet production at NNLO QCD accuracy}\",\n    eprint = \"1904.01044\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-19-23, ZU-TH-13-19, IPPP/19/23, ZU-TH 13/19, CERN-TH-2019-034\",\n    doi = \"10.1007/JHEP04(2020)166\",\n    journal = \"JHEP\",\n    volume = \"04\",\n    pages = \"166\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1007/JHEP04(2020)166",
+  "recid": 1727794,
+  "title": "Isolated photon and photon+jet production at NNLO QCD accuracy",
+  "year": 2019
+ },
+ "inspire:1734263": {
+  "arxiv": "1905.04242",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2019rob,\n    author = \"Aaboud, Morad and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of fiducial and differential $W^+W^-$ production cross-sections at $\\sqrt{s}=13$  TeV with the ATLAS detector}\",\n    eprint = \"1905.04242\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2019-055\",\n    doi = \"10.1140/epjc/s10052-019-7371-6\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"79\",\n    number = \"10\",\n    pages = \"884\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1140/epjc/s10052-019-7371-6",
+  "recid": 1734263,
+  "title": "Measurement of fiducial and differential $W^+W^-$ production cross-sections at $\\sqrt{s}=13$  TeV with the ATLAS detector",
   "year": 2019
  },
  "inspire:1734419": {
@@ -278,6 +1088,15 @@
   "title": "The transverse momentum spectrum of weak gauge bosons at N ${}^3$ LL + NNLO",
   "year": 2019
  },
+ "inspire:1736275": {
+  "arxiv": "1905.09047",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2019ibf,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Huss, A. and Pires, J.\",\n    title = \"{Triple Differential Dijet Cross Section at the LHC}\",\n    eprint = \"1905.09047\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2019-054, IPPP/19/31, ZU-TH 19/19, CFTP/19-016\",\n    doi = \"10.1103/PhysRevLett.123.102001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"123\",\n    number = \"10\",\n    pages = \"102001\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1103/PhysRevLett.123.102001",
+  "recid": 1736275,
+  "title": "Triple Differential Dijet Cross Section at the LHC",
+  "year": 2019
+ },
  "inspire:1737773": {
   "arxiv": "1906.00919",
   "authors_short": "Bermudez Martinez et al.",
@@ -285,6 +1104,33 @@
   "doi": "10.1103/PhysRevD.100.074027",
   "recid": 1737773,
   "title": "Production of Z-bosons in the parton branching method",
+  "year": 2019
+ },
+ "inspire:1740872": {
+  "arxiv": "1906.08815",
+  "authors_short": "Dubovyk et al.",
+  "bibtex": "@article{Dubovyk:2019szj,\n    author = \"Dubovyk, Ievgen and Freitas, Ayres and Gluza, Janusz and Riemann, Tord and Usovitsch, Johann\",\n    title = \"{Electroweak pseudo-observables and Z-boson form factors at two-loop accuracy}\",\n    eprint = \"1906.08815\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-19-103, DESY 19-103, KW 19-005\",\n    doi = \"10.1007/JHEP08(2019)113\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"113\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1007/JHEP08(2019)113",
+  "recid": 1740872,
+  "title": "Electroweak pseudo-observables and Z-boson form factors at two-loop accuracy",
+  "year": 2019
+ },
+ "inspire:1747058": {
+  "arxiv": "1907.12911",
+  "authors_short": "Czakon et al.",
+  "bibtex": "@article{Czakon:2019tmo,\n    author = \"Czakon, Micha{\\l} and van Hameren, Andreas and Mitov, Alexander and Poncelet, Rene\",\n    title = \"{Single-jet inclusive rates with exact color at $ \\mathcal{O} $ ($ {\\alpha}_s^4 $)}\",\n    eprint = \"1907.12911\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1007/JHEP10(2019)262\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"262\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1007/JHEP10(2019)262",
+  "recid": 1747058,
+  "title": "Single-jet inclusive rates with exact color at $ \\mathcal{O} $ ($ {\\alpha}_s^4 $)",
+  "year": 2019
+ },
+ "inspire:1748270": {
+  "arxiv": "1908.02746",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2019buk,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the inclusive isolated-photon cross section in $pp$ collisions at $\\sqrt{s}=13$ TeV using 36 fb$^{-1}$ of ATLAS data}\",\n    eprint = \"1908.02746\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2019-136\",\n    doi = \"10.1007/JHEP10(2019)203\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"203\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1007/JHEP10(2019)203",
+  "recid": 1748270,
+  "title": "Measurement of the inclusive isolated-photon cross section in $pp$ collisions at $\\sqrt{s}=13$ TeV using 36 fb$^{-1}$ of ATLAS data",
   "year": 2019
  },
  "inspire:1750311": {
@@ -332,6 +1178,69 @@
   "title": "Prospect for a measurement of the Weak Mixing Angle in $pp \\rightarrow Z/\\gamma^* \\rightarrow e^+e^-$ events with the ATLAS detector at the High Luminosity Large Hadron Collider",
   "year": 2020
  },
+ "inspire:1808912": {
+  "arxiv": "2007.13313",
+  "authors_short": "Duhr et al.",
+  "bibtex": "@article{Duhr:2020sdp,\n    author = \"Duhr, Claude and Dulat, Falko and Mistlberger, Bernhard\",\n    title = \"{Charged current Drell-Yan production at N$^{3}$LO}\",\n    eprint = \"2007.13313\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2020-121, SLAC-PUB-17539\",\n    doi = \"10.1007/JHEP11(2020)143\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"143\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1007/JHEP11(2020)143",
+  "recid": 1808912,
+  "title": "Charged current Drell-Yan production at N$^{3}$LO",
+  "year": 2020
+ },
+ "inspire:1814328": {
+  "arxiv": "2009.00119",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2020mxy,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{W$^+$W$^-$ boson pair production in proton-proton collisions at $\\sqrt{s} =$ 13 TeV}\",\n    eprint = \"2009.00119\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-18-004, CERN-EP-2020-144\",\n    doi = \"10.1103/PhysRevD.102.092001\",\n    journal = \"Phys. Rev. D\",\n    volume = \"102\",\n    number = \"9\",\n    pages = \"092001\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1103/PhysRevD.102.092001",
+  "recid": 1814328,
+  "title": "W$^+$W$^-$ boson pair production in proton-proton collisions at $\\sqrt{s} =$ 13 TeV",
+  "year": 2020
+ },
+ "inspire:1814609": {
+  "arxiv": "2009.01186",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2020gtj,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of ${\\mathrm{p}} {\\mathrm{p}} \\rightarrow {\\mathrm{Z}} {\\mathrm{Z}} $ production cross sections and constraints on anomalous triple gauge couplings at $\\sqrt{s} = 13\\,\\text {TeV} $}\",\n    eprint = \"2009.01186\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-19-001, CERN-EP-2020-145\",\n    doi = \"10.1140/epjc/s10052-020-08817-8\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"81\",\n    number = \"3\",\n    pages = \"200\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1140/epjc/s10052-020-08817-8",
+  "recid": 1814609,
+  "title": "Measurements of ${\\mathrm{p}} {\\mathrm{p}} \\rightarrow {\\mathrm{Z}} {\\mathrm{Z}} $ production cross sections and constraints on anomalous triple gauge couplings at $\\sqrt{s} = 13\\,\\text {TeV} $",
+  "year": 2020
+ },
+ "inspire:1818463": {
+  "arxiv": "2009.10386",
+  "authors_short": "Behring et al.",
+  "bibtex": "@article{Behring:2020cqi,\n    author = {Behring, Arnd and Buccioni, Federico and Caola, Fabrizio and Delto, Maximilian and Jaquier, Matthieu and Melnikov, Kirill and R{\\\"o}ntsch, Raoul},\n    title = \"{Mixed QCD-electroweak corrections to $W$-boson production in hadron collisions}\",\n    eprint = \"2009.10386\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"TTP20-033, P3H-20-048, OUTP-20-09P, CERN-TH-2020-152\",\n    doi = \"10.1103/PhysRevD.103.013008\",\n    journal = \"Phys. Rev. D\",\n    volume = \"103\",\n    number = \"1\",\n    pages = \"013008\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1103/PhysRevD.103.013008",
+  "recid": 1818463,
+  "title": "Mixed QCD-electroweak corrections to $W$-boson production in hadron collisions",
+  "year": 2020
+ },
+ "inspire:1824426": {
+  "arxiv": "2010.11906",
+  "authors_short": "Catani et al.",
+  "bibtex": "@article{Catani:2020kkl,\n    author = \"Catani, Stefano and Devoto, Simone and Grazzini, Massimiliano and Kallweit, Stefan and Mazzitelli, Javier\",\n    title = \"{Bottom-quark production at hadron colliders: fully differential predictions in NNLO QCD}\",\n    eprint = \"2010.11906\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH 36/20, TIF-UNIMI-2020-27, MPP-2020-186\",\n    doi = \"10.1007/JHEP03(2021)029\",\n    journal = \"JHEP\",\n    volume = \"03\",\n    pages = \"029\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP03(2021)029",
+  "recid": 1824426,
+  "title": "Bottom-quark production at hadron colliders: fully differential predictions in NNLO QCD",
+  "year": 2020
+ },
+ "inspire:1834011": {
+  "arxiv": "2011.13946",
+  "authors_short": "Caola et al.",
+  "bibtex": "@article{Caola:2020dfu,\n    author = \"Caola, Fabrizio and Von Manteuffel, Andreas and Tancredi, Lorenzo\",\n    title = \"{Diphoton Amplitudes in Three-Loop Quantum Chromodynamics}\",\n    eprint = \"2011.13946\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MSUHEP-20-018, OUTP-20-12P\",\n    doi = \"10.1103/PhysRevLett.126.112004\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"126\",\n    number = \"11\",\n    pages = \"112004\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1103/PhysRevLett.126.112004",
+  "recid": 1834011,
+  "title": "Diphoton Amplitudes in Three-Loop Quantum Chromodynamics",
+  "year": 2020
+ },
+ "inspire:1834626": {
+  "arxiv": "2012.01574",
+  "authors_short": "Campbell et al.",
+  "bibtex": "@article{Campbell:2020fhf,\n    author = \"Campbell, John and Neumann, Tobias and Sullivan, Zack\",\n    title = \"{Single-top-quark production in the $t$-channel at NNLO}\",\n    eprint = \"2012.01574\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FERMILAB-PUB-20-608-T, IIT-CAPP-20-05\",\n    doi = \"10.1007/JHEP02(2021)040\",\n    journal = \"JHEP\",\n    volume = \"02\",\n    pages = \"040\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP02(2021)040",
+  "recid": 1834626,
+  "title": "Single-top-quark production in the $t$-channel at NNLO",
+  "year": 2020
+ },
  "inspire:1836186": {
   "arxiv": "2012.05918",
   "authors_short": "Heller et al.",
@@ -340,6 +1249,33 @@
   "recid": 1836186,
   "title": "Mixed EW-QCD two-loop amplitudes for $q\\bar{q} \\to \\ell^+\\ell^-$ and $\\gamma_5$ scheme independence of multi-loop corrections",
   "year": 2020
+ },
+ "inspire:1848114": {
+  "arxiv": "2102.11300",
+  "authors_short": "Kidonakis and Yamanaka",
+  "bibtex": "@article{Kidonakis:2021vob,\n    author = \"Kidonakis, Nikolaos and Yamanaka, Nodoka\",\n    title = \"{Higher-order corrections for $tW$ production at high-energy hadron colliders}\",\n    eprint = \"2102.11300\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1007/JHEP05(2021)278\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"278\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP05(2021)278",
+  "recid": 1848114,
+  "title": "Higher-order corrections for $tW$ production at high-energy hadron colliders",
+  "year": 2021
+ },
+ "inspire:1848458": {
+  "arxiv": "2102.12539",
+  "authors_short": "Buonocore et al.",
+  "bibtex": "@article{Buonocore:2021rxx,\n    author = \"Buonocore, Luca and Grazzini, Massimiliano and Kallweit, Stefan and Savoini, Chiara and Tramontano, Francesco\",\n    title = \"{Mixed QCD-EW corrections to $\\boldsymbol{pp\\!\\to\\!\\ell\\nu_\\ell\\!+\\!X}$ at the LHC}\",\n    eprint = \"2102.12539\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevD.103.114012\",\n    journal = \"Phys. Rev. D\",\n    volume = \"103\",\n    pages = \"114012\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1103/PhysRevD.103.114012",
+  "recid": 1848458,
+  "title": "Mixed QCD-EW corrections to $\\boldsymbol{pp\\!\\to\\!\\ell\\nu_\\ell\\!+\\!X}$ at the LHC",
+  "year": 2021
+ },
+ "inspire:1849535": {
+  "arxiv": "2103.01918",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2021kog,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurements of differential cross-sections in four-lepton events in 13 TeV proton-proton collisions with the ATLAS detector}\",\n    eprint = \"2103.01918\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2021-019\",\n    doi = \"10.1007/JHEP07(2021)005\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"005\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP07(2021)005",
+  "recid": 1849535,
+  "title": "Measurements of differential cross-sections in four-lepton events in 13 TeV proton-proton collisions with the ATLAS detector",
+  "year": 2021
  },
  "inspire:1850545": {
   "arxiv": "2103.04974",
@@ -359,6 +1295,15 @@
   "title": "Fiducial Higgs and Drell-Yan distributions at N$^3$LL$^\\prime$+NNLO with RadISH",
   "year": 2021
  },
+ "inspire:1863379": {
+  "arxiv": "2105.06940",
+  "authors_short": "Chawdhry et al.",
+  "bibtex": "@article{Chawdhry:2021hkp,\n    author = \"Chawdhry, Herschel A. and Czakon, Michal and Mitov, Alexander and Poncelet, Rene\",\n    title = \"{NNLO QCD corrections to diphoton production with an additional jet at the LHC}\",\n    eprint = \"2105.06940\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"Cavendish-HEP-21/07, OUTP-21-13P, P3H-21-032\",\n    doi = \"10.1007/JHEP09(2021)093\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"093\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP09(2021)093",
+  "recid": 1863379,
+  "title": "NNLO QCD corrections to diphoton production with an additional jet at the LHC",
+  "year": 2021
+ },
  "inspire:1869719": {
   "arxiv": "2106.11953",
   "authors_short": "Bonciani et al.",
@@ -366,6 +1311,15 @@
   "doi": "10.1103/PhysRevLett.128.012002",
   "recid": 1869719,
   "title": "Mixed Strong-Electroweak Corrections to the Drell-Yan Process",
+  "year": 2021
+ },
+ "inspire:1887997": {
+  "arxiv": "2107.09330",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2021mbt,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the production cross section of pairs of isolated photons in $pp$ collisions at 13 TeV with the ATLAS detector}\",\n    eprint = \"2107.09330\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2021-105\",\n    doi = \"10.1007/JHEP11(2021)169\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"169\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP11(2021)169",
+  "recid": 1887997,
+  "title": "Measurement of the production cross section of pairs of isolated photons in $pp$ collisions at 13 TeV with the ATLAS detector",
   "year": 2021
  },
  "inspire:1888733": {
@@ -386,6 +1340,24 @@
   "title": "Prospects for measurement of the weak mixing angle at LHCb",
   "year": 2018
  },
+ "inspire:1949191": {
+  "arxiv": "2110.11231",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2021icx,\n    author = \"Tumasyan, Armen and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the inclusive and differential WZ production cross sections, polarization angles, and triple gauge couplings in pp collisions at $ \\sqrt{s} $ = 13 TeV}\",\n    eprint = \"2110.11231\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-20-014, CERN-EP-2021-163\",\n    doi = \"10.1007/JHEP07(2022)032\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"032\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP07(2022)032",
+  "recid": 1949191,
+  "title": "Measurement of the inclusive and differential WZ production cross sections, polarization angles, and triple gauge couplings in pp collisions at $ \\sqrt{s} $ = 13 TeV",
+  "year": 2021
+ },
+ "inspire:1972986": {
+  "arxiv": "2111.10431",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2021yzl,\n    author = \"Tumasyan, Armen and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement and QCD analysis of double-differential inclusive jet cross sections in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV}\",\n    eprint = \"2111.10431\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-20-011, CERN-EP-2021-221\",\n    doi = \"10.1007/JHEP02(2022)142\",\n    journal = \"JHEP\",\n    volume = \"02\",\n    pages = \"142\",\n    year = \"2022\",\n    note = \"[Addendum: JHEP 12, 035 (2022)]\"\n}\n",
+  "doi": "10.1007/JHEP02(2022)142",
+  "recid": 1972986,
+  "title": "Measurement and QCD analysis of double-differential inclusive jet cross sections in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV",
+  "year": 2021
+ },
  "inspire:1973502": {
   "arxiv": "2111.10379",
   "authors_short": "Duhr and Mistlberger",
@@ -395,6 +1367,15 @@
   "title": "Lepton-pair production at hadron colliders at N$^{3}$LO in QCD",
   "year": 2021
  },
+ "inspire:1977009": {
+  "arxiv": "2111.13595",
+  "authors_short": "Bargiela et al.",
+  "bibtex": "@article{Bargiela:2021wuy,\n    author = \"Bargiela, Piotr and Caola, Fabrizio and von Manteuffel, Andreas and Tancredi, Lorenzo\",\n    title = \"{Three-loop helicity amplitudes for diphoton production in gluon fusion}\",\n    eprint = \"2111.13595\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"OUTP-21-27P, MSUHEP-21-032, TUM-HEP-1372/21\",\n    doi = \"10.1007/JHEP02(2022)153\",\n    journal = \"JHEP\",\n    volume = \"02\",\n    pages = \"153\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP02(2022)153",
+  "recid": 1977009,
+  "title": "Three-loop helicity amplitudes for diphoton production in gluon fusion",
+  "year": 2021
+ },
  "inspire:2001831": {
   "arxiv": "2201.01754",
   "authors_short": "Armadillo et al.",
@@ -402,6 +1383,15 @@
   "doi": "10.1007/JHEP05(2022)072",
   "recid": 2001831,
   "title": "Two-loop mixed QCD-EW corrections to neutral current Drell-Yan",
+  "year": 2022
+ },
+ "inspire:2012936": {
+  "arxiv": "2201.06982",
+  "authors_short": "Gehrmann and Schürmann",
+  "bibtex": "@article{Gehrmann:2022cih,\n    author = {Gehrmann, Thomas and Sch{\\\"u}rmann, Robin},\n    title = \"{Photon fragmentation in the antenna subtraction formalism}\",\n    eprint = \"2201.06982\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH 01/22\",\n    doi = \"10.1007/JHEP04(2022)031\",\n    journal = \"JHEP\",\n    volume = \"04\",\n    pages = \"031\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP04(2022)031",
+  "recid": 2012936,
+  "title": "Photon fragmentation in the antenna subtraction formalism",
   "year": 2022
  },
  "inspire:2044884": {
@@ -422,6 +1412,51 @@
   "title": "Mixed QCD-electroweak corrections to dilepton production at the LHC in the high invariant mass region",
   "year": 2022
  },
+ "inspire:2070536": {
+  "arxiv": "2204.10173",
+  "authors_short": "Chen et al.",
+  "bibtex": "@article{Chen:2022tpk,\n    author = \"Chen, X. and Gehrmann, T. and Glover, E. W. N. and Huss, A. and Mo, J.\",\n    title = \"{NNLO QCD corrections in full colour for jet production observables at the LHC}\",\n    eprint = \"2204.10173\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH 11/22, KA-TP-07-2022, IPPP/22/20, P3H-22-037, CERN-TH-2022-067\",\n    doi = \"10.1007/JHEP09(2022)025\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"025\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP09(2022)025",
+  "recid": 2070536,
+  "title": "NNLO QCD corrections in full colour for jet production observables at the LHC",
+  "year": 2022
+ },
+ "inspire:2075976": {
+  "arxiv": "2205.01516",
+  "authors_short": "Chen et al.",
+  "bibtex": "@article{Chen:2022gpk,\n    author = {Chen, X. and Gehrmann, T. and Glover, E. W. N. and H{\\\"o}fer, M. and Huss, A. and Sch{\\\"u}rmann, R.},\n    title = \"{Single photon production at hadron colliders at NNLO QCD with realistic photon isolation}\",\n    eprint = \"2205.01516\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH 16/22, KA-TP-12-2022, P3H-22-044, IPPP/22/30, IPPP/22/30,\n  CERN-TH-2022-072, LMU-ASC 17/22, CERN-TH-2022-072\",\n    doi = \"10.1007/JHEP08(2022)094\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"094\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP08(2022)094",
+  "recid": 2075976,
+  "title": "Single photon production at hadron colliders at NNLO QCD with realistic photon isolation",
+  "year": 2022
+ },
+ "inspire:2086427": {
+  "arxiv": "2205.11426",
+  "authors_short": "Chen et al.",
+  "bibtex": "@article{Chen:2022lwc,\n    author = \"Chen, Xuan and Gehrmann, Thomas and Glover, Nigel and Huss, Alexander and Yang, Tong-Zhi and Zhu, Hua Xing\",\n    title = \"{Transverse mass distribution and charge asymmetry in W boson production to third order in QCD}\",\n    eprint = \"2205.11426\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP/22/32, ZU-TH 19/22, P3H-22-055, KA-TP-15-2022, CERN-TH-2022-083\",\n    doi = \"10.1016/j.physletb.2023.137876\",\n    journal = \"Phys. Lett. B\",\n    volume = \"840\",\n    pages = \"137876\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1016/j.physletb.2023.137876",
+  "recid": 2086427,
+  "title": "Transverse mass distribution and charge asymmetry in W boson production to third order in QCD",
+  "year": 2022
+ },
+ "inspire:2104672": {
+  "arxiv": "2207.00043",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2022dwd,\n    author = \"Tumasyan, Armen and others\",\n    collaboration = \"CMS\",\n    title = \"{A portrait of the Higgs boson by the CMS experiment ten years after the discovery.}\",\n    eprint = \"2207.00043\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-HIG-22-001, CERN-EP-2022-039\",\n    doi = \"10.1038/s41586-022-04892-x\",\n    journal = \"Nature\",\n    volume = \"607\",\n    number = \"7917\",\n    pages = \"60--68\",\n    year = \"2022\",\n    note = \"[Erratum: Nature 623, (2023)]\"\n}\n",
+  "doi": "10.1038/s41586-022-04892-x",
+  "recid": 2104672,
+  "title": "A portrait of the Higgs boson by the CMS experiment ten years after the discovery.",
+  "year": 2022
+ },
+ "inspire:2104706": {
+  "arxiv": "2207.00092",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2022vkf,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{A detailed map of Higgs boson interactions by the ATLAS experiment ten years after the discovery}\",\n    eprint = \"2207.00092\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2022-057\",\n    doi = \"10.1038/s41586-022-04893-w\",\n    journal = \"Nature\",\n    volume = \"607\",\n    number = \"7917\",\n    pages = \"52--59\",\n    year = \"2022\",\n    note = \"[Erratum: Nature 612, E24 (2022)]\"\n}\n",
+  "doi": "10.1038/s41586-022-04893-w",
+  "recid": 2104706,
+  "title": "A detailed map of Higgs boson interactions by the ATLAS experiment ten years after the discovery",
+  "year": 2022
+ },
  "inspire:2109069": {
   "arxiv": "2207.04332",
   "authors_short": "Bondarenko et al.",
@@ -440,6 +1475,33 @@
   "title": "Fiducial Drell-Yan production at the LHC improved by transverse-momentum resummation at <math display=\"inline\"><mrow><msup><mrow><mi mathvariant=\"normal\">N</mi></mrow><mrow><mn>4</mn></mrow></msup><mi mathvariant=\"normal\">L</mi><mrow><msub><mrow><mi mathvariant=\"normal\">L</mi></mrow><mrow><mi mathvariant=\"normal\">p</mi></mrow></msub></mrow><mo>+</mo><mrow><msup><mrow><mi mathvariant=\"normal\">N</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>LO</mi></mrow></mrow></math>",
   "year": 2022
  },
+ "inspire:2129461": {
+  "arxiv": "2208.00924",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2022ytw,\n    author = \"Tumasyan, Armen and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of inclusive and differential cross sections for single top quark production in association with a W boson in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV}\",\n    eprint = \"2208.00924\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-21-010, CERN-EP-2022-158\",\n    doi = \"10.1007/JHEP07(2023)046\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"046\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1007/JHEP07(2023)046",
+  "recid": 2129461,
+  "title": "Measurement of inclusive and differential cross sections for single top quark production in association with a W boson in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV",
+  "year": 2022
+ },
+ "inspire:2165654": {
+  "arxiv": "2210.07846",
+  "authors_short": "Catani et al.",
+  "bibtex": "@article{Catani:2022mfv,\n    author = \"Catani, Stefano and Devoto, Simone and Grazzini, Massimiliano and Kallweit, Stefan and Mazzitelli, Javier and Savoini, Chiara\",\n    title = \"{Higgs Boson Production in Association with a Top-Antitop Quark Pair in Next-to-Next-to-Leading Order QCD}\",\n    eprint = \"2210.07846\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"TIF-UNIMI-2022-15, ZU-TH 46/22, MPP-2022-128, PSI-PR-22-30\",\n    doi = \"10.1103/PhysRevLett.130.111902\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"130\",\n    number = \"11\",\n    pages = \"111902\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1103/PhysRevLett.130.111902",
+  "recid": 2165654,
+  "title": "Higgs Boson Production in Association with a Top-Antitop Quark Pair in Next-to-Next-to-Leading Order QCD",
+  "year": 2022
+ },
+ "inspire:218454": {
+  "arxiv": null,
+  "authors_short": "Ellis and Sexton",
+  "bibtex": "@article{Ellis:1985er,\n    author = \"Ellis, R. Keith and Sexton, J. C.\",\n    title = \"{QCD Radiative Corrections to Parton Parton Scattering}\",\n    reportNumber = \"FERMILAB-PUB-85-152-T\",\n    doi = \"10.1016/0550-3213(86)90232-4\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"269\",\n    pages = \"445--484\",\n    year = \"1986\"\n}\n",
+  "doi": "10.1016/0550-3213(86)90232-4",
+  "recid": 218454,
+  "title": "QCD Radiative Corrections to Parton Parton Scattering",
+  "year": 1985
+ },
  "inspire:24603": {
   "arxiv": null,
   "authors_short": "Matsuura et al.",
@@ -448,6 +1510,24 @@
   "recid": 24603,
   "title": "The Calculation of the Second Order Soft and Virtual Contributions to the Drell-Yan Cross-Section",
   "year": 1988
+ },
+ "inspire:251743": {
+  "arxiv": null,
+  "authors_short": "Nason et al.",
+  "bibtex": "@article{Nason:1987xz,\n    author = \"Nason, P. and Dawson, S. and Ellis, R. Keith\",\n    title = \"{The Total Cross-Section for the Production of Heavy Quarks in Hadronic Collisions}\",\n    reportNumber = \"FERMILAB-PUB-87-222-T, BNL-40718\",\n    doi = \"10.1016/0550-3213(88)90422-1\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"303\",\n    pages = \"607--633\",\n    year = \"1988\"\n}\n",
+  "doi": "10.1016/0550-3213(88)90422-1",
+  "recid": 251743,
+  "title": "The Total Cross-Section for the Production of Heavy Quarks in Hadronic Collisions",
+  "year": 1987
+ },
+ "inspire:2628741": {
+  "arxiv": "2302.00510",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023yrt,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV using 139 fb$^{-1}$ of ATLAS data}\",\n    eprint = \"2302.00510\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2022-247\",\n    doi = \"10.1007/JHEP07(2023)086\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"086\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1007/JHEP07(2023)086",
+  "recid": 2628741,
+  "title": "Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV using 139 fb$^{-1}$ of ATLAS data",
+  "year": 2023
  },
  "inspire:2644969": {
   "arxiv": "2303.12781",
@@ -458,6 +1538,15 @@
   "title": "Drell–Yan lepton-pair production: qT resummation at N4LL accuracy",
   "year": 2023
  },
+ "inspire:264718": {
+  "arxiv": null,
+  "authors_short": "Beenakker et al.",
+  "bibtex": "@article{Beenakker:1988bq,\n    author = \"Beenakker, W. and Kuijf, H. and van Neerven, W. L. and Smith, J.\",\n    title = \"{QCD Corrections to Heavy Quark Production in p anti-p Collisions}\",\n    reportNumber = \"PRINT-88-0717 (LEIDEN), ITP-SB-88-13\",\n    doi = \"10.1103/PhysRevD.40.54\",\n    journal = \"Phys. Rev. D\",\n    volume = \"40\",\n    pages = \"54--82\",\n    year = \"1989\"\n}\n",
+  "doi": "10.1103/PhysRevD.40.54",
+  "recid": 264718,
+  "title": "QCD Corrections to Heavy Quark Production in p anti-p Collisions",
+  "year": 1988
+ },
  "inspire:2689657": {
   "arxiv": "2308.09529",
   "authors_short": "ATLAS Collaboration",
@@ -465,6 +1554,33 @@
   "doi": "10.1016/j.physletb.2023.138376",
   "recid": 2689657,
   "title": "Measurement of the <math altimg=\"si1.svg\"><mi>t</mi><mover accent=\"true\"><mrow><mi>t</mi></mrow><mrow><mo stretchy=\"false\">¯</mo></mrow></mover></math> cross section and its ratio to the Z production cross section using pp collisions at <math altimg=\"si2.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13.6</mn></math> TeV with the ATLAS detector",
+  "year": 2023
+ },
+ "inspire:2691867": {
+  "arxiv": "2308.15382",
+  "authors_short": "Campbell and Neumann",
+  "bibtex": "@article{Campbell:2023lcy,\n    author = \"Campbell, John and Neumann, Tobias\",\n    title = \"{Third order QCD predictions for fiducial W-boson production}\",\n    eprint = \"2308.15382\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FERMILAB-PUB-23-463-T\",\n    doi = \"10.1007/JHEP11(2023)127\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"127\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1007/JHEP11(2023)127",
+  "recid": 2691867,
+  "title": "Third order QCD predictions for fiducial W-boson production",
+  "year": 2023
+ },
+ "inspire:269712": {
+  "arxiv": null,
+  "authors_short": "Bardin et al.",
+  "bibtex": "@article{Bardin:1988by,\n    author = \"Bardin, D. Yu. and Burdik, C. and Khristova, P. Ch. and Riemann, T.\",\n    title = \"{ELECTROWEAK RADIATIVE CORRECTIONS TO DEEP INELASTIC SCATTERING AT HERA. NEUTRAL CURRENT SCATTERING}\",\n    reportNumber = \"PHE-88-15\",\n    doi = \"10.1007/BF01557676\",\n    journal = \"Z. Phys. C\",\n    volume = \"42\",\n    pages = \"679\",\n    year = \"1989\"\n}\n",
+  "doi": "10.1007/BF01557676",
+  "recid": 269712,
+  "title": "ELECTROWEAK RADIATIVE CORRECTIONS TO DEEP INELASTIC SCATTERING AT HERA. NEUTRAL CURRENT SCATTERING",
+  "year": 1988
+ },
+ "inspire:2697877": {
+  "arxiv": "2308.04877",
+  "authors_short": "ALICE Collaboration",
+  "bibtex": "@article{ALICE:2023sgl,\n    author = \"Acharya, Shreyasi and others\",\n    collaboration = \"ALICE\",\n    title = \"{Charm production and fragmentation fractions at midrapidity in pp collisions at $ \\sqrt{\\textrm{s}} $ = 13 TeV}\",\n    eprint = \"2308.04877\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-162\",\n    doi = \"10.1007/JHEP12(2023)086\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"086\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1007/JHEP12(2023)086",
+  "recid": 2697877,
+  "title": "Charm production and fragmentation fractions at midrapidity in pp collisions at $ \\sqrt{\\textrm{s}} $ = 13 TeV",
   "year": 2023
  },
  "inspire:2698794": {
@@ -475,6 +1591,24 @@
   "recid": 2698794,
   "title": "A precise measurement of the Z-boson double-differential transverse momentum and rapidity distributions in the full phase space of the decay leptons with the ATLAS experiment at $\\sqrt{s}=8$ TeV",
   "year": 2023
+ },
+ "inspire:2741343": {
+  "arxiv": "2312.16669",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2023fix,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of multidifferential cross sections for dijet production in proton{\\textendash}proton collisions at $\\sqrt{s} = 13\\,\\text {Te}\\hspace{-.08em}\\text {V} $}\",\n    eprint = \"2312.16669\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-21-008, CERN-EP-2023-257\",\n    doi = \"10.1140/epjc/s10052-024-13606-8\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"85\",\n    number = \"1\",\n    pages = \"72\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1140/epjc/s10052-024-13606-8",
+  "recid": 2741343,
+  "title": "Measurement of multidifferential cross sections for dijet production in proton–proton collisions at $\\sqrt{s} = 13\\,\\text {Te}\\hspace{-.08em}\\text {V} $",
+  "year": 2023
+ },
+ "inspire:2764820": {
+  "arxiv": "2403.02126",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024ojr,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of t-channel production of single top quarks and antiquarks in pp collisions at 13 TeV using the full ATLAS Run 2 data sample}\",\n    eprint = \"2403.02126\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-289\",\n    doi = \"10.1007/JHEP05(2024)305\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"305\",\n    year = \"2024\",\n    note = \"[Erratum: JHEP 06, 024 (2024)]\"\n}\n",
+  "doi": "10.1007/JHEP05(2024)305",
+  "recid": 2764820,
+  "title": "Measurement of t-channel production of single top quarks and antiquarks in pp collisions at 13 TeV using the full ATLAS Run 2 data sample",
+  "year": 2024
  },
  "inspire:2770237": {
   "arxiv": "2403.12902",
@@ -494,6 +1628,33 @@
   "title": "Precise measurements of W- and Z-boson transverse momentum spectra with the ATLAS detector using pp collisions at $\\sqrt{s} = 5.02$ TeV and 13 TeV",
   "year": 2024
  },
+ "inspire:277634": {
+  "arxiv": null,
+  "authors_short": "Nason et al.",
+  "bibtex": "@article{Nason:1989zy,\n    author = \"Nason, P. and Dawson, S. and Ellis, R. Keith\",\n    title = \"{The One Particle Inclusive Differential Cross-Section for Heavy Quark Production in Hadronic Collisions}\",\n    reportNumber = \"ETH-PT-89-2, FERMILAB-PUB-89-091-T, BNL-42398\",\n    doi = \"10.1016/0550-3213(89)90286-1\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"327\",\n    pages = \"49--92\",\n    year = \"1989\",\n    note = \"[Erratum: Nucl.Phys.B 335, 260--260 (1990)]\"\n}\n",
+  "doi": "10.1016/0550-3213(89)90286-1",
+  "recid": 277634,
+  "title": "The One Particle Inclusive Differential Cross-Section for Heavy Quark Production in Hadronic Collisions",
+  "year": 1989
+ },
+ "inspire:279913": {
+  "arxiv": null,
+  "authors_short": "Bardin et al.",
+  "bibtex": "@article{Bardin:1989vz,\n    author = \"Bardin, D. Yu. and Burdik, K. C. and Khristova, P. Kh. and Riemann, T.\",\n    title = \"{ELECTROWEAK RADIATIVE CORRECTIONS TO DEEP INELASTIC SCATTERING AT HERA! CHARGED CURRENT SCATTERING}\",\n    reportNumber = \"JINR-E2-89-145\",\n    doi = \"10.1007/BF01548593\",\n    journal = \"Z. Phys. C\",\n    volume = \"44\",\n    pages = \"149\",\n    year = \"1989\"\n}\n",
+  "doi": "10.1007/BF01548593",
+  "recid": 279913,
+  "title": "ELECTROWEAK RADIATIVE CORRECTIONS TO DEEP INELASTIC SCATTERING AT HERA! CHARGED CURRENT SCATTERING",
+  "year": 1989
+ },
+ "inspire:2810155": {
+  "arxiv": "2407.15594",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024ppp,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of single top-quark production in association with a W boson in pp collisions at s=13{\\,}{\\,}TeV with the ATLAS detector}\",\n    eprint = \"2407.15594\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2024-168\",\n    doi = \"10.1103/PhysRevD.110.072010\",\n    journal = \"Phys. Rev. D\",\n    volume = \"110\",\n    number = \"7\",\n    pages = \"072010\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1103/PhysRevD.110.072010",
+  "recid": 2810155,
+  "title": "Measurement of single top-quark production in association with a <math display=\"inline\"><mi>W</mi></math> boson in <math display=\"inline\"><mi>p</mi><mi>p</mi></math> collisions at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>13</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></math> with the ATLAS detector",
+  "year": 2024
+ },
  "inspire:2816048": {
   "arxiv": "2408.03744",
   "authors_short": "CMS Collaboration",
@@ -510,6 +1671,15 @@
   "doi": "10.1016/j.physletb.2025.139526",
   "recid": 2818125,
   "title": "Measurement of the Drell–Yan forward-backward asymmetry and of the effective leptonic weak mixing angle in proton-proton collisions at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13</mn><mrow><mspace width=\"0.20em\"/><mtext>TeV</mtext></mrow></math>",
+  "year": 2024
+ },
+ "inspire:2851688": {
+  "arxiv": "2411.15340",
+  "authors_short": "Devoto et al.",
+  "bibtex": "@article{Devoto:2024nhl,\n    author = \"Devoto, Simone and Grazzini, Massimiliano and Kallweit, Stefan and Mazzitelli, Javier and Savoini, Chiara\",\n    title = \"{Precise predictions for $ t\\overline{t}H $ production at the LHC: inclusive cross section and differential distributions}\",\n    eprint = \"2411.15340\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-57/24, PSI-PR-24-22, TUM-HEP-1538/24\",\n    doi = \"10.1007/JHEP03(2025)189\",\n    journal = \"JHEP\",\n    volume = \"03\",\n    pages = \"189\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1007/JHEP03(2025)189",
+  "recid": 2851688,
+  "title": "Precise predictions for $ t\\overline{t}H $ production at the LHC: inclusive cross section and differential distributions",
   "year": 2024
  },
  "inspire:2851712": {
@@ -539,6 +1709,51 @@
   "title": "Measurements of the inclusive W and Z boson production cross sections and their ratios in proton-proton collisions at $\\sqrt{s}=13.6$ TeV",
   "year": 2025
  },
+ "inspire:2902128": {
+  "arxiv": "2503.15043",
+  "authors_short": "Balsach et al.",
+  "bibtex": "@article{Balsach:2025jcw,\n    author = \"Balsach, Roger and others\",\n    title = \"{State-of-the-art cross sections for $t\\bar t H$: NNLO predictions matched with NNLL resummation and EW corrections}\",\n    eprint = \"2503.15043\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"LHCHWG-2025-001, IPPP/25/01, TUM-HEP-1549/25, UWThPh 2024-25, TTK-25-01, P3H-25-001, TIF-UNIMI-2025-3, MS-TP-25-02, PSI-PR-25-03, ZU-TH 08/25\",\n    doi = \"10.21468/SciPostPhysCommRep.10\",\n    month = \"3\",\n    year = \"2025\"\n}\n",
+  "doi": "10.21468/SciPostPhysCommRep.10",
+  "recid": 2902128,
+  "title": "State-of-the-art cross sections for $t\\bar t H$: NNLO predictions matched with NNLL resummation and EW corrections",
+  "year": 2025
+ },
+ "inspire:2906156": {
+  "arxiv": "2503.22804",
+  "authors_short": "NNLOJET Collaboration",
+  "bibtex": "@article{NNLOJET:2025rno,\n    author = \"Huss, Alexander and others\",\n    collaboration = \"NNLOJET\",\n    title = \"{NNLOJET: A parton-level event generator for jet cross sections at NNLO QCD accuracy}\",\n    eprint = \"2503.22804\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2025-012, IPPP/25/09, ZU-TH 11/25\",\n    doi = \"10.21468/SciPostPhysCodeb.69\",\n    journal = \"SciPost Phys. Codeb.\",\n    volume = \"69\",\n    pages = \"1\",\n    year = \"2026\"\n}\n",
+  "doi": "10.21468/SciPostPhysCodeb.69",
+  "recid": 2906156,
+  "title": "NNLOJET: A parton-level event generator for jet cross sections at NNLO QCD accuracy",
+  "year": 2025
+ },
+ "inspire:294705": {
+  "arxiv": null,
+  "authors_short": "Baer et al.",
+  "bibtex": "@article{Baer:1990ra,\n    author = \"Baer, H. and Ohnemus, J. and Owens, J. F.\",\n    title = \"{A Next-to-leading Logarithm Calculation of Direct Photon Production}\",\n    reportNumber = \"FSU-HEP-900214\",\n    doi = \"10.1103/PhysRevD.42.61\",\n    journal = \"Phys. Rev. D\",\n    volume = \"42\",\n    pages = \"61--71\",\n    year = \"1990\"\n}\n",
+  "doi": "10.1103/PhysRevD.42.61",
+  "recid": 294705,
+  "title": "A Next-to-leading Logarithm Calculation of Direct Photon Production",
+  "year": 1990
+ },
+ "inspire:296225": {
+  "arxiv": null,
+  "authors_short": "Kwiatkowski et al.",
+  "bibtex": "@article{Kwiatkowski:1990es,\n    author = \"Kwiatkowski, A. and Spiesberger, H. and Mohring, H. J.\",\n    title = \"{Heracles: An Event Generator for $e p$ Interactions at {HERA} Energies Including Radiative Processes: Version 1.0}\",\n    reportNumber = \"DESY-90-041\",\n    doi = \"10.1016/0010-4655(92)90136-M\",\n    journal = \"Comput. Phys. Commun.\",\n    volume = \"69\",\n    pages = \"155--172\",\n    year = \"1992\"\n}\n",
+  "doi": "10.1016/0010-4655(92)90136-M",
+  "recid": 296225,
+  "title": "Heracles: An Event Generator for $e p$ Interactions at {HERA} Energies Including Radiative Processes: Version 1.0",
+  "year": 1990
+ },
+ "inspire:2971071": {
+  "arxiv": "2509.15066",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2025iza,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Precise measurement of the $t\\bar{t}$ production cross-section and lepton differential distributions in $eμ$ dilepton events from $\\sqrt{s}=13$ TeV $pp$ collisions with the ATLAS detector}\",\n    eprint = \"2509.15066\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2025-211\",\n    doi = \"10.1140/epjc/s10052-026-15311-0\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"86\",\n    number = \"5\",\n    pages = \"470\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1140/epjc/s10052-026-15311-0",
+  "recid": 2971071,
+  "title": "Precise measurement of the $t\\bar{t}$ production cross-section and lepton differential distributions in $eμ$ dilepton events from $\\sqrt{s}=13$ TeV $pp$ collisions with the ATLAS detector",
+  "year": 2025
+ },
  "inspire:300492": {
   "arxiv": null,
   "authors_short": "Hamberg et al.",
@@ -547,6 +1762,24 @@
   "recid": 300492,
   "title": "A complete calculation of the order $\\alpha-s^{2}$ correction to the Drell-Yan $K$ factor",
   "year": 1990
+ },
+ "inspire:3095511": {
+  "arxiv": "2512.19073",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2025ifq,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of inclusive dijet cross-sections in proton-proton collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector}\",\n    eprint = \"2512.19073\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2025-283\",\n    month = \"12\",\n    year = \"2025\"\n}\n",
+  "doi": null,
+  "recid": 3095511,
+  "title": "Measurement of inclusive dijet cross-sections in proton-proton collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector",
+  "year": 2025
+ },
+ "inspire:3144736": {
+  "arxiv": "2604.12613",
+  "authors_short": "Czakon et al.",
+  "bibtex": "@article{Czakon:2026zhi,\n    author = \"Czakon, Michal and Eschment, Felix and Generet, Terry and Poncelet, Rene\",\n    title = \"{Next-to-next-to-next-to-leading order QCD corrections to photon-pair production}\",\n    eprint = \"2604.12613\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"P3H-26-028, TTK-26-07, IFJPAN-IV-2026-11, Cavendish-HEP-26/01\",\n    month = \"4\",\n    year = \"2026\"\n}\n",
+  "doi": null,
+  "recid": 3144736,
+  "title": "Next-to-next-to-next-to-leading order QCD corrections to photon-pair production",
+  "year": 2026
  },
  "inspire:3150032": {
   "arxiv": "2604.25678",
@@ -557,6 +1790,60 @@
   "title": "Measurement of the Z <math altimg=\"si7.svg\"><mrow><mo>→</mo><msup><mi>μ</mi><mo>+</mo></msup><msup><mi>μ</mi><mo>−</mo></msup></mrow></math> angular coefficients in pp collisions at <math altimg=\"si8.svg\"><msqrt><mi>s</mi></msqrt></math>= 13 TeV as functions of transverse momentum and rapidity",
   "year": 2026
  },
+ "inspire:318997": {
+  "arxiv": null,
+  "authors_short": "Zijlstra and van Neerven",
+  "bibtex": "@article{Zijlstra:1991qc,\n    author = \"Zijlstra, E. B. and van Neerven, W. L.\",\n    title = \"{Contribution of the second order gluonic Wilson coefficient to the deep inelastic structure function}\",\n    reportNumber = \"INLO-PUB-6-91\",\n    doi = \"10.1016/0370-2693(91)90301-6\",\n    journal = \"Phys. Lett. B\",\n    volume = \"273\",\n    pages = \"476--482\",\n    year = \"1991\"\n}\n",
+  "doi": "10.1016/0370-2693(91)90301-6",
+  "recid": 318997,
+  "title": "Contribution of the second order gluonic Wilson coefficient to the deep inelastic structure function",
+  "year": 1991
+ },
+ "inspire:332376": {
+  "arxiv": null,
+  "authors_short": "Kunszt and Soper",
+  "bibtex": "@article{Kunszt:1992tn,\n    author = \"Kunszt, Zoltan and Soper, Davison E.\",\n    title = \"{Calculation of jet cross-sections in hadron collisions at order alpha-s**3}\",\n    reportNumber = \"OITS-475\",\n    doi = \"10.1103/PhysRevD.46.192\",\n    journal = \"Phys. Rev. D\",\n    volume = \"46\",\n    pages = \"192--221\",\n    year = \"1992\"\n}\n",
+  "doi": "10.1103/PhysRevD.46.192",
+  "recid": 332376,
+  "title": "Calculation of jet cross-sections in hadron collisions at order alpha-s**3",
+  "year": 1992
+ },
+ "inspire:336137": {
+  "arxiv": null,
+  "authors_short": "Ellis et al.",
+  "bibtex": "@article{Ellis:1992en,\n    author = \"Ellis, Stephen D. and Kunszt, Zoltan and Soper, Davison E.\",\n    title = \"{Two jet production in hadron collisions at order alpha-s**3 in QCD}\",\n    reportNumber = \"OITS-495, UW-PT-92-08, ETH-PT-92-22\",\n    doi = \"10.1103/PhysRevLett.69.1496\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"69\",\n    pages = \"1496--1499\",\n    year = \"1992\"\n}\n",
+  "doi": "10.1103/PhysRevLett.69.1496",
+  "recid": 336137,
+  "title": "Two jet production in hadron collisions at order alpha-s**3 in QCD",
+  "year": 1992
+ },
+ "inspire:352808": {
+  "arxiv": "hep-ph/9302280",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:1993mq,\n    author = \"Bern, Zvi and Dixon, Lance J. and Kosower, David A.\",\n    title = \"{One loop corrections to five gluon amplitudes}\",\n    eprint = \"hep-ph/9302280\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-6054, CERN-TH-6803-93, UCLA-93-TEP-4\",\n    doi = \"10.1103/PhysRevLett.70.2677\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"70\",\n    pages = \"2677--2680\",\n    year = \"1993\"\n}\n",
+  "doi": "10.1103/PhysRevLett.70.2677",
+  "recid": 352808,
+  "title": "One loop corrections to five gluon amplitudes",
+  "year": 1993
+ },
+ "inspire:372282": {
+  "arxiv": "hep-ph/9403347",
+  "authors_short": "Giele et al.",
+  "bibtex": "@article{Giele:1994gf,\n    author = \"Giele, W. T. and Glover, E. W. Nigel and Kosower, David A.\",\n    title = \"{The Two-Jet Differential Cross Section at ${\\cal O}(\\alpha_s^3)$ in Hadron Collisions}\",\n    eprint = \"hep-ph/9403347\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"FERMILAB-PUB-94-070-T, SACLAY-SPH-T-94-031\",\n    doi = \"10.1103/PhysRevLett.73.2019\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"73\",\n    pages = \"2019--2022\",\n    year = \"1994\"\n}\n",
+  "doi": "10.1103/PhysRevLett.73.2019",
+  "recid": 372282,
+  "title": "The Two-Jet Differential Cross Section at ${\\cal O}(\\alpha_s^3)$ in Hadron Collisions",
+  "year": 1994
+ },
+ "inspire:373656": {
+  "arxiv": "hep-ph/9405386",
+  "authors_short": "Kunszt et al.",
+  "bibtex": "@article{Kunszt:1994nq,\n    author = \"Kunszt, Zoltan and Signer, Adrian and Trocsanyi, Zoltan\",\n    title = \"{One loop radiative corrections to the helicity amplitudes of QCD processes involving four quarks and one gluon}\",\n    eprint = \"hep-ph/9405386\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"ETH-TH-94-14, KLTE-DTP-94-3\",\n    doi = \"10.1016/0370-2693(94)90568-1\",\n    journal = \"Phys. Lett. B\",\n    volume = \"336\",\n    pages = \"529--536\",\n    year = \"1994\"\n}\n",
+  "doi": "10.1016/0370-2693(94)90568-1",
+  "recid": 373656,
+  "title": "One loop radiative corrections to the helicity amplitudes of QCD processes involving four quarks and one gluon",
+  "year": 1994
+ },
  "inspire:375588": {
   "arxiv": "hep-ph/9408366",
   "authors_short": "Rijken and van Neerven",
@@ -565,6 +1852,51 @@
   "recid": 375588,
   "title": "Order alpha-s**2 contributions to the Drell-Yan cross-section at fixed target energies",
   "year": 1994
+ },
+ "inspire:377332": {
+  "arxiv": "hep-ph/9409393",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:1994fz,\n    author = \"Bern, Zvi and Dixon, Lance J. and Kosower, David A.\",\n    title = \"{One loop corrections to two quark three gluon amplitudes}\",\n    eprint = \"hep-ph/9409393\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-6663, SACLAY-SPH-T-94-108, UCLA-94-TEP-33\",\n    doi = \"10.1016/0550-3213(94)00542-M\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"437\",\n    pages = \"259--304\",\n    year = \"1995\"\n}\n",
+  "doi": "10.1016/0550-3213(94)00542-M",
+  "recid": 377332,
+  "title": "One loop corrections to two quark three gluon amplitudes",
+  "year": 1994
+ },
+ "inspire:394513": {
+  "arxiv": "hep-ph/9504378",
+  "authors_short": "Spira et al.",
+  "bibtex": "@article{Spira:1995rr,\n    author = \"Spira, M. and Djouadi, A. and Graudenz, D. and Zerwas, P. M.\",\n    title = \"{Higgs boson production at the LHC}\",\n    eprint = \"hep-ph/9504378\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DESY-94-123, UDEM-GPP-TH-95-16, CERN-TH-95-30, CERN-TH-95-030\",\n    doi = \"10.1016/0550-3213(95)00379-7\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"453\",\n    pages = \"17--82\",\n    year = \"1995\"\n}\n",
+  "doi": "10.1016/0550-3213(95)00379-7",
+  "recid": 394513,
+  "title": "Higgs boson production at the LHC",
+  "year": 1995
+ },
+ "inspire:397751": {
+  "arxiv": "hep-ph/9507442",
+  "authors_short": "Signer",
+  "bibtex": "@article{Signer:1995np,\n    author = \"Signer, Adrian\",\n    title = \"{One loop corrections to five parton amplitudes with external photons}\",\n    eprint = \"hep-ph/9507442\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"ETH-TH-95-19\",\n    doi = \"10.1016/0370-2693(95)00905-Z\",\n    journal = \"Phys. Lett. B\",\n    volume = \"357\",\n    pages = \"204--210\",\n    year = \"1995\"\n}\n",
+  "doi": "10.1016/0370-2693(95)00905-Z",
+  "recid": 397751,
+  "title": "One loop corrections to five parton amplitudes with external photons",
+  "year": 1995
+ },
+ "inspire:423775": {
+  "arxiv": "hep-ph/9609474",
+  "authors_short": "Glover and Miller",
+  "bibtex": "@article{Glover:1996eh,\n    author = \"Glover, E. W. Nigel and Miller, D. J.\",\n    title = \"{The One loop QCD corrections for gamma* ---{\\ensuremath{>}} Q anti-Q q anti-q}\",\n    eprint = \"hep-ph/9609474\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DTP-96-66\",\n    doi = \"10.1016/S0370-2693(97)00113-5\",\n    journal = \"Phys. Lett. B\",\n    volume = \"396\",\n    pages = \"257--263\",\n    year = \"1997\"\n}\n",
+  "doi": "10.1016/S0370-2693(97)00113-5",
+  "recid": 423775,
+  "title": "The One loop QCD corrections for gamma* ---> Q anti-Q q anti-q",
+  "year": 1996
+ },
+ "inspire:424596": {
+  "arxiv": "hep-ph/9610370",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:1996ka,\n    author = \"Bern, Zvi and Dixon, Lance J. and Kosower, David A. and Weinzierl, Stefan\",\n    title = \"{One loop amplitudes for e+ e- ---{\\ensuremath{>}} anti-q q anti-Q Q}\",\n    eprint = \"hep-ph/9610370\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-7316, SACLAY-SPH-T-96-111, UCLA-96-TEP-33\",\n    doi = \"10.1016/S0550-3213(96)00703-1\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"489\",\n    pages = \"3--23\",\n    year = \"1997\"\n}\n",
+  "doi": "10.1016/S0550-3213(96)00703-1",
+  "recid": 424596,
+  "title": "One loop amplitudes for e+ e- ---> anti-q q anti-Q Q",
+  "year": 1996
  },
  "inspire:441946": {
   "arxiv": "hep-ph/9704258",
@@ -575,6 +1907,159 @@
   "title": "Soft gluon effects on lepton pairs at hadron colliders",
   "year": 1997
  },
+ "inspire:444097": {
+  "arxiv": "hep-ph/9706297",
+  "authors_short": "Campbell et al.",
+  "bibtex": "@article{Campbell:1997tv,\n    author = \"Campbell, John M. and Glover, E. W. Nigel and Miller, D. J.\",\n    title = \"{The One loop QCD corrections for gamma* ---{\\ensuremath{>}} q anti-q g g}\",\n    eprint = \"hep-ph/9706297\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DTP-97-44, RAL-TR-97-027\",\n    doi = \"10.1016/S0370-2693(97)00909-X\",\n    journal = \"Phys. Lett. B\",\n    volume = \"409\",\n    pages = \"503--508\",\n    year = \"1997\"\n}\n",
+  "doi": "10.1016/S0370-2693(97)00909-X",
+  "recid": 444097,
+  "title": "The One loop QCD corrections for gamma* ---> q anti-q g g",
+  "year": 1997
+ },
+ "inspire:446755": {
+  "arxiv": "hep-ph/9708239",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:1997sc,\n    author = \"Bern, Zvi and Dixon, Lance J. and Kosower, David A.\",\n    title = \"{One loop amplitudes for e+ e- to four partons}\",\n    eprint = \"hep-ph/9708239\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-7529, SACLAY-SPH-T-97-090, UCLA-97-TEP-10\",\n    doi = \"10.1016/S0550-3213(97)00703-7\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"513\",\n    pages = \"3--86\",\n    year = \"1998\"\n}\n",
+  "doi": "10.1016/S0550-3213(97)00703-7",
+  "recid": 446755,
+  "title": "One loop amplitudes for e+ e- to four partons",
+  "year": 1997
+ },
+ "inspire:467827": {
+  "arxiv": "hep-ph/9803250",
+  "authors_short": "Dixon et al.",
+  "bibtex": "@article{Dixon:1998py,\n    author = \"Dixon, Lance J. and Kunszt, Z. and Signer, A.\",\n    title = \"{Helicity amplitudes for O(alpha-s) production of $W^{+} W^{-}$, $W^\\pm Z$, $Z Z$, $W^\\pm \\gamma$, or $Z \\gamma$ pairs at hadron colliders}\",\n    eprint = \"hep-ph/9803250\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-7750, ETH-TH-98-07, CERN-TH-98-66\",\n    doi = \"10.1016/S0550-3213(98)00421-0\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"531\",\n    pages = \"3--23\",\n    year = \"1998\"\n}\n",
+  "doi": "10.1016/S0550-3213(98)00421-0",
+  "recid": 467827,
+  "title": "Helicity amplitudes for O(alpha-s) production of $W^{+} W^{-}$, $W^\\pm Z$, $Z Z$, $W^\\pm \\gamma$, or $Z \\gamma$ pairs at hadron colliders",
+  "year": 1998
+ },
+ "inspire:468385": {
+  "arxiv": "hep-ph/9803400",
+  "authors_short": "Cacciari et al.",
+  "bibtex": "@article{Cacciari:1998it,\n    author = \"Cacciari, Matteo and Greco, Mario and Nason, Paolo\",\n    title = \"{The $p_T$ spectrum in heavy-flavour hadroproduction.}\",\n    eprint = \"hep-ph/9803400\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-TH-98-77, LPTHE-ORSAY-98-11, IFUM-613-FT, LNF-98-008-P\",\n    doi = \"10.1088/1126-6708/1998/05/007\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"007\",\n    year = \"1998\"\n}\n",
+  "doi": "10.1088/1126-6708/1998/05/007",
+  "recid": 468385,
+  "title": "The $p_T$ spectrum in heavy-flavour hadroproduction.",
+  "year": 1998
+ },
+ "inspire:499024": {
+  "arxiv": "hep-ph/9904472",
+  "authors_short": "Denner et al.",
+  "bibtex": "@article{Denner:1999gp,\n    author = \"Denner, Ansgar and Dittmaier, S. and Roth, M. and Wackeroth, D.\",\n    title = \"{Predictions for all processes e+ e- ---{\\ensuremath{>}} 4 fermions + gamma}\",\n    eprint = \"hep-ph/9904472\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BI-TP-99-10, PSI-PR-99-12\",\n    doi = \"10.1016/S0550-3213(99)00437-X\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"560\",\n    pages = \"33--65\",\n    year = \"1999\"\n}\n",
+  "doi": "10.1016/S0550-3213(99)00437-X",
+  "recid": 499024,
+  "title": "Predictions for all processes e+ e- ---> 4 fermions + gamma",
+  "year": 1999
+ },
+ "inspire:508251": {
+  "arxiv": "hep-ph/9910253",
+  "authors_short": "Del Duca et al.",
+  "bibtex": "@article{DelDuca:1999pa,\n    author = \"Del Duca, Vittorio and Kilgore, William B. and Maltoni, Fabio\",\n    title = \"{Multiphoton amplitudes for next-to-leading order QCD}\",\n    eprint = \"hep-ph/9910253\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BNL-HET-99-27, DFTT-50-99\",\n    doi = \"10.1016/S0550-3213(99)00663-X\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"566\",\n    pages = \"252--274\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1016/S0550-3213(99)00663-X",
+  "recid": 508251,
+  "title": "Multiphoton amplitudes for next-to-leading order QCD",
+  "year": 1999
+ },
+ "inspire:510079": {
+  "arxiv": "hep-ph/9911340",
+  "authors_short": "Binoth et al.",
+  "bibtex": "@article{Binoth:1999qq,\n    author = \"Binoth, T. and Guillet, J. P. and Pilon, E. and Werlen, M.\",\n    title = \"{A Full next-to-leading order study of direct photon pair production in hadronic collisions}\",\n    eprint = \"hep-ph/9911340\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"LAPTH-760-99\",\n    doi = \"10.1007/s100520050024\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"16\",\n    pages = \"311--330\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1007/s100520050024",
+  "recid": 510079,
+  "title": "A Full next-to-leading order study of direct photon pair production in hadronic collisions",
+  "year": 1999
+ },
+ "inspire:511611": {
+  "arxiv": "hep-ph/9912355",
+  "authors_short": "Moch and Vermaseren",
+  "bibtex": "@article{Moch:1999eb,\n    author = \"Moch, S. and Vermaseren, J. A. M.\",\n    title = \"{Deep inelastic structure functions at two loops}\",\n    eprint = \"hep-ph/9912355\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"NIKHEF-99-030\",\n    doi = \"10.1016/S0550-3213(00)00045-6\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"573\",\n    pages = \"853--907\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1016/S0550-3213(00)00045-6",
+  "recid": 511611,
+  "title": "Deep inelastic structure functions at two loops",
+  "year": 1999
+ },
+ "inspire:529378": {
+  "arxiv": "hep-ph/0006307",
+  "authors_short": "Denner et al.",
+  "bibtex": "@article{Denner:2000bj,\n    author = \"Denner, Ansgar and Dittmaier, S. and Roth, M. and Wackeroth, D.\",\n    title = \"{Electroweak radiative corrections to e+ e- ---{\\ensuremath{>}} W W ---{\\ensuremath{>}} 4 fermions in double pole approximation: The RACOONWW approach}\",\n    eprint = \"hep-ph/0006307\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BI-TP-2000-06, LU-ITP-2000-003, PSI-PR-00-11, UR-1604\",\n    doi = \"10.1016/S0550-3213(00)00511-3\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"587\",\n    pages = \"67--117\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1016/S0550-3213(00)00511-3",
+  "recid": 529378,
+  "title": "Electroweak radiative corrections to e+ e- ---> W W ---> 4 fermions in double pole approximation: The RACOONWW approach",
+  "year": 2000
+ },
+ "inspire:529590": {
+  "arxiv": "hep-ph/0007012",
+  "authors_short": "Jadach et al.",
+  "bibtex": "@article{Jadach:2000kw,\n    author = \"Jadach, S. and Placzek, W. and Skrzypek, M. and Ward, B. F. L. and Was, Z.\",\n    title = \"{Precision predictions for (un)stable W+ W- pair production at and beyond LEP-2 energies}\",\n    eprint = \"hep-ph/0007012\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"UTHEP-00-0101, CERN-TH-2000-337, DESY-00-179, SLAC-REPRINT-2000-039\",\n    doi = \"10.1103/PhysRevD.65.093010\",\n    journal = \"Phys. Rev. D\",\n    volume = \"65\",\n    pages = \"093010\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1103/PhysRevD.65.093010",
+  "recid": 529590,
+  "title": "Precision predictions for (un)stable W+ W- pair production at and beyond LEP-2 energies",
+  "year": 2000
+ },
+ "inspire:530882": {
+  "arxiv": "hep-ph/0007289",
+  "authors_short": "Harlander",
+  "bibtex": "@article{Harlander:2000mg,\n    author = \"Harlander, Robert V.\",\n    title = \"{Virtual corrections to g g ---{\\ensuremath{>}} H to two loops in the heavy top limit}\",\n    eprint = \"hep-ph/0007289\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BNL-HET-00-29\",\n    doi = \"10.1016/S0370-2693(00)01042-X\",\n    journal = \"Phys. Lett. B\",\n    volume = \"492\",\n    pages = \"74--80\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1016/S0370-2693(00)01042-X",
+  "recid": 530882,
+  "title": "Virtual corrections to g g ---> H to two loops in the heavy top limit",
+  "year": 2000
+ },
+ "inspire:535309": {
+  "arxiv": "hep-ph/0010212",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2000kg,\n    author = \"Anastasiou, C. and Glover, E. W. Nigel and Oleari, C. and Tejeda-Yeomans, M. E.\",\n    title = \"{Two-loop QCD corrections to the scattering of massless distinct quarks}\",\n    eprint = \"hep-ph/0010212\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"IPPP-00-05, DTP-00-66, MADPH-00-1197\",\n    doi = \"10.1016/S0550-3213(01)00079-7\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"601\",\n    pages = \"318--340\",\n    year = \"2001\"\n}\n",
+  "doi": "10.1016/S0550-3213(01)00079-7",
+  "recid": 535309,
+  "title": "Two-loop QCD corrections to the scattering of massless distinct quarks",
+  "year": 2000
+ },
+ "inspire:536445": {
+  "arxiv": "hep-ph/0011094",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2000ue,\n    author = \"Anastasiou, C. and Glover, E. W. Nigel and Oleari, C. and Tejeda-Yeomans, M. E.\",\n    title = \"{Two loop QCD corrections to massless identical quark scattering}\",\n    eprint = \"hep-ph/0011094\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DTP-00-70, IPPP-00-08, MADPH-00-1200\",\n    doi = \"10.1016/S0550-3213(01)00080-3\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"601\",\n    pages = \"341--360\",\n    year = \"2001\"\n}\n",
+  "doi": "10.1016/S0550-3213(01)00080-3",
+  "recid": 536445,
+  "title": "Two loop QCD corrections to massless identical quark scattering",
+  "year": 2000
+ },
+ "inspire:552493": {
+  "arxiv": "hep-ph/0101304",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2001sv,\n    author = \"Anastasiou, C. and Glover, E. W. Nigel and Oleari, C. and Tejeda-Yeomans, M. E.\",\n    title = \"{Two loop QCD corrections to massless quark gluon scattering}\",\n    eprint = \"hep-ph/0101304\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DCPT-01-04, IPPP-01-02, MADPH-00-1210\",\n    doi = \"10.1016/S0550-3213(01)00195-X\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"605\",\n    pages = \"486--516\",\n    year = \"2001\"\n}\n",
+  "doi": "10.1016/S0550-3213(01)00195-X",
+  "recid": 552493,
+  "title": "Two loop QCD corrections to massless quark gluon scattering",
+  "year": 2001
+ },
+ "inspire:553013": {
+  "arxiv": "hep-ph/0102134",
+  "authors_short": "Cacciari et al.",
+  "bibtex": "@article{Cacciari:2001td,\n    author = \"Cacciari, Matteo and Frixione, Stefano and Nason, Paolo\",\n    title = \"{The p(T) spectrum in heavy flavor photoproduction}\",\n    eprint = \"hep-ph/0102134\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BICOCCA-FT-01-01, GEF-TH-2-01, YITP-SB-01-01\",\n    doi = \"10.1088/1126-6708/2001/03/006\",\n    journal = \"JHEP\",\n    volume = \"03\",\n    pages = \"006\",\n    year = \"2001\"\n}\n",
+  "doi": "10.1088/1126-6708/2001/03/006",
+  "recid": 553013,
+  "title": "The p(T) spectrum in heavy flavor photoproduction",
+  "year": 2001
+ },
+ "inspire:553143": {
+  "arxiv": "hep-ph/0102201",
+  "authors_short": "Glover et al.",
+  "bibtex": "@article{Glover:2001af,\n    author = \"Glover, E. W. Nigel and Oleari, C. and Tejeda-Yeomans, M. E.\",\n    title = \"{Two loop QCD corrections to gluon-gluon scattering}\",\n    eprint = \"hep-ph/0102201\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DCPT-01-14, IPPP-01-07, MADPH-01-1217\",\n    doi = \"10.1016/S0550-3213(01)00210-3\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"605\",\n    pages = \"467--485\",\n    year = \"2001\"\n}\n",
+  "doi": "10.1016/S0550-3213(01)00210-3",
+  "recid": 553143,
+  "title": "Two loop QCD corrections to gluon-gluon scattering",
+  "year": 2001
+ },
+ "inspire:559687": {
+  "arxiv": "hep-ph/0107081",
+  "authors_short": "Beenakker et al.",
+  "bibtex": "@article{Beenakker:2001rj,\n    author = \"Beenakker, W. and Dittmaier, S. and Kramer, M. and Plumper, B. and Spira, M. and Zerwas, P. M.\",\n    title = \"{Higgs radiation off top quarks at the Tevatron and the LHC}\",\n    eprint = \"hep-ph/0107081\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DESY-01-077, EDINBURGH-2001-08, PSI-PR-01-10\",\n    doi = \"10.1103/PhysRevLett.87.201805\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"87\",\n    pages = \"201805\",\n    year = \"2001\"\n}\n",
+  "doi": "10.1103/PhysRevLett.87.201805",
+  "recid": 559687,
+  "title": "Higgs radiation off top quarks at the Tevatron and the LHC",
+  "year": 2001
+ },
  "inspire:562246": {
   "arxiv": "hep-ph/0108274",
   "authors_short": "Baur et al.",
@@ -582,6 +2067,15 @@
   "doi": "10.1103/PhysRevD.65.033007",
   "recid": 562246,
   "title": "Electroweak radiative corrections to neutral current Drell-Yan processes at hadron colliders",
+  "year": 2001
+ },
+ "inspire:562503": {
+  "arxiv": "hep-ph/0109062",
+  "authors_short": "Dittmaier and Krämer",
+  "bibtex": "@article{Dittmaier:2001ay,\n    author = {Dittmaier, Stefan and Kr{\\\"a}mer, Michael},\n    title = \"{Electroweak radiative corrections to W boson production at hadron colliders}\",\n    eprint = \"hep-ph/0109062\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BI-TP-2000-04, DESY-01-121, EDINBURGH-2001-11\",\n    doi = \"10.1103/PhysRevD.65.073007\",\n    journal = \"Phys. Rev. D\",\n    volume = \"65\",\n    pages = \"073007\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1103/PhysRevD.65.073007",
+  "recid": 562503,
+  "title": "Electroweak radiative corrections to W boson production at hadron colliders",
   "year": 2001
  },
  "inspire:567814": {
@@ -593,6 +2087,42 @@
   "title": "The Two loop QCD matrix element for e+ e- ---> 3 jets",
   "year": 2001
  },
+ "inspire:581855": {
+  "arxiv": "hep-ph/0201161",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:2002tk,\n    author = \"Bern, Zvi and De Freitas, Abilio and Dixon, Lance J.\",\n    title = \"{Two loop helicity amplitudes for gluon-gluon scattering in QCD and supersymmetric Yang-Mills theory}\",\n    eprint = \"hep-ph/0201161\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-9103, UCLA-02-TEP-1\",\n    doi = \"10.1088/1126-6708/2002/03/018\",\n    journal = \"JHEP\",\n    volume = \"03\",\n    pages = \"018\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1088/1126-6708/2002/03/018",
+  "recid": 581855,
+  "title": "Two loop helicity amplitudes for gluon-gluon scattering in QCD and supersymmetric Yang-Mills theory",
+  "year": 2002
+ },
+ "inspire:582006": {
+  "arxiv": "hep-ph/0201206",
+  "authors_short": "Harlander and Kilgore",
+  "bibtex": "@article{Harlander:2002wh,\n    author = \"Harlander, Robert V. and Kilgore, William B.\",\n    title = \"{Next-to-next-to-leading order Higgs production at hadron colliders}\",\n    eprint = \"hep-ph/0201206\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BNL-HET-02-3, CERN-TH-2002-006\",\n    doi = \"10.1103/PhysRevLett.88.201801\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"88\",\n    pages = \"201801\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1103/PhysRevLett.88.201801",
+  "recid": 582006,
+  "title": "Next-to-next-to-leading order Higgs production at hadron colliders",
+  "year": 2002
+ },
+ "inspire:582359": {
+  "arxiv": "hep-ph/0201274",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2002zn,\n    author = \"Anastasiou, C. and Glover, E. W. Nigel and Tejeda-Yeomans, M. E.\",\n    title = \"{Two loop QED and QCD corrections to massless fermion boson scattering}\",\n    eprint = \"hep-ph/0201274\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-9130, DCPT-02-10, IPPP-02-05, YITP-SB-02-04\",\n    doi = \"10.1016/S0550-3213(02)00140-2\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"629\",\n    pages = \"255--289\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1016/S0550-3213(02)00140-2",
+  "recid": 582359,
+  "title": "Two loop QED and QCD corrections to massless fermion boson scattering",
+  "year": 2002
+ },
+ "inspire:584902": {
+  "arxiv": "hep-ph/0204023",
+  "authors_short": "Catani et al.",
+  "bibtex": "@article{Catani:2002ny,\n    author = \"Catani, S. and Fontannaz, M. and Guillet, J. P. and Pilon, E.\",\n    title = \"{Cross-section of isolated prompt photons in hadron hadron collisions}\",\n    eprint = \"hep-ph/0204023\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-TH-2002-017, LPT-ORSAY-02-24, LAPTH-907-02\",\n    doi = \"10.1088/1126-6708/2002/05/028\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"028\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1088/1126-6708/2002/05/028",
+  "recid": 584902,
+  "title": "Cross-section of isolated prompt photons in hadron hadron collisions",
+  "year": 2002
+ },
  "inspire:587998": {
   "arxiv": "hep-ph/0206067",
   "authors_short": "Garland et al.",
@@ -600,6 +2130,15 @@
   "doi": "10.1016/S0550-3213(02)00627-2",
   "recid": 587998,
   "title": "Two loop QCD helicity amplitudes for e+ e- ---> three jets",
+  "year": 2002
+ },
+ "inspire:589593": {
+  "arxiv": "hep-ph/0207004",
+  "authors_short": "Anastasiou and Melnikov",
+  "bibtex": "@article{Anastasiou:2002yz,\n    author = \"Anastasiou, Charalampos and Melnikov, Kirill\",\n    title = \"{Higgs boson production at hadron colliders in NNLO QCD}\",\n    eprint = \"hep-ph/0207004\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-9273\",\n    doi = \"10.1016/S0550-3213(02)00837-4\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"646\",\n    pages = \"220--256\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1016/S0550-3213(02)00837-4",
+  "recid": 589593,
+  "title": "Higgs boson production at hadron colliders in NNLO QCD",
   "year": 2002
  },
  "inspire:604413": {
@@ -611,6 +2150,87 @@
   "title": "Tevatron Run-1 $Z$ boson data and Collins-Soper-Sterman resummation formalism",
   "year": 2002
  },
+ "inspire:613462": {
+  "arxiv": "hep-ph/0302135",
+  "authors_short": "Ravindran et al.",
+  "bibtex": "@article{Ravindran:2003um,\n    author = \"Ravindran, V. and Smith, J. and van Neerven, W. L.\",\n    title = \"{NNLO corrections to the total cross-section for Higgs boson production in hadron hadron collisions}\",\n    eprint = \"hep-ph/0302135\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"YITP-SB-03-02, INLO-PUB-01-03\",\n    doi = \"10.1016/S0550-3213(03)00457-7\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"665\",\n    pages = \"325--366\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1016/S0550-3213(03)00457-7",
+  "recid": 613462,
+  "title": "NNLO corrections to the total cross-section for Higgs boson production in hadron hadron collisions",
+  "year": 2003
+ },
+ "inspire:617216": {
+  "arxiv": "hep-ph/0304168",
+  "authors_short": "Bern et al.",
+  "bibtex": "@article{Bern:2003ck,\n    author = \"Bern, Zvi and De Freitas, Abilio and Dixon, Lance J.\",\n    title = \"{Two loop helicity amplitudes for quark gluon scattering in QCD and gluino gluon scattering in supersymmetric Yang-Mills theory}\",\n    eprint = \"hep-ph/0304168\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-9675, UCLA-03-TEP-10, DESY-03-034, UCLA-02-TEP-2\",\n    doi = \"10.1088/1126-6708/2003/06/028\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"028\",\n    year = \"2003\",\n    note = \"[Erratum: JHEP 04, 112 (2014)]\"\n}\n",
+  "doi": "10.1088/1126-6708/2003/06/028",
+  "recid": 617216,
+  "title": "Two loop helicity amplitudes for quark gluon scattering in QCD and gluino gluon scattering in supersymmetric Yang-Mills theory",
+  "year": 2003
+ },
+ "inspire:617217": {
+  "arxiv": "hep-ph/0304169",
+  "authors_short": "Glover and Tejeda-Yeomans",
+  "bibtex": "@article{Glover:2003cm,\n    author = \"Glover, E. W. Nigel and Tejeda-Yeomans, M. E.\",\n    title = \"{Two loop QCD helicity amplitudes for massless quark massless gauge boson scattering}\",\n    eprint = \"hep-ph/0304169\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DCPT-03-44, IPPP-03-22, YITP-SB-03-14\",\n    doi = \"10.1088/1126-6708/2003/06/033\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"033\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1088/1126-6708/2003/06/033",
+  "recid": 617217,
+  "title": "Two loop QCD helicity amplitudes for massless quark massless gauge boson scattering",
+  "year": 2003
+ },
+ "inspire:621007": {
+  "arxiv": "hep-ph/0306109",
+  "authors_short": "Figy et al.",
+  "bibtex": "@article{Figy:2003nv,\n    author = \"Figy, T. and Oleari, C. and Zeppenfeld, D.\",\n    title = \"{Next-to-leading order jet distributions for Higgs boson production via weak boson fusion}\",\n    eprint = \"hep-ph/0306109\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DCPT-03-54, IPPP-03-27, MADPH-03-1330\",\n    doi = \"10.1103/PhysRevD.68.073005\",\n    journal = \"Phys. Rev. D\",\n    volume = \"68\",\n    pages = \"073005\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1103/PhysRevD.68.073005",
+  "recid": 621007,
+  "title": "Next-to-leading order jet distributions for Higgs boson production via weak boson fusion",
+  "year": 2003
+ },
+ "inspire:621749": {
+  "arxiv": "hep-ph/0306212",
+  "authors_short": "Cacciari and Nason",
+  "bibtex": "@article{Cacciari:2003zu,\n    author = \"Cacciari, Matteo and Nason, Paolo\",\n    title = \"{Charm cross-sections for the Tevatron Run II}\",\n    eprint = \"hep-ph/0306212\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"UPRF-2003-10, BICOCCA-FT-03-14\",\n    doi = \"10.1088/1126-6708/2003/09/006\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"006\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1088/1126-6708/2003/09/006",
+  "recid": 621749,
+  "title": "Charm cross-sections for the Tevatron Run II",
+  "year": 2003
+ },
+ "inspire:621983": {
+  "arxiv": "hep-ph/0306234",
+  "authors_short": "Ciccolini et al.",
+  "bibtex": "@article{Ciccolini:2003jy,\n    author = \"Ciccolini, M. L. and Dittmaier, S. and Kramer, M.\",\n    title = \"{Electroweak radiative corrections to associated WH and ZH production at hadron colliders}\",\n    eprint = \"hep-ph/0306234\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"EDINBURGH-2003-05, MPI-PHT-2003-24\",\n    doi = \"10.1103/PhysRevD.68.073003\",\n    journal = \"Phys. Rev. D\",\n    volume = \"68\",\n    pages = \"073003\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1103/PhysRevD.68.073003",
+  "recid": 621983,
+  "title": "Electroweak radiative corrections to associated WH and ZH production at hadron colliders",
+  "year": 2003
+ },
+ "inspire:623567": {
+  "arxiv": "hep-ph/0307206",
+  "authors_short": "Brein et al.",
+  "bibtex": "@article{Brein:2003wg,\n    author = \"Brein, Oliver and Djouadi, Abdelhak and Harlander, Robert\",\n    title = \"{NNLO QCD corrections to the Higgs-strahlung processes at hadron colliders}\",\n    eprint = \"hep-ph/0307206\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"MPP-2003-35, CERN-TH-2003-161, PM-03-16\",\n    doi = \"10.1016/j.physletb.2003.10.112\",\n    journal = \"Phys. Lett. B\",\n    volume = \"579\",\n    pages = \"149--156\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1016/j.physletb.2003.10.112",
+  "recid": 623567,
+  "title": "NNLO QCD corrections to the Higgs-strahlung processes at hadron colliders",
+  "year": 2003
+ },
+ "inspire:623857": {
+  "arxiv": "hep-ph/0307268",
+  "authors_short": "Nagy",
+  "bibtex": "@article{Nagy:2003tz,\n    author = \"Nagy, Zoltan\",\n    title = \"{Next-to-leading order calculation of three jet observables in hadron hadron collision}\",\n    eprint = \"hep-ph/0307268\",\n    archivePrefix = \"arXiv\",\n    doi = \"10.1103/PhysRevD.68.094002\",\n    journal = \"Phys. Rev. D\",\n    volume = \"68\",\n    pages = \"094002\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1103/PhysRevD.68.094002",
+  "recid": 623857,
+  "title": "Next-to-leading order calculation of three jet observables in hadron hadron collision",
+  "year": 2003
+ },
+ "inspire:624447": {
+  "arxiv": "hep-ex/0307080",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2003vmf,\n    author = \"Acosta, D. and others\",\n    collaboration = \"CDF\",\n    title = \"{Measurement of Prompt Charm Meson Production Cross Sections in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV}\",\n    eprint = \"hep-ex/0307080\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"FERMILAB-PUB-03-217-E\",\n    doi = \"10.1103/PhysRevLett.91.241804\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"91\",\n    pages = \"241804\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1103/PhysRevLett.91.241804",
+  "recid": 624447,
+  "title": "Measurement of Prompt Charm Meson Production Cross Sections in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV",
+  "year": 2003
+ },
  "inspire:635943": {
   "arxiv": "hep-ph/0312266",
   "authors_short": "Anastasiou et al.",
@@ -619,6 +2239,42 @@
   "recid": 635943,
   "title": "High precision QCD at hadron colliders: Electroweak gauge boson rapidity distributions at NNLO",
   "year": 2003
+ },
+ "inspire:636645": {
+  "arxiv": null,
+  "authors_short": "ALEPH Collaboration",
+  "bibtex": "@article{ALEPH:2003obs,\n    author = \"Heister, A. and others\",\n    collaboration = \"ALEPH\",\n    title = \"{Studies of QCD at e+ e- centre-of-mass energies between 91-GeV and 209-GeV}\",\n    reportNumber = \"CERN-EP-2003-084\",\n    doi = \"10.1140/epjc/s2004-01891-4\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"35\",\n    pages = \"457--486\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1140/epjc/s2004-01891-4",
+  "recid": 636645,
+  "title": "Studies of QCD at e+ e- centre-of-mass energies between 91-GeV and 209-GeV",
+  "year": 2003
+ },
+ "inspire:647789": {
+  "arxiv": "hep-ph/0404071",
+  "authors_short": "Aglietti et al.",
+  "bibtex": "@article{Aglietti:2004nj,\n    author = \"Aglietti, U. and Bonciani, R. and Degrassi, G. and Vicini, A.\",\n    title = \"{Two loop light fermion contribution to Higgs production and decays}\",\n    eprint = \"hep-ph/0404071\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"ROME1-1373-04, FREIBURG-THEP-04-05, RM3-TH-04-06, IFUM-788-FT\",\n    doi = \"10.1016/j.physletb.2004.06.063\",\n    journal = \"Phys. Lett. B\",\n    volume = \"595\",\n    pages = \"432--441\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1016/j.physletb.2004.06.063",
+  "recid": 647789,
+  "title": "Two loop light fermion contribution to Higgs production and decays",
+  "year": 2004
+ },
+ "inspire:656898": {
+  "arxiv": "hep-ph/0408158",
+  "authors_short": "Campbell et al.",
+  "bibtex": "@article{Campbell:2004ch,\n    author = \"Campbell, John M. and Ellis, R. Keith and Tramontano, Francesco\",\n    title = \"{Single top production and decay at next-to-leading order}\",\n    eprint = \"hep-ph/0408158\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"ANL-HEP-PR-04-70, FERMILAB-PUB-04-134-T, DSF-22-2004\",\n    doi = \"10.1103/PhysRevD.70.094012\",\n    journal = \"Phys. Rev. D\",\n    volume = \"70\",\n    pages = \"094012\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1103/PhysRevD.70.094012",
+  "recid": 656898,
+  "title": "Single top production and decay at next-to-leading order",
+  "year": 2004
+ },
+ "inspire:658101": {
+  "arxiv": "hep-ph/0409007",
+  "authors_short": "De Freitas and Bern",
+  "bibtex": "@article{DeFreitas:2004kmi,\n    author = \"De Freitas, Abilio and Bern, Zvi\",\n    title = \"{Two-loop helicity amplitudes for quark-quark scattering in QCD and gluino-gluino scattering in supersymmetric Yang-Mills theory}\",\n    eprint = \"hep-ph/0409007\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DESY-04-061, UCLA-04-TEP-32\",\n    doi = \"10.1088/1126-6708/2004/09/039\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"039\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1088/1126-6708/2004/09/039",
+  "recid": 658101,
+  "title": "Two-loop helicity amplitudes for quark-quark scattering in QCD and gluino-gluino scattering in supersymmetric Yang-Mills theory",
+  "year": 2004
  },
  "inspire:659055": {
   "arxiv": "hep-ph/0409146",
@@ -629,6 +2285,78 @@
   "title": "A New method for combining NLO QCD with shower Monte Carlo algorithms",
   "year": 2004
  },
+ "inspire:663841": {
+  "arxiv": "hep-ph/0411112",
+  "authors_short": "Moch et al.",
+  "bibtex": "@article{Moch:2004xu,\n    author = \"Moch, S. and Vermaseren, J. A. M. and Vogt, A.\",\n    title = \"{The Longitudinal structure function at the third order}\",\n    eprint = \"hep-ph/0411112\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SFB-CPP-04-65, DCPT-04-130, IPPP-04-65, NIKHEF-04-013, DESY-04-210\",\n    doi = \"10.1016/j.physletb.2004.11.063\",\n    journal = \"Phys. Lett. B\",\n    volume = \"606\",\n    pages = \"123--129\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1016/j.physletb.2004.11.063",
+  "recid": 663841,
+  "title": "The Longitudinal structure function at the third order",
+  "year": 2004
+ },
+ "inspire:668026": {
+  "arxiv": "hep-ex/0412071",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2004jtw,\n    author = \"Acosta, D. and others\",\n    collaboration = \"CDF\",\n    title = \"{Measurement of the $J/\\psi$ meson and $b-$hadron production cross sections in $p\\bar{p}$ collisions at $\\sqrt{s} = 1960$ GeV}\",\n    eprint = \"hep-ex/0412071\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"FERMILAB-PUB-04-440-E\",\n    doi = \"10.1103/PhysRevD.71.032001\",\n    journal = \"Phys. Rev. D\",\n    volume = \"71\",\n    pages = \"032001\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1103/PhysRevD.71.032001",
+  "recid": 668026,
+  "title": "Measurement of the $J/\\psi$ meson and $b-$hadron production cross sections in $p\\bar{p}$ collisions at $\\sqrt{s} = 1960$ GeV",
+  "year": 2004
+ },
+ "inspire:669402": {
+  "arxiv": "hep-ex/0503051",
+  "authors_short": "OPAL Collaboration",
+  "bibtex": "@article{OPAL:2004wof,\n    author = \"Abbiendi, G. and others\",\n    collaboration = \"OPAL\",\n    title = \"{Measurement of event shape distributions and moments in e+ e- ---{\\ensuremath{>}} hadrons at 91-GeV - 209-GeV and a determination of alpha(s)}\",\n    eprint = \"hep-ex/0503051\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-PH-EP-2004-044\",\n    doi = \"10.1140/epjc/s2005-02120-6\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"40\",\n    pages = \"287--316\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1140/epjc/s2005-02120-6",
+  "recid": 669402,
+  "title": "Measurement of event shape distributions and moments in e+ e- ---> hadrons at 91-GeV - 209-GeV and a determination of alpha(s)",
+  "year": 2004
+ },
+ "inspire:676264": {
+  "arxiv": "hep-ph/0502063",
+  "authors_short": "Denner et al.",
+  "bibtex": "@article{Denner:2005es,\n    author = \"Denner, Ansgar and Dittmaier, S. and Roth, M. and Wieders, L. H.\",\n    title = \"{Complete electroweak O(alpha) corrections to charged-current e+e- ---{\\ensuremath{>}} 4 fermion processes}\",\n    eprint = \"hep-ph/0502063\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"MPP-2005-8, PSI-PR-05-02\",\n    doi = \"10.1016/j.physletb.2005.03.007\",\n    journal = \"Phys. Lett. B\",\n    volume = \"612\",\n    pages = \"223--232\",\n    year = \"2005\",\n    note = \"[Erratum: Phys.Lett.B 704, 667--668 (2011)]\"\n}\n",
+  "doi": "10.1016/j.physletb.2005.03.007",
+  "recid": 676264,
+  "title": "Complete electroweak O(alpha) corrections to charged-current e+e- ---> 4 fermion processes",
+  "year": 2005
+ },
+ "inspire:681335": {
+  "arxiv": "hep-ph/0504242",
+  "authors_short": "Vermaseren et al.",
+  "bibtex": "@article{Vermaseren:2005qc,\n    author = \"Vermaseren, J. A. M. and Vogt, A. and Moch, S.\",\n    title = \"{The Third-order QCD corrections to deep-inelastic scattering by photon exchange}\",\n    eprint = \"hep-ph/0504242\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"NIKHEF-05-006, DCPT-05-28, IPPP-05-14, DESY-05-063, SFB-CPP-05-13\",\n    doi = \"10.1016/j.nuclphysb.2005.06.020\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"724\",\n    pages = \"3--182\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1016/j.nuclphysb.2005.06.020",
+  "recid": 681335,
+  "title": "The Third-order QCD corrections to deep-inelastic scattering by photon exchange",
+  "year": 2005
+ },
+ "inspire:682093": {
+  "arxiv": "hep-ph/0505042",
+  "authors_short": "Denner et al.",
+  "bibtex": "@article{Denner:2005fg,\n    author = \"Denner, Ansgar and Dittmaier, S. and Roth, M. and Wieders, L. H.\",\n    title = \"{Electroweak corrections to charged-current e+ e- ---{\\ensuremath{>}} 4 fermion processes: Technical details and further results}\",\n    eprint = \"hep-ph/0505042\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"MPP-2005-23, PSI-PR-05-05\",\n    doi = \"10.1016/j.nuclphysb.2011.09.001\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"724\",\n    pages = \"247--294\",\n    year = \"2005\",\n    note = \"[Erratum: Nucl.Phys.B 854, 504--507 (2012)]\"\n}\n",
+  "doi": "10.1016/j.nuclphysb.2011.09.001",
+  "recid": 682093,
+  "title": "Electroweak corrections to charged-current e+ e- ---> 4 fermion processes: Technical details and further results",
+  "year": 2005
+ },
+ "inspire:682504": {
+  "arxiv": "hep-ph/0505111",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2005btv,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. Nigel\",\n    title = \"{Antenna subtraction at NNLO}\",\n    eprint = \"hep-ph/0505111\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"ZU-TH-07-05, IPPP-05-18\",\n    doi = \"10.1088/1126-6708/2005/09/056\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"056\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1088/1126-6708/2005/09/056",
+  "recid": 682504,
+  "title": "Antenna subtraction at NNLO",
+  "year": 2005
+ },
+ "inspire:686134": {
+  "arxiv": "hep-ph/0506289",
+  "authors_short": "Campbell and Tramontano",
+  "bibtex": "@article{Campbell:2005bb,\n    author = \"Campbell, John M. and Tramontano, Francesco\",\n    title = \"{Next-to-leading order corrections to Wt production and decay}\",\n    eprint = \"hep-ph/0506289\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-PH-TH-2005-110, DSF-18-2005\",\n    doi = \"10.1016/j.nuclphysb.2005.08.015\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"726\",\n    pages = \"109--130\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1016/j.nuclphysb.2005.08.015",
+  "recid": 686134,
+  "title": "Next-to-leading order corrections to Wt production and decay",
+  "year": 2005
+ },
  "inspire:686721": {
   "arxiv": "hep-ph/0507061",
   "authors_short": "Gehrmann et al.",
@@ -638,6 +2366,42 @@
   "title": "Two-loop quark and gluon form-factors in dimensional regularisation",
   "year": 2005
  },
+ "inspire:689348": {
+  "arxiv": "hep-ph/0508092",
+  "authors_short": "Kuhn et al.",
+  "bibtex": "@article{Kuhn:2005it,\n    author = \"Kuhn, Johann H. and Scharf, A. and Uwer, P.\",\n    title = \"{Electroweak corrections to top-quark pair production in quark-antiquark annihilation}\",\n    eprint = \"hep-ph/0508092\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-PH-TH-2005-145, TTP05-12, SFB-CPP-05-36\",\n    doi = \"10.1140/epjc/s2005-02423-6\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"45\",\n    pages = \"139--150\",\n    year = \"2006\"\n}\n",
+  "doi": "10.1140/epjc/s2005-02423-6",
+  "recid": 689348,
+  "title": "Electroweak corrections to top-quark pair production in quark-antiquark annihilation",
+  "year": 2005
+ },
+ "inspire:691576": {
+  "arxiv": "hep-ex/0509008",
+  "authors_short": "ALEPH Collaboration",
+  "bibtex": "@article{ALEPH:2005ab,\n    author = \"Schael, S. and others\",\n    collaboration = \"ALEPH, DELPHI, L3, OPAL, SLD, LEP Electroweak Working Group, SLD Electroweak Group, SLD Heavy Flavour Group\",\n    title = \"{Precision electroweak measurements on the $Z$ resonance}\",\n    eprint = \"hep-ex/0509008\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-R-774\",\n    doi = \"10.1016/j.physrep.2005.12.006\",\n    journal = \"Phys. Rept.\",\n    volume = \"427\",\n    pages = \"257--454\",\n    year = \"2006\"\n}\n",
+  "doi": "10.1016/j.physrep.2005.12.006",
+  "recid": 691576,
+  "title": "Precision electroweak measurements on the $Z$ resonance",
+  "year": 2005
+ },
+ "inspire:698784": {
+  "arxiv": "hep-ex/0511054",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2005ofv,\n    author = \"Abazov, V. M. and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the isolated photon cross section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV}\",\n    eprint = \"hep-ex/0511054\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"FERMILAB-PUB-05-523-E\",\n    doi = \"10.1016/j.physletb.2006.04.048\",\n    journal = \"Phys. Lett. B\",\n    volume = \"639\",\n    pages = \"151--158\",\n    year = \"2006\",\n    note = \"[Erratum: Phys.Lett.B 658, 285--289 (2008)]\"\n}\n",
+  "doi": "10.1016/j.physletb.2006.04.048",
+  "recid": 698784,
+  "title": "Measurement of the isolated photon cross section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV",
+  "year": 2005
+ },
+ "inspire:712998": {
+  "arxiv": "hep-ph/0603182",
+  "authors_short": "Melnikov and Petriello",
+  "bibtex": "@article{Melnikov:2006di,\n    author = \"Melnikov, Kirill and Petriello, Frank\",\n    title = \"{The $W$ boson production cross section at the LHC through $O(\\alpha^2_s)$}\",\n    eprint = \"hep-ph/0603182\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"FERMILAB-PUB-06-059-T, UH-511-1083-06, MADPH-06-1256\",\n    doi = \"10.1103/PhysRevLett.96.231803\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"96\",\n    pages = \"231803\",\n    year = \"2006\"\n}\n",
+  "doi": "10.1103/PhysRevLett.96.231803",
+  "recid": 712998,
+  "title": "The $W$ boson production cross section at the LHC through $O(\\alpha^2_s)$",
+  "year": 2006
+ },
  "inspire:725573": {
   "arxiv": "hep-ph/0609070",
   "authors_short": "Melnikov and Petriello",
@@ -645,6 +2409,15 @@
   "doi": "10.1103/PhysRevD.74.114017",
   "recid": 725573,
   "title": "Electroweak gauge boson production at hadron colliders through $O(\\alpha_s^2)$",
+  "year": 2006
+ },
+ "inspire:727193": {
+  "arxiv": "hep-ph/0609285",
+  "authors_short": "Kluge et al.",
+  "bibtex": "@inproceedings{Kluge:2006xs,\n    author = \"Kluge, T. and Rabbertz, K. and Wobisch, M.\",\n    title = \"{FastNLO: Fast pQCD calculations for PDF fits}\",\n    booktitle = \"{14th International Workshop on Deep Inelastic Scattering}\",\n    eprint = \"hep-ph/0609285\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"DESY-06-186, FERMILAB-CONF-06-352-E\",\n    doi = \"10.1142/9789812706706_0110\",\n    pages = \"483--486\",\n    month = \"9\",\n    year = \"2006\"\n}\n",
+  "doi": "10.1142/9789812706706_0110",
+  "recid": 727193,
+  "title": "FastNLO: Fast pQCD calculations for PDF fits",
   "year": 2006
  },
  "inspire:744624": {
@@ -656,6 +2429,51 @@
   "title": "Measurement of the Shape of the Boson Rapidity Distribution for $p \\bar{p} \\to Z / \\gamma^* \\to e^{+} e^{-} + X$ Events Produced at $\\sqrt{s}$ of 1.96-TeV",
   "year": 2007
  },
+ "inspire:745577": {
+  "arxiv": "hep-ph/0703012",
+  "authors_short": "Catani and Grazzini",
+  "bibtex": "@article{Catani:2007vq,\n    author = \"Catani, Stefano and Grazzini, Massimiliano\",\n    title = \"{An NNLO subtraction formalism in hadron collisions and its application to Higgs boson production at the LHC}\",\n    eprint = \"hep-ph/0703012\",\n    archivePrefix = \"arXiv\",\n    doi = \"10.1103/PhysRevLett.98.222002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"98\",\n    pages = \"222002\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1103/PhysRevLett.98.222002",
+  "recid": 745577,
+  "title": "An NNLO subtraction formalism in hadron collisions and its application to Higgs boson production at the LHC",
+  "year": 2007
+ },
+ "inspire:748563": {
+  "arxiv": "0704.1740",
+  "authors_short": "Moch and Rogal",
+  "bibtex": "@article{Moch:2007gx,\n    author = \"Moch, S. and Rogal, M.\",\n    title = \"{Charged current deep-inelastic scattering at three loops}\",\n    eprint = \"0704.1740\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-07-002, SFB-CPP-07-01\",\n    doi = \"10.1016/j.nuclphysb.2007.05.008\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"782\",\n    pages = \"51--78\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1016/j.nuclphysb.2007.05.008",
+  "recid": 748563,
+  "title": "Charged current deep-inelastic scattering at three loops",
+  "year": 2007
+ },
+ "inspire:754793": {
+  "arxiv": "0707.0381",
+  "authors_short": "Ciccolini et al.",
+  "bibtex": "@article{Ciccolini:2007jr,\n    author = \"Ciccolini, M. and Denner, Ansgar and Dittmaier, S.\",\n    title = \"{Strong and electroweak corrections to the production of Higgs + 2jets via weak interactions at the LHC}\",\n    eprint = \"0707.0381\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MPP-2007-82, PSI-PR-07-03\",\n    doi = \"10.1103/PhysRevLett.99.161803\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"99\",\n    pages = \"161803\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1103/PhysRevLett.99.161803",
+  "recid": 754793,
+  "title": "Strong and electroweak corrections to the production of Higgs + 2jets via weak interactions at the LHC",
+  "year": 2007
+ },
+ "inspire:755338": {
+  "arxiv": "0707.1285",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2007nzq,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{Second-order QCD corrections to the thrust distribution}\",\n    eprint = \"0707.1285\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-16-07, IPPP-07-36, EDINBURGH-2007-10, HEPTOOLS-07-016\",\n    doi = \"10.1103/PhysRevLett.99.132002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"99\",\n    pages = \"132002\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1103/PhysRevLett.99.132002",
+  "recid": 755338,
+  "title": "Second-order QCD corrections to the thrust distribution",
+  "year": 2007
+ },
+ "inspire:759231": {
+  "arxiv": "0708.3731",
+  "authors_short": "Moch et al.",
+  "bibtex": "@article{Moch:2007rq,\n    author = \"Moch, S. and Rogal, M. and Vogt, A.\",\n    title = \"{Differences between charged-current coefficient functions}\",\n    eprint = \"0708.3731\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-07-048, SFT-CPP-07-13, LTH-756\",\n    doi = \"10.1016/j.nuclphysb.2007.09.022\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"790\",\n    pages = \"317--335\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1016/j.nuclphysb.2007.09.022",
+  "recid": 759231,
+  "title": "Differences between charged-current coefficient functions",
+  "year": 2007
+ },
  "inspire:760769": {
   "arxiv": "0709.2092",
   "authors_short": "Frixione et al.",
@@ -663,6 +2481,24 @@
   "doi": "10.1088/1126-6708/2007/11/070",
   "recid": 760769,
   "title": "Matching NLO QCD computations with Parton Shower simulations: the POWHEG method",
+  "year": 2007
+ },
+ "inspire:762655": {
+  "arxiv": "0710.0346",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2007foh,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{Infrared structure of e+ e- ---{\\ensuremath{>}} 3 jets at NNLO}\",\n    eprint = \"0710.0346\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-18-07, IPPP-07-62, EDINBURGH-2007-26, HEPTOOLS-07-020\",\n    doi = \"10.1088/1126-6708/2007/11/058\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"058\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1088/1126-6708/2007/11/058",
+  "recid": 762655,
+  "title": "Infrared structure of e+ e- ---> 3 jets at NNLO",
+  "year": 2007
+ },
+ "inspire:769010": {
+  "arxiv": "0711.4711",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2007vsv,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{NNLO corrections to event shapes in e+ e- annihilation}\",\n    eprint = \"0711.4711\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-27-07, IPPP-07-90, EDINBURGH-2007-47\",\n    doi = \"10.1088/1126-6708/2007/12/094\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"094\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1088/1126-6708/2007/12/094",
+  "recid": 769010,
+  "title": "NNLO corrections to event shapes in e+ e- annihilation",
   "year": 2007
  },
  "inspire:769689": {
@@ -674,6 +2510,51 @@
   "title": "Measurement of the shape of the boson transverse momentum distribution in $p \\bar{p} \\to Z / \\gamma^{*} \\to e^+ e^- + X$ events produced at $\\sqrt{s}$=1.96-TeV",
   "year": 2007
  },
+ "inspire:778905": {
+  "arxiv": "0802.0813",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2008qsl,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Heinrich, G.\",\n    title = \"{Jet rates in electron-positron annihilation at O(alpha(s)**3) in QCD}\",\n    eprint = \"0802.0813\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-03-08, IPPP-08-05\",\n    doi = \"10.1103/PhysRevLett.100.172001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"100\",\n    pages = \"172001\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevLett.100.172001",
+  "recid": 778905,
+  "title": "Jet rates in electron-positron annihilation at O(alpha(s)**3) in QCD",
+  "year": 2008
+ },
+ "inspire:779574": {
+  "arxiv": "0802.2400",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2008nou,\n    author = \"Abazov, V. M. and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the inclusive jet cross-section in $p \\bar{p}$ collisions at $s^{(1/2)}$ =1.96-TeV}\",\n    eprint = \"0802.2400\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-08-034-E\",\n    doi = \"10.1103/PhysRevLett.101.062001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"101\",\n    pages = \"062001\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevLett.101.062001",
+  "recid": 779574,
+  "title": "Measurement of the inclusive jet cross-section in $p \\bar{p}$ collisions at $s^{(1/2)}$ =1.96-TeV",
+  "year": 2008
+ },
+ "inspire:780765": {
+  "arxiv": "0803.0695",
+  "authors_short": "Gehrmann et al.",
+  "bibtex": "@article{Gehrmann:2008kh,\n    author = \"Gehrmann, T. and Luisoni, G. and Stenzel, H.\",\n    title = \"{Matching NLLA + NNLO for event shape distributions}\",\n    eprint = \"0803.0695\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-04-08\",\n    doi = \"10.1016/j.physletb.2008.05.023\",\n    journal = \"Phys. Lett. B\",\n    volume = \"664\",\n    pages = \"265--273\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1016/j.physletb.2008.05.023",
+  "recid": 780765,
+  "title": "Matching NLLA + NNLO for event shape distributions",
+  "year": 2008
+ },
+ "inspire:781013": {
+  "arxiv": "0803.1400",
+  "authors_short": "Czakon",
+  "bibtex": "@article{Czakon:2008zk,\n    author = \"Czakon, M.\",\n    title = \"{Tops from Light Quarks: Full Mass Dependence at Two-Loops in QCD}\",\n    eprint = \"0803.1400\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.physletb.2008.05.028\",\n    journal = \"Phys. Lett. B\",\n    volume = \"664\",\n    pages = \"307--314\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1016/j.physletb.2008.05.028",
+  "recid": 781013,
+  "title": "Tops from Light Quarks: Full Mass Dependence at Two-Loops in QCD",
+  "year": 2008
+ },
+ "inspire:786266": {
+  "arxiv": "0805.3067",
+  "authors_short": "Frixione et al.",
+  "bibtex": "@article{Frixione:2008yi,\n    author = \"Frixione, Stefano and Laenen, Eric and Motylinski, Patrick and Webber, Bryan R. and White, Chris D.\",\n    title = \"{Single-top hadroproduction in association with a W boson}\",\n    eprint = \"0805.3067\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2008-104, ITP-UU-08-27, NIKHEF-2008-005, ITFA-2008-16, CAVENDISH-HEP-08-06\",\n    doi = \"10.1088/1126-6708/2008/07/029\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"029\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1088/1126-6708/2008/07/029",
+  "recid": 786266,
+  "title": "Single-top hadroproduction in association with a W boson",
+  "year": 2008
+ },
  "inspire:787440": {
   "arxiv": "0805.4802",
   "authors_short": "Alioli et al.",
@@ -681,6 +2562,51 @@
   "doi": "10.1088/1126-6708/2008/07/060",
   "recid": 787440,
   "title": "NLO vector-boson production matched with shower in POWHEG",
+  "year": 2008
+ },
+ "inspire:790693": {
+  "arxiv": "0807.2204",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2008hmn,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF\",\n    title = \"{Measurement of the Inclusive Jet Cross Section at the Fermilab Tevatron p anti-p Collider Using a Cone-Based Jet Algorithm}\",\n    eprint = \"0807.2204\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-08-243-E\",\n    doi = \"10.1103/PhysRevD.78.052006\",\n    journal = \"Phys. Rev. D\",\n    volume = \"78\",\n    pages = \"052006\",\n    year = \"2008\",\n    note = \"[Erratum: Phys.Rev.D 79, 119902 (2009)]\"\n}\n",
+  "doi": "10.1103/PhysRevD.78.052006",
+  "recid": 790693,
+  "title": "Measurement of the Inclusive Jet Cross Section at the Fermilab Tevatron p anti-p Collider Using a Cone-Based Jet Algorithm",
+  "year": 2008
+ },
+ "inspire:791166": {
+  "arxiv": "0807.3241",
+  "authors_short": "Weinzierl",
+  "bibtex": "@article{Weinzierl:2008iv,\n    author = \"Weinzierl, Stefan\",\n    title = \"{NNLO corrections to 3-jet observables in electron-positron annihilation}\",\n    eprint = \"0807.3241\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MZ-TH-08-22\",\n    doi = \"10.1103/PhysRevLett.101.162001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"101\",\n    pages = \"162001\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevLett.101.162001",
+  "recid": 791166,
+  "title": "NNLO corrections to 3-jet observables in electron-positron annihilation",
+  "year": 2008
+ },
+ "inspire:795832": {
+  "arxiv": "0809.1301",
+  "authors_short": "Actis et al.",
+  "bibtex": "@article{Actis:2008ug,\n    author = \"Actis, Stefano and Passarino, Giampiero and Sturm, Christian and Uccirati, Sandro\",\n    title = \"{NLO Electroweak Corrections to Higgs Boson Production at Hadron Colliders}\",\n    eprint = \"0809.1301\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"PITHA-08-20, SFB-CPP-08-62, TTP08-38\",\n    doi = \"10.1016/j.physletb.2008.10.018\",\n    journal = \"Phys. Lett. B\",\n    volume = \"670\",\n    pages = \"12--17\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1016/j.physletb.2008.10.018",
+  "recid": 795832,
+  "title": "NLO Electroweak Corrections to Higgs Boson Production at Hadron Colliders",
+  "year": 2008
+ },
+ "inspire:803217": {
+  "arxiv": "0811.3458",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2008tj,\n    author = \"Anastasiou, Charalampos and Boughezal, Radja and Petriello, Frank\",\n    title = \"{Mixed QCD-electroweak corrections to Higgs boson production in gluon fusion}\",\n    eprint = \"0811.3458\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1088/1126-6708/2009/04/003\",\n    journal = \"JHEP\",\n    volume = \"04\",\n    pages = \"003\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1088/1126-6708/2009/04/003",
+  "recid": 803217,
+  "title": "Mixed QCD-electroweak corrections to Higgs boson production in gluon fusion",
+  "year": 2008
+ },
+ "inspire:805947": {
+  "arxiv": "0812.4168",
+  "authors_short": "Moch et al.",
+  "bibtex": "@article{Moch:2008fj,\n    author = \"Moch, S. and Vermaseren, J. A. M. and Vogt, A.\",\n    title = \"{Third-order QCD corrections to the charged-current structure function F(3)}\",\n    eprint = \"0812.4168\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-08-197, SFB-CPP-08-105, NIKHEF-08-032, LTH-815\",\n    doi = \"10.1016/j.nuclphysb.2009.01.001\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"813\",\n    pages = \"220--258\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1016/j.nuclphysb.2009.01.001",
+  "recid": 805947,
+  "title": "Third-order QCD corrections to the charged-current structure function F(3)",
   "year": 2008
  },
  "inspire:813829": {
@@ -701,6 +2627,24 @@
   "title": "Vector boson production at hadron colliders: a fully exclusive QCD calculation at NNLO",
   "year": 2009
  },
+ "inspire:817454": {
+  "arxiv": "0904.1077",
+  "authors_short": "Weinzierl",
+  "bibtex": "@article{Weinzierl:2009ms,\n    author = \"Weinzierl, Stefan\",\n    title = \"{Event shapes and jet rates in electron-positron annihilation at NNLO}\",\n    eprint = \"0904.1077\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MZ-TH-09-13\",\n    doi = \"10.1088/1126-6708/2009/06/041\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"041\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1088/1126-6708/2009/06/041",
+  "recid": 817454,
+  "title": "Event shapes and jet rates in electron-positron annihilation at NNLO",
+  "year": 2009
+ },
+ "inspire:834437": {
+  "arxiv": "0910.3623",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2009rtv,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF\",\n    title = \"{Measurement of the Inclusive Isolated Prompt Photon Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96${\\textasciitilde}TeV using the CDF Detector}\",\n    eprint = \"0910.3623\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-09-507-E\",\n    doi = \"10.1103/PhysRevD.80.111106\",\n    journal = \"Phys. Rev. D\",\n    volume = \"80\",\n    pages = \"111106\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1103/PhysRevD.80.111106",
+  "recid": 834437,
+  "title": "Measurement of the Inclusive Isolated Prompt Photon Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$~TeV using the CDF Detector",
+  "year": 2009
+ },
  "inspire:836737": {
   "arxiv": "0911.2329",
   "authors_short": "Dittmaier and Huber",
@@ -710,6 +2654,24 @@
   "title": "Radiative corrections to the neutral-current Drell-Yan process in the Standard Model and its minimal supersymmetric extension",
   "year": 2009
  },
+ "inspire:846483": {
+  "arxiv": "1002.4594",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2010mik,\n    author = \"Abazov, V. M. and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the Dijet Invariant Mass Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV}\",\n    eprint = \"1002.4594\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-10-038-E\",\n    doi = \"10.1016/j.physletb.2010.09.013\",\n    journal = \"Phys. Lett. B\",\n    volume = \"693\",\n    pages = \"531--538\",\n    year = \"2010\"\n}\n",
+  "doi": "10.1016/j.physletb.2010.09.013",
+  "recid": 846483,
+  "title": "Measurement of the Dijet Invariant Mass Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV",
+  "year": 2010
+ },
+ "inspire:849724": {
+  "arxiv": "1003.4451",
+  "authors_short": "Bolzoni et al.",
+  "bibtex": "@article{Bolzoni:2010xr,\n    author = \"Bolzoni, Paolo and Maltoni, Fabio and Moch, Sven-Olaf and Zaro, Marco\",\n    title = \"{Higgs production via vector-boson fusion at NNLO in QCD}\",\n    eprint = \"1003.4451\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-10-042, SFB-CPP-10-23, CP3-10-12\",\n    doi = \"10.1103/PhysRevLett.105.011801\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"105\",\n    pages = \"011801\",\n    year = \"2010\"\n}\n",
+  "doi": "10.1103/PhysRevLett.105.011801",
+  "recid": 849724,
+  "title": "Higgs production via vector-boson fusion at NNLO in QCD",
+  "year": 2010
+ },
  "inspire:852545": {
   "arxiv": "1004.3653",
   "authors_short": "Gehrmann et al.",
@@ -717,6 +2679,15 @@
   "doi": "10.1007/JHEP06(2010)094",
   "recid": 852545,
   "title": "Calculation of the quark and gluon form factors to three loops in QCD",
+  "year": 2010
+ },
+ "inspire:854529": {
+  "arxiv": "1005.1481",
+  "authors_short": "Botje",
+  "bibtex": "@article{Botje:2010ay,\n    author = \"Botje, M.\",\n    title = \"{QCDNUM: Fast QCD Evolution and Convolution}\",\n    eprint = \"1005.1481\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"NIKHEF-10-002\",\n    doi = \"10.1016/j.cpc.2010.10.020\",\n    journal = \"Comput. Phys. Commun.\",\n    volume = \"182\",\n    pages = \"490--532\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1016/j.cpc.2010.10.020",
+  "recid": 854529,
+  "title": "QCDNUM: Fast QCD Evolution and Convolution",
   "year": 2010
  },
  "inspire:856131": {
@@ -735,6 +2706,24 @@
   "doi": "10.1016/j.physletb.2010.09.012",
   "recid": 856972,
   "title": "Measurement of the Normalized $Z/\\gamma^* -> \\mu^+\\mu^-$ Transverse Momentum Distribution in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV",
+  "year": 2010
+ },
+ "inspire:858620": {
+  "arxiv": "1006.3080",
+  "authors_short": "Abbate et al.",
+  "bibtex": "@article{Abbate:2010xh,\n    author = \"Abbate, Riccardo and Fickinger, Michael and Hoang, Andre H. and Mateu, Vicent and Stewart, Iain W.\",\n    title = \"{Thrust at $N^{3}LL$ with Power Corrections and a Precision Global Fit for $\\alpha_{s}(mZ)$}\",\n    eprint = \"1006.3080\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP-4101, MPP-2010-7\",\n    doi = \"10.1103/PhysRevD.83.074021\",\n    journal = \"Phys. Rev. D\",\n    volume = \"83\",\n    pages = \"074021\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1103/PhysRevD.83.074021",
+  "recid": 858620,
+  "title": "Thrust at $N^{3}LL$ with Power Corrections and a Precision Global Fit for $\\alpha_{s}(mZ)$",
+  "year": 2010
+ },
+ "inspire:867473": {
+  "arxiv": "1009.2450",
+  "authors_short": "Re",
+  "bibtex": "@article{Re:2010bp,\n    author = \"Re, Emanuele\",\n    title = \"{Single-top Wt-channel production matched with parton showers using the POWHEG method}\",\n    eprint = \"1009.2450\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-10-74, DCPT-10-148\",\n    doi = \"10.1140/epjc/s10052-011-1547-z\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"71\",\n    pages = \"1547\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1140/epjc/s10052-011-1547-z",
+  "recid": 867473,
+  "title": "Single-top Wt-channel production matched with parton showers using the POWHEG method",
   "year": 2010
  },
  "inspire:871058": {
@@ -764,6 +2753,15 @@
   "title": "Electroweak corrections to dilepton + jet production at hadron colliders",
   "year": 2011
  },
+ "inspire:892742": {
+  "arxiv": "1103.2792",
+  "authors_short": "Kidonakis",
+  "bibtex": "@article{Kidonakis:2011wy,\n    author = \"Kidonakis, Nikolaos\",\n    title = \"{Next-to-next-to-leading-order collinear and soft gluon corrections for t-channel single top quark production}\",\n    eprint = \"1103.2792\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevD.83.091503\",\n    journal = \"Phys. Rev. D\",\n    volume = \"83\",\n    pages = \"091503\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1103/PhysRevD.83.091503",
+  "recid": 892742,
+  "title": "Next-to-next-to-leading-order collinear and soft gluon corrections for t-channel single top quark production",
+  "year": 2011
+ },
  "inspire:894312": {
   "arxiv": "1103.5699",
   "authors_short": "CDF Collaboration",
@@ -773,6 +2771,33 @@
   "title": "First Measurement of the Angular Coefficients of Drell-Yan $e^{+}e^{-}$ pairs in the Z Mass Region from $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96 TeV",
   "year": 2011
  },
+ "inspire:915978": {
+  "arxiv": "1106.5131",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2011fhg,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF\",\n    title = \"{Measurement of the Cross Section for Prompt Isolated Diphoton Production in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV}\",\n    eprint = \"1106.5131\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-11-296-PPD\",\n    doi = \"10.1103/PhysRevD.84.052006\",\n    journal = \"Phys. Rev. D\",\n    volume = \"84\",\n    pages = \"052006\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1103/PhysRevD.84.052006",
+  "recid": 915978,
+  "title": "Measurement of the Cross Section for Prompt Isolated Diphoton Production in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV",
+  "year": 2011
+ },
+ "inspire:917260": {
+  "arxiv": "1107.1164",
+  "authors_short": "Ferrera et al.",
+  "bibtex": "@article{Ferrera:2011bk,\n    author = \"Ferrera, Giancarlo and Grazzini, Massimiliano and Tramontano, Francesco\",\n    title = \"{Associated WH production at hadron colliders: a fully exclusive QCD calculation at NNLO}\",\n    eprint = \"1107.1164\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2011-159, ZU-TH-14-11\",\n    doi = \"10.1103/PhysRevLett.107.152003\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"107\",\n    pages = \"152003\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1103/PhysRevLett.107.152003",
+  "recid": 917260,
+  "title": "Associated WH production at hadron colliders: a fully exclusive QCD calculation at NNLO",
+  "year": 2011
+ },
+ "inspire:939520": {
+  "arxiv": "1110.2375",
+  "authors_short": "Catani et al.",
+  "bibtex": "@article{Catani:2011qz,\n    author = \"Catani, Stefano and Cieri, Leandro and de Florian, Daniel and Ferrera, Giancarlo and Grazzini, Massimiliano\",\n    title = \"{Diphoton production at hadron colliders: a fully-differential QCD calculation at NNLO}\",\n    eprint = \"1110.2375\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-18-11, IFUM-984-FT\",\n    doi = \"10.1103/PhysRevLett.108.072001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"108\",\n    pages = \"072001\",\n    year = \"2012\",\n    note = \"[Erratum: Phys.Rev.Lett. 117, 089901 (2016)]\"\n}\n",
+  "doi": "10.1103/PhysRevLett.108.072001",
+  "recid": 939520,
+  "title": "Diphoton production at hadron colliders: a fully-differential QCD calculation at NNLO",
+  "year": 2011
+ },
  "inspire:941555": {
   "arxiv": "1110.4973",
   "authors_short": "CMS Collaboration",
@@ -780,6 +2805,15 @@
   "doi": "10.1103/PhysRevD.85.032002",
   "recid": 941555,
   "title": "Measurement of the Rapidity and Transverse Momentum Distributions of $Z$ Bosons in $pp$ Collisions at $\\sqrt{s}=7$ TeV",
+  "year": 2011
+ },
+ "inspire:944447": {
+  "arxiv": "1111.0761",
+  "authors_short": "Brein et al.",
+  "bibtex": "@article{Brein:2011vx,\n    author = \"Brein, Oliver and Harlander, Robert and Wiesemann, Marius and Zirke, Tom\",\n    title = \"{Top-Quark Mediated Effects in Hadronic Higgs-Strahlung}\",\n    eprint = \"1111.0761\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2011-268, FR-PHENO-2011-016, WUB-11-15\",\n    doi = \"10.1140/epjc/s10052-012-1868-6\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"72\",\n    pages = \"1868\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1140/epjc/s10052-012-1868-6",
+  "recid": 944447,
+  "title": "Top-Quark Mediated Effects in Hadronic Higgs-Strahlung",
   "year": 2011
  }
 }

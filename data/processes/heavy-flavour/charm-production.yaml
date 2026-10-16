@@ -1,0 +1,153 @@
+id: "proc:charm-production"
+name: "Open charm production (pp, pp̄ → charm hadron + X)"
+family: "fam:heavy-flavour"
+sector: SM
+description: "Inclusive production of hadrons containing a charm quark in hadron collisions, pp/pp̄ → D + X (prompt, i.e. not from b-hadron decays). Tests heavy-quark perturbative QCD at a low scale (m_c ~ 1.5 GeV), probes the gluon PDF at very small x in the forward region, and enters backgrounds for neutrino astronomy and flavour physics. Predictions available are at NLO QCD in massive, FONLL (NLO+NLL), GM-VFNS and POWHEG-matched forms, all folded with charm fragmentation functions."
+watch:
+  recids: [1396331, 2697877, 624447, 1384271, 1379948]
+  queries:
+    - 't "charm" and t "production cross" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t "pp collisions" or t "proton-proton")'
+    - 't "charm" and (t "hadroproduction" or t "production") and (t NNLO or t FONLL or t "GM-VFNS")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        approximations: ["POWHEG+NNPDF3.0L, FONLL (NLO+NLL) and GM-VFNS; all convolved with charm fragmentation functions"]
+        refs: ["inspire:1379948", "inspire:1384271", "inspire:1087276"]
+        provenance: {uid: b45b2a87, ref: "inspire:1396331", locator: "Sec. 1 and Sec. 7 (all three sets of calculations [1] POWHEG+NNPDF3.0L, [2] FONLL, [3] GM-VFNS are performed at NLO precision)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:charm-production/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:charm-production/lhc-13/sigma-ccbar-fwd", region: "pT(D) < 8 GeV, 2.0 < y < 4.5 (LHCb acceptance)"}
+    measurements:
+      - id: "meas:charm-production/lhc-13/lhcb-2016-d"
+        experiment: "LHCb"
+        dataset: "13 TeV, 4.98 pb⁻¹ (2015)"
+        ref: "inspire:1396331"
+        hepdata: "hepdata:ins1396331/Table 1"
+      - id: "meas:charm-production/lhc-13/alice-2023-charm"
+        experiment: "ALICE"
+        dataset: "13 TeV, minimum-bias, 2016–2018"
+        ref: "inspire:2697877"
+        hepdata: "hepdata:ins2697877/Figure 13 Right"
+    observables:
+      - id: "obs:charm-production/lhc-13/sigma-ccbar-fwd"
+        name: "σ(pp → cc̄ X), pT(D) < 8 GeV, 2.0 < y < 4.5"
+        kind: fiducial
+        variable: "σ(cc̄) from the combination of D⁰ and D⁺ prompt cross sections divided by the e⁺e⁻ fragmentation fractions f(c → D), pT < 8 GeV, 2.0 < y < 4.5"
+        results:
+          - measurement: "meas:charm-production/lhc-13/lhcb-2016-d"
+            total: {value_pct: 8.1, provenance: {uid: 527a7483, ref: "inspire:1396331", locator: "Sec. 6.2: σ(pp → cc̄ X) = 2369 ± 3 (stat) ± 152 (syst) ± 118 (fragmentation) µb; added in quadrature (8.1%)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.13, 0.13], unit: "%", asymmetric: false}
+                provenance: {uid: 7c7c33cf, ref: "inspire:1396331", locator: "Sec. 6.2: ± 3 (stat) of 2369 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [3.9, 3.9], unit: "%", asymmetric: false}
+                provenance: {uid: e69d7422, ref: "inspire:1396331", locator: "Sec. 5 (systematic uncertainties: luminosity, identical for all bins and modes)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "Charm fragmentation fractions f(c → D)"
+                size: {range: [5.0, 5.0], unit: "%", asymmetric: false}
+                provenance: {uid: a155e365, ref: "inspire:1396331", locator: "Sec. 6.2: ± 118 (fragmentation) of 2369 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "FONLL (NLO + NLL), NNPDF3.0 NLO"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_c"}]
+            codes: ["FONLL"]
+            compared_to: ["meas:charm-production/lhc-13/lhcb-2016-d"]
+            refs: ["inspire:1384271"]
+            provenance: {uid: ad6b4e27, ref: "inspire:1396331", locator: "Sec. 7 and Fig. 9 (numerical σ(cc̄) values only shown graphically)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "POWHEG + NNPDF3.0L (NLO matched)"
+            accuracy: {qcd: NLO}
+            codes: ["POWHEG"]
+            compared_to: ["meas:charm-production/lhc-13/lhcb-2016-d"]
+            refs: ["inspire:1379948"]
+            provenance: {uid: 662d83b2, ref: "inspire:1396331", locator: "Sec. 7 and Fig. 9 (numerical σ(cc̄) values only shown graphically)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "GM-VFNS (NLO)"
+            accuracy: {qcd: NLO}
+            compared_to: ["meas:charm-production/lhc-13/lhcb-2016-d"]
+            refs: ["inspire:1087276"]
+            provenance: {uid: ba0bd899, ref: "inspire:1396331", locator: "Sec. 7 (GM-VFNS predictions compared with the D-meson differential cross sections); not among the σ(cc̄) predictions shown in Fig. 9", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:charm-production/lhc-13/dsigma-ccbar-mid"
+        name: "dσ(cc̄)/dy at midrapidity, |y| < 0.5"
+        kind: differential
+        variable: "y (value at |y| < 0.5), from the sum of weakly decaying ground-state charm hadrons D⁰, D⁺, Ds⁺, Λc⁺, Ξc⁰, Ξc⁺ and J/ψ"
+        results:
+          - measurement: "meas:charm-production/lhc-13/alice-2023-charm"
+            total:
+              value_pct: 14.0
+              provenance: {uid: b286eca3, ref: "hepdata:ins2697877/Figure 13 Right", locator: "Figure 13 Right, quadrature sum of all errors (bin 4)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [3.0, 3.0], unit: "%", asymmetric: false}
+                provenance: {uid: 0252a980, ref: "inspire:2697877", locator: "Sec. 6, Eq. (4): ± 61 (stat.) of 2031 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
+                provenance: {uid: d07b54cf, ref: "inspire:2697877", locator: "Sec. 6, Eq. (4): ± 33 (lumi.) of 2031 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: acceptance_extrapolation
+                specific: "Extrapolation to pT = 0 (incl. possible Ωc⁰ contribution)"
+                size: {range: [3.1, 9.6], unit: "%", asymmetric: true}
+                provenance: {uid: 1ce21961, ref: "inspire:2697877", locator: "Sec. 6, Eq. (4): +196 −63 (extrap.) of 2031 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "FONLL (NLO + NLL)"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_c"}]
+            codes: ["FONLL"]
+            compared_to: ["meas:charm-production/lhc-13/alice-2023-charm"]
+            refs: ["inspire:468385", "inspire:1116414"]
+            provenance: {uid: d8bc9d32, ref: "inspire:2697877", locator: "Sec. 6 (cc̄ production cross section) and Fig. 13 right (numerical values only shown graphically)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO via K-factor scaling of FONLL"
+            accuracy:
+              qcd: NNLO
+              approximations: ["NNLO/NLO K-factor of the total cross section applied to the central FONLL dσ/dy; not a differential NNLO calculation"]
+            compared_to: ["meas:charm-production/lhc-13/alice-2023-charm"]
+            refs: ["inspire:1504215"]
+            provenance: {uid: 4af1c517, ref: "inspire:2697877", locator: "Sec. 6, text after Eq. (5) (NNLO values obtained by d'Enterria and Snigirev by applying a K scaling factor to the FONLL central dσ(cc̄)/dy) and Fig. 13 right", source: agent, status: agent-draft, date: "2026-10-16"}
+  - id: "chan:charm-production/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:charm-production/tevatron-1960/sigma-d0-central", region: "pT(D⁰) ≥ 5.5 GeV, |y| ≤ 1"}
+    measurements:
+      - id: "meas:charm-production/tevatron-1960/cdf-2003-d"
+        experiment: "CDF"
+        dataset: "1.96 TeV, 5.8 pb⁻¹ (Run II, 2002)"
+        ref: "inspire:624447"
+        hepdata: "hepdata:ins624447/Table 1"
+    observables:
+      - id: "obs:charm-production/tevatron-1960/sigma-d0-central"
+        name: "σ(pp̄ → D⁰ X), pT ≥ 5.5 GeV, |y| ≤ 1"
+        kind: fiducial
+        variable: "σ for prompt D⁰ + D̄⁰, summed over pT bins with the last bin inclusive above 12 GeV"
+        results:
+          - measurement: "meas:charm-production/tevatron-1960/cdf-2003-d"
+            total: {value_pct: 11, provenance: {uid: a024d479, ref: "inspire:624447", locator: "text before Table I: σ(D⁰, pT ≥ 5.5 GeV, |y| ≤ 1) = 13.3 ± 0.2 (stat) ± 1.5 (syst) µb; added in quadrature (11.4%)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [1.5, 1.5], unit: "%", asymmetric: false}
+                provenance: {uid: 253c0a62, ref: "inspire:624447", locator: "text before Table I: ± 0.2 (stat) of 13.3 µb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Trigger and reconstruction efficiency"
+                size: {range: [8, 14], unit: "%", asymmetric: false}
+                provenance: {uid: 517a3270, ref: "inspire:624447", locator: "Systematic uncertainties paragraph: combined trigger and reconstruction efficiency uncertainty 8%–14% depending on mode and pT", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "FONLL (NLO + NLL), Cacciari–Nason"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_c"}]
+            codes: ["FONLL"]
+            compared_to: ["meas:charm-production/tevatron-1960/cdf-2003-d"]
+            refs: ["inspire:621749"]
+            provenance: {uid: 83dc032e, ref: "inspire:624447", locator: "Fig. 3 and Conclusion (measured differential cross sections higher than NLO predictions by ~100% at low pT, ~50% at high pT; compatible within uncertainties); ref. [16]", source: agent, status: agent-draft, date: "2026-10-16"}

@@ -1,0 +1,258 @@
+id: "proc:ee-event-shapes"
+name: "e⁺e⁻ → hadrons event shapes (thrust, C-parameter, jet masses, broadenings)"
+family: "fam:ee-hadronic"
+sector: SM
+description: "Normalised distributions of the standard three-jet-like event-shape variables in e⁺e⁻ → γ*/Z → hadrons: thrust, heavy-jet mass, wide and total jet broadening, C-parameter and the Durham y₃. Measured at LEP1/LEP2 (and SLC, PETRA) and used for precise αs extractions; predictions combine NNLO fixed order (EERAD3 and an independent code) with resummation of two-jet-region logarithms (NLLA to N3LL′ in SCET) and fitted or modelled hadronisation corrections. This draft headlines thrust."
+watch:
+  recids: [769010, 636645, 858620, 1332934, 817454]
+  queries:
+    - 't "event shape" and t "e+ e-" and (t NNLL or t N3LL or t NNLO)'
+    - 't thrust and (t "e+ e-" or t "e+e-") and (t resummation or t N3LL or t NNLL)'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:154571"]
+        provenance: {uid: ae8058a7, ref: "arXiv:0711.4711", locator: "Sec. 1 and Table 1 (NLO: one-loop γ*→qq̄g plus tree-level γ*→qq̄gg, γ*→qq̄qq̄; NLO parton-level generators [7-9], first Ellis-Ross-Terrano)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-Vg"
+        refs: ["arXiv:hep-ph/0112081", "arXiv:hep-ph/0206067"]
+        provenance: {uid: 4983c933, ref: "arXiv:0711.4711", locator: "Sec. 4 (two-loop γ*→qq̄g matrix elements of [13], IBP reduction, master integrals in 1d/2d harmonic polylogarithms)", source: agent, status: agent-draft, date: "2026-10-16"}
+      RV:
+        status: done
+        refs: ["arXiv:hep-ph/9609474", "arXiv:hep-ph/9610370", "arXiv:hep-ph/9706297", "arXiv:hep-ph/9708239"]
+        provenance: {uid: 947891f3, ref: "arXiv:0711.4711", locator: "Sec. 4 and ref. [14] (one-loop γ*→4 partons, originally derived for NLO four-jet production)", source: agent, status: agent-draft, date: "2026-10-16"}
+      RR:
+        status: done
+        refs: ["arXiv:0711.4711"]
+        provenance: {uid: 0a99c6a6, ref: "arXiv:0711.4711", locator: "Sec. 1 and Sec. 4 (tree-level γ*→5 partons [15], taken over from an NLO four-jet event generator [35])", source: agent, status: agent-draft, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["antenna subtraction extended to NNLO"]
+        refs: ["arXiv:hep-ph/0505111", "arXiv:0710.0346"]
+        provenance: {uid: 4e3fa899, ref: "arXiv:0711.4711", locator: "Sec. 4 (NNLO antenna subtraction formalism [16, 17, 42]); Erratum note on corrected large-angle soft subtraction", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["arXiv:0711.4711", "arXiv:0807.3241", "arXiv:0904.1077"]
+        provenance: {uid: 026a57fd, ref: "arXiv:0711.4711", locator: "Sec. 1 (parton-level program EERAD3 for generic IR-safe three-jet observables); independent implementation: arXiv:0807.3241 abstract, arXiv:0904.1077 abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:ee-event-shapes/lep1"
+    collider: "col:lep1"
+    initial_state: "e+e-"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ee-event-shapes/lep1/thrust", region: "τ = 1−T in [0.02, 0.03] (peak region), Q = mZ"}
+    measurements:
+      - id: "meas:ee-event-shapes/lep1/aleph-2004"
+        experiment: "ALEPH"
+        dataset: "LEP1, √s = 91.2 GeV"
+        ref: "inspire:636645"
+        hepdata: "hepdata:ins636645/Table 54"
+      - id: "meas:ee-event-shapes/lep1/opal-2005"
+        experiment: "OPAL"
+        dataset: "LEP1, √s = 91 GeV"
+        ref: "inspire:669402"
+        hepdata: "hepdata:ins669402/Table 1"
+    observables:
+      - id: "obs:ee-event-shapes/lep1/thrust"
+        name: "Thrust distribution (1/σ) dσ/dτ, τ = 1−T"
+        kind: differential
+        variable: "τ = 1 − T"
+        results:
+          - measurement: "meas:ee-event-shapes/lep1/aleph-2004"
+            total:
+              value_pct: 3.7
+              provenance:
+                uid: c88a6850
+                ref: hepdata:ins636645/Table 54
+                locator: Table 54, quadrature sum of all errors (bin 40)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-16'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.27
+                    - 30.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 54
+                provenance:
+                  uid: b23ad2a0
+                  ref: hepdata:ins636645/Table 54
+                  locator: Table 54, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+              - category: other
+                specific: sys
+                size:
+                  range:
+                    - 0.46
+                    - 45.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 54
+                provenance:
+                  uid: fc0d3a94
+                  ref: hepdata:ins636645/Table 54
+                  locator: Table 54, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+          - measurement: "meas:ee-event-shapes/lep1/opal-2005"
+            total:
+              value_pct: 1.5
+              provenance:
+                uid: 5c706221
+                ref: hepdata:ins669402/Table 1
+                locator: Table 1, quadrature sum of all errors (bin 3)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-16'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.33
+                    - 1.5
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 1
+                provenance:
+                  uid: 6ae64cd9
+                  ref: hepdata:ins669402/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+              - category: other
+                specific: sys
+                size:
+                  range:
+                    - 0.99
+                    - 4.6
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 1
+                provenance:
+                  uid: 79374d1d
+                  ref: hepdata:ins669402/Table 1
+                  locator: Table 1, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+        predictions:
+          - label: "N3LL′ (SCET) + O(αs³) fixed order, R-gap soft function"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL′", variable: "τ = 1−T"}]
+              approximations: ["O(αs³) fixed-order input: NNLO for the thrust distribution", "nonperturbative soft function fitted to thrust data (R-gap scheme)", "includes b-mass effects, QED corrections and dominant top-mass axial-anomaly terms"]
+            uncertainties:
+              - category: MHOU
+                specific: "perturbative error from profile-function scan, N3LL′ with R-gap nonperturbative soft function"
+                method: "scan over profile-function parameters"
+                size: {range: [1.7, 1.7], asymmetric: false, regions: [{where: "Q = mZ, τ in [0.1, 0.3]", value: "±1.7"}]}
+                provenance: {uid: e9912330, ref: "arXiv:1006.3080", locator: "Sec. V, text on Fig. 9d (N3LL′ ±1.7%, N3LL ±3.4%, tail region τ in [0.1, 0.3])", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:ee-event-shapes/lep1/aleph-2004", "meas:ee-event-shapes/lep1/opal-2005"]
+            refs: ["arXiv:1006.3080"]
+            provenance: {uid: 9ed24867, ref: "arXiv:1006.3080", locator: "Abstract; Sec. VI (fit data sets incl. ALEPH at 91.2 GeV and OPAL at 91 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO + NLLA matched"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NLLA", variable: "τ = 1−T"}]
+              approximations: ["parton level; hadronisation not included"]
+            compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
+            refs: ["arXiv:0803.0695"]
+            provenance: {uid: 639b3084, ref: "arXiv:0803.0695", locator: "Abstract; text before Fig. 3 (compared to hadron-level ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD fixed order"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton level; hadronisation not included", "fixed order O(αs³) for the distribution: NNLO"]
+            codes: ["EERAD3"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
+            refs: ["arXiv:0711.4711", "arXiv:0707.1285"]
+            provenance: {uid: 10beb00b, ref: "arXiv:0711.4711", locator: "Abstract; Sec. 6.1, Fig. 7 (thrust at Q = mZ vs ALEPH data; scale uncertainty reduced by about 30% from NLO to NNLO)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - id: "chan:ee-event-shapes/lep2"
+    collider: "col:lep2"
+    initial_state: "e+e-"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ee-event-shapes/lep2/thrust", region: "τ = 1−T in [0.02, 0.04], √s = 206 GeV"}
+    measurements:
+      - id: "meas:ee-event-shapes/lep2/aleph-2004-206"
+        experiment: "ALEPH"
+        dataset: "LEP2, √s = 206 GeV"
+        ref: "inspire:636645"
+        hepdata: "hepdata:ins636645/Table 61"
+    observables:
+      - id: "obs:ee-event-shapes/lep2/thrust"
+        name: "Thrust distribution (1/σ) dσ/dτ, τ = 1−T"
+        kind: differential
+        variable: "τ = 1 − T"
+        results:
+          - measurement: "meas:ee-event-shapes/lep2/aleph-2004-206"
+            total:
+              value_pct: 3.7
+              provenance:
+                uid: d675a1b1
+                ref: hepdata:ins636645/Table 61
+                locator: Table 61, quadrature sum of all errors (bin 2)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-16'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 3.3
+                    - 62.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 61
+                provenance:
+                  uid: '3e447486'
+                  ref: hepdata:ins636645/Table 61
+                  locator: Table 61, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+              - category: other
+                specific: sys
+                size:
+                  range:
+                    - 0.8
+                    - 48.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 61
+                provenance:
+                  uid: 2c7268a4
+                  ref: hepdata:ins636645/Table 61
+                  locator: Table 61, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+        predictions:
+          - label: "N3LL′ (SCET) + O(αs³) fixed order, R-gap soft function"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL′", variable: "τ = 1−T"}]
+              approximations: ["O(αs³) fixed-order input: NNLO for the thrust distribution", "nonperturbative soft function fitted to thrust data (R-gap scheme)", "includes b-mass effects, QED corrections and dominant top-mass axial-anomaly terms"]
+            compared_to: ["meas:ee-event-shapes/lep2/aleph-2004-206"]
+            refs: ["arXiv:1006.3080"]
+            provenance: {uid: 6b35adea, ref: "arXiv:1006.3080", locator: "Abstract (global thrust data Q = 35-207 GeV); Sec. VI (ALEPH data sets, Q up to 206 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO QCD fixed order"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton level; hadronisation not included", "fixed order O(αs³) for the distribution: NNLO"]
+            codes: ["EERAD3"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:ee-event-shapes/lep2/aleph-2004-206"]
+            refs: ["arXiv:0711.4711"]
+            provenance: {uid: 795dd82a, ref: "arXiv:0711.4711", locator: "Sec. 6.1, Fig. 8 (thrust at Q = 133 ... 206 GeV vs ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}

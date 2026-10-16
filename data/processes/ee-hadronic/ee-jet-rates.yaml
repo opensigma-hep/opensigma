@@ -1,0 +1,271 @@
+id: "proc:ee-jet-rates"
+name: "e⁺e⁻ → hadrons jet rates and Durham y₂₃"
+family: "fam:ee-hadronic"
+sector: SM
+description: "Jet multiplicity rates (jet cross sections normalised to σ_had) as a function of the resolution parameter y_cut, and the Durham two-to-three-jet transition variable y₂₃, in e⁺e⁻ → hadrons. The three-jet rate is known at NNLO (O(αs³)), the two-jet rate at N3LO and, matched to NNLL resummation, used for αs fits to LEP and PETRA data. This draft covers the Durham algorithm at LEP1 (Z peak), headlining the y₂₃ distribution."
+watch:
+  recids: [778905, 1475281, 1721113, 817454, 636645]
+  queries:
+    - 't "jet rate" and (t "e+ e-" or t "e+e-")'
+    - 't Durham and t "jet" and (t NNLL or t N3LO)'
+building_blocks:
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-Vg"
+        refs: ["arXiv:0802.0813"]
+        provenance: {uid: c5872e13, ref: "arXiv:0802.0813", locator: "p. 4 (contributions of the two-loop virtual and virtual-radiation graphs to the three- and four-jet rates)", source: agent, status: agent-draft, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["antenna subtraction extended to NNLO"]
+        refs: ["arXiv:0802.0813"]
+        provenance: {uid: feb15228, ref: "arXiv:0802.0813", locator: "p. 3 (antenna subtraction method [25, 37] extended to NNLO [38], implemented for e+e- → 3 jets in EERAD3)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["arXiv:0802.0813", "arXiv:0904.1077"]
+        provenance: {uid: 433d0769, ref: "arXiv:0802.0813", locator: "p. 3 (parton-level program EERAD3, matrix elements with up to five external partons, jet rates for any IR-safe algorithm); independent NNLO jet rates: arXiv:0904.1077 abstract (Durham, Geneva, Jade-E0, Cambridge)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:ee-jet-rates/lep1"
+    collider: "col:lep1"
+    initial_state: "e+e-"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ee-jet-rates/lep1/y23", region: "−ln y₂₃ in [4.0, 4.2] (y₂₃ ≈ 0.015–0.018), Q = mZ; ALEPH bin 16, OPAL bin y₂₃ in [0.012, 0.0225]"}
+    measurements:
+      - id: "meas:ee-jet-rates/lep1/aleph-2004"
+        experiment: "ALEPH"
+        dataset: "LEP1, √s = 91.2 GeV"
+        ref: "inspire:636645"
+        hepdata: "hepdata:ins636645/Table 157"
+      - id: "meas:ee-jet-rates/lep1/opal-2005"
+        experiment: "OPAL"
+        dataset: "LEP1, √s = 91 GeV"
+        ref: "inspire:669402"
+        hepdata: "hepdata:ins669402/Table 6"
+    observables:
+      - id: "obs:ee-jet-rates/lep1/y23"
+        name: "Durham y₂₃ distribution"
+        kind: differential
+        variable: "−ln y₂₃ (ALEPH), y₂₃ (OPAL); Durham algorithm"
+        results:
+          - measurement: "meas:ee-jet-rates/lep1/aleph-2004"
+            total:
+              value_pct: 3.3
+              provenance:
+                uid: 8d347cdb
+                ref: hepdata:ins636645/Table 157
+                locator: Table 157, quadrature sum of all errors (bin 16)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-16'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.47
+                    - 100.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 157
+                provenance:
+                  uid: ce004f66
+                  ref: hepdata:ins636645/Table 157
+                  locator: Table 157, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+              - category: other
+                specific: sys
+                size:
+                  range:
+                    - 0.24
+                    - 870.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 157
+                provenance:
+                  uid: 3b503a1d
+                  ref: hepdata:ins636645/Table 157
+                  locator: Table 157, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+          - measurement: "meas:ee-jet-rates/lep1/opal-2005"
+            total:
+              value_pct: 2.1
+              provenance:
+                uid: 849c4ff7
+                ref: hepdata:ins669402/Table 6
+                locator: Table 6, quadrature sum of all errors (bin 7)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-16'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.37
+                    - 2.8
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 6
+                provenance:
+                  uid: 9f5f3e75
+                  ref: hepdata:ins669402/Table 6
+                  locator: Table 6, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+              - category: other
+                specific: sys
+                size:
+                  range:
+                    - 1.1
+                    - 6.5
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 6
+                provenance:
+                  uid: 7fa1cf30
+                  ref: hepdata:ins669402/Table 6
+                  locator: Table 6, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+        predictions:
+          - label: "NNLO + NLLA matched"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NLLA", variable: "y₂₃ (Durham)"}]
+              approximations: ["parton level; hadronisation not included"]
+            compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
+            refs: ["arXiv:0803.0695"]
+            provenance: {uid: aaf811e3, ref: "arXiv:0803.0695", locator: "Abstract; text before Fig. 3 (Y3 among the six event shapes, compared to hadron-level ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO QCD fixed order"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton level; hadronisation not included", "fixed order O(αs³) for the distribution: NNLO"]
+            codes: ["EERAD3"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
+            refs: ["arXiv:0711.4711", "arXiv:0904.1077"]
+            provenance: {uid: f67ea173, ref: "arXiv:0711.4711", locator: "Sec. 5.5 and Sec. 6.5, Fig. 17 (Y3, Durham, at Q = mZ vs ALEPH data; scale uncertainty reduced by about 50% from NLO to NNLO); arXiv:0904.1077 abstract (independent NNLO result for the Durham y₃)", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:ee-jet-rates/lep1/r3"
+        name: "Durham three-jet rate R₃(y_cut)"
+        kind: ratio
+        variable: "ln y_cut (Durham), σ(3-jet)/σ_had"
+        results:
+          - measurement: "meas:ee-jet-rates/lep1/aleph-2004"
+            total:
+              value_pct: 2.5
+              provenance:
+                uid: f8cfd283
+                ref: hepdata:ins636645/Table 203
+                locator: Table 203, quadrature sum of all errors (bin 30)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-16'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.17
+                    - 5.7
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 203
+                provenance:
+                  uid: 8c807dac
+                  ref: hepdata:ins636645/Table 203
+                  locator: Table 203, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+              - category: other
+                specific: sys
+                size:
+                  range:
+                    - 0.15
+                    - 96.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 203
+                provenance:
+                  uid: 364204dd
+                  ref: hepdata:ins636645/Table 203
+                  locator: Table 203, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+        predictions:
+          - label: "NNLO QCD fixed order"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton level; hadronisation not included", "normalised to σ_had at the same order"]
+            codes: ["EERAD3"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            uncertainties:
+              - category: MHOU
+                specific: "renormalisation scale, δ = (max − min)/(2σ(μ = MZ)); upper bound only"
+                method: "μ varied in [MZ/2, 2MZ]"
+                size: {range: [0, 2], asymmetric: false, regions: [{where: "10⁻² < y_cut < 10⁻¹, Q = mZ (below two per cent)", value: "±2"}]}
+                provenance: {uid: bec7148b, ref: "arXiv:0802.0813", locator: "p. 3, text on Fig. 1 (relative scale uncertainty below two per cent for 10⁻¹ > y_cut > 10⁻²; LO constant at 10.2%)", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
+            refs: ["arXiv:0802.0813"]
+            provenance: {uid: 72c234e2, ref: "arXiv:0802.0813", locator: "Abstract; Fig. 1 (three-jet rate at Q = mZ vs ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+      - id: "obs:ee-jet-rates/lep1/r2"
+        name: "Durham two-jet rate R₂(y_cut)"
+        kind: ratio
+        variable: "ln y_cut (Durham), σ(2-jet)/σ_had"
+        results:
+          - measurement: "meas:ee-jet-rates/lep1/aleph-2004"
+            total:
+              value_pct: 0.91
+              provenance:
+                uid: 61c3d954
+                ref: hepdata:ins636645/Table 195
+                locator: Table 195, quadrature sum of all errors (bin 30)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-16'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.11
+                    - 19.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 195
+                provenance:
+                  uid: 89cba37a
+                  ref: hepdata:ins636645/Table 195
+                  locator: Table 195, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+              - category: other
+                specific: sys
+                size:
+                  range:
+                    - 0.007
+                    - 110.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 195
+                provenance:
+                  uid: 77a785be
+                  ref: hepdata:ins636645/Table 195
+                  locator: Table 195, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-16'
+        predictions:
+          - label: "N3LO + NNLL matched"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "NNLL", variable: "y_cut (Durham)"}]
+              approximations: ["two-jet rate at N3LO deduced from the NNLO three-jet rate and the N3LO total cross section"]
+            compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
+            refs: ["arXiv:1902.08158", "arXiv:1607.03111"]
+            provenance: {uid: dd14ea63, ref: "arXiv:1902.08158", locator: "Abstract; Sec. 1 (N3LO two-jet rate from NNLO three-jet rate and N3LO σ_tot; NNLL from arXiv:1607.03111); data-set table (ALEPH at 91.2 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true

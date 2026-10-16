@@ -1,0 +1,15 @@
+id: "amp:2L/qqbar-VV"
+process: "proc:ww"
+loops: 2
+corrections: QCD
+status: done
+approximations: ["massless quarks", "arbitrary vector-boson virtualities (helicity amplitudes for q q̄' → V1 V2 → 4 leptons)"]
+master_integrals:
+  status: done
+  refs: ["inspire:1353132"]
+evaluation:
+  kind: analytic
+  detail: "111 master integrals in multiple polylogarithms, evaluated numerically with GiNaC; public C++ code"
+  provenance: {uid: 578ca1b0, ref: "inspire:1353132", locator: "Sec. 5.2 (optimisation of the functional basis; 111 master integrals; GiNaC evaluation of multiple polylogarithms) and Sec. 8 (public C++ implementation)", source: agent, status: agent-draft, date: "2026-10-16"}
+refs: ["inspire:1353132"]
+provenance: {uid: 89d7214b, ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2, arbitrary virtualities, with leptonic decays)", source: agent, status: agent-draft, date: "2026-10-16"}

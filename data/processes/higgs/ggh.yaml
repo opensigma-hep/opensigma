@@ -1,0 +1,146 @@
+id: "proc:ggh"
+name: "Gluon-fusion Higgs production (gg → H)"
+family: "fam:higgs"
+sector: SM
+description: "Production of the SM Higgs boson through a top-quark loop, gg → H + X: the largest Higgs production cross section at the LHC. Known at N3LO QCD in the large-m_t effective theory, with exact quark-mass dependence through NLO and electroweak corrections at NLO."
+watch:
+  recids: [1494411, 1419073, 1353668, 1653133, 2104706, 2104672]
+  queries:
+    - 't "Higgs" and t "gluon fusion" and (t N3LO or t "third order" or t N3LL or t "N4LO")'
+    - 't "Higgs" and (collaboration:ATLAS or collaboration:CMS) and t "production cross section" and (t "13 TeV" or t "13.6 TeV")'
+    - 't "Higgs" and t "gluon fusion" and (t "QCD-electroweak" or t "mixed" or t "top-quark mass")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:394513"]
+        provenance: {uid: e7d77360, ref: "inspire:394513", locator: "Abstract (QCD corrections to the gluon-fusion cross sections for the SM Higgs boson)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        approximations: ["effective theory, m_t → ∞"]
+        refs: ["inspire:530882"]
+        provenance: {uid: 0c454bcb, ref: "inspire:530882", locator: "Abstract (two-loop virtual corrections in the heavy-top limit with an effective Lagrangian)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        approximations: ["effective theory, m_t → ∞"]
+        refs: ["inspire:582006", "inspire:589593", "inspire:613462"]
+        provenance: {uid: a357eb9e, ref: "inspire:613462", locator: "Abstract (NNLO total cross section, effective Lagrangian in the limit m_t → ∞, all QCD partonic subprocesses; agrees with inspire:582006 and inspire:589593)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "N3LO QCD"
+    cells:
+      3L:
+        status: done
+        approximations: ["effective theory, m_t → ∞"]
+        amplitude: "amp:3L/gg-H-eft"
+        refs: ["inspire:813829", "inspire:852545"]
+        provenance: {uid: '8944e923', ref: "inspire:813829", locator: "Abstract (form factor of the effective Higgs–two-gluon vertex to three loops in massless QCD)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        approximations: ["effective theory, m_t → ∞, other quarks massless", "inspire:1353668 and inspire:1419073: expansion of the partonic cross section around threshold, truncated at high order; inspire:1653133: exact partonic N3LO formula"]
+        refs: ["inspire:1353668", "inspire:1419073", "inspire:1653133"]
+        provenance: {uid: db4f82f7, ref: "inspire:1653133", locator: "Abstract (first exact formula for a partonic hadron-collider cross section at N3LO; previously approximated by an expansion around threshold, inspire:1353668)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      2L:
+        status: done
+        refs: ["inspire:647789", "inspire:795832"]
+        provenance: {uid: 871288ff, ref: "inspire:795832", locator: "Abstract (complete NLO electroweak corrections to gg → H in the total hadronic cross section, complex-mass scheme)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD×EW"
+    cells:
+      3L:
+        status: partial
+        approximations: ["effective theory approach, light-quark contribution (inspire:803217)", "NLO QCD correction to the mixed term in the soft approximation (inspire:1651501)"]
+        refs: ["inspire:803217", "inspire:1651501", "inspire:1492553"]
+        provenance: {uid: 86f6115b, ref: "inspire:803217", locator: "Abstract (3-loop O(α αs) correction from light quarks via an effective theory; top and bottom contributions estimated)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:ggh/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ggh/lhc-13/sigma-ggf", region: "m_H = 125 GeV, inclusive over production kinematics (ATLAS: ggF+bbH, |y_H| < 2.5, absolute σ; CMS: signal strength μ_ggH)"}
+    measurements:
+      - id: "meas:ggh/lhc-13/atlas-2022-comb"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
+        ref: "inspire:2104706"
+        hepdata: "hepdata:ins2104706/Figure 2a"
+      - id: "meas:ggh/lhc-13/cms-2022-comb"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
+        ref: "inspire:2104672"
+        hepdata: "hepdata:ins2104672/Production mode strength modifiers"
+    observables:
+      - id: "obs:ggh/lhc-13/sigma-ggf"
+        name: "σ(ggF) in the Higgs decay-channel combination (ATLAS: σ(ggF+bbH); CMS: μ_ggH)"
+        kind: total
+        variable: "σ(gg → H) at m_H ≈ 125 GeV; ATLAS in |y_H| < 2.5 assuming SM branching fractions; CMS as signal strength relative to the SM"
+        results:
+          - measurement: "meas:ggh/lhc-13/atlas-2022-comb"
+            total: {value_pct: 6.8, provenance: {uid: '43021402', ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 1 (ggF + bbH): 45.92 pb, 'Total uncertainty' +3.1223/−2.988 pb; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [5.1, 5.5], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104706/Figure 2a"
+                provenance: {uid: 4b612a12, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 1, error 'Syst. uncertainty': +2.5248/−2.3623 pb of 45.92 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:ggh/lhc-13/cms-2022-comb"
+            total: {value_pct: 8.2, provenance: {uid: 15db8927, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ggH = 0.97 +0.08/−0.07 (stat+syst), also Fig. 2 of arXiv:2207.00043; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [4.1, 4.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: 77c38040, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ggH: ±0.04 (stat) of 0.97", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [6.2, 7.2], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: 392cec25, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ggH: +0.07/−0.06 (syst) of 0.97", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "N3LO QCD + NLO EW (LHC Higgs Working Group, YR4), m_H = 125 GeV"
+            accuracy:
+              qcd: N3LO
+              ew: NLO
+              mixed: "O(α αs) in an effective theory (m_W, m_Z ≫ m_H)"
+              approximations: ["N3LO in the effective theory m_t → ∞ with exact quark-mass dependence only through NLO", "N3LO threshold expansion truncated (δ(trunc))", "threshold resummation not included"]
+            uses_amplitudes: ["amp:3L/gg-H-eft"]
+            total: {value_pct: 7.4, provenance: {uid: 4b1f39a8, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, eq. (I.4.3): 48.58 pb +2.22/−3.27 pb (theory, +4.56%/−6.72%) ± 1.56 pb (PDF+αs, 3.20%); derived here as the larger theory side and PDF+αs added in quadrature (the report quotes them separately)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "δ(scale): simultaneous μR = μF variation"
+                method: "μR = μF varied in [m_H/4, m_H] around the central scale m_H/2"
+                size: {range: [0.21, 2.37], unit: "%", asymmetric: true}
+                provenance: {uid: b498ae27, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, breakdown table below eq. (I.4.3) (+0.10/−1.15 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: approximation
+                specific: "δ(trunc): truncation of the N3LO threshold expansion"
+                size: {range: [0.37, 0.37], unit: "%", asymmetric: false}
+                provenance: {uid: '86731798', ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.iii, eq. (I.4.5)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: PDF
+                specific: "δ(PDF-TH): missing N3LO PDFs"
+                pdf_set: "PDF4LHC15_nnlo_100"
+                size: {range: [1.16, 1.16], unit: "%", asymmetric: false}
+                provenance: {uid: d1b908ae, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.iii, eq. (I.4.6)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: EW_missing
+                specific: "δ(EW): unknown higher-order and mixed QCD-EW effects"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: ae0a8b4e, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, breakdown table below eq. (I.4.3) (±0.49 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: approximation
+                specific: "δ(t, b, c): quark-mass effects beyond NLO"
+                size: {range: [0.83, 0.83], unit: "%", asymmetric: false}
+                provenance: {uid: 05c43fb4, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, breakdown table below eq. (I.4.3) (±0.40 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: approximation
+                specific: "δ(1/m_t): finite top-mass corrections beyond the effective theory"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: 568cfdb1, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, breakdown table below eq. (I.4.3) (±0.49 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF ⊕ αs (PDF4LHC recommendation)"
+                pdf_set: "PDF4LHC15_nnlo_100"
+                size: {range: [3.2, 3.2], unit: "%", asymmetric: false}
+                provenance: {uid: 6707417d, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, eq. (I.4.3): ±1.56 pb (3.20%)", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:ggh/lhc-13/atlas-2022-comb", "meas:ggh/lhc-13/cms-2022-comb"]
+            refs: ["arXiv:1610.07922", "inspire:1419073"]
+            provenance: {uid: ec20e046, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, eqs. (I.4.1)–(I.4.4) (√s = 13 TeV, m_H = 125 GeV, PDF4LHC15_nnlo_100, μ = m_H/2); cited by both experiments as the source of the SM prediction", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true

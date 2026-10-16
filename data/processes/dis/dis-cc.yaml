@@ -1,0 +1,122 @@
+id: "proc:dis-cc"
+name: "Charged-current inclusive DIS (e±p → ν X, ν̄ X)"
+family: "fam:dis"
+sector: SM
+description: "Inclusive charged-current deep inelastic scattering of electrons or positrons on protons through W exchange, e−p → ν X and e+p → ν̄ X. The cross sections are sensitive to the flavour decomposition of the proton (valence and sea u and d distributions) and complement the neutral-current data in PDF fits; the HERA measurements reach Q² of tens of thousands of GeV², where the W propagator is probed. Massless QCD coefficient functions for F2, FL and F3 are known to third order."
+watch:
+  recids: [1377206, 1472971, 748563, 759231, 805947]
+  queries:
+    - 't "deep inelastic" and t "charged current" and (t HERA or t H1 or t ZEUS)'
+    - 't "charged-current" and t "coefficient functions" and (t "third order" or t "three loops" or t N3LO)'
+    - 't "electroweak" and t "radiative corrections" and t "deep inelastic" and t "charged current"'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:130340", "inspire:1377206"]
+        provenance: {uid: f7a253e0, ref: "inspire:130340", locator: "Abstract (full order-g² corrections to the coefficient functions, relevant for electroproduction and neutrino reactions, non-singlet and singlet); CC with QCDNUM in zero-mass approximation: inspire:1377206 Sec. 6.1", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:511611", "inspire:759231", "inspire:1377206"]
+        provenance: {uid: 7fd62bbf, ref: "inspire:511611", locator: "Abstract (2-loop coefficient functions of F2, F3 and FL); crossing-even/odd two-loop differences incl. FL: inspire:759231 Abstract; HERAPDF2.0 NNLO fit: inspire:1377206 Sec. 6.1", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "N3LO QCD"
+    cells:
+      code:
+        status: done
+        approximations: ["massless QCD", "compact approximate x-space expressions for the three-loop coefficient functions (inspire:1472971)"]
+        refs: ["inspire:1472971", "inspire:748563", "inspire:759231", "inspire:805947"]
+        provenance: {uid: 83bece7a, ref: "inspire:1472971", locator: "Abstract (coefficient functions of F2, FL and F3 in ν-ν̄ charged-current DIS at third order, completing unpolarized inclusive W± exchange DIS in massless pQCD; compact approximate expressions)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      code:
+        status: done
+        approximations: ["single-photon bremsstrahlung included without cuts (inspire:279913)"]
+        refs: ["inspire:279913", "inspire:296225"]
+        provenance: {uid: db7a28c5, ref: "inspire:296225", locator: "Abstract (HERACLES: single-photon emission from the lepton line, self-energy corrections and the complete set of one-loop weak corrections for NC and CC ep scattering at HERA); analytic CC results inspire:279913 Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:dis-cc/hera"
+    collider: "col:hera"
+    initial_state: "e±p"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:dis-cc/hera/sigma-r-em", region: "Q² = 1000 GeV², x = 0.032, e−p at √s = 318 GeV"}
+    measurements:
+      - id: "meas:dis-cc/hera/hera-2015-comb"
+        experiment: "combination"
+        dataset: "H1+ZEUS combination of all inclusive HERA I+II NC and CC data (≈1 fb⁻¹, unpolarised), e−p at √s = 318 GeV (Ep = 920 GeV)"
+        ref: "inspire:1377206"
+        hepdata: "hepdata:ins1377206/Table 7"
+    observables:
+      - id: "obs:dis-cc/hera/sigma-r-em"
+        name: "Reduced CC cross section σr,CC⁻(x, Q²), e−p, √s = 318 GeV"
+        kind: differential
+        variable: "x, Q²"
+        results:
+          - measurement: "meas:dis-cc/hera/hera-2015-comb"
+            total: {value_pct: 4.9, provenance: {uid: 0a66a406, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, quadrature sum of all errors (bin 11); Q² = 1000 GeV², x = 0.032, √s = 318 GeV (e−p): σr = 0.918", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [3.2, 47.0], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: 6a573427, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,uncor"
+                size: {range: [1.4, 30.0], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: 9a1c25f7, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,uncor'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,cor"
+                size: {range: [1.0, 19.0], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: 64b26031, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,cor'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,rel"
+                size: {range: [0.01, 5.3], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: 2ad146e6, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,rel'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,$\\gamma p$"
+                size: {range: [0.0, 2.9], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: f0175fd5, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,$\\gamma p$'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,had"
+                size: {range: [0.0, 1.0], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: da31107c, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,had'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,1"
+                size: {range: [0.0, 0.01], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: 411d226b, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,1'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,2"
+                size: {range: [0.01, 0.06], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: d4130666, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,2'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,3"
+                size: {range: [0.0, 7.0], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: 2117af67, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,3'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,4"
+                size: {range: [0.02, 0.35], asymmetric: false}
+                full_table: "hepdata:ins1377206/Table 7"
+                provenance: {uid: f079274b, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,4'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "HERAPDF2.0 NNLO (DGLAP at NNLO, zero-mass CC coefficient functions, μr² = μf² = Q²)"
+            accuracy: {qcd: NNLO, approximations: ["PDFs fitted to these data", "zero-mass approximation for CC structure functions"]}
+            codes: ["QCDNUM", "HERAFitter"]
+            compared_to: ["meas:dis-cc/hera/hera-2015-comb"]
+            refs: ["inspire:1377206", "arXiv:1005.1481"]
+            provenance: {uid: 244b1c8e, ref: "inspire:1377206", locator: "Sec. 6.1 (NNLO DGLAP with QCDNUM in HERAFitter; for the CC structure functions the zero-mass approximation was used since all HERA CC data have Q² ≫ Mb²; μr² = μf² = Q²)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "Massless N3LO coefficient functions for CC F2, FL and F3"
+            accuracy: {qcd: N3LO, approximations: ["massless quarks", "approximate x-space parametrisations of the three-loop coefficient functions"]}
+            refs: ["inspire:1472971", "inspire:805947"]
+            provenance: {uid: 79225d25, ref: "inspire:1472971", locator: "Abstract (third-order coefficient functions for F2, FL and F3 in ν-ν̄ charged-current DIS, compact approximate expressions); F3: inspire:805947 Abstract", source: agent, status: agent-draft, date: "2026-10-16"}

@@ -1,0 +1,208 @@
+id: "proc:ttbar"
+name: "Top-quark pair production (tt̄)"
+family: "fam:top"
+sector: SM
+description: "Hadroproduction of a top-antitop pair, pp/pp̄ → tt̄ + X, dominated by gluon fusion at the LHC and by qq̄ annihilation at the Tevatron. Its inclusive cross section is a benchmark for NNLO+NNLL QCD, an input to gluon-PDF, top-mass (pole and MS-bar) and αs determinations, and a leading background in Higgs and BSM searches."
+watch:
+  recids: [2971071, 1711626, 1256082, 1225282, 2088291]
+  queries:
+    - 't "top quark pair" and (collaboration:ATLAS or collaboration:CMS) and t "cross section"'
+    - 't "top-quark pair" and (t N3LO or t "third order" or t "NNLO" or t "two-loop") and t "production"'
+    - 't "top" and t "pair" and t "electroweak" and (t "NLO" or t "QCD-EW" or t "mixed")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:251743", "inspire:264718"]
+        provenance: {uid: 909f8bab, ref: "inspire:251743", locator: "Abstract (full O(αs³) radiative corrections to the total cross section for heavy-quark pair production); inspire:264718 abstract (O(αs) corrections to gg → QQ̄, cross section and differential distributions)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/gg-ttbar"
+        refs: ["inspire:781013", "inspire:1273586"]
+        provenance: {uid: 0a7ef316, ref: "inspire:1273586", locator: "Abstract (two-loop virtual amplitudes in gluon fusion; qq̄ annihilation case given on the same grid); inspire:781013 abstract (qq̄ → tt̄ two-loop, full mass dependence)", source: agent, status: agent-draft, date: "2026-10-16"}
+      RV:
+        status: done
+        refs: ["inspire:1112110", "inspire:1193346", "inspire:1225282"]
+        provenance: {uid: '49015317', ref: "inspire:1225282", locator: "Abstract (completes the set of NNLO QCD corrections to the total cross section; gg channel); inspire:1112110 (qq̄), inspire:1193346 (qg) abstracts", source: agent, status: agent-draft, date: "2026-10-16"}
+      RR:
+        status: done
+        refs: ["inspire:1112110", "inspire:1120738", "inspire:1193346", "inspire:1225282"]
+        provenance: {uid: 127cdcd9, ref: "inspire:1225282", locator: "Abstract (completes the set of NNLO QCD corrections to the total cross section); inspire:1112110 (qq̄), inspire:1120738 (all-fermionic channels), inspire:1193346 (qg) abstracts", source: agent, status: agent-draft, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT subtraction formalism (independent NNLO calculation, inclusive cross section)"]
+        refs: ["inspire:1713542"]
+        provenance: {uid: ac1cfef4, ref: "inspire:1713542", locator: "Abstract (NNLO QCD corrections to inclusive tt̄ production computed with the qT subtraction formalism)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:1082926", "inspire:1402357", "inspire:1713542"]
+        provenance: {uid: 5f57cc1f, ref: "inspire:1082926", locator: "Abstract (Top++: total cross section at exact NNLO, with NNLL soft-gluon resummation); inspire:1402357 abstract (fully differential NNLO Monte Carlo); inspire:1713542 abstract (qT-subtraction calculation compared to Top++)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:689348", "inspire:1468062"]
+        provenance: {uid: b2550d2f, ref: "inspire:689348", locator: "Abstract (complete EW corrections to QCD-induced tt̄ production in qq̄ annihilation); inspire:1468062 abstract (NLO QCD+EW at O(αsα) and O(αs²α), incl. photon-initiated channels)", source: agent, status: agent-draft, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:1599076"]
+        provenance: {uid: 3446a1ee, ref: "inspire:1599076", locator: "Abstract (differential tt̄ distributions at the LHC at NNLO QCD including EW corrections)", source: agent, status: agent-draft, date: "2026-10-16"}
+channels:
+  - id: "chan:ttbar/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ttbar/lhc-13/sigma-tot", region: "inclusive σ(tt̄), mt = 172.5 GeV"}
+    measurements:
+      - id: "meas:ttbar/lhc-13/atlas-2025-emu"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹ (2015–2018), eμ + b-tagged jets"
+        ref: "inspire:2971071"
+      - id: "meas:ttbar/lhc-13/cms-2019-dilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 35.9 fb⁻¹ (2016), dilepton"
+        ref: "inspire:1711626"
+    observables:
+      - id: "obs:ttbar/lhc-13/sigma-tot"
+        name: "Inclusive σ(tt̄)"
+        kind: total
+        variable: "σ_tt̄ at mt = 172.5 GeV"
+        results:
+          - measurement: "meas:ttbar/lhc-13/atlas-2025-emu"
+            total: {value_pct: 1.3, provenance: {uid: 0d93fb41, ref: "inspire:2971071", locator: "Abstract and Table 2 (total uncertainty 1.34%); σ = 829.3 ± 1.3 (stat) ± 8.0 (syst) ± 7.3 (lumi) ± 1.9 (beam) pb", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.16, 0.16], unit: "%", asymmetric: false}
+                provenance: {uid: 714c58d8, ref: "inspire:2971071", locator: "Table 2, Data statistics, Δσ_tt̄/σ_tt̄ column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [0.89, 0.89], unit: "%", asymmetric: false}
+                provenance: {uid: d52ad6fe, ref: "inspire:2971071", locator: "Table 2, Integrated luminosity, Δσ_tt̄/σ_tt̄ column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: beam
+                specific: "LHC beam energy"
+                size: {range: [0.23, 0.23], unit: "%", asymmetric: false}
+                provenance: {uid: fa870f38, ref: "inspire:2971071", locator: "Table 2, Beam energy, Δσ_tt̄/σ_tt̄ column", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "Analysis systematics (tt̄ modelling, leptons, jets/b-tagging, backgrounds)"
+                size: {range: [0.97, 0.97], unit: "%", asymmetric: false}
+                full_table: "inspire:2971071"
+                provenance: {uid: fd0d277a, ref: "inspire:2971071", locator: "Table 2, Analysis systematics, Δσ_tt̄/σ_tt̄ column (breakdown by source in the same table)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:ttbar/lhc-13/cms-2019-dilepton"
+            total: {value_pct: 4.0, provenance: {uid: e77fbca0, ref: "inspire:1711626", locator: "Table 1, Total σ_tt uncertainty (4.0%); σ = 803 ± 2 (stat) ± 25 (syst) ± 20 (lumi) pb (abstract)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical (template fit)"
+                size: {range: [0.2, 0.2], unit: "%", asymmetric: false}
+                provenance: {uid: 96c376fd, ref: "inspire:1711626", locator: "Table 1, Statistical", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.5, 2.5], unit: "%", asymmetric: false}
+                provenance: {uid: '79285701', ref: "inspire:1711626", locator: "Table 1, Integrated luminosity", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Lepton identification/isolation"
+                size: {range: [2.0, 2.0], unit: "%", asymmetric: false}
+                provenance: {uid: 076ef73c, ref: "inspire:1711626", locator: "Table 1, Lepton ident./isolation", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO+NNLL QCD (Top++ 2.0, PDF4LHC21), ATLAS 2025 comparison"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold"}]
+            codes: ["Top++"]
+            uses_amplitudes: ["amp:2L/qqbar-ttbar", "amp:2L/gg-ttbar"]
+            total: {value_pct: 4.4, provenance: {uid: f138fdd6, ref: "inspire:2971071", locator: "Sec. 1: σ = 834 ± 21 (PDF) +21 −30 (scale) pb, total uncertainty +3.5/−4.4 %", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: PDF
+                specific: "PDF4LHC21 (CT18, MSHT20, NNPDF3.1 combination)"
+                pdf_set: "PDF4LHC21"
+                size: {range: [2.5, 2.5], unit: "%", asymmetric: false}
+                provenance: {uid: a7d30267, ref: "inspire:2971071", locator: "Sec. 1: ± 21 pb (PDF) of 834 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "independent variation up/down by factor two around μR = μF = mt, envelope with ratio ≤ 2"
+                size: {range: [2.5, 3.6], unit: "%", asymmetric: true}
+                provenance: {uid: 2d3e4fe3, ref: "inspire:2971071", locator: "Sec. 1: +21 −30 pb (scale) of 834 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:ttbar/lhc-13/atlas-2025-emu"]
+            refs: ["inspire:2971071", "inspire:1225282", "inspire:1082926"]
+            provenance: {uid: f1c28d33, ref: "inspire:2971071", locator: "Sec. 1 (Top++ 2.0, mt = 172.5 GeV, NNLO+NNLL); inspire:1225282 abstract (NNLO O(αs⁴) completed, with NNLL resummation)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO+NNLL QCD (Top++ 2.0, CT14nnlo), CMS 2019 comparison"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold"}]
+            codes: ["Top++"]
+            uses_amplitudes: ["amp:2L/qqbar-ttbar", "amp:2L/gg-ttbar"]
+            total: {value_pct: 5.5, provenance: {uid: de2cbe65, ref: "inspire:1711626", locator: "Sec. 2: 832 +20 −29 (scale) ± 35 (PDF + αS) pb; scale and PDF+αS added in quadrature, larger side", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μr, μf variation mt/2 < μ < 2mt"
+                method: "variation of μr, μf in mt/2 < μr, μf < 2mt (Sec. 2)"
+                size: {range: [2.4, 3.5], unit: "%", asymmetric: true}
+                provenance: {uid: 00f0a863, ref: "inspire:1711626", locator: "Sec. 2: +20 −29 pb (scale) of 832 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: PDF
+                specific: "CT14nnlo PDF and αS"
+                pdf_set: "CT14nnlo"
+                size: {range: [4.2, 4.2], unit: "%", asymmetric: false}
+                provenance: {uid: e934cc4a, ref: "inspire:1711626", locator: "Sec. 2: ± 35 pb (PDF + αS) of 832 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:ttbar/lhc-13/cms-2019-dilepton"]
+            refs: ["inspire:1711626", "inspire:1225282", "inspire:1082926"]
+            provenance: {uid: 7a203e1b, ref: "inspire:1711626", locator: "Sec. 2 (Top++ 2.0 with CT14nnlo, mt = 172.5 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - id: "chan:ttbar/tevatron"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ttbar/tevatron/sigma-tot", region: "inclusive σ(tt̄), mt = 172.5 GeV"}
+    measurements:
+      - id: "meas:ttbar/tevatron/cdf-d0-2013"
+        experiment: "combination"
+        dataset: "CDF + D0 combination, up to 8.8 fb⁻¹, 1.96 TeV"
+        ref: "inspire:1256082"
+    observables:
+      - id: "obs:ttbar/tevatron/sigma-tot"
+        name: "Inclusive σ(tt̄)"
+        kind: total
+        variable: "σ_tt̄ at mt = 172.5 GeV"
+        results:
+          - measurement: "meas:ttbar/tevatron/cdf-d0-2013"
+            total: {value_pct: 5.4, provenance: {uid: e2b676a4, ref: "inspire:1256082", locator: "Sec. V (conclusion): σ = 7.60 ± 0.41 pb, relative uncertainty 5.4%", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [2.6, 2.6], unit: "%", asymmetric: false}
+                provenance: {uid: 06094cf6, ref: "inspire:1256082", locator: "Sec. IV: 0.20 pb (stat) of 7.60 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: other
+                specific: "Total systematic uncertainty (all sources)"
+                size: {range: [3.8, 3.8], unit: "%", asymmetric: false}
+                provenance: {uid: 4c9adbaf, ref: "inspire:1256082", locator: "Sec. IV: 0.29 pb (syst) of 7.60 pb; individual contributions in Table IV", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.8, 2.8], unit: "%", asymmetric: false}
+                provenance: {uid: d31e877b, ref: "inspire:1256082", locator: "Sec. IV: 0.21 pb (lumi) of 7.60 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO+NNLL QCD (Top++, MSTW2008nnlo68cl)"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold"}]
+            codes: ["Top++"]
+            uses_amplitudes: ["amp:2L/qqbar-ttbar", "amp:2L/gg-ttbar"]
+            total: {value_pct: 4.5, provenance: {uid: c343840f, ref: "inspire:1256082", locator: "Abstract: 7.35 +0.28 −0.33 pb at NNLO+NNLL; Table I, larger side 0.33 pb", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Scale variation (factor two)"
+                method: "factorisation and renormalisation scales varied by factors of two and one half"
+                size: {range: [1.5, 2.9], unit: "%", asymmetric: true}
+                provenance: {uid: 99f11bb1, ref: "inspire:1256082", locator: "Table I, NNLO+NNLL row: +0.11 −0.21 pb (scale) of 7.35 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: PDF
+                specific: "MSTW2008nnlo68cl PDF uncertainty"
+                pdf_set: "MSTW2008nnlo68cl"
+                size: {range: [1.6, 2.3], unit: "%", asymmetric: true}
+                provenance: {uid: d5cc61c8, ref: "inspire:1256082", locator: "Table I, NNLO+NNLL row: +0.17 −0.12 pb (PDF) of 7.35 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:ttbar/tevatron/cdf-d0-2013"]
+            refs: ["inspire:1256082", "inspire:1112110", "inspire:1225282", "inspire:1082926"]
+            provenance: {uid: 9b5fc9c4, ref: "inspire:1256082", locator: "Sec. I.A and Table I (Top++, NNLO+NNLL, mt = 172.5 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true

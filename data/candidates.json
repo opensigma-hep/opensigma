@@ -1,0 +1,2164 @@
+{
+ "proc:b-hadron-production": [
+  {
+   "recid": 2782835,
+   "title": "Data-driven analysis of the beauty hadron production in pp collisions at the LHC with Bayesian unfolding",
+   "arxiv": "2405.01444",
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13"
+   ]
+  },
+  {
+   "recid": 2647720,
+   "title": "B-meson hadroproduction in the SACOT-m$_{T}$ scheme",
+   "arxiv": "2303.17864",
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13"
+   ]
+  },
+  {
+   "recid": 2629436,
+   "title": "B-hadron production at the LHC from bottom-quark pair production at NNLO+PS",
+   "arxiv": "2302.01645",
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13"
+   ]
+  },
+  {
+   "recid": 2762380,
+   "title": "Measurement of beauty-quark production in pp collisions at $ \\sqrt{s} $ = 13 TeV via non-prompt D mesons",
+   "arxiv": "2402.16417",
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13"
+   ]
+  },
+  {
+   "recid": 3156631,
+   "title": "Inclusive charm and bottom quark pair production cross sections at hadron colliders at next-to-next-to-leading-order accuracy",
+   "arxiv": "2605.16019",
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13",
+    "chan:b-hadron-production/tevatron-1960"
+   ]
+  },
+  {
+   "recid": 2869889,
+   "title": "Phenomenology of Bottom-Quark Pair Production at the LHC",
+   "arxiv": null,
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13"
+   ]
+  },
+  {
+   "recid": 2787908,
+   "title": "Open bottom production at NNLO+NNLL",
+   "arxiv": "2405.10772",
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13"
+   ]
+  },
+  {
+   "recid": 2848281,
+   "title": "Open <math display=\"inline\"><mi>B</mi></math>-Hadron Production at Hadron Colliders in QCD at Next-to-Next-to-Leading-Order and Next-to-Next-to-Leading-Logarithmic Accuracy",
+   "arxiv": "2411.09684",
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:b-hadron-production/lhc-13"
+   ]
+  }
+ ],
+ "proc:charm-production": [
+  {
+   "recid": 2862073,
+   "title": "Differential cross-section measurements of D$^{±}$ and $ {D}_s^{\\pm } $ meson production in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector",
+   "arxiv": "2412.15742",
+   "matched_by": "(refersto:recid:1396331 or refersto:recid:2697877 or refersto:recid:624447 or refersto:recid:1384271 or refersto:recid:1379948 or (t \"charm\" and t \"production cross\" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t \"pp collisions\" or t \"proton-proton\")) or (t \"charm\" and (t \"hadroproduction\" or t \"production\") and (t NNLO or t FONLL or t \"GM-VFNS\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:charm-production/lhc-13"
+   ]
+  },
+  {
+   "recid": 2795374,
+   "title": "Charm total cross sections with nonuniversal fragmentation treatment",
+   "arxiv": "2406.03581",
+   "matched_by": "(refersto:recid:1396331 or refersto:recid:2697877 or refersto:recid:624447 or refersto:recid:1384271 or refersto:recid:1379948 or (t \"charm\" and t \"production cross\" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t \"pp collisions\" or t \"proton-proton\")) or (t \"charm\" and (t \"hadroproduction\" or t \"production\") and (t NNLO or t FONLL or t \"GM-VFNS\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:charm-production/lhc-13",
+    "chan:charm-production/tevatron-1960"
+   ]
+  },
+  {
+   "recid": 3156631,
+   "title": "Inclusive charm and bottom quark pair production cross sections at hadron colliders at next-to-next-to-leading-order accuracy",
+   "arxiv": "2605.16019",
+   "matched_by": "(refersto:recid:1396331 or refersto:recid:2697877 or refersto:recid:624447 or refersto:recid:1384271 or refersto:recid:1379948 or (t \"charm\" and t \"production cross\" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t \"pp collisions\" or t \"proton-proton\")) or (t \"charm\" and (t \"hadroproduction\" or t \"production\") and (t NNLO or t FONLL or t \"GM-VFNS\"))) and de > 2021-10-16",
+   "channels": [
+    "chan:charm-production/lhc-13",
+    "chan:charm-production/tevatron-1960"
+   ]
+  }
+ ],
+ "proc:diphoton": [
+  {
+   "arxiv": "2310.10458",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2711574,
+   "title": "Full NNLO QCD corrections to diphoton production"
+  },
+  {
+   "arxiv": "2609.18828",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3204601,
+   "title": "Complete electroweak corrections to diphoton production via gluon fusion at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2829920,
+   "title": "Photon pair production: full NNLO corrections in QCD with heavy quark mass dependence"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3210213,
+   "title": "Massive two-loop QCD corrections to Diphoton Production at the LHC"
+  },
+  {
+   "arxiv": "2308.10885",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2689908,
+   "title": "Full top-quark mass dependence in diphoton production at NNLO in QCD"
+  },
+  {
+   "arxiv": "2306.03956",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2666898,
+   "title": "Master integrals for electroweak corrections to $gg\\rightarrow \\gamma \\gamma $: light quark contributions"
+  },
+  {
+   "arxiv": "2510.21643",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3073011,
+   "title": "Electroweak corrections to gg → γγ"
+  },
+  {
+   "arxiv": "2501.14021",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2872231,
+   "title": "Precise Predictions for Event Shapes in Diphoton Production at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3154529,
+   "title": "Electroweak correction to gg→γγ"
+  },
+  {
+   "arxiv": "2512.22929",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3096024,
+   "title": "Low-energy <math altimg=\"si4.svg\"><mrow><msup><mi>e</mi><mo>+</mo></msup><mspace width=\"0.16em\"/><msup><mi>e</mi><mo>−</mo></msup><mo>→</mo><mi>γ</mi><mspace width=\"0.16em\"/><mi>γ</mi></mrow></math> at NNLO in QED"
+  },
+  {
+   "arxiv": "2502.03282",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2876679,
+   "title": "Two-loop helicity amplitudes for diphoton production with massive quark loop"
+  },
+  {
+   "arxiv": "2201.06982",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2012936,
+   "title": "Photon fragmentation in the antenna subtraction formalism"
+  },
+  {
+   "arxiv": "2204.12602",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2072920,
+   "title": "NNLO+PS Monte Carlo simulation of photon pair production with MiNNLO$_{PS}$"
+  },
+  {
+   "arxiv": "2211.04694",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2178440,
+   "title": "Three-loop four-particle QCD amplitudes"
+  },
+  {
+   "arxiv": "2208.01554",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2130157,
+   "title": "QCD anatomy of photon isolation"
+  },
+  {
+   "arxiv": "2509.15315",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2971505,
+   "title": "Analytic two-loop amplitudes for di-jet and γ+jet production mediated by a heavy-quark loop"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2641978,
+   "title": "Next-to-next-to-leading order predictions for diboson production in hadronic scattering combined with parton showers"
+  },
+  {
+   "arxiv": "2409.16417",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2833099,
+   "title": "KrkNLO matching for colour-singlet processes"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2849776,
+   "title": "QCD anatomy of photon isolation"
+  },
+  {
+   "arxiv": "2512.02999",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3088589,
+   "title": "All planar three-loop Feynman integrals for the production of two vector bosons at hadron colliders"
+  },
+  {
+   "arxiv": "2511.07599",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3081675,
+   "title": "Prompt diphoton production compared to measurements at 13 TeV in <math display=\"inline\"><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>T</mi></mrow></msub></mrow></math>-factorization: A comparative analysis of unintegrated PDF models"
+  },
+  {
+   "arxiv": "2205.12773",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2088134,
+   "title": "Production of three isolated photons in the parton Reggeization approach at high energies"
+  },
+  {
+   "arxiv": "2210.07115",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2165266,
+   "title": "Precision QCD corrections to gluon-initiated diphoton-plus-jet production at the LHC"
+  },
+  {
+   "arxiv": "2203.04269",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2048108,
+   "title": "Ansätze for scattering amplitudes from p-adic numbers and algebraic geometry"
+  },
+  {
+   "arxiv": "2112.14275",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 1998052,
+   "title": "Planar three-loop master integrals for 2 → 2 processes with one external massive particle"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2880515,
+   "title": "Two-loop massive corrections for collider phenomenology"
+  },
+  {
+   "arxiv": "2607.18406",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3182225,
+   "title": "Feynman Integrals Meet Second-Order Partial Differential Equations"
+  },
+  {
+   "arxiv": "2410.15431",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2841552,
+   "title": "Three-loop ladder diagrams with two off-shell legs"
+  },
+  {
+   "arxiv": "2603.22423",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3133836,
+   "title": "Light-by-light scattering at three loops in massless QCD and QED: amplitudes and cross sections"
+  },
+  {
+   "arxiv": "2602.10807",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3118644,
+   "title": "Three-loop helicity amplitudes of four-lepton scattering in QED"
+  },
+  {
+   "arxiv": "2308.11412",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2690115,
+   "title": "Two-loop form factors for diphoton production in quark annihilation channel with heavy quark mass dependence"
+  },
+  {
+   "arxiv": "2312.12384",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2738586,
+   "title": "Interference effects in gg → H → Zγ beyond leading order"
+  },
+  {
+   "arxiv": "2212.06287",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2613847,
+   "title": "Signal-background interference effects in Higgs-mediated diphoton production beyond NLO"
+  },
+  {
+   "arxiv": "2511.20581",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3086301,
+   "title": "NNLO QCD predictions for $W\\gamma \\gamma $ production at the LHC"
+  },
+  {
+   "arxiv": "2112.07720",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 1991167,
+   "title": "Searching for axionlike particles with data scouting at ATLAS and CMS"
+  },
+  {
+   "arxiv": "2112.11097",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 1995045,
+   "title": "Three-Loop Gluon Scattering in QCD and the Gluon Regge Trajectory"
+  },
+  {
+   "arxiv": "2512.04336",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3089375,
+   "title": "LHC shines on positivity*"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3207644,
+   "title": "Isolated Pair Photon Production in the Parton Reggeization Approach"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3154525,
+   "title": "Applications of N-Jettiness Subtraction to NLO QED and NNLO QED-QCD Calculations at Hadron Colliders"
+  },
+  {
+   "arxiv": "2210.02598",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2161665,
+   "title": "Precision measurements of jet and photon production at the ATLAS experiment"
+  },
+  {
+   "arxiv": "2207.03503",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2107829,
+   "title": "Three-loop helicity amplitudes for quark-gluon scattering in QCD"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2067746,
+   "title": "Highlights of EW and QCD results at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2672034,
+   "title": "Inclusive jet, multijet and photon measurements"
+  },
+  {
+   "arxiv": "2305.17056",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2663067,
+   "title": "Two-loop QCD corrections for three-photon production at hadron colliders"
+  },
+  {
+   "arxiv": "2502.00118",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2874702,
+   "title": "Analytic two-loop amplitudes for $ q\\overline{q}\\to \\gamma \\gamma $ and gg → γγ mediated by a heavy-quark loop"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2605761,
+   "title": "High-$p_T$ results and parton density functions from ATLAS"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2671973,
+   "title": "High-$p_T$ experimental results on QCD at the LHC."
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2112289,
+   "title": "Jet and photon physics in ATLAS and CMS"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2909754,
+   "title": "Measurement of pairs of photons in LHC Run-2 proton-proton collisions with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2767976,
+   "title": "KrkNLO Parton Shower Matching"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2066961,
+   "title": "Multiboson production at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3087815,
+   "title": "Study of photon isolation and search for axion-like particles decaying into collimated photon pairs using machine learning with the ATLAS detector at the LHC"
+  },
+  {
+   "arxiv": "2202.04506",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2030214,
+   "title": "Optimising hadronic collider simulations using amplitude neural networks"
+  },
+  {
+   "arxiv": "2411.11651",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2849477,
+   "title": "A Cell Resampler study of Negative Weights in Multi-jet Merged Samples"
+  },
+  {
+   "arxiv": "2405.19399",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2791629,
+   "title": "Hard processes in multi-TeV ion collisions"
+  },
+  {
+   "arxiv": "2307.11570",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2679343,
+   "title": "Exploring slicing variables for jet processes"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2823433,
+   "title": "Arts and crafts of particle phenomenology: a journey through analytical methods and applications"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2168856,
+   "title": "Effective transverse momentum in multijet production at hadron colliders"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2013748,
+   "title": "Review of recent standard model measurements"
+  },
+  {
+   "arxiv": "2501.00587",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2864415,
+   "title": "The structure of quark mass corrections in the gg → HH amplitude at high-energy"
+  },
+  {
+   "arxiv": "2302.08999",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2634067,
+   "title": "Two-loop amplitudes in massless QCD for diphoton-plus-jet production via gluon fusion at hadron colliders"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2855747,
+   "title": "The KrkNLO Method for Parton Shower Matching"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3185617,
+   "title": "Using the ABCD method for data-driven background estimation"
+  },
+  {
+   "arxiv": "2407.17158",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2810732,
+   "title": "Revealing Hidden Regions in Wide-Angle and Forward Scattering"
+  },
+  {
+   "arxiv": "2602.12572",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3119893,
+   "title": "NNLL$^{′}$ resummation of azimuthal decorrelation for boosted top quark pair production at the LHC"
+  },
+  {
+   "arxiv": "2610.22102",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3215673,
+   "title": "Spurious Singularities in Dipole Subtraction Cross Sections and their Damping with Convergence Factors"
+  },
+  {
+   "arxiv": "2311.06977",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2721996,
+   "title": "High-precision scattering amplitudes for LHC phenomenology"
+  },
+  {
+   "arxiv": "2208.08139",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2136896,
+   "title": "Three-Loop Four-Point Scattering Amplitudes in Massless Gauge Theories"
+  },
+  {
+   "arxiv": "2112.04168",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 1986726,
+   "title": "Next-to-next-to-leading order event generation for VH production with H →$ b\\overline{b} $ decay"
+  },
+  {
+   "arxiv": "2202.07738",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2033545,
+   "title": "Non-local slicing approaches for NNLO QCD in MCFM"
+  },
+  {
+   "arxiv": "2112.06729",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 1988998,
+   "title": "Hadron collider probes of the quartic couplings of gluons to the photon and Z boson"
+  },
+  {
+   "arxiv": "2402.08057",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2758020,
+   "title": "Idealised Antenna Functions for Higher Order QCD Calculations"
+  },
+  {
+   "arxiv": "2502.00572",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2874750,
+   "title": "Local form factor subtraction for three-loop QCD corrections to electroweak production in quark-antiquark annihilation"
+  },
+  {
+   "arxiv": "2607.00971",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3176266,
+   "title": "Quantum entanglement of photon pairs at proton-proton colliders"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2661207,
+   "title": "Intersection theory and Feynman integrals"
+  },
+  {
+   "arxiv": "2512.17591",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3094461,
+   "title": "How much color do we really need? Two-loop subleading-color effects in photon and jet physics"
+  },
+  {
+   "arxiv": "2206.01584",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2091317,
+   "title": "Tree-level soft emission of a quark pair in association with a gluon"
+  },
+  {
+   "arxiv": "2412.01710",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2854639,
+   "title": "Associated production of J∕ψ and direct photon in the NRQCD and the ICEM using the high-energy factorization"
+  },
+  {
+   "arxiv": "2211.14171",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2593322,
+   "title": "Measurement of $Z\\gamma \\gamma $ production in pp collisions at $\\sqrt{s}= 13$ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2203.06730",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2051098,
+   "title": "The Path forward to N$^3$LO"
+  },
+  {
+   "arxiv": "2509.06612",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2967457,
+   "title": "Dissecting exclusive multijet cross sections"
+  },
+  {
+   "arxiv": "2212.14069",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2619261,
+   "title": "Three-loop helicity amplitudes for <math display=\"inline\"><mrow><mi>photon</mi><mo>+</mo><mtext>jet</mtext></mrow></math> production"
+  },
+  {
+   "arxiv": "2204.04200",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2064884,
+   "title": "Computational Challenges for Multi-loop Collider Phenomenology: A Snowmass 2021 White Paper"
+  },
+  {
+   "arxiv": "2604.04049",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3139419,
+   "title": "Associated production of $J/ψ$ mesons and photons in the Parton Reggeization Approach and the double parton scattering model"
+  },
+  {
+   "arxiv": "2312.14015",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2739928,
+   "title": "Quantum Chromodynamics"
+  },
+  {
+   "arxiv": "2609.13743",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3203052,
+   "title": "Polarized Semi-Inclusive Deep-Inelastic Scattering at $\\mathcal O(α_s^3)$ in QCD"
+  },
+  {
+   "arxiv": "2207.02122",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2106086,
+   "title": "Les Houches 2021—physics at TeV colliders: report on the standard model precision wishlist"
+  },
+  {
+   "arxiv": "2510.24873",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3074789,
+   "title": "Global analysis of ALP-mediated multiboson production at the LHC"
+  },
+  {
+   "arxiv": "2404.02878",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2773807,
+   "title": "Pair production in rotating electric fields via quantum kinetic equations: Resolving helicity states"
+  },
+  {
+   "arxiv": "2309.10027",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2699653,
+   "title": "Custodial symmetry breaking and Higgs boson signatures at the LHC"
+  },
+  {
+   "arxiv": "2510.14633",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3070420,
+   "title": "Effect of isolation criteria on prompt photon production in relativistic nuclear collisions"
+  },
+  {
+   "arxiv": "2312.16408",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2741112,
+   "title": "The transverse energy-energy correlator at next-to-next-to-next-to-leading logarithm"
+  },
+  {
+   "arxiv": "2505.09272",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2921173,
+   "title": "Constraints On New Theories Using Rivet : CONTUR version 3 release note"
+  },
+  {
+   "arxiv": "2308.14701",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2691349,
+   "title": "Tensor reduction of loop integrals"
+  },
+  {
+   "arxiv": "2505.03684",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2918797,
+   "title": "The integrand form of infrared singularities of two-loop QCD scattering amplitudes"
+  },
+  {
+   "arxiv": "2210.10724",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2167391,
+   "title": "Transverse momentum resummation at N$^{3}$LL+NNLO for diboson processes"
+  },
+  {
+   "arxiv": "2509.02790",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2966358,
+   "title": "Perturbative QCD"
+  },
+  {
+   "arxiv": "2606.31286",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3175068,
+   "title": "Boosted Higgs-strahlung off a $W$ boson at next-to-next-to-next-to-leading order in QCD"
+  },
+  {
+   "arxiv": "2406.00708",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2793807,
+   "title": "Les Houches 2023: Physics at TeV Colliders: Standard Model Working Group Report"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3206341,
+   "title": "Canonical Differential Equations for Feynman Integrals"
+  },
+  {
+   "arxiv": "2201.11519",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2020646,
+   "title": "Effective transverse momentum in multiple jet production at hadron colliders"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2162989,
+   "title": "Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV} using 139 fb$^{-1}$ of ATLAS data"
+  },
+  {
+   "arxiv": "2302.00510",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2628741,
+   "title": "Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV using 139 fb$^{-1}$ of ATLAS data"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2710819,
+   "title": "Measurement of $Z\\gamma\\gamma$ production in pp collisions at $\\sqrt{s}$ = 13 TeV with the ATLAS detector."
+  },
+  {
+   "arxiv": "2405.03749",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2784001,
+   "title": "Dark matter from anomaly cancellation at the LHC"
+  },
+  {
+   "arxiv": "2203.11181",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2055737,
+   "title": "Renormalization of gluonic leading-twist operators in covariant gauges"
+  },
+  {
+   "arxiv": "2608.14419",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3191280,
+   "title": "NNLO QCD corrections to $WWγ$ production at the LHC"
+  },
+  {
+   "arxiv": "2603.29673",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3137618,
+   "title": "Two-Dimensional Transverse-Momentum Subtraction and Semi-Inclusive Deep-Inelastic Scattering at Next-to-Next-to-Next-to-Leading Order in QCD"
+  },
+  {
+   "arxiv": "2505.01368",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2917829,
+   "title": "Identifying regions for asymptotic expansions of amplitudes: Fundamentals and recent advances"
+  },
+  {
+   "arxiv": "2405.09320",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2787227,
+   "title": "Search for new physics in high-mass diphoton events from proton-proton collisions at $ \\sqrt{\\textrm{s}} $ = 13 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2692752,
+   "title": "Scattering amplitudes for ZZ production at the lhc and top-quark mass effects"
+  },
+  {
+   "arxiv": "2504.06689",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2909891,
+   "title": "Les Houches 2023 – physics at TeV colliders: Report on the Standard Model precision wishlist"
+  },
+  {
+   "arxiv": "2604.20954",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3148508,
+   "title": "SubTropica"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2784602,
+   "title": "Search for new physics in high-mass diphoton events from proton-proton collisions at $\\sqrt{s}=13\\,\\mathrm{TeV}$"
+  },
+  {
+   "arxiv": "2607.25869",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3184176,
+   "title": "Observation of the electroweak production of $γγjj$ at $\\sqrt{s}=13$ TeV in $140\\ \\text{fb}^{-1}$ of $pp$ collision data with the ATLAS detector"
+  },
+  {
+   "arxiv": "2403.18047",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2772085,
+   "title": "Integrated unitarity for scattering amplitudes and the four-loop ladder Feynman integral"
+  },
+  {
+   "arxiv": "2311.09870",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2723232,
+   "title": "Five-parton scattering in QCD at two loops"
+  },
+  {
+   "arxiv": "2602.06364",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3117282,
+   "title": "Transverse-Momentum Subtraction for Semi-Inclusive Deep-Inelastic Scattering"
+  },
+  {
+   "arxiv": "2304.10753",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2653337,
+   "title": "Hunting scalar partners of the Higgs boson at the LHC"
+  },
+  {
+   "arxiv": "2211.04172",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2178061,
+   "title": "Search for boosted diphoton resonances in the 10 to 70 GeV mass range using 138 fb$^{−1}$ of 13 TeV pp collisions with the ATLAS detector"
+  },
+  {
+   "arxiv": "2601.22144",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3113001,
+   "title": "All-order prescription for facet regions in massless wide-angle scattering"
+  },
+  {
+   "arxiv": "2203.07088",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2051224,
+   "title": "Functions Beyond Multiple Polylogarithms for Precision Collider Physics"
+  },
+  {
+   "arxiv": "2404.12915",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2779339,
+   "title": "Search for a resonance decaying into a scalar particle and a Higgs boson in the final state with two bottom quarks and two photons in proton–proton collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2211.07071",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2181736,
+   "title": "Azimuthal decorrelation for photon induced dijet production in ultra-peripheral collisions of heavy ions"
+  },
+  {
+   "arxiv": "2603.04039",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3125704,
+   "title": "NNLO DGLAP splitting functions from collinear matching of TMDs"
+  },
+  {
+   "arxiv": "2111.00205",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 1957188,
+   "title": "Calculational Techniques in Particle Theory"
+  },
+  {
+   "arxiv": "2210.13240",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2169710,
+   "title": "Variational quantum eigensolver for causal loop Feynman diagrams and directed acyclic graphs"
+  },
+  {
+   "arxiv": "2510.18801",
+   "channels": [
+    "chan:diphoton/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3071685,
+   "title": "Two-loop QCD corrections for real and off-shell diphoton and triphoton production via quark loops"
+  },
+  {
+   "arxiv": "2210.01826",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2160428,
+   "title": "Exploring extended Higgs sectors via pair production at the LHC"
+  },
+  {
+   "arxiv": "2305.00013",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2655595,
+   "title": "Multi-photon decays of the Higgs boson at the LHC"
+  },
+  {
+   "arxiv": "2510.03097",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3062899,
+   "title": "Power corrections to the production of a prompt photon in association with a jet in the N-jettiness slicing scheme at NLO QCD"
+  },
+  {
+   "arxiv": "2407.13738",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2809004,
+   "title": "Dissecting polytopes: Landau singularities and asymptotic expansions in 2 → 2 scattering"
+  },
+  {
+   "arxiv": "2503.22804",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2906156,
+   "title": "NNLOJET: A parton-level event generator for jet cross sections at NNLO QCD accuracy"
+  },
+  {
+   "arxiv": "2505.01245",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2917791,
+   "title": "Hexagonal Wilson loop with Lagrangian insertion at two loops in $ \\mathcal{N} $ = 4 super Yang-Mills theory"
+  },
+  {
+   "arxiv": "2212.11107",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2617065,
+   "title": "50 Years of Quantum Chromodynamics"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3104480,
+   "title": "Limits of QCD"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2615869,
+   "title": "Aspects of Higgs phenomenology in and beyond the standard model"
+  },
+  {
+   "arxiv": "2512.03954",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3089007,
+   "title": "Jet production at NNLO: exploring a new scheme"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3088784,
+   "title": "Energy calibration of the ATLAS electromagnetic calorimeter and search for Higgs Boson pair production in the bbyy final state with Run 2 and Run 3 data collected by the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2660411,
+   "title": "Searches for periodic signals in diphoton and dilelectron invariant mass spectra with the ATLAS detector at the Large Hadron Collider"
+  },
+  {
+   "arxiv": "2203.07270",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2051222,
+   "title": "Phenomenological aspects of composite Higgs scenarios: exotic scalars and vector-like quarks"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2621196,
+   "title": "Measuring the Diphoton Production from Higgs Boson Decays and in association with Heavy Flavor Jets"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2116633,
+   "title": "Measurement of the SM Higgs boson properties in the diphoton decay channel with the ATLAS Run 2 dataset"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3146926,
+   "title": "Probing the Higgs boson with the ATLAS detector: precision measurement of the mass and search for rare decays to a low-mass dilepton system and a photon in proton-proton collisions at the LHC."
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2640954,
+   "title": "Infrared Linear Renormalons in Collider Processes"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2817040,
+   "title": "Review of particle physics"
+  },
+  {
+   "arxiv": "2609.12914",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3202862,
+   "title": "What has the LHC told us about the electroweakino sector of the Minimal Supersymmetric Standard Model?"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2823204,
+   "title": "Scattering amplitudes beyond the planar limit of quantum chromodynamics"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3090834,
+   "title": "Factorization and resummation of high-energy-limit QCD amplitudes"
+  },
+  {
+   "arxiv": "2306.04561",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2666907,
+   "title": "Higgs boson rapidity distribution in bottom annihilation at NNLL and beyond"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2799076,
+   "title": "Search for non-resonant new physics in high-mass diphoton events from pp collisions at $\\sqrt{s}$ = 13 TeV with the CMS detector and highlights from HCAL upgrades"
+  },
+  {
+   "arxiv": "2207.00348",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2104770,
+   "title": "Measurement of the properties of Higgs boson production at $\\sqrt{s} = 13$ TeV in the $H\\to\\gamma\\gamma$ channel using $139$ fb$^{-1}$ of $pp$ collision data with the ATLAS experiment"
+  },
+  {
+   "arxiv": "2510.26874",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3075568,
+   "title": "Gravitational waveforms from restriction theory and rapid-decay homology"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 3064002,
+   "title": "Differential cross-section measurement of 𝑡𝑡𝛾̄ production and interpretation in the context of effective field theory using ATLAS detector data at √𝑠 = 13 TeV"
+  },
+  {
+   "arxiv": "2303.16578",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2646974,
+   "title": "$Z, W^{\\pm}$ rapidity distributions at NNLL and beyond"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2914570,
+   "title": "The Black Book of Quantum Chromodynamics — A Primer for the LHC Era"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2970909,
+   "title": "Shedding light on Higgs boson self-interactions in the $b\\bar{b}\\gamma\\gamma$ channel. Photon and $b$-jet calibrations, and searches for Higgs boson pairs with the ATLAS experiment"
+  },
+  {
+   "arxiv": "2111.02319",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 1960978,
+   "title": "Precision QCD Physics at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2766808,
+   "title": "QCD resummation in the light of the LHC Run 3"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2938282,
+   "title": "Modern techniques for precision in perturbative quantum field theories through the loop-tree duality and quantum algorithms"
+  },
+  {
+   "arxiv": "2407.18051",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2811094,
+   "title": "N$_{f}$-contribution to the virtual correction for electroweak vector boson production at NNLO"
+  },
+  {
+   "arxiv": "2303.09082",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2643056,
+   "title": "Collider constraints on electroweakinos in the presence of a light gravitino"
+  },
+  {
+   "arxiv": "2203.11110",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2055764,
+   "title": "Event generators for high-energy physics experiments"
+  },
+  {
+   "arxiv": "2203.13015",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2606334,
+   "title": "The SAGEX review on scattering amplitudes Chapter 4: Multi-loop Feynman integrals"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2882800,
+   "title": "Collider Phenomenology of Composite Higgs Models"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2630782,
+   "title": "Higher Order Electroweak and QCD Corrections in $e^+e^-\\mu^+\\mu^-$ production at LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2106994,
+   "title": "Review of Particle Physics"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2746050,
+   "title": "Singularities of Feynman diagrams and their local cancellation in collider cross-sections"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2695076,
+   "title": "Standard model measurements at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2861827,
+   "title": "Detector-corrected measurements of missing transverse energy with the ATLAS detector and constraints on new physics models using Contur"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2962699,
+   "title": "QCD Corrections and AI Alignment in Particle Physics: A Dual Approach toward Massive Scattering Amplitude Computations"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2626233,
+   "title": "Infrared Singularities in Higher Order Computations in Gauge Theories"
+  },
+  {
+   "arxiv": "2410.22148",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2843469,
+   "title": "Event generation with Sherpa 3"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2075841,
+   "title": "Scattering Amplitudes and Logarithmic Differential Forms"
+  },
+  {
+   "arxiv": "2404.06829",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2775815,
+   "title": "Electroweak, QCD and flavour physics studies with ATLAS data from Run 2 of the LHC"
+  },
+  {
+   "arxiv": "2402.13760",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2760541,
+   "title": "Leaving No Matter Unturned"
+  },
+  {
+   "arxiv": "2405.18661",
+   "channels": [],
+   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
+   "recid": 2791238,
+   "title": "Stairway to discovery: A report on the CMS programme of cross section measurements from millibarns to femtobarns"
+  }
+ ],
+ "proc:isolated-photon": [
+  {
+   "arxiv": "2208.02669",
+   "channels": [
+    "chan:isolated-photon/lhc-13"
+   ],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2132391,
+   "title": "NNLO Photon Production with Realistic Photon Isolation"
+  },
+  {
+   "arxiv": "2610.01552",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3210662,
+   "title": "Radiative corrections to the subprocess of annihilation of quark-antiquark pair of prompt photon production in proton-proton collisions at NICA energies $\\sqrt{\\mathbf{s}}$= 10 GeV"
+  },
+  {
+   "arxiv": "2208.01554",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2130157,
+   "title": "QCD anatomy of photon isolation"
+  },
+  {
+   "arxiv": "2407.01165",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2803487,
+   "title": "Measurement of the inclusive isolated-photon production cross section in pp collisions at $\\mathbf {\\sqrt{\\textit{s}}=13}$ TeV"
+  },
+  {
+   "arxiv": "2409.01424",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2824250,
+   "title": "Prompt photon production with two jets in POWHEG"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2849776,
+   "title": "QCD anatomy of photon isolation"
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3184989,
+   "title": "Measurement of the differential cross section for inclusive isolated photon production in proton-proton collisions at sqrt(s) = 13.6 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2162989,
+   "title": "Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV} using 139 fb$^{-1}$ of ATLAS data"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3186660,
+   "title": "Improving the precision of nuclear PDFs in the nCTEQ framework : target mass corrections in DIS and the prompt photon production"
+  },
+  {
+   "arxiv": "2409.12641",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2831272,
+   "title": "Measurement of the inclusive isolated-photon production cross section in pp and Pb–Pb collisions at $\\mathbf {\\sqrt{\\textit{s}_{NN }} = 5.02}$ TeV"
+  },
+  {
+   "arxiv": "2410.06644",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2838635,
+   "title": "Single isolated photon production in the <math display=\"inline\"><mrow><mtext>NL</mtext><msup><mrow><mtext>O</mtext></mrow><mrow><mo>*</mo></mrow></msup></mrow></math> approximation of the parton Reggeization approach"
+  },
+  {
+   "arxiv": "2506.16092",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2937274,
+   "title": "Isolated photon cross section and resummation of the logarithms of the cone radius"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2711764,
+   "title": "Measurement of inclusive photon production cross section with ATLAS"
+  },
+  {
+   "arxiv": "2304.06682",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2651109,
+   "title": "Isolated photon production in association with a jet pair through next-to-next-to-leading order in QCD"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2628637,
+   "title": "Direct Photon Production in Heavy-Ion Collisions: Theory and Experiment"
+  },
+  {
+   "arxiv": "2510.14633",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3070420,
+   "title": "Effect of isolation criteria on prompt photon production in relativistic nuclear collisions"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2871792,
+   "title": "Mesure des corrélations photon-hadron dans les collisions Pb-Pb à 5.02 TeV avec l'expérience ALICE au LHC"
+  },
+  {
+   "arxiv": "2405.19399",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2791629,
+   "title": "Hard processes in multi-TeV ion collisions"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2720822,
+   "title": "Probing the initial state of heavy-ion collisions with isolated prompt photons"
+  },
+  {
+   "arxiv": "2111.02319",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 1960978,
+   "title": "Precision QCD Physics at the LHC"
+  },
+  {
+   "arxiv": "2403.14574",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2770991,
+   "title": "A subtraction scheme for processes involving fragmentation functions at NLO"
+  },
+  {
+   "arxiv": "2610.02327",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3210955,
+   "title": "Precise QCD Predictions for Photon-Associated Hadron Production at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2843709,
+   "title": "Precision computations for photons, jets and BSM-particles at the LHC"
+  },
+  {
+   "arxiv": "2411.02196",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2845509,
+   "title": "NLO QCD predictions for $ t\\overline{t}\\gamma $ with realistic photon isolation"
+  },
+  {
+   "arxiv": "2608.15944",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3191711,
+   "title": "Photon Fragmentation Functions in LHAPDF: Existing Sets and a Pythia-Based Extraction"
+  },
+  {
+   "arxiv": "2204.10755",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2071250,
+   "title": "Decomposition of triple collinear splitting functions"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2642857,
+   "title": "Gluon Sivers Function in Transverse Single-Spin Asymmetries of Direct Photons at NICA"
+  },
+  {
+   "arxiv": "2306.03956",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2666898,
+   "title": "Master integrals for electroweak corrections to $gg\\rightarrow \\gamma \\gamma $: light quark contributions"
+  },
+  {
+   "arxiv": "2506.19904",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2938748,
+   "title": "IBIS: Inverse BInomial sum Solver"
+  },
+  {
+   "arxiv": "2510.21643",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3073011,
+   "title": "Electroweak corrections to gg → γγ"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3208344,
+   "title": "Next-to-Leading-Logarithmic Contributions to Scattering Processes at High Energies"
+  },
+  {
+   "arxiv": "2112.14083",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 1998456,
+   "title": "An Energy Independent Scaling of Transverse Momentum Spectra of Direct (Prompt) Photons from Two-Body Processes in High-Energy Proton–Proton Collisions"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2146591,
+   "title": "Study of prompt photon production at the CERN LHC energies"
+  },
+  {
+   "arxiv": "2312.11307",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2738734,
+   "title": "New Constraint for Isotropic Lorentz Violation from LHC Data"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2148544,
+   "title": "Isolated Photon Hadron Correlations in √sNN = 5.02 TeV pp and p–Pb Collisions"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2910890,
+   "title": "New Constraint for Isotropic Lorentz Violation from LHC Data"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2874054,
+   "title": "Sensitivity of direct photon production to isolation cut criteria in relativistic nuclear collisions"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2027160,
+   "title": "Isolated photon production and correlations in pp and p-Pb collisions with the ALICE detector at LHC"
+  },
+  {
+   "arxiv": "2205.05104",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2079960,
+   "title": "Precision boson-jet azimuthal decorrelation at hadron colliders"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2631851,
+   "title": "Isolated photon cross section in pp collisions at $\\sqrt{s}$ = 8 TeV with the ALICE at LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3083062,
+   "title": "Supplemental material: Measurement of isolated prompt photon production in pp and p-Pb collisions at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2168862,
+   "title": "Automating antenna subtraction in color space"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2599706,
+   "title": "Automation of antenna subtraction in colour space"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3186736,
+   "title": "Standard Model summary plots - July 2026"
+  },
+  {
+   "arxiv": "2602.15928",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3121313,
+   "title": "A compendium of cold-nuclear matter baseline predictions in light-ion collisions"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2640860,
+   "title": "Probing the Initial State with Isolated-photon Production and Dijet Invariant Mass Distributions in Small Collision Systems with ALICE"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3154529,
+   "title": "Electroweak correction to gg→γγ"
+  },
+  {
+   "arxiv": "2312.14015",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2739928,
+   "title": "Quantum Chromodynamics"
+  },
+  {
+   "arxiv": "2212.14069",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2619261,
+   "title": "Three-loop helicity amplitudes for <math display=\"inline\"><mrow><mi>photon</mi><mo>+</mo><mtext>jet</mtext></mrow></math> production"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2909754,
+   "title": "Measurement of pairs of photons in LHC Run-2 proton-proton collisions with the ATLAS detector"
+  },
+  {
+   "arxiv": "2404.06829",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2775815,
+   "title": "Electroweak, QCD and flavour physics studies with ATLAS data from Run 2 of the LHC"
+  },
+  {
+   "arxiv": "2509.15315",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2971505,
+   "title": "Analytic two-loop amplitudes for di-jet and γ+jet production mediated by a heavy-quark loop"
+  },
+  {
+   "arxiv": "2511.07599",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3081675,
+   "title": "Prompt diphoton production compared to measurements at 13 TeV in <math display=\"inline\"><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>T</mi></mrow></msub></mrow></math>-factorization: A comparative analysis of unintegrated PDF models"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2916317,
+   "title": "Production of Single Isolated Photons in the Parton Reggeization Approach"
+  },
+  {
+   "arxiv": "2312.09644",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2737726,
+   "title": "Direct photon pT spectra and correlations measured with ALICE"
+  },
+  {
+   "arxiv": "2202.07738",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2033545,
+   "title": "Non-local slicing approaches for NNLO QCD in MCFM"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2832808,
+   "title": "Supplemental figures:  Measurement of the inclusive isolated-photon production cross section in pp and Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3139804,
+   "title": "Direct-Photon Production in p-Pb Collisions Measured with ALICE/PHOS"
+  },
+  {
+   "arxiv": "2312.14145",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2739971,
+   "title": "Two-loop mixed QCD-electroweak amplitudes for Z+jet production at the LHC: bosonic corrections"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2748291,
+   "title": "W, Z, and QCD"
+  },
+  {
+   "arxiv": "2412.01710",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2854639,
+   "title": "Associated production of J∕ψ and direct photon in the NRQCD and the ICEM using the high-energy factorization"
+  },
+  {
+   "arxiv": "2402.08057",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2758020,
+   "title": "Idealised Antenna Functions for Higher Order QCD Calculations"
+  },
+  {
+   "arxiv": "2211.14171",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2593322,
+   "title": "Measurement of $Z\\gamma \\gamma $ production in pp collisions at $\\sqrt{s}= 13$ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2605.13257",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3155197,
+   "title": "NLO QCD and parton-shower effects for Higgs-boson production in association with a hard photon via vector-boson fusion"
+  },
+  {
+   "arxiv": "2610.13633",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3213799,
+   "title": "nCTEQ26 nuclear parton distribution functions"
+  },
+  {
+   "arxiv": "2604.04049",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3139419,
+   "title": "Associated production of $J/ψ$ mesons and photons in the Parton Reggeization Approach and the double parton scattering model"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2152547,
+   "title": "Precise Predictions for Jets and Tracks"
+  },
+  {
+   "arxiv": "2604.25490",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3149757,
+   "title": "Les Houches study on inclusive jet production at NNLO+NNLL"
+  },
+  {
+   "arxiv": "2608.14419",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3191280,
+   "title": "NNLO QCD corrections to $WWγ$ production at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2710819,
+   "title": "Measurement of $Z\\gamma\\gamma$ production in pp collisions at $\\sqrt{s}$ = 13 TeV with the ATLAS detector."
+  },
+  {
+   "arxiv": "2503.00019",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2896196,
+   "title": "Self-Interacting Gravitational Exciton Condensates from Extra-Dimensional Stabilization"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2695076,
+   "title": "Standard model measurements at the LHC"
+  },
+  {
+   "arxiv": "2607.03892",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3177923,
+   "title": "Measurement of isolated prompt photon production in $p$+$p$ collisions at $\\sqrt{s} = 200$ GeV with the sPHENIX detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2106994,
+   "title": "Review of Particle Physics"
+  },
+  {
+   "arxiv": "2502.18054",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2895564,
+   "title": "Measurement of isolated prompt photon production in pp and p–Pb collisions at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2817040,
+   "title": "Review of particle physics"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3154525,
+   "title": "Applications of N-Jettiness Subtraction to NLO QED and NNLO QED-QCD Calculations at Hadron Colliders"
+  },
+  {
+   "arxiv": "2607.04059",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3177542,
+   "title": "Phenomenological Extraction of Fragmentation Functions in a $p\\bar{p}$ Environment"
+  },
+  {
+   "arxiv": "2203.13531",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2058537,
+   "title": "Automation of antenna subtraction in colour space: gluonic processes"
+  },
+  {
+   "arxiv": "2306.03918",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2666904,
+   "title": "Quantifying the interplay of experimental constraints in analyses of parton distributions"
+  },
+  {
+   "arxiv": "2608.14793",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3191572,
+   "title": "Energy Correlators in $V + X$ as a Benchmark Observable for Precision QCD"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3087815,
+   "title": "Study of photon isolation and search for axion-like particles decaying into collimated photon pairs using machine learning with the ATLAS detector at the LHC"
+  },
+  {
+   "arxiv": "2306.16968",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2672891,
+   "title": "Associated production of a top-quark pair with two isolated photons at the LHC through NLO in QCD"
+  },
+  {
+   "arxiv": "2508.21660",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2964952,
+   "title": "Probing the coupling of axions to tops and gluons with LHC measurements"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3168263,
+   "title": "Étude des symétries fondamentales du Modèle standard : vérification de l'universalité des saveurs des leptons dans le secteur du quark top à l'aide de CMS et contraintes sur la violation de l'invariance de Lorentz à partir des données de la deuxième campagne du LHC"
+  },
+  {
+   "arxiv": "2410.09033",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2839391,
+   "title": "Prospects for sub-EW-scale ALP searches via <math display=\"inline\"><mi>γ</mi><mo>+</mo><mi>b</mi><mover accent=\"true\"><mi>b</mi><mo stretchy=\"false\">¯</mo></mover></math> signatures at the LHC using jet substructure techniques"
+  },
+  {
+   "arxiv": "2112.11266",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 1994965,
+   "title": "Determination of the parton distribution functions of the proton using diverse ATLAS data from $pp$ collisions at $\\sqrt{s} = 7$, 8 and 13 TeV"
+  },
+  {
+   "arxiv": "2203.05506",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2049642,
+   "title": "The PDF4LHC21 combination of global PDF fits for the LHC Run III"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2668603,
+   "title": "Systematic studies on the nuclear parton distribution with photon and hadron productions in nuclear collisions at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2693327,
+   "title": "Nucleon and pion gluon parton distribution function from lattice QCD calculation"
+  },
+  {
+   "arxiv": "2503.21866",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2905639,
+   "title": "Small radius inclusive jet production at the LHC through NNLO+NNLL"
+  },
+  {
+   "arxiv": "2310.19757",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2715745,
+   "title": "The colourful antenna subtraction method"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2846001,
+   "title": "Precise modeling of prompt photons in associated top-quark pair production"
+  },
+  {
+   "arxiv": "2207.02122",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2106086,
+   "title": "Les Houches 2021—physics at TeV colliders: report on the standard model precision wishlist"
+  },
+  {
+   "arxiv": "2405.18661",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2791238,
+   "title": "Stairway to discovery: A report on the CMS programme of cross section measurements from millibarns to femtobarns"
+  },
+  {
+   "arxiv": "2403.02793",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2765017,
+   "title": "Differential cross-sections for events with missing transverse momentum and jets measured with the ATLAS detector in 13 TeV proton-proton collisions"
+  },
+  {
+   "arxiv": "2503.22804",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2906156,
+   "title": "NNLOJET: A parton-level event generator for jet cross sections at NNLO QCD accuracy"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2914570,
+   "title": "The Black Book of Quantum Chromodynamics — A Primer for the LHC Era"
+  },
+  {
+   "arxiv": "2511.08773",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3082170,
+   "title": "Electromagnetic radiation from baryon-rich matter in heavy-ion collisions"
+  },
+  {
+   "arxiv": "2504.06689",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2909891,
+   "title": "Les Houches 2023 – physics at TeV colliders: Report on the Standard Model precision wishlist"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2661418,
+   "title": "Physics of the ALICE Forward Calorimeter upgrade"
+  },
+  {
+   "arxiv": "2203.11110",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2055764,
+   "title": "Event generators for high-energy physics experiments"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2744663,
+   "title": "Probing elementary particles at the CMS experiment"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2774721,
+   "title": "Semihard QCD Processes beyond the Collinear Approximation"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2851488,
+   "title": "Measurement of differential cross sections in 𝒕𝒕 and 𝒕𝒕+jets production in the lepton+jets decay mode in 𝒑𝒑 collisions at $\\sqrt{s}$ = 𝟏𝟑 TeV using 140 fb$^{-1}$ of ATLAS data including the extraction of $\\alpha_s\" and in situ calibration of jets"
+  },
+  {
+   "arxiv": "2311.00450",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2716241,
+   "title": "Nuclear Parton Distribution Functions After the First Decade of LHC Data"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2746050,
+   "title": "Singularities of Feynman diagrams and their local cancellation in collider cross-sections"
+  },
+  {
+   "arxiv": "2606.22007",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 3170903,
+   "title": "Monte Carlo event generators for future lepton colliders"
+  },
+  {
+   "arxiv": "2203.13923",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2059340,
+   "title": "Snowmass 2021 Whitepaper: Proton Structure at the Precision Frontier"
+  },
+  {
+   "arxiv": "2504.05820",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2896969,
+   "title": "A high-resolution imaging of the collinear substructure of the proton"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2701191,
+   "title": "Experimental exploration of the 3D nucleon structure"
+  },
+  {
+   "arxiv": "2212.11107",
+   "channels": [],
+   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
+   "recid": 2617065,
+   "title": "50 Years of Quantum Chromodynamics"
+  }
+ ]
+}

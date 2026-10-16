@@ -1,0 +1,11 @@
+id: "amp:2L/qqbar-gammag"
+process: "proc:isolated-photon"
+loops: 2
+corrections: QCD
+status: done
+evaluation:
+  kind: analytic
+  detail: "finite remainders in logarithms and polylogarithms, real in the physical region"
+  provenance: {uid: 1528c78b, ref: "inspire:582359", locator: "Abstract (two-loop QCD corrections for qq̄ → gγ and crossings; finite remainders in logarithms and polylogarithms)", source: agent, status: agent-draft, date: "2026-10-16"}
+refs: ["inspire:582359"]
+provenance: {uid: 41f2f993, ref: "inspire:582359", locator: "Abstract (NNLO QCD virtual corrections for qq̄ → gγ, qq̄ → γγ and all crossing-related processes, massless, MS-bar)", source: agent, status: agent-draft, date: "2026-10-16"}
