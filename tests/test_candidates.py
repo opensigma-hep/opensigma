@@ -4,7 +4,10 @@ import urllib.parse
 from datetime import date
 from pathlib import Path
 
+import pytest
+
 from scripts import build
+from scripts.phenomap import candidates
 from scripts.phenomap.candidates import find, query_for
 
 MIN = Path(__file__).parent / "fixtures" / "repo_min"
@@ -58,8 +61,12 @@ def test_excludes_already_cited(tmp_path):
     assert out == {"proc:dy-nc": [{"recid": 4242, "title": "New paper", "arxiv": "2601.00042", "matched_by": q}]}
     assert json.loads((root / "candidates.json").read_text(encoding="utf-8")) == out
     text = (root / DY).read_text(encoding="utf-8")
-    assert "# keep me" in text and "last_run: '2026-10-16'" in text
+    assert "# keep me" in text and "last_run: '2026-10-15'" in text  # day before: strict `de >` re-covers today
     assert build.main(["--root", str(root), "--check", "--offline", "--today", "2026-10-16"]) == 0
+    # next run re-finds the same paper: merged by recid, no duplicate
+    fetch = FakeFetch({"hits": {"hits": [_hit(4242, "New paper", "2601.00042")]}})
+    assert find(root, None, fetch, today=TODAY, sleep=lambda s: None) == out
+    assert _query(fetch.urls[0]).endswith("and de > 2026-10-15")
 
 
 def test_merge_keeps_channel_tags(tmp_path):
@@ -92,3 +99,24 @@ def test_paginates_dry_run_and_skips_unwatched(tmp_path):
     assert fetch.urls[1] == "https://inspirehep.net/api/literature?page=2"
     assert not (root / "candidates.json").exists() and (root / DY).read_text(encoding="utf-8") == before
     assert find(_repo(tmp_path / "b", watch=""), None, FakeFetch(), today=TODAY, sleep=lambda s: None) == {}
+
+
+def test_truncated_search_keeps_last_run(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(candidates, "MAX_RESULTS", 1)
+    root = _repo(tmp_path)
+    before = (root / DY).read_text(encoding="utf-8")
+    fetch = FakeFetch({"hits": {"hits": [_hit(1)]}, "links": {"next": "https://inspirehep.net/api/literature?page=2"}})
+    out = find(root, None, fetch, today=TODAY, sleep=lambda s: None)
+    assert [c["recid"] for c in out["proc:dy-nc"]] == [1] and len(fetch.urls) == 1
+    assert (root / DY).read_text(encoding="utf-8") == before  # last_run not advanced: truncated hits are retried
+    assert json.loads((root / "candidates.json").read_text(encoding="utf-8")) == out
+    assert "watch.last_run not advanced" in capsys.readouterr().err
+
+
+def test_explicit_ids_must_exist_and_be_watched(tmp_path):
+    with pytest.raises(ValueError, match="no process or family"):
+        find(_repo(tmp_path), ["proc:nope"], FakeFetch(), today=TODAY, sleep=lambda s: None)
+    unwatched = _repo(tmp_path / "b", watch="")
+    with pytest.raises(ValueError, match="no watch block.*proc:dy-nc"):
+        find(unwatched, ["proc:dy-nc"], FakeFetch(), today=TODAY, sleep=lambda s: None)
+    assert find(unwatched, ["fam:vector-bosons"], FakeFetch(), today=TODAY, sleep=lambda s: None) == {}
