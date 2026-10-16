@@ -157,3 +157,18 @@ def test_curl_get_raises_on_failure():
     run = lambda cmd, **kw: SimpleNamespace(returncode=22, stdout="", stderr="403")  # noqa: E731
     with pytest.raises(OSError, match="403"):
         hepdata.curl_get("https://www.hepdata.net/x", run=run)
+
+
+def test_total_column_is_used_not_double_counted():
+    t = {"dependent_variables": [{"values": [{"value": 10.0, "errors": [
+        {"label": "Total uncertainty", "symerror": 0.68}, {"label": "Syst. uncertainty", "symerror": 0.5}]}]}]}
+    assert hepdata.total_pct(t, 1) == pytest.approx(6.8)
+    assert [u["specific"] for u in hepdata.summarize(t, LABEL_MAP, REF)] == ["Syst. uncertainty"]
+    s = {"dependent_variables": [{"values": [{"value": 1.0, "errors": [{"label": "Stat.+Syst.", "symerror": 0.1}]}]}]}
+    assert hepdata.total_pct(s, 1) == pytest.approx(10.0) and hepdata.summarize(s, LABEL_MAP, REF) == []
+
+
+def test_unlabelled_error_does_not_crash():
+    t = {"dependent_variables": [{"values": [{"value": 2.0, "errors": [{"symerror": 0.2}]}]}]}
+    assert hepdata.total_pct(t, 1) == pytest.approx(10.0)
+    assert hepdata.summarize(t, LABEL_MAP, REF)[0]["specific"] == "error"
