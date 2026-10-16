@@ -32,15 +32,19 @@ def _headline_obs(channel):
     return next((o for o in channel.get("observables", []) if o["id"] == head), None)
 
 
-def _exp_pct(obs, measurements, include_projections) -> float | None:
-    """Smallest result total, skipping superseded/preliminary (and projected unless asked) measurements."""
+def _best_exp(obs, measurements, include_projections) -> tuple[float | None, str | None]:
+    """(smallest result total, its measurement id), skipping superseded/preliminary (and projected unless asked) measurements."""
     vals = []
     for r in obs.get("results", []):
         m = measurements.get(r["measurement"], {})
         if m.get("superseded_by") or m.get("preliminary") or (m.get("projected") and not include_projections):
             continue
-        vals.append(r["total"]["value_pct"])
-    return min(vals, default=None)
+        vals.append((r["total"]["value_pct"], r["measurement"]))
+    return min(vals, default=(None, None), key=lambda v: v[0])
+
+
+def _exp_pct(obs, measurements, include_projections) -> float | None:
+    return _best_exp(obs, measurements, include_projections)[0]
 
 
 def _th_pct(obs) -> float | None:
@@ -151,8 +155,9 @@ def derive(repo: dict, today: date) -> dict:
                 add(m["id"], "meas", f"{m['experiment']} {m['dataset']}", m, [m["experiment"]])
             for o in observables:
                 parents[o["id"]] = cid
-                summary[o["id"]] = {"exp_pct": _exp_pct(o, meas, False),
-                                    "exp_pct_with_projections": _exp_pct(o, meas, True), "th_pct": _th_pct(o)}
+                (exp, exp_m), (exp_p, exp_pm) = _best_exp(o, meas, False), _best_exp(o, meas, True)
+                summary[o["id"]] = {"exp_pct": exp, "exp_measurement": exp_m, "exp_pct_with_projections": exp_p,
+                                    "exp_measurement_with_projections": exp_pm, "th_pct": _th_pct(o)}
                 add(o["id"], "obs", o["name"], o, [o.get("variable", ""), *_accuracy_labels(o)])
                 for p in o.get("predictions", []):
                     for amp in p.get("uses_amplitudes", []):

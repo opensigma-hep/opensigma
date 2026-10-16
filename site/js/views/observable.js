@@ -1,5 +1,5 @@
 import { el, none, link, idLink, index, breadcrumb, refLink, refList, prov, bbTable, copyButton, facts, measTable, sep } from '../leaf.js';
-import { accuracyChips, fmtSize, parseRegionValue } from '../format.js';
+import { accuracyChips, fmtSize, parseRegionValue, parseTargetPct } from '../format.js';
 import { collectBibtex } from '../bibtex.js';
 
 // Which experimental result the budget shows; kept while the observable stays the same.
@@ -16,7 +16,7 @@ export function render(main, data, route) {
   const preds = obs.predictions ?? [];
   const head = preds.find((p) => p.headline) ?? preds[0];
   const sum = data.derived.observable_summary?.[obs.id] ?? {};
-  const best = results.find((r) => sum.exp_pct != null && r.total.value_pct === sum.exp_pct);
+  const best = results.find((r) => r.measurement === sum.exp_measurement);
   if (S.id !== obs.id) S = { id: obs.id, i: Math.max(0, results.indexOf(best)) };
 
   main.replaceChildren(
@@ -41,11 +41,11 @@ export function render(main, data, route) {
 }
 
 function headline(data, sum, head, best, target) {
-  const tnum = parseFloat(target?.required_total);
+  const tnum = parseTargetPct(target?.required_total);
   const rows = [
     ['Theory (headline prediction)', sum.th_pct, sum.th_pct != null && pct(sum.th_pct), head?.total?.provenance],
     ['Best experiment', sum.exp_pct, sum.exp_pct != null && pct(sum.exp_pct), best?.total?.provenance],
-    ['Theory target (required)', Number.isFinite(tnum) ? tnum : null, target?.required_total, target?.provenance],
+    ['Theory target (required)', tnum, target?.required_total, target?.provenance],
   ];
   const max = Math.max(...rows.map((r) => r[1] ?? 0));
   const strip = el('div', { className: 'strip' });

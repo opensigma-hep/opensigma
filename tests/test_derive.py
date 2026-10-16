@@ -53,7 +53,8 @@ def test_ratio_excludes_superseded_preliminary_and_projected():
     assert cell["ratio"] == 2.0 and cell["ratio_with_projections"] == 20.0
     assert cell["n_measurements"] == 4
     s = derive(repo, TODAY)["observable_summary"][obs["id"]]
-    assert s == {"exp_pct": 0.5, "exp_pct_with_projections": 0.05, "th_pct": 1.0}
+    assert s == {"exp_pct": 0.5, "exp_measurement": MEAS, "exp_pct_with_projections": 0.05,
+                 "exp_measurement_with_projections": _mid(3), "th_pct": 1.0}
 
 
 def test_ratio_none_without_headline():
