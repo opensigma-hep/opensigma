@@ -19,7 +19,7 @@ from ruamel.yaml import YAML
 from scripts.assign_uids import PATTERNS
 
 WANT = set(sys.argv[1:])  # optional uid filter
-HIDE = {"value", "required_total", "current_total", "status"}  # string-valued claims; numbers are hidden too
+HIDE = {"value", "required_total", "current_total", "status", "kind", "detail"}  # string-valued claims; numbers are hidden too
 
 def data(text):
     out = {}

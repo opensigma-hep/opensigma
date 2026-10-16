@@ -8,7 +8,7 @@ master_integrals:
   refs: ["inspire:2001831"]
 evaluation:
   kind: analytic
-  detail: "masters as multiple polylogarithms in the physical region; Armadillo et al. 2022: 5 two-mass masters by DE series expansion"
+  detail: "box-type masters as multiple polylogarithms in the physical regions"
   provenance: {uid: '11502e24', ref: "inspire:1836186", locator: "Sec. 1 (box-type masters as linear combinations of multiple polylogarithms in the physical regions)", source: agent, status: agent-draft, date: "2026-10-16"}
 refs: ["inspire:1836186", "inspire:2001831"]
 provenance: {uid: 2f2a34d2, ref: "inspire:2001831", locator: "Abstract (two-loop mixed QCD-EW virtual corrections to NC Drell-Yan; all Feynman integrals with up to two internal massive lines evaluated, complex masses)", source: agent, status: cross-checked, date: "2026-10-16"}

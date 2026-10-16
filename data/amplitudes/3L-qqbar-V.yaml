@@ -8,7 +8,7 @@ master_integrals:
   refs: ["inspire:852545"]
 evaluation:
   kind: analytic
-  detail: "ζ values; finite parts of masters A9,2 and A9,4 fixed by high-precision numerics + PSLQ (Lee–Smirnov–Smirnov 2010)"
-  provenance: {uid: cf004c51, ref: "inspire:852545", locator: "Sec. 1 and Sec. 4 (nine-line masters A9,2, A9,4: analytic result of ref. [41], numerics + PSLQ)", source: agent, status: agent-draft, date: "2026-10-16"}
+  detail: "ζ values; A9,2/A9,4 finite parts from Lee–Smirnov–Smirnov, a derivation by purely analytic steps (no fit to numerics) still open"
+  provenance: {uid: cf004c51, ref: "inspire:852545", locator: "Sec. 4 (nine-line masters A9,2, A9,4: analytic result of ref. [41]; derivation by purely analytic steps without fitting to numerics still open)", source: agent, status: agent-draft, date: "2026-10-16"}
 refs: ["inspire:813829", "inspire:852545"]
 provenance: {uid: a14dc060, ref: "inspire:852545", locator: "Abstract (three-loop quark form factor, reduced to known master integrals; confirms Baikov et al.)", source: agent, status: cross-checked, date: "2026-10-16"}
