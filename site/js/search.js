@@ -12,7 +12,7 @@ export function normalize(s) {
 }
 
 export function search(index, q, limit = 20) {
-  const toks = q.split(/\s+/).filter(Boolean).map(normalize);
+  const toks = q.split(/\s+/).map(normalize).filter(Boolean); // "_" normalises to ""
   if (!toks.length) return [];
   const hits = [];
   for (const e of index) {

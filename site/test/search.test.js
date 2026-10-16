@@ -44,3 +44,8 @@ test('empty query and limit', () => {
   assert.deepEqual(search(idx, '  '), []);
   assert.equal(search(idx, 'a', 2).length, 2);
 });
+
+test('query that normalises to empty matches nothing', () => {
+  assert.deepEqual(ids('_'), []);
+  assert.deepEqual(ids('alpha _'), ids('alpha'));
+});
