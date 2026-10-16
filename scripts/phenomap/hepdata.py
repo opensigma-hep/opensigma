@@ -5,6 +5,7 @@ import urllib.parse
 from datetime import date
 
 from ruamel.yaml import YAML
+from ruamel.yaml.error import YAMLError
 
 
 # HEPData's Cloudflare returns 403 to urllib (even with an honest UA) but 200 to curl: all HEPData HTTP goes through curl.
@@ -16,14 +17,26 @@ def curl_get(url: str, run=subprocess.run) -> str:
 
 
 def curl_status(url: str, run=subprocess.run) -> int:
-    """HTTP status of a HEAD request via curl; 0 on transport failure."""
-    r = run(["curl", "-sS", "-I", "-L", "--max-time", "60", "-o", "/dev/null", "-w", "%{http_code}", url], capture_output=True, text=True)
-    return int(r.stdout) if r.returncode == 0 and r.stdout.strip().isdigit() else 0
+    """HTTP status of a HEAD request via curl; 0 on transport failure.
+
+    HEPData answers a missing /yaml table download with 200 + an HTML page: that is reported as 404.
+    """
+    r = run(["curl", "-sS", "-I", "-L", "--max-time", "60", "-o", "/dev/null", "-w", "%{http_code} %{content_type}", url], capture_output=True, text=True)
+    code, _, ctype = r.stdout.strip().partition(" ")
+    if r.returncode or not code.isdigit():
+        return 0
+    return 404 if code == "200" and url.endswith("/yaml") and ctype.startswith("text/html") else int(code)
 
 
 def fetch_table(recid: int, table: str, version: int = 1, fetch=curl_get) -> dict:
     url = f"https://www.hepdata.net/download/table/ins{recid}/{urllib.parse.quote(table)}/{version}/yaml"
-    return YAML(typ="safe").load(fetch(url))
+    try:
+        t = YAML(typ="safe").load(fetch(url))
+    except YAMLError:
+        t = None
+    if not (isinstance(t, dict) and "dependent_variables" in t):  # a missing table comes back as 200 + HTML
+        raise ValueError(f"{url}: not a HEPData YAML table (wrong table name or version?)")
+    return t
 
 
 def round_sig(x: float, n: int = 2) -> float:

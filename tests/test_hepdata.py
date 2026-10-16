@@ -128,12 +128,28 @@ def test_curl_get_and_status_use_curl_without_user_agent():
 
     def run(cmd, **kw):
         calls.append(cmd)
-        return SimpleNamespace(returncode=0, stdout="200" if "-I" in cmd else "yaml: body", stderr="")
+        return SimpleNamespace(returncode=0, stdout="200 application/yaml" if "-I" in cmd else "yaml: body", stderr="")
 
     assert hepdata.curl_get("https://www.hepdata.net/x", run=run) == "yaml: body"
     assert hepdata.curl_status("https://www.hepdata.net/x", run=run) == 200
     assert all(c[0] == "curl" and "https://www.hepdata.net/x" in c for c in calls)
     assert not any("agent" in a.lower() or a == "-A" for c in calls for a in c)
+
+
+@pytest.mark.parametrize("url,out,status", [
+    ("https://www.hepdata.net/download/table/ins1/Nope/1/yaml", "200 text/html; charset=utf-8", 404),
+    ("https://www.hepdata.net/record/ins1", "200 text/html; charset=utf-8", 200),
+    ("https://www.hepdata.net/x", "", 0),
+])
+def test_curl_status_html_for_yaml_download_is_404(url, out, status):
+    from types import SimpleNamespace
+    assert hepdata.curl_status(url, run=lambda cmd, **kw: SimpleNamespace(returncode=0, stdout=out, stderr="")) == status
+
+
+@pytest.mark.parametrize("body", ["<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n", "<html><body>Not found</body></html>"])
+def test_fetch_table_rejects_html(body):
+    with pytest.raises(ValueError, match="not a HEPData YAML table"):
+        hepdata.fetch_table(1, "Nope", fetch=lambda url: body)
 
 
 def test_curl_get_raises_on_failure():
