@@ -1,6 +1,7 @@
 """CLI: python -m scripts.build [--root data] [--out site/data.json] [--check] [--offline] [--today YYYY-MM-DD]."""
 import argparse
 import json
+import re
 import subprocess
 import sys
 from datetime import date
@@ -22,10 +23,23 @@ def _git_sha() -> str | None:
         return None
 
 
+DOI_RE = re.compile(r"^10\.\d{4,}/\S+$")
+
+
 def _release(root: Path) -> dict | None:
-    """{version, doi, concept_doi} from <root>/release.yaml, or None while unreleased."""
+    """{version, doi, concept_doi} from <root>/release.yaml, or None while unreleased; ValueError if malformed."""
     p = root / "release.yaml"
-    return _plain(YAML(typ="safe").load(p.read_text(encoding="utf-8"))) if p.exists() else None
+    if not p.exists():
+        return None
+    rel = _plain(YAML(typ="safe").load(p.read_text(encoding="utf-8")))
+    if not isinstance(rel, dict):
+        raise ValueError("must be a mapping {version, doi, concept_doi}")
+    if not (isinstance(rel.get("version"), str) and rel["version"].strip()):
+        raise ValueError("version must be a non-empty string")
+    for k in ("doi", "concept_doi"):
+        if not (isinstance(rel.get(k), str) and DOI_RE.match(rel[k])):
+            raise ValueError(f"{k} must be a bare DOI like 10.5281/zenodo.123, got {rel.get(k)!r}")
+    return rel
 
 
 def main(argv=None) -> int:
@@ -46,6 +60,11 @@ def main(argv=None) -> int:
     for i in issues:
         print(f"{i.level.upper()} {i.file} {i.path}: {i.msg}")
         failed |= i.level == "error"
+    try:
+        release = _release(root)
+    except ValueError as e:
+        print(f"ERROR release.yaml: {e}")
+        failed = True
 
     errors: dict = {}
     for ref in update_cache(root, a.offline, errors=errors):
@@ -56,7 +75,7 @@ def main(argv=None) -> int:
 
     repo = load_repo(root)  # refs.json may have been refreshed online
     if not a.check:
-        out = {"build": {"date": today.isoformat(), "git_sha": _git_sha(), "release": _release(root)}, **_plain(repo), "derived": derive(repo, today)}
+        out = {"build": {"date": today.isoformat(), "git_sha": _git_sha(), "release": release}, **_plain(repo), "derived": derive(repo, today)}
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
         Path(a.out).write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return 0

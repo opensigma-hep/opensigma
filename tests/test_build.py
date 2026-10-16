@@ -88,3 +88,11 @@ def test_build_with_unquoted_yaml_date(tmp_path):
     assert build.main(["--root", str(root), "--out", str(out), "--offline", "--today", "2026-10-16"]) == 0
     chan = json.loads(out.read_text(encoding="utf-8"))["processes"][0]["channels"][0]
     assert chan["last_reviewed"] == "2026-10-01"
+
+
+def test_build_rejects_malformed_release(tmp_path, capsys):
+    root = tmp_path / "repo"
+    shutil.copytree(MIN, root)
+    (root / "release.yaml").write_text('{version: "v2026.10", concept_doi: "10.5281/zenodo.1"}\n', encoding="utf-8")
+    assert build.main(["--root", str(root), "--out", str(tmp_path / "d.json"), "--offline"]) == 1
+    assert "ERROR release.yaml: doi must be a bare DOI" in capsys.readouterr().out
