@@ -31,17 +31,6 @@ def test_min_fixture_clean():
     assert validate(load_repo(MIN), SCHEMA) == []
 
 
-@pytest.mark.parametrize("field, value", [
-    ("compared_to", ["meas:nope"]),
-    ("uses_amplitudes", ["amp:nope"]),
-])
-def test_dangling_prediction_refs(field, value):
-    repo, _, obs = _repo()
-    obs["predictions"][0][field] = value
-    e = _one(repo, value[0])
-    assert e.file == DY and DY in e.msg
-
-
 def test_dangling_compared_to():
     repo, _, obs = _repo()
     obs["predictions"][0]["compared_to"] = ["meas:dy-nc/lhc-13/ghost"]
