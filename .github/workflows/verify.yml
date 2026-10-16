@@ -1,15 +1,15 @@
 name: verify
 # Crowd verification: a ✓/⚑ issue form -> status-only bot PR -> auto-merge once CI is green.
 # Needs repo secrets BOT_APP_ID / BOT_PRIVATE_KEY (GitHub App with contents, issues, pull-requests: write),
-# "Allow auto-merge" enabled, and a branch-protection rule on main requiring the `ci` check.
+# "Allow auto-merge" enabled, a branch-protection rule on main requiring the `ci` check, the issue labels
+# `verify` and `flag` (they must exist in the repo), and the repo variable FLAG_ASSIGNEE (GitHub user that gets
+# flags for families without `maintainers`; an org owner cannot be assigned). Verify PRs say "Closes #n"; flag PRs
+# say "Refs #n" so the dispute issue stays open for its maintainer.
 on:
   issues:
     types: [opened]
 permissions:
   contents: read
-concurrency:
-  group: verify-data  # one data edit at a time: every run starts from the latest main
-  cancel-in-progress: false
 jobs:
   apply:
     if: contains(github.event.issue.labels.*.name, 'verify') || contains(github.event.issue.labels.*.name, 'flag')
@@ -29,6 +29,7 @@ jobs:
       - run: pip install -e .
       - id: apply
         name: Parse the issue and apply the edit
+        shell: bash  # -o pipefail: a crash in the CLI must not be hidden by `tee`
         env:
           GH_TOKEN: ${{ steps.app.outputs.token }}
           ISSUE_BODY: ${{ github.event.issue.body }}
@@ -56,22 +57,30 @@ jobs:
           git config user.name "${SLUG}[bot]"
           git config user.email "${bot_id}+${SLUG}[bot]@users.noreply.github.com"
           branch="verify/${UID_}-${ISSUE}"
+          n=$(git diff --name-only | wc -l)
+          if [ "$n" -eq 0 ]; then echo "already linked: nothing to commit"; exit 0; fi
+          test "$n" -eq 1 && git diff --name-only | grep -q '^data/' || { echo "unexpected diff:"; git diff --stat; exit 1; }
           git checkout -b "$branch"
           python -m scripts.build --check --offline
           git add data
           git commit -m "data: $ACTION $UID_ (#$ISSUE)"
           git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "data: $ACTION $UID_ (#$ISSUE)" --body "Closes #$ISSUE"
+          # a flag leaves its issue open for the maintainer; a verify is done once merged
+          if [ "$ACTION" = flag ]; then kw=Refs; else kw=Closes; fi
+          gh pr create --base main --head "$branch" --title "data: $ACTION $UID_ (#$ISSUE)" --body "$kw #$ISSUE"
           gh pr merge "$branch" --auto --squash
-      - name: Assign flags to the family maintainers (owner as fallback)
+      - name: Assign flags to the family maintainers (or FLAG_ASSIGNEE)
         if: steps.apply.outputs.action == 'flag' && (steps.apply.outputs.outcome == 'edited' || steps.apply.outputs.outcome == 'already_disputed_linked')
-        continue-on-error: true  # e.g. owner is an organisation, not assignable
         env:
           GH_TOKEN: ${{ steps.app.outputs.token }}
-          MAINTAINERS: ${{ steps.apply.outputs.maintainers }}
-          OWNER: ${{ github.repository_owner }}
+          ASSIGNEES: ${{ steps.apply.outputs.maintainers || vars.FLAG_ASSIGNEE }}
           ISSUE: ${{ github.event.issue.number }}
-        run: gh issue edit "$ISSUE" --add-assignee "${MAINTAINERS:-$OWNER}"
+        run: |
+          if [ -n "$ASSIGNEES" ]; then
+            gh issue edit "$ISSUE" --add-assignee "$ASSIGNEES"
+          else
+            gh issue comment "$ISSUE" --body "No maintainer is configured for this family and the FLAG_ASSIGNEE variable is not set, so this flag is unassigned."
+          fi
       - name: Reject with a reason and close
         if: contains(fromJSON('["unknown_uid","same_user","too_young","unparseable"]'), steps.apply.outputs.outcome)
         env:
@@ -82,7 +91,16 @@ jobs:
           case "$OUTCOME" in
             unknown_uid) why="no datum with that uid exists (it may have been renamed or removed)." ;;
             same_user) why="you already verified this datum; a second verifier is needed." ;;
-            too_young) why="verifying requires a GitHub account at least 6 months old." ;;
+            too_young) why="verifying or flagging requires a GitHub account at least 6 months old." ;;
             *) why="the issue could not be read as a verify/flag form. Please use the ✓/⚑ buttons on the site and keep the prefilled fields." ;;
           esac
           gh issue close "$ISSUE" --reason "not planned" --comment "Not applied: $why"
+      - name: Internal error
+        if: always() && steps.apply.outputs.outcome == ''
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          ISSUE: ${{ github.event.issue.number }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh issue comment "$ISSUE" --body "Internal error while processing this issue, see $RUN_URL" || true
+          exit 1

@@ -81,9 +81,10 @@ def apply(root: Path, uid: str, action: str, user: str, issue_url: str, today: d
         pr.pop("issues", None)  # resolves a dispute
         pr.update(status="human-verified", verified_by=user, date=q(today.isoformat()), issue=q(issue_url))
     elif pr.get("status") == "disputed":
-        if issue_url not in (pr.get("issues") or []):
-            pr.setdefault("issues", []).append(q(issue_url))
         outcome = "already_disputed_linked"
+        if issue_url in (pr.get("issues") or []) or issue_url == pr.get("issue"):
+            return outcome  # already linked: leave the file untouched
+        pr.setdefault("issues", []).append(q(issue_url))
     else:
         pr.update(status="disputed", issue=q(issue_url))
     with path.open("w", encoding="utf-8") as f:

@@ -57,8 +57,9 @@ def test_unknown_uid(root):
 
 def test_young_account_rejected():
     now = datetime(2026, 10, 16, tzinfo=timezone.utc)
-    assert not verify.account_old_enough(datetime(2026, 4, 17, tzinfo=timezone.utc), now)  # 5 months 29 days
-    assert verify.account_old_enough(datetime(2026, 4, 16, tzinfo=timezone.utc), now)
+    created = datetime(2026, 4, 16, tzinfo=timezone.utc)
+    assert not verify.account_old_enough(created, datetime(2026, 10, 15, tzinfo=timezone.utc))  # 5 months 30 days
+    assert verify.account_old_enough(created, datetime(2026, 10, 16, tzinfo=timezone.utc))  # 6 months
     assert verify.account_old_enough(datetime(2025, 1, 1, tzinfo=timezone.utc), now)
 
 
@@ -99,6 +100,15 @@ def test_flag_on_disputed_appends_issue(root):
     p = prov(root)
     assert p["status"] == "disputed" and p["issue"] == URL and list(p["issues"]) == [url2]
     assert validate_schema(load_repo(root), SCHEMA) == []
+
+
+def test_flag_already_linked_url_is_noop(root):
+    run(root, action="flag")
+    run(root, action="flag", user="bob", issue_url=URL.replace("/7", "/9"))
+    before = (root / DY).read_text(encoding="utf-8")
+    for u in (URL, URL.replace("/7", "/9")):  # the first-dispute url and an appended one
+        assert run(root, action="flag", user="carol", issue_url=u) == "already_disputed_linked"
+        assert (root / DY).read_text(encoding="utf-8") == before
 
 
 def test_verify_resolves_dispute(root):
