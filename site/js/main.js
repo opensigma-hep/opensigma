@@ -1,12 +1,13 @@
 import { parseHash, toHash } from './router.js';
 import * as families from './views/families.js';
+import * as family from './views/family.js';
 import * as notfound from './views/notfound.js';
 import * as placeholder from './views/placeholder.js';
 
 // Later tasks replace the placeholder entries.
 const views = {
   families, notfound,
-  family: placeholder, process: placeholder, channel: placeholder, observable: placeholder,
+  family, process: placeholder, channel: placeholder, observable: placeholder,
   amplitude: placeholder, parameter: placeholder, about: placeholder, search: placeholder,
   measurement: placeholder, collider: placeholder,
 };
