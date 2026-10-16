@@ -1,0 +1,45 @@
+name: "Verify a number"
+description: "I checked this number against its source and it is correct."
+title: "Verify "
+labels: ["verify"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Confirm that you re-checked this number at the cited source (the **locator**).
+        Fields below are prefilled by the site; please do not change them.
+  - type: input
+    id: uid
+    attributes:
+      label: "Datum uid"
+    validations: {required: true}
+  - type: input
+    id: value
+    attributes:
+      label: "Value"
+  - type: input
+    id: locator
+    attributes:
+      label: "Locator"
+  - type: input
+    id: link
+    attributes:
+      label: "Source link(s)"
+      description: "Reference URL, optionally followed by the full-table URL (space-separated)."
+  - type: input
+    id: page
+    attributes:
+      label: "Page"
+  - type: dropdown
+    id: action
+    attributes:
+      label: "Action"
+      options: ["verify"]
+      default: 0
+    validations: {required: true}
+  - type: textarea
+    id: comment
+    attributes:
+      label: "Comment"
+      description: "What did you check, and where?"
+    validations: {required: true}

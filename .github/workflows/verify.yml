@@ -1,0 +1,88 @@
+name: verify
+# Crowd verification: a ✓/⚑ issue form -> status-only bot PR -> auto-merge once CI is green.
+# Needs repo secrets BOT_APP_ID / BOT_PRIVATE_KEY (GitHub App with contents, issues, pull-requests: write),
+# "Allow auto-merge" enabled, and a branch-protection rule on main requiring the `ci` check.
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: read
+concurrency:
+  group: verify-data  # one data edit at a time: every run starts from the latest main
+  cancel-in-progress: false
+jobs:
+  apply:
+    if: contains(github.event.issue.labels.*.name, 'verify') || contains(github.event.issue.labels.*.name, 'flag')
+    runs-on: ubuntu-latest
+    steps:
+      - id: app
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app.outputs.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - id: apply
+        name: Parse the issue and apply the edit
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          LABELS: ${{ join(github.event.issue.labels.*.name, ' ') }}
+          LOGIN: ${{ github.event.issue.user.login }}
+        run: |
+          case " $LABELS " in *" verify "*) action=verify ;; *) action=flag ;; esac
+          printf '%s' "$ISSUE_BODY" > "$RUNNER_TEMP/issue.md"
+          created_at=$(gh api "users/$LOGIN" --jq .created_at)
+          python -m scripts.apply_verification --root data --issue-body-file "$RUNNER_TEMP/issue.md" \
+            --user "$LOGIN" --created-at "$created_at" --issue-url "$ISSUE_URL" --action-label "$action" \
+            | tee -a "$GITHUB_OUTPUT"
+          echo "action=$action" >> "$GITHUB_OUTPUT"
+      - name: Branch, validate, commit, open PR, auto-merge
+        if: steps.apply.outputs.outcome == 'edited' || steps.apply.outputs.outcome == 'already_disputed_linked'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          SLUG: ${{ steps.app.outputs.app-slug }}
+          UID_: ${{ steps.apply.outputs.uid }}
+          ACTION: ${{ steps.apply.outputs.action }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          bot_id=$(gh api "users/${SLUG}[bot]" --jq .id)
+          git config user.name "${SLUG}[bot]"
+          git config user.email "${bot_id}+${SLUG}[bot]@users.noreply.github.com"
+          branch="verify/${UID_}-${ISSUE}"
+          git checkout -b "$branch"
+          python -m scripts.build --check --offline
+          git add data
+          git commit -m "data: $ACTION $UID_ (#$ISSUE)"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --title "data: $ACTION $UID_ (#$ISSUE)" --body "Closes #$ISSUE"
+          gh pr merge "$branch" --auto --squash
+      - name: Assign flags to the family maintainers (owner as fallback)
+        if: steps.apply.outputs.action == 'flag' && (steps.apply.outputs.outcome == 'edited' || steps.apply.outputs.outcome == 'already_disputed_linked')
+        continue-on-error: true  # e.g. owner is an organisation, not assignable
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          MAINTAINERS: ${{ steps.apply.outputs.maintainers }}
+          OWNER: ${{ github.repository_owner }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: gh issue edit "$ISSUE" --add-assignee "${MAINTAINERS:-$OWNER}"
+      - name: Reject with a reason and close
+        if: contains(fromJSON('["unknown_uid","same_user","too_young","unparseable"]'), steps.apply.outputs.outcome)
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          OUTCOME: ${{ steps.apply.outputs.outcome }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          case "$OUTCOME" in
+            unknown_uid) why="no datum with that uid exists (it may have been renamed or removed)." ;;
+            same_user) why="you already verified this datum; a second verifier is needed." ;;
+            too_young) why="verifying requires a GitHub account at least 6 months old." ;;
+            *) why="the issue could not be read as a verify/flag form. Please use the ✓/⚑ buttons on the site and keep the prefilled fields." ;;
+          esac
+          gh issue close "$ISSUE" --reason "not planned" --comment "Not applied: $why"

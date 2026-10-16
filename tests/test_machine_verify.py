@@ -4,6 +4,7 @@ from pathlib import Path
 from ruamel.yaml import YAML
 
 from scripts import machine_verify
+from scripts.assign_uids import _yaml
 from scripts.phenomap import hepdata
 
 FIX = Path(__file__).parent / "fixtures"
@@ -21,9 +22,7 @@ def make_root(tmp_path, stat_range=(2.0, 3.0), status="agent-draft", total=None)
     root = tmp_path / "data"
     shutil.copytree(FIX / "repo_min", root)
     p = root / "processes/vector-bosons/dy-nc.yaml"
-    y = YAML()
-    y.preserve_quotes = True
-    y.width = 4096
+    y = _yaml()
     doc = y.load(p.read_text(encoding="utf-8"))
     res = doc["channels"][0]["observables"][0]["results"][0]
     unc = res["uncertainties"][0]

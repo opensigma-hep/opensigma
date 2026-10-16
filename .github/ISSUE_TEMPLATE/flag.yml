@@ -1,0 +1,45 @@
+name: "Flag a number"
+description: "This number looks wrong or does not match its source."
+title: "Flag "
+labels: ["flag"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report that this number does not match the cited source. The value stays visible, marked as disputed.
+        Fields below are prefilled by the site; please do not change them.
+  - type: input
+    id: uid
+    attributes:
+      label: "Datum uid"
+    validations: {required: true}
+  - type: input
+    id: value
+    attributes:
+      label: "Value"
+  - type: input
+    id: locator
+    attributes:
+      label: "Locator"
+  - type: input
+    id: link
+    attributes:
+      label: "Source link(s)"
+      description: "Reference URL, optionally followed by the full-table URL (space-separated)."
+  - type: input
+    id: page
+    attributes:
+      label: "Page"
+  - type: dropdown
+    id: action
+    attributes:
+      label: "Action"
+      options: ["flag"]
+      default: 0
+    validations: {required: true}
+  - type: textarea
+    id: comment
+    attributes:
+      label: "Comment"
+      description: "What is wrong? Quote what the source says."
+    validations: {required: true}
