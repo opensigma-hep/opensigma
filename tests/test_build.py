@@ -77,3 +77,14 @@ def test_integrity_error_path_not_letter_split(tmp_path, capsys):
     build.main(["--root", str(root), "--out", str(tmp_path / "d.json"), "--offline"])
     out = capsys.readouterr().out
     assert "u/s/e/s" not in out and "/uses_amplitudes:" in out
+
+
+def test_build_with_unquoted_yaml_date(tmp_path):
+    root = tmp_path / "repo"
+    shutil.copytree(MIN, root)
+    f = root / "processes" / "vector-bosons" / "dy-nc.yaml"
+    f.write_text(f.read_text(encoding="utf-8").replace('last_reviewed: "2026-10-01"', "last_reviewed: 2026-10-01"), encoding="utf-8")
+    out = tmp_path / "data.json"
+    assert build.main(["--root", str(root), "--out", str(out), "--offline", "--today", "2026-10-16"]) == 0
+    chan = json.loads(out.read_text(encoding="utf-8"))["processes"][0]["channels"][0]
+    assert chan["last_reviewed"] == "2026-10-01"

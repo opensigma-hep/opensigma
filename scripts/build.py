@@ -11,15 +11,7 @@ from ruamel.yaml import YAML
 from scripts.phenomap.derive import derive
 from scripts.phenomap.load import load_repo
 from scripts.phenomap.refs import update_cache
-from scripts.phenomap.validate import validate
-
-
-def _strip(x):
-    if isinstance(x, dict):
-        return {k: _strip(v) for k, v in x.items() if k != "_file"}
-    if isinstance(x, list):
-        return [_strip(v) for v in x]
-    return x
+from scripts.phenomap.validate import _plain, validate
 
 
 def _git_sha() -> str | None:
@@ -33,7 +25,7 @@ def _git_sha() -> str | None:
 def _release(root: Path) -> dict | None:
     """{version, doi, concept_doi} from <root>/release.yaml, or None while unreleased."""
     p = root / "release.yaml"
-    return YAML(typ="safe").load(p.read_text(encoding="utf-8")) if p.exists() else None
+    return _plain(YAML(typ="safe").load(p.read_text(encoding="utf-8"))) if p.exists() else None
 
 
 def main(argv=None) -> int:
@@ -64,7 +56,7 @@ def main(argv=None) -> int:
 
     repo = load_repo(root)  # refs.json may have been refreshed online
     if not a.check:
-        out = {"build": {"date": today.isoformat(), "git_sha": _git_sha(), "release": _release(root)}, **_strip(repo), "derived": derive(repo, today)}
+        out = {"build": {"date": today.isoformat(), "git_sha": _git_sha(), "release": _release(root)}, **_plain(repo), "derived": derive(repo, today)}
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
         Path(a.out).write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return 0
