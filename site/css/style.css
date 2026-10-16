@@ -132,10 +132,15 @@ table.meas tr.projected td { font-style: italic; }
 table.meas tr.superseded td { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
 table.meas tr.superseded td:last-child { text-decoration: none; }
 table.meas tr.preliminary td:first-child::after { content: " (prelim.)"; color: var(--muted); }
-table.bb td { min-width: 6rem; }
-table.bb td.bb-done { background: var(--good-bg); }
-table.bb td.bb-partial { background: var(--chip-bg); }
-table.bb td.bb-missing { background: var(--bad-bg); }
+table.bb td { min-width: 9rem; }
+.stamp { --st: var(--good); display: flex; flex-direction: column; gap: .35rem; padding: .4rem .5rem;
+  border: 1.5px solid var(--st); border-radius: 8px; background: var(--good-bg); }
+.stamp.bb-partial { --st: var(--accent); background: var(--chip-bg); }
+.stamp.bb-missing { --st: var(--bad); background: var(--bad-bg); }
+.stamp-head { align-self: flex-start; color: var(--st); font-weight: 700; font-size: .8rem; letter-spacing: .08em;
+  text-transform: uppercase; border: 1.5px solid var(--st); border-radius: 5px; padding: 0 .4rem; }
+.stamp-note { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: .25rem .4rem; font-size: .8125rem; }
+.stamp .small { color: var(--fg); }
 svg.budget { width: 100%; height: auto; display: block; max-width: 40rem; }
 svg.budget text { fill: var(--fg); font: 13px system-ui, sans-serif; }
 svg.budget .axis text { fill: var(--muted); font-size: 11px; }

@@ -95,11 +95,17 @@ export function bbTable(proc, refs) {
     for (const c of BB_COLS) {
       const cell = r.cells?.[c];
       if (!cell) { tr.append(el('td', { className: 'empty' })); continue; }
-      tr.append(el('td', { className: 'bb-' + cell.status },
-        cell.amplitude ? link(cell.amplitude, cell.status) : cell.status,
-        cell.approximations?.length ? el('div', { className: 'small' }, cell.approximations.join(', ')) : null,
+      // Stamp: status word, then a note box (approximations, amplitude link) only when there is something to say.
+      const note = cell.approximations?.length || cell.amplitude
+        ? el('div', { className: 'stamp-note' },
+          cell.approximations?.length ? el('div', {}, cell.approximations.join(', ')) : null,
+          cell.amplitude ? el('div', {}, link(cell.amplitude, 'amplitude →')) : null)
+        : null;
+      tr.append(el('td', {}, el('div', { className: 'stamp bb-' + cell.status },
+        el('div', { className: 'stamp-head' }, cell.status),
+        note,
         cell.refs?.length ? el('div', { className: 'small' }, ...refList(cell.refs, refs)) : null,
-        el('div', {}, prov(cell.provenance, `${r.row} ${c}: ${cell.status}`))));
+        el('div', {}, prov(cell.provenance, `${r.row} ${c}: ${cell.status}`)))));
     }
     body.append(tr);
   }
