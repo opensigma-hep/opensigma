@@ -14,11 +14,15 @@ jobs:
           fetch-depth: 0
       - id: data
         name: Detect data/ changes
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          BEFORE: ${{ github.event.before }}
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            base="origin/${{ github.base_ref }}"
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            base="origin/$BASE_REF"
           else
-            base="${{ github.event.before }}"
+            base="$BEFORE"
           fi
           # all-zeros `before` (new branch) or unknown base: treat as changed
           if [ -z "${base//0/}" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
@@ -41,6 +45,7 @@ jobs:
       - run: python -m scripts.build --check --offline
       - name: machine_verify (report-only)
         if: steps.data.outputs.changed == 'true'
+        continue-on-error: true
         run: python -m scripts.machine_verify
       - name: linkcheck
         if: steps.data.outputs.changed == 'true'
