@@ -8,6 +8,12 @@ const fresh = (id) => ({ id, mode: 'order', proj: false, colliders: null, minOrd
 
 const CW = 132, CH = 52, LW = 220, HH = 44;
 
+// Label column wide enough for the longest row label (canvas: the host is not in the DOM yet when first drawn).
+function labelWidth(texts) {
+  const ctx = document.createElement('canvas').getContext('2d');
+  return Math.max(LW, ...texts.map(([font, t]) => { ctx.font = font; return Math.ceil(ctx.measureText(t).width) + 24; }));
+}
+
 function el(tag, attrs = {}, ...kids) {
   const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) e[k] = v;
@@ -45,6 +51,8 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   host.replaceChildren();
   const cells = data.derived.cells, byKey = new Map();
   for (const [id, c] of Object.entries(cells)) byKey.set(c.process + '|' + c.collider, [id, c]);
+  const LW = labelWidth(rows.flatMap((p) => [['600 14px system-ui, sans-serif', procName[p]],
+    ...(procFam[p] !== fam.id ? [['11px system-ui, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])]));
   const W = LW + cols.length * CW, H = HH + rows.length * CH;
   const svg = d3.select(host).append('svg').attr('class', 'matrix').attr('width', W).attr('height', H)
     .attr('role', 'group').attr('aria-label', `${fam.name}: processes by collider`);
@@ -52,7 +60,7 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   svg.append('g').selectAll('text').data(cols).join('text').attr('class', 'colhead')
     .attr('x', (_, i) => LW + i * CW + CW / 2).attr('y', HH - 14).attr('text-anchor', 'middle').text((c) => c.name);
   const rowG = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (_, i) => `translate(0,${HH + i * CH})`);
-  rowG.append('a').attr('href', (p) => toHash(p)).append('text').attr('x', 8).attr('y', CH / 2 - 2).text((p) => procName[p]);
+  rowG.append('a').attr('class', 'rowhead').attr('href', (p) => toHash(p)).append('text').attr('x', 8).attr('y', CH / 2 - 2).text((p) => procName[p]);
   rowG.filter((p) => procFam[p] !== fam.id).append('text').attr('class', 'muted').attr('x', 8).attr('y', CH / 2 + 13)
     .text((p) => `(also in ${famName[procFam[p]]})`);
   for (const [r, proc] of rows.entries()) {

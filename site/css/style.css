@@ -76,6 +76,8 @@ h1 { font-size: 1.5rem; margin: .5rem 0 1rem; }
 svg.matrix { display: block; }
 svg.matrix text { fill: var(--fg); font: 13px system-ui, sans-serif; }
 svg.matrix .colhead { font-weight: 600; }
+svg.matrix .rowhead text { fill: var(--accent); font-weight: 600; font-size: 14px; }
+svg.matrix .rowhead:hover text, svg.matrix .rowhead:focus-visible text { text-decoration: underline; }
 svg.matrix .muted, svg.matrix .badge-text { fill: var(--fg); font-size: 11px; }
 svg.matrix .muted { fill: var(--muted); }
 svg.matrix .cell rect.base { stroke: var(--surface); stroke-width: 2; }
