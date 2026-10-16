@@ -10,7 +10,7 @@ from pathlib import Path
 from ruamel.yaml import YAML
 
 from scripts.phenomap.derive import derive
-from scripts.phenomap.load import load_repo
+from scripts.phenomap.load import LoadError, load_repo
 from scripts.phenomap.refs import update_cache
 from scripts.phenomap.validate import _plain, validate
 
@@ -54,7 +54,11 @@ def main(argv=None) -> int:
     today = a.today or date.today()
     root = Path(a.root)
 
-    repo = load_repo(root)
+    try:
+        repo = load_repo(root)
+    except LoadError as e:
+        print(f"ERROR {e}")
+        return 1
     issues = validate(repo, Path(a.schema))
     failed = False
     for i in issues:

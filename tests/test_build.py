@@ -2,6 +2,8 @@ import json
 import shutil
 from pathlib import Path
 
+import pytest
+
 from scripts import build, validate
 
 MIN = Path(__file__).parent / "fixtures" / "repo_min"
@@ -96,3 +98,16 @@ def test_build_rejects_malformed_release(tmp_path, capsys):
     (root / "release.yaml").write_text('{version: "v2026.10", concept_doi: "10.5281/zenodo.1"}\n', encoding="utf-8")
     assert build.main(["--root", str(root), "--out", str(tmp_path / "d.json"), "--offline"]) == 1
     assert "ERROR release.yaml: doi must be a bare DOI" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("text,msg", [
+    ("", "processes/vector-bosons/dy-nc.yaml: empty file"),
+    ("id: [unclosed\n", "processes/vector-bosons/dy-nc.yaml: invalid YAML at line 2"),
+    ("- a\n", "processes/vector-bosons/dy-nc.yaml: expected a YAML mapping, got list"),
+])
+def test_bad_yaml_is_one_error_line(tmp_path, capsys, text, msg):
+    root = tmp_path / "repo"
+    shutil.copytree(MIN, root)
+    (root / "processes" / "vector-bosons" / "dy-nc.yaml").write_text(text, encoding="utf-8")
+    assert build.main(["--root", str(root), "--out", str(tmp_path / "d.json"), "--offline"]) == 1
+    assert capsys.readouterr().out.startswith(f"ERROR {msg}")
