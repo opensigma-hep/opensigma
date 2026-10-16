@@ -1,0 +1,53 @@
+:root {
+  --bg: #fbfbf9; --fg: #1c1c1a; --muted: #5d5d58; --surface: #ffffff;
+  --border: #d9d9d2; --accent: #1b5fb5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161617; --fg: #e8e8e4; --muted: #a2a29b; --surface: #202022;
+    --border: #3a3a3d; --accent: #7db2f0;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161617; --fg: #e8e8e4; --muted: #a2a29b; --surface: #202022;
+  --border: #3a3a3d; --accent: #7db2f0;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main:focus { outline: none; }
+
+.skip { position: absolute; left: 16px; top: -3rem; background: var(--surface); padding: .5rem .75rem; z-index: 10; }
+.skip:focus { top: .5rem; }
+
+.bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem;
+  padding: .75rem 16px; border-bottom: 1px solid var(--border);
+}
+footer.bar { border-bottom: 0; border-top: 1px solid var(--border); color: var(--muted); font-size: .875rem; }
+.brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+#search-form { flex: 1 1 12rem; min-width: 0; }
+#search-form input {
+  width: 100%; padding: .4rem .6rem; font: inherit; color: var(--fg);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+}
+#theme-toggle {
+  font: inherit; color: var(--fg); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 6px; padding: .25rem .6rem; cursor: pointer;
+}
+
+main { max-width: 64rem; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.5rem; margin: .5rem 0 1rem; }
+
+.tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+.tile {
+  display: flex; flex-direction: column; gap: .25rem; padding: 1rem; text-decoration: none;
+  color: var(--fg); background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+}
+.tile:hover { border-color: var(--accent); }
+.tile span { color: var(--muted); font-size: .875rem; }
