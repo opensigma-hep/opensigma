@@ -242,7 +242,7 @@ channels:
               resummation: [{accuracy: "N3LL", variable: "pT(ℓℓ)"}]
             codes: ["NNLOJET", "RadISH"]
             uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
-            total: {value_pct: 1.07, provenance: {uid: 1bd570d2, ref: "inspire:2044884", locator: "Table 1, symmetric cuts (Eq. 2a), k=3, N3LO+N3LL: 726.2(1.1) +1.07% −0.77% pb; larger side of the scale/matching envelope, PDF uncertainty not included", source: agent, status: cross-checked, date: "2026-10-16"}}
+            total: {value_pct: 1.07, provenance: {uid: 1bd570d2, ref: "inspire:2044884", locator: "Table 1, symmetric cuts (Eq. 2a), k=3, N3LO+N3LL: 726.2(1.1) +1.07% −0.77% pb; larger side of the scale/matching envelope, PDF uncertainty not included", source: agent, status: human-verified, date: "2026-10-16", verified_by: ggambuti, issue: "https://github.com/opensigma-hep/opensigma/issues/1"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF, resummation scale Q and matching-scheme variations"
