@@ -8,7 +8,7 @@ from pathlib import Path
 from .load import load_repo
 
 API = "https://inspirehep.net/api"
-FIELDS = "titles,arxiv_eprints,dois,authors.full_name,collaborations,publication_info,earliest_date,preprint_date,legacy_creation_date,control_number"
+FIELDS = "titles,arxiv_eprints,dois,authors.full_name,collaborations,publication_info,earliest_date,preprint_date,legacy_creation_date,imprints,control_number"
 REF_RE = re.compile(r"^(inspire:\d+|arXiv:[^,\s]+(, .+)?|hepdata:ins\d+/.+)$")
 REF_KEYS = {"ref", "refs", "source", "full_table", "hepdata"}  # `source` is also the hepdata|agent|human enum: filtered by REF_RE
 
@@ -70,14 +70,19 @@ def resolve(ref: str, cache: dict, fetch=http_get_json) -> dict:
     ikey = f"inspire:{recid}"
     if ikey not in cache:
         first = lambda k: (md.get(k) or [{}])[0].get("value")  # noqa: E731
+        bibtex = fetch(f"{API}/literature/{recid}?format=bibtex")
+        dates = [md.get(k) for k in ("earliest_date", "preprint_date", "legacy_creation_date")] + [i.get("date") for i in md.get("imprints") or []]
+        year = next((int(d[:4]) for d in dates if d), None)
+        if year is None and (m := re.search(r'^\s*year = "(\d{4})"', bibtex, re.M)):  # e.g. notes with no dates (inspire:1920586)
+            year = int(m[1])
         cache[ikey] = {
             "recid": recid,
             "arxiv": first("arxiv_eprints"),
             "doi": first("dois"),
             "title": md["titles"][0]["title"],
             "authors_short": authors_short(md),
-            "year": next((int(md[k][:4]) for k in ("earliest_date", "preprint_date", "legacy_creation_date") if md.get(k)), None),
-            "bibtex": fetch(f"{API}/literature/{recid}?format=bibtex"),
+            "year": year,
+            "bibtex": bibtex,
         }
     cache[key] = cache[ikey]
     return cache[ikey]

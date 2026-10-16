@@ -148,11 +148,17 @@ def _live_shape(**extra):
     ({"preprint_date": "2016-09-02", "legacy_creation_date": "2017-01-01"}, 2016),
     ({"legacy_creation_date": "2017-01-01"}, 2017),
     ({"earliest_date": "2015-05-05", "preprint_date": "2016-09-02"}, 2015),
+    ({"imprints": [{"date": "2018-03"}]}, 2018),
     ({}, None),
 ])
 def test_resolve_year_fallback(dates, year):
     fetch = lambda url: "@article{x}\n" if "bibtex" in url else _live_shape(**dates)  # noqa: E731
     assert refs.resolve("inspire:77", {}, fetch)["year"] == year
+
+
+def test_resolve_year_from_bibtex_when_no_dates():
+    fetch = lambda url: '@article{x,\n    year = "2018"\n}\n' if "bibtex" in url else _live_shape()  # noqa: E731
+    assert refs.resolve("inspire:77", {}, fetch)["year"] == 2018
 
 
 def test_resolve_missing_optional_metadata_is_null():
