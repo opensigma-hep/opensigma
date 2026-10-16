@@ -19,8 +19,8 @@
         "status": {"enum": ["agent-draft", "cross-checked", "machine-verified", "human-verified", "disputed"]},
         "date": {"type": "string", "format": "date"},
         "verified_by": {"type": "string"},
-        "issue": {"type": "string"},
-        "issues": {"type": "array", "items": {"type": "string"}}
+        "issue": {"type": "string", "pattern": "^https://github\\.com/"},
+        "issues": {"type": "array", "items": {"type": "string", "pattern": "^https://github\\.com/"}}
       }
     },
     "size": {

@@ -10,6 +10,7 @@ ROOT = Path(__file__).parent
 MIN = ROOT / "fixtures" / "repo_min"
 BAD = ROOT / "fixtures" / "bad"
 SCHEMA = ROOT.parent / "data" / "schema"
+DY = "processes/vector-bosons/dy-nc.yaml"
 
 
 def _errors(proc: dict, name: str = "bad.yaml") -> list[str]:
@@ -67,3 +68,15 @@ def test_unquoted_dates_accepted():
     proc = _bad("no-locator.yaml")
     proc["channels"][0]["last_reviewed"] = date(2026, 10, 1)
     assert not any("last_reviewed" in m or "date" in m for m in _errors(proc))
+
+
+@pytest.mark.parametrize("field, bad, good", [
+    ("issue", "javascript:alert(1)", "https://github.com/pheno-map/pheno-map/issues/3"),
+    ("issues", ["javascript:alert(1)"], ["https://github.com/pheno-map/pheno-map/issues/3"]),
+])
+def test_provenance_issue_links_must_be_github(field, bad, good):
+    proc = load_repo(MIN)["processes"][0]
+    prov = proc["channels"][0]["observables"][0]["results"][0]["total"]["provenance"]
+    for value, ok in [(bad, False), (good, True)]:
+        prov[field] = value
+        assert (_errors(proc, DY) == []) is ok
