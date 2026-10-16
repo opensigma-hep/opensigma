@@ -225,7 +225,7 @@ channels:
                 size: {range: [0.02, 0.02], unit: "%", asymmetric: false}
                 provenance: {uid: 11cc87bd, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', Z→ℓ+ℓ− column", source: agent, status: cross-checked, date: "2026-10-16"}
           - measurement: "meas:dy-nc/lhc-13/atlas-2024-lowpu"
-            total: {value_pct: 1.3, provenance: {uid: 34dbac9f, ref: "inspire:2775442", locator: "Table 3, Z→ℓℓ at 13 TeV: 780.3 ± 2.6 (stat.) ± 7.1 (syst.) ± 7.1 (lumi.) pb; total 10.4 pb (Table 6, 'Data'); Born level, pT(ℓ) > 25 GeV, |η(ℓ)| < 2.5, 66 < mℓℓ < 116 GeV (Sec. 6)", source: agent, status: cross-checked, date: "2026-10-16"}}
+            total: {value_pct: 1.3, provenance: {uid: 34dbac9f, ref: "inspire:2775442", locator: "Table 3, Z→ℓℓ at 13 TeV: 780.3 ± 2.6 (stat.) ± 7.1 (syst.) ± 7.1 (lumi.) pb; total 10.4 pb (Table 6, 'Data'); Born level, pT(ℓ) > 25 GeV, |η(ℓ)| < 2.5, 66 < mℓℓ < 116 GeV (Sec. 6)", source: agent, status: disputed, date: "2026-10-16", issue: "https://github.com/opensigma-hep/opensigma/issues/3"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
