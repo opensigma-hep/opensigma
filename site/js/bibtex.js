@@ -14,3 +14,19 @@ export function collectBibtex(node, refs) {
   })(node);
   return [...out].join('\n');
 }
+
+/** @misc BibTeX for the version DOI and the concept DOI of a release ({version, doi, concept_doi}); '' when unreleased. */
+export function releaseBibtex(rel, year) {
+  if (!rel) return '';
+  const entry = (key, doi, extra = '') => `@misc{${key},
+  title = {pheno-map: a map of collider phenomenology},
+  author = {{pheno-map contributors}},
+  year = {${year}},${extra}
+  doi = {${doi}},
+  url = {https://doi.org/${doi}},
+}`;
+  return [
+    entry(`pheno-map-${rel.version}`, rel.doi, `\n  version = {${rel.version}},`),
+    entry('pheno-map-concept', rel.concept_doi),
+  ].join('\n\n');
+}

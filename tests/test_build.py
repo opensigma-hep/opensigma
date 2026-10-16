@@ -49,3 +49,21 @@ def test_unresolved_ref_fails(tmp_path, capsys):
 
 def test_validate_entry_point():
     assert validate.main(["--root", str(MIN)]) == 0
+
+
+def _release(tmp_path, with_file):
+    root = tmp_path / "repo"
+    shutil.copytree(MIN, root)
+    if with_file:
+        (root / "release.yaml").write_text('{version: "v2026.10", doi: "10.5281/zenodo.2", concept_doi: "10.5281/zenodo.1"}\n', encoding="utf-8")
+    out = tmp_path / "data.json"
+    assert build.main(["--root", str(root), "--out", str(out), "--offline"]) == 0
+    return json.loads(out.read_text(encoding="utf-8"))["build"]["release"]
+
+
+def test_build_release_from_release_yaml(tmp_path):
+    assert _release(tmp_path, True) == {"version": "v2026.10", "doi": "10.5281/zenodo.2", "concept_doi": "10.5281/zenodo.1"}
+
+
+def test_build_release_null_when_unreleased(tmp_path):
+    assert _release(tmp_path, False) is None

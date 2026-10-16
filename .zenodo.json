@@ -1,0 +1,15 @@
+{
+  "title": "pheno-map: a map of collider phenomenology",
+  "upload_type": "dataset",
+  "license": "CC-BY-4.0",
+  "creators": [
+    {
+      "name": "Gambuti, Giulio",
+      "affiliation": "ETH Zürich"
+    },
+    {
+      "name": "pheno-map contributors"
+    }
+  ],
+  "contributors": []
+}

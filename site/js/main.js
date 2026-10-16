@@ -10,6 +10,8 @@ import * as amplitude from './views/amplitude.js';
 import * as parameter from './views/parameter.js';
 import * as about from './views/about.js';
 import * as search from './views/search.js';
+import { copyButton } from './leaf.js';
+import { releaseBibtex } from './bibtex.js';
 
 // Later tasks replace the placeholder entries.
 const views = {
@@ -65,6 +67,14 @@ function collectIds(d) {
   return ids;
 }
 
+function renderFooter({ date, git_sha, release }) {
+  const info = document.getElementById('build-info');
+  info.replaceChildren(`Built ${date}${git_sha ? ` · ${git_sha}` : ''} · `);
+  if (release) info.append(release.version, ' ', copyButton('Cite this version', () => releaseBibtex(release, date.slice(0, 4))));
+  else info.append('unreleased');
+  info.append(' · Data CC BY 4.0 · Code MIT');
+}
+
 function fail(msg) {
   main.textContent = msg;
 }
@@ -87,8 +97,7 @@ try {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   const data = await resp.json();
   window.PM = { data, idset: collectIds(data) };
-  document.getElementById('build-info').textContent =
-    `Built ${data.build.date} · ${data.build.git_sha}`;
+  renderFooter(data.build);
   addEventListener('hashchange', route);
   route();
 } catch (err) {
