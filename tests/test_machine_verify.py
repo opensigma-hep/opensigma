@@ -27,6 +27,7 @@ def make_root(tmp_path, stat_range=(2.0, 3.0), status="agent-draft", total=None)
     doc = y.load(p.read_text(encoding="utf-8"))
     res = doc["channels"][0]["observables"][0]["results"][0]
     unc = res["uncertainties"][0]
+    unc["specific"] = "stat"
     unc["size"]["range"] = list(stat_range)
     unc["full_table"] = REF
     unc["provenance"].update(source="hepdata", status=status, ref=REF)
@@ -84,3 +85,47 @@ def test_unfetchable_table_exits_1(tmp_path, capsys):
 
     assert machine_verify.main(["--root", str(root)], fetch=boom) == 1
     assert "Table 5" in capsys.readouterr().err
+
+
+def _with_uncs(tmp_path, table, uncs, status="agent-draft"):
+    """repo_min copy whose dy-nc results[0].uncertainties are `uncs` = [(category, specific|None, [lo, hi])]."""
+    root, p = make_root(tmp_path)
+    y = YAML()
+    y.preserve_quotes = True
+    y.width = 4096
+    doc = y.load(p.read_text(encoding="utf-8"))
+    res = doc["channels"][0]["observables"][0]["results"][0]
+    res["uncertainties"] = [
+        {"category": c, **({"specific": s} if s else {}), "size": {"range": r, "unit": "%", "asymmetric": False},
+         "full_table": REF, "provenance": {"uid": f"0000000{i}", "ref": REF, "locator": "Table 5", "source": "hepdata",
+                                            "status": status, "date": "2026-10-16"}}
+        for i, (c, s, r) in enumerate(uncs)
+    ]
+    with p.open("w", encoding="utf-8") as f:
+        y.dump(doc, f)
+    return root, p, lambda recid, t: table
+
+
+def test_lumi_with_specific_matches_and_cross_checked_upgrades(tmp_path):
+    root, p, f = _with_uncs(tmp_path, TABLE, [("lumi", "Luminosity", [2.5, 2.5])], status="cross-checked")
+    assert machine_verify.main(["--root", str(root), "--apply"], fetch=f) == 0
+    assert "status: machine-verified" in p.read_text(encoding="utf-8")
+
+
+def test_missing_specific_is_mismatch_not_wrong_match(tmp_path):
+    # [2.0, 3.0] is the stat range; a lumi entry without `specific` must not pick it up
+    root, p, f = _with_uncs(tmp_path, TABLE, [("lumi", None, [2.0, 3.0])])
+    before = p.read_text(encoding="utf-8")
+    (m,) = machine_verify.check(root, f)
+    assert m.fetched is None
+    assert machine_verify.main(["--root", str(root), "--apply"], fetch=f) == 1
+    assert p.read_text(encoding="utf-8") == before
+
+
+def test_same_category_labels_match_their_own_entry(tmp_path):
+    t = {"dependent_variables": [{"values": [{"value": 100.0, "errors": [
+        {"label": "eff", "symerror": 1.0}, {"label": "trigger", "symerror": 4.0}]}]}]}
+    root, p, f = _with_uncs(tmp_path, t, [("efficiency", "eff", [1.0, 1.0]), ("efficiency", "trigger", [4.0, 4.0])])
+    assert machine_verify.check(root, f) == []
+    root, p, f = _with_uncs(tmp_path / "swap", t, [("efficiency", "eff", [4.0, 4.0]), ("efficiency", "trigger", [1.0, 1.0])])
+    assert [m.fetched for m in machine_verify.check(root, f)] == [[1.0, 1.0], [4.0, 4.0]]

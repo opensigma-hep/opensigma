@@ -72,13 +72,13 @@ def _items(result, table, label_map):
         pr = u.get("provenance", {})
         if pr.get("source") != "hepdata":
             continue
+        if "full_table" not in u:
+            yield pr, [float(x) for x in u["size"]["range"]], None, False
+            continue
         recomputed = hepdata.summarize(table(u["full_table"]), label_map, u["full_table"])
-        spec = u.get("specific")
-        hit = next((c for c in recomputed if c.get("specific") == spec), None) or next(
-            (c for c in recomputed if c["category"] == u["category"]), None
-        )
+        hit = next((c for c in recomputed if (c["category"], c["specific"]) == (u["category"], u.get("specific"))), None)
         stored = [float(x) for x in u["size"]["range"]]
-        fetched = hit and hit["size"]["range"]
+        fetched = hit and hit["size"]["range"]  # no exact (category, specific) match -> mismatch, never guess
         yield pr, stored, fetched, bool(fetched) and all(map(_close, stored, fetched))
     t = result.get("total") or {}
     pr = t.get("provenance", {})

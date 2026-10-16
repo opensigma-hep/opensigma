@@ -26,6 +26,8 @@ def test_summarize_symmetric_and_asymmetric():
     # weird: 1/100, 1/200, 0.5/50 -> 1, 0.5, 1 %
     assert by["other"]["size"]["range"] == [0.5, 1.0]
     assert by["other"]["specific"] == "weird"
+    assert {c: u["specific"] for c, u in by.items()} == {
+        "stat": "stat", "lumi": "Luminosity", "energy_scale": "JES", "other": "weird"}
     assert by["stat"]["full_table"] == REF
     assert by["stat"]["provenance"]["ref"] == REF
     assert by["stat"]["provenance"]["locator"] == "Table 5, error 'stat'"

@@ -55,9 +55,7 @@ def summarize(table: dict, label_map: dict, ref: str, today: date | None = None)
     for label, vals in per_label.items():
         cat = next((c for rx, c in label_map.items() if re.search(rx, label)), "other")
         pcts = [p for p, _ in vals]
-        u = {"category": cat}
-        if cat == "other":
-            u["specific"] = label
+        u = {"category": cat, "specific": label}  # (category, specific) identifies the entry for machine_verify
         u["size"] = {"range": [round_sig(min(pcts)), round_sig(max(pcts))], "asymmetric": any(a for _, a in vals)}
         u["full_table"] = ref
         u["provenance"] = {
