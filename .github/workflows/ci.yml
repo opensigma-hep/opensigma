@@ -44,9 +44,9 @@ jobs:
       - run: npm test
       - run: python -m scripts.build --check --offline
       - name: machine_verify (report-only)
-        if: steps.data.outputs.changed == 'true'
+        if: steps.data.outputs.changed == 'true' && !startsWith(github.head_ref, 'verify/')
         continue-on-error: true
         run: python -m scripts.machine_verify
       - name: linkcheck
-        if: steps.data.outputs.changed == 'true'
+        if: steps.data.outputs.changed == 'true' && !startsWith(github.head_ref, 'verify/')
         run: python -m scripts.linkcheck

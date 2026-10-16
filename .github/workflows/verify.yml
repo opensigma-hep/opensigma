@@ -90,7 +90,7 @@ jobs:
         run: |
           case "$OUTCOME" in
             unknown_uid) why="no datum with that uid exists (it may have been renamed or removed)." ;;
-            same_user) why="you already verified this datum; a second verifier is needed." ;;
+            same_user) why="you already verified this datum." ;;
             too_young) why="verifying or flagging requires a GitHub account at least 6 months old." ;;
             *) why="the issue could not be read as a verify/flag form. Please use the ✓/⚑ buttons on the site and keep the prefilled fields." ;;
           esac
