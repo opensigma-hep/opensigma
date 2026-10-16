@@ -9,12 +9,13 @@ import * as process from './views/process.js';
 import * as amplitude from './views/amplitude.js';
 import * as parameter from './views/parameter.js';
 import * as about from './views/about.js';
+import * as search from './views/search.js';
 
 // Later tasks replace the placeholder entries.
 const views = {
   families, notfound,
   family, process, channel, observable, amplitude, parameter, about,
-  search: placeholder, measurement: placeholder, collider: placeholder,
+  search, measurement: placeholder, collider: placeholder,
 };
 
 const THEME_KEY = 'pheno-map-theme';

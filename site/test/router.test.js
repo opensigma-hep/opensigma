@@ -19,3 +19,8 @@ test('every id prefix maps to its view', () => {
 });
 test('alias to a missing target → notfound', () => assert.equal(parseHash('#/obs:old', {'obs:old':'obs:gone'}, new Set()).view, 'notfound'));
 test('toHash', () => assert.equal(toHash('proc:a/b'), '#/proc:a/b'));
+test('search query keeps a literal +', () => {
+  assert.equal(parseHash('#/search?q=N3LL+', {}, new Set()).q, 'N3LL+');
+  assert.equal(parseHash('#/search?q=a%20b&x=1', {}, new Set()).q, 'a b');
+  assert.equal(parseHash('#/search?q=100%', {}, new Set()).q, '100%');
+});

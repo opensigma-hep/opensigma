@@ -15,8 +15,9 @@ export function parseHash(hash, aliases, ids) {
   if (path === '') return { view: 'families' };
   if (path === 'about') return { view: 'about' };
   if (path === 'search' || path.startsWith('search?')) {
-    const q = new URLSearchParams(path.slice(7)).get('q') ?? '';
-    return { view: 'search', q };
+    // Not URLSearchParams: it would turn a literal '+' into a space.
+    const raw = path.slice(7).split('&').find((kv) => kv.startsWith('q='));
+    return { view: 'search', q: raw ? decode(raw.slice(2)) : '' };
   }
   const raw = decode(path);
   const target = Object.hasOwn(aliases, raw) ? aliases[raw] : raw;
