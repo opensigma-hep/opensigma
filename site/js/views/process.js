@@ -1,4 +1,4 @@
-import { el, none, link, idLink, index, breadcrumb, facts, bbTable, prov, sep } from '../leaf.js';
+import { el, none, link, idLink, index, breadcrumb, facts, bbTable, prov, sep, refList } from '../leaf.js';
 import { accuracyChips } from '../format.js';
 
 export function render(main, data, route) {
@@ -27,5 +27,6 @@ function status(data, chan, col) {
   const preds = h.predictions ?? [];
   return el('div', {}, title, preds.length ? el('ul', {}, ...preds.map((p) => el('li', {},
     el('strong', {}, p.label), p.headline ? ' (headline)' : '', ' · ', accuracyChips(p.accuracy).join(', '),
-    p.total ? [` · total ${p.total.value_pct} % `, prov(p.total.provenance, `${p.total.value_pct} %`)] : ''))) : none('predictions'));
+    ' · ', ...refList(p.refs, data.refs),
+    p.total ? [` · total ${p.total.value_pct} % `, prov(p.total.provenance, `${p.total.value_pct} %`)] : [' ', prov(p.provenance, p.label)]))) : none('predictions'));
 }
