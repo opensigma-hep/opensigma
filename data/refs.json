@@ -1,4 +1,13 @@
 {
+ "inspire:1124333": {
+  "arxiv": "1207.7138",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2012brb,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF\",\n    title = \"{Transverse momentum cross section of $e^+e^-$ pairs in the $Z$-boson region from $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV}\",\n    eprint = \"1207.7138\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-12-421-E\",\n    doi = \"10.1103/PhysRevD.86.052010\",\n    journal = \"Phys. Rev. D\",\n    volume = \"86\",\n    pages = \"052010\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1103/PhysRevD.86.052010",
+  "recid": 1124333,
+  "title": "Transverse momentum cross section of $e^+e^-$ pairs in the $Z$-boson region from $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV",
+  "year": 2012
+ },
  "inspire:1182519": {
   "arxiv": "1208.5967",
   "authors_short": "Li and Petriello",
@@ -7,6 +16,33 @@
   "recid": 1182519,
   "title": "Combining QCD and electroweak corrections to dilepton production in FEWZ",
   "year": 2012
+ },
+ "inspire:1188307": {
+  "arxiv": "1209.6215",
+  "authors_short": "Frederix and Frixione",
+  "bibtex": "@article{Frederix:2012ps,\n    author = \"Frederix, Rikkert and Frixione, Stefano\",\n    title = \"{Merging meets matching in MC@NLO}\",\n    eprint = \"1209.6215\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2012-247, ZU-TH-21-12\",\n    doi = \"10.1007/JHEP12(2012)061\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"061\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1007/JHEP12(2012)061",
+  "recid": 1188307,
+  "title": "Merging meets matching in MC@NLO",
+  "year": 2012
+ },
+ "inspire:1208117": {
+  "arxiv": "1212.4504",
+  "authors_short": "Hamilton et al.",
+  "bibtex": "@article{Hamilton:2012rf,\n    author = \"Hamilton, Keith and Nason, Paolo and Oleari, Carlo and Zanderighi, Giulia\",\n    title = \"{Merging H/W/Z + 0 and 1 jet at NLO with no merging scale: a path to parton shower + NNLO matching}\",\n    eprint = \"1212.4504\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2012-356\",\n    doi = \"10.1007/JHEP05(2013)082\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"082\",\n    year = \"2013\"\n}\n",
+  "doi": "10.1007/JHEP05(2013)082",
+  "recid": 1208117,
+  "title": "Merging H/W/Z + 0 and 1 jet at NLO with no merging scale: a path to parton shower + NNLO matching",
+  "year": 2012
+ },
+ "inspire:1386859": {
+  "arxiv": "1508.01475",
+  "authors_short": "Alioli et al.",
+  "bibtex": "@article{Alioli:2015toa,\n    author = \"Alioli, Simone and Bauer, Christian W. and Berggren, Calvin and Tackmann, Frank J. and Walsh, Jonathan R.\",\n    title = \"{Drell-Yan production at NNLL'+NNLO matched to parton showers}\",\n    eprint = \"1508.01475\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-PH-TH-2015-185, DESY-15-136\",\n    doi = \"10.1103/PhysRevD.92.094020\",\n    journal = \"Phys. Rev. D\",\n    volume = \"92\",\n    number = \"9\",\n    pages = \"094020\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1103/PhysRevD.92.094020",
+  "recid": 1386859,
+  "title": "Drell-Yan production at NNLL′+NNLO matched to parton showers",
+  "year": 2015
  },
  "inspire:140456": {
   "arxiv": null,
@@ -17,6 +53,15 @@
   "title": "Large Perturbative Corrections to the Drell-Yan Process in QCD",
   "year": 1979
  },
+ "inspire:1408300": {
+  "arxiv": "1512.01291",
+  "authors_short": "Boughezal et al.",
+  "bibtex": "@article{Boughezal:2015ded,\n    author = \"Boughezal, Radja and Campbell, John M. and Ellis, R. Keith and Focke, Christfried and Giele, Walter T. and Liu, Xiaohui and Petriello, Frank\",\n    title = \"{Z-boson production in association with a jet at next-to-next-to-leading order in perturbative QCD}\",\n    eprint = \"1512.01291\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FERMILAB-PUB-15-519-T, IPPP-15-79\",\n    doi = \"10.1103/PhysRevLett.116.152001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"116\",\n    number = \"15\",\n    pages = \"152001\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1103/PhysRevLett.116.152001",
+  "recid": 1408300,
+  "title": "Z-boson production in association with a jet at next-to-next-to-leading order in perturbative QCD",
+  "year": 2015
+ },
  "inspire:1436497": {
   "arxiv": "1603.09222",
   "authors_short": "ATLAS Collaboration",
@@ -24,6 +69,15 @@
   "doi": "10.1016/j.physletb.2016.06.023",
   "recid": 1436497,
   "title": "Measurement of $W^{\\pm}$ and $Z$-boson production cross sections in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector",
+  "year": 2016
+ },
+ "inspire:1456804": {
+  "arxiv": "1605.02719",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2016cei,\n    author = \"Aaltonen, Timo Antero and others\",\n    collaboration = \"CDF\",\n    title = \"{Measurement of $\\sin^2\\theta^{\\rm lept}_{\\rm eff}$ using $e^+e^-$ pairs from $\\gamma^*/Z$ bosons produced in $p\\bar{p}$ collisions at a center-of-momentum energy of 1.96 TeV}\",\n    eprint = \"1605.02719\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-16-165-E\",\n    doi = \"10.1103/PhysRevD.93.112016\",\n    journal = \"Phys. Rev. D\",\n    volume = \"93\",\n    number = \"11\",\n    pages = \"112016\",\n    year = \"2016\",\n    note = \"[Addendum: Phys.Rev.D 95, 119901 (2017)]\"\n}\n",
+  "doi": "10.1103/PhysRevD.93.112016",
+  "recid": 1456804,
+  "title": "Measurement of $\\sin^2\\theta^{\\rm lept}_{\\rm eff}$ using $e^+e^-$ pairs from $\\gamma^*/Z$ bosons produced in $p\\bar{p}$ collisions at a center-of-momentum energy of 1.96 TeV",
   "year": 2016
  },
  "inspire:1490040": {
@@ -35,6 +89,33 @@
   "title": "NNLO QCD corrections for Drell-Yan $p_T^Z$ and $\\phi^*$ observables at the LHC",
   "year": 2016
  },
+ "inspire:1629966": {
+  "arxiv": "1710.03951",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2017ekd,\n    author = \"Abazov, Victor Mukhamedovich and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the Effective Weak Mixing Angle in $p\\bar{p}\\rightarrow Z/\\gamma^* \\rightarrow \\ell^+\\ell^-$ Events}\",\n    eprint = \"1710.03951\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-17-434-E\",\n    doi = \"10.1103/PhysRevLett.120.241802\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"120\",\n    number = \"24\",\n    pages = \"241802\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1103/PhysRevLett.120.241802",
+  "recid": 1629966,
+  "title": "Measurement of the Effective Weak Mixing Angle in $p\\bar{p}\\rightarrow Z/\\gamma^* \\rightarrow \\ell^+\\ell^-$ Events",
+  "year": 2017
+ },
+ "inspire:1649135": {
+  "arxiv": "1801.06283",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2018cnj,\n    author = \"Aaltonen, Timo Antero and others\",\n    collaboration = \"CDF, D0\",\n    title = \"{Tevatron Run II combination of the effective leptonic electroweak mixing angle}\",\n    eprint = \"1801.06283\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-18-015-E\",\n    doi = \"10.1103/PhysRevD.97.112007\",\n    journal = \"Phys. Rev. D\",\n    volume = \"97\",\n    number = \"11\",\n    pages = \"112007\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1103/PhysRevD.97.112007",
+  "recid": 1649135,
+  "title": "Tevatron Run II combination of the effective leptonic electroweak mixing angle",
+  "year": 2018
+ },
+ "inspire:1670818": {
+  "arxiv": "1804.11152",
+  "authors_short": "Bermudez Martinez et al.",
+  "bibtex": "@article{BermudezMartinez:2018fsv,\n    author = \"Bermudez Martinez, A. and Connor, P. and Jung, H. and Lelek, A. and {\\v{Z}}leb{\\v{c}}{\\'\\i}k, R. and Hautmann, F. and Radescu, V.\",\n    title = \"{Collinear and TMD parton densities from fits to precision DIS measurements in the parton branching method}\",\n    eprint = \"1804.11152\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY 18-042, DESY-18-042\",\n    doi = \"10.1103/PhysRevD.99.074008\",\n    journal = \"Phys. Rev. D\",\n    volume = \"99\",\n    number = \"7\",\n    pages = \"074008\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1103/PhysRevD.99.074008",
+  "recid": 1670818,
+  "title": "Collinear and TMD parton densities from fits to precision DIS measurements in the parton branching method",
+  "year": 2018
+ },
  "inspire:1734419": {
   "arxiv": "1905.05171",
   "authors_short": "Bizon et al.",
@@ -42,6 +123,15 @@
   "doi": "10.1140/epjc/s10052-019-7324-0",
   "recid": 1734419,
   "title": "The transverse momentum spectrum of weak gauge bosons at N ${}^3$ LL + NNLO",
+  "year": 2019
+ },
+ "inspire:1737773": {
+  "arxiv": "1906.00919",
+  "authors_short": "Bermudez Martinez et al.",
+  "bibtex": "@article{BermudezMartinez:2019anj,\n    author = \"Bermudez Martinez, A. and others\",\n    title = \"{Production of Z-bosons in the parton branching method}\",\n    eprint = \"1906.00919\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-19-087, CERN-TH-2019-095, DESY 19-087\",\n    doi = \"10.1103/PhysRevD.100.074027\",\n    journal = \"Phys. Rev. D\",\n    volume = \"100\",\n    number = \"7\",\n    pages = \"074027\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1103/PhysRevD.100.074027",
+  "recid": 1737773,
+  "title": "Production of Z-bosons in the parton branching method",
   "year": 2019
  },
  "inspire:1750311": {
@@ -161,6 +251,15 @@
   "title": "The Calculation of the Second Order Soft and Virtual Contributions to the Drell-Yan Cross-Section",
   "year": 1988
  },
+ "inspire:2775442": {
+  "arxiv": "2404.06204",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024nrd,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Precise measurements of W- and Z-boson transverse momentum spectra with the ATLAS detector using pp collisions at $\\sqrt{s} = 5.02$ TeV and 13 TeV}\",\n    eprint = \"2404.06204\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2024-080\",\n    doi = \"10.1140/epjc/s10052-024-13414-0\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"84\",\n    number = \"10\",\n    pages = \"1126\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1140/epjc/s10052-024-13414-0",
+  "recid": 2775442,
+  "title": "Precise measurements of W- and Z-boson transverse momentum spectra with the ATLAS detector using pp collisions at $\\sqrt{s} = 5.02$ TeV and 13 TeV",
+  "year": 2024
+ },
  "inspire:2816048": {
   "arxiv": "2408.03744",
   "authors_short": "CMS Collaboration",
@@ -206,6 +305,24 @@
   "title": "Measurement of the Z <math altimg=\"si7.svg\"><mrow><mo>→</mo><msup><mi>μ</mi><mo>+</mo></msup><msup><mi>μ</mi><mo>−</mo></msup></mrow></math> angular coefficients in pp collisions at <math altimg=\"si8.svg\"><msqrt><mi>s</mi></msqrt></math>= 13 TeV as functions of transverse momentum and rapidity",
   "year": 2026
  },
+ "inspire:375588": {
+  "arxiv": "hep-ph/9408366",
+  "authors_short": "Rijken and van Neerven",
+  "bibtex": "@article{Rijken:1994sh,\n    author = \"Rijken, P. J. and van Neerven, W. L.\",\n    title = \"{Order alpha-s**2 contributions to the Drell-Yan cross-section at fixed target energies}\",\n    eprint = \"hep-ph/9408366\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"INLO-PUB-14-94\",\n    doi = \"10.1103/PhysRevD.51.44\",\n    journal = \"Phys. Rev. D\",\n    volume = \"51\",\n    pages = \"44--63\",\n    year = \"1995\"\n}\n",
+  "doi": "10.1103/PhysRevD.51.44",
+  "recid": 375588,
+  "title": "Order alpha-s**2 contributions to the Drell-Yan cross-section at fixed target energies",
+  "year": 1994
+ },
+ "inspire:441946": {
+  "arxiv": "hep-ph/9704258",
+  "authors_short": "Balazs and Yuan",
+  "bibtex": "@article{Balazs:1997xd,\n    author = \"Balazs, C. and Yuan, C. P.\",\n    title = \"{Soft gluon effects on lepton pairs at hadron colliders}\",\n    eprint = \"hep-ph/9704258\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"MSUHEP-70402, CTEQ-704\",\n    doi = \"10.1103/PhysRevD.56.5558\",\n    journal = \"Phys. Rev. D\",\n    volume = \"56\",\n    pages = \"5558--5583\",\n    year = \"1997\"\n}\n",
+  "doi": "10.1103/PhysRevD.56.5558",
+  "recid": 441946,
+  "title": "Soft gluon effects on lepton pairs at hadron colliders",
+  "year": 1997
+ },
  "inspire:562246": {
   "arxiv": "hep-ph/0108274",
   "authors_short": "Baur et al.",
@@ -233,6 +350,24 @@
   "title": "Two loop QCD helicity amplitudes for e+ e- ---> three jets",
   "year": 2002
  },
+ "inspire:604413": {
+  "arxiv": "hep-ph/0212159",
+  "authors_short": "Landry et al.",
+  "bibtex": "@article{Landry:2002ix,\n    author = \"Landry, F. and Brock, R. and Nadolsky, Pavel M. and Yuan, C. P.\",\n    title = \"{Tevatron Run-1 $Z$ boson data and Collins-Soper-Sterman resummation formalism}\",\n    eprint = \"hep-ph/0212159\",\n    archivePrefix = \"arXiv\",\n    doi = \"10.1103/PhysRevD.67.073016\",\n    journal = \"Phys. Rev. D\",\n    volume = \"67\",\n    pages = \"073016\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1103/PhysRevD.67.073016",
+  "recid": 604413,
+  "title": "Tevatron Run-1 $Z$ boson data and Collins-Soper-Sterman resummation formalism",
+  "year": 2002
+ },
+ "inspire:635943": {
+  "arxiv": "hep-ph/0312266",
+  "authors_short": "Anastasiou et al.",
+  "bibtex": "@article{Anastasiou:2003ds,\n    author = \"Anastasiou, Charalampos and Dixon, Lance J. and Melnikov, Kirill and Petriello, Frank\",\n    title = \"{High precision QCD at hadron colliders: Electroweak gauge boson rapidity distributions at NNLO}\",\n    eprint = \"hep-ph/0312266\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"SLAC-PUB-10288, UH-511-1042-03\",\n    doi = \"10.1103/PhysRevD.69.094008\",\n    journal = \"Phys. Rev. D\",\n    volume = \"69\",\n    pages = \"094008\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1103/PhysRevD.69.094008",
+  "recid": 635943,
+  "title": "High precision QCD at hadron colliders: Electroweak gauge boson rapidity distributions at NNLO",
+  "year": 2003
+ },
  "inspire:686721": {
   "arxiv": "hep-ph/0507061",
   "authors_short": "Gehrmann et al.",
@@ -250,6 +385,42 @@
   "recid": 725573,
   "title": "Electroweak gauge boson production at hadron colliders through $O(\\alpha_s^2)$",
   "year": 2006
+ },
+ "inspire:744624": {
+  "arxiv": "hep-ex/0702025",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2007djv,\n    author = \"Abazov, V. M. and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the Shape of the Boson Rapidity Distribution for $p \\bar{p} \\to Z / \\gamma^* \\to e^{+} e^{-} + X$ Events Produced at $\\sqrt{s}$ of 1.96-TeV}\",\n    eprint = \"hep-ex/0702025\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"FERMILAB-PUB-07-040-E\",\n    doi = \"10.1103/PhysRevD.76.012003\",\n    journal = \"Phys. Rev. D\",\n    volume = \"76\",\n    pages = \"012003\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1103/PhysRevD.76.012003",
+  "recid": 744624,
+  "title": "Measurement of the Shape of the Boson Rapidity Distribution for $p \\bar{p} \\to Z / \\gamma^* \\to e^{+} e^{-} + X$ Events Produced at $\\sqrt{s}$ of 1.96-TeV",
+  "year": 2007
+ },
+ "inspire:760769": {
+  "arxiv": "0709.2092",
+  "authors_short": "Frixione et al.",
+  "bibtex": "@article{Frixione:2007vw,\n    author = \"Frixione, Stefano and Nason, Paolo and Oleari, Carlo\",\n    title = \"{Matching NLO QCD computations with Parton Shower simulations: the POWHEG method}\",\n    eprint = \"0709.2092\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"BICOCCA-FT-07-9, GEF-TH-21-2007\",\n    doi = \"10.1088/1126-6708/2007/11/070\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"070\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1088/1126-6708/2007/11/070",
+  "recid": 760769,
+  "title": "Matching NLO QCD computations with Parton Shower simulations: the POWHEG method",
+  "year": 2007
+ },
+ "inspire:769689": {
+  "arxiv": "0712.0803",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2007lmg,\n    author = \"Abazov, V. M. and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the shape of the boson transverse momentum distribution in $p \\bar{p} \\to Z / \\gamma^{*} \\to e^+ e^- + X$ events produced at $\\sqrt{s}$=1.96-TeV}\",\n    eprint = \"0712.0803\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-07-642-E\",\n    doi = \"10.1103/PhysRevLett.100.102002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"100\",\n    pages = \"102002\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevLett.100.102002",
+  "recid": 769689,
+  "title": "Measurement of the shape of the boson transverse momentum distribution in $p \\bar{p} \\to Z / \\gamma^{*} \\to e^+ e^- + X$ events produced at $\\sqrt{s}$=1.96-TeV",
+  "year": 2007
+ },
+ "inspire:787440": {
+  "arxiv": "0805.4802",
+  "authors_short": "Alioli et al.",
+  "bibtex": "@article{Alioli:2008gx,\n    author = \"Alioli, Simone and Nason, Paolo and Oleari, Carlo and Re, Emanuele\",\n    title = \"{NLO vector-boson production matched with shower in POWHEG}\",\n    eprint = \"0805.4802\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"NSF-KITP-08-74\",\n    doi = \"10.1088/1126-6708/2008/07/060\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"060\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1088/1126-6708/2008/07/060",
+  "recid": 787440,
+  "title": "NLO vector-boson production matched with shower in POWHEG",
+  "year": 2008
  },
  "inspire:813829": {
   "arxiv": "0902.3519",
@@ -287,6 +458,33 @@
   "title": "Calculation of the quark and gluon form factors to three loops in QCD",
   "year": 2010
  },
+ "inspire:856131": {
+  "arxiv": "0908.3914",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2010vek,\n    author = \"Aaltonen, Timo Antero and others\",\n    collaboration = \"CDF\",\n    title = \"{Measurement of $d\\sigma/dy$ of Drell-Yan $e^+e^-$ pairs in the $Z$ Mass Region from $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV}\",\n    eprint = \"0908.3914\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    doi = \"10.1016/j.physletb.2010.06.043\",\n    journal = \"Phys. Lett. B\",\n    volume = \"692\",\n    pages = \"232--239\",\n    year = \"2010\"\n}\n",
+  "doi": "10.1016/j.physletb.2010.06.043",
+  "recid": 856131,
+  "title": "Measurement of $d\\sigma/dy$ of Drell-Yan $e^+e^-$ pairs in the $Z$ Mass Region from $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV",
+  "year": 2010
+ },
+ "inspire:871058": {
+  "arxiv": "1009.5594",
+  "authors_short": "Alioli et al.",
+  "bibtex": "@article{Alioli:2010qp,\n    author = \"Alioli, Simone and Nason, Paolo and Oleari, Carlo and Re, Emanuele\",\n    title = \"{Vector boson plus one jet production in POWHEG}\",\n    eprint = \"1009.5594\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-10-158, SFB-CPP-10-85, IPPP-10-78, DCPT-10-156\",\n    doi = \"10.1007/JHEP01(2011)095\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"095\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1007/JHEP01(2011)095",
+  "recid": 871058,
+  "title": "Vector boson plus one jet production in POWHEG",
+  "year": 2010
+ },
+ "inspire:877524": {
+  "arxiv": "1011.3540",
+  "authors_short": "Gavin et al.",
+  "bibtex": "@article{Gavin:2010az,\n    author = \"Gavin, Ryan and Li, Ye and Petriello, Frank and Quackenbush, Seth\",\n    title = \"{FEWZ 2.0: A code for hadronic Z production at next-to-next-to-leading order}\",\n    eprint = \"1011.3540\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ANL-HEP-PR-10-60\",\n    doi = \"10.1016/j.cpc.2011.06.008\",\n    journal = \"Comput. Phys. Commun.\",\n    volume = \"182\",\n    pages = \"2388--2403\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1016/j.cpc.2011.06.008",
+  "recid": 877524,
+  "title": "FEWZ 2.0: A code for hadronic Z production at next-to-next-to-leading order",
+  "year": 2010
+ },
  "inspire:891490": {
   "arxiv": "1103.0914",
   "authors_short": "Denner et al.",
@@ -294,6 +492,15 @@
   "doi": "10.1007/JHEP06(2011)069",
   "recid": 891490,
   "title": "Electroweak corrections to dilepton + jet production at hadron colliders",
+  "year": 2011
+ },
+ "inspire:894312": {
+  "arxiv": "1103.5699",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2011ksg,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF\",\n    title = \"{First Measurement of the Angular Coefficients of Drell-Yan $e^{+}e^{-}$ pairs in the Z Mass Region from $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96 TeV}\",\n    eprint = \"1103.5699\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-11-153-E\",\n    doi = \"10.1103/PhysRevLett.106.241801\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"106\",\n    pages = \"241801\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1103/PhysRevLett.106.241801",
+  "recid": 894312,
+  "title": "First Measurement of the Angular Coefficients of Drell-Yan $e^{+}e^{-}$ pairs in the Z Mass Region from $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96 TeV",
   "year": 2011
  }
 }
