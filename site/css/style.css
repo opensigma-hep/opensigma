@@ -141,6 +141,10 @@ table.bb td { min-width: 9rem; }
   text-transform: uppercase; border: 1.5px solid var(--st); border-radius: 5px; padding: 0 .4rem; }
 .stamp-note { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: .25rem .4rem; font-size: .8125rem; }
 .stamp .small { color: var(--fg); }
+.eval { font-size: .75rem; font-weight: 600; padding: 0 .35rem; border-radius: 4px; border: 1px solid; white-space: nowrap; }
+.eval-analytic { color: var(--good); }
+.eval-semi-analytic { color: var(--accent); }
+.eval-numerical { color: var(--fg); }
 svg.budget { width: 100%; height: auto; display: block; max-width: 40rem; }
 svg.budget text { fill: var(--fg); font: 13px system-ui, sans-serif; }
 svg.budget .axis text { fill: var(--muted); font-size: 11px; }

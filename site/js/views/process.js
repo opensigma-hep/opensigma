@@ -11,7 +11,7 @@ export function render(main, data, route) {
     proc.description ? el('p', {}, proc.description) : null,
     facts([['Also in', proc.also_in?.length ? sep(proc.also_in.map((f) => idLink(data, f))) : null]]),
     el('h2', {}, 'Building blocks'),
-    bbTable(proc, data.refs),
+    bbTable(proc, data),
     el('h2', {}, 'Channels'),
     chans.length ? el('ul', {}, ...chans.map((c) => el('li', {}, link(c.id, col[c.collider] ?? c.collider), ` · ${c.initial_state} · coverage ${c.coverage}`))) : none('channels'),
     el('h2', {}, 'Theory status'),

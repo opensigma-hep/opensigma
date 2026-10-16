@@ -36,7 +36,7 @@ export function render(main, data, route) {
     section('Measurements', results.length ? measTable(data, results.map((r) => ({ m: meas[r.measurement], total: r.total }))) : none('measurements')),
     section('Uncertainty budget', budget(data, results, meas, head)),
     section('Predictions', ...predictions(data, preds), ...ingredients(data, obs.resummation_ingredients)),
-    section('Building blocks', el('details', {}, el('summary', {}, `${proc.name}: building-block matrix`), bbTable(proc, data.refs))),
+    section('Building blocks', el('details', {}, el('summary', {}, `${proc.name}: building-block matrix`), bbTable(proc, data))),
   );
 }
 

@@ -6,5 +6,9 @@ status: done
 master_integrals:
   status: done
   refs: ["inspire:587998"]
+evaluation:
+  kind: analytic
+  detail: "finite parts in 1d and 2d harmonic polylogarithms (HPLs, 2dHPLs)"
+  provenance: {uid: 770ea326, ref: "inspire:587998", locator: "Abstract (finite parts expressed in one- and two-dimensional HPLs)", source: agent, status: agent-draft, date: "2026-10-16"}
 refs: ["inspire:567814", "inspire:587998"]
 provenance: {uid: 2d9ef422, ref: "inspire:587998", locator: "Abstract (two-loop QCD helicity amplitudes for γ*→qq̄g, reduced to known master integrals; enters V+jet at NNLO and DY at N3LO by crossing)", source: agent, status: cross-checked, date: "2026-10-16"}

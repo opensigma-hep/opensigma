@@ -21,7 +21,8 @@ uncertainty — repeated per observable.
    columns = Born | 1L | 2L | 3L | RV | RR | RRR | IR scheme | combined/public code.
    Cells: status (done / partial / missing) + approximations (leading colour, planar, m_t→∞, ...) + refs.
    Loop amplitudes live in a **shared amplitude library** (partonic, crossing-aware), referenced by ID from process matrices;
-   UI gets reverse lookup (amplitude → processes/colliders using it). Master integrals = a field on library entries.
+   UI gets reverse lookup (amplitude → processes/colliders using it). Master integrals = a field on library entries, as is
+   `evaluation`: analytic | semi-analytic (masters partly by series expansion/numerics) | numerical (grid or numerical pipeline) + one-line detail.
    Resummation ingredients (anomalous dims, soft/jet/beam functions) = separate block, attached at observable level.
 6. **Provenance (Q5):** hybrid. Experimental side ingested from HEPData/INSPIRE by script; theory side agent-drafted + human-verified.
    Every datum carries {value, ref, locator, source: hepdata|agent-draft|human, status: unverified|verified, verified_by, date}.

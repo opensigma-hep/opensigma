@@ -20,6 +20,16 @@
         "refs": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/ref"}}
       }
     },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "provenance"],
+      "properties": {
+        "kind": {"enum": ["analytic", "semi-analytic", "numerical"]},
+        "detail": {"type": "string", "minLength": 1, "maxLength": 160},
+        "provenance": {"$ref": "common.schema.json#/$defs/provenance"}
+      }
+    },
     "refs": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/ref"}},
     "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
     "aliases": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id", "pattern": "^amp:"}}

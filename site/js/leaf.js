@@ -83,8 +83,17 @@ function statusEl(status) {
   return el('span', { className: b.cls }, b.label);
 }
 
+/** Analytic / semi-analytic / numerical chip for an amplitude; the detail shows on hover. */
+export function evalChip(ev) {
+  if (!ev) return null;
+  const c = el('span', { className: 'eval eval-' + ev.kind }, ev.kind);
+  if (ev.detail) c.title = ev.detail;
+  return c;
+}
+
 /** Process building-block matrix: rows as given, the fixed column set, empty cells for missing entries. */
-export function bbTable(proc, refs) {
+export function bbTable(proc, data) {
+  const refs = data.refs, idx = index(data);
   const rows = proc.building_blocks ?? [];
   if (!rows.length) return none('building blocks');
   const t = el('table', { className: 'bb' },
@@ -99,7 +108,7 @@ export function bbTable(proc, refs) {
       const note = cell.approximations?.length || cell.amplitude
         ? el('div', { className: 'stamp-note' },
           cell.approximations?.length ? el('div', {}, cell.approximations.join(', ')) : null,
-          cell.amplitude ? el('div', {}, link(cell.amplitude, 'amplitude →')) : null)
+          cell.amplitude ? el('div', {}, link(cell.amplitude, 'amplitude →'), ' ', evalChip(idx.get(cell.amplitude)?.node.evaluation)) : null)
         : null;
       tr.append(el('td', {}, el('div', { className: 'stamp bb-' + cell.status },
         el('div', { className: 'stamp-head' }, cell.status),
