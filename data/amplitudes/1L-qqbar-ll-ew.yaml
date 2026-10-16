@@ -4,4 +4,4 @@ loops: 1
 corrections: EW
 status: done
 refs: ["inspire:562246", "inspire:836737"]
-provenance: {uid: 529984be, ref: "inspire:562246", locator: "Abstract (complete O(α) weak and photonic virtual one-loop corrections to qq̄→γ,Z→ℓ+ℓ−)", source: agent, status: agent-draft, date: "2026-10-16"}
+provenance: {uid: 529984be, ref: "inspire:562246", locator: "Abstract (complete O(α) weak and photonic virtual one-loop corrections to qq̄→γ,Z→ℓ+ℓ−)", source: agent, status: cross-checked, date: "2026-10-16"}
