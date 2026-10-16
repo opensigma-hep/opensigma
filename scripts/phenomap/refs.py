@@ -81,8 +81,11 @@ def resolve(ref: str, cache: dict, fetch=http_get_json) -> dict:
     return cache[ikey]
 
 
-def update_cache(root: Path, offline: bool, fetch=http_get_json, sleep=time.sleep) -> list[str]:
-    """Resolve every ref in the repo; rewrite refs.json only if it changed. Returns unresolved refs."""
+def update_cache(root: Path, offline: bool, fetch=http_get_json, sleep=time.sleep, errors: dict | None = None) -> list[str]:
+    """Resolve every ref in the repo; online only, rewrite refs.json if its content changed.
+
+    Returns unresolved refs; if `errors` is given it is filled with ref -> failure reason.
+    """
     root = Path(root)
     repo = load_repo(root)
     cache = dict(repo["refs"])
@@ -93,18 +96,19 @@ def update_cache(root: Path, offline: bool, fetch=http_get_json, sleep=time.slee
 
     missing = []
     for ref in sorted(collect_refs(repo)):
+        err = None
         if offline:
-            ok = cache_key(ref) in cache
+            err = None if cache_key(ref) in cache else "not in refs.json (offline)"
         else:
             try:
                 resolve(ref, cache, paced)
-                ok = True
-            except Exception:  # network/HTTP/shape errors: report as unresolved, keep going
-                ok = False
-        if not ok:
+            except Exception as e:  # network/HTTP/shape errors: report as unresolved, keep going
+                err = repr(e)
+        if err:
             missing.append(ref)
-    text = json.dumps(cache, sort_keys=True, ensure_ascii=False, indent=1) + "\n"
+            if errors is not None:
+                errors[ref] = err
     path = root / "refs.json"
-    if not path.exists() or path.read_text(encoding="utf-8") != text:
-        path.write_text(text, encoding="utf-8")
+    if not offline and cache != repo["refs"]:
+        path.write_text(json.dumps(cache, sort_keys=True, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return missing

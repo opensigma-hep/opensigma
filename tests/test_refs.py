@@ -1,4 +1,5 @@
 import json
+import shutil
 from pathlib import Path
 
 import pytest
@@ -111,5 +112,28 @@ def test_update_cache_online_writes_only_on_change(tmp_path):
     assert list(data) == sorted(data) and text.endswith("\n")
     assert {"inspire:1000001", "inspire:1000003", "arXiv:2003.00003"} <= set(data)
     mtime = path.stat().st_mtime_ns
-    refs.update_cache(root, offline=True, fetch=f)
+    refs.update_cache(root, offline=False, fetch=f, sleep=lambda s: None)  # nothing new to cache
     assert path.stat().st_mtime_ns == mtime and path.read_text() == text
+
+
+def test_online_failure_reason_collected(tmp_path):
+    root = _root(tmp_path, ["inspire:424242"])
+    errors = {}
+    refs.update_cache(root, offline=False, fetch=FakeFetch(), sleep=lambda s: None, errors=errors)
+    assert "OSError" in errors["inspire:424242"]
+
+
+def test_offline_never_writes_real_fixture(tmp_path):
+    root = tmp_path / "repo"
+    shutil.copytree(FIX / "repo_min", root)
+    before = (root / "refs.json").read_bytes()
+    assert refs.update_cache(root, offline=True, fetch=FakeFetch()) == []
+    assert (root / "refs.json").read_bytes() == before
+
+
+def test_offline_does_not_create_refs_json(tmp_path):
+    root = tmp_path / "repo"
+    shutil.copytree(FIX / "repo_min", root)
+    (root / "refs.json").unlink()
+    assert refs.update_cache(root, offline=True, fetch=FakeFetch())  # all unresolved
+    assert not (root / "refs.json").exists()
