@@ -206,6 +206,24 @@
   "title": "Measurement of the Drell-Yan triple-differential cross section in $pp$ collisions at $\\sqrt{s} = 8$ TeV",
   "year": 2017
  },
+ "inspire:1636973": {
+  "arxiv": "1711.06631",
+  "authors_short": "Grazzini et al.",
+  "bibtex": "@article{Grazzini:2017mhc,\n    author = \"Grazzini, Massimiliano and Kallweit, Stefan and Wiesemann, Marius\",\n    title = \"{Fully differential NNLO computations with MATRIX}\",\n    eprint = \"1711.06631\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-30-17, CERN-TH-2017-232, ZU-TH 30/17\",\n    doi = \"10.1140/epjc/s10052-018-5771-7\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"78\",\n    number = \"7\",\n    pages = \"537\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1140/epjc/s10052-018-5771-7",
+  "recid": 1636973,
+  "title": "Fully differential NNLO computations with MATRIX",
+  "year": 2017
+ },
+ "inspire:1643433": {
+  "arxiv": null,
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2017vxj,\n    collaboration = \"CMS\",\n    title = \"{A proposal for the measurement of the weak mixing angle at the HL-LHC}\",\n    reportNumber = \"CMS-PAS-FTR-17-001\",\n    year = \"2017\"\n}\n",
+  "doi": null,
+  "recid": 1643433,
+  "title": "A proposal for the measurement of the weak mixing angle at the HL-LHC",
+  "year": 2017
+ },
  "inspire:1649135": {
   "arxiv": "1801.06283",
   "authors_short": "CDF Collaboration",
@@ -241,6 +259,15 @@
   "recid": 1676216,
   "title": "Measurement of the weak mixing angle using the forward-backward asymmetry of Drell-Yan events in pp collisions at 8 TeV",
   "year": 2018
+ },
+ "inspire:1720009": {
+  "arxiv": "1902.04070",
+  "authors_short": "Azzi et al.",
+  "bibtex": "@article{Azzi:2019yne,\n    author = \"Azzi, P. and others\",\n    editor = \"Dainese, Andrea and Mangano, Michelangelo and Meyer, Andreas B. and Nisati, Aleandro and Salam, Gavin and Vesterinen, Mika Anton\",\n    title = \"{Report from Working Group 1}: {Standard Model Physics at the HL-LHC and HE-LHC}\",\n    eprint = \"1902.04070\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-LPCC-2018-03\",\n    doi = \"10.23731/CYRM-2019-007.1\",\n    journal = \"CERN Yellow Rep. Monogr.\",\n    volume = \"7\",\n    pages = \"1--220\",\n    year = \"2019\"\n}\n",
+  "doi": "10.23731/CYRM-2019-007.1",
+  "recid": 1720009,
+  "title": "Report from Working Group 1",
+  "year": 2019
  },
  "inspire:1734419": {
   "arxiv": "1905.05171",
@@ -278,6 +305,15 @@
   "title": "Measurements of differential Z boson production cross sections in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV",
   "year": 2019
  },
+ "inspire:1759359": {
+  "arxiv": "1910.07049",
+  "authors_short": "Camarda et al.",
+  "bibtex": "@article{Camarda:2019zyx,\n    author = \"Camarda, Stefano and others\",\n    title = \"{DYTurbo: Fast predictions for Drell-Yan processes}\",\n    eprint = \"1910.07049\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1140/epjc/s10052-020-7757-5\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"80\",\n    number = \"3\",\n    pages = \"251\",\n    year = \"2020\",\n    note = \"[Erratum: Eur.Phys.J.C 80, 440 (2020)]\"\n}\n",
+  "doi": "10.1140/epjc/s10052-020-7757-5",
+  "recid": 1759359,
+  "title": "DYTurbo: Fast predictions for Drell-Yan processes",
+  "year": 2019
+ },
  "inspire:1768911": {
   "arxiv": "1912.02844",
   "authors_short": "ATLAS Collaboration",
@@ -286,6 +322,15 @@
   "recid": 1768911,
   "title": "Measurement of the transverse momentum distribution of Drell–Yan lepton pairs in proton–proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector",
   "year": 2019
+ },
+ "inspire:1795270": {
+  "arxiv": null,
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2018qvs,\n    collaboration = \"ATLAS\",\n    title = \"{Prospect for a measurement of the Weak Mixing Angle in $pp \\rightarrow Z/\\gamma^* \\rightarrow e^+e^-$ events with the ATLAS detector at the High Luminosity Large Hadron Collider}\",\n    reportNumber = \"ATL-PHYS-PUB-2018-037\",\n    year = \"2018\"\n}\n",
+  "doi": null,
+  "recid": 1795270,
+  "title": "Prospect for a measurement of the Weak Mixing Angle in $pp \\rightarrow Z/\\gamma^* \\rightarrow e^+e^-$ events with the ATLAS detector at the High Luminosity Large Hadron Collider",
+  "year": 2020
  },
  "inspire:1836186": {
   "arxiv": "2012.05918",
@@ -332,6 +377,15 @@
   "title": "Dilepton Rapidity Distribution in Drell-Yan Production to Third Order in QCD",
   "year": 2021
  },
+ "inspire:1920586": {
+  "arxiv": null,
+  "authors_short": "Barter",
+  "bibtex": "@article{Barter:2018kqz,\n    author = \"Barter, William James\",\n    title = \"{Prospects for measurement of the weak mixing angle at LHCb}\",\n    reportNumber = \"LHCb-PUB-2018-013, CERN-LHCb-PUB-2018-013\",\n    year = \"2018\"\n}\n",
+  "doi": null,
+  "recid": 1920586,
+  "title": "Prospects for measurement of the weak mixing angle at LHCb",
+  "year": null
+ },
  "inspire:1973502": {
   "arxiv": "2111.10379",
   "authors_short": "Duhr and Mistlberger",
@@ -368,6 +422,15 @@
   "title": "Mixed QCD-electroweak corrections to dilepton production at the LHC in the high invariant mass region",
   "year": 2022
  },
+ "inspire:2109069": {
+  "arxiv": "2207.04332",
+  "authors_short": "Bondarenko et al.",
+  "bibtex": "@article{Bondarenko:2022mbi,\n    author = \"Bondarenko, Serge and Dydyshka, Yahor and Kalinovskaya, Lidia and Sadykov, Renat and Yermolchyk, Vitaly\",\n    title = \"{Hadron-hadron collision mode in ReneSANCe-v1.3.0}\",\n    eprint = \"2207.04332\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.cpc.2022.108646\",\n    journal = \"Comput. Phys. Commun.\",\n    volume = \"285\",\n    pages = \"108646\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1016/j.cpc.2022.108646",
+  "recid": 2109069,
+  "title": "Hadron-hadron collision mode in ReneSANCe-v1.3.0",
+  "year": 2022
+ },
  "inspire:2112612": {
   "arxiv": "2207.07056",
   "authors_short": "Neumann and Campbell",
@@ -395,6 +458,15 @@
   "title": "Drell–Yan lepton-pair production: qT resummation at N4LL accuracy",
   "year": 2023
  },
+ "inspire:2689657": {
+  "arxiv": "2308.09529",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023slx,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the tt{\\textasciimacron} cross section and its ratio to the Z production cross section using pp collisions at s=13.6 TeV with the ATLAS detector}\",\n    eprint = \"2308.09529\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-166\",\n    doi = \"10.1016/j.physletb.2023.138376\",\n    journal = \"Phys. Lett. B\",\n    volume = \"848\",\n    pages = \"138376\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1016/j.physletb.2023.138376",
+  "recid": 2689657,
+  "title": "Measurement of the <math altimg=\"si1.svg\"><mi>t</mi><mover accent=\"true\"><mrow><mi>t</mi></mrow><mrow><mo stretchy=\"false\">¯</mo></mrow></mover></math> cross section and its ratio to the Z production cross section using pp collisions at <math altimg=\"si2.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13.6</mn></math> TeV with the ATLAS detector",
+  "year": 2023
+ },
  "inspire:2698794": {
   "arxiv": "2309.09318",
   "authors_short": "ATLAS Collaboration",
@@ -403,6 +475,15 @@
   "recid": 2698794,
   "title": "A precise measurement of the Z-boson double-differential transverse momentum and rapidity distributions in the full phase space of the decay leptons with the ATLAS experiment at $\\sqrt{s}=8$ TeV",
   "year": 2023
+ },
+ "inspire:2770237": {
+  "arxiv": "2403.12902",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024irg,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of vector boson production cross sections and their ratios using pp collisions at s=13.6 TeV with the ATLAS detector}\",\n    eprint = \"2403.12902\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2024-069\",\n    doi = \"10.1016/j.physletb.2024.138725\",\n    journal = \"Phys. Lett. B\",\n    volume = \"854\",\n    pages = \"138725\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1016/j.physletb.2024.138725",
+  "recid": 2770237,
+  "title": "Measurement of vector boson production cross sections and their ratios using pp collisions at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13.6</mn></math> TeV with the ATLAS detector",
+  "year": 2024
  },
  "inspire:2775442": {
   "arxiv": "2404.06204",
@@ -439,6 +520,24 @@
   "recid": 2851712,
   "title": "Drell-Yan transverse-momentum spectra at N$^{3}$LL$^{′}$ and approximate N$^{4}$LL with SCETlib",
   "year": 2024
+ },
+ "inspire:2861949": {
+  "arxiv": "2412.16095",
+  "authors_short": "Armadillo et al.",
+  "bibtex": "@article{Armadillo:2024ncf,\n    author = \"Armadillo, Tommaso and Bonciani, Roberto and Buonocore, Luca and Devoto, Simone and Grazzini, Massimiliano and Kallweit, Stefan and Rana, Narayan and Vicini, Alessandro\",\n    title = \"{Mixed QCD-EW corrections to the neutral-current Drell-Yan process}\",\n    eprint = \"2412.16095\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2024-199, ZU-TH 56/24, TIF-UNIMI-2024-18\",\n    doi = \"10.1007/JHEP07(2025)141\",\n    journal = \"JHEP\",\n    volume = \"07\",\n    pages = \"141\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1007/JHEP07(2025)141",
+  "recid": 2861949,
+  "title": "Mixed QCD-EW corrections to the neutral-current Drell-Yan process",
+  "year": 2024
+ },
+ "inspire:2900021": {
+  "arxiv": "2503.09742",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2025sgv,\n    author = \"Chekhovsky, Vladimir and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of the inclusive W and Z boson production cross sections and their ratios in proton-proton collisions at $\\sqrt{s}=13.6$ TeV}\",\n    eprint = \"2503.09742\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-22-017, CERN-EP-2025-013\",\n    doi = \"10.1007/JHEP01(2026)047\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"047\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1007/JHEP01(2026)047",
+  "recid": 2900021,
+  "title": "Measurements of the inclusive W and Z boson production cross sections and their ratios in proton-proton collisions at $\\sqrt{s}=13.6$ TeV",
+  "year": 2025
  },
  "inspire:300492": {
   "arxiv": null,
