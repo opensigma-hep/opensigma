@@ -3,13 +3,18 @@ import * as families from './views/families.js';
 import * as family from './views/family.js';
 import * as notfound from './views/notfound.js';
 import * as placeholder from './views/placeholder.js';
+import * as observable from './views/observable.js';
+import * as channel from './views/channel.js';
+import * as process from './views/process.js';
+import * as amplitude from './views/amplitude.js';
+import * as parameter from './views/parameter.js';
+import * as about from './views/about.js';
 
 // Later tasks replace the placeholder entries.
 const views = {
   families, notfound,
-  family, process: placeholder, channel: placeholder, observable: placeholder,
-  amplitude: placeholder, parameter: placeholder, about: placeholder, search: placeholder,
-  measurement: placeholder, collider: placeholder,
+  family, process, channel, observable, amplitude, parameter, about,
+  search: placeholder, measurement: placeholder, collider: placeholder,
 };
 
 const THEME_KEY = 'pheno-map-theme';
