@@ -85,7 +85,7 @@ function budget(data, results, meas, head) {
     wrap.replaceChildren();
     if (results.length > 1) {
       const s = el('select', {}, ...results.map((x, i) => el('option', { value: i, selected: i === S.i, textContent: `${meas[x.measurement].experiment} ${meas[x.measurement].dataset ?? ''}` })));
-      s.addEventListener('change', () => { S.i = +s.value; draw(); });
+      s.addEventListener('change', () => { S.i = +s.value; draw(); wrap.querySelector('select').focus(); }); // redraw replaced s
       wrap.append(el('label', { className: 'pick' }, 'Experimental result: ', s));
     }
     if (!bars.some((b) => b.groups.length)) { wrap.append(none('uncertainty breakdown')); return; }
