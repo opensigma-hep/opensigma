@@ -103,6 +103,11 @@ def validate_integrity(repo: dict) -> list[Issue]:
                     err(file, path + ("predictions",), f"{d.get('id')}: {len(heads)} headline predictions (max 1)")
 
     for file, root in roots:
+        for chan in root.get("channels", []):
+            head = (chan.get("headline") or {}).get("observable")
+            if head in ids and head not in {o["id"] for o in chan.get("observables", [])}:  # unknown ids reported above
+                err(file, ("channels", chan["id"], "headline"), f"{file}: headline observable {head!r} is not an observable of {chan['id']!r}")
+    for file, root in roots:
         if file.startswith("processes/"):
             folder, fam = file.split("/")[1], root["family"]
             if fam != f"fam:{folder}":

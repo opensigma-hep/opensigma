@@ -120,3 +120,11 @@ def test_integrity_skipped_on_schema_errors():
     proc["sector"] = "BSM"
     proc["also_in"] = ["fam:ghost"]
     assert all("ghost" not in i.msg for i in validate(repo, SCHEMA))
+
+
+def test_headline_observable_must_belong_to_same_channel():
+    repo, proc, obs = _repo()
+    other = proc["channels"][1]
+    other["headline"] = {"observable": obs["id"], "region": "x"}
+    e = _one(repo, obs["id"])
+    assert e.file == DY and other["id"] in e.msg
