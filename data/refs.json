@@ -1,4 +1,13 @@
 {
+ "inspire:1115605": {
+  "arxiv": "1205.4760",
+  "authors_short": "Banfi et al.",
+  "bibtex": "@article{Banfi:2012du,\n    author = \"Banfi, Andrea and Dasgupta, Mrinal and Marzani, Simone and Tomlinson, Lee\",\n    title = \"{Predictions for Drell-Yan $\\phi^*$ and $Q_T$ observables at the LHC}\",\n    eprint = \"1205.4760\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DCPT-12-66, IPPP-12-33, MAN-HEP-2012-02\",\n    doi = \"10.1016/j.physletb.2012.07.035\",\n    journal = \"Phys. Lett. B\",\n    volume = \"715\",\n    pages = \"152--156\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1016/j.physletb.2012.07.035",
+  "recid": 1115605,
+  "title": "Predictions for Drell-Yan $\\phi^*$ and $Q_T$ observables at the LHC",
+  "year": 2012
+ },
  "inspire:1124333": {
   "arxiv": "1207.7138",
   "authors_short": "CDF Collaboration",
@@ -26,6 +35,15 @@
   "title": "Merging meets matching in MC@NLO",
   "year": 2012
  },
+ "inspire:1204784": {
+  "arxiv": "1211.6899",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2012ewf,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of angular correlations in Drell-Yan lepton pairs to probe Z/gamma* boson transverse momentum at sqrt(s)=7 TeV with the ATLAS detector}\",\n    eprint = \"1211.6899\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-PH-EP-2012-325\",\n    doi = \"10.1016/j.physletb.2013.01.054\",\n    journal = \"Phys. Lett. B\",\n    volume = \"720\",\n    pages = \"32--51\",\n    year = \"2013\"\n}\n",
+  "doi": "10.1016/j.physletb.2013.01.054",
+  "recid": 1204784,
+  "title": "Measurement of angular correlations in Drell-Yan lepton pairs to probe Z/gamma* boson transverse momentum at sqrt(s)=7 TeV with the ATLAS detector",
+  "year": 2012
+ },
  "inspire:1208117": {
   "arxiv": "1212.4504",
   "authors_short": "Hamilton et al.",
@@ -34,6 +52,51 @@
   "recid": 1208117,
   "title": "Merging H/W/Z + 0 and 1 jet at NLO with no merging scale: a path to parton shower + NNLO matching",
   "year": 2012
+ },
+ "inspire:1252862": {
+  "arxiv": "1309.1393",
+  "authors_short": "Guzzi et al.",
+  "bibtex": "@article{Guzzi:2013aja,\n    author = \"Guzzi, Marco and Nadolsky, Pavel M. and Wang, Bowen\",\n    title = \"{Nonperturbative contributions to a resummed leptonic angular distribution in inclusive neutral vector boson production}\",\n    eprint = \"1309.1393\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevD.90.014030\",\n    journal = \"Phys. Rev. D\",\n    volume = \"90\",\n    number = \"1\",\n    pages = \"014030\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1103/PhysRevD.90.014030",
+  "recid": 1252862,
+  "title": "Nonperturbative contributions to a resummed leptonic angular distribution in inclusive neutral vector boson production",
+  "year": 2013
+ },
+ "inspire:1300647": {
+  "arxiv": "1406.3660",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2014alx,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the $Z/\\gamma^*$ boson transverse momentum distribution in $pp$ collisions at $\\sqrt{s}$ = 7 TeV with the ATLAS detector}\",\n    eprint = \"1406.3660\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-PH-EP-2014-075\",\n    doi = \"10.1007/JHEP09(2014)145\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"145\",\n    year = \"2014\"\n}\n",
+  "doi": "10.1007/JHEP09(2014)145",
+  "recid": 1300647,
+  "title": "Measurement of the $Z/\\gamma^*$ boson transverse momentum distribution in $pp$ collisions at $\\sqrt{s}$ = 7 TeV with the ATLAS detector",
+  "year": 2014
+ },
+ "inspire:1359450": {
+  "arxiv": "1504.03511",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2015hyl,\n    author = \"Khachatryan, Vardan and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the Z boson differential cross section in transverse momentum and rapidity in proton{\\textendash}proton collisions at 8 TeV}\",\n    eprint = \"1504.03511\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-13-013, CERN-PH-EP-2015-059\",\n    doi = \"10.1016/j.physletb.2015.07.065\",\n    journal = \"Phys. Lett. B\",\n    volume = \"749\",\n    pages = \"187--209\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1016/j.physletb.2015.07.065",
+  "recid": 1359450,
+  "title": "Measurement of the Z boson differential cross section in transverse momentum and rapidity in proton–proton collisions at 8 TeV",
+  "year": 2015
+ },
+ "inspire:1359451": {
+  "arxiv": "1504.03512",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2015cyj,\n    author = \"Khachatryan, Vardan and others\",\n    collaboration = \"CMS\",\n    title = \"{Angular coefficients of Z bosons produced in pp collisions at $\\sqrt{s}$ = 8 TeV and decaying to $\\mu^+ \\mu^-$ as a function of transverse momentum and rapidity}\",\n    eprint = \"1504.03512\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-13-010, CERN-PH-EP-2015-046\",\n    doi = \"10.1016/j.physletb.2015.08.061\",\n    journal = \"Phys. Lett. B\",\n    volume = \"750\",\n    pages = \"154--175\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1016/j.physletb.2015.08.061",
+  "recid": 1359451,
+  "title": "Angular coefficients of Z bosons produced in pp collisions at $\\sqrt{s}$ = 8 TeV and decaying to $\\mu^+ \\mu^-$ as a function of transverse momentum and rapidity",
+  "year": 2015
+ },
+ "inspire:1373300": {
+  "arxiv": "1505.07024",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2015okr,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurement of the forward $Z$ boson production cross-section in $pp$ collisions at $\\sqrt{s}=7$ TeV}\",\n    eprint = \"1505.07024\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"LHCB-PAPER-2015-001, CERN-PH-EP-2015-102\",\n    doi = \"10.1007/JHEP08(2015)039\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"039\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1007/JHEP08(2015)039",
+  "recid": 1373300,
+  "title": "Measurement of the forward $Z$ boson production cross-section in $pp$ collisions at $\\sqrt{s}=7$ TeV",
+  "year": 2015
  },
  "inspire:1386859": {
   "arxiv": "1508.01475",
@@ -53,6 +116,15 @@
   "title": "Large Perturbative Corrections to the Drell-Yan Process in QCD",
   "year": 1979
  },
+ "inspire:1406555": {
+  "arxiv": "1511.08039",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2015mad,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurement of forward W and Z boson production in $pp$ collisions at $ \\sqrt{s}=8 $ TeV}\",\n    eprint = \"1511.08039\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"LHCB-PAPER-2015-049, CERN-PH-EP-2015-301\",\n    doi = \"10.1007/JHEP01(2016)155\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"155\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1007/JHEP01(2016)155",
+  "recid": 1406555,
+  "title": "Measurement of forward W and Z boson production in $pp$ collisions at $ \\sqrt{s}=8 $ TeV",
+  "year": 2015
+ },
  "inspire:1408300": {
   "arxiv": "1512.01291",
   "authors_short": "Boughezal et al.",
@@ -60,6 +132,15 @@
   "doi": "10.1103/PhysRevLett.116.152001",
   "recid": 1408300,
   "title": "Z-boson production in association with a jet at next-to-next-to-leading order in perturbative QCD",
+  "year": 2015
+ },
+ "inspire:1408516": {
+  "arxiv": "1512.02192",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2015iiu,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the transverse momentum and $\\phi ^*_{\\eta }$ distributions of Drell{\\textendash}Yan lepton pairs in proton{\\textendash}proton collisions at $\\sqrt{s}=8$  TeV with the ATLAS detector}\",\n    eprint = \"1512.02192\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-PH-EP-2015-275\",\n    doi = \"10.1140/epjc/s10052-016-4070-4\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"76\",\n    number = \"5\",\n    pages = \"291\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1140/epjc/s10052-016-4070-4",
+  "recid": 1408516,
+  "title": "Measurement of the transverse momentum and $\\phi ^*_{\\eta }$ distributions of Drell–Yan lepton pairs in proton–proton collisions at $\\sqrt{s}=8$  TeV with the ATLAS detector",
   "year": 2015
  },
  "inspire:1436497": {
@@ -80,6 +161,15 @@
   "title": "Measurement of $\\sin^2\\theta^{\\rm lept}_{\\rm eff}$ using $e^+e^-$ pairs from $\\gamma^*/Z$ bosons produced in $p\\bar{p}$ collisions at a center-of-momentum energy of 1.96 TeV",
   "year": 2016
  },
+ "inspire:1466778": {
+  "arxiv": "1606.00689",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2016rnf,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the angular coefficients in $Z$-boson events using electron and muon pairs from data taken at $\\sqrt{s}=8$ TeV with the ATLAS detector}\",\n    eprint = \"1606.00689\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2016-087\",\n    doi = \"10.1007/JHEP08(2016)159\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"159\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1007/JHEP08(2016)159",
+  "recid": 1466778,
+  "title": "Measurement of the angular coefficients in $Z$-boson events using electron and muon pairs from data taken at $\\sqrt{s}=8$ TeV with the ATLAS detector",
+  "year": 2016
+ },
  "inspire:1490040": {
   "arxiv": "1610.01843",
   "authors_short": "Gehrmann-De Ridder et al.",
@@ -89,6 +179,15 @@
   "title": "NNLO QCD corrections for Drell-Yan $p_T^Z$ and $\\phi^*$ observables at the LHC",
   "year": 2016
  },
+ "inspire:1502620": {
+  "arxiv": "1612.03016",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2016nqi,\n    author = \"Aaboud, Morad and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Precision measurement and interpretation of inclusive $W^+$ , $W^-$ and $Z/\\gamma ^*$ production cross sections with the ATLAS detector}\",\n    eprint = \"1612.03016\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2016-272\",\n    doi = \"10.1140/epjc/s10052-017-4911-9\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"77\",\n    number = \"6\",\n    pages = \"367\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1140/epjc/s10052-017-4911-9",
+  "recid": 1502620,
+  "title": "Precision measurement and interpretation of inclusive $W^+$ , $W^-$ and $Z/\\gamma ^*$ production cross sections with the ATLAS detector",
+  "year": 2016
+ },
  "inspire:1629966": {
   "arxiv": "1710.03951",
   "authors_short": "D0 Collaboration",
@@ -96,6 +195,15 @@
   "doi": "10.1103/PhysRevLett.120.241802",
   "recid": 1629966,
   "title": "Measurement of the Effective Weak Mixing Angle in $p\\bar{p}\\rightarrow Z/\\gamma^* \\rightarrow \\ell^+\\ell^-$ Events",
+  "year": 2017
+ },
+ "inspire:1630886": {
+  "arxiv": "1710.05167",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2017rue,\n    author = \"Aaboud, M. and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the Drell-Yan triple-differential cross section in $pp$ collisions at $\\sqrt{s} = 8$ TeV}\",\n    eprint = \"1710.05167\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2017-152\",\n    doi = \"10.1007/JHEP12(2017)059\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"059\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1007/JHEP12(2017)059",
+  "recid": 1630886,
+  "title": "Measurement of the Drell-Yan triple-differential cross section in $pp$ collisions at $\\sqrt{s} = 8$ TeV",
   "year": 2017
  },
  "inspire:1649135": {
@@ -114,6 +222,24 @@
   "doi": "10.1103/PhysRevD.99.074008",
   "recid": 1670818,
   "title": "Collinear and TMD parton densities from fits to precision DIS measurements in the parton branching method",
+  "year": 2018
+ },
+ "inspire:1673183": {
+  "arxiv": "1805.05916",
+  "authors_short": "Bizoń et al.",
+  "bibtex": "@article{Bizon:2018foh,\n    author = \"Bizo{\\'n}, Wojciech and Chen, Xuan and Gehrmann-De Ridder, Aude and Gehrmann, Thomas and Glover, Nigel and Huss, Alexander and Monni, Pier Francesco and Re, Emanuele and Rottoli, Luca and Torrielli, Paolo\",\n    title = \"{Fiducial distributions in Higgs and Drell-Yan production at N$^{3}$LL+NNLO}\",\n    eprint = \"1805.05916\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2018-105, IPPP/18/34, LAPTH-015/18, OUTP-17-19P, ZU-TH 17/18, IPPP-18-34, LAPTH-015-18, ZU-TH-17-18\",\n    doi = \"10.1007/JHEP12(2018)132\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"132\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1007/JHEP12(2018)132",
+  "recid": 1673183,
+  "title": "Fiducial distributions in Higgs and Drell-Yan production at N$^{3}$LL+NNLO",
+  "year": 2018
+ },
+ "inspire:1676216": {
+  "arxiv": "1806.00863",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2018ktx,\n    author = \"Sirunyan, Albert M. and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the weak mixing angle using the forward-backward asymmetry of Drell-Yan events in pp collisions at 8 TeV}\",\n    eprint = \"1806.00863\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-16-007, CERN-EP-2018-126\",\n    doi = \"10.1140/epjc/s10052-018-6148-7\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"78\",\n    number = \"9\",\n    pages = \"701\",\n    year = \"2018\"\n}\n",
+  "doi": "10.1140/epjc/s10052-018-6148-7",
+  "recid": 1676216,
+  "title": "Measurement of the weak mixing angle using the forward-backward asymmetry of Drell-Yan events in pp collisions at 8 TeV",
   "year": 2018
  },
  "inspire:1734419": {
@@ -177,6 +303,15 @@
   "doi": "10.1103/PhysRevD.104.L111503",
   "recid": 1850545,
   "title": "Drell–Yan lepton-pair production: qT resummation at N3LL accuracy and fiducial cross sections at N3LO",
+  "year": 2021
+ },
+ "inspire:1858406": {
+  "arxiv": "2104.07509",
+  "authors_short": "Re et al.",
+  "bibtex": "@article{Re:2021con,\n    author = \"Re, Emanuele and Rottoli, Luca and Torrielli, Paolo\",\n    title = \"{Fiducial Higgs and Drell-Yan distributions at N$^3$LL$^\\prime$+NNLO with RadISH}\",\n    eprint = \"2104.07509\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1007/JHEP09(2021)108\",\n    journal = \"JHEP\",\n    volume = \"2109\",\n    pages = \"108\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP09(2021)108",
+  "recid": 1858406,
+  "title": "Fiducial Higgs and Drell-Yan distributions at N$^3$LL$^\\prime$+NNLO with RadISH",
   "year": 2021
  },
  "inspire:1869719": {
@@ -250,6 +385,24 @@
   "recid": 24603,
   "title": "The Calculation of the Second Order Soft and Virtual Contributions to the Drell-Yan Cross-Section",
   "year": 1988
+ },
+ "inspire:2644969": {
+  "arxiv": "2303.12781",
+  "authors_short": "Camarda et al.",
+  "bibtex": "@article{Camarda:2023dqn,\n    author = \"Camarda, Stefano and Cieri, Leandro and Ferrera, Giancarlo\",\n    title = \"{Drell{\\textendash}Yan lepton-pair production: qT resummation at N4LL accuracy}\",\n    eprint = \"2303.12781\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.physletb.2023.138125\",\n    journal = \"Phys. Lett. B\",\n    volume = \"845\",\n    pages = \"138125\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1016/j.physletb.2023.138125",
+  "recid": 2644969,
+  "title": "Drell–Yan lepton-pair production: qT resummation at N4LL accuracy",
+  "year": 2023
+ },
+ "inspire:2698794": {
+  "arxiv": "2309.09318",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023lsr,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{A precise measurement of the Z-boson double-differential transverse momentum and rapidity distributions in the full phase space of the decay leptons with the ATLAS experiment at~$\\sqrt{s}=8$~TeV}\",\n    eprint = \"2309.09318\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-171\",\n    doi = \"10.1140/epjc/s10052-024-12438-w\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"84\",\n    number = \"3\",\n    pages = \"315\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1140/epjc/s10052-024-12438-w",
+  "recid": 2698794,
+  "title": "A precise measurement of the Z-boson double-differential transverse momentum and rapidity distributions in the full phase space of the decay leptons with the ATLAS experiment at $\\sqrt{s}=8$ TeV",
+  "year": 2023
  },
  "inspire:2775442": {
   "arxiv": "2404.06204",
@@ -368,6 +521,15 @@
   "title": "High precision QCD at hadron colliders: Electroweak gauge boson rapidity distributions at NNLO",
   "year": 2003
  },
+ "inspire:659055": {
+  "arxiv": "hep-ph/0409146",
+  "authors_short": "Nason",
+  "bibtex": "@article{Nason:2004rx,\n    author = \"Nason, Paolo\",\n    title = \"{A New method for combining NLO QCD with shower Monte Carlo algorithms}\",\n    eprint = \"hep-ph/0409146\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"BICOCCA-FT-04-11\",\n    doi = \"10.1088/1126-6708/2004/11/040\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"040\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1088/1126-6708/2004/11/040",
+  "recid": 659055,
+  "title": "A New method for combining NLO QCD with shower Monte Carlo algorithms",
+  "year": 2004
+ },
  "inspire:686721": {
   "arxiv": "hep-ph/0507061",
   "authors_short": "Gehrmann et al.",
@@ -467,6 +629,15 @@
   "title": "Measurement of $d\\sigma/dy$ of Drell-Yan $e^+e^-$ pairs in the $Z$ Mass Region from $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV",
   "year": 2010
  },
+ "inspire:856972": {
+  "arxiv": "1006.0618",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2010dbl,\n    author = \"Abazov, Victor Mukhamedovich and others\",\n    collaboration = \"D0\",\n    title = \"{Measurement of the Normalized $Z/\\gamma^* -> \\mu^+\\mu^-$ Transverse Momentum Distribution in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV}\",\n    eprint = \"1006.0618\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-10-183-E\",\n    doi = \"10.1016/j.physletb.2010.09.012\",\n    journal = \"Phys. Lett. B\",\n    volume = \"693\",\n    pages = \"522--530\",\n    year = \"2010\"\n}\n",
+  "doi": "10.1016/j.physletb.2010.09.012",
+  "recid": 856972,
+  "title": "Measurement of the Normalized $Z/\\gamma^* -> \\mu^+\\mu^-$ Transverse Momentum Distribution in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV",
+  "year": 2010
+ },
  "inspire:871058": {
   "arxiv": "1009.5594",
   "authors_short": "Alioli et al.",
@@ -501,6 +672,15 @@
   "doi": "10.1103/PhysRevLett.106.241801",
   "recid": 894312,
   "title": "First Measurement of the Angular Coefficients of Drell-Yan $e^{+}e^{-}$ pairs in the Z Mass Region from $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96 TeV",
+  "year": 2011
+ },
+ "inspire:941555": {
+  "arxiv": "1110.4973",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2011wyd,\n    author = \"Chatrchyan, Serguei and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the Rapidity and Transverse Momentum Distributions of $Z$ Bosons in $pp$ Collisions at $\\sqrt{s}=7$ TeV}\",\n    eprint = \"1110.4973\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-EWK-10-010, CERN-PH-EP-2011-169\",\n    doi = \"10.1103/PhysRevD.85.032002\",\n    journal = \"Phys. Rev. D\",\n    volume = \"85\",\n    pages = \"032002\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1103/PhysRevD.85.032002",
+  "recid": 941555,
+  "title": "Measurement of the Rapidity and Transverse Momentum Distributions of $Z$ Bosons in $pp$ Collisions at $\\sqrt{s}=7$ TeV",
   "year": 2011
  }
 }

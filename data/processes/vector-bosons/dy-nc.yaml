@@ -116,6 +116,7 @@ channels:
         experiment: "ATLAS"
         dataset: "13 TeV, 81 pb⁻¹ (2015)"
         ref: "inspire:1436497"
+        superseded_by: "meas:dy-nc/lhc-13/atlas-2024-lowpu"
       - id: "meas:dy-nc/lhc-13/atlas-2019-ptll"
         experiment: "ATLAS"
         dataset: "13 TeV, 36.1 fb⁻¹ (2015–2016)"
@@ -636,6 +637,12 @@ channels:
         dataset: "1.96 TeV, 0.98 fb⁻¹, ee"
         ref: "inspire:769689"
         hepdata: "hepdata:ins769689/Table 1"
+        superseded_by: "meas:dy-nc/tevatron-1960/d0-2010-ptll-mumu"
+      - id: "meas:dy-nc/tevatron-1960/d0-2010-ptll-mumu"
+        experiment: "D0"
+        dataset: "1.96 TeV, 0.97 fb⁻¹, μμ, |η(μ)| < 1.7, 65 < mμμ < 115 GeV"
+        ref: "inspire:856972"
+        hepdata: "hepdata:ins856972/Table 1"
       - id: "meas:dy-nc/tevatron-1960/cdf-2016-afb"
         experiment: "CDF"
         dataset: "1.96 TeV, 9.4 fb⁻¹ (full Run II), ee"
@@ -766,6 +773,19 @@ channels:
                 size: {range: [1.8, 10.0], asymmetric: false}
                 full_table: "hepdata:ins769689/Table 1"
                 provenance: {uid: 3636c170, ref: "hepdata:ins769689/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/tevatron-1960/d0-2010-ptll-mumu"
+            total: {value_pct: 2.2, provenance: {uid: 0c5b1eda, ref: "hepdata:ins856972/Table 1", locator: "Table 1, quadrature sum of all errors (bin 2); normalized (1/σ) dσ/dpT, μμ at particle level, 4 < pT < 8 GeV: 0.0627 ± 0.0006 (stat) and four 'sys' components 0.1%, 1.5%, 0.6%, 1.2%", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.96, 42.0], asymmetric: false}
+                full_table: "hepdata:ins856972/Table 1"
+                provenance: {uid: 608bde7f, ref: "hepdata:ins856972/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.1, 7.2], asymmetric: false}
+                full_table: "hepdata:ins856972/Table 1"
+                provenance: {uid: cce78ab3, ref: "hepdata:ins856972/Table 1", locator: "Table 1, error 'sys' (four components with the same label, pooled over all bins)", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD fixed order, O(αs²) (FEWZ2, MSTW2008 NNLO), CDF 2012 comparison"
             accuracy: {qcd: NNLO, approximations: ["fixed order O(αs²); μR = μF = mZ; used as an inclusive calculation in 66–116 GeV"]}
@@ -798,6 +818,21 @@ channels:
             compared_to: ["meas:dy-nc/tevatron-1960/d0-2008-ptll"]
             refs: ["inspire:769689", "inspire:725573"]
             provenance: {uid: 08c7b05e, ref: "inspire:769689", locator: "Text describing Fig. 2 ('a pQCD calculation at NNLO [10] using the MRST 2001 NNLO PDF set'; [10] = PRD 74 (2006) 114017)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "Z+jet NLO QCD, O(αs²) differential normalised to NLO σ (MCFM, MSTW2008 NLO), D0 2010 μμ comparison"
+            accuracy: {qcd: NLO, approximations: ["differential distribution from Z+jet at NLO (O(αs²)) with jet pT > 2.5 GeV, normalised to the NLO inclusive σ", "QED FSR correction from ResBos+Photos"]}
+            codes: ["MCFM"]
+            compared_to: ["meas:dy-nc/tevatron-1960/d0-2010-ptll-mumu"]
+            refs: ["inspire:856972"]
+            provenance: {uid: c3146350, ref: "inspire:856972", locator: "Text after Fig. 2 (mcfm at LO and NLO, MSTW2008, scales sqrt(m² + pT²) varied by 2; PDF uncertainty about half the scale uncertainty at NLO) and Fig. 3(b)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos NNLL resummation + O(αs) with O(αs²) K-factors (CTEQ6.6, BLNY), D0 2010 μμ comparison"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NNLL", variable: "pT(μμ)"}]
+              approximations: ["O(αs) pQCD above pT ≈ 20 GeV, K-factors in pT and rapidity to an O(αs²) calculation", "BLNY non-perturbative parameterisation; Photos for QED FSR"]
+            codes: ["ResBos", "Photos"]
+            compared_to: ["meas:dy-nc/tevatron-1960/d0-2010-ptll-mumu"]
+            refs: ["inspire:856972", "inspire:604413"]
+            provenance: {uid: 72c13321, ref: "inspire:856972", locator: "Text after Fig. 2 (resbos with CTEQ6.6: NNLL at low pT with BLNY, O(αs) at pT ≥ 20 GeV, k-factors to O(αs²)) and Fig. 3(b)", source: agent, status: agent-draft, date: "2026-10-16"}
       - id: "obs:dy-nc/tevatron-1960/afb"
         name: "Forward-backward asymmetry A_FB vs mℓℓ"
         kind: asymmetry
@@ -855,3 +890,824 @@ channels:
             compared_to: ["meas:dy-nc/tevatron-1960/cdf-2011-ai"]
             refs: ["inspire:894312", "inspire:871058"]
             provenance: {uid: 5100b31d, ref: "inspire:894312", locator: "Fig. 3 caption and Ref. [21] (POWHEG, arXiv:1009.5594, CTEQ6.6 PDFs)", source: agent, status: agent-draft, date: "2026-10-16"}
+  - id: "chan:dy-nc/lhc-7"
+    collider: "col:lhc-7"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:dy-nc/lhc-7/sigma-fid", region: "Z peak, 66 < mℓℓ < 116 GeV, pT(ℓ) > 20 GeV, |η(ℓ)| < 2.5 (ATLAS central fiducial cuts, e+μ combined)"}
+    measurements:
+      - id: "meas:dy-nc/lhc-7/atlas-2016-wz"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 4.6 fb⁻¹ (2011)"
+        ref: "inspire:1502620"
+        hepdata: "hepdata:ins1502620/Table 3"
+      - id: "meas:dy-nc/lhc-7/atlas-2014-ptll"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 4.7 fb⁻¹ (2011)"
+        ref: "inspire:1300647"
+        hepdata: "hepdata:ins1300647/Table 2"
+      - id: "meas:dy-nc/lhc-7/atlas-2013-phistar"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 4.6 fb⁻¹ (2011)"
+        ref: "inspire:1204784"
+        hepdata: "hepdata:ins1204784/Table 7"
+      - id: "meas:dy-nc/lhc-7/cms-2011-diff"
+        experiment: "CMS"
+        dataset: "7 TeV, 36 pb⁻¹ (2010)"
+        ref: "inspire:941555"
+        hepdata: "hepdata:ins941555/Table 1"
+      - id: "meas:dy-nc/lhc-7/lhcb-2015-z"
+        experiment: "LHCb"
+        dataset: "7 TeV, 1.0 fb⁻¹, μμ, 2.0 < η(μ) < 4.5"
+        ref: "inspire:1373300"
+        hepdata: "hepdata:ins1373300/Table 1"
+    observables:
+      - id: "obs:dy-nc/lhc-7/sigma-fid"
+        name: "Fiducial σ × B(Z/γ* → ℓℓ), Z-peak region"
+        kind: fiducial
+        variable: "σ_fid (experiment-specific lepton cuts around the Z peak)"
+        results:
+          - measurement: "meas:dy-nc/lhc-7/atlas-2016-wz"
+            total: {value_pct: 1.8, provenance: {uid: f990b4c0, ref: "hepdata:ins1502620/Table 3", locator: "Table 3, quadrature sum of all errors (bin 12); central Z/γ* → ℓℓ (e+μ combined), 66 < mℓℓ < 116 GeV: 502.2 ± 0.3 (stat) ± 1.7 (sys) ± 9.0 (lumi) pb", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.02, 0.099], asymmetric: false}
+                full_table: "hepdata:ins1502620/Table 3"
+                provenance: {uid: ac641364, ref: "hepdata:ins1502620/Table 3", locator: "Table 3, error 'stat' (range over all 12 W and Z rows; Z → ℓℓ row 0.06%)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.34, 1.1], asymmetric: false}
+                full_table: "hepdata:ins1502620/Table 3"
+                provenance: {uid: a7a14ae5, ref: "hepdata:ins1502620/Table 3", locator: "Table 3, error 'sys' (range over the W and Z rows labelled 'sys'; Z → ℓℓ row 0.34%)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: lumi
+                size: {range: [1.8, 1.8], asymmetric: false}
+                full_table: "hepdata:ins1502620/Table 3"
+                provenance: {uid: b2c9e711, ref: "hepdata:ins1502620/Table 3", locator: "Table 3, error 'lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-7/lhcb-2015-z"
+            total: {value_pct: 2.27, provenance: {uid: 3282475e, ref: "inspire:1373300", locator: "Table 1 (total 2.27%); Abstract: σ(Z→μμ) = 76.0 ± 0.3 (stat) ± 0.5 (syst) ± 1.0 (beam energy) ± 1.3 (lumi) pb; 2.0 < η(μ) < 4.5, pT(μ) > 20 GeV, 60 < mμμ < 120 GeV", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [0.39, 0.39], unit: "%", asymmetric: false}
+                provenance: {uid: d177b1de, ref: "inspire:1373300", locator: "Table 1, 'Statistical'", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Tracking efficiency (largest systematic)"
+                size: {range: [0.53, 0.53], unit: "%", asymmetric: false}
+                provenance: {uid: 891079f3, ref: "inspire:1373300", locator: "Table 1, 'Tracking efficiency' (total systematic 0.68%)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: beam
+                specific: "Beam energy"
+                size: {range: [1.25, 1.25], unit: "%", asymmetric: false}
+                provenance: {uid: 7de6b555, ref: "inspire:1373300", locator: "Table 1, 'Beam energy'", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.72, 1.72], unit: "%", asymmetric: false}
+                provenance: {uid: 50416d65, ref: "inspire:1373300", locator: "Table 1, 'Luminosity'", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD + NLO EW (DYNNLO 1.5, MMHT2014), ATLAS central-Z cuts"
+            accuracy: {qcd: NNLO, ew: NLO}
+            codes: ["DYNNLO", "FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
+            total: {value_pct: 1.5, provenance: {uid: d878765d, ref: "inspire:1502620", locator: "Table 16, Z/γ* → ℓℓ, MMHT2014: 485 +7.4 −6.9 pb (PDF uncertainty only); larger side", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: PDF
+                specific: "MMHT2014 eigenvector uncertainty"
+                pdf_set: "MMHT2014"
+                size: {range: [1.4, 1.5], unit: "%", asymmetric: true}
+                provenance: {uid: 5c569a2c, ref: "inspire:1502620", locator: "Table 16, MMHT2014 row, Z column (+7.4 −6.9 of 485 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: approximation
+                specific: "FEWZ vs DYNNLO difference for the integrated fiducial Z cross section"
+                size: {range: [0.2, 0.2], unit: "%", asymmetric: false}
+                provenance: {uid: 66917c9b, ref: "inspire:1502620", locator: "Sec. 6.1.1 (FEWZ − DYNNLO with ATLAS-epWZ12: +1.2, +0.7, +0.2% for W+, W−, Z)", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2016-wz"]
+            refs: ["inspire:1502620", "inspire:815316", "inspire:1182519"]
+            provenance: {uid: b8162b68, ref: "inspire:1502620", locator: "Sec. 6.1.1 (DYNNLO 1.5 and FEWZ 3.1.b2 at O(αs²), Gμ scheme; NLO EW from FEWZ, Ref. [28]) and Table 16", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO QCD (FEWZ, ABM12/CT10/HERA1.5/JR09/MSTW08/NNPDF3.0), LHCb cuts"
+            accuracy: {qcd: NNLO}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/lhcb-2015-z"]
+            refs: ["inspire:1373300", "inspire:877524", "inspire:1182519"]
+            provenance: {uid: 8aa84924, ref: "inspire:1373300", locator: "Sec. 2 (FEWZ at NNLO, Refs. [30, 31], for six PDF sets); numbers shown in figures only", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-7/yll"
+        name: "dσ/d|y(ℓℓ)|, Z-peak region (incl. forward)"
+        kind: differential
+        variable: "|y(ℓℓ)| (LHCb: y(Z), 2.0 < y < 4.5)"
+        results:
+          - measurement: "meas:dy-nc/lhc-7/atlas-2016-wz"
+            total: {value_pct: 1.8, provenance: {uid: 7a2e726a, ref: "hepdata:ins1502620/Table 12", locator: "Table 12, quadrature sum of all errors (bin 3); central Z/γ* → ℓℓ, 66 < mℓℓ < 116 GeV, 0.4 < |yℓℓ| < 0.6: 134.24 pb, ± 0.19% (stat) ± 0.09% (uncor) ± 0.28% (cor) ± 1.8% (lumi). Forward-Z dσ/d|y| up to |y| = 3.6 is in Table 14", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.19, 0.59], asymmetric: false}
+                full_table: "hepdata:ins1502620/Table 12"
+                provenance: {uid: b2570cc4, ref: "hepdata:ins1502620/Table 12", locator: "Table 12, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: uncor
+                size: {range: [0.09, 0.37], asymmetric: false}
+                full_table: "hepdata:ins1502620/Table 12"
+                provenance: {uid: 6e69de0a, ref: "hepdata:ins1502620/Table 12", locator: "Table 12, error 'uncor' (bin-to-bin uncorrelated systematic)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: cor
+                size: {range: [0.28, 0.41], asymmetric: false}
+                full_table: "hepdata:ins1502620/Table 12"
+                provenance: {uid: 5c20445e, ref: "hepdata:ins1502620/Table 12", locator: "Table 12, error 'cor' (bin-to-bin correlated systematic)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: lumi
+                size: {range: [1.8, 1.8], asymmetric: false}
+                full_table: "hepdata:ins1502620/Table 12"
+                provenance: {uid: 11a5791a, ref: "hepdata:ins1502620/Table 12", locator: "Table 12, error 'lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-7/cms-2011-diff"
+            total: {value_pct: 2.9, provenance: {uid: '42498878', ref: "hepdata:ins941555/Table 1", locator: "HEPData v1 table 'Table 1', third dependent variable (LEPTON+ LEPTON- combined; normalized (1/σ) dσ/d|y|, 60 < mℓℓ < 120 GeV), bin 4 (0.3 < |y| < 0.4): 0.346 ± 0.01; single unlabelled total error and not the first dependent variable, so not ingestable by scripts.ingest_hepdata", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties: []
+          - measurement: "meas:dy-nc/lhc-7/lhcb-2015-z"
+            total: {value_pct: 2.6, provenance: {uid: 3087684b, ref: "hepdata:ins1373300/Table 1", locator: "Table 1, quadrature sum of all errors (bin 9); 3.0 < y(Z) < 3.125: 7.783 pb ± 0.099 (stat) ± 0.059 (sys) ± 0.097 (beam) ± 0.134 (lumi)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [1.2, 11.0], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 1"
+                provenance: {uid: 511a0f4b, ref: "hepdata:ins1373300/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.76, 5.2], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 1"
+                provenance: {uid: 4c9a10e2, ref: "hepdata:ins1373300/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: beam
+                specific: "sys,beam"
+                size: {range: [0.87, 1.3], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 1"
+                provenance: {uid: f4c446dd, ref: "hepdata:ins1373300/Table 1", locator: "Table 1, error 'sys,beam'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sys,lumi"
+                size: {range: [1.7, 1.9], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 1"
+                provenance: {uid: 909e3d0b, ref: "hepdata:ins1373300/Table 1", locator: "Table 1, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD + NLO EW (DYNNLO 1.5), ATLAS central and forward Z"
+            accuracy: {qcd: NNLO, ew: NLO}
+            codes: ["DYNNLO", "FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2016-wz"]
+            refs: ["inspire:1502620", "inspire:815316", "inspire:1182519"]
+            provenance: {uid: af858a2a, ref: "inspire:1502620", locator: "Sec. 6.1.1 (nominal differential predictions at NNLO QCD with DYNNLO 1.5, NLO EW from FEWZ) and Table 17 (χ² per PDF set for the central and forward Z dσ/dy)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Pythia 6, CT10 / MSTW2008 NLO), CMS 2011"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["POWHEG-BOX", "Pythia6"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/cms-2011-diff"]
+            refs: ["inspire:941555", "inspire:760769"]
+            provenance: {uid: 1a7a2131, ref: "inspire:941555", locator: "Fig. 2 caption (POWHEG with CT10 PDF uncertainties) and Figs. 3–4 (χ² vs NLO CT10 and MSTW2008 eigenvectors); POWHEG = Ref. [13]", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD (FEWZ, six PDF sets), LHCb cuts"
+            accuracy: {qcd: NNLO}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/lhcb-2015-z"]
+            refs: ["inspire:1373300", "inspire:877524", "inspire:1182519"]
+            provenance: {uid: 057b365c, ref: "inspire:1373300", locator: "Sec. 2 (FEWZ at NNLO for ABM12, CT10, HERA1.5, JR09, MSTW08, NNPDF3.0) and the dσ/dy comparison figure", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-7/ptll"
+        name: "dσ/dpT(ℓℓ), Z-peak region"
+        kind: differential
+        variable: "pT(ℓℓ)"
+        results:
+          - measurement: "meas:dy-nc/lhc-7/atlas-2014-ptll"
+            total: {value_pct: 0.46, provenance: {uid: eca85061, ref: "hepdata:ins1300647/Table 2", locator: "Table 2, quadrature sum of all errors (bin 4); normalized (1/σ) dσ/dpT, e+μ combined, Born level, inclusive in rapidity, 6 < pT(Z) < 8 GeV: 0.04917 GeV⁻¹ ± 0.18% (stat) ± 0.22% (sys,uncor) ± 0.36% (sys,cor)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.17, 4.2], asymmetric: false}
+                full_table: "hepdata:ins1300647/Table 2"
+                provenance: {uid: df3f2a59, ref: "hepdata:ins1300647/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,uncor"
+                size: {range: [0.22, 2.0], asymmetric: false}
+                full_table: "hepdata:ins1300647/Table 2"
+                provenance: {uid: '87772835', ref: "hepdata:ins1300647/Table 2", locator: "Table 2, error 'sys,uncor'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,cor"
+                size: {range: [0.34, 1.3], asymmetric: false}
+                full_table: "hepdata:ins1300647/Table 2"
+                provenance: {uid: 36400d63, ref: "hepdata:ins1300647/Table 2", locator: "Table 2, error 'sys,cor'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-7/cms-2011-diff"
+            total: {value_pct: 2.9, provenance: {uid: d71674f6, ref: "hepdata:ins941555/Table 2", locator: "HEPData v1 table 'Table 2', third dependent variable (LEPTON+ LEPTON- combined; normalized (1/σ) dσ/dqT, pT(ℓ) > 20 GeV, |η(ℓ)| < 2.1, 60 < mℓℓ < 120 GeV), bin 2 (2.5 < qT < 5 GeV): 0.0592 ± 0.0017 GeV⁻¹; single unlabelled total error and not the first dependent variable, so not ingestable", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties: []
+          - measurement: "meas:dy-nc/lhc-7/lhcb-2015-z"
+            total: {value_pct: 2.8, provenance: {uid: c02283e4, ref: "hepdata:ins1373300/Table 2", locator: "Table 2, quadrature sum of all errors (bin 11); 19.0 < pT(Z) < 24.5 GeV: 5.517 pb ± 0.088 (stat) ± 0.055 (sys) ± 0.069 (beam) ± 0.095 (lumi)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [1.5, 2.8], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 2"
+                provenance: {uid: ea7630fa, ref: "hepdata:ins1373300/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.96, 3.6], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 2"
+                provenance: {uid: 3292aef2, ref: "hepdata:ins1373300/Table 2", locator: "Table 2, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: beam
+                specific: "sys,beam"
+                size: {range: [1.2, 1.3], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 2"
+                provenance: {uid: 88d3efb7, ref: "hepdata:ins1373300/Table 2", locator: "Table 2, error 'sys,beam'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sys,lumi"
+                size: {range: [1.7, 1.7], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 2"
+                provenance: {uid: 0c2755df, ref: "hepdata:ins1373300/Table 2", locator: "Table 2, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD fixed order (FEWZ and DYNNLO, CT10), ATLAS 2014"
+            accuracy: {qcd: NNLO, approximations: ["fixed order O(αs²); no resummation, diverges at low pT(ℓℓ)"]}
+            codes: ["FEWZ", "DYNNLO"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2014-ptll"]
+            refs: ["inspire:1300647", "inspire:877524", "inspire:815316"]
+            provenance: {uid: c6047625, ref: "inspire:1300647", locator: "Sec. 9 (Born-level combined result compared to Fewz and Dynnlo, CT10) and Fig. 7", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos-GNW (labelled NNLO+NNLL by ATLAS, CT10), ATLAS 2014"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(ℓℓ)"}]
+              approximations: ["labelled NNLO+NNLL in the ATLAS paper; GNW non-perturbative parameterisation (Ref. [20])"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2014-ptll"]
+            refs: ["inspire:1300647", "inspire:1252862"]
+            provenance: {uid: b06f924b, ref: "inspire:1300647", locator: "Sec. 9 and Fig. 7 (ResBos-GNW agrees within 5–7%; uncertainties from PDF, μR and μF variations); Sec. on predictions (ResBos-BLNY = NLO+NNLL, ResBos-GNW = NNLO+NNLL)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO+NNLL (Banfi, Dasgupta, Marzani, Tomlinson; CTEQ6m), ATLAS 2014"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(ℓℓ)"}]
+              approximations: ["O(αs²) matched to NNLL; PDF uncertainties neglected"]
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2014-ptll"]
+            refs: ["inspire:1300647", "inspire:1115605"]
+            provenance: {uid: e0850420, ref: "inspire:1300647", locator: "Sec. 9 and Fig. 7 (NNLO+NNLL calculation of Ref. [21], CTEQ6m; matches data within 10–12%; uncertainties from resummation, μR and μF variations); Ref. [21] = arXiv:1205.4760", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Pythia), ATLAS 2014"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["POWHEG-BOX", "Pythia6"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2014-ptll"]
+            refs: ["inspire:1300647", "inspire:787440"]
+            provenance: {uid: 370f8821, ref: "inspire:1300647", locator: "Conclusion (Powheg+Pythia6-AUET2B within 5% for 2 < pT < 60 GeV) and Fig. 8; Powheg = Ref. [23]", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Pythia 6, Z2 tune), CMS 2011"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["POWHEG-BOX", "Pythia6"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/cms-2011-diff"]
+            refs: ["inspire:941555", "inspire:760769"]
+            provenance: {uid: 2796bbc9, ref: "inspire:941555", locator: "Sec. 0.6 and Figs. 6–8 (POWHEG interfaced with Pythia Z2 tune; band from scale and PDF variations)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD fixed order, O(αs²) (FEWZ), qT > 20 GeV, CMS 2011"
+            accuracy: {qcd: NNLO, approximations: ["fixed order O(αs²), compared only for qT > 20 GeV; dynamic scale sqrt(mZ² + ⟨qT⟩²)"]}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/cms-2011-diff"]
+            refs: ["inspire:941555", "inspire:877524"]
+            provenance: {uid: 99e8da7a, ref: "inspire:941555", locator: "Sec. 0.6 and Fig. 8 (FEWZ at O(αs) and O(αs²) for qT > 20 GeV, |η| < 2.1; Ref. [27] = FEWZ 2.0)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos (approx. NNLO + NNLL, CT10), LHCb 2015"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(Z)"}]
+              approximations: ["described by LHCb as 'an approximate NNLO calculation' plus NNLL resummation"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-7/lhcb-2015-z"]
+            refs: ["inspire:1373300", "inspire:604413"]
+            provenance: {uid: 0ee8b630, ref: "inspire:1373300", locator: "Sec. 2 (ResBos [38–40] with CT10: approximate NNLO plus NNLL resummation of soft-gluon radiation) and the pT(Z) comparison figure", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Herwig, CT10), LHCb 2015"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["POWHEG-BOX", "Herwig"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/lhcb-2015-z"]
+            refs: ["inspire:1373300", "inspire:659055"]
+            provenance: {uid: 0f7bdd88, ref: "inspire:1373300", locator: "Sec. 2 (Powheg [41] NLO interfaced to Herwig, CT10)", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-7/phistar"
+        name: "(1/σ) dσ/dφ*_η, Z-peak region"
+        kind: differential
+        variable: "φ*_η"
+        results:
+          - measurement: "meas:dy-nc/lhc-7/atlas-2013-phistar"
+            total: {value_pct: 0.45, provenance: {uid: ee8b6321, ref: "hepdata:ins1204784/Table 7", locator: "Table 7, quadrature sum of all errors (bin 8); combined e+μ, Born level, all |y(Z)|, 0.029 < φ* < 0.034: 7.56 ± 0.3% (stat) ± 0.14% (sys) ± 0.3% (QED FSR, not included in the paper's plots)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.29, 1.6], asymmetric: false}
+                full_table: "hepdata:ins1204784/Table 7"
+                provenance: {uid: f11bc474, ref: "hepdata:ins1204784/Table 7", locator: "Table 7, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.13, 0.58], asymmetric: false}
+                full_table: "hepdata:ins1204784/Table 7"
+                provenance: {uid: e41684b8, ref: "hepdata:ins1204784/Table 7", locator: "Table 7, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,QED FSR uncertainty, not included in the plots"
+                size: {range: [0.3, 0.3], asymmetric: false}
+                full_table: "hepdata:ins1204784/Table 7"
+                provenance: {uid: 12b29179, ref: "hepdata:ins1204784/Table 7", locator: "Table 7, error 'sys,QED FSR uncertainty, not included in the plots'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-7/lhcb-2015-z"
+            total: {value_pct: 2.5, provenance: {uid: 3a797987, ref: "hepdata:ins1373300/Table 3", locator: "Table 3, quadrature sum of all errors (bin 4); 0.03 < φ* < 0.05: 11.362 pb ± 0.114 (stat) ± 0.108 (sys) ± 0.142 (beam) ± 0.195 (lumi)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [1.0, 18.0], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 3"
+                provenance: {uid: 95bd4921, ref: "hepdata:ins1373300/Table 3", locator: "Table 3, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.88, 38.0], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 3"
+                provenance: {uid: dfba5a31, ref: "hepdata:ins1373300/Table 3", locator: "Table 3, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: beam
+                specific: "sys,beam"
+                size: {range: [1.2, 2.2], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 3"
+                provenance: {uid: 009bfeb4, ref: "hepdata:ins1373300/Table 3", locator: "Table 3, error 'sys,beam'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sys,lumi"
+                size: {range: [1.7, 2.2], asymmetric: false}
+                full_table: "hepdata:ins1373300/Table 3"
+                provenance: {uid: bd37e4b2, ref: "hepdata:ins1373300/Table 3", locator: "Table 3, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "ResBos (NNLL resummation matched to O(αs), O(αs²) K-factor, CT10), ATLAS 2013"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NNLL", variable: "pT(ℓℓ)"}]
+              approximations: ["matched to O(αs), corrected to O(αs²) with a pT- and y-dependent k-factor", "non-perturbative form factor fitted to data"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2013-phistar"]
+            refs: ["inspire:1204784", "inspire:604413"]
+            provenance: {uid: 87e546f9, ref: "inspire:1204784", locator: "Introduction (ResBos [28–30]: NNLL resummation matched to O(αs), k-factor to O(αs²) [31]) and Fig. 3 (ratio to ResBos); Conclusion (shape not reproduced better than 4%)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Pythia 8, CT10), ATLAS 2013"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["POWHEG-BOX", "Pythia8"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-7/atlas-2013-phistar"]
+            refs: ["inspire:1204784", "inspire:787440"]
+            provenance: {uid: b61431e0, ref: "inspire:1204784", locator: "Sec. 7 (Powheg + Pythia8 describes the data within 5% over the whole φ* range; CT10)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos (approx. NNLO + NNLL, CT10), LHCb 2015"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(Z)"}]
+              approximations: ["described by LHCb as 'an approximate NNLO calculation' plus NNLL resummation"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-7/lhcb-2015-z"]
+            refs: ["inspire:1373300", "inspire:604413"]
+            provenance: {uid: e1a29db1, ref: "inspire:1373300", locator: "Sec. 2 (ResBos with CT10) and the φ* comparison figure", source: agent, status: agent-draft, date: "2026-10-16"}
+  - id: "chan:dy-nc/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:dy-nc/lhc-8/sigma-fid", region: "Z peak, 66 < mℓℓ < 116 GeV, pT(ℓ) > 20 GeV, |η(ℓ)| < 2.4 (ATLAS fiducial cuts, Born level, e+μ combined)"}
+    measurements:
+      - id: "meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"
+        experiment: "ATLAS"
+        dataset: "8 TeV, 20.3 fb⁻¹ (2012)"
+        ref: "inspire:1408516"
+        hepdata: "hepdata:ins1408516/Table 27"
+      - id: "meas:dy-nc/lhc-8/atlas-2023-ptll-y"
+        experiment: "ATLAS"
+        dataset: "8 TeV, 20.2 fb⁻¹ (2012), full lepton phase space, 80 < mℓℓ < 100 GeV"
+        ref: "inspire:2698794"
+        hepdata: "hepdata:ins2698794/Table 10"
+      - id: "meas:dy-nc/lhc-8/atlas-2016-ai"
+        experiment: "ATLAS"
+        dataset: "8 TeV, 20.3 fb⁻¹ (2012)"
+        ref: "inspire:1466778"
+        hepdata: "hepdata:ins1466778/Table 2"
+      - id: "meas:dy-nc/lhc-8/atlas-2017-3d"
+        experiment: "ATLAS"
+        dataset: "8 TeV, 20.2 fb⁻¹ (2012), 46 < mℓℓ < 200 GeV"
+        ref: "inspire:1630886"
+        hepdata: "hepdata:ins1630886/Table 4"
+      - id: "meas:dy-nc/lhc-8/cms-2015-diff"
+        experiment: "CMS"
+        dataset: "8 TeV, 19.7 fb⁻¹ (2012), μμ"
+        ref: "inspire:1359450"
+        hepdata: "hepdata:ins1359450/Table 1"
+      - id: "meas:dy-nc/lhc-8/cms-2015-ai"
+        experiment: "CMS"
+        dataset: "8 TeV, 19.7 fb⁻¹ (2012), μμ"
+        ref: "inspire:1359451"
+        hepdata: "hepdata:ins1359451/Table 1"
+      - id: "meas:dy-nc/lhc-8/cms-2018-afb"
+        experiment: "CMS"
+        dataset: "8 TeV, 18.8 fb⁻¹ μμ + 19.6 fb⁻¹ ee (2012)"
+        ref: "inspire:1676216"
+      - id: "meas:dy-nc/lhc-8/lhcb-2016-wz"
+        experiment: "LHCb"
+        dataset: "8 TeV, 2.0 fb⁻¹, μμ, 2.0 < η(μ) < 4.5"
+        ref: "inspire:1406555"
+        hepdata: "hepdata:ins1406555/Table 2"
+    observables:
+      - id: "obs:dy-nc/lhc-8/sigma-fid"
+        name: "Fiducial σ × B(Z/γ* → ℓℓ), Z-peak region"
+        kind: fiducial
+        variable: "σ_fid (experiment-specific lepton cuts around the Z peak)"
+        results:
+          - measurement: "meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"
+            total: {value_pct: 2.9, provenance: {uid: 57e71a31, ref: "inspire:1408516", locator: "Sec. 4.3 ('a total uncertainty of 0.6%, not including the uncertainty of 2.8% on the integrated luminosity') and Table 4, combined 66–116 GeV: 537.1 pb; 0.6% and 2.8% added in quadrature; pT(ℓ) > 20 GeV, |η(ℓ)| < 2.4, Born level", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [0.03, 0.03], unit: "%", asymmetric: false}
+                provenance: {uid: '26779163', ref: "hepdata:ins1408516/Table 1", locator: "HEPData v1 'Table 1' (paper Table 4), combined L+L- column, 66–116 GeV row: stat 0.03%", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.8, 2.8], unit: "%", asymmetric: false}
+                provenance: {uid: bec01a38, ref: "inspire:1408516", locator: "Table 4 caption (additional 2.8% luminosity uncertainty)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-8/lhcb-2016-wz"
+            total: {value_pct: 1.79, provenance: {uid: 202e4ac7, ref: "inspire:1406555", locator: "Table 1, Z column (total 1.79%); Abstract: σ(Z→μμ) = 95.0 ± 0.3 (stat) ± 0.7 (syst) ± 1.1 (beam energy) ± 1.1 (lumi) pb; 2.0 < η(μ) < 4.5, pT(μ) > 20 GeV, 60 < mμμ < 120 GeV", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [0.27, 0.27], unit: "%", asymmetric: false}
+                provenance: {uid: cc642a80, ref: "inspire:1406555", locator: "Table 1, Z column, 'Statistical'", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Tracking (largest systematic)"
+                size: {range: [0.48, 0.48], unit: "%", asymmetric: false}
+                provenance: {uid: 8aebe437, ref: "inspire:1406555", locator: "Table 1, Z column, 'Tracking' (total systematic 0.67%)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: beam
+                specific: "Beam energy"
+                size: {range: [1.15, 1.15], unit: "%", asymmetric: false}
+                provenance: {uid: 36acb94e, ref: "inspire:1406555", locator: "Table 1, Z column, 'Beam energy'", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.16, 1.16], unit: "%", asymmetric: false}
+                provenance: {uid: 3969ca83, ref: "inspire:1406555", locator: "Table 1, Z column, 'Luminosity'", source: agent, status: agent-draft, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD (FEWZ, ABM12/CT10/CT14/HERA1.5/MMHT14/NNPDF3.0), LHCb cuts"
+            accuracy: {qcd: NNLO}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/lhcb-2016-wz"]
+            refs: ["inspire:1406555", "inspire:877524", "inspire:1182519"]
+            provenance: {uid: 9a1ae5ee, ref: "inspire:1406555", locator: "Sec. 2 (FEWZ [36, 37] at NNLO, scales at the boson mass varied by factors of two; total = PDF ⊕ αs at 68.3% CL ⊕ scale); numbers shown in figures only", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-8/yll"
+        name: "dσ/d|y(ℓℓ)|, Z-peak region (incl. forward)"
+        kind: differential
+        variable: "|y(ℓℓ)| (LHCb: y(Z), 2.0 < y < 4.5)"
+        results:
+          - measurement: "meas:dy-nc/lhc-8/lhcb-2016-wz"
+            total: {value_pct: 2.0, provenance: {uid: 841b2d04, ref: "hepdata:ins1406555/Table 2", locator: "Table 2, quadrature sum of all errors (bin 8); 2.875 < y(Z) < 3.0: 9.822 pb ± 0.082 (stat) ± 0.071 (sys) ± 0.113 (beam) ± 0.115 (lumi)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.83, 27.0], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 2"
+                provenance: {uid: 43500c97, ref: "hepdata:ins1406555/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.72, 9.1], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 2"
+                provenance: {uid: 5f79d092, ref: "hepdata:ins1406555/Table 2", locator: "Table 2, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: beam
+                specific: "sys,beam"
+                size: {range: [0.0, 1.2], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 2"
+                provenance: {uid: d1f884b0, ref: "hepdata:ins1406555/Table 2", locator: "Table 2, error 'sys,beam'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sys,lumi"
+                size: {range: [0.0, 1.2], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 2"
+                provenance: {uid: 6932fcae, ref: "hepdata:ins1406555/Table 2", locator: "Table 2, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "N3LO QCD + NLO EW (DYTurbo, MSHT20aN3LO), full lepton phase space, 80 < mℓℓ < 100 GeV"
+            accuracy: {qcd: N3LO, ew: NLO, approximations: ["NLO EW applied as a |y|-independent −0.4% (virtual −0.8%, QED ISR +0.4%)", "approximate N3LO PDFs (MSHT20aN3LO)"]}
+            codes: ["DYTurbo"]
+            uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
+            uncertainties:
+              - category: PDF
+                specific: "MSHT20aN3LO PDF uncertainty"
+                pdf_set: "MSHT20aN3LO"
+                size: {range: [1.5, 1.9], unit: "%", asymmetric: false}
+                provenance: {uid: 905eaf60, ref: "hepdata:ins2698794/Table 9", locator: "HEPData v1 'Table 9', second dependent variable 'N3LO ± PDF ± scale var.', error 'pdf' over the 7 tabulated |y| bins (e.g. 5.08 of 343.8 pb to 3.16 of 168.5 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+              - category: MHOU
+                specific: "QCD renormalisation/factorisation scale variations"
+                method: "μR, μF variations (Fig. 19 caption)"
+                size: {range: [0.43, 0.91], unit: "%", asymmetric: false}
+                provenance: {uid: 2ef592f1, ref: "hepdata:ins2698794/Table 9", locator: "HEPData v1 'Table 9', second dependent variable, error 'scale' over the 7 tabulated |y| bins (1.49 of 343.8 pb to 1.54 of 168.5 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2023-ptll-y"]
+            refs: ["inspire:2698794", "inspire:1850545"]
+            provenance: {uid: be3bb2e1, ref: "inspire:2698794", locator: "Sec. 5.3 and Fig. 19 (N3LO QCD from DYTurbo with MSHT20aN3LO, −0.4% NLO EW); Table 4 (χ² for seven PDF sets)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD (FEWZ, six PDF sets), LHCb cuts"
+            accuracy: {qcd: NNLO}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/lhcb-2016-wz"]
+            refs: ["inspire:1406555", "inspire:877524", "inspire:1182519"]
+            provenance: {uid: cd791192, ref: "inspire:1406555", locator: "Sec. 2 (FEWZ at NNLO for ABM12, CT10, CT14, HERA1.5, MMHT14, NNPDF3.0) and the dσ/dy comparison figure", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-8/ptll"
+        name: "dσ/dpT(ℓℓ), Z-peak region"
+        kind: differential
+        variable: "pT(ℓℓ) (CMS: qT in |y| bins)"
+        results:
+          - measurement: "meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"
+            total: {value_pct: 0.24, provenance: {uid: 9b865711, ref: "hepdata:ins1408516/Table 27", locator: "HEPData v1 'Table 27' (paper Table 30; normalized (1/σ) dσ/dpT, 66 ≤ mℓℓ < 116 GeV, 0 ≤ |yℓℓ| < 2.4), sixth dependent variable 'Combination Born', bin 2 (2 < pT < 4 GeV): 0.05545 ± 0.1% (stat) ± 0.1% (uncorrelated) ± 0.2% (correlated), percentages as rounded in HEPData; not the first dependent variable, so not ingestable", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties: []
+          - measurement: "meas:dy-nc/lhc-8/atlas-2023-ptll-y"
+            total: {value_pct: 0.17, provenance: {uid: 6a97a15f, ref: "hepdata:ins2698794/Table 10", locator: "Table 10, quadrature sum of all errors (bin 4); normalised (1/σ) dσ/dpT, full lepton phase space, |y| < 1.6, 80 < mℓℓ < 100 GeV, 8 < pT < 11.4 GeV: 0.0377257 ± 6.48e-5 (tot) GeV⁻¹", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: other
+                specific: tot
+                size: {range: [0.17, 1.5], asymmetric: false}
+                full_table: "hepdata:ins2698794/Table 10"
+                provenance: {uid: 69aad6a2, ref: "hepdata:ins2698794/Table 10", locator: "Table 10, error 'tot' (total uncertainty; HEPData v1, the record also has v2)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-8/cms-2015-diff"
+            total: {value_pct: 0.31, provenance: {uid: e166422a, ref: "hepdata:ins1359450/Table 1", locator: "HEPData v1 'Table 1', first dependent variable (normalised (1/σ) d²σ/dpT d|y|, μμ, 81 < mμμ < 101 GeV, |y| 0 to 0.4), bin 1 (0 < qT < 20 GeV): 0.02097 ± 6.563e-5 GeV⁻¹; single unlabelled total experimental error, so not ingestable", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties: []
+          - measurement: "meas:dy-nc/lhc-8/lhcb-2016-wz"
+            total: {value_pct: 2.1, provenance: {uid: b90d32b0, ref: "hepdata:ins1406555/Table 3", locator: "Table 3, quadrature sum of all errors (bin 13); 34 < pT(Z) < 63 GeV: 7.602 pb ± 0.07 (stat) ± 0.072 (sys) ± 0.087 (beam) ± 0.089 (lumi)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.92, 1.7], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 3"
+                provenance: {uid: 329b52a2, ref: "hepdata:ins1406555/Table 3", locator: "Table 3, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [0.85, 1.6], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 3"
+                provenance: {uid: 396d91c1, ref: "hepdata:ins1406555/Table 3", locator: "Table 3, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: beam
+                specific: "sys,beam"
+                size: {range: [1.1, 1.2], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 3"
+                provenance: {uid: 1b6ccb70, ref: "hepdata:ins1406555/Table 3", locator: "Table 3, error 'sys,beam'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sys,lumi"
+                size: {range: [1.1, 1.2], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 3"
+                provenance: {uid: 3d831788, ref: "hepdata:ins1406555/Table 3", locator: "Table 3, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "aN4LL + O(αs³) (DYTurbo, matched to MCFM), ATLAS 2023"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "aN4LL", variable: "pT(ℓℓ)"}]
+              approximations: ["order labelled by the inclusive integral; fixed-order matching at O(αs³) from MCFM"]
+            codes: ["DYTurbo", "MCFM"]
+            uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
+            uncertainties:
+              - category: MHOU
+                specific: "Uncertainty band at the pT peak, quoted jointly for the resummed calculations compared"
+                method: "renormalisation/factorisation/resummation scale variations (Fig. 9 caption)"
+                size: {range: [2, 5], unit: "%", asymmetric: false}
+                provenance: {uid: 88d9164c, ref: "inspire:2698794", locator: "Sec. 5.2 ('predictions agree with the measurements within their uncertainties, which range between 2% and 5% at the peak of the pT distribution') and Fig. 9 caption", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2023-ptll-y"]
+            refs: ["inspire:2698794", "inspire:2644969", "inspire:1850545"]
+            provenance: {uid: 3fa66080, ref: "inspire:2698794", locator: "Sec. 5.2 (DYTurbo [45–47] at approximate N4LL, matched to O(αs³) from MCFM) and Figs. 9–10", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "N4LLp + O(αs³) (CuTe-MCFM), ATLAS 2023"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "N4LLp", variable: "pT(ℓℓ)"}]
+              approximations: ["N4LL_p: α_s³ accurate up to missing exact N3LO PDF effects"]
+            codes: ["CuTe-MCFM"]
+            uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2023-ptll-y"]
+            refs: ["inspire:2698794", "inspire:2112612"]
+            provenance: {uid: 03ad0607, ref: "inspire:2698794", locator: "Sec. 5.2 (CuTe-MCFM [48]) and Fig. 11; Ref. [48] title: N4LLp+N3LO", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "RadISH resummation matched to O(αs³), ATLAS 2023"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "approximate N4LL (as grouped in the ATLAS paper; Ref. [53] is N3LL′)", variable: "pT(ℓℓ)"}]
+              approximations: ["matched to O(αs³) from MCFM (and, in Fig. 18, from NNLOJET)"]
+            codes: ["RadISH", "MCFM", "NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2023-ptll-y"]
+            refs: ["inspire:2698794", "inspire:1858406"]
+            provenance: {uid: 4a0b271f, ref: "inspire:2698794", locator: "Sec. 5.2 (RadISH [51–53]) and Figs. 14, 18", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "SCETlib resummation matched to O(αs³), ATLAS 2023"
+            accuracy:
+              qcd: N3LO
+              resummation: [{accuracy: "approximate N4LL (as grouped in the ATLAS paper)", variable: "pT(ℓℓ)"}]
+              approximations: ["matched to O(αs³) from MCFM"]
+            codes: ["SCETlib", "MCFM"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2023-ptll-y"]
+            refs: ["inspire:2698794"]
+            provenance: {uid: 71c9c3f8, ref: "inspire:2698794", locator: "Sec. 5.2 (SCETlib [54]) and Fig. 15", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "Z+jet NNLO QCD fixed order, O(αs³) (NNLOJET; MCFM), ATLAS 2023"
+            accuracy: {qcd: NNLO, approximations: ["fixed order: Z+jet at NNLO, O(αs³); does not describe low pT"]}
+            codes: ["NNLOJET", "MCFM"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2023-ptll-y"]
+            refs: ["inspire:2698794", "inspire:1490040"]
+            provenance: {uid: f956615b, ref: "inspire:2698794", locator: "Sec. 5.2 and Fig. 17 (absolute dσ/dpT vs fixed-order O(αs³) from MCFM [48, 55] and NNLOJET [56])", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "N3LL + NNLO (RadISH + NNLOJET; Bizon et al.), ATLAS 2016 cuts"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL", variable: "pT(ℓℓ)"}]
+              approximations: ["fixed order: Z+jet at NNLO, O(αs³)"]
+            codes: ["RadISH", "NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
+            refs: ["inspire:1673183"]
+            provenance: {uid: 1bb181ce, ref: "inspire:1673183", locator: "Abstract; Sec. 6 (ATLAS 8 TeV fiducial cuts, comparison with Ref. [101]) and Sec. 6.1", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos-GNW (approx. NNLO + NNLL, CT14 NNLO), ATLAS 2016"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(ℓℓ)"}]
+              approximations: ["approximate NNLO via O(αs²) Wilson coefficients for Z; γ* and Z/γ* interference at O(αs)", "GNW non-perturbative parameterisation"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
+            refs: ["inspire:1408516", "inspire:1252862"]
+            provenance: {uid: 4c0b7b33, ref: "inspire:1408516", locator: "Sec. 3.2 (ResBos [49]: approximate NNLO, NNLL, GNW [50, 51], CT14 NNLO) and Sec. 5.2", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD + NLO EW virtual (DYNNLO 1.3, CT10 NNLO), ATLAS 2016"
+            accuracy: {qcd: NNLO, ew: NLO, approximations: ["fixed order; no soft-gluon resummation", "NLO EW: virtual corrections only, from Denner et al. (Ref. [56])"]}
+            codes: ["DYNNLO"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
+            refs: ["inspire:1408516", "inspire:815316", "inspire:891490"]
+            provenance: {uid: 632325ae, ref: "inspire:1408516", locator: "Sec. 3.2 (Dynnlo 1.3, CT10 NNLO, Gμ scheme, NLO EW virtual corrections [55, 56]) and Sec. 5.4", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Pythia 8, AZNLO tune), ATLAS 2016"
+            accuracy: {qcd: NLO, shower_matched: true, approximations: ["AZNLO tune fitted to ATLAS 7 TeV pT(ℓℓ) and φ* data"]}
+            codes: ["POWHEG-BOX", "Pythia8"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
+            refs: ["inspire:1408516", "inspire:1300647", "inspire:787440"]
+            provenance: {uid: 1ff434f5, ref: "inspire:1408516", locator: "Sec. 3.2 (additional Powheg + Pythia sample with the AZNLO tune [15]) and Sec. 5.3", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD + NLO EW (FEWZ 3.1.b2), CMS 2015"
+            accuracy: {qcd: NNLO, ew: NLO, approximations: ["computed per qT bin; includes initial-state photon radiation and photon-induced processes"]}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
+            compared_to: ["meas:dy-nc/lhc-8/cms-2015-diff"]
+            refs: ["inspire:1359450", "inspire:1182519"]
+            provenance: {uid: 314f78fc, ref: "inspire:1359450", locator: "Sec. 0.3 (FEWZ 3.1.b2 [32] at NNLO with NLO EW corrections) and Abstract ('results agree with the NNLO predictions computed with the FEWZ program')", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Pythia 6, CT10), CMS 2015"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["POWHEG-BOX", "Pythia6"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/cms-2015-diff"]
+            refs: ["inspire:1359450"]
+            provenance: {uid: 778ceb76, ref: "inspire:1359450", locator: "Sec. 0.3 (POWHEG NLO with CT10, interfaced with Pythia) and Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "LO multi-leg + PS (MadGraph 0–4 jets + Pythia 6, Z2*), CMS 2015"
+            accuracy: {qcd: LO, shower_matched: true, approximations: ["tree-level matrix elements with up to four extra jets, kT-MLM matching"]}
+            codes: ["MadGraph", "Pythia6"]
+            compared_to: ["meas:dy-nc/lhc-8/cms-2015-diff"]
+            refs: ["inspire:1359450"]
+            provenance: {uid: 7d157d25, ref: "inspire:1359450", locator: "Sec. 0.3 (MadGraph 1.3.30 with 0–4 jets, Pythia 6.4.24 Z2*, kT-MLM, CTEQ6L1) and Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos (approx. NNLO + NNLL, CT14), LHCb 2016"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(Z)"}]
+              approximations: ["described by LHCb as 'an approximate NNLO calculation' plus NNLL resummation"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-8/lhcb-2016-wz"]
+            refs: ["inspire:1406555", "inspire:604413"]
+            provenance: {uid: 54600acd, ref: "inspire:1406555", locator: "Sec. 2 (ResBos [32–34] with CT14: approximate NNLO plus NNLL) and the pT(Z) comparison figure", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-8/phistar"
+        name: "(1/σ) dσ/dφ*_η, Z-peak region"
+        kind: differential
+        variable: "φ*_η"
+        results:
+          - measurement: "meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"
+            total: {value_pct: 0.14, provenance: {uid: '12460724', ref: "hepdata:ins1408516/Table 15", locator: "HEPData v1 'Table 15' (paper Table 18; normalized (1/σ) dσ/dφ*, 66 ≤ mℓℓ < 116 GeV, |yℓℓ| < 2.4), sixth dependent variable 'Combination Born', bin 1 (0 < φ* < 0.004): 9.441 ± 0.1% (stat) ± 0.0% (uncorrelated) ± 0.1% (correlated), percentages as rounded in HEPData; not the first dependent variable, so not ingestable", source: agent, status: agent-draft, date: "2026-10-16"}}
+            uncertainties: []
+          - measurement: "meas:dy-nc/lhc-8/lhcb-2016-wz"
+            total: {value_pct: 2.1, provenance: {uid: '610e6803', ref: "hepdata:ins1406555/Table 4", locator: "Table 4, quadrature sum of all errors (bin 4); 0.03 < φ* < 0.05: 13.749 pb ± 0.089 (stat) ± 0.151 (sys) ± 0.158 (beam) ± 0.161 (lumi)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.65, 8.5], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 4"
+                provenance: {uid: be4d37bf, ref: "hepdata:ins1406555/Table 4", locator: "Table 4, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [1.1, 24.0], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 4"
+                provenance: {uid: 8b01eae8, ref: "hepdata:ins1406555/Table 4", locator: "Table 4, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: beam
+                specific: "sys,beam"
+                size: {range: [1.1, 1.2], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 4"
+                provenance: {uid: a02dff49, ref: "hepdata:ins1406555/Table 4", locator: "Table 4, error 'sys,beam'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sys,lumi"
+                size: {range: [1.1, 1.2], asymmetric: false}
+                full_table: "hepdata:ins1406555/Table 4"
+                provenance: {uid: 101cc8f7, ref: "hepdata:ins1406555/Table 4", locator: "Table 4, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "N3LL + NNLO (RadISH + NNLOJET; Bizon et al.), ATLAS 2016 cuts"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL", variable: "φ*_η"}]
+              approximations: ["fixed order: Z+jet at NNLO, O(αs³)"]
+            codes: ["RadISH", "NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
+            refs: ["inspire:1673183"]
+            provenance: {uid: 4b989a4a, ref: "inspire:1673183", locator: "Abstract; Sec. 6 (φ*_η at N3LL+NNLO compared with ATLAS 8 TeV data, Ref. [101])", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos-GNW (approx. NNLO + NNLL, CT14 NNLO), ATLAS 2016"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(ℓℓ)"}]
+              approximations: ["approximate NNLO via O(αs²) Wilson coefficients for Z; γ* and Z/γ* interference at O(αs)", "GNW non-perturbative parameterisation"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
+            refs: ["inspire:1408516", "inspire:1252862"]
+            provenance: {uid: 2bfbb98e, ref: "inspire:1408516", locator: "Abstract (ResBos consistent with data for φ* < 1 within theoretical uncertainties) and Sec. 5.2", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG + Pythia 8, AZNLO tune), ATLAS 2016"
+            accuracy: {qcd: NLO, shower_matched: true, approximations: ["AZNLO tune fitted to ATLAS 7 TeV pT(ℓℓ) and φ* data"]}
+            codes: ["POWHEG-BOX", "Pythia8"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"]
+            refs: ["inspire:1408516", "inspire:1300647", "inspire:787440"]
+            provenance: {uid: e61816a5, ref: "inspire:1408516", locator: "Sec. 3.2 and Sec. 5.3", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "ResBos (approx. NNLO + NNLL, CT14), LHCb 2016"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT(Z)"}]
+              approximations: ["described by LHCb as 'an approximate NNLO calculation' plus NNLL resummation"]
+            codes: ["ResBos"]
+            compared_to: ["meas:dy-nc/lhc-8/lhcb-2016-wz"]
+            refs: ["inspire:1406555", "inspire:604413"]
+            provenance: {uid: dfe86b8b, ref: "inspire:1406555", locator: "Sec. 2 (ResBos with CT14) and the φ* comparison figure", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-8/ai"
+        name: "Angular coefficients A0–A7 vs pT(ℓℓ), Z-peak region"
+        kind: asymmetry
+        variable: "pT(ℓℓ), |y(ℓℓ)|"
+        results:
+          - measurement: "meas:dy-nc/lhc-8/atlas-2016-ai"
+            total: {value_pct: 1.9, provenance: {uid: 436b748d, ref: "hepdata:ins1466778/Table 2", locator: "Table 2, quadrature sum of all errors (bin 19); A0, yZ-integrated, unregularised, CS frame, 85.4 < pT(Z) < 105 GeV: 0.7148 ± 0.0115 (stat) ± 0.0073 (sys)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [1.6, 120.0], asymmetric: false}
+                full_table: "hepdata:ins1466778/Table 2"
+                provenance: {uid: 3b1ec72f, ref: "hepdata:ins1466778/Table 2", locator: "Table 2, error 'stat' (range over all pT bins; the large values are low-pT bins where A0 ≈ 0)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys,sys"
+                size: {range: [0.86, 170.0], asymmetric: false}
+                full_table: "hepdata:ins1466778/Table 2"
+                provenance: {uid: 048bb865, ref: "hepdata:ins1466778/Table 2", locator: "Table 2, error 'sys,sys' (range over all pT bins)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:dy-nc/lhc-8/cms-2015-ai"
+            total: {value_pct: 1.9, provenance: {uid: 523dc621, ref: "hepdata:ins1359451/Table 1", locator: "Table 1, quadrature sum of all errors (bin 6); A0, |y| < 1, 81 < mμμ < 101 GeV, 80 < qT < 120 GeV: 0.716 ± 0.01 (stat) ± 0.009 (sys)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [1.2, 17.0], asymmetric: false}
+                full_table: "hepdata:ins1359451/Table 1"
+                provenance: {uid: e533dd8b, ref: "hepdata:ins1359451/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: sys
+                size: {range: [1.3, 50.0], asymmetric: false}
+                full_table: "hepdata:ins1359451/Table 1"
+                provenance: {uid: a2421e91, ref: "hepdata:ins1359451/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "Fixed order O(αs²) (as described in the ATLAS abstract), ATLAS 2016"
+            accuracy: {qcd: NNLO, approximations: ["O(αs²) for the angular coefficients, i.e. NLO for Z+jet; code not identified (full text not machine-readable)"]}
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ai"]
+            refs: ["inspire:1466778"]
+            provenance: {uid: 7955c7b5, ref: "inspire:1466778", locator: "Abstract ('compared to the most precise fixed-order calculations currently available (O(αs²))'; significant deviation for A0 − A2)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NNLO QCD (FEWZ), CMS 2015"
+            accuracy: {qcd: NNLO, approximations: ["O(αs²) for the angular coefficients, i.e. NLO for Z+jet"]}
+            codes: ["FEWZ"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/cms-2015-ai"]
+            refs: ["inspire:1359451", "inspire:877524"]
+            provenance: {uid: 16bb392d, ref: "inspire:1359451", locator: "Introduction (compared with FEWZ at NNLO [18], POWHEG at NLO and MadGraph at LO; Ref. [18] = FEWZ 2.0)", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "NLO+PS QCD (POWHEG), CMS 2015"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["POWHEG-BOX"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/cms-2015-ai"]
+            refs: ["inspire:1359451"]
+            provenance: {uid: 7deb45f3, ref: "inspire:1359451", locator: "Introduction (POWHEG at NLO [3–6])", source: agent, status: agent-draft, date: "2026-10-16"}
+          - label: "LO multi-leg + PS (MadGraph + Pythia 6), CMS 2015"
+            accuracy: {qcd: LO, shower_matched: true, approximations: ["tree-level matrix elements with 0–4 extra jets, kT-MLM matching"]}
+            codes: ["MadGraph", "Pythia6"]
+            compared_to: ["meas:dy-nc/lhc-8/cms-2015-ai"]
+            refs: ["inspire:1359451"]
+            provenance: {uid: 78649b4f, ref: "inspire:1359451", locator: "Introduction (MadGraph at LO [19]) and simulation paragraph (MadGraph 1.3.30, 0–4 jets, Pythia 6.4.24 Z2*)", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-8/afb"
+        name: "Forward-backward asymmetry A_FB vs (mℓℓ, |yℓℓ|), Z-peak region"
+        kind: asymmetry
+        variable: "mℓℓ, |y(ℓℓ)|"
+        results: []
+        predictions:
+          - label: "NLO+PS QCD (POWHEG v2 + Pythia 8, NNPDF3.0) templates, CMS 2018"
+            accuracy: {qcd: NLO, shower_matched: true, approximations: ["templates for the sin²θ_eff fit; A_FB is detector-level, no unfolded result"]}
+            codes: ["POWHEG-BOX", "Pythia8"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/cms-2018-afb"]
+            refs: ["inspire:1676216"]
+            provenance: {uid: df5edfcd, ref: "inspire:1676216", locator: "Sec. 0.6 (default signal distributions from POWHEG v2 with NNPDF3.0, interfaced with Pythia 8 CUETP8M1)", source: agent, status: agent-draft, date: "2026-10-16"}
+      - id: "obs:dy-nc/lhc-8/yll-mll-costheta"
+        name: "Triple-differential d³σ/dmℓℓ d|yℓℓ| dcosθ*, 46 < mℓℓ < 200 GeV"
+        kind: differential
+        variable: "mℓℓ, |yℓℓ|, cosθ* (Collins–Soper)"
+        results:
+          - measurement: "meas:dy-nc/lhc-8/atlas-2017-3d"
+            total: {value_pct: 0.31, provenance: {uid: b7a17562, ref: "hepdata:ins1630886/Table 4", locator: "Table 4, quadrature sum of all errors (bin 222); combined channels, Born level, 91 < mℓℓ < 102 GeV, 0.6 < |yℓℓ| < 0.8, 0 < cosθ* < 0.4: 3.5689 pb/GeV² from stat and 332 signed systematic sources; the 1.8% luminosity uncertainty is not included (table description). HEPData v1; the record is at v3", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [0.22, 71.0], asymmetric: false}
+                full_table: "hepdata:ins1630886/Table 4"
+                provenance: {uid: ee3ebf3c, ref: "hepdata:ins1630886/Table 4", locator: "Table 4, error 'stat' (the 332 'sysZ3D…' systematic sources are not listed here)", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "NLO+PS QCD (POWHEG + Pythia 8, CT10) with NNLO QCD and NLO EW K-factors, ATLAS 2017"
+            accuracy: {qcd: NLO, ew: NLO, shower_matched: true, approximations: ["mass-dependent NNLO QCD + NLO EW K-factor from FEWZ 3.1 (MSTW2008NNLO), pT and y reweighting from DYNNLO", "no scale or matching uncertainties included"]}
+            codes: ["POWHEG-BOX", "Pythia8", "FEWZ", "DYNNLO"]
+            uses_amplitudes: ["amp:1L/qqbar-V"]
+            compared_to: ["meas:dy-nc/lhc-8/atlas-2017-3d"]
+            refs: ["inspire:1630886", "inspire:787440", "inspire:1182519"]
+            provenance: {uid: 2aea2caf, ref: "inspire:1630886", locator: "Sec. 3 (Powheg + Pythia 8, CT10; FEWZ 3.1 NNLO + NLO EW K-factor; DYNNLO reweighting) and Sec. 8.2 (predictions underestimate data by 1–2%; no scale uncertainties included)", source: agent, status: agent-draft, date: "2026-10-16"}
