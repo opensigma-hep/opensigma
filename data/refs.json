@@ -1,0 +1,299 @@
+{
+ "inspire:1182519": {
+  "arxiv": "1208.5967",
+  "authors_short": "Li and Petriello",
+  "bibtex": "@article{Li:2012wna,\n    author = \"Li, Ye and Petriello, Frank\",\n    title = \"{Combining QCD and electroweak corrections to dilepton production in FEWZ}\",\n    eprint = \"1208.5967\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ANL-HEP-PR-12-68\",\n    doi = \"10.1103/PhysRevD.86.094034\",\n    journal = \"Phys. Rev. D\",\n    volume = \"86\",\n    pages = \"094034\",\n    year = \"2012\"\n}\n",
+  "doi": "10.1103/PhysRevD.86.094034",
+  "recid": 1182519,
+  "title": "Combining QCD and electroweak corrections to dilepton production in FEWZ",
+  "year": 2012
+ },
+ "inspire:140456": {
+  "arxiv": null,
+  "authors_short": "Altarelli et al.",
+  "bibtex": "@article{Altarelli:1979ub,\n    author = \"Altarelli, Guido and Ellis, R. Keith and Martinelli, G.\",\n    title = \"{Large Perturbative Corrections to the Drell-Yan Process in QCD}\",\n    reportNumber = \"MIT-CTP-776\",\n    doi = \"10.1016/0550-3213(79)90116-0\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"157\",\n    pages = \"461--497\",\n    year = \"1979\"\n}\n",
+  "doi": "10.1016/0550-3213(79)90116-0",
+  "recid": 140456,
+  "title": "Large Perturbative Corrections to the Drell-Yan Process in QCD",
+  "year": 1979
+ },
+ "inspire:1436497": {
+  "arxiv": "1603.09222",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2016fij,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of $W^{\\pm}$ and $Z$-boson production cross sections in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector}\",\n    eprint = \"1603.09222\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2016-069\",\n    doi = \"10.1016/j.physletb.2016.06.023\",\n    journal = \"Phys. Lett. B\",\n    volume = \"759\",\n    pages = \"601--621\",\n    year = \"2016\"\n}\n",
+  "doi": "10.1016/j.physletb.2016.06.023",
+  "recid": 1436497,
+  "title": "Measurement of $W^{\\pm}$ and $Z$-boson production cross sections in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector",
+  "year": 2016
+ },
+ "inspire:1490040": {
+  "arxiv": "1610.01843",
+  "authors_short": "Gehrmann-De Ridder et al.",
+  "bibtex": "@article{Gehrmann-DeRidder:2016jns,\n    author = \"Gehrmann-De Ridder, A. and Gehrmann, T. and Glover, E. W. N. and Huss, A. and Morgan, T. A.\",\n    title = \"{NNLO QCD corrections for Drell-Yan $p_T^Z$ and $\\phi^*$ observables at the LHC}\",\n    eprint = \"1610.01843\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"IPPP-16-74, ZU-TH-36-16, IPPP/16/74, ZU-TH 36/16\",\n    doi = \"10.1007/JHEP11(2016)094\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"094\",\n    year = \"2016\",\n    note = \"[Erratum: JHEP 10, 126 (2018)]\"\n}\n",
+  "doi": "10.1007/JHEP11(2016)094",
+  "recid": 1490040,
+  "title": "NNLO QCD corrections for Drell-Yan $p_T^Z$ and $\\phi^*$ observables at the LHC",
+  "year": 2016
+ },
+ "inspire:1734419": {
+  "arxiv": "1905.05171",
+  "authors_short": "Bizon et al.",
+  "bibtex": "@article{Bizon:2019zgf,\n    author = \"Bizon, Wojciech and Gehrmann-De Ridder, Aude and Gehrmann, Thomas and Glover, Nigel and Huss, Alexander and Monni, Pier Francesco and Re, Emanuele and Rottoli, Luca and Walker, Duncan M.\",\n    title = \"{The transverse momentum spectrum of weak gauge bosons at N ${}^3$ LL + NNLO}\",\n    eprint = \"1905.05171\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH 21/1, CERN-TH-2019-050, LAPTH-026/19, IPPP/19/38\",\n    doi = \"10.1140/epjc/s10052-019-7324-0\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"79\",\n    number = \"10\",\n    pages = \"868\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1140/epjc/s10052-019-7324-0",
+  "recid": 1734419,
+  "title": "The transverse momentum spectrum of weak gauge bosons at N ${}^3$ LL + NNLO",
+  "year": 2019
+ },
+ "inspire:1750311": {
+  "arxiv": "1908.06987",
+  "authors_short": "Monni et al.",
+  "bibtex": "@article{Monni:2019whf,\n    author = \"Monni, Pier Francesco and Nason, Paolo and Re, Emanuele and Wiesemann, Marius and Zanderighi, Giulia\",\n    title = \"{MiNNLO$_{PS}$: a new method to match NNLO QCD to parton showers}\",\n    eprint = \"1908.06987\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2019-117, LAPTH-042/19, MPP-2019-177\",\n    doi = \"10.1007/JHEP05(2020)143\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"143\",\n    year = \"2020\",\n    note = \"[Erratum: JHEP 02, 031 (2022)]\"\n}\n",
+  "doi": "10.1007/JHEP05(2020)143",
+  "recid": 1750311,
+  "title": "MiNNLO$_{PS}$: a new method to match NNLO QCD to parton showers",
+  "year": 2019
+ },
+ "inspire:1753680": {
+  "arxiv": "1909.04133",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2019raw,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of differential Z boson production cross sections in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV}\",\n    eprint = \"1909.04133\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-17-010, CERN-EP-2019-175\",\n    doi = \"10.1007/JHEP12(2019)061\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"061\",\n    year = \"2019\"\n}\n",
+  "doi": "10.1007/JHEP12(2019)061",
+  "recid": 1753680,
+  "title": "Measurements of differential Z boson production cross sections in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV",
+  "year": 2019
+ },
+ "inspire:1768911": {
+  "arxiv": "1912.02844",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2019zci,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the transverse momentum distribution of Drell{\\textendash}Yan lepton pairs in proton{\\textendash}proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector}\",\n    eprint = \"1912.02844\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2019-223\",\n    doi = \"10.1140/epjc/s10052-020-8001-z\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"80\",\n    number = \"7\",\n    pages = \"616\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1140/epjc/s10052-020-8001-z",
+  "recid": 1768911,
+  "title": "Measurement of the transverse momentum distribution of Drell–Yan lepton pairs in proton–proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector",
+  "year": 2019
+ },
+ "inspire:1836186": {
+  "arxiv": "2012.05918",
+  "authors_short": "Heller et al.",
+  "bibtex": "@article{Heller:2020owb,\n    author = \"Heller, Matthias and von Manteuffel, Andreas and Schabinger, Robert M. and Spiesberger, Hubert\",\n    title = \"{Mixed EW-QCD two-loop amplitudes for $q\\bar{q} \\to \\ell^+\\ell^-$ and $\\gamma_5$ scheme independence of multi-loop corrections}\",\n    eprint = \"2012.05918\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MITP/20-072 MSUHEP-20-020\",\n    doi = \"10.1007/JHEP05(2021)213\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"213\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1007/JHEP05(2021)213",
+  "recid": 1836186,
+  "title": "Mixed EW-QCD two-loop amplitudes for $q\\bar{q} \\to \\ell^+\\ell^-$ and $\\gamma_5$ scheme independence of multi-loop corrections",
+  "year": 2020
+ },
+ "inspire:1850545": {
+  "arxiv": "2103.04974",
+  "authors_short": "Camarda et al.",
+  "bibtex": "@article{Camarda:2021ict,\n    author = \"Camarda, Stefano and Cieri, Leandro and Ferrera, Giancarlo\",\n    title = \"{Drell{\\textendash}Yan lepton-pair production: qT resummation at N3LL accuracy and fiducial cross sections at N3LO}\",\n    eprint = \"2103.04974\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevD.104.L111503\",\n    journal = \"Phys. Rev. D\",\n    volume = \"104\",\n    number = \"11\",\n    pages = \"L111503\",\n    year = \"2021\"\n}\n",
+  "doi": "10.1103/PhysRevD.104.L111503",
+  "recid": 1850545,
+  "title": "Drell–Yan lepton-pair production: qT resummation at N3LL accuracy and fiducial cross sections at N3LO",
+  "year": 2021
+ },
+ "inspire:1869719": {
+  "arxiv": "2106.11953",
+  "authors_short": "Bonciani et al.",
+  "bibtex": "@article{Bonciani:2021zzf,\n    author = \"Bonciani, Roberto and Buonocore, Luca and Grazzini, Massimiliano and Kallweit, Stefan and Rana, Narayan and Tramontano, Francesco and Vicini, Alessandro\",\n    title = \"{Mixed Strong-Electroweak Corrections to the Drell-Yan Process}\",\n    eprint = \"2106.11953\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevLett.128.012002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"128\",\n    number = \"1\",\n    pages = \"012002\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1103/PhysRevLett.128.012002",
+  "recid": 1869719,
+  "title": "Mixed Strong-Electroweak Corrections to the Drell-Yan Process",
+  "year": 2021
+ },
+ "inspire:1888733": {
+  "arxiv": "2107.09085",
+  "authors_short": "Chen et al.",
+  "bibtex": "@article{Chen:2021vtu,\n    author = \"Chen, Xuan and Gehrmann, Thomas and Glover, Nigel and Huss, Alexander and Yang, Tong-Zhi and Zhu, Hua Xing\",\n    title = \"{Dilepton Rapidity Distribution in Drell-Yan Production to Third Order in QCD}\",\n    eprint = \"2107.09085\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"KA-TP-17-2021, ZU-TH 33/21, CERN-TH-2021-110, IPPP/21/13\",\n    doi = \"10.1103/PhysRevLett.128.052001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"128\",\n    number = \"5\",\n    pages = \"052001\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1103/PhysRevLett.128.052001",
+  "recid": 1888733,
+  "title": "Dilepton Rapidity Distribution in Drell-Yan Production to Third Order in QCD",
+  "year": 2021
+ },
+ "inspire:1973502": {
+  "arxiv": "2111.10379",
+  "authors_short": "Duhr and Mistlberger",
+  "bibtex": "@article{Duhr:2021vwj,\n    author = \"Duhr, Claude and Mistlberger, Bernhard\",\n    title = \"{Lepton-pair production at hadron colliders at N$^{3}$LO in QCD}\",\n    eprint = \"2111.10379\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"BONN-TH-2021-12, SLAC-PUB-17632\",\n    doi = \"10.1007/JHEP03(2022)116\",\n    journal = \"JHEP\",\n    volume = \"03\",\n    pages = \"116\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP03(2022)116",
+  "recid": 1973502,
+  "title": "Lepton-pair production at hadron colliders at N$^{3}$LO in QCD",
+  "year": 2021
+ },
+ "inspire:2001831": {
+  "arxiv": "2201.01754",
+  "authors_short": "Armadillo et al.",
+  "bibtex": "@article{Armadillo:2022bgm,\n    author = \"Armadillo, Tommaso and Bonciani, Roberto and Devoto, Simone and Rana, Narayan and Vicini, Alessandro\",\n    title = \"{Two-loop mixed QCD-EW corrections to neutral current Drell-Yan}\",\n    eprint = \"2201.01754\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"TIF-UNIMI-2022-1\",\n    doi = \"10.1007/JHEP05(2022)072\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"072\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP05(2022)072",
+  "recid": 2001831,
+  "title": "Two-loop mixed QCD-EW corrections to neutral current Drell-Yan",
+  "year": 2022
+ },
+ "inspire:2044884": {
+  "arxiv": "2203.01565",
+  "authors_short": "Chen et al.",
+  "bibtex": "@article{Chen:2022cgv,\n    author = \"Chen, Xuan and Gehrmann, Thomas and Glover, E. W. N. and Huss, Alexander and Monni, Pier Francesco and Re, Emanuele and Rottoli, Luca and Torrielli, Paolo\",\n    title = \"{Third-Order Fiducial Predictions for Drell-Yan Production at the LHC}\",\n    eprint = \"2203.01565\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"CERN-TH-2022-023, IPPP/22/08, LAPTH-009/22, KA-TP-03-2022,\n  P3H-22-022, ZU-TH 07/22\",\n    doi = \"10.1103/PhysRevLett.128.252001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"128\",\n    number = \"25\",\n    pages = \"252001\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1103/PhysRevLett.128.252001",
+  "recid": 2044884,
+  "title": "Third-Order Fiducial Predictions for Drell-Yan Production at the LHC",
+  "year": 2022
+ },
+ "inspire:2056855": {
+  "arxiv": "2203.11237",
+  "authors_short": "Buccioni et al.",
+  "bibtex": "@article{Buccioni:2022kgy,\n    author = {Buccioni, Federico and Caola, Fabrizio and Chawdhry, Herschel A. and Devoto, Federica and Heller, Matthias and von Manteuffel, Andreas and Melnikov, Kirill and R{\\\"o}ntsch, Raoul and Signorile-Signorile, Chiara},\n    title = \"{Mixed QCD-electroweak corrections to dilepton production at the LHC in the high invariant mass region}\",\n    eprint = \"2203.11237\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"TIF-UNIMI-2022-5, TTP22-015, P3H-22-028, OUTP-22-02P, MSUHEP-22-012\",\n    doi = \"10.1007/JHEP06(2022)022\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"022\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP06(2022)022",
+  "recid": 2056855,
+  "title": "Mixed QCD-electroweak corrections to dilepton production at the LHC in the high invariant mass region",
+  "year": 2022
+ },
+ "inspire:2112612": {
+  "arxiv": "2207.07056",
+  "authors_short": "Neumann and Campbell",
+  "bibtex": "@article{Neumann:2022lft,\n    author = \"Neumann, Tobias and Campbell, John\",\n    title = \"{Fiducial Drell-Yan production at the LHC improved by transverse-momentum resummation at N4LLp+N3LO}\",\n    eprint = \"2207.07056\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FERMILAB-PUB-22-528-T\",\n    doi = \"10.1103/PhysRevD.107.L011506\",\n    journal = \"Phys. Rev. D\",\n    volume = \"107\",\n    number = \"1\",\n    pages = \"L011506\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1103/PhysRevD.107.L011506",
+  "recid": 2112612,
+  "title": "Fiducial Drell-Yan production at the LHC improved by transverse-momentum resummation at <math display=\"inline\"><mrow><msup><mrow><mi mathvariant=\"normal\">N</mi></mrow><mrow><mn>4</mn></mrow></msup><mi mathvariant=\"normal\">L</mi><mrow><msub><mrow><mi mathvariant=\"normal\">L</mi></mrow><mrow><mi mathvariant=\"normal\">p</mi></mrow></msub></mrow><mo>+</mo><mrow><msup><mrow><mi mathvariant=\"normal\">N</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>LO</mi></mrow></mrow></math>",
+  "year": 2022
+ },
+ "inspire:24603": {
+  "arxiv": null,
+  "authors_short": "Matsuura et al.",
+  "bibtex": "@article{Matsuura:1988sm,\n    author = \"Matsuura, T. and van der Marck, S. C. and van Neerven, W. L.\",\n    title = \"{The Calculation of the Second Order Soft and Virtual Contributions to the Drell-Yan Cross-Section}\",\n    reportNumber = \"Print-88-0798 (LEIDEN)\",\n    doi = \"10.1016/0550-3213(89)90620-2\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"319\",\n    pages = \"570--622\",\n    year = \"1989\"\n}\n",
+  "doi": "10.1016/0550-3213(89)90620-2",
+  "recid": 24603,
+  "title": "The Calculation of the Second Order Soft and Virtual Contributions to the Drell-Yan Cross-Section",
+  "year": 1988
+ },
+ "inspire:2816048": {
+  "arxiv": "2408.03744",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2024myi,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the inclusive cross sections for W and Z boson production in proton-proton collisions at $ \\sqrt{\\textrm{s}} $ = 5.02 and 13 TeV}\",\n    eprint = \"2408.03744\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-20-004, CERN-EP-2024-134\",\n    doi = \"10.1007/JHEP04(2025)162\",\n    journal = \"JHEP\",\n    volume = \"04\",\n    pages = \"162\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1007/JHEP04(2025)162",
+  "recid": 2816048,
+  "title": "Measurement of the inclusive cross sections for W and Z boson production in proton-proton collisions at $ \\sqrt{\\textrm{s}} $ = 5.02 and 13 TeV",
+  "year": 2024
+ },
+ "inspire:2818125": {
+  "arxiv": "2408.07622",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2024ony,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the Drell{\\textendash}Yan forward-backward asymmetry and of the effective leptonic weak mixing angle in proton-proton collisions at s=13TeV}\",\n    eprint = \"2408.07622\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-22-010, CERN-EP-2024-208\",\n    doi = \"10.1016/j.physletb.2025.139526\",\n    journal = \"Phys. Lett. B\",\n    volume = \"866\",\n    pages = \"139526\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1016/j.physletb.2025.139526",
+  "recid": 2818125,
+  "title": "Measurement of the Drell–Yan forward-backward asymmetry and of the effective leptonic weak mixing angle in proton-proton collisions at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13</mn><mrow><mspace width=\"0.20em\"/><mtext>TeV</mtext></mrow></math>",
+  "year": 2024
+ },
+ "inspire:2851712": {
+  "arxiv": "2411.16004",
+  "authors_short": "Billis et al.",
+  "bibtex": "@article{Billis:2024dqq,\n    author = \"Billis, Georgios and Michel, Johannes K. L. and Tackmann, Frank J.\",\n    title = \"{Drell-Yan transverse-momentum spectra at N$^{3}$LL$^{′}$ and approximate N$^{4}$LL with SCETlib}\",\n    eprint = \"2411.16004\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"DESY-23-081, MIT-CTP 5572, Nikhef 2024-007\",\n    doi = \"10.1007/JHEP02(2025)170\",\n    journal = \"JHEP\",\n    volume = \"02\",\n    pages = \"170\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1007/JHEP02(2025)170",
+  "recid": 2851712,
+  "title": "Drell-Yan transverse-momentum spectra at N$^{3}$LL$^{′}$ and approximate N$^{4}$LL with SCETlib",
+  "year": 2024
+ },
+ "inspire:300492": {
+  "arxiv": null,
+  "authors_short": "Hamberg et al.",
+  "bibtex": "@article{Hamberg:1990np,\n    author = \"Hamberg, R. and van Neerven, W. L. and Matsuura, T.\",\n    title = \"{A complete calculation of the order $\\alpha-s^{2}$ correction to the Drell-Yan $K$ factor}\",\n    reportNumber = \"DESY-90-129\",\n    doi = \"10.1016/0550-3213(91)90064-5\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"359\",\n    pages = \"343--405\",\n    year = \"1991\",\n    note = \"[Erratum: Nucl.Phys.B 644, 403--404 (2002)]\"\n}\n",
+  "doi": "10.1016/0550-3213(91)90064-5",
+  "recid": 300492,
+  "title": "A complete calculation of the order $\\alpha-s^{2}$ correction to the Drell-Yan $K$ factor",
+  "year": 1990
+ },
+ "inspire:3150032": {
+  "arxiv": "2604.25678",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2026amb,\n    author = \"Gevorgyan, Arzunik and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the Z {\\textrightarrow}{\\ensuremath{\\mu}}+{\\ensuremath{\\mu}}{\\ensuremath{-}} angular coefficients in pp collisions at s= 13 TeV as functions of transverse momentum and rapidity}\",\n    eprint = \"2604.25678\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-23-007, CERN-EP-2026-099\",\n    doi = \"10.1016/j.physletb.2026.140988\",\n    journal = \"Phys. Lett. B\",\n    volume = \"882\",\n    pages = \"140988\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1016/j.physletb.2026.140988",
+  "recid": 3150032,
+  "title": "Measurement of the Z <math altimg=\"si7.svg\"><mrow><mo>→</mo><msup><mi>μ</mi><mo>+</mo></msup><msup><mi>μ</mi><mo>−</mo></msup></mrow></math> angular coefficients in pp collisions at <math altimg=\"si8.svg\"><msqrt><mi>s</mi></msqrt></math>= 13 TeV as functions of transverse momentum and rapidity",
+  "year": 2026
+ },
+ "inspire:562246": {
+  "arxiv": "hep-ph/0108274",
+  "authors_short": "Baur et al.",
+  "bibtex": "@article{Baur:2001ze,\n    author = \"Baur, U. and Brein, O. and Hollik, W. and Schappacher, C. and Wackeroth, D.\",\n    title = \"{Electroweak radiative corrections to neutral current Drell-Yan processes at hadron colliders}\",\n    eprint = \"hep-ph/0108274\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"KA-TP-26-2001, UB-HET-01-04, UR-1642\",\n    doi = \"10.1103/PhysRevD.65.033007\",\n    journal = \"Phys. Rev. D\",\n    volume = \"65\",\n    pages = \"033007\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1103/PhysRevD.65.033007",
+  "recid": 562246,
+  "title": "Electroweak radiative corrections to neutral current Drell-Yan processes at hadron colliders",
+  "year": 2001
+ },
+ "inspire:567814": {
+  "arxiv": "hep-ph/0112081",
+  "authors_short": "Garland et al.",
+  "bibtex": "@article{Garland:2001tf,\n    author = \"Garland, L. W. and Gehrmann, T. and Glover, E. W. Nigel and Koukoutsakis, A. and Remiddi, E.\",\n    title = \"{The Two loop QCD matrix element for e+ e- ---{\\ensuremath{>}} 3 jets}\",\n    eprint = \"hep-ph/0112081\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"IPPP-01-59, DCPT-01-118, CERN-TH-2001-348\",\n    doi = \"10.1016/S0550-3213(02)00057-3\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"627\",\n    pages = \"107--188\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1016/S0550-3213(02)00057-3",
+  "recid": 567814,
+  "title": "The Two loop QCD matrix element for e+ e- ---> 3 jets",
+  "year": 2001
+ },
+ "inspire:587998": {
+  "arxiv": "hep-ph/0206067",
+  "authors_short": "Garland et al.",
+  "bibtex": "@article{Garland:2002ak,\n    author = \"Garland, L. W. and Gehrmann, T. and Glover, E. W. Nigel and Koukoutsakis, A. and Remiddi, E.\",\n    title = \"{Two loop QCD helicity amplitudes for e+ e- ---{\\ensuremath{>}} three jets}\",\n    eprint = \"hep-ph/0206067\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"IPPP-02-28, DCPT-02-56, CERN-TH-2002-122\",\n    doi = \"10.1016/S0550-3213(02)00627-2\",\n    journal = \"Nucl. Phys. B\",\n    volume = \"642\",\n    pages = \"227--262\",\n    year = \"2002\"\n}\n",
+  "doi": "10.1016/S0550-3213(02)00627-2",
+  "recid": 587998,
+  "title": "Two loop QCD helicity amplitudes for e+ e- ---> three jets",
+  "year": 2002
+ },
+ "inspire:686721": {
+  "arxiv": "hep-ph/0507061",
+  "authors_short": "Gehrmann et al.",
+  "bibtex": "@article{Gehrmann:2005pd,\n    author = \"Gehrmann, T. and Huber, T. and Maitre, D.\",\n    title = \"{Two-loop quark and gluon form-factors in dimensional regularisation}\",\n    eprint = \"hep-ph/0507061\",\n    archivePrefix = \"arXiv\",\n    doi = \"10.1016/j.physletb.2005.07.019\",\n    journal = \"Phys. Lett. B\",\n    volume = \"622\",\n    pages = \"295--302\",\n    year = \"2005\"\n}\n",
+  "doi": "10.1016/j.physletb.2005.07.019",
+  "recid": 686721,
+  "title": "Two-loop quark and gluon form-factors in dimensional regularisation",
+  "year": 2005
+ },
+ "inspire:725573": {
+  "arxiv": "hep-ph/0609070",
+  "authors_short": "Melnikov and Petriello",
+  "bibtex": "@article{Melnikov:2006kv,\n    author = \"Melnikov, Kirill and Petriello, Frank\",\n    title = \"{Electroweak gauge boson production at hadron colliders through $O(\\alpha_s^2)$}\",\n    eprint = \"hep-ph/0609070\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"UH-511-1092-06\",\n    doi = \"10.1103/PhysRevD.74.114017\",\n    journal = \"Phys. Rev. D\",\n    volume = \"74\",\n    pages = \"114017\",\n    year = \"2006\"\n}\n",
+  "doi": "10.1103/PhysRevD.74.114017",
+  "recid": 725573,
+  "title": "Electroweak gauge boson production at hadron colliders through $O(\\alpha_s^2)$",
+  "year": 2006
+ },
+ "inspire:813829": {
+  "arxiv": "0902.3519",
+  "authors_short": "Baikov et al.",
+  "bibtex": "@article{Baikov:2009bg,\n    author = \"Baikov, P. A. and Chetyrkin, K. G. and Smirnov, A. V. and Smirnov, V. A. and Steinhauser, M.\",\n    title = \"{Quark and gluon form factors to three loops}\",\n    eprint = \"0902.3519\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"SFB-CPP-09-19, TTP09-05\",\n    doi = \"10.1103/PhysRevLett.102.212002\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"102\",\n    pages = \"212002\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1103/PhysRevLett.102.212002",
+  "recid": 813829,
+  "title": "Quark and gluon form factors to three loops",
+  "year": 2009
+ },
+ "inspire:815316": {
+  "arxiv": "0903.2120",
+  "authors_short": "Catani et al.",
+  "bibtex": "@article{Catani:2009sm,\n    author = \"Catani, Stefano and Cieri, Leandro and Ferrera, Giancarlo and de Florian, Daniel and Grazzini, Massimiliano\",\n    title = \"{Vector boson production at hadron colliders: a fully exclusive QCD calculation at NNLO}\",\n    eprint = \"0903.2120\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevLett.103.082001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"103\",\n    pages = \"082001\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1103/PhysRevLett.103.082001",
+  "recid": 815316,
+  "title": "Vector boson production at hadron colliders: a fully exclusive QCD calculation at NNLO",
+  "year": 2009
+ },
+ "inspire:836737": {
+  "arxiv": "0911.2329",
+  "authors_short": "Dittmaier and Huber",
+  "bibtex": "@article{Dittmaier:2009cr,\n    author = \"Dittmaier, Stefan and Huber, Max\",\n    title = \"{Radiative corrections to the neutral-current Drell-Yan process in the Standard Model and its minimal supersymmetric extension}\",\n    eprint = \"0911.2329\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MPP-2009-164\",\n    doi = \"10.1007/JHEP01(2010)060\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"060\",\n    year = \"2010\"\n}\n",
+  "doi": "10.1007/JHEP01(2010)060",
+  "recid": 836737,
+  "title": "Radiative corrections to the neutral-current Drell-Yan process in the Standard Model and its minimal supersymmetric extension",
+  "year": 2009
+ },
+ "inspire:852545": {
+  "arxiv": "1004.3653",
+  "authors_short": "Gehrmann et al.",
+  "bibtex": "@article{Gehrmann:2010ue,\n    author = \"Gehrmann, T. and Glover, E. W. N. and Huber, T. and Ikizlerli, N. and Studerus, C.\",\n    title = \"{Calculation of the quark and gluon form factors to three loops in QCD}\",\n    eprint = \"1004.3653\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"ZU-TH-07-10, IPPP-10-26, SI-HEP-2010-09, ZU--TH-07-10, ZU--TH 07/10, IPPP/10/26, SI-HEP-2010-09\",\n    doi = \"10.1007/JHEP06(2010)094\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"094\",\n    year = \"2010\"\n}\n",
+  "doi": "10.1007/JHEP06(2010)094",
+  "recid": 852545,
+  "title": "Calculation of the quark and gluon form factors to three loops in QCD",
+  "year": 2010
+ },
+ "inspire:891490": {
+  "arxiv": "1103.0914",
+  "authors_short": "Denner et al.",
+  "bibtex": "@article{Denner:2011vu,\n    author = \"Denner, Ansgar and Dittmaier, Stefan and Kasprzik, Tobias and Muck, Alexander\",\n    title = \"{Electroweak corrections to dilepton + jet production at hadron colliders}\",\n    eprint = \"1103.0914\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1007/JHEP06(2011)069\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"069\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1007/JHEP06(2011)069",
+  "recid": 891490,
+  "title": "Electroweak corrections to dilepton + jet production at hadron colliders",
+  "year": 2011
+ }
+}
