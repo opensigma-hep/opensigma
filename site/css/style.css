@@ -55,7 +55,8 @@ footer.bar { border-bottom: 0; border-top: 1px solid var(--border); color: var(-
   border: 1px solid var(--border); border-radius: 6px; padding: .25rem .6rem; cursor: pointer;
 }
 
-main { max-width: 64rem; margin: 0 auto; padding: 16px; }
+main { max-width: 96rem; margin: 0 auto; padding: 16px 24px; }
+main p { max-width: 75ch; }
 h1 { font-size: 1.5rem; margin: .5rem 0 1rem; }
 
 .tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
@@ -73,7 +74,7 @@ h1 { font-size: 1.5rem; margin: .5rem 0 1rem; }
 .controls label { display: inline-block; margin-right: .75rem; white-space: nowrap; }
 .controls select { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .2rem .4rem; }
 .matrix-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
-svg.matrix { display: block; }
+svg.matrix { display: block; width: 100%; height: auto; }
 svg.matrix text { fill: var(--fg); font: 13px system-ui, sans-serif; }
 svg.matrix .colhead { font-weight: 600; }
 svg.matrix .rowhead text { fill: var(--accent); font-weight: 600; font-size: 14px; }

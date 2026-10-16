@@ -11,7 +11,7 @@ const CW = 132, CH = 52, LW = 220, HH = 44;
 // Label column wide enough for the longest row label (canvas: the host is not in the DOM yet when first drawn).
 function labelWidth(texts) {
   const ctx = document.createElement('canvas').getContext('2d');
-  return Math.max(LW, ...texts.map(([font, t]) => { ctx.font = font; return Math.ceil(ctx.measureText(t).width) + 24; }));
+  return Math.max(LW, ...texts.map(([font, t]) => { ctx.font = font; return Math.ceil(ctx.measureText(t).width) + 16; }));
 }
 
 function el(tag, attrs = {}, ...kids) {
@@ -54,7 +54,9 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   const LW = labelWidth(rows.flatMap((p) => [['600 14px system-ui, sans-serif', procName[p]],
     ...(procFam[p] !== fam.id ? [['11px system-ui, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])]));
   const W = LW + cols.length * CW, H = HH + rows.length * CH;
-  const svg = d3.select(host).append('svg').attr('class', 'matrix').attr('width', W).attr('height', H)
+  // Scales down to fit the page (CSS width: 100%), never up; below min-width the host scrolls.
+  const svg = d3.select(host).append('svg').attr('class', 'matrix').attr('viewBox', `0 0 ${W} ${H}`)
+    .style('max-width', `${W}px`).style('min-width', `min(${W}px, 40rem)`)
     .attr('role', 'group').attr('aria-label', `${fam.name}: processes by collider`);
   patterns(d3, svg);
   svg.append('g').selectAll('text').data(cols).join('text').attr('class', 'colhead')
