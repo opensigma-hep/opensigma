@@ -1,6 +1,6 @@
 # pheno-map
 
-A map of collider-physics processes. Data lives as YAML (`data/`, `processes/`, `amplitudes/`, `parameters/`),
+A map of collider-physics processes. Data lives as YAML under `data/` (`data/families.yaml`, `data/colliders.yaml`, `data/processes/`, `data/amplitudes/`, `data/parameters/`),
 a Python build (`scripts/`) turns it into `site/data.json`, and a static JS site renders it.
 
 ## Setup
