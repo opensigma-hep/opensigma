@@ -52,7 +52,7 @@ def main(argv=None) -> int:
     issues = validate(repo, Path(a.schema))
     failed = False
     for i in issues:
-        print(f"{i.level.upper()} {i.file} {'/'.join(map(str, i.path))}: {i.msg}")
+        print(f"{i.level.upper()} {i.file} {i.path}: {i.msg}")
         failed |= i.level == "error"
 
     errors: dict = {}

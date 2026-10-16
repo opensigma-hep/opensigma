@@ -8,7 +8,7 @@ from pathlib import Path
 from .load import load_repo
 
 API = "https://inspirehep.net/api"
-FIELDS = "titles,arxiv_eprints,dois,authors.full_name,collaborations,publication_info,earliest_date,control_number"
+FIELDS = "titles,arxiv_eprints,dois,authors.full_name,collaborations,publication_info,earliest_date,preprint_date,legacy_creation_date,control_number"
 REF_RE = re.compile(r"^(inspire:\d+|arXiv:[^,\s]+(, .+)?|hepdata:ins\d+/.+)$")
 REF_KEYS = {"ref", "refs", "source", "full_table", "hepdata"}  # `source` is also the hepdata|agent|human enum: filtered by REF_RE
 
@@ -47,10 +47,12 @@ def cache_key(ref: str) -> str:
     return ref.split(",")[0].strip()
 
 
-def authors_short(md: dict) -> str:
+def authors_short(md: dict) -> str | None:
     if md.get("collaborations"):
         return f"{md['collaborations'][0]['value']} Collaboration"
     names = [a["full_name"].split(",")[0] for a in md.get("authors", [])]
+    if not names:
+        return None
     if len(names) == 1:
         return names[0]
     return f"{names[0]} and {names[1]}" if len(names) == 2 else f"{names[0]} et al."
@@ -74,7 +76,7 @@ def resolve(ref: str, cache: dict, fetch=http_get_json) -> dict:
             "doi": first("dois"),
             "title": md["titles"][0]["title"],
             "authors_short": authors_short(md),
-            "year": int(md["earliest_date"][:4]),
+            "year": next((int(md[k][:4]) for k in ("earliest_date", "preprint_date", "legacy_creation_date") if md.get(k)), None),
             "bibtex": fetch(f"{API}/literature/{recid}?format=bibtex"),
         }
     cache[key] = cache[ikey]

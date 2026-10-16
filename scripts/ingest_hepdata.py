@@ -13,7 +13,7 @@ from scripts.phenomap import hepdata
 LABEL_MAP = Path(__file__).parent.parent / "data" / "hepdata_label_map.yaml"
 
 
-def main(argv=None, fetch=hepdata._get_text) -> int:
+def main(argv=None, fetch=hepdata.curl_get) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("recid", help="ins<digits>")
     ap.add_argument("table")

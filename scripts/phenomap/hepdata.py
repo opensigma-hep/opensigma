@@ -1,19 +1,27 @@
 """Summarise HEPData table errors into schema-valid `uncertainty_exp` snippets (no uid: scripts.assign_uids adds it)."""
 import re
+import subprocess
 import urllib.parse
-import urllib.request
 from datetime import date
 
 from ruamel.yaml import YAML
 
 
-def _get_text(url: str) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": "pheno-map/0.1"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read().decode("utf-8")
+# HEPData's Cloudflare returns 403 to urllib (even with an honest UA) but 200 to curl: all HEPData HTTP goes through curl.
+def curl_get(url: str, run=subprocess.run) -> str:
+    r = run(["curl", "-sSfL", "--max-time", "60", url], capture_output=True, text=True)
+    if r.returncode:
+        raise OSError(f"curl {url} failed ({r.returncode}): {r.stderr.strip()}")
+    return r.stdout
 
 
-def fetch_table(recid: int, table: str, version: int = 1, fetch=_get_text) -> dict:
+def curl_status(url: str, run=subprocess.run) -> int:
+    """HTTP status of a HEAD request via curl; 0 on transport failure."""
+    r = run(["curl", "-sS", "-I", "-L", "--max-time", "60", "-o", "/dev/null", "-w", "%{http_code}", url], capture_output=True, text=True)
+    return int(r.stdout) if r.returncode == 0 and r.stdout.strip().isdigit() else 0
+
+
+def fetch_table(recid: int, table: str, version: int = 1, fetch=curl_get) -> dict:
     url = f"https://www.hepdata.net/download/table/ins{recid}/{urllib.parse.quote(table)}/{version}/yaml"
     return YAML(typ="safe").load(fetch(url))
 

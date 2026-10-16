@@ -67,3 +67,13 @@ def test_build_release_from_release_yaml(tmp_path):
 
 def test_build_release_null_when_unreleased(tmp_path):
     assert _release(tmp_path, False) is None
+
+
+def test_integrity_error_path_not_letter_split(tmp_path, capsys):
+    root = tmp_path / "repo"
+    shutil.copytree(MIN, root)
+    f = root / "processes" / "vector-bosons" / "dy-nc.yaml"
+    f.write_text(f.read_text(encoding="utf-8").replace('uses_amplitudes: ["amp:2L/0-qqbarV"]', 'uses_amplitudes: ["amp:nope"]'), encoding="utf-8")
+    build.main(["--root", str(root), "--out", str(tmp_path / "d.json"), "--offline"])
+    out = capsys.readouterr().out
+    assert "u/s/e/s" not in out and "/uses_amplitudes:" in out

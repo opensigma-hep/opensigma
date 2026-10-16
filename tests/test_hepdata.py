@@ -120,3 +120,24 @@ def test_linkcheck_exit_code(status, code, capsys):
     assert any(u.startswith("https://inspirehep.net/") for u in urls)
     if code:
         assert "404" in capsys.readouterr().out
+
+
+def test_curl_get_and_status_use_curl_without_user_agent():
+    from types import SimpleNamespace
+    calls = []
+
+    def run(cmd, **kw):
+        calls.append(cmd)
+        return SimpleNamespace(returncode=0, stdout="200" if "-I" in cmd else "yaml: body", stderr="")
+
+    assert hepdata.curl_get("https://www.hepdata.net/x", run=run) == "yaml: body"
+    assert hepdata.curl_status("https://www.hepdata.net/x", run=run) == 200
+    assert all(c[0] == "curl" and "https://www.hepdata.net/x" in c for c in calls)
+    assert not any("agent" in a.lower() or a == "-A" for c in calls for a in c)
+
+
+def test_curl_get_raises_on_failure():
+    from types import SimpleNamespace
+    run = lambda cmd, **kw: SimpleNamespace(returncode=22, stdout="", stderr="403")  # noqa: E731
+    with pytest.raises(OSError, match="403"):
+        hepdata.curl_get("https://www.hepdata.net/x", run=run)

@@ -137,3 +137,26 @@ def test_offline_does_not_create_refs_json(tmp_path):
     (root / "refs.json").unlink()
     assert refs.update_cache(root, offline=True, fetch=FakeFetch())  # all unresolved
     assert not (root / "refs.json").exists()
+
+
+def _live_shape(**extra):
+    """Hand-written mirror of live INSPIRE single-record metadata: no `earliest_date`."""
+    return {"metadata": {"control_number": 77, "titles": [{"title": "T"}], **extra}}
+
+
+@pytest.mark.parametrize("dates,year", [
+    ({"preprint_date": "2016-09-02", "legacy_creation_date": "2017-01-01"}, 2016),
+    ({"legacy_creation_date": "2017-01-01"}, 2017),
+    ({"earliest_date": "2015-05-05", "preprint_date": "2016-09-02"}, 2015),
+    ({}, None),
+])
+def test_resolve_year_fallback(dates, year):
+    fetch = lambda url: "@article{x}\n" if "bibtex" in url else _live_shape(**dates)  # noqa: E731
+    assert refs.resolve("inspire:77", {}, fetch)["year"] == year
+
+
+def test_resolve_missing_optional_metadata_is_null():
+    fetch = lambda url: "@article{x}\n" if "bibtex" in url else _live_shape(preprint_date="2016-09-02")  # noqa: E731
+    e = refs.resolve("inspire:77", {}, fetch)
+    assert (e["arxiv"], e["doi"], e["title"]) == (None, None, "T")
+    assert e["authors_short"] is None
