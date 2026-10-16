@@ -3,7 +3,7 @@ from ruamel.yaml import YAML
 
 from pathlib import Path
 
-from scripts import linkcheck
+from scripts import ingest_hepdata, linkcheck
 from scripts.phenomap import hepdata
 
 ROOT = Path(__file__).parent.parent
@@ -49,6 +49,49 @@ def test_total_pct_quadrature():
     assert hepdata.total_pct(TABLE, None) == pytest.approx((4 + 2.46**2 + 9 + 1) ** 0.5)
 
 
+ZERO_FIRST = {"dependent_variables": [{"values": [
+    {"value": 0, "errors": [{"label": "stat", "symerror": 1.0}]},
+    {"value": 10.0, "errors": [{"label": "stat", "symerror": 1.0}]},
+    {"value": 20.0, "errors": [{"label": "stat", "symerror": 1.0}]}]}]}
+
+
+def test_total_pct_keeps_original_bin_numbering():
+    assert hepdata.total_pct(ZERO_FIRST, 2) == pytest.approx(10.0)
+    assert hepdata.total_pct(ZERO_FIRST, 3) == pytest.approx(5.0)
+    assert hepdata.total_pct(ZERO_FIRST, None) == pytest.approx(5.0)
+
+
+@pytest.mark.parametrize("b", [0, -1, 4])
+def test_total_pct_out_of_range(b):
+    with pytest.raises(ValueError, match="out of range"):
+        hepdata.total_pct(ZERO_FIRST, b)
+
+
+def test_total_pct_zero_bin_and_all_zero():
+    with pytest.raises(ValueError, match="value 0"):
+        hepdata.total_pct(ZERO_FIRST, 1)
+    with pytest.raises(ValueError, match="no non-zero"):
+        hepdata.total_pct({"dependent_variables": [{"values": [{"value": 0, "errors": []}]}]}, None)
+
+
+def test_asymerror_percent_strings():
+    t = {"dependent_variables": [{"values": [
+        {"value": 10.0, "errors": [{"label": "JES", "asymerror": {"plus": "+3.2%", "minus": "-1.1%"}}]}]}]}
+    (u,) = hepdata.summarize(t, LABEL_MAP, REF)
+    assert u["size"] == {"range": [3.2, 3.2], "asymmetric": True}
+
+
+def test_ingest_prints_results_snippet(capsys):
+    assert ingest_hepdata.main(["ins1234567", "Table 5", "--bin", "3"], fetch=lambda u: (FIX / "hepdata" / "table.yaml").read_text()) == 0
+    (r,) = YAML(typ="safe").load(capsys.readouterr().out)["results"]
+    assert r["measurement"] == "<MEAS-ID>"
+    assert r["total"]["value_pct"] == 4.5
+    assert r["total"]["provenance"]["source"] == "hepdata"
+    assert r["total"]["provenance"]["status"] == "machine-verified"
+    assert r["total"]["provenance"]["ref"] == REF
+    assert [u["category"] for u in r["uncertainties"]] == ["stat", "lumi", "energy_scale", "other"]
+
+
 def test_fetch_table_url_and_parse():
     urls = []
 
@@ -71,6 +114,7 @@ def test_linkcheck_exit_code(status, code, capsys):
 
     assert linkcheck.main(["--root", str(FIX / "repo_min")], head=head, sleep=lambda s: None) == code
     assert any(u.startswith("https://arxiv.org/abs/") for u in urls)
+    assert "https://www.hepdata.net/download/table/ins1000001/Table%201/1/yaml" in urls
     assert any(u.startswith("https://inspirehep.net/") for u in urls)
     if code:
         assert "404" in capsys.readouterr().out

@@ -1,6 +1,6 @@
 """CLI: python -m scripts.ingest_hepdata ins1234567 "Table 5" [--bin 3] [--version 1]
 
-Prints a YAML `uncertainties:` snippet to stdout for an agent to paste in; never writes data files.
+Prints a YAML `results:` snippet to stdout for an agent to paste in; never writes data files.
 """
 import argparse
 import sys
@@ -25,10 +25,20 @@ def main(argv=None, fetch=hepdata._get_text) -> int:
     recid = int(a.recid[3:])
     table = hepdata.fetch_table(recid, a.table, a.version, fetch=fetch)
     label_map = YAML(typ="safe").load(LABEL_MAP)
+    ref = f"hepdata:ins{recid}/{a.table}"
+    unc = hepdata.summarize(table, label_map, ref)
+    where = f"bin {a.bin}" if a.bin else "min over bins"
+    result = {
+        "measurement": "<MEAS-ID>",
+        "total": {
+            "value_pct": hepdata.round_sig(hepdata.total_pct(table, a.bin)),
+            "provenance": {**unc[0]["provenance"], "locator": f"{a.table}, quadrature sum of all errors ({where})"},
+        },
+        "uncertainties": unc,
+    }
     y = YAML()
     y.default_flow_style = False
-    y.dump({"uncertainties": hepdata.summarize(table, label_map, f"hepdata:ins{recid}/{a.table}")}, sys.stdout)
-    print(f"# total_pct ({'bin ' + str(a.bin) if a.bin else 'min over bins'}): {hepdata.total_pct(table, a.bin):.2g}")
+    y.dump({"results": [result]}, sys.stdout)
     return 0
 
 

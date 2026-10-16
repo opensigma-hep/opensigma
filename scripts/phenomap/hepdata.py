@@ -33,12 +33,14 @@ def _err_pct(err: dict, value: float) -> tuple[float, bool]:
     return abs(one(err["symerror"])), False
 
 
-def _bins(table: dict) -> list[list[tuple[str, float, bool]]]:
-    """Per non-zero bin: [(label, |err|/|value| in %, asymmetric)]. Uses the first dependent variable."""
+def _bins(table: dict) -> list[list[tuple[str, float, bool]] | None]:
+    """Per bin, in original order: [(label, |err|/|value| in %, asymmetric)], or None for a zero-value bin.
+
+    Uses the first dependent variable.
+    """
     return [
-        [(e["label"], *_err_pct(e, v["value"])) for e in v.get("errors", [])]
+        None if v["value"] == 0 else [(e["label"], *_err_pct(e, v["value"])) for e in v.get("errors", [])]
         for v in table["dependent_variables"][0]["values"]
-        if v["value"] != 0
     ]
 
 
@@ -46,7 +48,7 @@ def summarize(table: dict, label_map: dict, ref: str, today: date | None = None)
     """One uncertainty_exp per error label; `ref` is `hepdata:ins<recid>/<table>`."""
     name = ref.split("/", 1)[1]
     per_label: dict[str, list[tuple[float, bool]]] = {}
-    for b in _bins(table):
+    for b in filter(None, _bins(table)):
         for label, pct, asym in b:
             per_label.setdefault(label, []).append((pct, asym))
     out = []
@@ -67,6 +69,15 @@ def summarize(table: dict, label_map: dict, ref: str, today: date | None = None)
 
 
 def total_pct(table: dict, region_bin: int | None) -> float:
-    """Quadrature sum of relative errors (%) at 1-based bin `region_bin` (zero-value bins skipped), or min over bins."""
-    totals = [sum(p**2 for _, p, _ in b) ** 0.5 for b in _bins(table)]
-    return min(totals) if region_bin is None else totals[region_bin - 1]
+    """Quadrature sum of relative errors (%) at 1-based bin `region_bin` (numbered over all bins), or min over non-zero bins."""
+    bins = _bins(table)
+    totals = [None if b is None else sum(p**2 for _, p, _ in b) ** 0.5 for b in bins]
+    if all(t is None for t in totals):
+        raise ValueError("table has no non-zero bins")
+    if region_bin is None:
+        return min(t for t in totals if t is not None)
+    if not 1 <= region_bin <= len(bins):
+        raise ValueError(f"bin {region_bin} out of range 1..{len(bins)}")
+    if totals[region_bin - 1] is None:
+        raise ValueError(f"bin {region_bin} has value 0; relative error undefined")
+    return totals[region_bin - 1]
