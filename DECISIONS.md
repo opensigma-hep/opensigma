@@ -43,7 +43,7 @@ uncertainty — repeated per observable.
 11. **Uncertainty vocabulary (Q10):** two-level — fixed `category` enum (schema-enforced) + free `specific`.
     Theory: MHOU(method) · PDF(pdf_set) · alphas · parametric · nonpert(method) · matching_shower(method) ·
     EW_missing · approximation · numerical. Exp: stat · lumi · energy_scale · efficiency · unfolding_model ·
-    background · acceptance_extrapolation · beam · pileup · other (build warns on `other`).
+    background · acceptance_extrapolation · beam · pileup · syst_combined (source quotes only a combined systematic; added 2026-10-17) · other (build warns on `other`).
     HEPData label → category needs a mapping table in the ingest script.
 12. **Uncertainty numbers (Q11):** summary + link. Each entry: category, specific, method, size {range [min,max] %,
     optional regions [{where, value}], asymmetric}, full_table (hepdata:… or arXiv figure locator), provenance.

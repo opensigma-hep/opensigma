@@ -4,10 +4,13 @@ family: "fam:ee-hadronic"
 sector: SM
 description: "Jet multiplicity rates (jet cross sections normalised to σ_had) as a function of the resolution parameter y_cut, and the Durham two-to-three-jet transition variable y₂₃, in e⁺e⁻ → hadrons. The three-jet rate is known at NNLO (O(αs³)), the two-jet rate at N3LO and, matched to NNLL resummation, used for αs fits to LEP and PETRA data. This draft covers the Durham algorithm at LEP1 (Z peak), headlining the y₂₃ distribution."
 watch:
-  recids: [778905, 1475281, 1721113, 817454, 636645]
+  recids: []
   queries:
-    - 't "jet rate" and (t "e+ e-" or t "e+e-")'
-    - 't Durham and t "jet" and (t NNLL or t N3LO)'
+    - '(t "jet rate" or t "jet rates") and (t "e+e-" or t "e+ e-" or t "e$^+$e$^-$" or t annihilation or t LEP or t ALEPH)'
+    - 't Durham and (t "e+e-" or t "e$^+$e$^-$" or t annihilation or t LEP) and (t NNLL or t N3LO or t resummation or t "strong coupling" or t alpha)'
+    - 't "event shapes" and (t "jet rate" or t Durham or t y23 or t "three-jet")'
+    - 't ALEPH and t archived and (t jet or t rate)'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NNLO QCD"
     cells:
@@ -43,6 +46,11 @@ channels:
         dataset: "LEP1, √s = 91 GeV"
         ref: "inspire:669402"
         hepdata: "hepdata:ins669402/Table 6"
+      - id: "meas:ee-jet-rates/lep1/delphi-2000"
+        experiment: "DELPHI"
+        dataset: "LEP1, √s = 91.2 GeV (1994 data)"
+        ref: "inspire:522656"
+        hepdata: "hepdata:ins522656/Table 18"
     observables:
       - id: "obs:ee-jet-rates/lep1/y23"
         name: "Durham y₂₃ distribution"
@@ -75,7 +83,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:
@@ -116,7 +124,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:
@@ -131,6 +139,47 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
+          - measurement: "meas:ee-jet-rates/lep1/delphi-2000"
+            total:
+              value_pct: 0.77
+              provenance:
+                uid: a40d78ee
+                ref: hepdata:ins522656/Table 18
+                locator: Table 18, quadrature sum of all errors (bin 4)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.14
+                    - 20.0
+                  asymmetric: false
+                full_table: hepdata:ins522656/Table 18
+                provenance:
+                  uid: 9bbd662b
+                  ref: hepdata:ins522656/Table 18
+                  locator: Table 18, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 0.41
+                    - 11.0
+                  asymmetric: false
+                full_table: hepdata:ins522656/Table 18
+                provenance:
+                  uid: 3fe3c40e
+                  ref: hepdata:ins522656/Table 18
+                  locator: Table 18, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
         predictions:
           - label: "NNLO + NLLA matched"
             accuracy:
@@ -181,7 +230,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:
@@ -244,7 +293,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:

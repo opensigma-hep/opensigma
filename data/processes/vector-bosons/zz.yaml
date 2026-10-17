@@ -4,10 +4,11 @@ family: "fam:vector-bosons"
 sector: SM
 description: "Production of a Z-boson pair, pp → ZZ → 4ℓ (and 2ℓ2ν), from qq̄ annihilation and loop-induced gluon fusion. Cleanest diboson final state, probing neutral triple gauge couplings, and the continuum background to Higgs → ZZ* → 4ℓ and to off-shell Higgs studies. Known at NNLO QCD with NLO EW and NLO QCD for the gluon-fusion channel."
 watch:
-  recids: [1814609, 1849535, 1295500, 1384273, 1394395, 1498315, 1418197]
+  recids: []
   queries:
-    - 't "ZZ" and (collaboration:ATLAS or collaboration:CMS) and (t "cross section" or t "cross-section" or t "differential") and t "four" and t "13"'
-    - 't "ZZ" and (t NNLO or t N3LO or t "electroweak corrections" or t resummation or t "gluon fusion") and t "production" and not t Higgs'
+    - (t ZZ or t "Z boson pair" or t "four-lepton" or t "four leptons") and (collaboration:ATLAS or collaboration:CMS) and t "cross" and not t Higgs and tc article
+    - (t ZZ or t "Z boson pair" or t "Z-boson pair") and (t NNLO or t N3LO or t "electroweak corrections" or t resummation or t "gluon fusion" or t NLO) and not t Higgs and tc article
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -44,7 +45,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:zz/lhc-13/sigma-fid", region: "Fiducial ZZ → 4ℓ (CMS: 60 < mℓℓ < 120 GeV, mℓℓ′ > 4 GeV, pT(ℓ1,ℓ2,ℓ3/4) > 20/10/5 GeV; ATLAS: on-shell ZZ region of the four-lepton measurement)"}
     measurements:
       - id: "meas:zz/lhc-13/cms-2021-incl"
@@ -70,7 +71,7 @@ channels:
                 size: {range: [1.7, 3.3], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1814609/Table 1"
                 provenance: {uid: 900e6c3a, ref: "hepdata:ins1814609/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "syst"
                 size: {range: [2.7, 3.3], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins1814609/Table 1"
@@ -87,7 +88,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 3a97f049, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (stat) of 49.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 2a2c394b, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (syst) of 49.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -138,7 +139,7 @@ channels:
                 size: {range: [1.7, 3.3], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1814609/Table 2"
                 provenance: {uid: 3b98326c, ref: "hepdata:ins1814609/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "syst"
                 size: {range: [2.9, 3.5], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins1814609/Table 2"
@@ -172,3 +173,607 @@ channels:
             refs: ["inspire:1814609", "inspire:1384273", "inspire:1394395"]
             provenance: {uid: b7145c30, ref: "inspire:1814609", locator: "Results, total cross section (matrix v2.0.0_beta1)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
+      - id: obs:zz/lhc-13/mzz
+        name: 1/σ_fid dσ/dm(ZZ), fiducial, normalised
+        kind: differential
+        variable: m(ZZ) (invariant mass of the four-lepton system)
+        results:
+          - measurement: meas:zz/lhc-13/cms-2021-incl
+            total:
+              value_pct: 4.4
+              provenance:
+                uid: 9557b6ee
+                ref: hepdata:ins1814609/Figure 4
+                locator: 'Figure 4, quadrature sum of all errors (bin 2); bin 2 is 200 ≤ m(ZZ) < 250 GeV: (1/σ_fid) dσ/dm = 0.00753 /GeV (normalised to the fiducial cross section; the total uncertainty is the HEPData combined statistical and systematic error)'
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties: []
+        predictions:
+          - label: NNLO QCD × NLO EW qq̄ + NLO gg→ZZ (MATRIX), CMS cuts
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations:
+                - qq̄ at NNLO QCD and NLO EW combined multiplicatively
+                - gg → ZZ at NLO QCD
+                - prediction compared with the normalised distribution in the paper figures only; no tabulated uncertainty
+            codes:
+              - MATRIX
+              - OpenLoops
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            compared_to:
+              - meas:zz/lhc-13/cms-2021-incl
+            refs:
+              - inspire:1814609
+              - inspire:1384273
+              - inspire:1394395
+              - inspire:1498315
+            provenance:
+              uid: 9de8326c
+              ref: inspire:1814609
+              locator: Differential-cross-section figures (m(ZZ) distribution, MATRIX v2.0.0_beta1 comparison); numbers shown in figures only
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+  - id: chan:zz/lhc-8
+    collider: col:lhc-8
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:zz/lhc-8/sigma-tot
+      region: Total pp → ZZ, 8 TeV, both Z bosons in 60 < mZ < 120 GeV (CMS, extrapolated from the four-lepton and ℓℓττ final states)
+    measurements:
+      - id: meas:zz/lhc-8/cms-2014-tot
+        experiment: CMS
+        dataset: 8 TeV, 19.6 fb⁻¹ (2012), 4e + 4μ + 2e2μ + ℓℓττ
+        ref: inspire:1298807
+    observables:
+      - id: obs:zz/lhc-8/sigma-tot
+        name: Total σ(pp → ZZ)
+        kind: total
+        variable: σ_tot, both Z bosons in 60 < mZ < 120 GeV (extrapolated from the leptonic final states)
+        results:
+          - measurement: meas:zz/lhc-8/cms-2014-tot
+            total:
+              value_pct: 10.9
+              provenance:
+                uid: 45ca7d7b
+                ref: inspire:1298807
+                locator: 'Table 2 and Abstract: σ(pp → ZZ) = 7.7 ± 0.5 (stat) +0.5 −0.4 (syst) ± 0.4 (theo) ± 0.2 (lumi) pb, larger sides added in quadrature (0.84 pb)'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 6.5
+                    - 6.5
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 5211c3fd
+                  ref: inspire:1298807
+                  locator: 'Table 2, Combined: ± 0.5 (stat) of 7.7 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: Experimental systematics excluding luminosity (combined)
+                size:
+                  range:
+                    - 5.2
+                    - 6.5
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: f8230b8f
+                  ref: inspire:1298807
+                  locator: 'Table 2, Combined: +0.5 −0.4 (syst) of 7.7 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: acceptance_extrapolation
+                specific: Theory modelling (acceptance extrapolation)
+                size:
+                  range:
+                    - 5.2
+                    - 5.2
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: defbfa9f
+                  ref: inspire:1298807
+                  locator: 'Table 2, Combined: ± 0.4 (theo) of 7.7 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.6
+                    - 2.6
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: b364c8ad
+                  ref: inspire:1298807
+                  locator: 'Table 2, Combined: ± 0.2 (lumi) of 7.7 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+        predictions:
+          - label: NLO QCD qq̄ + LO gg → ZZ (MCFM 6.0, MSTW2008)
+            accuracy:
+              qcd: NLO
+              approximations:
+                - qq̄ → ZZ at NLO, gg → ZZ (about 6% of the total) at LO
+                - μR = μF = 91.2 GeV
+                - no EW corrections
+            codes:
+              - MCFM
+            total:
+              value_pct: 7.8
+              provenance:
+                uid: 996990c7
+                ref: inspire:1298807
+                locator: 'Sec. on the cross section measurement, text before Table 2: theoretical value 7.7 ± 0.6 pb calculated with MCFM 6.0'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:zz/lhc-8/cms-2014-tot
+            refs:
+              - inspire:1298807
+              - arXiv:1105.0020
+            provenance:
+              uid: b46f0456
+              ref: inspire:1298807
+              locator: Sec. on the cross section measurement (MCFM 6.0, MSTW2008 PDFs)
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+    last_reviewed: "2026-10-17"
+  - id: chan:zz/lhc-7
+    collider: col:lhc-7
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:zz/lhc-7/sigma-tot
+      region: Total pp → ZZ, 7 TeV, both Z bosons in the experiment's mass window (ATLAS 66–116 GeV, CMS 60–120 GeV)
+    measurements:
+      - id: meas:zz/lhc-7/atlas-2012-tot
+        experiment: ATLAS
+        dataset: 7 TeV, 4.6 fb⁻¹ (2011), ZZ → 4ℓ and ZZ → ℓℓνν
+        ref: inspire:1203852
+      - id: meas:zz/lhc-7/cms-2013-tot
+        experiment: CMS
+        dataset: 7 TeV, 5.0 fb⁻¹ (2011), ZZ → 2ℓ2ℓ′ (ℓ′ = e, μ, τ)
+        ref: inspire:1203454
+    observables:
+      - id: obs:zz/lhc-7/sigma-tot
+        name: Total σ(pp → ZZ)
+        kind: total
+        variable: σ_tot, both Z bosons in the experiment's mass window (extrapolated from the leptonic final states)
+        results:
+          - measurement: meas:zz/lhc-7/atlas-2012-tot
+            total:
+              value_pct: 12.8
+              provenance:
+                uid: b363bedc
+                ref: inspire:1203852
+                locator: 'Abstract and results section: σ_ZZ^tot = 6.7 ± 0.7 (stat.) +0.4 −0.3 (syst.) ± 0.3 (lumi.) pb, larger sides added in quadrature (0.86 pb)'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 10.4
+                    - 10.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 11f3ca2e
+                  ref: inspire:1203852
+                  locator: 'Abstract: ± 0.7 (stat.) of 6.7 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: Experimental systematics excluding luminosity (combined)
+                size:
+                  range:
+                    - 4.5
+                    - 6.0
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 28f69903
+                  ref: inspire:1203852
+                  locator: 'Abstract: +0.4 −0.3 (syst.) of 6.7 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 4.5
+                    - 4.5
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 41de981b
+                  ref: inspire:1203852
+                  locator: 'Abstract: ± 0.3 (lumi.) of 6.7 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+          - measurement: meas:zz/lhc-7/cms-2013-tot
+            total:
+              value_pct: 15.4
+              provenance:
+                uid: e405d643
+                ref: inspire:1203454
+                locator: 'Abstract: σ(pp → ZZ) = 6.24 +0.86 −0.80 (stat.) +0.41 −0.32 (syst.) ± 0.14 (lumi.) pb, larger sides added in quadrature (0.96 pb)'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 12.8
+                    - 13.8
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 7d41bdb3
+                  ref: inspire:1203454
+                  locator: 'Abstract: +0.86 −0.80 (stat.) of 6.24 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: Experimental and theory systematics excluding luminosity (combined)
+                size:
+                  range:
+                    - 5.1
+                    - 6.6
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 53ffe07e
+                  ref: inspire:1203454
+                  locator: 'Abstract: +0.41 −0.32 (syst.) of 6.24 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.2
+                    - 2.2
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 5daceaae
+                  ref: inspire:1203454
+                  locator: 'Abstract: ± 0.14 (lumi.) of 6.24 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+        predictions:
+          - label: NLO QCD (MCFM, CT10), ATLAS
+            accuracy:
+              qcd: NLO
+              approximations:
+                - qq̄ and gg → ZZ (5.8% of the total) as implemented in MCFM
+                - μR = μF = half the diboson mass
+                - no EW corrections
+            codes:
+              - MCFM
+            total:
+              value_pct: 3.7
+              provenance:
+                uid: 84a80034
+                ref: inspire:1203852
+                locator: 'Abstract and Introduction: NLO σ = 5.89 +0.22 −0.18 pb (MCFM, CT10, both Z bosons in 66–116 GeV, natural Z width); scale and CT10 PDF variations; larger side'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:zz/lhc-7/atlas-2012-tot
+            refs:
+              - inspire:1203852
+              - arXiv:1105.0020
+            provenance:
+              uid: 5e9856ac
+              ref: inspire:1203852
+              locator: Introduction (MCFM with CT10)
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+          - label: NLO QCD qq̄ + LO gg → ZZ (MCFM, MSTW08), CMS
+            accuracy:
+              qcd: NLO
+              approximations:
+                - qq̄ → ZZ at NLO, gg → ZZ at LO
+                - both Z bosons in 60 < mZ < 120 GeV
+                - no EW corrections
+            codes:
+              - MCFM
+            total:
+              value_pct: 6.3
+              provenance:
+                uid: 8651ddde
+                ref: inspire:1203454
+                locator: 'Cross section measurement section, after the result: theoretical value 6.3 ± 0.4 pb calculated with MCFM at NLO for qq̄ → ZZ and LO for gg → ZZ with MSTW08 PDFs'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:zz/lhc-7/cms-2013-tot
+            refs:
+              - inspire:1203454
+              - arXiv:1105.0020
+            provenance:
+              uid: dace128c
+              ref: inspire:1203454
+              locator: Cross section measurement section (MCFM, MSTW08)
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+    last_reviewed: "2026-10-17"
+  - id: chan:zz/lhc-13.6
+    collider: col:lhc-13.6
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:zz/lhc-13.6/sigma-fid
+      region: 'Fiducial ZZ → 4ℓ on-shell region (ATLAS: 66 < mℓℓ < 116 GeV for both pairs, m4ℓ > 180 GeV, pT(ℓ) > 27/10 GeV, |η(μ)| < 2.5, |η(e)| < 2.47)'
+    measurements:
+      - id: meas:zz/lhc-13.6/atlas-2023-4l
+        experiment: ATLAS
+        dataset: 13.6 TeV, 29 fb⁻¹ (2022), 4e + 4μ + 2e2μ
+        ref: inspire:2723369
+    observables:
+      - id: obs:zz/lhc-13.6/sigma-fid
+        name: Fiducial σ(pp → ZZ → 4ℓ), on-shell region
+        kind: fiducial
+        variable: σ_fid, ZZ → 4ℓ (ℓ = e, μ), dressed electrons and bare muons
+        results:
+          - measurement: meas:zz/lhc-13.6/atlas-2023-4l
+            total:
+              value_pct: 6.3
+              provenance:
+                uid: 48800f76
+                ref: inspire:2723369
+                locator: "Sec. 7.1 and Table 3 ('Total' row, 6.3%): σ_fid = 36.7 ± 1.6 (stat) ± 1.5 (syst) ± 0.8 (lumi) fb"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 4.2
+                    - 4.2
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 16a26a00
+                  ref: inspire:2723369
+                  locator: Table 3, row 'Data statistical uncertainty'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.2
+                    - 2.2
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 2d4f52fd
+                  ref: inspire:2723369
+                  locator: Table 3, row 'Luminosity'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: efficiency
+                specific: Lepton efficiency (electron identification, muon isolation)
+                size:
+                  range:
+                    - 3.7
+                    - 3.7
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: '24055864'
+                  ref: inspire:2723369
+                  locator: Table 3, row 'Lepton efficiency'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: background
+                specific: Reducible and irreducible backgrounds
+                size:
+                  range:
+                    - 1.6
+                    - 1.6
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: b468898a
+                  ref: inspire:2723369
+                  locator: Table 3, row 'Background'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: unfolding_model
+                specific: Theory (PDF, QCD scale, parton shower) in the correction factor
+                size:
+                  range:
+                    - 1.0
+                    - 1.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 9917299a
+                  ref: inspire:2723369
+                  locator: Table 3, row 'Theoretical uncertainty'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD × NLO EW qq̄ + NLO gg→ZZ (MATRIX) + EW ZZjj (Powheg-Box)
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations:
+                - qq̄ at NNLO QCD with NLO EW, gg → ZZ at NLO QCD
+                - EW qq → ZZ + 2 jets added from Powheg-Box v2
+                - NNPDF3.0 PDF set; the PDF uncertainty is taken from Sherpa because MATRIX does not provide PDF variations
+                - quoted uncertainty combines QCD scale variation and PDF
+            codes:
+              - MATRIX
+              - Powheg-Box
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            total:
+              value_pct: 1.9
+              provenance:
+                uid: 5ba1f4a0
+                ref: inspire:2723369
+                locator: "Table 4, column 'MATRIX + EW ZZjj', Fiducial row: 36.5 ± 0.7 fb"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:zz/lhc-13.6/atlas-2023-4l
+            refs:
+              - inspire:2723369
+              - inspire:1384273
+              - inspire:1394395
+              - inspire:1498315
+            provenance:
+              uid: 97d6ca00
+              ref: inspire:2723369
+              locator: Sec. 7.1 (MATRIX fixed-order calculation) and Table 4
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+          - label: Sherpa 2.2.12 NLO+PS (qq̄) + LO gg + Powheg-Box EW ZZjj
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations:
+                - qq̄ → ZZ with up to one parton at NLO and two at LO, merged ME+PS@NLO
+                - gg → ZZ at LO with a K-factor
+                - uncertainty dominated by the gg → ZZ K-factor QCD uncertainty
+            codes:
+              - Sherpa
+              - Powheg-Box
+            total:
+              value_pct: 11.7
+              provenance:
+                uid: '99364958'
+                ref: inspire:2723369
+                locator: "Table 4, column 'MC prediction', Fiducial row: 36.8 +4.3 −3.5 fb; larger side"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:zz/lhc-13.6/atlas-2023-4l
+            refs:
+              - inspire:2723369
+            provenance:
+              uid: 20140c09
+              ref: inspire:2723369
+              locator: Sec. 3 (MC samples) and Table 4
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+      - id: obs:zz/lhc-13.6/sigma-tot
+        name: Total σ(pp → ZZ)
+        kind: total
+        variable: σ_tot, both Z bosons in 66 < mℓℓ < 116 GeV, extrapolated from ZZ → 4ℓ
+        results:
+          - measurement: meas:zz/lhc-13.6/atlas-2023-4l
+            total:
+              value_pct: 6.5
+              provenance:
+                uid: fd50bca1
+                ref: inspire:2723369
+                locator: 'Sec. 7.1: σ_total = 16.8 ± 0.7 (stat) ± 0.7 (syst) ± 0.4 (lumi) pb, relative uncertainty 6.5%'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size: {range: [4.2, 4.2], unit: "%", asymmetric: false}
+                provenance: {uid: 65674a0d, ref: "inspire:2723369", locator: "Sec. 7.1: ± 0.7 (stat) of 16.8 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: syst_combined
+                specific: Experimental systematics excluding luminosity (combined)
+                size: {range: [4.2, 4.2], unit: "%", asymmetric: false}
+                provenance: {uid: d8bcdcef, ref: "inspire:2723369", locator: "Sec. 7.1: ± 0.7 (syst) of 16.8 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: lumi
+                specific: Integrated luminosity
+                size: {range: [2.4, 2.4], unit: "%", asymmetric: false}
+                provenance: {uid: de8efb1e, ref: "inspire:2723369", locator: "Sec. 7.1: ± 0.4 (lumi) of 16.8 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: NNLO QCD × NLO EW qq̄ + NLO gg→ZZ (MATRIX) + EW ZZjj (Powheg-Box)
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations:
+                - qq̄ at NNLO QCD with NLO EW, gg → ZZ at NLO QCD
+                - EW qq → ZZ + 2 jets added from Powheg-Box v2
+                - PDF uncertainty from Sherpa applied to MATRIX
+            codes:
+              - MATRIX
+              - Powheg-Box
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            total:
+              value_pct: 3.0
+              provenance:
+                uid: 6f1505ae
+                ref: inspire:2723369
+                locator: "Table 4, column 'MATRIX + EW ZZjj', Total row: 16.7 ± 0.5 pb"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:zz/lhc-13.6/atlas-2023-4l
+            refs:
+              - inspire:2723369
+              - inspire:1384273
+              - inspire:1394395
+              - inspire:1498315
+            provenance:
+              uid: 5c4658f2
+              ref: inspire:2723369
+              locator: Sec. 7.1 (MATRIX fixed-order calculation) and Table 4
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+    last_reviewed: "2026-10-17"

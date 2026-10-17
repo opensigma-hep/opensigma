@@ -4,11 +4,11 @@ family: "fam:vector-bosons"
 sector: SM
 description: "Production of a charged lepton and a neutrino through an s-channel W boson, pp/pp̄ → W± → ℓ±ν + X (ℓ = e, μ). Largest single-boson rate at hadron colliders: benchmark for quark-flavour and charge-asymmetry PDF constraints, and the process behind the W-mass and W-width measurements. Known at N3LO QCD."
 watch:
-  recids: [2775442, 2816048, 1808912, 2691867, 2086427, 1818463, 1848458]
+  recids: []
   queries:
-    - 't "W boson" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t "cross section" or t "transverse momentum" or t "charge asymmetry")'
-    - 't "W" and t "Drell-Yan" and (t N3LO or t "third order" or t N3LL or t N4LL)'
-    - 't "W" and t "mixed" and (t "QCD-electroweak" or t "QCD-EW" or t "strong-electroweak")'
+    - (t "W boson" or t "W-boson" or t "W bosons" or t "W and Z" or t "W±") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t "cross section" or t "cross sections" or t "transverse momentum" or t "charge asymmetry" or t "differential") and not t Higgs and not t top and not t "mass" and not t jets and not t "same-sign" and not t "pair" and not t WWZ and not t charm and not t search and tc article
+    - (t "W" and t "Drell-Yan" and (t N3LO or t "third order" or t N3LL or t N4LL)) or (t "W" and t "mixed" and (t "QCD-electroweak" or t "QCD-EW" or t "strong-electroweak") and not t "pair")
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -76,7 +76,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:dy-cc/lhc-13/sigma-fid-wplus", region: "W+ → ℓ+ν fiducial (experiment-specific cuts: ATLAS pT(ℓ) > 25 GeV, mT > 50 GeV; CMS pT(ℓ) > 25 GeV, mT > 40 GeV)"}
     measurements:
       - id: "meas:dy-cc/lhc-13/atlas-2024-lowpu"
@@ -88,6 +88,15 @@ channels:
         dataset: "13 TeV, 206 pb⁻¹ (2017, low pileup)"
         ref: "inspire:2816048"
         hepdata: "hepdata:ins2816048/Figure 4"
+      - id: meas:dy-cc/lhc-13/lhcb-2026-w
+        experiment: LHCb
+        dataset: 13 TeV, 5.1 fb⁻¹, μ, 25 < pT(μ) < 55 GeV, 2.0 < η(μ) < 4.5
+        ref: inspire:3144939
+      - id: meas:dy-cc/lhc-13/atlas-2026-wpt
+        experiment: ATLAS
+        dataset: 13 TeV, 338 pb⁻¹ (low-pileup runs, 2017–2018), e + μ, full lepton phase space
+        ref: inspire:2970689
+        hepdata: hepdata:ins2970689/Measured differential cross-section for $W^+$
     observables:
       - id: "obs:dy-cc/lhc-13/sigma-fid-wplus"
         name: "Fiducial σ × B(W⁺ → ℓ⁺ν)"
@@ -105,7 +114,7 @@ channels:
                 specific: "Integrated luminosity"
                 size: {range: [0.96, 0.96], unit: "%", asymmetric: false}
                 provenance: {uid: e6dd9167, ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν 13 TeV: ± 44 (lumi.) of 4571 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [0.46, 0.46], unit: "%", asymmetric: false}
                 provenance: {uid: 3a879e3c, ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν 13 TeV: ± 21 (syst.) of 4571 pb", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -132,6 +141,62 @@ channels:
                 specific: "EW + tt̄ cross section"
                 size: {range: [0.10, 0.10], unit: "%", asymmetric: false}
                 provenance: {uid: cb7d7371, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', W+→ℓ+ν column", source: agent, status: cross-checked, date: "2026-10-16"}
+          - measurement: meas:dy-cc/lhc-13/lhcb-2026-w
+            total:
+              value_pct: 2.1
+              provenance:
+                uid: cadf3d4f
+                ref: inspire:3144939
+                locator: "Table 3, column ΔσW+→μ+ν, row 'Total' (2.11%); Abstract: σ(W+ → μ+ν) = 1754.2 ± 1.5 (stat) ± 11.9 (syst) ± 35.1 (lumi) pb"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Statistical
+                size:
+                  range:
+                    - 0.08
+                    - 0.08
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: cbbd2cc5
+                  ref: inspire:3144939
+                  locator: Table 3, column ΔσW+→μ+ν, row 'Statistical'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: Total systematic excluding luminosity
+                size:
+                  range:
+                    - 0.68
+                    - 0.68
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 1a16429f
+                  ref: inspire:3144939
+                  locator: Table 3, column ΔσW+→μ+ν, row 'Total Systematic (excl. lumi.)'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Luminosity
+                size:
+                  range:
+                    - 2.0
+                    - 2.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 3c9d82d7
+                  ref: inspire:3144939
+                  locator: Table 3, column ΔσW+→μ+ν, row 'Luminosity'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
         predictions:
           - label: "NNLO+NNLL QCD (DYTurbo), ATLAS cuts, NNPDF3.1"
             accuracy:
@@ -165,3 +230,615 @@ channels:
             compared_to: ["meas:dy-cc/lhc-13/cms-2024-lowpu"]
             refs: ["inspire:2816048"]
             provenance: {uid: '39941647', ref: "inspire:2816048", locator: "Theory-prediction section and Table 2 (DYTurbo v1.3.2, NNLO+NNLL, NNPDF4.0)", source: agent, status: cross-checked, date: "2026-10-16"}
+      - id: obs:dy-cc/lhc-13/ptw-wplus
+        name: dσ/dpT(W⁺), full phase space
+        kind: differential
+        variable: pT(W⁺ → ℓ⁺ν)
+        results:
+          - measurement: meas:dy-cc/lhc-13/atlas-2026-wpt
+            total:
+              value_pct: 3.9
+              provenance:
+                uid: ad74af3b
+                ref: hepdata:ins2970689/Measured differential cross-section for $W^+$
+                locator: 'Measured differential cross-section for $W^+$, quadrature sum of all errors (bin 2); bin 2 is 8 ≤ pT(W) < 17 GeV: 320.06 pb/GeV'
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 1.1
+                    - 6.0
+                  asymmetric: false
+                full_table: hepdata:ins2970689/Measured differential cross-section for $W^+$
+                provenance:
+                  uid: f83bb830
+                  ref: hepdata:ins2970689/Measured differential cross-section for $W^+$
+                  locator: Measured differential cross-section for $W^+$, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 1.3
+                    - 7.7
+                  asymmetric: true
+                full_table: hepdata:ins2970689/Measured differential cross-section for $W^+$
+                provenance:
+                  uid: a5ef467f
+                  ref: hepdata:ins2970689/Measured differential cross-section for $W^+$
+                  locator: Measured differential cross-section for $W^+$, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: Fixed order O(αs²) (DYTurbo, CT18NNLO)
+            accuracy:
+              qcd: NLO
+              approximations:
+                - 'fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation'
+                - scale (μR, μF by factors of two, opposite variations excluded) and CT18NNLO PDF uncertainties shown in the paper figures only
+            codes:
+              - DYTurbo
+            compared_to:
+              - meas:dy-cc/lhc-13/atlas-2026-wpt
+            refs:
+              - inspire:2970689
+              - inspire:815316
+            provenance:
+              uid: '561e9309'
+              ref: inspire:2970689
+              locator: 'Sec. 6 (Results), paragraph after Fig. 12: fixed-order O(αs²) DYTurbo predictions with CT18NNLO; scale and PDF uncertainties shown in the figures only'
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+  - id: chan:dy-cc/lhc-13.6
+    collider: col:lhc-13.6
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:dy-cc/lhc-13.6/sigma-fid-wplus
+      region: 'W+ → ℓ+ν fiducial (experiment-specific cuts: ATLAS pT(ℓ) > 27 GeV, |η(ℓ)| < 2.5, ETmiss > 25 GeV, mT > 50 GeV; CMS muon channel, pT(μ) > 25 GeV, |η(μ)| < 2.4)'
+    measurements:
+      - id: meas:dy-cc/lhc-13.6/atlas-2024-wz
+        experiment: ATLAS
+        dataset: 13.6 TeV, 29 fb⁻¹ (2022), e + μ
+        ref: inspire:2770237
+      - id: meas:dy-cc/lhc-13.6/cms-2025-wz
+        experiment: CMS
+        dataset: 13.6 TeV, 5.01 fb⁻¹ (2022), μ
+        ref: inspire:2900021
+    observables:
+      - id: obs:dy-cc/lhc-13.6/sigma-fid-wplus
+        name: Fiducial σ × B(W⁺ → ℓ⁺ν)
+        kind: fiducial
+        variable: σ_fid (experiment-specific lepton and mT cuts)
+        results:
+          - measurement: meas:dy-cc/lhc-13.6/atlas-2024-wz
+            total:
+              value_pct: 3.5
+              provenance:
+                uid: 1d926ff2
+                ref: inspire:2770237
+                locator: 'Abstract and Table 4, W+ → ℓ+ν: σ_fid = 4250 ± 150 pb (total uncertainty, statistical uncertainty negligible, including 2.4% luminosity); Table 3 total systematic impact 3.5%'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 0.01
+                    - 0.01
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 16d153f2
+                  ref: inspire:2770237
+                  locator: Table 3 (second block), column σ(W+ → ℓ+ν), row 'Statistical impact'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.4
+                    - 2.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 425e7d41
+                  ref: inspire:2770237
+                  locator: Table 3 (second block), column σ(W+ → ℓ+ν), row 'Luminosity'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: background
+                specific: Multi-jet background
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 572a827f
+                  ref: inspire:2770237
+                  locator: Table 3 (second block), column σ(W+ → ℓ+ν), row 'Multi-jet'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: Jet energy scale
+                size:
+                  range:
+                    - 1.3
+                    - 1.3
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: a3b3b99c
+                  ref: inspire:2770237
+                  locator: Table 3 (second block), column σ(W+ → ℓ+ν), row 'Jet energy scale'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+          - measurement: meas:dy-cc/lhc-13.6/cms-2025-wz
+            total:
+              value_pct: 1.6
+              provenance:
+                uid: f632f0e4
+                ref: inspire:2900021
+                locator: 'Table 7, W+: σ_fid B = 5.428 ± 0.037 (syst) ± 0.076 (lumi) nb (statistical uncertainty negligible), added in quadrature (0.085 nb)'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: syst_combined
+                specific: Experimental systematics excluding luminosity (combined)
+                size:
+                  range:
+                    - 0.7
+                    - 0.7
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 27bcc479
+                  ref: inspire:2900021
+                  locator: 'Table 7, W+: ± 0.037 (syst) of 5.428 nb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 1.4
+                    - 1.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 9c4b65b9
+                  ref: inspire:2900021
+                  locator: 'Table 7, W+: ± 0.076 (lumi) of 5.428 nb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO+NNLL QCD (DYTurbo 1.3.2, NNPDF3.1), CMS cuts
+            accuracy:
+              qcd: NNLO
+              resummation:
+                - accuracy: NNLL
+                  variable: qT
+              approximations:
+                - no EW corrections
+                - scales set to the lepton-pair transverse mass, varied by factors of two (opposite variations omitted)
+            codes:
+              - DYTurbo
+            uses_amplitudes:
+              - amp:2L/qqbar-V
+            total:
+              value_pct: 1.1
+              provenance:
+                uid: d230e814
+                ref: inspire:2900021
+                locator: 'Table 1, W+: σ_fid B = 5.490 ± 0.040 (PDF) +0.025 −0.048 (scale) ± 0.007 (int) nb; PDF, larger scale side and integration error added in quadrature (0.063 nb)'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: PDF
+                specific: NNPDF3.1 PDF uncertainty
+                pdf_set: NNPDF3.1
+                size:
+                  range:
+                    - 0.73
+                    - 0.73
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 8e915fd0
+                  ref: inspire:2900021
+                  locator: 'Table 1, W+ fiducial: ± 0.040 (PDF) of 5.490 nb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: MHOU
+                specific: μR, μF variations
+                method: scales set to the dimuon mass and varied up and down by a factor of two, omitting opposite variations; maximum deviation taken
+                size:
+                  range:
+                    - 0.46
+                    - 0.87
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 3d09d533
+                  ref: inspire:2900021
+                  locator: 'Table 1, W+ fiducial: +0.025 −0.048 (scale) of 5.490 nb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: numerical
+                specific: DYTurbo integration uncertainty
+                size:
+                  range:
+                    - 0.13
+                    - 0.13
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 86471fa1
+                  ref: inspire:2900021
+                  locator: 'Table 1, W+ fiducial: ± 0.007 (int) of 5.490 nb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+            compared_to:
+              - meas:dy-cc/lhc-13.6/cms-2025-wz
+            refs:
+              - inspire:2900021
+              - inspire:815316
+            provenance:
+              uid: d3d337ac
+              ref: inspire:2900021
+              locator: Sec. 5 (DYTurbo 1.3.2 NNLO+NNLL predictions with NNPDF 3.1) and Table 1
+              source: agent
+              status: agent-draft
+              date: '2026-10-17'
+            headline: true
+    last_reviewed: "2026-10-17"
+  - id: chan:dy-cc/lhc-8
+    collider: col:lhc-8
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:dy-cc/lhc-8/sigma-fid-wplus
+      region: 'W+ → ℓ+ν fiducial (CMS: pT(ℓ) > 25 GeV, |η(μ)| < 2.1; LHCb: pT(μ) > 20 GeV, 2.0 < η(μ) < 4.5)'
+    measurements:
+      - id: meas:dy-cc/lhc-8/cms-2014-wz
+        experiment: CMS
+        dataset: 8 TeV, 18.2 pb⁻¹ (2012), e + μ
+        ref: inspire:1280200
+        hepdata: hepdata:ins1280200/Table 1
+      - id: meas:dy-cc/lhc-8/lhcb-2016-wz
+        experiment: LHCb
+        dataset: 8 TeV, 2.0 fb⁻¹, μ, 2.0 < η(μ) < 4.5
+        ref: inspire:1406555
+    observables:
+      - id: obs:dy-cc/lhc-8/sigma-fid-wplus
+        name: Fiducial σ × B(W⁺ → ℓ⁺ν)
+        kind: fiducial
+        variable: σ_fid (experiment-specific lepton cuts)
+        results:
+          - measurement: meas:dy-cc/lhc-8/cms-2014-wz
+            total:
+              value_pct: 2.8
+              provenance:
+                uid: c731efd6
+                ref: hepdata:ins1280200/Table 1
+                locator: Table 1, column 2, quadrature sum of all errors (bin 3); bin 3 of the fiducial column is the flavour-combined σ×B = 3.16 ± 0.01 (stat) ± 0.04 (sys) ± 0.08 (lumi) nb (pT(ℓ) > 25 GeV, |η(μ)| < 2.1)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.32
+                    - 0.56
+                  asymmetric: false
+                full_table: hepdata:ins1280200/Table 1
+                provenance:
+                  uid: 2528b498
+                  ref: hepdata:ins1280200/Table 1
+                  locator: Table 1, column 2, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 1.3
+                    - 3.1
+                  asymmetric: false
+                full_table: hepdata:ins1280200/Table 1
+                provenance:
+                  uid: 296fc483
+                  ref: hepdata:ins1280200/Table 1
+                  locator: Table 1, column 2, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 2.5
+                    - 2.6
+                  asymmetric: false
+                full_table: hepdata:ins1280200/Table 1
+                provenance:
+                  uid: bf1afbcb
+                  ref: hepdata:ins1280200/Table 1
+                  locator: Table 1, column 2, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: meas:dy-cc/lhc-8/lhcb-2016-wz
+            total:
+              value_pct: 1.67
+              provenance:
+                uid: e8417b1d
+                ref: inspire:1406555
+                locator: "Table 1, column σ(W+ → μ+ν), row 'Total' (1.67%); Sec. 5.1: σ(W+ → μ+ν) = 1093.6 ± 2.1 (stat) ± 7.2 (syst) ± 10.9 (beam) ± 12.7 (lumi) pb; pT(μ) > 20 GeV, 2.0 < η(μ) < 4.5"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Statistical
+                size:
+                  range:
+                    - 0.19
+                    - 0.19
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 3ba8ea52
+                  ref: inspire:1406555
+                  locator: Table 1, column σ(W+ → μ+ν), row 'Statistical'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: Systematic (purity, tracking, identification, trigger, GEC, selection, acceptance and FSR)
+                size:
+                  range:
+                    - 0.65
+                    - 0.65
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: dd5251ed
+                  ref: inspire:1406555
+                  locator: Table 1, column σ(W+ → μ+ν), row 'Systematic'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: beam
+                specific: Beam energy
+                size:
+                  range:
+                    - 1.0
+                    - 1.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 72daf7f7
+                  ref: inspire:1406555
+                  locator: Table 1, column σ(W+ → μ+ν), row 'Beam energy'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Luminosity
+                size:
+                  range:
+                    - 1.16
+                    - 1.16
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: '13641132'
+                  ref: inspire:1406555
+                  locator: Table 1, column σ(W+ → μ+ν), row 'Luminosity'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD (FEWZ, MSTW2008), CMS fiducial acceptance
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - uncertainty includes αs, heavy-quark masses and scale variations as listed in the paper
+            codes:
+              - FEWZ
+            uses_amplitudes:
+              - amp:2L/qqbar-V
+            total:
+              value_pct: 3.1
+              provenance:
+                uid: 3b79bfad
+                ref: inspire:1280200
+                locator: 'Table 2 (fiducial block), W+: NNLO σ×B = 3.18 ± 0.10 nb (68% CL); the total-phase-space prediction is 7.12 ± 0.20 nb (2.8%)'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:dy-cc/lhc-8/cms-2014-wz
+            refs:
+              - inspire:1280200
+              - inspire:877524
+              - inspire:1182519
+            provenance:
+              uid: d46d8a69
+              ref: inspire:1280200
+              locator: theory-prediction paragraph (FEWZ at NNLO with MSTW2008) and Table 2
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+    last_reviewed: "2026-10-17"
+  - id: chan:dy-cc/lhc-7
+    collider: col:lhc-7
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:dy-cc/lhc-7/sigma-fid-wplus
+      region: 'W+ → ℓ+ν fiducial (ATLAS common electron–muon region: pT(ℓ) > 25 GeV, |η(ℓ)| < 2.5, pT(ν) > 25 GeV, mT > 40 GeV)'
+    measurements:
+      - id: meas:dy-cc/lhc-7/atlas-2016-wz
+        experiment: ATLAS
+        dataset: 7 TeV, 4.6 fb⁻¹ (2011), e + μ
+        ref: inspire:1502620
+        hepdata: hepdata:ins1502620/Table 3
+    observables:
+      - id: obs:dy-cc/lhc-7/sigma-fid-wplus
+        name: Fiducial σ × B(W⁺ → ℓ⁺ν)
+        kind: fiducial
+        variable: σ_fid (common fiducial region)
+        results:
+          - measurement: meas:dy-cc/lhc-7/atlas-2016-wz
+            total:
+              value_pct: 1.9
+              provenance:
+                uid: 10c4bc66
+                ref: hepdata:ins1502620/Table 3
+                locator: 'Table 3, quadrature sum of all errors (bin 3); bin 3 is W+ → ℓ+ν combined: 2947 pb, stat ± 1, sys ± 15, lumi ± 53 pb'
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.02
+                    - 0.099
+                  asymmetric: false
+                full_table: hepdata:ins1502620/Table 3
+                provenance:
+                  uid: 69a6b4df
+                  ref: hepdata:ins1502620/Table 3
+                  locator: Table 3, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: syst
+                size:
+                  range:
+                    - 0.95
+                    - 0.95
+                  asymmetric: false
+                full_table: hepdata:ins1502620/Table 3
+                provenance:
+                  uid: 4a7940cb
+                  ref: hepdata:ins1502620/Table 3
+                  locator: Table 3, error 'syst'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: lumi
+                specific: lumi
+                size:
+                  range:
+                    - 1.8
+                    - 1.8
+                  asymmetric: false
+                full_table: hepdata:ins1502620/Table 3
+                provenance:
+                  uid: ff5729fd
+                  ref: hepdata:ins1502620/Table 3
+                  locator: Table 3, error 'lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 0.34
+                    - 1.1
+                  asymmetric: false
+                full_table: hepdata:ins1502620/Table 3
+                provenance:
+                  uid: 92ce4caa
+                  ref: hepdata:ins1502620/Table 3
+                  locator: Table 3, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD + NLO EW (DYNNLO 1.5, MMHT2014), ATLAS fiducial cuts
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+            codes:
+              - DYNNLO
+              - FEWZ
+            uses_amplitudes:
+              - amp:2L/qqbar-V
+              - amp:1L/qqbar-ll-ew
+            total:
+              value_pct: 1.7
+              provenance:
+                uid: 4eed95dd
+                ref: inspire:1502620
+                locator: 'Table 16, W+ → ℓ+ν, MMHT2014: 2882 +49 −42 pb (PDF uncertainty only, no scale uncertainty); larger side'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: PDF
+                specific: MMHT2014 eigenvector uncertainty
+                pdf_set: MMHT2014
+                size:
+                  range:
+                    - 1.5
+                    - 1.7
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 80fe1b1e
+                  ref: inspire:1502620
+                  locator: Table 16, MMHT2014 row, W+ column (+49 −42 of 2882 pb)
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+            compared_to:
+              - meas:dy-cc/lhc-7/atlas-2016-wz
+            refs:
+              - inspire:1502620
+              - inspire:815316
+              - inspire:1182519
+            provenance:
+              uid: 1bf1d5f6
+              ref: inspire:1502620
+              locator: Sec. 6.1.1 (DYNNLO 1.5 and FEWZ 3.1.b2 at O(αs²), Gμ scheme) and Table 16
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+    last_reviewed: "2026-10-17"

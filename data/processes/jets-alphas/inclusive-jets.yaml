@@ -4,11 +4,13 @@ family: "fam:jets-alphas"
 sector: SM
 description: "Single-inclusive jet production, pp/pp̄ → jet + X, counting every jet in the event, double-differential in jet pT and rapidity. Probes the high-x gluon PDF and αs at the highest scales; known at NNLO QCD (leading and full colour) with NLO weak corrections and non-perturbative corrections applied multiplicatively."
 watch:
-  recids: [1972986, 1634970, 1495841, 1681639, 2070536, 1747058]
+  recids: []
   queries:
-    - 't "inclusive jet" and (collaboration:ATLAS or collaboration:CMS) and t "13 TeV"'
-    - 't "single jet inclusive" or (t "inclusive jet" and (t NNLO or t resummation))'
+    - 't "inclusive jet" and (collaboration:ATLAS or collaboration:CMS) and t "TeV" and t "cross" and not t search'
+    - 't "single jet inclusive" or (t "inclusive jet" and (t NNLO or t resummation or t "next-to-next"))'
     - 't "strong coupling" and t "inclusive jet"'
+    - 't "jet" and t "13.6 TeV" and t "cross" and (collaboration:ATLAS or collaboration:CMS) and not t search and not t "tagging"'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -59,7 +61,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:inclusive-jets/lhc-13/d2sigma-dpt-dy", region: "anti-kT R = 0.4, |y| < 0.5, jet pT ≈ 400 GeV (CMS bin 395–468 GeV; ATLAS bin 376–408 GeV)"}
     measurements:
       - id: "meas:inclusive-jets/lhc-13/cms-2021"
@@ -81,32 +83,32 @@ channels:
           - measurement: "meas:inclusive-jets/lhc-13/cms-2021"
             total: {value_pct: 3.7, provenance: {uid: 8a8f1cbb, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, quadrature sum of all errors (bin 7)", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}}
             uncertainties:
-              - category: other
+              - category: syst_combined
                 specific: "all uncorr. unc. 1"
                 size: {"range": [0.33, 24.0], "asymmetric": false}
                 full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
                 provenance: {uid: '38899753', "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'all uncorr. unc. 1'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "RelativeFSR"
                 size: {"range": [0.083, 4.5], "asymmetric": false}
                 full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
                 provenance: {uid: 141c70a7, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'RelativeFSR'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "TimePtEta"
                 size: {"range": [1.4, 4.5], "asymmetric": false}
                 full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
                 provenance: {uid: f357fd6d, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'TimePtEta'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "FlavorQCD"
                 size: {"range": [0.088, 3.2], "asymmetric": false}
                 full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
                 provenance: {uid: ebdb6b38, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'FlavorQCD'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "AbsoluteMPFBias"
                 size: {"range": [1.1, 2.7], "asymmetric": false}
                 full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
                 provenance: {uid: f0310b6f, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'AbsoluteMPFBias'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "RelativeBal"
                 size: {"range": [0.75, 2.7], "asymmetric": false}
                 full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
@@ -180,12 +182,18 @@ channels:
                 full_table: "hepdata:ins1634970/Table 1"
                 provenance: {uid: 08a835ae, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_lumi'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
         predictions:
-          - label: "NNLO QCD full colour (NNLOJET), μ = pT, ⊗ NP"
+          - label: "NNLO QCD full colour (NNLOJET), μ = ĤT (scalar sum of parton pT)"
             accuracy:
               qcd: NNLO
-              approximations: ["full colour at NNLO", "non-perturbative corrections applied (calculation compared with CMS 13 TeV, inspire:1459051; not a measurement in this file)"]
+              approximations: ["full colour at NNLO", "compared with CMS 13 TeV (inspire:1459051; not a measurement in this file)"]
             codes: ["NNLOJET"]
             uses_amplitudes: ["amp:2L/2to2-partons", "amp:1L/2to3-partons", "amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation (scale only; PDF and αs not quoted)"
+                method: "seven-point μR, μF variation around μ = ĤT"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: 908f6ee0, ref: "inspire:2070536", locator: "Sec. 3.4 ('very small scale uncertainty (only about 1% at NNLO) at R = 0.4'): seven-point μR, μF variation around μ = ĤT; scale uncertainty only (PDF and αs not included), approximate and quoted for R = 0.4 in general, not for the headline bin", source: agent, status: cross-checked, date: "2026-10-17"}
             refs: ["inspire:2070536", "inspire:1747058"]
             provenance: {uid: c5dcb595, ref: "inspire:2070536", locator: "Abstract and Sec. 3 (single jet inclusive doubly differential in pT and |y| at NNLO full colour, compared with CMS 13 TeV [1605.04436])", source: agent, status: agent-draft, date: "2026-10-16"}
             headline: true
@@ -207,6 +215,15 @@ channels:
             compared_to: ["meas:inclusive-jets/lhc-13/cms-2021"]
             refs: ["inspire:1649956", "inspire:1972986"]
             provenance: {uid: 58168b4d, ref: "inspire:1972986", locator: "Sec. 4.1, Eq. (3) (NLO+NLL k-factor from the NLL-Jet calculation of Liu, Moch, Ringer)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NNLO QCD + small-R NNLL resummation (Stripper), μ = pT, NNPDF3.1 NNLO"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "small jet radius (ln R)"}]
+              approximations: ["small-R resummation matched to NNLO; threshold resummation not included", "scale uncertainty from 15-point (μR, μF, μJ) variation by factors of 2; calculated for R = 0.1–1.2 in the CMS R-dependence phase space (84 GeV < pT < 1588 GeV, |y| < 2)"]
+            codes: ["Stripper"]
+            uses_amplitudes: ["amp:2L/2to2-partons", "amp:1L/2to3-partons", "amp:1L/2to2-partons"]
+            refs: ["inspire:2905639", "inspire:3149757"]
+            provenance: {uid: e0cf0fbc, ref: "inspire:2905639", locator: "Abstract and Sec. 3 (first NNLL small-R resummation matched to NNLO via the Stripper fragmentation formalism; μR = μF = μJ = pT; NNPDF3.1 NNLO; 13 TeV LHC); Conclusions (threshold resummation not yet included). Follow-up: inspire:3149757 Secs. 2–3 (same NNLO+NNLL setup, scale choices pT and ĤT)", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "NLO QCD (NLOJET++/APPLGRID) ⊗ NP ⊗ EW, CT14 NLO"
             accuracy:
               qcd: NLO
@@ -232,7 +249,7 @@ channels:
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:inclusive-jets/tevatron-1960/d2sigma-dpt-dy", region: "midpoint cone R = 0.7, central rapidity, jet pT ≈ 200–260 GeV (D0 |y| < 0.4, 200–220 GeV; CDF |y| < 0.1, 224–259 GeV)"}
     measurements:
       - id: "meas:inclusive-jets/tevatron-1960/d0-2008"
@@ -259,7 +276,7 @@ channels:
                 size: {"range": [0.28, 41.0], "asymmetric": false}
                 full_table: "hepdata:ins779574/Table 1"
                 provenance: {uid: c6b8f98c, "ref": "hepdata:ins779574/Table 1", "locator": "Table 1, error 'stat'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {"range": [9.2, 23.0], "asymmetric": true}
                 full_table: "hepdata:ins779574/Table 1"
@@ -272,7 +289,7 @@ channels:
                 size: {"range": [1.3, 45.0], "asymmetric": false}
                 full_table: "hepdata:ins790693/Table 1"
                 provenance: {uid: ed90b95b, "ref": "hepdata:ins790693/Table 1", "locator": "Table 1, error 'stat'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {"range": [9.1, 43.0], "asymmetric": true}
                 full_table: "hepdata:ins790693/Table 1"
@@ -284,7 +301,547 @@ channels:
               approximations: ["parton-to-hadron (non-perturbative) corrections applied"]
             codes: ["NLOJET++", "fastNLO"]
             uses_amplitudes: ["amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation (scale only; PDF and αs not quoted)"
+                method: "μR, μF varied between pT/2 and 2pT"
+                size: {range: [10.0, 10.0], unit: "%", asymmetric: false}
+                provenance: {uid: 1bcbeb99, ref: "inspire:779574", locator: "Results text before Tables ('theoretical uncertainty, determined by changing μR and μF between pT/2 and 2pT, is of the order of 10% in all bins'; later text: scale uncertainty typically 10–15%): CTEQ6.5M NLO; scale uncertainty only (PDF uncertainty not included), approximate", source: agent, status: agent-draft, date: "2026-10-17"}
             compared_to: ["meas:inclusive-jets/tevatron-1960/d0-2008", "meas:inclusive-jets/tevatron-1960/cdf-2008"]
             refs: ["inspire:779574", "inspire:790693"]
             provenance: {uid: 49a33151, ref: "inspire:779574", locator: "Results text and Fig. 1 (NLO pQCD from fastNLO based on NLOJET++, CTEQ6.5M, corrected for non-perturbative effects); CDF inspire:790693 results text, Fig. 16 (fastNLO, CTEQ6.1M, corrected to hadron level)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
+  - id: "chan:inclusive-jets/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:inclusive-jets/lhc-8/d2sigma-dpt-dy", region: "|y| < 0.5, jet pT ≈ 400 GeV (ATLAS anti-kt R = 0.4, bin 376–408 GeV; CMS anti-kT R = 0.7, bin 395–430 GeV)"}
+    measurements:
+      - id: "meas:inclusive-jets/lhc-8/atlas-2017"
+        experiment: "ATLAS"
+        dataset: "8 TeV, 20.2 fb⁻¹ (2012), anti-kt R = 0.4 (R = 0.6 also published)"
+        ref: "inspire:1604271"
+        hepdata: "hepdata:ins1604271/Table 7"
+      - id: "meas:inclusive-jets/lhc-8/cms-2016"
+        experiment: "CMS"
+        dataset: "8 TeV, 19.7 fb⁻¹ (2012), anti-kT R = 0.7"
+        ref: "inspire:1487277"
+        hepdata: "hepdata:ins1487277/Table 1"
+    observables:
+      - id: "obs:inclusive-jets/lhc-8/d2sigma-dpt-dy"
+        name: "Inclusive jet d²σ/dpT d|y| (anti-kt R = 0.4 for ATLAS, anti-kT R = 0.7 for CMS)"
+        kind: differential
+        variable: "jet pT, |y|"
+        results:
+          - measurement: meas:inclusive-jets/lhc-8/atlas-2017
+            total:
+              value_pct: 4.7
+              provenance:
+                uid: 7bc59e9d
+                ref: hepdata:ins1604271/Table 7
+                locator: Table 7, quadrature sum of all errors (bin 15)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.24
+                    - 40.0
+                  asymmetric: false
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 038d3d5e
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_Flavour_Response
+                size:
+                  range:
+                    - 0.94
+                    - 4.5
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 1547d462
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_Flavour_Response'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_LArESZee
+                size:
+                  range:
+                    - 1.3
+                    - 4.8
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: baff588a
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_LArESZee'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_LArESmaterial
+                size:
+                  range:
+                    - 1.2
+                    - 6.7
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 6d44d33d
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_LArESmaterial'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_MJB_Asym
+                size:
+                  range:
+                    - 0.00015
+                    - 3.3
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 6079c816
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_MJB_Asym'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_MJB_Fragmentation
+                size:
+                  range:
+                    - 0.00023
+                    - 4.2
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 973be178
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_MJB_Fragmentation'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_MJB_Stat10
+                size:
+                  range:
+                    - 0.00037
+                    - 12.0
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 3432f58b
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_MJB_Stat10'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_SingleParticle_HighPt
+                size:
+                  range:
+                    - 0.00032
+                    - 47.0
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 6af04acf
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_SingleParticle_HighPt'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: syst_JES_Zjet_MC
+                size:
+                  range:
+                    - 0.15
+                    - 3.2
+                  asymmetric: true
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: f6e4f691
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_JES_Zjet_MC'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: lumi
+                specific: syst_lumi
+                size:
+                  range:
+                    - 1.9
+                    - 1.9
+                  asymmetric: false
+                full_table: hepdata:ins1604271/Table 7
+                provenance:
+                  uid: 0338212f
+                  ref: hepdata:ins1604271/Table 7
+                  locator: Table 7, error 'syst_lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: meas:inclusive-jets/lhc-8/cms-2016
+            total:
+              value_pct: 3.8
+              provenance:
+                uid: 2149c251
+                ref: hepdata:ins1487277/Table 1
+                locator: Table 1, quadrature sum of all errors (bin 24)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.13
+                    - 47.0
+                  asymmetric: false
+                full_table: hepdata:ins1487277/Table 1
+                provenance:
+                  uid: 1772e9ec
+                  ref: hepdata:ins1487277/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 3.6
+                    - 14.0
+                  asymmetric: true
+                full_table: hepdata:ins1487277/Table 1
+                provenance:
+                  uid: e7b1e2cf
+                  ref: hepdata:ins1487277/Table 1
+                  locator: Table 1, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: "NLO QCD (NLOJet++/APPLGRID), CT14 NLO, μ = pT^jet,max, ⊗ NP ⊗ NLO EW"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["NP corrections and EW corrections (tree-level O(αsα, α²) and weak loops O(αs²α), no photon or W/Z radiation) applied multiplicatively"]
+            codes: ["NLOJET++", "APPLGRID"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation (plus difference to the alternative scale pT^jet)"
+                method: "μR, μF varied by factors 1/2 and 2 excluding opposite variations; envelope"
+                size: {range: [5, 50], unit: "%", asymmetric: true}
+                provenance: {uid: c8ae945c, ref: "inspire:1604271", locator: "Sec. 9.1 (CT14 NLO: scale uncertainty from around 5–10% at low pT in the central rapidity bin to about 50% in the highest pT bins of the most forward region; asymmetric, larger for R = 0.6 than R = 0.4)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: PDF
+                specific: "CT14 NLO PDF uncertainty (68% CL)"
+                pdf_set: "CT14 NLO"
+                size: {range: [5, 50], unit: "%", asymmetric: false}
+                provenance: {uid: b9639f43, ref: "inspire:1604271", locator: "Sec. 9.1 (PDF uncertainties vary from 5% to 50% depending on jet pT and rapidity)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: alphas
+                specific: "αs uncertainty (Δαs = 0.0015)"
+                size: {range: [3, 3], unit: "%", asymmetric: false}
+                provenance: {uid: 2fada47e, ref: "inspire:1604271", locator: "Sec. 9.1 (the αs uncertainty is about 3% and rather constant over the phase space)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:inclusive-jets/lhc-8/atlas-2017"]
+            refs: ["inspire:1604271"]
+            provenance: {uid: b074883d, ref: "inspire:1604271", locator: "Secs. 9.1–9.3 (NLOJet++ 4.1.3 with APPLGRID, CT14/MMHT2014/NNPDF3.0/HERAPDF2.0, μR = μF = pT^jet,max; EW corrections of Sec. 9.2; NP corrections of Sec. 9.3)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD (NLOJet++/fastNLO), μ = leading-jet pT, ⊗ NP ⊗ NLO EW (high pT)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["NP corrections applied (average of LO- and NLO-based generator predictions); EW corrections applied only to the high-pT data, up to 14% in the central bin"]
+            codes: ["NLOJET++", "fastNLO"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "six-point (μR/μ, μF/μ) variation by factors 1/2 and 2; largest variation"
+                size: {range: [5, 10], unit: "%", asymmetric: false, regions: [{where: "outer |y| bins and high pT", value: "±40"}]}
+                provenance: {uid: 069fea1a, ref: "inspire:1487277", locator: "Sec. 5 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high pT)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: PDF
+                specific: "PDF uncertainty of the six NLO sets"
+                pdf_set: "CT10, MSTW2008, NNPDF2.1, NNPDF3.0, HERAPDF1.5, ABM11 (each with its own prescription)"
+                size: {range: [5, 30], unit: "%", asymmetric: false, regions: [{where: "outer rapidity region at high pT", value: "±50"}]}
+                provenance: {uid: a6b3d679, ref: "inspire:1487277", locator: "Sec. 5 (PDF uncertainty varies from 5% to 30% in the entire pT range for |y| ≤ 1.5; as large as 50% at high pT beyond |y| = 1.5, up to 100% for CT10 and HERAPDF1.5)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: nonpert
+                specific: "NP correction uncertainty (central rapidity bin)"
+                method: "envelope of LO- and NLO-based generator predictions"
+                size: {range: [0.06, 1.4], unit: "%", asymmetric: false}
+                provenance: {uid: db15f8a6, ref: "inspire:1487277", locator: "Sec. 5 (1.4% at pT ~ 100 GeV to 0.06% at ~2.5 TeV in the central rapidity bin) and Fig. 1 caption (envelope of LO- and NLO-based predictions)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:inclusive-jets/lhc-8/cms-2016"]
+            refs: ["inspire:1487277"]
+            provenance: {uid: 0dd1ceeb, ref: "inspire:1487277", locator: "Sec. 5 (NLOJet++ 4.1.3 in fastNLO 2.1, six NLO PDF sets, μR = μF = leading-jet pT, EW corrections of the cited ref. [34] for high-pT jets, Fig. 2)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - id: "chan:inclusive-jets/lhc-7"
+    collider: "col:lhc-7"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:inclusive-jets/lhc-7/d2sigma-dpt-dy", region: "|y| < 0.5, jet pT ≈ 400 GeV (ATLAS anti-kt R = 0.4, bin 376–408 GeV; CMS anti-kT R = 0.7, bin 395–430 GeV)"}
+    measurements:
+      - id: "meas:inclusive-jets/lhc-7/atlas-2014"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 4.5 fb⁻¹ (2011), anti-kt R = 0.4 (R = 0.6 also published)"
+        ref: "inspire:1325553"
+        hepdata: "hepdata:ins1325553/Table 1"
+      - id: "meas:inclusive-jets/lhc-7/cms-2012"
+        experiment: "CMS"
+        dataset: "7 TeV, 5.0 fb⁻¹ (2011), anti-kT R = 0.7"
+        ref: "inspire:1208923"
+        hepdata: "hepdata:ins1208923/Table 1"
+    observables:
+      - id: "obs:inclusive-jets/lhc-7/d2sigma-dpt-dy"
+        name: "Inclusive jet d²σ/dpT d|y| (anti-kt R = 0.4 for ATLAS, anti-kT R = 0.7 for CMS)"
+        kind: differential
+        variable: "jet pT, |y|"
+        results:
+          - measurement: meas:inclusive-jets/lhc-7/atlas-2014
+            total:
+              value_pct: 5.7
+              provenance:
+                uid: '41189760'
+                ref: hepdata:ins1325553/Table 1
+                locator: Table 1, quadrature sum of all errors (bin 13)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.39
+                    - 25.0
+                  asymmetric: false
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: a9658664
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: sys,jes0
+                size:
+                  range:
+                    - 3.0
+                    - 11.0
+                  asymmetric: true
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: ce4a61c3
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,jes0'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: sys,jes16
+                size:
+                  range:
+                    - 0.0
+                    - 5.4
+                  asymmetric: true
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: ac42257b
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,jes16'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: sys,jes17
+                size:
+                  range:
+                    - 0.0
+                    - 4.7
+                  asymmetric: true
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: b16f1c5f
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,jes17'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: sys,jes18
+                size:
+                  range:
+                    - 0.0
+                    - 4.7
+                  asymmetric: true
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: e930662f
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,jes18'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: sys,jes19
+                size:
+                  range:
+                    - 0.0
+                    - 7.3
+                  asymmetric: true
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: f9115ddc
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,jes19'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: sys,jes56
+                size:
+                  range:
+                    - 0.0
+                    - 43.0
+                  asymmetric: true
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: 3033d19d
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,jes56'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: sys,jes62
+                size:
+                  range:
+                    - 0.8
+                    - 5.8
+                  asymmetric: true
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: 29160c03
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,jes62'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: unfolding_model
+                specific: sys,unfold
+                size:
+                  range:
+                    - 0.0
+                    - 5.5
+                  asymmetric: false
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: e28996de
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,unfold'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 1.8
+                    - 1.8
+                  asymmetric: false
+                full_table: hepdata:ins1325553/Table 1
+                provenance:
+                  uid: 4bfb3c70
+                  ref: hepdata:ins1325553/Table 1
+                  locator: Table 1, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: meas:inclusive-jets/lhc-7/cms-2012
+            total:
+              value_pct: 6.0
+              provenance:
+                uid: 4a5af67a
+                ref: hepdata:ins1208923/Table 1
+                locator: Table 1, quadrature sum of all errors (bin 12)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.41
+                    - 72.0
+                  asymmetric: false
+                full_table: hepdata:ins1208923/Table 1
+                provenance:
+                  uid: ca02af75
+                  ref: hepdata:ins1208923/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 5.8
+                    - 15.0
+                  asymmetric: true
+                full_table: hepdata:ins1208923/Table 1
+                provenance:
+                  uid: '30538589'
+                  ref: hepdata:ins1208923/Table 1
+                  locator: Table 1, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: "NLO QCD (NLOJET++/APPLGRID), μ = pT^max, ⊗ NP ⊗ NLO EW"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["NP corrections and EW corrections (tree-level O(αsα, α²) and weak loops O(αs²α), no photon or W/Z radiation) applied multiplicatively"]
+            codes: ["NLOJET++", "APPLGRID"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            compared_to: ["meas:inclusive-jets/lhc-7/atlas-2014"]
+            refs: ["inspire:1325553"]
+            provenance: {uid: '85554891', ref: "inspire:1325553", locator: "Secs. 5.1, 5.2 and 5.4 (NLOJET++ 4.1.2 with APPLGRID, CT10/MSTW2008/NNPDF2.1/ABM11/HERAPDF1.5, μR = μF = pT^max; NP corrections; EW corrections of the cited ref. [48]); uncertainties only shown in Fig. 1", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD (NLOJet++/fastNLO), NNPDF2.1 NLO, μ = pT, ⊗ NP"
+            accuracy:
+              qcd: NLO
+              approximations: ["NP corrections applied (average of PYTHIA 6 Z2 and HERWIG++ 2.4.2); no EW correction"]
+            codes: ["NLOJET++", "fastNLO"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "six-point (μF/μ, μR/μ) variation by factors 1/2 and 2; maximum deviation"
+                size: {range: [5, 10], unit: "%", asymmetric: false, regions: [{where: "outer |y| bins, high dijet mass and jet pT", value: "±40"}]}
+                provenance: {uid: 37908d6c, ref: "inspire:1208923", locator: "Sec. 6.2 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high dijet masses and jet pT)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: alphas
+                specific: "αS(MZ) ± 0.001"
+                size: {range: [1, 2], unit: "%", asymmetric: false}
+                provenance: {uid: 28422cb6, ref: "inspire:1208923", locator: "Sec. 6.2 (variation of αS(MZ) by ±0.001 introduces an additional 1–2% uncertainty)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:inclusive-jets/lhc-7/cms-2012"]
+            refs: ["inspire:1208923"]
+            provenance: {uid: 4bf21b3e, ref: "inspire:1208923", locator: "Sec. 6 (NLOJet++ 2.0.1 in fastNLO 1.4, μR = μF = jet pT, CT10/MSTW2008NLO/NNPDF2.1/HERAPDF1.5/ABKM09; NP corrections of Sec. 6.3)", source: agent, status: cross-checked, date: "2026-10-17"}

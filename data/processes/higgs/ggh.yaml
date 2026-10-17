@@ -4,11 +4,12 @@ family: "fam:higgs"
 sector: SM
 description: "Production of the SM Higgs boson through a top-quark loop, gg → H + X: the largest Higgs production cross section at the LHC. Known at N3LO QCD in the large-m_t effective theory, with exact quark-mass dependence through NLO and electroweak corrections at NLO."
 watch:
-  recids: [1494411, 1419073, 1353668, 1653133, 2104706, 2104672]
+  recids: []
   queries:
-    - 't "Higgs" and t "gluon fusion" and (t N3LO or t "third order" or t N3LL or t "N4LO")'
-    - 't "Higgs" and (collaboration:ATLAS or collaboration:CMS) and t "production cross section" and (t "13 TeV" or t "13.6 TeV")'
-    - 't "Higgs" and t "gluon fusion" and (t "QCD-electroweak" or t "mixed" or t "top-quark mass")'
+    - 't Higgs and (t "gluon fusion" or t "gluon-fusion" or t "gluon-gluon fusion") and (t N3LO or t "N$^3$LO" or t "N3LL" or t "N$^3$LL" or t "transverse momentum" or t "electroweak" or t "top-quark mass" or t "bottom" or t "cross-section" or t "cross section" or t "resummation" or t "fourth order") and not t search and not t "pair" and not t "dark"'
+    - 'refersto:recid:1653133 and t Higgs and (t "gluon fusion" or t "gluon-fusion" or t "gluon-gluon fusion")'
+    - 't Higgs and (collaboration:ATLAS or collaboration:CMS) and (t "13 TeV" or t "13.6 TeV") and (t "cross section" or t "cross-section" or t "cross sections" or t "production modes" or t "gluon") and not t search and not t "pair" and not t "dark"'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -72,6 +73,11 @@ channels:
         dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
         ref: "inspire:2104672"
         hepdata: "hepdata:ins2104672/Production mode strength modifiers"
+      - id: "meas:ggh/lhc-13/cms-2025-diff-comb"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of the H → γγ, ZZ, WW and ττ differential measurements; extrapolated to the full phase space, all production modes"
+        ref: "inspire:2913615"
+        hepdata: "hepdata:ins2913615/PT(H)"
     observables:
       - id: "obs:ggh/lhc-13/sigma-ggf"
         name: "σ(ggF) in the Higgs decay-channel combination (ATLAS: σ(ggF+bbH); CMS: μ_ggH)"
@@ -81,7 +87,7 @@ channels:
           - measurement: "meas:ggh/lhc-13/atlas-2022-comb"
             total: {value_pct: 6.8, provenance: {uid: '43021402', ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 1 (ggF + bbH): 45.92 pb, 'Total uncertainty' +3.1223/−2.988 pb; larger side as % of the central value", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
-              - category: other
+              - category: syst_combined
                 specific: "Systematic uncertainty (all sources combined)"
                 size: {range: [5.1, 5.5], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104706/Figure 2a"
@@ -94,7 +100,7 @@ channels:
                 size: {range: [4.1, 4.1], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins2104672/Production mode strength modifiers"
                 provenance: {uid: 77c38040, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ggH: ±0.04 (stat) of 0.97", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Systematic uncertainty (all sources combined)"
                 size: {range: [6.2, 7.2], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104672/Production mode strength modifiers"
@@ -143,4 +149,63 @@ channels:
             compared_to: ["meas:ggh/lhc-13/atlas-2022-comb", "meas:ggh/lhc-13/cms-2022-comb"]
             refs: ["arXiv:1610.07922", "inspire:1419073"]
             provenance: {uid: ec20e046, ref: "arXiv:1610.07922", locator: "Sec. I.4.1.a.ii, eqs. (I.4.1)–(I.4.4) (√s = 13 TeV, m_H = 125 GeV, PDF4LHC15_nnlo_100, μ = m_H/2); cited by both experiments as the source of the SM prediction", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
+      - id: "obs:ggh/lhc-13/dsigma-dpth"
+        name: "dσ/dpT(H), CMS combination of the γγ, ZZ, WW and ττ channels"
+        kind: differential
+        variable: "pT(H) in 19 bins from 0 to ∞ GeV, full phase space, all Higgs production modes (ggH-dominated); headline bin 80 < pT(H) < 100 GeV"
+        results:
+          - measurement: "meas:ggh/lhc-13/cms-2025-diff-comb"
+            total: {value_pct: 17.0, provenance: {uid: 49d9a93e, ref: "hepdata:ins2913615/PT(H)", locator: "PT(H), quadrature sum of all errors (bin 11)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: syst_combined
+                specific: systematic
+                size: {range: [4.1, 270.0], asymmetric: true}
+                full_table: "hepdata:ins2913615/PT(H)"
+                provenance: {uid: 34a12351, ref: "hepdata:ins2913615/PT(H)", locator: "PT(H), error 'systematic'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: stat
+                specific: statistical
+                size: {range: [15.0, 410.0], asymmetric: true}
+                full_table: "hepdata:ins2913615/PT(H)"
+                provenance: {uid: f79c2bb7, ref: "hepdata:ins2913615/PT(H)", locator: "PT(H), error 'statistical'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "ggH: MadGraph5_aMC@NLO reweighted to NNLOPS; other production modes: MadGraph5_aMC@NLO at NLO"
+            accuracy:
+              qcd: NLO
+              approximations: ["ggH shapes weighted in pT(H) and Njets to the NNLOPS prediction (NNLO for inclusive observables, NLO for H + jet), so NLO for the pT(H) distribution", "non-ggH production modes at NLO QCD, common to the compared calculations", "total cross section normalisation from the LHC Higgs Cross Section WG (arXiv:1610.07922)"]
+              shower_matched: true
+            codes: ["MadGraph5_aMC@NLO", "NNLOPS"]
+            compared_to: ["meas:ggh/lhc-13/cms-2025-diff-comb"]
+            refs: ["arXiv:1309.0017", "arXiv:1610.07922"]
+            provenance: {uid: 3e8b8cc4, ref: "arXiv:2504.13081", locator: "Sec. 6, paragraph on the theoretical predictions (MG5_aMC@NLO v2.6.5 weighted to NNLOPS, ref. [25]; POWHEG also shown) and Fig. 1; NNLOPS accuracy from the abstract of arXiv:1309.0017", source: agent, status: cross-checked, date: "2026-10-17"}
+  - id: "chan:ggh/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:ggh/lhc-8/mu-ggf", region: "m_H = 125.09 GeV, inclusive over production kinematics, signal strength μ_ggF assuming SM branching fractions, combined 7 and 8 TeV data"}
+    measurements:
+      - id: "meas:ggh/lhc-8/atlas-cms-2016-comb"
+        experiment: "combination"
+        dataset: "7 and 8 TeV, about 5 fb⁻¹ and 20 fb⁻¹ per experiment (Run 1), ATLAS + CMS combination of Higgs decay-channel analyses"
+        ref: "inspire:1468068"
+        hepdata: "hepdata:ins1468068/Table 9"
+    observables:
+      - id: "obs:ggh/lhc-8/mu-ggf"
+        name: "Signal strength μ_ggF (ATLAS + CMS Run-1 combination)"
+        kind: total
+        variable: "μ_ggF = σ(ggF)/σ_SM at m_H = 125.09 GeV, assuming SM Higgs branching fractions; 7 and 8 TeV data fitted with one signal strength per production process"
+        results:
+          - measurement: "meas:ggh/lhc-8/atlas-cms-2016-comb"
+            total: {value_pct: 16.0, provenance: {uid: 4e9086dd, ref: "hepdata:ins1468068/Table 9", locator: "Table 9, quadrature sum of all errors (bin 1)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties: []
+        predictions:
+          - label: "NNLO QCD + NLO EW (LHC Higgs Cross Section WG, YR3), m_H = 125.09 GeV, 8 TeV"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+            total: {value_pct: 10.4, provenance: {uid: c5c89366, ref: "arXiv:1606.02266", locator: "Table 1, 8 TeV column, ggF row: 19.2 ± 2.0 pb; relative uncertainty 2.0/19.2 derived from the rounded values (quadrature sum of QCD scale, PDF and αs, symmetric as quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:ggh/lhc-8/atlas-cms-2016-comb"]
+            refs: ["arXiv:1307.1347"]
+            provenance: {uid: a8a70f20, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_ggF (= 1)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true

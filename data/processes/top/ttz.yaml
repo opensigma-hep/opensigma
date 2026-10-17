@@ -1,0 +1,140 @@
+id: "proc:ttz"
+name: "tt̄Z associated production"
+family: "fam:top"
+sector: SM
+description: "Production of a top-antitop pair in association with a Z boson, pp → tt̄Z. Directly probes the top-quark neutral-current (tt̄Z) couplings and is an irreducible background to tt̄H, four-top and many BSM searches. Complete NLO QCD and EW corrections are available, with soft-gluon resummation (NNLL) and approximate NNLO/N3LO soft-gluon corrections on top; no exact two-loop amplitude exists yet. Measured at the percent-to-ten-percent level at 13 TeV (3ℓ and 4ℓ final states, extended to 2ℓ by ATLAS)."
+watch:
+  recids: []
+  queries:
+    - 't "ttZ" or t "t\\bar{t}Z" or t "t\\overline{t}Z"'
+    - '(t "association with a Z boson" or t "associated with a Z boson") and t "top" and (t "pair" or t "cross section" or t "cross sections")'
+  last_run: '2026-10-16'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:783373", "inspire:944180", "inspire:1359461"]
+        provenance: {uid: db9e37cf, ref: "inspire:783373", locator: "Abstract (full NLO QCD corrections to pp → tt̄Z); inspire:944180 abstract (NLO with HELAC-Oneloop and POWHEG-Box subtraction); inspire:1359461 abstract (MadGraph5_aMC@NLO, QCD+EW)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: missing
+        provenance: {uid: ec96fcb0, ref: "inspire:2744513", locator: "Introduction (most accurate prediction is at full NLO including EW corrections, supplemented by NNLL soft-gluon resummation; no NNLO calculation cited)", source: agent, status: cross-checked, date: "2026-10-17"}
+      code:
+        status: partial
+        approximations: ["approximate NNLO and N3LO from soft-gluon corrections added to the exact NLO result, no exact two-loop amplitude"]
+        refs: ["inspire:2836638"]
+        provenance: {uid: 2c956a08, ref: "inspire:2836638", locator: "Abstract (aNNLO and aN3LO cross sections adding second- and third-order soft-gluon corrections to the exact NLO QCD result, plus NLO EW)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NLO EW"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1359461"]
+        provenance: {uid: f2f9289b, ref: "inspire:1359461", locator: "Abstract (O(αS²α²) NLO contribution with all QCD, QED and weak effects in MadGraph5_aMC@NLO, combined with O(αS³α) and the lowest-order terms)", source: agent, status: cross-checked, date: "2026-10-17"}
+channels:
+  - id: "chan:ttz/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ttz/lhc-13/sigma-tot", region: "inclusive σ(tt̄Z), on-shell Z (70 < m_ff < 110 GeV), mt = 172.5 GeV"}
+    measurements:
+      - id: "meas:ttz/lhc-13/atlas-2024-multilepton"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹ (2015–2018), 2ℓ + 3ℓ + 4ℓ combination"
+        ref: "inspire:2744513"
+        hepdata: "hepdata:ins2744513/Table 13"
+      - id: "meas:ttz/lhc-13/cms-2019-multilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 77.5 fb⁻¹ (2016–2017), 3ℓ + 4ℓ"
+        ref: "inspire:1746445"
+    observables:
+      - id: "obs:ttz/lhc-13/sigma-tot"
+        name: "Inclusive σ(tt̄Z)"
+        kind: total
+        variable: "σ_tt̄Z, on-shell Z (70 < m_ff < 110 GeV), mt = 172.5 GeV"
+        results:
+          - measurement: "meas:ttz/lhc-13/atlas-2024-multilepton"
+            total:
+              value_pct: 6.6
+              provenance: {uid: 9716fce6, ref: "hepdata:ins2744513/Table 13", locator: "Table 13, quadrature sum of all errors (bin 4, combination of 2ℓ, 3ℓ, 4ℓ)", source: hepdata, status: machine-verified, date: "2026-10-17"}
+            uncertainties:
+              - category: stat
+                specific: "stat."
+                size: {range: [4.7, 11.0], asymmetric: false}
+                full_table: "hepdata:ins2744513/Table 13"
+                provenance: {uid: e5c0b1b8, ref: "hepdata:ins2744513/Table 13", locator: "Table 13, error 'stat.'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "syst."
+                size: {range: [4.7, 11.0], asymmetric: false}
+                full_table: "hepdata:ins2744513/Table 13"
+                provenance: {uid: 1ff55df1, ref: "hepdata:ins2744513/Table 13", locator: "Table 13, error 'syst.'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+          - measurement: "meas:ttz/lhc-13/cms-2019-multilepton"
+            total: {value_pct: 8.0, provenance: {uid: a65225db, ref: "inspire:1746445", locator: "Table 2, Total (8%); σ = 0.95 ± 0.05 (stat) ± 0.06 (syst) pb", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [5.0, 5.0], asymmetric: false}
+                provenance: {uid: 31b2aa49, ref: "inspire:1746445", locator: "Table 2, Statistical uncertainty (5%)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic uncertainty"
+                size: {range: [6.0, 6.0], asymmetric: false}
+                provenance: {uid: 8c014b7b, ref: "inspire:1746445", locator: "Table 2, Total systematic uncertainty (6%)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.0, 2.0], asymmetric: false}
+                provenance: {uid: 9c2ed43b, ref: "inspire:1746445", locator: "Table 2, Integrated luminosity (impact on the ttZ cross section, 2%)", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "aN3LO QCD + NLO EW (soft-gluon corrections on exact NLO, MSHT20 NNLO PDFs)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["exact NLO QCD and NLO EW plus approximate NNLO and N3LO soft-gluon corrections ('aN3LO' in the paper); central scale μ = mt = 172.5 GeV"]
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 2.9, provenance: {uid: ca91f664, ref: "inspire:2836638", locator: "Table 2, row MSHT20 NNLO pdf, 13 TeV: 998 +21 −26 (scale) +20 −13 (pdf) fb; scale and pdf added in quadrature, larger side sqrt(26² + 13²)/998", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR = μF variation"
+                method: "scale variation by a factor of two around the central scale μ = mt (mt/2 ≤ μ ≤ 2mt)"
+                size: {range: [2.1, 2.6], unit: "%", asymmetric: true}
+                provenance: {uid: 05c8a381, ref: "inspire:2836638", locator: "Table 2, row MSHT20 NNLO pdf, 13 TeV: +21 −26 fb (scale) of 998 fb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "MSHT20 NNLO"
+                size: {range: [1.3, 2.0], unit: "%", asymmetric: true}
+                provenance: {uid: 0c47818e, ref: "inspire:2836638", locator: "Table 2, row MSHT20 NNLO pdf, 13 TeV: +20 −13 fb (pdf) of 998 fb", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:ttz/lhc-13/atlas-2024-multilepton", "meas:ttz/lhc-13/cms-2019-multilepton"]
+            refs: ["inspire:2836638"]
+            provenance: {uid: 155ce164, ref: "inspire:2836638", locator: "Abstract and Sec. 3 (Tables 1-2, Fig. 1: aN3LO QCD + NLO EW compared to CMS and ATLAS 13 TeV data; complete NLO QCD and QCD+EW from MadGraph5_aMC@NLO per the DIS2025 proceedings inspire:3071230, Sec. 3)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD + EW with NNLL soft-gluon resummation, ATLAS 2024 comparison"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold (ttZ invariant-mass kinematics)"}]
+              approximations: ["full NLO including EW corrections supplemented by NNLL soft-gluon resummation (NLO+NNLL)"]
+            total: {value_pct: 10.4, provenance: {uid: 877c4ed3, ref: "inspire:2744513", locator: "Introduction: σ_ttZ = 0.863 +0.073 −0.085 (scale) ± 0.028 (PDF ⊕ αs) pb; scale and PDF ⊕ αs added in quadrature, larger side sqrt(0.085² + 0.028²)/0.863", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "scale variation (the ATLAS Introduction does not specify the range)"
+                size: {range: [8.5, 9.9], unit: "%", asymmetric: true}
+                provenance: {uid: 3b5345ca, ref: "inspire:2744513", locator: "Introduction: +0.073 −0.085 pb (scale) of 0.863 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: PDF
+                specific: "PDF ⊕ αs"
+                pdf_set: "not specified in the ATLAS Introduction"
+                size: {range: [3.2, 3.2], unit: "%", asymmetric: false}
+                provenance: {uid: 31e07b33, ref: "inspire:2744513", locator: "Introduction: ± 0.028 pb (PDF ⊕ αs) of 0.863 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:ttz/lhc-13/atlas-2024-multilepton"]
+            refs: ["inspire:2744513", "inspire:1710410", "inspire:1359461"]
+            provenance: {uid: 15bb924e, ref: "inspire:2744513", locator: "Introduction (full NLO incl. EW [Frixione et al., inspire:1359461] supplemented with NNLL soft-gluon resummation [Kulesza et al., inspire:1710410])", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "NLO QCD + EW (MadGraph5_aMC@NLO), CMS 2019 comparison"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 11.9, provenance: {uid: 3bda3308, ref: "inspire:1746445", locator: "Sec. 3 and Summary: σ_ttZ = 0.84 ± 0.10 pb at NLO QCD and electroweak accuracy (scale μR = μF = m(t) + m(Z)/2, mt = 172.5 GeV; uncertainties per PDF4LHC recommendations)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:ttz/lhc-13/cms-2019-multilepton"]
+            refs: ["inspire:1746445", "inspire:1359461", "inspire:1670211"]
+            provenance: {uid: cb1eea12, ref: "inspire:1746445", locator: "Sec. 3 (theoretical prediction computed at NLO QCD and EW accuracy with MadGraph5_aMC@NLO, Refs. [29-31] = Handbook of LHC Higgs cross sections 4, Frixione et al. 1504.03446, Frederix et al. 1804.10017)", source: agent, status: cross-checked, date: "2026-10-17"}

@@ -4,10 +4,13 @@ family: "fam:ew-precision"
 sector: SM
 description: "Fermion-pair production on the Z resonance, e⁺e⁻ → (γ/)Z → ff̄, as measured at LEP 1 (and SLC). The Z mass and width, the hadronic peak cross section σ⁰_had, the leptonic ratios R⁰_ℓ and the pole asymmetries are extracted as model-independent pseudo-observables after deconvolution of initial-state QED radiation; they fix the effective weak mixing angle and the number of light neutrino species and, through electroweak loop corrections, constrain m_t and m_H. The reference theory is the complete two-loop electroweak calculation of the Z f f̄ vertex supplemented by QCD corrections to four loops; three-loop electroweak corrections are the open frontier for FCC-ee Tera-Z."
 watch:
-  recids: [691576, 1740872, 1670617, 1780829, 1086186]
+  recids: []
   queries:
-    - 't "Z-pole" and (t "electroweak" or t "pseudo-observables") and (t "two-loop" or t "three-loop" or t "FCC-ee")'
-    - 't "Z boson" and t "decay" and t "electroweak" and (t "three-loop" or t "two-loop") and date > 2018'
+    - 'refersto:recid:1740872 and t "electroweak" and (t "Z" or t "precision" or t "FCC-ee")'
+    - 't "electroweak" and t "precision" and (t "three-loop" or t "two-loop" or t "FCC-ee")'
+    - 't "Z-pole" and (t "electroweak" or t "mixing angle")'
+    - 't "effective weak mixing angle"'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO EW"
     cells:
@@ -46,12 +49,20 @@ channels:
     collider: "col:lep1"
     initial_state: "e⁺e⁻"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:z-pole/lep1/sigma-had0", region: "Z peak, pure-Z-exchange hadronic pole cross section σ⁰_had (QED-deconvoluted pseudo-observable)"}
     measurements:
       - id: "meas:z-pole/lep1/lep-2005-combination"
         experiment: "combination"
         dataset: "LEP combination (ALEPH, DELPHI, L3, OPAL), final Z-pole data; nine-parameter pseudo-observable fit without lepton universality"
+        ref: "inspire:691576"
+      - id: "meas:z-pole/lep1/lep-2005-combination-lu"
+        experiment: "combination"
+        dataset: "LEP combination (ALEPH, DELPHI, L3, OPAL), final Z-pole data; five-parameter pseudo-observable fit with lepton universality imposed"
+        ref: "inspire:691576"
+      - id: "meas:z-pole/lep1/lep-sld-2005-heavy-flavour"
+        experiment: "combination"
+        dataset: "LEP/SLD heavy-flavour combination (14-parameter fit to ALEPH, DELPHI, L3, OPAL and SLD data), final Z-pole data"
         ref: "inspire:691576"
     observables:
       - id: "obs:z-pole/lep1/sigma-had0"
@@ -89,3 +100,122 @@ channels:
             compared_to: ["meas:z-pole/lep1/lep-2005-combination"]
             refs: ["inspire:1740872", "inspire:1670617"]
             provenance: {uid: ba8d3f0f, ref: "inspire:1740872", locator: "Abstract; Sec. 2 (list of included corrections); Table 4 compares with present experimental precision", source: agent, status: cross-checked, date: "2026-10-16"}
+      - id: "obs:z-pole/lep1/gamma-z"
+        name: "Γ_Z: total width of the Z boson"
+        kind: pseudo
+        variable: "Γ_Z"
+        results:
+          - measurement: "meas:z-pole/lep1/lep-2005-combination"
+            total: {value_pct: 0.0922, provenance: {uid: '22602749', ref: "inspire:691576", locator: "Table 2.13 (identical with and without lepton universality): Γ_Z = 2.4952 ± 0.0023 GeV; 0.0023/2.4952, errors include all common errors", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: syst_combined
+                specific: "Common systematic error, dominated by the LEP beam-energy uncertainty"
+                size: {range: [0.0481, 0.0481], unit: "%", asymmetric: false}
+                provenance: {uid: 6ccc4353, ref: "inspire:691576", locator: "Text after Table 2.13: common systematic on Γ_Z is ±1.2 MeV, dominated by the beam energy; Table 8.4 (Γ_Z systematic error 0.0012 GeV, common errors only); 0.0012/2.4952", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "Complete two-loop EW + QCD to four loops (Dubovyk, Freitas, Gluza, Riemann, Usovitsch)"
+            accuracy:
+              qcd: N4LO
+              ew: NNLO
+              mixed: "O(ααs) self-energy and non-factorisable Z q q̄ vertex terms; leading large-y_t terms O(αt αs²), O(αt² αs), O(αt³), O(αt αs³)"
+              approximations: ["final-state QCD radiator functions up to O(αs⁴); fit-formula parametrisation of the full numerical result (max. deviation < 0.04 MeV)"]
+            uses_amplitudes: ["amp:2L/Zff-ew"]
+            total: {value_pct: 0.016, provenance: {uid: 34def61a, ref: "inspire:1740872", locator: "Table 8, Γ_Z row: missing higher orders (O(ααs²) 0.23, O(ααs³) 0.035, O(α²αs) 0.21, O(α³) 0.20) total 0.4 MeV, added in quadrature; relative to X0 = 2494.75 MeV (Table 1)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Unknown three- and four-loop corrections"
+                method: "geometric-series estimate of missing O(α³), O(α²αs), O(ααs²), O(ααs³) beyond the large-y_t limit, added in quadrature"
+                size: {range: [0.016, 0.016], unit: "%", asymmetric: false, regions: [{where: "O(ααs²)", value: "±0.00922"}, {where: "O(ααs³)", value: "±0.0014"}, {where: "O(α²αs)", value: "±0.00842"}, {where: "O(α³)", value: "±0.00802"}]}
+                provenance: {uid: eea59012, ref: "inspire:1740872", locator: "Table 8 (Γ_Z row) and Sec. 5, eq. (5.1); percentages relative to X0 = 2494.75 MeV (Table 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:z-pole/lep1/lep-2005-combination"]
+            refs: ["inspire:1740872", "inspire:1670617"]
+            provenance: {uid: 976024df, ref: "inspire:1740872", locator: "Abstract; Sec. 2 (list of included corrections); Table 1 (fit formula for Γ_Z)", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:z-pole/lep1/r-lepton"
+        name: "R⁰_ℓ: ratio Γ_had/Γ_ℓ of hadronic to leptonic Z widths (massless leptons)"
+        kind: pseudo
+        variable: "R⁰_ℓ = Γ_had/Γ_ℓ at the Z pole, lepton universality imposed"
+        results:
+          - measurement: "meas:z-pole/lep1/lep-2005-combination-lu"
+            total: {value_pct: 0.12, provenance: {uid: ffbc59ee, ref: "inspire:691576", locator: "Table 2.13 (with lepton universality): R⁰_ℓ = 20.767 ± 0.025; 0.025/20.767, errors include all common errors", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: syst_combined
+                specific: "Common systematic error"
+                size: {range: [0.0337, 0.0337], unit: "%", asymmetric: false}
+                provenance: {uid: e3a585b9, ref: "inspire:691576", locator: "Text after Table 2.13: common systematics on R⁰_ℓ amount to ±0.007; Table 8.4 (R⁰_ℓ systematic error 0.007, common errors only); 0.007/20.767", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "Complete two-loop EW + QCD to four loops (Dubovyk, Freitas, Gluza, Riemann, Usovitsch)"
+            accuracy:
+              qcd: N4LO
+              ew: NNLO
+              mixed: "O(ααs) self-energy and non-factorisable Z q q̄ vertex terms; leading large-y_t terms O(αt αs²), O(αt² αs), O(αt³), O(αt αs³)"
+              approximations: ["final-state QCD radiator functions up to O(αs⁴); fit-formula parametrisation of the full numerical result (max. deviation < 0.12×10⁻³)"]
+            uses_amplitudes: ["amp:2L/Zff-ew"]
+            total: {value_pct: 0.0289, provenance: {uid: 624b99bc, ref: "inspire:1740872", locator: "Table 8, R_ℓ row: missing higher orders (O(ααs²) 2.5, O(ααs³) 0.4, O(α²αs) 3.6, O(α³) 3.9, all ×10⁻³) total 6×10⁻³, added in quadrature; relative to X0 = 20751.6×10⁻³ (Table 1)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Unknown three- and four-loop corrections"
+                method: "geometric-series estimate of missing O(α³), O(α²αs), O(ααs²), O(ααs³) beyond the large-y_t limit, added in quadrature"
+                size: {range: [0.0289, 0.0289], unit: "%", asymmetric: false, regions: [{where: "O(ααs²)", value: "±0.012"}, {where: "O(ααs³)", value: "±0.00193"}, {where: "O(α²αs)", value: "±0.0173"}, {where: "O(α³)", value: "±0.0188"}]}
+                provenance: {uid: 672a4c81, ref: "inspire:1740872", locator: "Table 8 (R_ℓ row) and Sec. 5, eq. (5.1); percentages relative to X0 = 20751.6×10⁻³ (Table 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:z-pole/lep1/lep-2005-combination-lu"]
+            refs: ["inspire:1740872", "inspire:1670617"]
+            provenance: {uid: f005da2e, ref: "inspire:1740872", locator: "Abstract; Sec. 2 (list of included corrections); Table 1 (fit formula for R_ℓ)", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:z-pole/lep1/afb-b"
+        name: "A⁰,ᵇ_FB: b-quark pole forward-backward asymmetry"
+        kind: pseudo
+        variable: "A⁰,ᵇ_FB at the Z pole (QED- and QCD-corrected pseudo-observable)"
+        results:
+          - measurement: "meas:z-pole/lep1/lep-sld-2005-heavy-flavour"
+            total: {value_pct: 1.61, provenance: {uid: 9d74b3ee, ref: "inspire:691576", locator: "Table 5.10 (14-parameter fit to the LEP/SLD heavy-flavour data): A⁰,ᵇ_FB = 0.0992 ± 0.0016; 0.0016/0.0992; also Table 8.4", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: syst_combined
+                specific: "Systematic error (approximate split of the total error)"
+                size: {range: [0.706, 0.706], unit: "%", asymmetric: false}
+                provenance: {uid: 021ef548, ref: "inspire:691576", locator: "Table 8.4, A⁰,ᵇ_FB row, systematic error column: 0.0007 (approximate, per caption); 0.0007/0.0992", source: agent, status: cross-checked, date: "2026-10-17"}
+  - id: "chan:z-pole/slc"
+    collider: "col:slc"
+    initial_state: "e⁺e⁻ (longitudinally polarised e⁻ beam)"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:z-pole/slc/sin2theta-eff-lept", region: "Z pole, effective leptonic weak mixing angle sin²θ^lept_eff from the SLD left-right asymmetry A⁰_LR (≡ A_e)"}
+    measurements:
+      - id: "meas:z-pole/slc/sld-alr-1998"
+        experiment: "SLD"
+        dataset: "SLD left-right asymmetry A_LR, all polarised-beam runs 1992-98, combined with correlated polarimetry systematics, as reported in the LEP/SLD combination"
+        ref: "inspire:691576"
+    observables:
+      - id: "obs:z-pole/slc/sin2theta-eff-lept"
+        name: "sin²θ^lept_eff from the SLD left-right asymmetry A⁰_LR"
+        kind: pseudo
+        variable: "sin²θ^lept_eff derived from A⁰_LR ≡ A_e (beam-polarisation asymmetry at the Z pole, corrected for ISR and γ–Z interference)"
+        results:
+          - measurement: "meas:z-pole/slc/sld-alr-1998"
+            total: {value_pct: 0.117, provenance: {uid: 2edb865c, ref: "inspire:691576", locator: "Sec. 3.1.6, eq. (3.11) and Table 3.3, row All combined: sin²θ^lept_eff = 0.23097 ± 0.00027 (±0.00024 stat ± 0.00013 syst); 0.00027/0.23097", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.104, 0.104], unit: "%", asymmetric: false}
+                provenance: {uid: 50dfcf5e, ref: "inspire:691576", locator: "Table 3.3, row All combined: ±0.00024 (stat) of 0.23097", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (dominated by polarimetry and centre-of-mass energy)"
+                size: {range: [0.0563, 0.0563], unit: "%", asymmetric: false}
+                provenance: {uid: e7c26d32, ref: "inspire:691576", locator: "Table 3.3, row All combined: ±0.00013 (syst) of 0.23097; Sec. 3.1.6 text after eq. (3.11)", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "Complete two-loop EW + QCD to four loops (Dubovyk, Freitas, Gluza, Riemann, Usovitsch)"
+            headline: true
+            accuracy:
+              qcd: N4LO
+              ew: NNLO
+              mixed: "O(ααs) self-energy and non-factorisable Z q q̄ vertex terms; leading large-y_t terms O(αt αs²), O(αt² αs), O(αt³), O(αt αs³)"
+              approximations: ["fit-formula parametrisation of the full numerical result (max. deviation < 0.056×10⁻⁴); includes O(αt αs³) corrections"]
+            uses_amplitudes: ["amp:2L/Zff-ew"]
+            total: {value_pct: 0.0186, provenance: {uid: dd6e2dfd, ref: "inspire:1740872", locator: "Table 8, sin²θ^ℓ_eff row: missing higher orders (O(ααs³) 0.3, O(α²αs) 3.0, O(α³) 3.1, all ×10⁻⁵; no O(ααs²) entry) total 4.3×10⁻⁵, added in quadrature; relative to s0 = 2314.64×10⁻⁴ (Table 3)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Unknown three- and four-loop corrections"
+                method: "geometric-series estimate of missing O(α³), O(α²αs), O(ααs²), O(ααs³) beyond the large-y_t limit, added in quadrature"
+                size: {range: [0.0186, 0.0186], unit: "%", asymmetric: false, regions: [{where: "O(ααs³)", value: "±0.0013"}, {where: "O(α²αs)", value: "±0.013"}, {where: "O(α³)", value: "±0.0134"}]}
+                provenance: {uid: 1b786875, ref: "inspire:1740872", locator: "Table 8 (sin²θ^ℓ_eff row) and Sec. 5, eq. (5.1); percentages relative to s0 = 2314.64×10⁻⁴ (Table 3)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:z-pole/slc/sld-alr-1998"]
+            refs: ["inspire:1740872", "inspire:1670617"]
+            provenance: {uid: 1b61e9b7, ref: "inspire:1740872", locator: "Abstract; Sec. 3 (sin²θ^ℓ_eff fit formula, eq. (3.6), Table 3); Sec. 2 (list of included corrections)", source: agent, status: cross-checked, date: "2026-10-17"}

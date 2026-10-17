@@ -1,0 +1,240 @@
+id: "proc:hh"
+name: "Higgs-pair production in gluon fusion (gg → HH)"
+family: "fam:higgs"
+sector: SM
+description: "Production of a pair of Higgs bosons, dominated by gluon fusion through top-quark loops, gg → HH + X. It probes the Higgs trilinear self-coupling. The NLO QCD cross section is known with full top-quark mass dependence; NNLO and N3LO QCD corrections are known in the large-top-mass limit and combined with the full-mass NLO result (NNLO FTapprox, N3LO+N3LL ⊗ NLO). At 13 TeV, ATLAS and CMS each set only upper limits; their combination gives a signal strength compatible with the SM at about 1σ significance. An ATLAS HL-LHC projection exists."
+watch:
+  recids: []
+  queries:
+    - 't Higgs and (t "Higgs pair" or t "Higgs boson pair" or t "di-Higgs" or t "double Higgs" or t "double-Higgs" or t HH) and (t NNLO or t N3LO or t "top-quark mass" or t "top quark mass" or t "gluon fusion" or t "gluon-fusion" or t resummation) and not t "two-Higgs" and not t 2HDM and not t resonant and not t composite'
+    - 't "Higgs boson pair" and (collaboration:ATLAS or collaboration:CMS) and (t combination or t "HL-LHC" or t projected or t "13.6 TeV" or t "Run 3")'
+  last_run: '2026-10-16'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/gg-HH-mt"
+        refs: ["inspire:1450011", "inspire:1481820"]
+        provenance: {uid: a0e73049, ref: "inspire:1450011", locator: "Abstract (NLO QCD cross section and invariant mass distribution with full top-quark mass dependence; two-loop virtual amplitude with SecDec numerical integrals); inspire:1481820 Abstract (full NLO versus approximations)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        approximations: ["heavy-top limit m_t → ∞ (effective theory)"]
+        refs: ["inspire:1235046"]
+        provenance: {uid: c1de5f71, ref: "inspire:1235046", locator: "Abstract (two-loop virtual corrections to gg → HH in the heavy top quark limit)", source: agent, status: cross-checked, date: "2026-10-17"}
+      RV:
+        status: partial
+        approximations: ["large-m_t limit, four expansion terms in 1/m_t²"]
+        refs: ["inspire:1940681"]
+        provenance: {uid: 57bf079e, ref: "inspire:1940681", locator: "Abstract (real-virtual and double-real contributions computed analytically in the large top quark mass limit with four expansion terms in 1/m_t²)", source: agent, status: cross-checked, date: "2026-10-17"}
+      RR:
+        status: partial
+        approximations: ["large-m_t limit, four expansion terms in 1/m_t²; one-loop double-real with full m_t dependence in inspire:1658914"]
+        refs: ["inspire:1940681", "inspire:1658914"]
+        provenance: {uid: 1122ba34, ref: "inspire:1940681", locator: "Abstract (double-real contribution in the large top quark mass limit, four expansion terms in 1/m_t²); full-m_t one-loop double-real: inspire:1658914 Abstract", source: agent, status: cross-checked, date: "2026-10-17"}
+      code:
+        status: partial
+        approximations: ["exact NLO combined with NNLO in the large-m_t approximation, reweighted for finite-m_t effects beyond NLO (NNLO FTapprox)", "full top-quark mass dependence of the NNLO double-virtual corrections not available (arXiv:2606.05300 Abstract)"]
+        refs: ["inspire:1255445", "inspire:1658914"]
+        provenance: {uid: 98377f18, ref: "inspire:1658914", locator: "Abstract (NNLO FTapprox: full-mass NLO plus large-m_t NNLO corrections with one-loop double-real at full m_t and reweighted real-virtual and double-virtual); large-m_t NNLO inclusive cross section: inspire:1255445 Abstract", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "N3LO QCD"
+    cells:
+      code:
+        status: partial
+        approximations: ["infinite top-quark mass limit at N3LO, combined with full-m_t NLO", "N3LO+N3LL threshold resummation matched in the infinite-m_t limit (inspire:2148956)", "fully differential N3LO in the heavy-top limit at 14 TeV (inspire:3112557)"]
+        refs: ["inspire:1754176", "inspire:1773489", "inspire:2148956", "inspire:3112557"]
+        provenance: {uid: a01b1fb5, ref: "inspire:1773489", locator: "Abstract (N3LO QCD in the infinite top-quark mass limit, inclusive and differential, combined with NLO full-top-mass results in several schemes); inclusive N3LO first in inspire:1754176 Abstract", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NLO EW"
+    cells:
+      2L:
+        status: done
+        refs: ["inspire:2727392"]
+        provenance: {uid: 1da49e61, ref: "inspire:2727392", locator: "Abstract (complete next-to-leading order electroweak corrections to pp → HH, gluon-gluon fusion channel, total and differential cross sections); used as a multiplicative K-factor in arXiv:2609.04868 Sec. 6.1, 7.3", source: agent, status: cross-checked, date: "2026-10-17"}
+channels:
+  - id: "chan:hh/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:hh/lhc-13/mu-hh", region: "m_H = 125 GeV, total HH production (ggF + VBF), signal strength μ_HH relative to the SM, ATLAS+CMS Run-2 combination"}
+    measurements:
+      - id: "meas:hh/lhc-13/atlas-cms-comb-2026"
+        experiment: "combination"
+        dataset: "ATLAS and CMS Run 2, 13 TeV, 126-140 fb⁻¹ depending on experiment and analysis; combination of the ATLAS and CMS HH searches in several final states"
+        ref: "inspire:3124422"
+    observables:
+      - id: "obs:hh/lhc-13/mu-hh"
+        name: "σ(pp → HH) via gluon fusion at 13 TeV; measured as the total HH signal strength μ_HH = σ/σ_SM"
+        kind: total
+        variable: "σ(gg → HH) at m_H = 125 GeV, √s = 13 TeV; measurement given as signal strength relative to the SM prediction (ggF + VBF); each experiment alone has only upper limits"
+        results:
+          - measurement: "meas:hh/lhc-13/atlas-cms-comb-2026"
+            total: {value_pct: 112.5, provenance: {uid: 4ab0d791, ref: "inspire:3124422", locator: "arXiv:2602.23991, Results: combined best-fit μ_HH = 0.8 +0.9/−0.7 (stat+syst); larger side 0.9/0.8 = 112.5% of the central value (values quoted to one decimal); observed significance 1.1σ (1.3σ expected), 95% CL upper limit on μ_HH 2.5 (1.7 expected)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [75.0, 87.5], unit: "%", asymmetric: true}
+                provenance: {uid: '54596118', ref: "inspire:3124422", locator: "arXiv:2602.23991, Results: μ_HH = 0.8 +0.7/−0.6 (stat.) of 0.8 central value (one-decimal rounding)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Experimental systematics (all sources combined)"
+                size: {range: [37.5, 37.5], unit: "%", asymmetric: false}
+                provenance: {uid: '6807e743', ref: "inspire:3124422", locator: "arXiv:2602.23991, Results: ±0.3 (exp.) of 0.8 central value; leading sources: CMS bb̄bb̄ merged-jet and ATLAS bb̄ττ background modelling", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: other
+                specific: "Theory (ggF HH signal normalisation incl. top-mass scheme and scale; single-H plus heavy-flavour backgrounds)"
+                size: {range: [25.0, 50.0], unit: "%", asymmetric: true}
+                provenance: {uid: 03aed335, ref: "inspire:3124422", locator: "arXiv:2602.23991, Results: +0.4/−0.2 (theory) of 0.8 central value; leading theory sources: ggF HH normalisation (top-mass renormalisation scheme and scale) and single-H production with heavy-flavour jets", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "LHC HH WG recommendation: NNLO FTapprox × K(N3LO+N3LL / NNLO, large-m_t) × K_EW, PDF4LHC21_40, 13 TeV"
+            accuracy: {qcd: N3LO, ew: NLO, resummation: [{accuracy: "N3LL", variable: "soft-gluon threshold"}], approximations: ["NNLO FTapprox (full-mass NLO + reweighted large-m_t NNLO) rescaled by the large-m_t N3LO+N3LL / NNLO K-factor", "multiplicative NLO electroweak K-factor, no scale uncertainty assigned", "scale uncertainty taken from NNLO FTapprox only; mt = 173.0 GeV, five-flavour scheme, mb = 0"]}
+            uses_amplitudes: ["amp:2L/gg-HH-mt"]
+            total: {value_pct: 21.1, provenance: {uid: 74d6ed65, ref: "inspire:3200254", locator: "Table 12, 13 TeV: σ_rec = 30.40 fb, scale + THnum + mt scheme uncertainty +7.25%/−21.12% (linear combination); larger side taken", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: PDF
+                specific: "PDF"
+                pdf_set: "PDF4LHC21_40"
+                size: {range: [1.96, 1.96], unit: "%", asymmetric: false}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: c2ba434e, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, '± PDF unc. [%]' at 13 TeV", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: alphas
+                specific: "αs"
+                size: {range: [1.51, 1.51], unit: "%", asymmetric: false}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: 0919ece4, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, '±αs unc. [%]' at 13 TeV", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: MHOU
+                specific: "QCD scale (from NNLO FTapprox)"
+                method: "7-point variation of μR, μF around μ0 = m_hh/2"
+                size: {range: [2.11, 4.98], unit: "%", asymmetric: true}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: 58dfccb9, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, 'QCD scale unc. [%]' at 13 TeV: +2.11/−4.98", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: parametric
+                specific: "Top-quark mass scheme and scale (four schemes, bin-wise envelope in m_hh)"
+                size: {range: [5, 16], unit: "%", asymmetric: true}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: ec777ce4, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, 'mt scheme unc. [%]' at 13 TeV: +5/−16", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: numerical
+                specific: "MC integration and r_cut → 0 extrapolation (THnum)"
+                size: {range: [0.14, 0.14], unit: "%", asymmetric: false}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: 2287b5d1, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, '± THnum [%]' at 13 TeV", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:hh/lhc-13/atlas-cms-comb-2026"]
+            refs: ["inspire:3200254", "inspire:1658914", "inspire:2148956", "inspire:2727392"]
+            provenance: {uid: b4d67ceb, ref: "inspire:3200254", locator: "Sec. 7.4 eq. (51) and Table 12: σ_rec = 30.40 fb at 13 TeV (final recommendation, 4 Sep 2026)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NNLO FTapprox (full-mass NLO + reweighted large-m_t NNLO), PDF4LHC15; scale and top-mass scheme uncertainties combined linearly"
+            accuracy: {qcd: NNLO, approximations: ["NLO exact in m_t; NNLO in the large-m_t limit reweighted with full-mass Born/NLO (FTapprox)", "one-loop double-real with full m_t dependence", "real-virtual and double-virtual from the large-m_t limit"]}
+            uses_amplitudes: ["amp:2L/gg-HH-mt"]
+            total: {value_pct: 23.0, provenance: {uid: a3d6f0f4, ref: "inspire:1813382", locator: "Sec. 3, eq. (8): σ_tot = 31.05 +6%/−23% fb at 13 TeV, scale (eq. (6): +2.2%/−5.0%) and top-mass scheme/scale (eq. (5): +4%/−18% at NLO) uncertainties added linearly; larger side taken", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Renormalisation and factorisation scale"
+                method: "7-point variation of μR, μF by a factor of two around μ0 = M_HH/2"
+                size: {range: [2.2, 5.0], unit: "%", asymmetric: true}
+                full_table: "arXiv:1803.02463, Table 1"
+                provenance: {uid: d8f449dc, ref: "arXiv:1803.02463, Table 1", locator: "Table 1, NNLO_FTapprox at 13 TeV: 31.05 +2.2%/−5.0% fb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: approximation
+                specific: "Missing top-quark mass effects beyond NLO (estimated from the accuracy of the FTapprox at NLO, doubled)"
+                size: {range: [2.6, 2.6], unit: "%", asymmetric: false}
+                full_table: "arXiv:1803.02463, Table 1"
+                provenance: {uid: 6f3c5782, ref: "arXiv:1803.02463, Table 1", locator: "Table 1, row 'Mt unc. NNLO_FTapprox' at 13 TeV: ±2.6%", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: parametric
+                specific: "Top-quark mass scheme and scale (on-shell versus MS-bar mass, μt between M_HH/4 and M_HH)"
+                size: {range: [4, 18], unit: "%", asymmetric: true}
+                full_table: "arXiv:2008.11626, eq. (5)"
+                provenance: {uid: abd0e539, ref: "arXiv:2008.11626, eq. (5)", locator: "Sec. 2, eq. (5): +4%/−18% at 13 TeV (NLO)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:hh/lhc-13/atlas-cms-comb-2026"]
+            refs: ["inspire:1658914", "inspire:1813382"]
+            provenance: {uid: b7def997, ref: "inspire:1813382", locator: "Sec. 2, eq. (6) and Sec. 3, eq. (8): recommended prediction σ_tot = 31.05 +6%/−23% fb at 13 TeV (NNLO FTapprox of inspire:1658914, Table 1: 31.05 +2.2%/−5.0% fb)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "ggF HH normalisation quoted by the ATLAS+CMS combination (PDF4LHC21, scale and top-mass scheme uncertainties)"
+            accuracy: {qcd: NNLO, approximations: ["NNLO FTapprox with top-mass scheme and scale uncertainty, built from refs. [14-21] of the combination paper"]}
+            total: {value_pct: 23.0, provenance: {uid: 62a22719, ref: "inspire:3124422", locator: "arXiv:2602.23991, Introduction: σ_ggF^HH = 30.8 +2.0/−7.1 fb at 13 TeV, m_H = 125 GeV, PDF4LHC21; larger side 7.1/30.8 = 23% (VBF: 1.687 ± 0.046 fb)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:hh/lhc-13/atlas-cms-comb-2026"]
+            refs: ["inspire:3124422", "inspire:1658914"]
+            provenance: {uid: d2f33ae0, ref: "inspire:3124422", locator: "arXiv:2602.23991, Introduction (σ_ggF^HH = 30.8 +2.0/−7.1 fb, refs. [14-21]); the analyses themselves normalise to PDF4LHC15 predictions, ggF less than 1% larger (paragraph on signal normalisation, before the κλ rescaling)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "(N3LO+N3LL) ⊗ NLO_mt (infinite-m_t N3LO+N3LL rescaled by the full-mass NLO result), N̄2 resummation scheme"
+            accuracy: {qcd: N3LO, resummation: [{accuracy: "N3LL", variable: "soft-gluon threshold"}], approximations: ["N3LO and N3LL in the infinite top-quark mass limit, combined with the full top-mass-dependent NLO result", "top-quark mass scheme and scale uncertainty not reduced and not included in the quoted scale uncertainty"]}
+            uncertainties:
+              - category: MHOU
+                specific: "Renormalisation and factorisation scale"
+                method: "7-point variation of μR, μF around μ0 = M_hh/2"
+                size: {range: [0.85, 0.88], unit: "%", asymmetric: true}
+                full_table: "arXiv:2209.03914, Table 2"
+                provenance: {uid: e3e9ae5c, ref: "arXiv:2209.03914, Table 2", locator: "Table 2, (N3LO+N3LL) ⊗ NLO_mt at 13 TeV: 33.47 +0.88%/−0.85% fb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: parametric
+                specific: "Top-quark mass scheme and scale (not quoted in the table)"
+                size: {range: [4, 18], unit: "%", asymmetric: true}
+                provenance: {uid: 08344d9c, ref: "arXiv:2209.03914, Sec. 3.2", locator: "Sec. 3.2: 'these uncertainties amount to +4%, −18% at the above four energies', not reduced in the infinite-m_t calculation", source: agent, status: cross-checked, date: "2026-10-17"}
+            refs: ["inspire:2148956", "inspire:1773489"]
+            provenance: {uid: b8d1331d, ref: "inspire:2148956", locator: "Sec. 3.2, Table 2: σ = 33.47 fb at 13 TeV (scale uncertainty +0.88%/−0.85%)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - id: "chan:hh/lhc-hl"
+    collider: "col:lhc-hl"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:hh/lhc-hl/mu-hh-proj", region: "SM HH signal strength μ_HH (ggF + VBF), ATLAS baseline scenario, 3000 fb⁻¹ at √s = 14 TeV, combination of extrapolated Run-2 analyses"}
+    measurements:
+      - id: "meas:hh/lhc-hl/atlas-2025-proj"
+        experiment: "ATLAS"
+        dataset: "14 TeV, 3000 fb⁻¹ (HL-LHC projection), combination of six extrapolated Run-2 analyses (bb̄γγ, bb̄τ⁺τ⁻, resolved and boosted bb̄bb̄, multilepton, bb̄ℓ⁺ℓ⁻+E_T^miss; 126-140 fb⁻¹ at 13 TeV)"
+        ref: "inspire:2898222"
+        projected: true
+        projection_source: {ref: "inspire:2898222", date: "2025-03-04"}
+        assumptions: "Baseline scenario (equivalent to CMS S2): Run-2 yields scaled to 3000 fb⁻¹ and √s = 14 TeV (HH and H cross sections per LHC Higgs WG, factor 1.18 for other processes), detector performance at least as good as in Run 2, theoretical uncertainties halved, experimental uncertainties reduced in their statistical components, background MC statistical uncertainty negligible"
+    observables:
+      - id: "obs:hh/lhc-hl/mu-hh-proj"
+        name: "Total HH signal strength μ_HH (SM-like), projected precision, 14 TeV"
+        kind: pseudo
+        variable: "68% CI on μ_HH = σ(ggF+VBF)/σ_SM, baseline scenario, 3000 fb⁻¹"
+        results:
+          - measurement: "meas:hh/lhc-hl/atlas-2025-proj"
+            total: {value_pct: 28, provenance: {uid: 5be3793b, ref: "inspire:2898222", locator: "Table 5, baseline scenario, L = 3000 fb⁻¹, combination: 68% CI on μ_HH +28/−25 (%); expected significance 4.26σ; Sec. 4.1", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical (no-systematic-uncertainty scenario)"
+                size: {range: [18, 18], unit: "%", asymmetric: false}
+                provenance: {uid: '11454910', ref: "inspire:2898222", locator: "Table 5, 'No syst. unc.' scenario, L = 3000 fb⁻¹, combination: 68% CI on μ_HH +18/−18 (%); significance 5.98σ", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "LHC HH WG recommendation: NNLO FTapprox × K(N3LO+N3LL / NNLO, large-m_t) × K_EW, PDF4LHC21_40, 14 TeV"
+            accuracy: {qcd: N3LO, ew: NLO, resummation: [{accuracy: "N3LL", variable: "soft-gluon threshold"}], approximations: ["NNLO FTapprox (full-mass NLO + reweighted large-m_t NNLO) rescaled by the large-m_t N3LO+N3LL / NNLO K-factor", "multiplicative NLO electroweak K-factor, no scale uncertainty assigned", "scale uncertainty taken from NNLO FTapprox only; mt = 173.0 GeV, five-flavour scheme, mb = 0"]}
+            uses_amplitudes: ["amp:2L/gg-HH-mt"]
+            total: {value_pct: 21.0, provenance: {uid: f1388d8b, ref: "inspire:3200254", locator: "Table 12, 14 TeV: σ_rec = 35.81 fb, scale + THnum + mt scheme uncertainty +7.22%/−20.99% (linear combination); larger side taken", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: PDF
+                specific: "PDF"
+                pdf_set: "PDF4LHC21_40"
+                size: {range: [1.89, 1.89], unit: "%", asymmetric: false}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: 8664b14e, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, '± PDF unc. [%]' at 14 TeV", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: alphas
+                specific: "αs"
+                size: {range: [1.47, 1.47], unit: "%", asymmetric: false}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: '0e650256', ref: "arXiv:2609.04868, Table 12", locator: "Table 12, '±αs unc. [%]' at 14 TeV", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: MHOU
+                specific: "QCD scale (from NNLO FTapprox)"
+                method: "7-point variation of μR, μF around μ0 = m_hh/2"
+                size: {range: [2.01, 4.78], unit: "%", asymmetric: true}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: 73fe3e90, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, 'QCD scale unc. [%]' at 14 TeV: +2.01/−4.78", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: parametric
+                specific: "Top-quark mass scheme and scale (four schemes, bin-wise envelope in m_hh)"
+                size: {range: [5, 16], unit: "%", asymmetric: true}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: c5308bd2, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, 'mt scheme unc. [%]' at 14 TeV: +5/−16", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: numerical
+                specific: "MC integration and r_cut → 0 extrapolation (THnum)"
+                size: {range: [0.21, 0.21], unit: "%", asymmetric: false}
+                full_table: "arXiv:2609.04868, Table 12"
+                provenance: {uid: f267baa4, ref: "arXiv:2609.04868, Table 12", locator: "Table 12, '± THnum [%]' at 14 TeV", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:hh/lhc-hl/atlas-2025-proj"]
+            refs: ["inspire:3200254", "inspire:1658914", "inspire:2148956", "inspire:2727392"]
+            provenance: {uid: 53a31e4d, ref: "inspire:3200254", locator: "Sec. 7.4 eq. (51) and Table 12: σ_rec = 35.81 fb at 14 TeV (final recommendation, 4 Sep 2026)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NNLO FTapprox (full-mass NLO + reweighted large-m_t NNLO), 14 TeV; scale and top-mass scheme uncertainties combined linearly"
+            accuracy: {qcd: NNLO, approximations: ["NLO exact in m_t; NNLO in the large-m_t limit reweighted with full-mass Born/NLO (FTapprox)", "one-loop double-real with full m_t dependence"]}
+            uses_amplitudes: ["amp:2L/gg-HH-mt"]
+            total: {value_pct: 23.0, provenance: {uid: e1ee3244, ref: "inspire:1813382", locator: "Sec. 3, eq. (8): σ_tot = 36.69 +6%/−23% fb at 14 TeV; larger side taken (eq. (6) scale only: +2.1%/−4.9%)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:hh/lhc-hl/atlas-2025-proj"]
+            refs: ["inspire:1658914", "inspire:1813382"]
+            provenance: {uid: bac211f7, ref: "inspire:1813382", locator: "Sec. 2, eq. (6) and Sec. 3, eq. (8): 36.69 +6%/−23% fb at 14 TeV (inspire:1658914 Table 1: 36.69 +2.1%/−4.9% fb)", source: agent, status: cross-checked, date: "2026-10-17"}

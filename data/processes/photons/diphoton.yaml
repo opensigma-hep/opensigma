@@ -4,11 +4,11 @@ family: "fam:photons"
 sector: SM
 description: "Production of a pair of isolated prompt photons, from qq̄ → γγ at Born level, qg → γγq, and the loop-induced gg → γγ box, plus single and double fragmentation. The irreducible background to H → γγ and a benchmark for NNLO QCD with isolation and fragmentation subtleties. Fixed-order NNLO is available for the direct component with smooth/hybrid-cone isolation; three-loop virtual amplitudes exist for both qq̄ and gg channels."
 watch:
-  recids: [1887997, 939520, 1426698, 1977009, 1834011, 3144736]
+  recids: []
   queries:
-    - 't diphoton and (t NNLO or t N3LO or t "three-loop") and not t Higgs and not t entangled'
-    - '(t "diphoton production" or t "photon-pair production") and (collaboration:ATLAS or collaboration:CMS) and t cross-section'
-  last_run: '2026-10-15'
+    - '(t diphoton or t "photon-pair" or t "photon pair" or t "photon pairs") and (t production or t cross or t NNLO or t N3LO or t QCD or t corrections or t predictions) and not t Higgs and not t entangled and not t entanglement and not t Reggeization and not t ALP and not t axion and not t resonance and not t search and not t jet and not t jets and not t ion and not t ions and not t heavy and not t UPC and not t ultraperipheral and not t dark'
+    - '(t diphoton or t "photon pair" or t "photon pairs") and (collaboration:ATLAS or collaboration:CMS) and (t cross or t production) and not t Higgs and not t resonance and not t search and not t searches'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -182,6 +182,290 @@ channels:
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:1887997"]
             provenance: {uid: 4e41674e, ref: "inspire:1887997", locator: "Sec. 8 and Table 5", source: agent, status: cross-checked, date: "2026-10-16"}
+      - id: "obs:diphoton/lhc-13/dsigma-dm"
+        name: "dσ/dmγγ, isolated photon pair"
+        kind: differential
+        variable: "mγγ (ATLAS 2021: pT(γ1,γ2) > 40, 30 GeV, |η^γ| < 2.37 excluding 1.37 < |η^γ| < 1.52, ΔR(γγ) > 0.4, same fiducial region as the integrated cross section)"
+        results:
+          - measurement: "meas:diphoton/lhc-13/atlas-2021"
+            total: {value_pct: 6.1, provenance: {uid: 53b80318, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: lumi
+                specific: "LUMI"
+                size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: a9d41aaf, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'LUMI'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: efficiency
+                specific: "PH_EFF_ID"
+                size: {range: [2.1, 4.0], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: e7dbfb7f, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'PH_EFF_ID'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: efficiency
+                specific: "PH_EFF_ISO_HIGH_PT"
+                size: {range: [0.5, 0.5], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: 71eb2df9, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'PH_EFF_ISO_HIGH_PT'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: background
+                specific: "BKG_J_RISOID_VR"
+                size: {range: [1.9, 9.4], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: '76672005', ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'BKG_J_RISOID_VR'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: background
+                specific: "BKG_YJ_RISO"
+                size: {range: [0.011, 11.0], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: 042c69d0, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'BKG_YJ_RISO'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: pileup
+                specific: "PH_ISO_PILEUP"
+                size: {range: [0.22, 5.1], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: 8e4ba22f, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'PH_ISO_PILEUP'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: unfolding_model
+                specific: "UNFOLDING_BIAS"
+                size: {range: [0.00016, 0.062], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: a5c35b8f, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'UNFOLDING_BIAS'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: stat
+                specific: "stat"
+                size: {range: [0.78, 14.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1887997/yy_m"
+                provenance: {uid: 4967d28d, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "N3LO QCD (qT slicing, STRIPPER): dσ/dmγγ"
+            accuracy:
+              qcd: N3LO
+              approximations: ["nf = 5 flavours without top-quark loops", "large Monte Carlo statistical error bars in mγγ regions that contribute little to the fiducial cross section", "residual dependence on the slicing parameter rcut within the statistical uncertainty"]
+            codes: ["STRIPPER"]
+            uses_amplitudes: ["amp:2L/qqbar-gammagamma", "amp:3L/qqbar-gammagamma"]
+            refs: ["inspire:3144736"]
+            provenance: {uid: 75dc24cf, ref: "inspire:3144736", locator: "Results, Fig. 3 (dσ/dmγγ through N3LO; not compared with data in the paper, no numbers transcribed)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "NNLO QCD (NNLOJET), hybrid-cone isolation, NNPDF3.0: dσ/dmγγ"
+            accuracy:
+              qcd: NNLO
+              approximations: ["direct component only (no NNLO fragmentation), hybrid isolation", "loop-induced gg → γγ at leading-order accuracy", "no non-perturbative corrections", "per-bin uncertainties not transcribed"]
+            codes: ["NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-gammagamma"]
+            compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
+            refs: ["inspire:939520", "inspire:1426698"]
+            provenance: {uid: 4f4261b8, ref: "hepdata:ins1887997/yy_m", locator: "yy_m, dependent variable 'NNLO dσ/dmγγ' (theory prediction published alongside the data)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - id: "chan:diphoton/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:diphoton/lhc-8/sigma-fid", region: "pT(γ1,γ2) > 40, 30 GeV, |η^γ| < 1.37 or 1.56 < |η^γ| < 2.37, ΔR(γγ) > 0.4, isolation ET^iso(R = 0.4) < 11 GeV"}
+    measurements:
+      - id: "meas:diphoton/lhc-8/atlas-2017"
+        experiment: "ATLAS"
+        dataset: "8 TeV, 20.2 fb⁻¹"
+        ref: "inspire:1591327"
+        hepdata: "hepdata:ins1591327/Table 1"
+    observables:
+      - id: "obs:diphoton/lhc-8/sigma-fid"
+        name: "Fiducial σ(pp → γγ)"
+        kind: fiducial
+        variable: "σ_fid = 16.8 ± 0.8 pb in the fiducial region (ET > 40, 30 GeV, |η^γ| < 1.37 or 1.56 < |η^γ| < 2.37)"
+        results:
+          - measurement: "meas:diphoton/lhc-8/atlas-2017"
+            total: {value_pct: 4.7, provenance: {uid: d782c07f, ref: "hepdata:ins1591327/Table 1", locator: "Table 1, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [0.4, 0.4], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1591327/Table 1"
+                provenance: {uid: 9cf6bfe7, ref: "hepdata:ins1591327/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: efficiency
+                specific: "sys,trigger"
+                size: {range: [0.2, 0.2], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1591327/Table 1"
+                provenance: {uid: 877e0e42, ref: "hepdata:ins1591327/Table 1", locator: "Table 1, error 'sys,trigger'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: lumi
+                specific: "sys,lumi"
+                size: {range: [1.9, 1.9], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1591327/Table 1"
+                provenance: {uid: fc86f411, ref: "hepdata:ins1591327/Table 1", locator: "Table 1, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: other
+                specific: "sys,others"
+                size: {range: [4.3, 4.3], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1591327/Table 1"
+                provenance: {uid: 054687ba, ref: "hepdata:ins1591327/Table 1", locator: "Table 1, error 'sys,others'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "NNLO QCD (2γNNLO), direct component, smooth-cone isolation, CT10 NNLO"
+            accuracy:
+              qcd: NNLO
+              approximations: ["direct component only: no contribution from fragmentation photons", "smooth isolation with ET^iso,max = 11 GeV in R = 0.4", "hadronisation and underlying-event correction applied (typically below 5% in differential cross sections)"]
+            codes: ["2γNNLO"]
+            uses_amplitudes: ["amp:2L/qqbar-gammagamma"]
+            total: {value_pct: 9.0, provenance: {uid: bcc95a57, ref: "inspire:1591327", locator: "Sec. 7: total uncertainty +9 -6 % in the inclusive case for 2γNNLO; larger side, scale variation (dominant), PDF (about 2%) and non-perturbative effects combined", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: PDF
+                specific: "CT10 eigenvector sets, 68% CL"
+                pdf_set: "CT10 NNLO"
+                size: {range: [2.0, 2.0], unit: "%", asymmetric: false}
+                provenance: {uid: c3f2e7a6, ref: "inspire:1591327", locator: "Sec. 7 (PDF uncertainties at the level of 2%)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:diphoton/lhc-8/atlas-2017"]
+            refs: ["inspire:939520"]
+            provenance: {uid: c462b483, ref: "inspire:1591327", locator: "Sec. 7 (2γNNLO: NNLO direct part; underestimates the measured fiducial cross section by 16%) and Fig. 3", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD (Diphox), CT10 NLO"
+            accuracy:
+              qcd: NLO
+              approximations: ["direct plus fragmentation, gg → γγ box at the first order (via a quark loop)", "isolation: partonic ET within R = 0.4 below 11 GeV", "hadronisation and underlying-event correction applied"]
+            codes: ["Diphox"]
+            total: {value_pct: 15.0, provenance: {uid: a8199561, ref: "inspire:1591327", locator: "Sec. 7: total uncertainty +15 -10 % in the inclusive case for Diphox; larger side", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: PDF
+                specific: "CT10 eigenvector sets, 68% CL"
+                pdf_set: "CT10 NLO"
+                size: {range: [2.0, 2.0], unit: "%", asymmetric: false}
+                provenance: {uid: a14832f1, ref: "inspire:1591327", locator: "Sec. 7 (PDF uncertainties at the level of 2%)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:diphoton/lhc-8/atlas-2017"]
+            refs: ["inspire:510079"]
+            provenance: {uid: 6aaf7879, ref: "inspire:1591327", locator: "Sec. 7 (Diphox: 36% below the measured value) and Fig. 3", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "ResBos: NLO matched to NNLL resummation, CT10 NLO"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NNLL", variable: "initial-state gluon radiation"}]
+              approximations: ["simplified treatment of fragmentation: sharp cutoff on the isolation energy of the final-state parton combined with a smooth cone", "first correction to the gg-initiated process included", "only central values were provided by the authors: no uncertainties"]
+            codes: ["ResBos"]
+            compared_to: ["meas:diphoton/lhc-8/atlas-2017"]
+            refs: ["inspire:1591327"]
+            provenance: {uid: d5276ad8, ref: "inspire:1591327", locator: "Sec. 7 (Resbos NLO event generator, NNLL resummation; 28% below the measured value) and Fig. 3", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "Sherpa 2.2.1 multi-leg merged (NLO γγ and γγ+1j, LO γγ+2,3j) + parton shower, NNPDF3.0 NNLO"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["γγ and γγ+1 parton at NLO, γγ+2 and γγ+3 partons at LO", "dynamic factorisation and renormalisation scales"]
+            codes: ["Sherpa 2.2.1"]
+            total: {value_pct: 19.0, provenance: {uid: 2742f770, ref: "inspire:1591327", locator: "Sec. 7: relative uncertainty in the integrated cross section +19 -13 %; larger side, scales varied by a factor two", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:diphoton/lhc-8/atlas-2017"]
+            refs: ["inspire:1591327"]
+            provenance: {uid: faa56dda, ref: "inspire:1591327", locator: "Sec. 7 (Sherpa 2.2.1 in agreement with the data) and Fig. 3", source: agent, status: cross-checked, date: "2026-10-17"}
+  - id: "chan:diphoton/lhc-7"
+    collider: "col:lhc-7"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:diphoton/lhc-7/sigma-fid", region: "ATLAS: ET > 22 GeV (at least one above 25 GeV), |η^γ| < 2.37 excluding 1.37 < |η^γ| < 1.52, ΔR(γγ) > 0.4; CMS: ET > 40, 25 GeV, |η^γ| < 2.5 excluding 1.44 < |η^γ| < 1.57, ΔR(γγ) > 0.45; isolated photons"}
+    measurements:
+      - id: "meas:diphoton/lhc-7/atlas-2012"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 4.9 fb⁻¹ (2011)"
+        ref: "inspire:1199269"
+        hepdata: "hepdata:ins1199269/Table 1"
+      - id: "meas:diphoton/lhc-7/cms-2014"
+        experiment: "CMS"
+        dataset: "7 TeV, 5.0 fb⁻¹ (2011)"
+        ref: "inspire:1298393"
+        hepdata: "hepdata:ins1298393/Table 1"
+    observables:
+      - id: "obs:diphoton/lhc-7/sigma-fid"
+        name: "Fiducial σ(pp → γγ)"
+        kind: fiducial
+        variable: "σ_fid: ATLAS 44.0 +3.2 -4.2 pb; CMS 17.2 ± 0.2 (stat) ± 1.9 (syst) ± 0.4 (lumi) pb (different fiducial regions)"
+        results:
+          - measurement: "meas:diphoton/lhc-7/atlas-2012"
+            total: {value_pct: 9.5, provenance: {uid: 5bdb02fe, ref: "inspire:1199269", locator: "Abstract and Sec. 6.3: 44.0 +3.2 -4.2 pb; larger side as % of central value", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [3.9, 3.9], unit: "%", asymmetric: false}
+                provenance: {uid: 1c47d94a, ref: "inspire:1199269", locator: "Sec. 1, footnote 1 (3.9% uncertainty in the integrated luminosity of the 2011 data set)", source: agent, status: agent-draft, date: "2026-10-17"}
+          - measurement: "meas:diphoton/lhc-7/cms-2014"
+            total: {value_pct: 11.3, provenance: {uid: '444924e6', ref: "inspire:1298393", locator: "Abstract and Sec. 9: 17.2 ± 0.2 (stat) ± 1.9 (syst) ± 0.4 (lumi) pb; the three added in quadrature (derived, not quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
+                provenance: {uid: 6241203c, ref: "inspire:1298393", locator: "Abstract: ± 0.2 (stat) of 17.2 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic uncertainty"
+                size: {range: [11.0, 11.0], unit: "%", asymmetric: false}
+                provenance: {uid: b9ba1f60, ref: "inspire:1298393", locator: "Abstract: ± 1.9 (syst) of 17.2 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.3, 2.3], unit: "%", asymmetric: false}
+                provenance: {uid: f1973a78, ref: "inspire:1298393", locator: "Abstract: ± 0.4 (lumi) of 17.2 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "NNLO QCD (2γNNLO), direct component, MSTW2008 NNLO (ATLAS cuts)"
+            accuracy:
+              qcd: NNLO
+              approximations: ["direct component only: no fragmentation contribution", "hadronisation and underlying-event correction (typically 0.95) applied to parton-level cross sections"]
+            codes: ["2γNNLO"]
+            uses_amplitudes: ["amp:2L/qqbar-gammagamma"]
+            total: {value_pct: 13.6, provenance: {uid: ea5c2043, ref: "inspire:1199269", locator: "Sec. 7: 2γNNLO total cross section 44 +6 -5 pb; larger side as % of central value, dominated by scale variation (two-point μR, μF variation)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:diphoton/lhc-7/atlas-2012"]
+            refs: ["inspire:939520"]
+            provenance: {uid: 1f6cb728, ref: "inspire:1199269", locator: "Sec. 7 (2γNNLO with MSTW2008 NNLO, scales mγγ)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD (Diphox + gamma2mc), CT10 NLO (ATLAS cuts)"
+            accuracy:
+              qcd: NLO
+              approximations: ["direct plus fragmentation at NLO; gg → γγ box at NLO via gamma2mc (formally N3LO)", "hadronisation and underlying-event correction (typically 0.95) applied"]
+            codes: ["Diphox", "gamma2mc"]
+            total: {value_pct: 17.9, provenance: {uid: 98cf7aca, ref: "inspire:1199269", locator: "Sec. 7: Diphox+gamma2mc total cross section 39 +7 -6 pb; larger side as % of central value, scale-dominated", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:diphoton/lhc-7/atlas-2012"]
+            refs: ["inspire:510079"]
+            provenance: {uid: 0192492f, ref: "inspire:1199269", locator: "Sec. 7 (Diphox with CT10 NLO, gamma2mc for the box)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "LO parton shower (Pythia, Sherpa up to two additional partons), ATLAS simulation settings"
+            accuracy:
+              qcd: LO
+              shower_matched: true
+              approximations: ["both generators predict a total of 36 pb, underestimating the measurement by 20%; no uncertainty quoted beyond statistics"]
+            codes: ["Pythia", "Sherpa"]
+            compared_to: ["meas:diphoton/lhc-7/atlas-2012"]
+            refs: ["inspire:1199269"]
+            provenance: {uid: 19607a55, ref: "inspire:1199269", locator: "Sec. 7 (Pythia and Sherpa, total cross section 36 pb)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "NNLO QCD (2γNNLO), direct component, MSTW2008 NNLO (CMS cuts)"
+            accuracy:
+              qcd: NNLO
+              approximations: ["direct component only, smooth Frixione isolation (e = 5 GeV, n = 0.05)", "non-perturbative correction 0.95 ± 0.04 applied", "no PDF uncertainty computed, simplified scale variation (μR and μF varied together)"]
+            codes: ["2γNNLO"]
+            uses_amplitudes: ["amp:2L/qqbar-gammagamma"]
+            total: {value_pct: 9.3, provenance: {uid: '26423605', ref: "inspire:1298393", locator: "Sec. 9: σ_NNLO = 16.2 +1.5 -1.3 (scale) pb; larger side as % of central value, scale only", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:diphoton/lhc-7/cms-2014"]
+            refs: ["inspire:939520"]
+            provenance: {uid: 2e6aea2f, ref: "inspire:1298393", locator: "Sec. 8 and Sec. 9 (2γNNLO with MSTW2008 NNLO)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "NLO QCD (Diphox + gamma2mc), CT10 NLO (CMS cuts)"
+            accuracy:
+              qcd: NLO
+              approximations: ["direct plus fragmentation at NLO; gg → γγ box at NLO via gamma2mc", "parton-level isolation: ET sum in R = 0.4 below 5 GeV", "non-perturbative correction 0.95 ± 0.04 applied"]
+            codes: ["Diphox", "gamma2mc"]
+            total: {value_pct: 14.0, provenance: {uid: 66b8ef6b, ref: "inspire:1298393", locator: "Sec. 9: σ_NLO = 12.8 +1.6 -1.5 (scale) +0.6 -0.8 (pdf+αS) pb; larger sides added in quadrature (derived, not quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF (gamma2mc) and μR, μF, μf (Diphox) variation"
+                method: "scales varied independently up and down by a factor two around mγγ, configurations with a factor four between two scales excluded"
+                size: {range: [11.7, 12.5], unit: "%", asymmetric: true}
+                provenance: {uid: 8cfa6336, ref: "inspire:1298393", locator: "Sec. 9: 12.8 +1.6 -1.5 (scale) pb", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: PDF
+                specific: "CT10 52 eigenvector sets with the CT10 αS set (combined)"
+                pdf_set: "CT10 NLO"
+                size: {range: [4.7, 6.3], unit: "%", asymmetric: true}
+                provenance: {uid: ab5111c2, ref: "inspire:1298393", locator: "Sec. 9: +0.6 -0.8 (pdf+αS) pb on 12.8 pb", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:diphoton/lhc-7/cms-2014"]
+            refs: ["inspire:510079"]
+            provenance: {uid: f8656a35, ref: "inspire:1298393", locator: "Sec. 8 and Sec. 9 (Diphox + gamma2mc; underestimates the total cross section)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "ResBos: NLO matched to NNLL pT resummation, CT10 NLO (CMS cuts)"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NNLL", variable: "pT(γγ) soft and collinear gluon radiation"}]
+              approximations: ["fragmentation of one quark/gluon to a single photon at LO, regulated, without the full fragmentation function", "parton-level isolation in R = 0.4 below 5 GeV"]
+            codes: ["ResBos"]
+            total: {value_pct: 15.3, provenance: {uid: 282d5eca, ref: "inspire:1298393", locator: "Sec. 9: σ_NLO(ResBos) = 14.9 +2.2 -1.7 (scale) ± 0.6 (pdf+αS) pb; larger side of the scale and pdf+αS added in quadrature (derived, not quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:diphoton/lhc-7/cms-2014"]
+            refs: ["inspire:1298393"]
+            provenance: {uid: 5703ef24, ref: "inspire:1298393", locator: "Sec. 8 and Sec. 9 (ResBos, compatible with the measurement within uncertainties)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "LO multi-leg parton shower (Sherpa 1.4.0, up to three additional jets), CT10 NLO"
+            accuracy:
+              qcd: LO
+              shower_matched: true
+              approximations: ["Born with up to three additional real emissions and box contribution at the matrix-element level", "isolation after hadronisation: ET sum of stable particles in R = 0.4 below 5 GeV"]
+            codes: ["Sherpa 1.4.0"]
+            total: {value_pct: 20.3, provenance: {uid: d3b734d8, ref: "inspire:1298393", locator: "Sec. 9: σ_LO(Sherpa) = 13.8 +2.8 -1.6 (scale) pb; larger side as % of central value", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:diphoton/lhc-7/cms-2014"]
+            refs: ["inspire:1298393"]
+            provenance: {uid: 1e82c000, ref: "inspire:1298393", locator: "Sec. 8 and Sec. 9 (Sherpa, compatible with the measurement within uncertainties)", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:diphoton/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -212,7 +496,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
                 provenance: {uid: 5164b344, ref: "inspire:915978", locator: "Table IV: ± 0.21 (stat) of 12.47 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Total systematic uncertainty"
                 size: {range: [30.0, 30.0], unit: "%", asymmetric: false}
                 provenance: {uid: 7983f759, ref: "inspire:915978", locator: "Table IV: ± 3.74 (syst) of 12.47 pb", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -262,7 +546,7 @@ channels:
                 size: {range: [4.0, 30.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins915978/Table 1"
                 provenance: {uid: f4ba7e2e, ref: "hepdata:ins915978/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {range: [16.0, 40.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins915978/Table 1"
@@ -275,7 +559,7 @@ channels:
                 size: {range: [4.0, 22.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1215307/Table 1"
                 provenance: {uid: ab0b8a41, ref: "hepdata:ins1215307/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {range: [11.0, 47.0], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins1215307/Table 1"

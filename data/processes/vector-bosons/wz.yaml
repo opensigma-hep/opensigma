@@ -4,10 +4,11 @@ family: "fam:vector-bosons"
 sector: SM
 description: "Production of a W±Z pair, pp → W±Z → ℓνℓ′ℓ′ + X, from qq̄′ annihilation. Probes the WWZ triple gauge coupling and quark/antiquark PDFs through its charge asymmetry, and is a background to many multi-lepton searches. Known at NNLO QCD plus NLO EW for off-shell final states."
 watch:
-  recids: [1720438, 1949191, 1452811, 1618343, 1353132, 1636973, 2762099]
+  recids: []
   queries:
-    - 't "WZ" and (collaboration:ATLAS or collaboration:CMS) and (t "cross section" or t "differential") and t "13 TeV"'
-    - 't "W Z" and (t NNLO or t N3LO or t "electroweak corrections" or t resummation)'
+    - (t WZ or t "W Z" or t "W±Z") and (collaboration:ATLAS or collaboration:CMS) and t "cross" and not t Higgs and not t "two jets" and tc article
+    - (t WZ or t "W Z" or t "W±Z" or t "W boson and a Z") and (t NNLO or t N3LO or t "electroweak corrections" or t resummation or t "gluon fusion") and not t "two jets" and tc article
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -37,7 +38,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:wz/lhc-13/sigma-tot", region: "Total inclusive pp → W±Z, 13 TeV (Z mass window 66–116 GeV for ATLAS, 60–120 GeV for CMS)"}
     measurements:
       - id: "meas:wz/lhc-13/atlas-2019-tot"
@@ -50,6 +51,11 @@ channels:
         dataset: "13 TeV, 137 fb⁻¹ (2016–2018)"
         ref: "inspire:1949191"
         hepdata: "hepdata:ins1949191/Total cross sections"
+      - id: meas:wz/lhc-13/atlas-2025-fid
+        experiment: ATLAS
+        dataset: 13 TeV, 140 fb⁻¹ (2015–2018), eee + eμμ + μee + μμμ
+        ref: inspire:2943646
+        hepdata: hepdata:ins2943646/Table 1
     observables:
       - id: "obs:wz/lhc-13/sigma-tot"
         name: "Total σ(pp → W±Z)"
@@ -63,7 +69,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 5b73c994, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 0.8 (stat) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [3.5, 3.5], unit: "%", asymmetric: false}
                 provenance: {uid: '45163752', ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 1.8 (exp. syst) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -82,10 +88,10 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 3f2bbd11, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 0.8 (stat) of 50.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [3.0, 3.0], unit: "%", asymmetric: false}
-                provenance: {uid: e0a80dce, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 1.5 (syst) of 50.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: e0a80dce, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 1.5 (syst) of 50.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [2.2, 2.2], unit: "%", asymmetric: false}
@@ -129,3 +135,773 @@ channels:
             compared_to: ["meas:wz/lhc-13/atlas-2019-tot"]
             refs: ["inspire:1720438", "inspire:1452811"]
             provenance: {uid: 736c67f0, ref: "inspire:1720438", locator: "Sec. 10.1 (MATRIX NNLO prediction, total phase space)", source: agent, status: cross-checked, date: "2026-10-16"}
+      - id: obs:wz/lhc-13/sigma-fid
+        name: Fiducial σ(pp → W±Z → ℓ'νℓℓ)
+        kind: fiducial
+        variable: 'σ_fid, dressed leptons: |η| < 2.5, pT(ℓ from Z) > 15 GeV, pT(ℓ from W) > 20 GeV, |mℓℓ − mZ| < 10 GeV, mT(W) > 30 GeV'
+        results:
+          - measurement: meas:wz/lhc-13/atlas-2025-fid
+            total:
+              value_pct: 3.9
+              provenance:
+                uid: 4b34eefd
+                ref: hepdata:ins2943646/Table 1
+                locator: 'Table 1, column 5, quadrature sum of all errors (min over bins); column 5 is the combined four-channel σ_fid = 60.7 ± 0.5 (stat) ± 1.4 (exp. syst) ± 1.8 (mod. syst) ± 0.6 (lumi) fb (paper Table 4: relative total 4.0%)'
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.82
+                    - 0.82
+                  asymmetric: false
+                full_table: hepdata:ins2943646/Table 1
+                provenance:
+                  uid: 0c7179f6
+                  ref: hepdata:ins2943646/Table 1
+                  locator: Table 1, column 5, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 2.3
+                    - 2.3
+                  asymmetric: false
+                full_table: hepdata:ins2943646/Table 1
+                provenance:
+                  uid: 5fb1c544
+                  ref: hepdata:ins2943646/Table 1
+                  locator: Table 1, column 5, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: unfolding_model
+                specific: sys,mod
+                size:
+                  range:
+                    - 3.0
+                    - 3.0
+                  asymmetric: false
+                full_table: hepdata:ins2943646/Table 1
+                provenance:
+                  uid: 21b1e61d
+                  ref: hepdata:ins2943646/Table 1
+                  locator: Table 1, column 5, error 'sys,mod'; category 'unfolding_model' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 0.82
+                    - 0.82
+                  asymmetric: false
+                full_table: hepdata:ins2943646/Table 1
+                provenance:
+                  uid: cbeb035e
+                  ref: hepdata:ins2943646/Table 1
+                  locator: Table 1, column 5, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD × NLO EW(qq) (MATRIX 2.1, NNPDF3.1luxQED), ATLAS fiducial cuts
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations:
+                - NLO EW corrections combined multiplicatively with NNLO QCD, restricted to the qq̄ channel (photon-induced corrections additive)
+                - uncertainty is the QCD scale variation only (μR, μF by factors of two, 0.5 ≤ μR/μF ≤ 2); switching to the additive NNLO QCD + EW scheme shifts the prediction by +3%
+                - dynamic scales at half the sum of the W and Z transverse masses
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            total:
+              value_pct: 2.1
+              provenance:
+                uid: c3e40b3a
+                ref: inspire:2943646
+                locator: "Sec. 8 text and Table 4, row 'SM prediction' (combined): 61.4 ± 1.3 fb, scale uncertainty only (PDF uncertainty not included)"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:wz/lhc-13/atlas-2025-fid
+            refs:
+              - inspire:2943646
+              - inspire:1636973
+              - inspire:1452811
+            provenance:
+              uid: 0b0d1a44
+              ref: inspire:2943646
+              locator: Sec. 5 (MATRIX 2.1 setup) and Sec. 8 (fiducial cross-section)
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+      - id: obs:wz/lhc-13/ptz
+        name: dσ/dpT(Z), fiducial
+        kind: differential
+        variable: pT(Z)
+        results:
+          - measurement: meas:wz/lhc-13/atlas-2025-fid
+            total:
+              value_pct: 4.9
+              provenance:
+                uid: 50c0bacc
+                ref: hepdata:ins2943646/Table 5
+                locator: 'Table 5, quadrature sum of all errors (bin 3); bin 3 is 30 ≤ pT(Z) < 60 GeV: 18.82 fb (integrated over the bin, not divided by the bin width); the bin total uncertainty is the quadrature sum of the HEPData uncertainty columns'
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 1.6
+                    - 22.0
+                  asymmetric: false
+                full_table: hepdata:ins2943646/Table 5
+                provenance:
+                  uid: 7f46705e
+                  ref: hepdata:ins2943646/Table 5
+                  locator: Table 5, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD × NLO EW(qq) (MATRIX 2.1, NNPDF3.1luxQED)
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations:
+                - NLO EW corrections combined multiplicatively with NNLO QCD, restricted to the qq̄ channel
+                - no uncertainty tabulated in HEPData for this bin
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            compared_to:
+              - meas:wz/lhc-13/atlas-2025-fid
+            refs:
+              - inspire:2943646
+              - inspire:1636973
+              - inspire:1452811
+            provenance:
+              uid: 3c6a8247
+              ref: hepdata:ins2943646/Table 5
+              locator: "Table 5, second block, column 'MATRIX NNLO QCDxEWqq', bin 30–60 GeV: 19.68 fb"
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+  - id: chan:wz/lhc-13.6
+    collider: col:lhc-13.6
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:wz/lhc-13.6/sigma-tot
+      region: Total pp → W±Z, 13.6 TeV (Z mass window 60–120 GeV, extrapolated from the trilepton final states)
+    measurements:
+      - id: meas:wz/lhc-13.6/cms-2024-tot
+        experiment: CMS
+        dataset: 13.6 TeV, 34.7 fb⁻¹ (2022), eee + eeμ + μμe + μμμ
+        ref: inspire:2855546
+        hepdata: hepdata:ins2855546/Total cross section
+    observables:
+      - id: obs:wz/lhc-13.6/sigma-tot
+        name: Total σ(pp → W±Z)
+        kind: total
+        variable: σ_tot, all W and Z decay modes (Z mass within 30 GeV of mZ, extrapolated from the trilepton final states)
+        results:
+          - measurement: meas:wz/lhc-13.6/cms-2024-tot
+            total:
+              value_pct: 3.4
+              provenance:
+                uid: 6486fcfe
+                ref: hepdata:ins2855546/Total cross section
+                locator: Total cross section, column 5, quadrature sum of all errors (bin 5); bin 5 is the flavour-inclusive result 55.2 ± 1.2 (stat) ± 1.2 (syst) ± 0.8 (lumi) ± 0.3 (theo) pb
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 2.2
+                    - 5.6
+                  asymmetric: false
+                full_table: hepdata:ins2855546/Total cross section
+                provenance:
+                  uid: 86609b71
+                  ref: hepdata:ins2855546/Total cross section
+                  locator: Total cross section, column 5, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: syst
+                size:
+                  range:
+                    - 2.0
+                    - 6.2
+                  asymmetric: false
+                full_table: hepdata:ins2855546/Total cross section
+                provenance:
+                  uid: 9ce812e5
+                  ref: hepdata:ins2855546/Total cross section
+                  locator: Total cross section, column 5, error 'syst'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: other
+                specific: lum
+                size:
+                  range:
+                    - 1.3
+                    - 1.5
+                  asymmetric: false
+                full_table: hepdata:ins2855546/Total cross section
+                provenance:
+                  uid: 041f0821
+                  ref: hepdata:ins2855546/Total cross section
+                  locator: Total cross section, column 5, error 'lum'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: other
+                specific: thy
+                size:
+                  range:
+                    - 0.18
+                    - 0.37
+                  asymmetric: false
+                full_table: hepdata:ins2855546/Total cross section
+                provenance:
+                  uid: 3efd8cbd
+                  ref: hepdata:ins2855546/Total cross section
+                  locator: Total cross section, column 5, error 'thy'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD × NLO EW (MATRIX), CMS setup
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations:
+                - NNLO QCD and NLO EW combined multiplicatively
+                - scale and PDF uncertainties only
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            total:
+              value_pct: 2.6
+              provenance:
+                uid: 3e804d27
+                ref: hepdata:ins2855546/Total cross section
+                locator: "Total cross section, 'Matrix, NNLO QCD × NLO EW' inclusive row: 54.7 pb, scale +1.2 −1.1, PDF ± 0.8; larger scale side and PDF added in quadrature (paper Table 6: 54.7 +1.2 −1.1 (scale))"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:wz/lhc-13.6/cms-2024-tot
+            refs:
+              - inspire:2855546
+              - inspire:1636973
+              - inspire:1452811
+              - inspire:1618343
+            provenance:
+              uid: ba49f1e8
+              ref: inspire:2855546
+              locator: Sec. 8, Table 6 (MATRIX, NNLO QCD × NLO EW; the paper's ref. [51])
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+          - label: NNLO QCD (MATRIX), CMS setup, no EW
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - scale and PDF uncertainties only
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            total:
+              value_pct: 2.6
+              provenance:
+                uid: 2d6976a2
+                ref: hepdata:ins2855546/Total cross section
+                locator: "Total cross section, 'Matrix, NNLO QCD' inclusive row: 55.0 pb, scale +1.2 −1.1, PDF ± 0.8; larger scale side and PDF added in quadrature"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:wz/lhc-13.6/cms-2024-tot
+            refs:
+              - inspire:2855546
+              - inspire:1636973
+              - inspire:1452811
+            provenance:
+              uid: 5217ecff
+              ref: inspire:2855546
+              locator: Table 6 (MATRIX, NNLO QCD)
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+    last_reviewed: "2026-10-17"
+  - id: chan:wz/lhc-8
+    collider: col:lhc-8
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:wz/lhc-8/sigma-tot
+      region: Total pp → W±Z, 8 TeV (Z mass window 66–116 GeV for ATLAS, 71–111 GeV for CMS; extrapolated from the trilepton final states)
+    measurements:
+      - id: meas:wz/lhc-8/atlas-2016-tot
+        experiment: ATLAS
+        dataset: 8 TeV, 20.3 fb⁻¹ (2012), eee + eμμ + μee + μμμ
+        ref: inspire:1426523
+        hepdata: hepdata:ins1426523/Table 5
+      - id: meas:wz/lhc-8/cms-2016-tot
+        experiment: CMS
+        dataset: 8 TeV, 19.6 fb⁻¹ (2012), eee + eeμ + μμe + μμμ
+        ref: inspire:1487288
+        hepdata: hepdata:ins1487288/Table 2
+    observables:
+      - id: obs:wz/lhc-8/sigma-tot
+        name: Total σ(pp → W±Z)
+        kind: total
+        variable: σ_tot, all W and Z decay modes (extrapolated from the trilepton final states)
+        results:
+          - measurement: meas:wz/lhc-8/atlas-2016-tot
+            total:
+              value_pct: 4.4
+              provenance:
+                uid: 62a8ac3d
+                ref: hepdata:ins1426523/Table 5
+                locator: Table 5, quadrature sum of all errors (min over bins)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 2.5
+                    - 2.5
+                  asymmetric: false
+                full_table: hepdata:ins1426523/Table 5
+                provenance:
+                  uid: 2f472f4d
+                  ref: hepdata:ins1426523/Table 5
+                  locator: Table 5, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 2.5
+                    - 2.5
+                  asymmetric: false
+                full_table: hepdata:ins1426523/Table 5
+                provenance:
+                  uid: 2026d8c9
+                  ref: hepdata:ins1426523/Table 5
+                  locator: Table 5, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: acceptance_extrapolation
+                specific: sys,theory
+                size:
+                  range:
+                    - 1.6
+                    - 1.6
+                  asymmetric: false
+                full_table: hepdata:ins1426523/Table 5
+                provenance:
+                  uid: 795c82c1
+                  ref: hepdata:ins1426523/Table 5
+                  locator: Table 5, error 'sys,theory'; category 'acceptance_extrapolation' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 2.1
+                    - 2.1
+                  asymmetric: false
+                full_table: hepdata:ins1426523/Table 5
+                provenance:
+                  uid: a70c2d86
+                  ref: hepdata:ins1426523/Table 5
+                  locator: Table 5, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: meas:wz/lhc-8/cms-2016-tot
+            total:
+              value_pct: 8.0
+              provenance:
+                uid: 261eab90
+                ref: hepdata:ins1487288/Table 2
+                locator: Table 2, quadrature sum of all errors (min over bins)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 3.6
+                    - 3.6
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 2
+                provenance:
+                  uid: cfd39e24
+                  ref: hepdata:ins1487288/Table 2
+                  locator: Table 2, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: acceptance_extrapolation
+                specific: theo
+                size:
+                  range:
+                    - 3.3
+                    - 3.3
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 2
+                provenance:
+                  uid: b42d02c7
+                  ref: hepdata:ins1487288/Table 2
+                  locator: Table 2, error 'theo'; category 'acceptance_extrapolation' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: exp
+                size:
+                  range:
+                    - 5.8
+                    - 5.8
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 2
+                provenance:
+                  uid: f97d2b9a
+                  ref: hepdata:ins1487288/Table 2
+                  locator: Table 2, error 'exp'; category 'syst_combined' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: lumi
+                size:
+                  range:
+                    - 2.6
+                    - 2.6
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 2
+                provenance:
+                  uid: 8a91bb64
+                  ref: hepdata:ins1487288/Table 2
+                  locator: Table 2, error 'lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD (MATRIX), CMS
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - scale uncertainty only
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            total:
+              value_pct: 1.8
+              provenance:
+                uid: 000d9592
+                ref: hepdata:ins1487288/Table 2
+                locator: "Table 2, 'SIG(theory NNLO MATRIX)': 23.68 pb, total +1.8% −1.8% (QCD scale variations only); also Sec. 7: 23.68 ± 1.8% pb"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:wz/lhc-8/cms-2016-tot
+            refs:
+              - inspire:1487288
+              - inspire:1452811
+            provenance:
+              uid: a3389f8a
+              ref: inspire:1487288
+              locator: Sec. 7 (NNLO prediction from MATRIX, their ref. [49]); Table 2
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+          - label: NLO QCD (Powheg+Pythia 8, CT10), ATLAS
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations:
+                - scale μR = μF = mWZ/2
+                - no EW corrections
+            codes:
+              - Powheg
+              - Pythia
+            total:
+              value_pct: 7.6
+              provenance:
+                uid: ce9b9b85
+                ref: inspire:1426523
+                locator: 'Sec. 11.1 (total cross section): SM expectation calculated with Powheg+Pythia of 21.0 ± 1.6 pb'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:wz/lhc-8/atlas-2016-tot
+            refs:
+              - inspire:1426523
+            provenance:
+              uid: b93950b3
+              ref: inspire:1426523
+              locator: Sec. 4 and Sec. 11.1 (Powheg+Pythia NLO with CT10, μR = μF = mWZ/2)
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+    last_reviewed: "2026-10-17"
+  - id: chan:wz/lhc-7
+    collider: col:lhc-7
+    initial_state: pp
+    coverage: partial
+    headline:
+      observable: obs:wz/lhc-7/sigma-tot
+      region: Total pp → W±Z, 7 TeV (Z mass window 66–116 GeV for ATLAS, 71–111 GeV for CMS; extrapolated from the trilepton final states)
+    measurements:
+      - id: meas:wz/lhc-7/atlas-2012-tot
+        experiment: ATLAS
+        dataset: 7 TeV, 4.6 fb⁻¹ (2011), eee + eμμ + μee + μμμ
+        ref: inspire:1126131
+        hepdata: hepdata:ins1126131/Table 2
+      - id: meas:wz/lhc-7/cms-2016-tot
+        experiment: CMS
+        dataset: 7 TeV, 4.9 fb⁻¹ (2011), eee + eeμ + μμe + μμμ
+        ref: inspire:1487288
+        hepdata: hepdata:ins1487288/Table 1
+    observables:
+      - id: obs:wz/lhc-7/sigma-tot
+        name: Total σ(pp → W±Z)
+        kind: total
+        variable: σ_tot, all W and Z decay modes (extrapolated from the trilepton final states)
+        results:
+          - measurement: meas:wz/lhc-7/atlas-2012-tot
+            total:
+              value_pct: 8.9
+              provenance:
+                uid: de1a8276
+                ref: inspire:1126131
+                locator: 'Abstract and combined-results section: σ_tot = 19.0 +1.4 −1.3 (stat.) ± 0.9 (syst.) ± 0.4 (lumi.) pb, larger stat side, added in quadrature (1.70 pb); same numbers as hepdata:ins1126131/Table 2 (whose luminosity column is a string)'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 6.8
+                    - 7.4
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: '89416519'
+                  ref: inspire:1126131
+                  locator: 'Abstract: +1.4 −1.3 (stat.) of 19.0 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: Experimental systematics excluding luminosity (combined)
+                size:
+                  range:
+                    - 4.7
+                    - 4.7
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 29df48c6
+                  ref: inspire:1126131
+                  locator: 'Abstract: ± 0.9 (syst.) of 19.0 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.1
+                    - 2.1
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: e7c5084b
+                  ref: inspire:1126131
+                  locator: 'Abstract: ± 0.4 (lumi.) of 19.0 pb'
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+          - measurement: meas:wz/lhc-7/cms-2016-tot
+            total:
+              value_pct: 8.9
+              provenance:
+                uid: a987b79f
+                ref: hepdata:ins1487288/Table 1
+                locator: Table 1, quadrature sum of all errors (min over bins)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 6.6
+                    - 6.6
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 1
+                provenance:
+                  uid: 13c6df4b
+                  ref: hepdata:ins1487288/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: acceptance_extrapolation
+                specific: theo
+                size:
+                  range:
+                    - 1.9
+                    - 1.9
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 1
+                provenance:
+                  uid: c429f8f3
+                  ref: hepdata:ins1487288/Table 1
+                  locator: Table 1, error 'theo'; category 'acceptance_extrapolation' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: exp
+                size:
+                  range:
+                    - 5.3
+                    - 5.3
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 1
+                provenance:
+                  uid: 0a9285f0
+                  ref: hepdata:ins1487288/Table 1
+                  locator: Table 1, error 'exp'; category 'syst_combined' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: cross-checked
+                  date: '2026-10-17'
+              - category: lumi
+                specific: lumi
+                size:
+                  range:
+                    - 2.2
+                    - 2.2
+                  asymmetric: false
+                full_table: hepdata:ins1487288/Table 1
+                provenance:
+                  uid: 43eddf2c
+                  ref: hepdata:ins1487288/Table 1
+                  locator: Table 1, error 'lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: NNLO QCD (MATRIX), CMS
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - scale uncertainty only
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-VV
+            total:
+              value_pct: 1.8
+              provenance:
+                uid: a8186685
+                ref: hepdata:ins1487288/Table 1
+                locator: "Table 1, 'SIG(theory NNLO MATRIX)': 19.18 pb, total +1.7% −1.8% (QCD scale variations only); larger side"
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:wz/lhc-7/cms-2016-tot
+            refs:
+              - inspire:1487288
+              - inspire:1452811
+            provenance:
+              uid: e2542521
+              ref: inspire:1487288
+              locator: Sec. 7 (NNLO prediction from MATRIX, their ref. [49]); Table 1
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+            headline: true
+          - label: NLO QCD (MCFM, CT10), ATLAS
+            accuracy:
+              qcd: NLO
+              approximations:
+                - no EW corrections
+                - μR, μF and CT10 PDF uncertainties
+            codes:
+              - MCFM
+            total:
+              value_pct: 6.3
+              provenance:
+                uid: 718b7c5b
+                ref: inspire:1126131
+                locator: 'Abstract and Introduction: SM NLO cross-section 17.6 +1.1 −1.0 pb (MCFM with CT10, 66 < mℓℓ < 116 GeV; PDF and QCD scale uncertainties); larger side'
+                source: agent
+                status: cross-checked
+                date: '2026-10-17'
+            compared_to:
+              - meas:wz/lhc-7/atlas-2012-tot
+            refs:
+              - inspire:1126131
+              - arXiv:1105.0020
+            provenance:
+              uid: 19ee02e5
+              ref: inspire:1126131
+              locator: Introduction (MCFM [4] with CT10 PDFs)
+              source: agent
+              status: cross-checked
+              date: '2026-10-17'
+    last_reviewed: "2026-10-17"

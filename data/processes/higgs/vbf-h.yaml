@@ -4,10 +4,12 @@ family: "fam:higgs"
 sector: SM
 description: "Production of the SM Higgs boson through t- and u-channel W/Z exchange with two forward tagging jets, qq → qqH + X: the second-largest Higgs production cross section at the LHC. Known at N3LO QCD (and NNLO fully differentially) in the structure-function approach, i.e. neglecting colour exchange between the two hadronic systems, with NLO electroweak corrections."
 watch:
-  recids: [1494411, 1467221, 1375305, 849724, 754793, 2104706, 2104672]
+  recids: []
   queries:
-    - 't "Higgs" and (t "vector-boson fusion" or t "vector boson fusion" or t "weak boson fusion") and (t N3LO or t NNLO or t "electroweak")'
-    - 't "Higgs" and t "vector boson fusion" and (collaboration:ATLAS or collaboration:CMS) and (t "cross section" or t "fiducial")'
+    - 't Higgs and (t "vector-boson fusion" or t "vector boson fusion" or t "weak boson fusion" or t "weak-boson fusion") and (t N3LO or t NNLO or t "electroweak" or t "QCD corrections" or t "cross section" or t "cross-section" or t "differential" or t "fiducial") and not t search and not t "pair" and not t "dark"'
+    - 'refersto:recid:1467221 and t Higgs and (t "vector-boson fusion" or t "vector boson fusion" or t "weak boson fusion") and not t search and not t "pair" and not t "dark"'
+    - 't Higgs and (collaboration:ATLAS or collaboration:CMS) and (t "13 TeV" or t "13.6 TeV") and (t "vector-boson fusion" or t "vector boson fusion" or t VBF or t "production modes") and not t search and not t "pair" and not t "dark"'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -62,7 +64,7 @@ channels:
           - measurement: "meas:vbf-h/lhc-13/atlas-2022-comb"
             total: {value_pct: 12.2, provenance: {uid: 3e8db970, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 2 (VBF): 3.8562 pb, 'Total uncertainty' +0.47095/−0.43284 pb; larger side as % of the central value", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
-              - category: other
+              - category: syst_combined
                 specific: "Systematic uncertainty (all sources combined)"
                 size: {range: [8.5, 9.6], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104706/Figure 2a"
@@ -75,7 +77,7 @@ channels:
                 size: {range: [11.3, 12.5], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104672/Production mode strength modifiers"
                 provenance: {uid: c1dcffad, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_VBF: +0.09/−0.10 (stat) of 0.80", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Systematic uncertainty (all sources combined)"
                 size: {range: [8.8, 10.0], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104672/Production mode strength modifiers"
@@ -126,3 +128,35 @@ channels:
             compared_to: ["meas:vbf-h/lhc-13/atlas-2022-comb", "meas:vbf-h/lhc-13/cms-2022-comb"]
             refs: ["arXiv:1610.07922"]
             provenance: {uid: 847f6fbf, ref: "arXiv:1610.07922", locator: "Sec. I.5.1.c, eq. (I.5.6) and Table 25; cited by both experiments as a source of the SM prediction", source: agent, status: cross-checked, date: "2026-10-16"}
+  - id: "chan:vbf-h/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:vbf-h/lhc-8/mu-vbf", region: "m_H = 125.09 GeV, inclusive over production kinematics, signal strength μ_VBF assuming SM branching fractions, combined 7 and 8 TeV data"}
+    measurements:
+      - id: "meas:vbf-h/lhc-8/atlas-cms-2016-comb"
+        experiment: "combination"
+        dataset: "7 and 8 TeV, about 5 fb⁻¹ and 20 fb⁻¹ per experiment (Run 1), ATLAS + CMS combination of Higgs decay-channel analyses"
+        ref: "inspire:1468068"
+        hepdata: "hepdata:ins1468068/Table 9"
+    observables:
+      - id: "obs:vbf-h/lhc-8/mu-vbf"
+        name: "Signal strength μ_VBF (ATLAS + CMS Run-1 combination)"
+        kind: total
+        variable: "μ_VBF = σ(VBF)/σ_SM at m_H = 125.09 GeV, assuming SM Higgs branching fractions; 7 and 8 TeV data fitted with one signal strength per production process"
+        results:
+          - measurement: "meas:vbf-h/lhc-8/atlas-cms-2016-comb"
+            total: {value_pct: 21.0, provenance: {uid: fdcdafd4, ref: "hepdata:ins1468068/Table 9", locator: "Table 9, quadrature sum of all errors (bin 2)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties: []
+        predictions:
+          - label: "NLO QCD+EW + approximate NNLO QCD (LHC Higgs Cross Section WG, YR3), m_H = 125.09 GeV, 8 TeV"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["order quoted as NLO(QCD+EW) + approximate NNLO(QCD)"]
+            total: {value_pct: 2.5, provenance: {uid: 37b7192f, ref: "arXiv:1606.02266", locator: "Table 1, 8 TeV column, VBF row: 1.58 ± 0.04 pb; relative uncertainty 0.04/1.58 derived from the rounded values (quadrature sum of QCD scale, PDF and αs, symmetric as quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
+            compared_to: ["meas:vbf-h/lhc-8/atlas-cms-2016-comb"]
+            refs: ["arXiv:1307.1347"]
+            provenance: {uid: 01ee8a9a, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_VBF (= 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true

@@ -4,11 +4,13 @@ family: "fam:dis"
 sector: SM
 description: "Inclusive charged-current deep inelastic scattering of electrons or positrons on protons through W exchange, e−p → ν X and e+p → ν̄ X. The cross sections are sensitive to the flavour decomposition of the proton (valence and sea u and d distributions) and complement the neutral-current data in PDF fits; the HERA measurements reach Q² of tens of thousands of GeV², where the W propagator is probed. Massless QCD coefficient functions for F2, FL and F3 are known to third order."
 watch:
-  recids: [1377206, 1472971, 748563, 759231, 805947]
+  recids: []
   queries:
-    - 't "deep inelastic" and t "charged current" and (t HERA or t H1 or t ZEUS)'
-    - 't "charged-current" and t "coefficient functions" and (t "third order" or t "three loops" or t N3LO)'
+    - 't "deep inelastic" and t "charged current" and (collaboration:H1 or collaboration:ZEUS or t HERA) and (t "cross section" or t combination or t "structure function")'
+    - 'refersto:recid:1472971 and (t "deep inelastic" or t "deep-inelastic") and (t "charged current" or t "structure function" or t N3LO)'
     - 't "electroweak" and t "radiative corrections" and t "deep inelastic" and t "charged current"'
+    - 'refersto:recid:1377206 and t "charged current" and t "deep inelastic"'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -63,12 +65,12 @@ channels:
                 size: {range: [3.2, 47.0], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 7"
                 provenance: {uid: 6a573427, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys,uncor"
                 size: {range: [1.4, 30.0], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 7"
                 provenance: {uid: 9a1c25f7, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,uncor'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys,cor"
                 size: {range: [1.0, 19.0], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 7"
@@ -78,12 +80,12 @@ channels:
                 size: {range: [0.01, 5.3], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 7"
                 provenance: {uid: 2ad146e6, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,rel'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: background
                 specific: "sys,$\\gamma p$"
                 size: {range: [0.0, 2.9], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 7"
                 provenance: {uid: f0175fd5, ref: "hepdata:ins1377206/Table 7", locator: "Table 7, error 'sys,$\\gamma p$'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "sys,had"
                 size: {range: [0.0, 1.0], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 7"
@@ -120,3 +122,34 @@ channels:
             accuracy: {qcd: N3LO, approximations: ["massless quarks", "approximate x-space parametrisations of the three-loop coefficient functions"]}
             refs: ["inspire:1472971", "inspire:805947"]
             provenance: {uid: 79225d25, ref: "inspire:1472971", locator: "Abstract (third-order coefficient functions for F2, FL and F3 in ν-ν̄ charged-current DIS, compact approximate expressions); F3: inspire:805947 Abstract", source: agent, status: cross-checked, date: "2026-10-16"}
+  - id: "chan:dis-cc/eic"
+    collider: "col:eic"
+    initial_state: "e±p"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:dis-cc/eic/sigma-r-proj", region: "unpolarised CC e±p reduced cross section, all (x, Q²) bins, optimistic systematics scenario, 10 fb⁻¹"}
+    measurements:
+      - id: "meas:dis-cc/eic/yr-proj"
+        experiment: "EIC"
+        dataset: "EIC Yellow Report projection: unpolarised CC e±p pseudo-data (DJANGOH), 10 fb⁻¹, optimistic systematics scenario"
+        ref: "arXiv:2103.05419"
+        projected: true
+        projection_source: {ref: "arXiv:2103.05419", date: "2021-03-08"}
+        assumptions: "Optimistic scenario: 2% uncorrelated (2% background subtraction, 0.5% acceptance and bin-centering) and 2.3% normalisation systematic uncertainty (conservative scenario: 5.8% normalisation); no total is quoted in the source (YR Sec. 8.1.6)"
+    observables:
+      - id: "obs:dis-cc/eic/sigma-r-proj"
+        name: "Reduced CC cross section σr,CC(x, Q²), e±p, EIC projection"
+        kind: pseudo
+        variable: "x, Q²; relative total uncertainty per (x, Q²) point"
+        results:
+          - measurement: "meas:dis-cc/eic/yr-proj"
+            total: {value_pct: 3.0, provenance: {uid: e0cdc0ff, ref: "arXiv:2103.05419", locator: "Sec. 8.1.6 (pseudo-data systematics paragraph): uncorrelated 2% and normalisation 2.3% (optimistic) added in quadrature (3.05%, rounded to 3.0%); no total quoted in the source, statistical part not included", source: agent, status: cross-checked, date: "2026-10-17"}}
+            uncertainties:
+              - category: other
+                specific: "Point-to-point systematics (2% background subtraction, 0.5% acceptance and bin-centering; optimistic)"
+                size: {range: [2.0, 2.0], asymmetric: false}
+                provenance: {uid: 3d2342e6, ref: "arXiv:2103.05419", locator: "Sec. 8.1.6: 'an uncorrelated uncertainty of 2%' for unpolarised CC pseudo-data", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: other
+                specific: "Normalisation (luminosity, radiative corrections, simulation; optimistic-conservative)"
+                size: {range: [2.3, 5.8], asymmetric: false}
+                provenance: {uid: '59431624', ref: "arXiv:2103.05419", locator: "Sec. 8.1.6: normalisation uncertainty of 2.3/5.8% for the optimistic/conservative scenarios", source: agent, status: cross-checked, date: "2026-10-17"}

@@ -1,0 +1,250 @@
+id: "proc:z-jet"
+name: "Z/γ* + jets (Z → ℓℓ)"
+family: "fam:vector-bosons"
+sector: SM
+description: "Production of a Z/γ* decaying to a charged-lepton pair in association with one or more hard jets, pp/pp̄ → Z/γ*(→ ℓℓ) + ≥ n jets + X, from qq̄ → Zg, qg → Zq and crossings. A stringent test of perturbative QCD with high-multiplicity merged generators, the control process for Z(→νν̄) + jets backgrounds in dark-matter and new-physics searches, and sensitive to the gluon PDF through the Z pT and jet pT spectra. The ≥ 1-jet inclusive rate is known at NNLO QCD, and NLO EW corrections are available."
+watch:
+  recids: [1424546]
+  queries:
+    - 't "Z+jet" or t "Z+jets" or t "Z + jet" or t "Z + jets" or t "Z boson in association with jets" or t "Z boson in association with a jet" or t "Z boson plus jet"'
+  last_run: '2026-10-16'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:266596"]
+        provenance: {uid: f5d53989, ref: "inspire:266596", locator: "Abstract (full computation of dσ/dqT² for W, Z and virtual γ production to second order in QCD at high and moderate qT, i.e. Z + jet at O(αs²))", source: agent, status: cross-checked, date: "2026-10-17"}
+      RR:
+        status: done
+        refs: ["inspire:266596"]
+        provenance: {uid: e9652622, ref: "inspire:266596", locator: "Abstract (second-order QCD computation including the qg, gg and singlet qq̄ + qq channels, analytic constituent cross sections dσ/dqT² dy)", source: agent, status: cross-checked, date: "2026-10-17"}
+      ir_scheme:
+        status: done
+        approximations: ["crossing of all-final-state NLO results with universal crossing functions"]
+        refs: ["inspire:33945"]
+        provenance: {uid: 8c242ca8, ref: "inspire:33945", locator: "Abstract (NLO jet cross sections from a 'crossing' of all-final-state calculations; applied to jets in association with a vector boson including all decay correlations)", source: agent, status: cross-checked, date: "2026-10-17"}
+      code:
+        status: done
+        refs: ["inspire:33945", "inspire:851571"]
+        provenance: {uid: 3efe9a13, ref: "inspire:851571", locator: "Abstract (BlackHat + Sherpa NLO QCD predictions for Z, γ* + 1, 2, 3 jets with Z/γ* → e+e−, Tevatron; with ref inspire:33945 for the early Z + jet NLO code including decay correlations)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-Vg"
+        refs: ["inspire:587998"]
+        provenance: {uid: f907bbae, ref: "inspire:587998", locator: "Abstract via amp:2L/qqbar-Vg (two-loop QCD helicity amplitudes for γ* → qq̄g, crossed to qq̄ → Z g for Z + jet)", source: agent, status: cross-checked, date: "2026-10-17"}
+      RV:
+        status: done
+        refs: ["inspire:446755"]
+        provenance: {uid: dff6a993, ref: "inspire:446755", locator: "Abstract (one-loop helicity amplitudes for e+e− → four partons, also those for W, Z or Drell-Yan production in association with two jets at hadron colliders)", source: agent, status: cross-checked, date: "2026-10-17"}
+      ir_scheme:
+        status: done
+        approximations: ["N-jettiness subtraction"]
+        refs: ["inspire:1358633", "inspire:1408300"]
+        provenance: {uid: 515b4970, ref: "inspire:1408300", locator: "Abstract (first complete NNLO calculation of Z + jet, using the N-jettiness subtraction scheme to regulate real-emission infrared divergences; scheme introduced in the W + jet paper inspire:1358633)", source: agent, status: cross-checked, date: "2026-10-17"}
+      code:
+        status: done
+        approximations: ["fixed-order parton level, with leptonic Z decay and fiducial cuts; two independent calculations (N-jettiness and a second NNLO calculation, inspire:1382345)"]
+        refs: ["inspire:1408300", "inspire:1382345", "inspire:1424546"]
+        provenance: {uid: 68d17bf4, ref: "inspire:1382345", locator: "Abstract (cross section and differential distributions for Z + jet to NNLO QCD, including the leptonic decay of the Z boson; NNLO increases NLO by about 1%)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:891490"]
+        provenance: {uid: ed43615c, ref: "inspire:891490", locator: "Abstract (first NLO EW calculation for Z + jet hadroproduction including leptonic Z decays, complex-mass scheme, all off-shell effects and the γ* contribution; LHC and Tevatron)", source: agent, status: cross-checked, date: "2026-10-17"}
+      code:
+        status: done
+        refs: ["inspire:1406942"]
+        provenance: {uid: 988c1e7d, ref: "inspire:1406942", locator: "Abstract (automated NLO QCD+EW for off-shell V + up to two jets at 13 TeV with OpenLoops, Munich and Sherpa, including multijet merging)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NNLO QCD×EW"
+    cells:
+      code:
+        status: partial
+        approximations: ["parton-level combination of NNLO QCD and NLO EW with two-loop Sudakov logarithms, for use via reweighting of Monte Carlo samples"]
+        refs: ["inspire:1599401"]
+        provenance: {uid: fd0f62be, ref: "inspire:1599401", locator: "Abstract (combination of state-of-the-art calculations for all V + jets processes: NNLO QCD and NLO EW corrections supplemented by Sudakov logarithms at two loops, parton level)", source: agent, status: cross-checked, date: "2026-10-17"}
+channels:
+  - id: "chan:z-jet/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:z-jet/lhc-13/sigma-ge1j", region: "Fiducial σ(Z/γ*(→ ℓℓ) + ≥ 1 jet), jets anti-kt R = 0.4, pT > 30 GeV, |y| < 2.5 (ATLAS) or 2.4 (CMS); 71 < mℓℓ < 111 GeV"}
+    measurements:
+      - id: "meas:z-jet/lhc-13/atlas-2017-ge1j"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 3.16 fb⁻¹ (2015), e and μ channels combined"
+        ref: "inspire:1514251"
+        hepdata: "hepdata:ins1514251/Table 6"
+      - id: "meas:z-jet/lhc-13/cms-2018-ge1j"
+        experiment: "CMS"
+        dataset: "13 TeV, 2.19 fb⁻¹ (2015), e and μ channels combined"
+        ref: "inspire:1667854"
+        hepdata: "hepdata:ins1667854/Table 2a"
+    observables:
+      - id: "obs:z-jet/lhc-13/sigma-ge1j"
+        name: "Fiducial σ(Z/γ* + ≥ 1 jet)"
+        kind: fiducial
+        variable: "σ(Z/γ*(→ ℓℓ) + ≥ 1 jet), particle level, dressed leptons (ATLAS: pT(ℓ) > 25 GeV, |η(ℓ)| < 2.5, ΔR(ℓ,jet) > 0.4; CMS: pT(ℓ) > 20 GeV, |η(ℓ)| < 2.4, ΔR(ℓ,jet) > 0.4)"
+        results:
+          - measurement: "meas:z-jet/lhc-13/atlas-2017-ge1j"
+            total: {value_pct: 8.6, provenance: {uid: 7900fa67, ref: "hepdata:ins1514251/Table 6", locator: "Table 6, quadrature sum of all errors (bin 2, N_jets ≥ 1: 116 pb)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size:
+                  range: [0.092, 11.0]
+                  asymmetric: false
+                  regions:
+                    - {where: "N_jets ≥ 1 (range spans N_jets ≥ 0 to ≥ 7)", value: "±0.24"}
+                full_table: "hepdata:ins1514251/Table 6"
+                provenance: {uid: 67ba62b4, ref: "hepdata:ins1514251/Table 6", locator: "Table 6, error 'stat'; region value = 0.28 pb / 116 pb at bin 2", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "syst"
+                size:
+                  range: [3.1, 28.0]
+                  asymmetric: false
+                  regions:
+                    - {where: "N_jets ≥ 1 (range spans N_jets ≥ 0 to ≥ 7)", value: "±8.3"}
+                full_table: "hepdata:ins1514251/Table 6"
+                provenance: {uid: ad1da70b, ref: "hepdata:ins1514251/Table 6", locator: "Table 6, error 'syst'; region value = 9.67 pb / 116 pb at bin 2", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: lumi
+                specific: "lumi"
+                size:
+                  range: [2.1, 2.8]
+                  asymmetric: false
+                  regions:
+                    - {where: "N_jets ≥ 1 (range spans N_jets ≥ 0 to ≥ 7)", value: "±2.1"}
+                full_table: "hepdata:ins1514251/Table 6"
+                provenance: {uid: e586ba6e, ref: "hepdata:ins1514251/Table 6", locator: "Table 6, error 'lumi'; region value = 2.49 pb / 116 pb at bin 2", source: hepdata, status: machine-verified, date: "2026-10-17"}
+          - measurement: "meas:z-jet/lhc-13/cms-2018-ge1j"
+            total: {value_pct: 5.7, provenance: {uid: dd07bbf8, ref: "hepdata:ins1667854/Table 2a", locator: "Table 2a, quadrature sum of all errors (bin 2, N_jets ≥ 1: 126.3 pb)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.22, 0.22], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1667854/Table 2a"
+                provenance: {uid: fe88bbd4, ref: "hepdata:ins1667854/Table 2a", locator: "Table 2a, dependent variable 'stat, Stat.' (3rd column), bin 2 (N_jets ≥ 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: energy_scale
+                specific: "Jet energy scale"
+                size: {range: [5.0, 5.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1667854/Table 2a"
+                provenance: {uid: 8734a00d, ref: "hepdata:ins1667854/Table 2a", locator: "Table 2a, dependent variable 'sys, JES' (4th column), bin 2 (N_jets ≥ 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: efficiency
+                specific: "Lepton efficiency"
+                size: {range: [1.5, 1.5], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1667854/Table 2a"
+                provenance: {uid: e84212f4, ref: "hepdata:ins1667854/Table 2a", locator: "Table 2a, dependent variable 'sys, Eff.' (6th column), bin 2 (N_jets ≥ 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.3, 2.3], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1667854/Table 2a"
+                provenance: {uid: a04d7388, ref: "hepdata:ins1667854/Table 2a", locator: "Table 2a, dependent variable 'sys, Lumi' (7th column), bin 2 (N_jets ≥ 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+        predictions:
+          - label: "NNLO QCD Z + ≥ 1 jet (N-jettiness subtraction), CT14"
+            accuracy:
+              qcd: NNLO
+              approximations: ["fixed order O(αs³): NNLO for the ≥ 1-jet rate", "ATLAS: scale (m²ℓℓ + (Σ pT^jet)²)^½ and CT14, scales varied jointly by a factor two", "non-perturbative and final-state-radiation corrections applied by the experiments"]
+            codes: ["N-jettiness NNLO Z + jet"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:z-jet/lhc-13/atlas-2017-ge1j", "meas:z-jet/lhc-13/cms-2018-ge1j"]
+            refs: ["inspire:1408300", "inspire:1424546", "inspire:1514251", "inspire:1667854"]
+            provenance: {uid: 95248cc2, ref: "inspire:1514251", locator: "Sec. 3.3 'Fixed-order predictions': Z + ≥ 1 jet N-jettiness NNLO [refs 3, 4], CT14 PDFs; CMS paper (inspire:1667854) Sec. 4, CT14, same calculation compared for N_jets ≥ 1", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD Z + 1–4 partons (BlackHat+Sherpa), CT14"
+            accuracy:
+              qcd: NLO
+              approximations: ["fixed order: NLO for the ≥ 1-jet rate (Z + up to four partons)", "Born-level FSR corrected to dressed leptons (≈ −2%), non-perturbative correction up to ≈ 10% at low jet pT"]
+            codes: ["BlackHat", "Sherpa"]
+            uncertainties:
+              - category: PDF
+                specific: "CT14 eigenvector variations, range over Z + ≥ 1 to 4 partons"
+                pdf_set: "CT14"
+                size: {range: [1, 4], unit: "%", asymmetric: false}
+                provenance: {uid: b80a62a9, ref: "inspire:1514251", locator: "Sec. 3.3: PDF effects range from 1% to 4% for cross sections of Z + at least one to four partons", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: MHOU
+                specific: "μR, μF envelope, range over Z + ≥ 1 to 4 partons"
+                method: "common variation of μR and μF by factors 0.5, 1/√2, √2, 2 around HT/2"
+                size: {range: [0.1, 10], unit: "%", asymmetric: false}
+                provenance: {uid: af4ea2fd, ref: "inspire:1514251", locator: "Sec. 3.3: scale effects range from 0.1% to 10% for cross sections of Z + at least one to four partons", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:z-jet/lhc-13/atlas-2017-ge1j"]
+            refs: ["inspire:851571", "inspire:1514251"]
+            provenance: {uid: bfdb375b, ref: "inspire:1514251", locator: "Sec. 3.3 'Fixed-order predictions' (BlackHat+Sherpa [refs 59, 60]); Fig. 4 comparison with the inclusive jet multiplicity", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "Sherpa 2.2 ME+PS@NLO (NLO up to 2 partons, LO up to 4)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO matrix elements for up to two additional partons, LO up to four, merged with the Sherpa shower (ME+PS@NLO)", "NNPDF30NLO, merging scale 20 GeV"]
+            codes: ["Sherpa 2.2.1", "Comix", "OpenLoops"]
+            compared_to: ["meas:z-jet/lhc-13/atlas-2017-ge1j"]
+            refs: ["inspire:1514251"]
+            provenance: {uid: 13281a69, ref: "inspire:1514251", locator: "Sec. 3.2, Sherpa 2.2 signal sample; Fig. 4", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "MG5_aMC@NLO + Pythia 8, FxFx merging (NLO up to 2 jets)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO matrix elements for Z + 0, 1, 2 jets merged with FxFx", "ATLAS: merging scale 25 GeV, NNPDF30NLO; CMS: merging scale 30 GeV"]
+            codes: ["MadGraph5_aMC@NLO 2.2.2", "Pythia 8"]
+            compared_to: ["meas:z-jet/lhc-13/atlas-2017-ge1j", "meas:z-jet/lhc-13/cms-2018-ge1j"]
+            refs: ["inspire:1514251", "inspire:1667854"]
+            provenance: {uid: 73de74c8, ref: "inspire:1667854", locator: "Sec. 4 (second calculation: MEs at NLO for Z + N jets, N = 0..2, FxFx merging scale 30 GeV); ATLAS inspire:1514251 Sec. 3.2 (FxFx, matching scale 25 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - id: "chan:z-jet/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:z-jet/tevatron-1960/sigma-ge1j", region: "Z/γ*(→ e+e−) + ≥ 1 jet, midpoint jets R = 0.7, pT > 30 GeV, |y| < 2.1; 66 < mee < 116 GeV"}
+    measurements:
+      - id: "meas:z-jet/tevatron-1960/cdf-2007-ge1j"
+        experiment: "CDF"
+        dataset: "1.96 TeV, 1.7 fb⁻¹ (Run II), Z/γ* → e+e− only"
+        ref: "inspire:768451"
+        hepdata: "hepdata:ins768451/Table 1"
+    observables:
+      - id: "obs:z-jet/tevatron-1960/sigma-ge1j"
+        name: "Fiducial σ(Z/γ*(→ ee) + ≥ 1 jet)"
+        kind: fiducial
+        variable: "σ × BR(Z/γ* → e+e−), hadron-level jets pT > 30 GeV, |y| < 2.1; pT(e) > 25 GeV, |η(e1)| < 1, |η(e2)| < 1 or 1.2 < |η(e2)| < 2.8, ΔR(e,jet) > 0.7"
+        results:
+          - measurement: "meas:z-jet/tevatron-1960/cdf-2007-ge1j"
+            total: {value_pct: 9.2, provenance: {uid: 4341aa98, ref: "hepdata:ins768451/Table 1", locator: "Table 1, quadrature sum of all errors (bin 1, N_jet ≥ 1: 7003 fb)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [2.1, 2.1], asymmetric: false}
+                full_table: "hepdata:ins768451/Table 1"
+                provenance: {uid: 88fb3e15, ref: "hepdata:ins768451/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "sys"
+                size: {range: [6.9, 6.9], asymmetric: true}
+                full_table: "hepdata:ins768451/Table 1"
+                provenance: {uid: 490f96d7, ref: "hepdata:ins768451/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: lumi
+                specific: "sys,Additional systematic uncertainty from the luminosity determination."
+                size: {range: [5.8, 5.8], asymmetric: false}
+                full_table: "hepdata:ins768451/Table 1"
+                provenance: {uid: bd9c92be, ref: "hepdata:ins768451/Table 1", locator: "Table 1, error 'sys,Additional systematic uncertainty from the luminosity determination.'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "NLO QCD (MCFM), CTEQ6.1M"
+            accuracy:
+              qcd: NLO
+              approximations: ["fixed order: NLO for Z + ≥ 1 jet", "μ² = m_Z² + pT²(Z), midpoint jets R = 0.7, Rsep = 1.3", "parton-to-hadron correction factors 1.1–1.4 applied"]
+            codes: ["MCFM"]
+            uncertainties:
+              - category: MHOU
+                specific: "μ varied by a factor 2 and 1/2 (change of the prediction)"
+                method: "variation of the renormalisation and factorisation scale μ0 by factors 2 and 1/2"
+                size: {range: [10, 15], unit: "%", asymmetric: false}
+                provenance: {uid: 5d1f0113, ref: "inspire:768451", locator: "NLO pQCD paragraph: a variation of μ by a factor two (half) reduces (increases) the theoretical predictions by 10% to 15%; not separated by N_jet", source: agent, status: cross-checked, date: "2026-10-17"}
+              - category: PDF
+                specific: "CTEQ6.1M Hessian eigenvectors, differential in jet pT"
+                pdf_set: "CTEQ6.1M"
+                size: {range: [4, 10], unit: "%", asymmetric: false}
+                provenance: {uid: 258db108, ref: "inspire:768451", locator: "NLO pQCD paragraph: PDF uncertainties vary from ±4% at low jet pT to ±10% at high jet pT (differential cross section)", source: agent, status: cross-checked, date: "2026-10-17"}
+            compared_to: ["meas:z-jet/tevatron-1960/cdf-2007-ge1j"]
+            refs: ["inspire:583117", "inspire:768451"]
+            provenance: {uid: 6b01ffdc, ref: "inspire:768451", locator: "NLO pQCD paragraph and Fig. 2 (total cross sections σ_Njet vs Njet compared with LO and NLO MCFM)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
