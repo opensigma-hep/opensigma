@@ -106,7 +106,7 @@ def test_fetch_table_url_and_parse():
     assert len(t["dependent_variables"][0]["values"]) == 3
 
 
-@pytest.mark.parametrize("status,code", [(200, 0), (404, 1)])
+@pytest.mark.parametrize("status,code", [(200, 0), (404, 1), (429, 0)])
 def test_linkcheck_exit_code(status, code, capsys):
     urls = []
 

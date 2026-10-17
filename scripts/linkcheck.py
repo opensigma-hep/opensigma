@@ -49,8 +49,14 @@ def main(argv=None, head=http_status, sleep=time.sleep) -> int:
     bad = 0
     for url in sorted(urls):
         sleep(0.35)  # stay under HEPData's 60 requests/min
-        status = head(url)
-        if not 200 <= status < 400:
+        for wait in (30, 60, 120):  # 429 = throttled, not broken: back off and retry
+            status = head(url)
+            if status != 429:
+                break
+            sleep(wait)
+        if status == 429:
+            print(f"WARN 429 (still rate-limited, not counted as broken) {url}")
+        elif not 200 <= status < 400:
             print(f"FAIL {status} {url}")
             bad += 1
     print(f"{len(urls)} links checked, {bad} failed")
