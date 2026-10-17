@@ -14,31 +14,31 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:154571"]
-        provenance: {uid: ae8058a7, ref: "arXiv:0711.4711", locator: "Sec. 1 and Table 1 (NLO: one-loop γ*→qq̄g plus tree-level γ*→qq̄gg, γ*→qq̄qq̄; NLO parton-level generators [7-9], first Ellis-Ross-Terrano)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: ae8058a7, ref: "arXiv:0711.4711", locator: "Sec. 1 and Table 1 (NLO: one-loop γ*→qq̄g plus tree-level γ*→qq̄gg, γ*→qq̄qq̄; NLO parton-level generators [7-9], first Ellis-Ross-Terrano)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       2L:
         status: done
         amplitude: "amp:2L/qqbar-Vg"
         refs: ["arXiv:hep-ph/0112081", "arXiv:hep-ph/0206067"]
-        provenance: {uid: 4983c933, ref: "arXiv:0711.4711", locator: "Sec. 4 (two-loop γ*→qq̄g matrix elements of [13], IBP reduction, master integrals in 1d/2d harmonic polylogarithms)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 4983c933, ref: "arXiv:0711.4711", locator: "Sec. 4 (two-loop γ*→qq̄g matrix elements of [13], IBP reduction, master integrals in 1d/2d harmonic polylogarithms)", source: agent, status: cross-checked, date: "2026-10-16"}
       RV:
         status: done
         refs: ["arXiv:hep-ph/9609474", "arXiv:hep-ph/9610370", "arXiv:hep-ph/9706297", "arXiv:hep-ph/9708239"]
-        provenance: {uid: 947891f3, ref: "arXiv:0711.4711", locator: "Sec. 4 and ref. [14] (one-loop γ*→4 partons, originally derived for NLO four-jet production)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 947891f3, ref: "arXiv:0711.4711", locator: "Sec. 4 and ref. [14] (one-loop γ*→4 partons, originally derived for NLO four-jet production)", source: agent, status: cross-checked, date: "2026-10-16"}
       RR:
         status: done
         refs: ["arXiv:0711.4711"]
-        provenance: {uid: 0a99c6a6, ref: "arXiv:0711.4711", locator: "Sec. 1 and Sec. 4 (tree-level γ*→5 partons [15], taken over from an NLO four-jet event generator [35])", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 0a99c6a6, ref: "arXiv:0711.4711", locator: "Sec. 1 and Sec. 4 (tree-level γ*→5 partons [15], taken over from an NLO four-jet event generator [35])", source: agent, status: cross-checked, date: "2026-10-16"}
       ir_scheme:
         status: done
         approximations: ["antenna subtraction extended to NNLO"]
         refs: ["arXiv:hep-ph/0505111", "arXiv:0710.0346"]
-        provenance: {uid: 4e3fa899, ref: "arXiv:0711.4711", locator: "Sec. 4 (NNLO antenna subtraction formalism [16, 17, 42]); Erratum note on corrected large-angle soft subtraction", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 4e3fa899, ref: "arXiv:0711.4711", locator: "Sec. 4 (NNLO antenna subtraction formalism [16, 17, 42]); Erratum note on corrected large-angle soft subtraction", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         refs: ["arXiv:0711.4711", "arXiv:0807.3241", "arXiv:0904.1077"]
-        provenance: {uid: 026a57fd, ref: "arXiv:0711.4711", locator: "Sec. 1 (parton-level program EERAD3 for generic IR-safe three-jet observables); independent implementation: arXiv:0807.3241 abstract, arXiv:0904.1077 abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 026a57fd, ref: "arXiv:0711.4711", locator: "Sec. 1 (parton-level program EERAD3 for generic IR-safe three-jet observables); independent implementation: arXiv:0807.3241 abstract, arXiv:0904.1077 abstract", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:ee-event-shapes/lep1"
     collider: "col:lep1"
@@ -156,10 +156,10 @@ channels:
                 specific: "perturbative error from profile-function scan, N3LL′ with R-gap nonperturbative soft function"
                 method: "scan over profile-function parameters"
                 size: {range: [1.7, 1.7], asymmetric: false, regions: [{where: "Q = mZ, τ in [0.1, 0.3]", value: "±1.7"}]}
-                provenance: {uid: e9912330, ref: "arXiv:1006.3080", locator: "Sec. V, text on Fig. 9d (N3LL′ ±1.7%, N3LL ±3.4%, tail region τ in [0.1, 0.3])", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: e9912330, ref: "arXiv:1006.3080", locator: "Sec. V, text on Fig. 9d (N3LL′ ±1.7%, N3LL ±3.4%, tail region τ in [0.1, 0.3])", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:ee-event-shapes/lep1/aleph-2004", "meas:ee-event-shapes/lep1/opal-2005"]
             refs: ["arXiv:1006.3080"]
-            provenance: {uid: 9ed24867, ref: "arXiv:1006.3080", locator: "Abstract; Sec. VI (fit data sets incl. ALEPH at 91.2 GeV and OPAL at 91 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 9ed24867, ref: "arXiv:1006.3080", locator: "Abstract; Sec. VI (fit data sets incl. ALEPH at 91.2 GeV and OPAL at 91 GeV)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NNLO + NLLA matched"
             accuracy:
@@ -168,7 +168,7 @@ channels:
               approximations: ["parton level; hadronisation not included"]
             compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
             refs: ["arXiv:0803.0695"]
-            provenance: {uid: 639b3084, ref: "arXiv:0803.0695", locator: "Abstract; text before Fig. 3 (compared to hadron-level ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 639b3084, ref: "arXiv:0803.0695", locator: "Abstract; text before Fig. 3 (compared to hadron-level ALEPH data)", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NNLO QCD fixed order"
             accuracy:
               qcd: NNLO
@@ -177,7 +177,7 @@ channels:
             uses_amplitudes: ["amp:2L/qqbar-Vg"]
             compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
             refs: ["arXiv:0711.4711", "arXiv:0707.1285"]
-            provenance: {uid: 10beb00b, ref: "arXiv:0711.4711", locator: "Abstract; Sec. 6.1, Fig. 7 (thrust at Q = mZ vs ALEPH data; scale uncertainty reduced by about 30% from NLO to NNLO)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 10beb00b, ref: "arXiv:0711.4711", locator: "Abstract; Sec. 6.1, Fig. 7 (thrust at Q = mZ vs ALEPH data; scale uncertainty reduced by about 30% from NLO to NNLO)", source: agent, status: cross-checked, date: "2026-10-16"}
   - id: "chan:ee-event-shapes/lep2"
     collider: "col:lep2"
     initial_state: "e+e-"
@@ -245,7 +245,7 @@ channels:
               approximations: ["O(αs³) fixed-order input: NNLO for the thrust distribution", "nonperturbative soft function fitted to thrust data (R-gap scheme)", "includes b-mass effects, QED corrections and dominant top-mass axial-anomaly terms"]
             compared_to: ["meas:ee-event-shapes/lep2/aleph-2004-206"]
             refs: ["arXiv:1006.3080"]
-            provenance: {uid: 6b35adea, ref: "arXiv:1006.3080", locator: "Abstract (global thrust data Q = 35-207 GeV); Sec. VI (ALEPH data sets, Q up to 206 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 6b35adea, ref: "arXiv:1006.3080", locator: "Abstract (global thrust data Q = 35-207 GeV); Sec. VI (ALEPH data sets, Q up to 206 GeV)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NNLO QCD fixed order"
             accuracy:
@@ -255,4 +255,4 @@ channels:
             uses_amplitudes: ["amp:2L/qqbar-Vg"]
             compared_to: ["meas:ee-event-shapes/lep2/aleph-2004-206"]
             refs: ["arXiv:0711.4711"]
-            provenance: {uid: 795dd82a, ref: "arXiv:0711.4711", locator: "Sec. 6.1, Fig. 8 (thrust at Q = 133 ... 206 GeV vs ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 795dd82a, ref: "arXiv:0711.4711", locator: "Sec. 6.1, Fig. 8 (thrust at Q = 133 ... 206 GeV vs ALEPH data)", source: agent, status: cross-checked, date: "2026-10-16"}

@@ -14,31 +14,31 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:467827"]
-        provenance: {uid: 867ddb34, ref: "inspire:467827", locator: "Abstract (one-loop QCD helicity amplitudes for q q̄ → W+W−, ZZ, W±Z including leptonic decays)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 867ddb34, ref: "inspire:467827", locator: "Abstract (one-loop QCD helicity amplitudes for q q̄ → W+W−, ZZ, W±Z including leptonic decays)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       2L:
         status: done
         amplitude: "amp:2L/qqbar-VV"
         refs: ["inspire:1353132"]
-        provenance: {uid: 07b4e471, ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2 → 4 leptons, arbitrary vector-boson virtualities)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 07b4e471, ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2 → 4 leptons, arbitrary vector-boson virtualities)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         refs: ["inspire:1295500", "inspire:1384273"]
-        provenance: {uid: 49d6997f, ref: "inspire:1384273", locator: "Abstract (complete NNLO QCD corrections to four-charged-lepton production in the ZZ signal region, fiducial cross sections and distributions); inclusive: inspire:1295500 abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 49d6997f, ref: "inspire:1384273", locator: "Abstract (complete NNLO QCD corrections to four-charged-lepton production in the ZZ signal region, fiducial cross sections and distributions); inclusive: inspire:1295500 abstract", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
       code:
         status: partial
         approximations: ["only the gluon-fusion channel gg → ZZ at NLO QCD, massless-quark loops (the loop-induced part of N3LO)"]
         refs: ["inspire:1394395"]
-        provenance: {uid: 5dedb8ca, ref: "inspire:1394395", locator: "Abstract (NLO QCD corrections to gg → ZZ, a distinct and potentially dominant part of the N3LO QCD contributions to Z-pair production; five light quark loops in the massless approximation)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 5dedb8ca, ref: "inspire:1394395", locator: "Abstract (NLO QCD corrections to gg → ZZ, a distinct and potentially dominant part of the N3LO QCD contributions to Z-pair production; five light quark loops in the massless approximation)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NLO EW"
     cells:
       1L:
         status: done
         refs: ["inspire:1418197", "inspire:1498315"]
-        provenance: {uid: a7ba6132, ref: "inspire:1498315", locator: "Abstract (NLO EW corrections to ZZ production with leptonic decays into μ+μ−e+e− or μ+μ−μ+μ−, complete LO and NLO matrix elements, off-shell effects in the complex-mass scheme); first complete μ+μ−e+e− calculation: inspire:1418197 abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: a7ba6132, ref: "inspire:1498315", locator: "Abstract (NLO EW corrections to ZZ production with leptonic decays into μ+μ−e+e− or μ+μ−μ+μ−, complete LO and NLO matrix elements, off-shell effects in the complex-mass scheme); first complete μ+μ−e+e− calculation: inspire:1418197 abstract", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:zz/lhc-13"
     collider: "col:lhc-13"
@@ -81,20 +81,20 @@ channels:
                 full_table: "hepdata:ins1814609/Table 1"
                 provenance: {uid: 4e75faa3, ref: "hepdata:ins1814609/Table 1", locator: "Table 1, error 'lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
           - measurement: "meas:zz/lhc-13/atlas-2021-4l"
-            total: {value_pct: 2.6, provenance: {uid: 60b36b6d, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: 49.3 ± 0.8 (stat) ± 0.8 (syst) ± 0.8 (lumi) fb; total ± 1.3 fb", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 2.6, provenance: {uid: 60b36b6d, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: 49.3 ± 0.8 (stat) ± 0.8 (syst) ± 0.8 (lumi) fb; total ± 1.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: 3a97f049, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (stat) of 49.3 fb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 3a97f049, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (stat) of 49.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: 2a2c394b, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (syst) of 49.3 fb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 2a2c394b, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (syst) of 49.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: 2e913d2b, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (lumi) of 49.3 fb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 2e913d2b, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (lumi) of 49.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD × NLO EW qq̄ + NLO gg→ZZ (MATRIX), CMS cuts"
             accuracy:
@@ -103,16 +103,16 @@ channels:
               approximations: ["qq̄ at NNLO QCD and NLO EW combined multiplicatively", "gg → ZZ at NLO QCD", "photon-induced contributions at up to NLO EW", "massless leptons, pT(ℓ) > 5 GeV on the photon-induced component (applied for the total cross section)"]
             codes: ["MATRIX", "OpenLoops"]
             uses_amplitudes: ["amp:2L/qqbar-VV"]
-            total: {value_pct: 2.9, provenance: {uid: c7514093, ref: "inspire:1814609", locator: "Results, fiducial cross section: Matrix v2.0.0_beta1 prediction 38.0 +1.1 −1.0 fb (scale only); larger scale side; NNPDF3.1 NNLO luxQED, dynamic scale m(4ℓ)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 2.9, provenance: {uid: c7514093, ref: "inspire:1814609", locator: "Results, fiducial cross section: Matrix v2.0.0_beta1 prediction 38.0 +1.1 −1.0 fb (scale only); larger scale side; NNPDF3.1 NNLO luxQED, dynamic scale m(4ℓ)", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR and μF scale variation"
                 method: "μR and μF variation around the dynamic central scale m(4ℓ); PDF uncertainty not included"
                 size: {range: [2.6, 2.9], unit: "%", asymmetric: true}
-                provenance: {uid: fb4a7e84, ref: "inspire:1814609", locator: "Results, fiducial cross section: 38.0 +1.1 −1.0 fb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: fb4a7e84, ref: "inspire:1814609", locator: "Results, fiducial cross section: 38.0 +1.1 −1.0 fb", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:zz/lhc-13/cms-2021-incl"]
             refs: ["inspire:1814609", "inspire:1384273", "inspire:1394395", "inspire:1498315"]
-            provenance: {uid: d66261a8, ref: "inspire:1814609", locator: "Theory-prediction paragraph of the data-simulation section and Results (matrix v2.0.0_beta1)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: d66261a8, ref: "inspire:1814609", locator: "Theory-prediction paragraph of the data-simulation section and Results (matrix v2.0.0_beta1)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "Powheg+Pythia8 qq̄ → 4ℓ (NNLO/NLO K-factor, NLO EW reweighting) + gg, ATLAS"
             accuracy:
@@ -121,10 +121,10 @@ channels:
               shower_matched: true
               approximations: ["qq̄ NLO+PS scaled by an NNLO/NLO QCD K-factor from MATRIX as a function of m(4ℓ)", "virtual NLO EW reweighting as a function of m(4ℓ) with a 100% uncertainty on the reweighting", "sum of all SM four-lepton processes in the on-shell ZZ region (including gg → 4ℓ)"]
             codes: ["Powheg-Box", "Pythia8", "MATRIX"]
-            total: {value_pct: 6.5, provenance: {uid: 2a46d83f, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region, Powheg + Pythia8: 46.4 ± 3.0 fb", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 6.5, provenance: {uid: 2a46d83f, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region, Powheg + Pythia8: 46.4 ± 3.0 fb", source: agent, status: cross-checked, date: "2026-10-16"}}
             compared_to: ["meas:zz/lhc-13/atlas-2021-4l"]
             refs: ["inspire:1849535"]
-            provenance: {uid: f84f31cc, ref: "inspire:1849535", locator: "Sec. 4 (Monte Carlo samples; NNLO K-factor and NLO EW reweighting) and Table 2", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: f84f31cc, ref: "inspire:1849535", locator: "Sec. 4 (Monte Carlo samples; NNLO K-factor and NLO EW reweighting) and Table 2", source: agent, status: cross-checked, date: "2026-10-16"}
       - id: "obs:zz/lhc-13/sigma-tot"
         name: "Total σ(pp → ZZ)"
         kind: total
@@ -161,14 +161,14 @@ channels:
               approximations: ["qq̄ at NNLO QCD and NLO EW combined multiplicatively", "gg → ZZ at NLO QCD", "photon-induced contributions at up to NLO EW", "fixed scale μR = μF = mZ for the total cross section"]
             codes: ["MATRIX", "OpenLoops"]
             uses_amplitudes: ["amp:2L/qqbar-VV"]
-            total: {value_pct: 3.6, provenance: {uid: '68448426', ref: "inspire:1814609", locator: "Results, total cross section: Matrix v2.0.0_beta1 prediction 16.5 +0.6 −0.5 pb (scale only); larger scale side", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 3.6, provenance: {uid: '68448426', ref: "inspire:1814609", locator: "Results, total cross section: Matrix v2.0.0_beta1 prediction 16.5 +0.6 −0.5 pb (scale only); larger scale side", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR and μF scale variation"
                 method: "μR and μF variation around the fixed central scale mZ; PDF uncertainty not included"
                 size: {range: [3.0, 3.6], unit: "%", asymmetric: true}
-                provenance: {uid: 6afc39e2, ref: "inspire:1814609", locator: "Results, total cross section: 16.5 +0.6 −0.5 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 6afc39e2, ref: "inspire:1814609", locator: "Results, total cross section: 16.5 +0.6 −0.5 pb", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:zz/lhc-13/cms-2021-incl"]
             refs: ["inspire:1814609", "inspire:1384273", "inspire:1394395"]
-            provenance: {uid: b7145c30, ref: "inspire:1814609", locator: "Results, total cross section (matrix v2.0.0_beta1)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: b7145c30, ref: "inspire:1814609", locator: "Results, total cross section (matrix v2.0.0_beta1)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true

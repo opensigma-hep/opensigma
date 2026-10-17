@@ -15,16 +15,16 @@ building_blocks:
         status: done
         amplitude: "amp:2L/qqbar-Vg"
         refs: ["arXiv:0802.0813"]
-        provenance: {uid: c5872e13, ref: "arXiv:0802.0813", locator: "p. 4 (contributions of the two-loop virtual and virtual-radiation graphs to the three- and four-jet rates)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: c5872e13, ref: "arXiv:0802.0813", locator: "p. 4 (contributions of the two-loop virtual and virtual-radiation graphs to the three- and four-jet rates)", source: agent, status: cross-checked, date: "2026-10-16"}
       ir_scheme:
         status: done
         approximations: ["antenna subtraction extended to NNLO"]
         refs: ["arXiv:0802.0813"]
-        provenance: {uid: feb15228, ref: "arXiv:0802.0813", locator: "p. 3 (antenna subtraction method [25, 37] extended to NNLO [38], implemented for e+e- → 3 jets in EERAD3)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: feb15228, ref: "arXiv:0802.0813", locator: "p. 3 (antenna subtraction method [25, 37] extended to NNLO [38], implemented for e+e- → 3 jets in EERAD3)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         refs: ["arXiv:0802.0813", "arXiv:0904.1077"]
-        provenance: {uid: 433d0769, ref: "arXiv:0802.0813", locator: "p. 3 (parton-level program EERAD3, matrix elements with up to five external partons, jet rates for any IR-safe algorithm); independent NNLO jet rates: arXiv:0904.1077 abstract (Durham, Geneva, Jade-E0, Cambridge)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 433d0769, ref: "arXiv:0802.0813", locator: "p. 3 (parton-level program EERAD3, matrix elements with up to five external partons, jet rates for any IR-safe algorithm); independent NNLO jet rates: arXiv:0904.1077 abstract (Durham, Geneva, Jade-E0, Cambridge)", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:ee-jet-rates/lep1"
     collider: "col:lep1"
@@ -139,7 +139,7 @@ channels:
               approximations: ["parton level; hadronisation not included"]
             compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
             refs: ["arXiv:0803.0695"]
-            provenance: {uid: aaf811e3, ref: "arXiv:0803.0695", locator: "Abstract; text before Fig. 3 (Y3 among the six event shapes, compared to hadron-level ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: aaf811e3, ref: "arXiv:0803.0695", locator: "Abstract; text before Fig. 3 (Y3 among the six event shapes, compared to hadron-level ALEPH data)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NNLO QCD fixed order"
             accuracy:
@@ -149,7 +149,7 @@ channels:
             uses_amplitudes: ["amp:2L/qqbar-Vg"]
             compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
             refs: ["arXiv:0711.4711", "arXiv:0904.1077"]
-            provenance: {uid: f67ea173, ref: "arXiv:0711.4711", locator: "Sec. 5.5 and Sec. 6.5, Fig. 17 (Y3, Durham, at Q = mZ vs ALEPH data; scale uncertainty reduced by about 50% from NLO to NNLO); arXiv:0904.1077 abstract (independent NNLO result for the Durham y₃)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: f67ea173, ref: "arXiv:0711.4711", locator: "Sec. 5.5 and Sec. 6.5, Fig. 17 (Y3, Durham, at Q = mZ vs ALEPH data; scale uncertainty reduced by about 50% from NLO to NNLO); arXiv:0904.1077 abstract (independent NNLO result for the Durham y₃)", source: agent, status: cross-checked, date: "2026-10-16"}
       - id: "obs:ee-jet-rates/lep1/r3"
         name: "Durham three-jet rate R₃(y_cut)"
         kind: ratio
@@ -208,10 +208,10 @@ channels:
                 specific: "renormalisation scale, δ = (max − min)/(2σ(μ = MZ)); upper bound only"
                 method: "μ varied in [MZ/2, 2MZ]"
                 size: {range: [0, 2], asymmetric: false, regions: [{where: "10⁻² < y_cut < 10⁻¹, Q = mZ (below two per cent)", value: "±2"}]}
-                provenance: {uid: bec7148b, ref: "arXiv:0802.0813", locator: "p. 3, text on Fig. 1 (relative scale uncertainty below two per cent for 10⁻¹ > y_cut > 10⁻²; LO constant at 10.2%)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: bec7148b, ref: "arXiv:0802.0813", locator: "p. 3, text on Fig. 1 (relative scale uncertainty below two per cent for 10⁻¹ > y_cut > 10⁻²; LO constant at 10.2%)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
             refs: ["arXiv:0802.0813"]
-            provenance: {uid: 72c234e2, ref: "arXiv:0802.0813", locator: "Abstract; Fig. 1 (three-jet rate at Q = mZ vs ALEPH data)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 72c234e2, ref: "arXiv:0802.0813", locator: "Abstract; Fig. 1 (three-jet rate at Q = mZ vs ALEPH data)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
       - id: "obs:ee-jet-rates/lep1/r2"
         name: "Durham two-jet rate R₂(y_cut)"
@@ -267,5 +267,5 @@ channels:
               approximations: ["two-jet rate at N3LO deduced from the NNLO three-jet rate and the N3LO total cross section"]
             compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
             refs: ["arXiv:1902.08158", "arXiv:1607.03111"]
-            provenance: {uid: dd14ea63, ref: "arXiv:1902.08158", locator: "Abstract; Sec. 1 (N3LO two-jet rate from NNLO three-jet rate and N3LO σ_tot; NNLL from arXiv:1607.03111); data-set table (ALEPH at 91.2 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: dd14ea63, ref: "arXiv:1902.08158", locator: "Abstract; Sec. 1 (N3LO two-jet rate from NNLO three-jet rate and N3LO σ_tot; NNLL from arXiv:1607.03111); data-set table (ALEPH at 91.2 GeV)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true

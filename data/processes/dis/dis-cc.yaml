@@ -15,27 +15,27 @@ building_blocks:
       code:
         status: done
         refs: ["inspire:130340", "inspire:1377206"]
-        provenance: {uid: f7a253e0, ref: "inspire:130340", locator: "Abstract (full order-g² corrections to the coefficient functions, relevant for electroproduction and neutrino reactions, non-singlet and singlet); CC with QCDNUM in zero-mass approximation: inspire:1377206 Sec. 6.1", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: f7a253e0, ref: "inspire:130340", locator: "Abstract (full order-g² corrections to the coefficient functions, relevant for electroproduction and neutrino reactions, non-singlet and singlet); CC with QCDNUM in zero-mass approximation: inspire:1377206 Sec. 6.1", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       code:
         status: done
         refs: ["inspire:511611", "inspire:759231", "inspire:1377206"]
-        provenance: {uid: 7fd62bbf, ref: "inspire:511611", locator: "Abstract (2-loop coefficient functions of F2, F3 and FL); crossing-even/odd two-loop differences incl. FL: inspire:759231 Abstract; HERAPDF2.0 NNLO fit: inspire:1377206 Sec. 6.1", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 7fd62bbf, ref: "inspire:511611", locator: "Abstract (2-loop coefficient functions of F2, F3 and FL); crossing-even/odd two-loop differences incl. FL: inspire:759231 Abstract; HERAPDF2.0 NNLO fit: inspire:1377206 Sec. 6.1", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
       code:
         status: done
         approximations: ["massless QCD", "compact approximate x-space expressions for the three-loop coefficient functions (inspire:1472971)"]
         refs: ["inspire:1472971", "inspire:748563", "inspire:759231", "inspire:805947"]
-        provenance: {uid: 83bece7a, ref: "inspire:1472971", locator: "Abstract (coefficient functions of F2, FL and F3 in ν-ν̄ charged-current DIS at third order, completing unpolarized inclusive W± exchange DIS in massless pQCD; compact approximate expressions)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 83bece7a, ref: "inspire:1472971", locator: "Abstract (coefficient functions of F2, FL and F3 in ν-ν̄ charged-current DIS at third order, completing unpolarized inclusive W± exchange DIS in massless pQCD; compact approximate expressions)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NLO EW"
     cells:
       code:
         status: done
         approximations: ["single-photon bremsstrahlung included without cuts (inspire:279913)"]
         refs: ["inspire:279913", "inspire:296225"]
-        provenance: {uid: db7a28c5, ref: "inspire:296225", locator: "Abstract (HERACLES: single-photon emission from the lepton line, self-energy corrections and the complete set of one-loop weak corrections for NC and CC ep scattering at HERA); analytic CC results inspire:279913 Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: db7a28c5, ref: "inspire:296225", locator: "Abstract (HERACLES: single-photon emission from the lepton line, self-energy corrections and the complete set of one-loop weak corrections for NC and CC ep scattering at HERA); analytic CC results inspire:279913 Abstract", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:dis-cc/hera"
     collider: "col:hera"
@@ -114,9 +114,9 @@ channels:
             codes: ["QCDNUM", "HERAFitter"]
             compared_to: ["meas:dis-cc/hera/hera-2015-comb"]
             refs: ["inspire:1377206", "arXiv:1005.1481"]
-            provenance: {uid: 244b1c8e, ref: "inspire:1377206", locator: "Sec. 6.1 (NNLO DGLAP with QCDNUM in HERAFitter; for the CC structure functions the zero-mass approximation was used since all HERA CC data have Q² ≫ Mb²; μr² = μf² = Q²)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 244b1c8e, ref: "inspire:1377206", locator: "Sec. 6.1 (NNLO DGLAP with QCDNUM in HERAFitter; for the CC structure functions the zero-mass approximation was used since all HERA CC data have Q² ≫ Mb²; μr² = μf² = Q²)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "Massless N3LO coefficient functions for CC F2, FL and F3"
             accuracy: {qcd: N3LO, approximations: ["massless quarks", "approximate x-space parametrisations of the three-loop coefficient functions"]}
             refs: ["inspire:1472971", "inspire:805947"]
-            provenance: {uid: 79225d25, ref: "inspire:1472971", locator: "Abstract (third-order coefficient functions for F2, FL and F3 in ν-ν̄ charged-current DIS, compact approximate expressions); F3: inspire:805947 Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 79225d25, ref: "inspire:1472971", locator: "Abstract (third-order coefficient functions for F2, FL and F3 in ν-ν̄ charged-current DIS, compact approximate expressions); F3: inspire:805947 Abstract", source: agent, status: cross-checked, date: "2026-10-16"}

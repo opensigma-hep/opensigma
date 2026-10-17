@@ -10,6 +10,6 @@ master_integrals:
 evaluation:
   kind: analytic
   detail: "IBP reduction to known masters, analytic ε-expansion in ζ values (form-factor coefficients in terms of masters, App. B)"
-  provenance: {uid: ae732397, ref: "inspire:852545", locator: "Sec. 5 and App. A–B (three-loop gluon form factor F3g as a linear combination of master integrals, expanded in ε; analytic expressions for the masters in App. A)", source: agent, status: agent-draft, date: "2026-10-16"}
+  provenance: {uid: ae732397, ref: "inspire:852545", locator: "Sec. 5 and App. A–B (three-loop gluon form factor F3g as a linear combination of master integrals, expanded in ε; analytic expressions for the masters in App. A)", source: agent, status: cross-checked, date: "2026-10-16"}
 refs: ["inspire:813829", "inspire:852545"]
-provenance: {uid: 426ca576, ref: "inspire:813829", locator: "Abstract (form factor of the effective vertex of a Higgs boson and two gluons to three-loop order in massless perturbative QCD)", source: agent, status: agent-draft, date: "2026-10-16"}
+provenance: {uid: 426ca576, ref: "inspire:813829", locator: "Abstract (form factor of the effective vertex of a Higgs boson and two gluons to three-loop order in massless perturbative QCD)", source: agent, status: cross-checked, date: "2026-10-16"}

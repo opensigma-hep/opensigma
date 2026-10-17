@@ -14,33 +14,33 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:1740872"]
-        provenance: {uid: e99a56f4, ref: "inspire:1740872", locator: "Sec. 2, list of included corrections (complete one-loop corrections, re-computed for this work)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: e99a56f4, ref: "inspire:1740872", locator: "Sec. 2, list of included corrections (complete one-loop corrections, re-computed for this work)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO EW"
     cells:
       2L:
         status: done
         amplitude: "amp:2L/Zff-ew"
         refs: ["inspire:1670617", "inspire:1740872"]
-        provenance: {uid: c0ef375b, ref: "inspire:1670617", locator: "Abstract (bosonic two-loop corrections complete the full two-loop description of Z-boson precision observables)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: c0ef375b, ref: "inspire:1670617", locator: "Abstract (bosonic two-loop corrections complete the full two-loop description of Z-boson precision observables)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD×EW"
     cells:
       2L:
         status: done
         approximations: ["O(ααs): vector-boson self-energies and non-factorisable Z q q̄ vertex contributions"]
         refs: ["inspire:1740872"]
-        provenance: {uid: eecc2f62, ref: "inspire:1740872", locator: "Sec. 2, list of included corrections (O(ααs) corrections to vector-boson self-energies; non-factorisable O(ααs) Z q q̄ vertex)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: eecc2f62, ref: "inspire:1740872", locator: "Sec. 2, list of included corrections (O(ααs) corrections to vector-boson self-energies; non-factorisable O(ααs) Z q q̄ vertex)", source: agent, status: cross-checked, date: "2026-10-16"}
       3L:
         status: partial
         approximations: ["leading large-top-Yukawa limit only: O(αt αs²), O(αt² αs), O(αt³), and four-loop O(αt αs³)"]
         refs: ["inspire:1740872"]
-        provenance: {uid: 7941d0c7, ref: "inspire:1740872", locator: "Sec. 2, list of included corrections (higher-loop QCD corrections in the limit of a large top Yukawa coupling)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 7941d0c7, ref: "inspire:1740872", locator: "Sec. 2, list of included corrections (higher-loop QCD corrections in the limit of a large top Yukawa coupling)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
       3L:
         status: done
         approximations: ["inclusive hadronic Z decay rate, complete through O(αs⁴); axial-singlet terms in the heavy-top limit"]
         refs: ["inspire:1086186"]
-        provenance: {uid: 2f7e313b, ref: "inspire:1086186", locator: "Abstract (first complete O(αs⁴) prediction for the total hadronic Z decay rate; singlet terms in the heavy top quark limit)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 2f7e313b, ref: "inspire:1086186", locator: "Abstract (first complete O(αs⁴) prediction for the total hadronic Z decay rate; singlet terms in the heavy top quark limit)", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:z-pole/lep1"
     collider: "col:lep1"
@@ -60,16 +60,16 @@ channels:
         variable: "σ⁰_had at √s = m_Z, pure Z exchange (photon/interference removed, ISR deconvoluted)"
         results:
           - measurement: "meas:z-pole/lep1/lep-2005-combination"
-            total: {value_pct: 0.089, provenance: {uid: f7774dee, ref: "inspire:691576", locator: "Table 2.13 (without lepton universality): σ⁰_had = 41.541 ± 0.037 nb; 0.037/41.541, errors include all common errors", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 0.089, provenance: {uid: f7774dee, ref: "inspire:691576", locator: "Table 2.13 (without lepton universality): σ⁰_had = 41.541 ± 0.037 nb; 0.037/41.541, errors include all common errors", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: lumi
                 specific: "Theory error on small-angle Bhabha cross section (luminosity)"
                 size: {range: [0.060, 0.060], unit: "%", asymmetric: false}
-                provenance: {uid: 96252f6f, ref: "inspire:691576", locator: "Sec. 2.6, text after Table 2.13: ±0.025 nb on σ⁰_had from the theoretical error on the small-angle Bhabha cross section, of 41.541 nb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 96252f6f, ref: "inspire:691576", locator: "Sec. 2.6, text after Table 2.13: ±0.025 nb on σ⁰_had from the theoretical error on the small-angle Bhabha cross section, of 41.541 nb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "QED radiator uncertainty (ISR and pair radiation)"
                 size: {range: [0.02, 0.02], unit: "%", asymmetric: false}
-                provenance: {uid: 80b814de, ref: "inspire:691576", locator: "Sec. 2.4.4, QED Uncertainties: error of ±0.02 % on σ⁰_had from the QED-related uncertainties", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 80b814de, ref: "inspire:691576", locator: "Sec. 2.4.4, QED Uncertainties: error of ±0.02 % on σ⁰_had from the QED-related uncertainties", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "Complete two-loop EW + QCD to four loops (Dubovyk, Freitas, Gluza, Riemann, Usovitsch)"
             headline: true
@@ -79,13 +79,13 @@ channels:
               mixed: "O(ααs) self-energy and non-factorisable Z q q̄ vertex terms; leading large-y_t terms O(αt αs²), O(αt² αs), O(αt³), O(αt αs³)"
               approximations: ["final-state QCD radiator functions up to O(αs⁴); fit-formula parametrisation of the full numerical result (max. deviation < 0.15 pb)"]
             uses_amplitudes: ["amp:2L/Zff-ew"]
-            total: {value_pct: 0.0145, provenance: {uid: 246539a1, ref: "inspire:1740872", locator: "Table 8, σ⁰_had row: missing higher orders (O(ααs²) 0.2, O(ααs³) 0.03, O(α²αs) 4.2, O(α³) 3.7) total 6 pb, added in quadrature; relative to X0 = 41489.6 pb (Table 1)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 0.0145, provenance: {uid: 246539a1, ref: "inspire:1740872", locator: "Table 8, σ⁰_had row: missing higher orders (O(ααs²) 0.2, O(ααs³) 0.03, O(α²αs) 4.2, O(α³) 3.7) total 6 pb, added in quadrature; relative to X0 = 41489.6 pb (Table 1)", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "Unknown three- and four-loop corrections"
                 method: "geometric-series estimate of missing O(α³), O(α²αs), O(ααs²), O(ααs³) beyond the large-y_t limit, added in quadrature"
                 size: {range: [0.0145, 0.0145], unit: "%", asymmetric: false, regions: [{where: "O(α²αs)", value: "±0.0101"}, {where: "O(α³)", value: "±0.0089"}, {where: "O(ααs²)", value: "±0.0005"}, {where: "O(ααs³)", value: "±0.0001"}]}
-                provenance: {uid: 7138d040, ref: "inspire:1740872", locator: "Table 8 (σ⁰_had row) and Sec. 5, eq. (5.1); percentages relative to X0 = 41489.6 pb (Table 1)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 7138d040, ref: "inspire:1740872", locator: "Table 8 (σ⁰_had row) and Sec. 5, eq. (5.1); percentages relative to X0 = 41489.6 pb (Table 1)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:z-pole/lep1/lep-2005-combination"]
             refs: ["inspire:1740872", "inspire:1670617"]
-            provenance: {uid: ba8d3f0f, ref: "inspire:1740872", locator: "Abstract; Sec. 2 (list of included corrections); Table 4 compares with present experimental precision", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: ba8d3f0f, ref: "inspire:1740872", locator: "Abstract; Sec. 2 (list of included corrections); Table 4 compares with present experimental precision", source: agent, status: cross-checked, date: "2026-10-16"}

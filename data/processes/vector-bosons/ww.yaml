@@ -14,24 +14,24 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:467827"]
-        provenance: {uid: 88ee4bf9, ref: "inspire:467827", locator: "Abstract (one-loop QCD helicity amplitudes for q q̄ → W+W−, ZZ, W±Z including leptonic decays)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 88ee4bf9, ref: "inspire:467827", locator: "Abstract (one-loop QCD helicity amplitudes for q q̄ → W+W−, ZZ, W±Z including leptonic decays)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       2L:
         status: done
         amplitude: "amp:2L/qqbar-VV"
         refs: ["inspire:1353132"]
-        provenance: {uid: '90562084', ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2 → 4 leptons, arbitrary vector-boson virtualities)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: '90562084', ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2 → 4 leptons, arbitrary vector-boson virtualities)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         refs: ["inspire:1311991", "inspire:1636973"]
-        provenance: {uid: '770736e3', ref: "inspire:1311991", locator: "Abstract (first QCD calculation up to NNLO for on-shell W+W− production); off-shell, all leptonic channels: inspire:1636973 (MATRIX) abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: '770736e3', ref: "inspire:1311991", locator: "Abstract (first QCD calculation up to NNLO for on-shell W+W− production); off-shell, all leptonic channels: inspire:1636973 (MATRIX) abstract", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NLO EW"
     cells:
       1L:
         status: done
         refs: ["inspire:1457600"]
-        provenance: {uid: c9e14bbb, ref: "inspire:1457600", locator: "Abstract (first NLO EW calculation for pp → W+W− → 4 leptons with full off-shell effects, complex-mass scheme)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: c9e14bbb, ref: "inspire:1457600", locator: "Abstract (first NLO EW calculation for pp → W+W− → 4 leptons with full off-shell effects, complex-mass scheme)", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:ww/lhc-13"
     collider: "col:lhc-13"
@@ -62,19 +62,19 @@ channels:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
-                provenance: {uid: 7fdbd09e, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: σ_tot = 117.6 ± 1.4 (stat) ± 5.5 (syst) ± 1.9 (thy) ± 3.2 (lum) pb; stat of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 7fdbd09e, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: σ_tot = 117.6 ± 1.4 (stat) ± 5.5 (syst) ± 1.9 (thy) ± 3.2 (lum) pb; stat of 117.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [4.7, 4.7], unit: "%", asymmetric: false}
-                provenance: {uid: b8c8f4ac, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 5.5 (syst) of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: b8c8f4ac, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 5.5 (syst) of 117.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: acceptance_extrapolation
                 specific: "Theory modelling (acceptance extrapolation)"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: 7efdb37a, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 1.9 (thy) of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 7efdb37a, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 1.9 (thy) of 117.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [2.7, 2.7], unit: "%", asymmetric: false}
-                provenance: {uid: d737e476, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 3.2 (lum) of 117.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: d737e476, ref: "inspire:1814328", locator: "Results section, sequential-cut analysis: ± 3.2 (lum) of 117.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD qq̄ + NLO gg→WW + NLO EW (CMS)"
             accuracy:
@@ -82,10 +82,10 @@ channels:
               ew: NLO
               approximations: ["qq̄ at NNLO QCD, gg → WW at LO scaled by the NLO/LO factor 1.4", "NLO EW as a −1.2% correction to the qq̄ channel"]
             uses_amplitudes: ["amp:2L/qqbar-VV"]
-            total: {value_pct: 3.0, provenance: {uid: 8685ea69, ref: "inspire:1814328", locator: "Introduction, theory paragraph: σ_tot^NNLO = 118.8 ± 3.6 pb (scale, PDF and αS uncertainties; PDF + αS = 2.0 pb)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 3.0, provenance: {uid: 8685ea69, ref: "inspire:1814328", locator: "Introduction, theory paragraph: σ_tot^NNLO = 118.8 ± 3.6 pb (scale, PDF and αS uncertainties; PDF + αS = 2.0 pb)", source: agent, status: cross-checked, date: "2026-10-16"}}
             compared_to: ["meas:ww/lhc-13/cms-2020-tot"]
             refs: ["inspire:1814328", "inspire:1311991"]
-            provenance: {uid: 21b30ab3, ref: "inspire:1814328", locator: "Introduction, theory paragraph (σ_tot^NNLO = 118.8 ± 3.6 pb), qq̄ NNLO calculation of Gehrmann et al. (their ref. [8])", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 21b30ab3, ref: "inspire:1814328", locator: "Introduction, theory paragraph (σ_tot^NNLO = 118.8 ± 3.6 pb), qq̄ NNLO calculation of Gehrmann et al. (their ref. [8])", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
       - id: "obs:ww/lhc-13/sigma-fid-0jet"
         name: "Fiducial σ(pp → W⁺W⁻ → eμνν), jet veto 35 GeV"
@@ -163,10 +163,10 @@ channels:
               approximations: ["gg → WW at NLO QCD", "NLO EW applied multiplicatively to the sum of qq̄ and gg channels", "scale uncertainty evaluated according to the jet-veto prescription of their ref. [108] (Stewart and Tackmann)"]
             codes: ["MATRIX", "OpenLoops"]
             uses_amplitudes: ["amp:2L/qqbar-VV"]
-            total: {value_pct: 5.8, provenance: {uid: a2377c19, ref: "inspire:1734263", locator: "Table 5, (MATRIX NNLO qq̄ and gg @ NLO) × NLO EW: 347 ± 20 fb (PDF + scale); NNPDF3.1 LUXqed, μ = mWW/2", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 5.8, provenance: {uid: a2377c19, ref: "inspire:1734263", locator: "Table 5, (MATRIX NNLO qq̄ and gg @ NLO) × NLO EW: 347 ± 20 fb (PDF + scale); NNPDF3.1 LUXqed, μ = mWW/2", source: agent, status: cross-checked, date: "2026-10-16"}}
             compared_to: ["meas:ww/lhc-13/atlas-2019-fid"]
             refs: ["inspire:1734263", "inspire:1636973", "inspire:1353132", "inspire:1457600"]
-            provenance: {uid: 9ab19db7, ref: "inspire:1734263", locator: "Sec. 8, Table 5 (refs. [101]–[105] therein)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 9ab19db7, ref: "inspire:1734263", locator: "Sec. 8, Table 5 (refs. [101]–[105] therein)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NNLO QCD qq̄ + NLO gg→WW (MATRIX), no EW"
             accuracy:
@@ -174,7 +174,7 @@ channels:
               approximations: ["gg → WW at NLO QCD", "no EW corrections"]
             codes: ["MATRIX", "OpenLoops"]
             uses_amplitudes: ["amp:2L/qqbar-VV"]
-            total: {value_pct: 5.7, provenance: {uid: 9a81da9d, ref: "inspire:1734263", locator: "Table 5, MATRIX NNLO qq̄ → WW and gg → WW @ NLO: 368 ± 21 fb (PDF + scale)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 5.7, provenance: {uid: 9a81da9d, ref: "inspire:1734263", locator: "Table 5, MATRIX NNLO qq̄ → WW and gg → WW @ NLO: 368 ± 21 fb (PDF + scale)", source: agent, status: cross-checked, date: "2026-10-16"}}
             compared_to: ["meas:ww/lhc-13/atlas-2019-fid"]
             refs: ["inspire:1734263", "inspire:1636973"]
-            provenance: {uid: 55b7ee1a, ref: "inspire:1734263", locator: "Sec. 8, Table 5", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 55b7ee1a, ref: "inspire:1734263", locator: "Sec. 8, Table 5", source: agent, status: cross-checked, date: "2026-10-16"}

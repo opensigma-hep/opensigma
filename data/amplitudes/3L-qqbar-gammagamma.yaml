@@ -6,6 +6,6 @@ status: done
 evaluation:
   kind: analytic
   detail: "compact analytic results in harmonic polylogarithms or multiple polylogarithms up to depth three"
-  provenance: {uid: 049ad2cd, ref: "inspire:1834011", locator: "Abstract (analytic results in HPLs or MPLs of up to depth three)", source: agent, status: agent-draft, date: "2026-10-16"}
+  provenance: {uid: 049ad2cd, ref: "inspire:1834011", locator: "Abstract (analytic results in HPLs or MPLs of up to depth three)", source: agent, status: cross-checked, date: "2026-10-16"}
 refs: ["inspire:1834011"]
-provenance: {uid: 309940fe, ref: "inspire:1834011", locator: "Abstract (three-loop helicity amplitudes for qq̄ → γγ in QCD, first calculation of a three-loop four-point amplitude in full QCD)", source: agent, status: agent-draft, date: "2026-10-16"}
+provenance: {uid: 309940fe, ref: "inspire:1834011", locator: "Abstract (three-loop helicity amplitudes for qq̄ → γγ in QCD, first calculation of a three-loop four-point amplitude in full QCD)", source: agent, status: cross-checked, date: "2026-10-16"}

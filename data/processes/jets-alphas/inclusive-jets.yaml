@@ -16,44 +16,44 @@ building_blocks:
         status: done
         amplitude: "amp:1L/2to2-partons"
         refs: ["inspire:218454", "inspire:336137", "inspire:332376"]
-        provenance: {uid: 28bb2843, ref: "inspire:218454", locator: "Abstract (matrix elements squared for all 2→2 and 2→3 parton subprocesses at O(αs³))", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 28bb2843, ref: "inspire:218454", locator: "Abstract (matrix elements squared for all 2→2 and 2→3 parton subprocesses at O(αs³))", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         refs: ["inspire:623857", "inspire:727193", "inspire:1972986"]
-        provenance: {uid: fb90af42, ref: "inspire:1972986", locator: "Sec. 4.1 (fixed-order predictions at NLO and NNLO from NLOJet++ and NNLOJET, NLO implemented in fastNLO)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: fb90af42, ref: "inspire:1972986", locator: "Sec. 4.1 (fixed-order predictions at NLO and NNLO from NLOJet++ and NNLOJET, NLO implemented in fastNLO)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       2L:
         status: done
         amplitude: "amp:2L/2to2-partons"
         refs: ["inspire:553143", "inspire:552493", "inspire:535309", "inspire:536445"]
-        provenance: {uid: 26c549aa, ref: "inspire:1495841", locator: "p. 1 (NNLO needs tree-level [18], one-loop [19–21] and two-loop [22–24] parton-level amplitudes)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 26c549aa, ref: "inspire:1495841", locator: "p. 1 (NNLO needs tree-level [18], one-loop [19–21] and two-loop [22–24] parton-level amplitudes)", source: agent, status: cross-checked, date: "2026-10-16"}
       RV:
         status: done
         amplitude: "amp:1L/2to3-partons"
         refs: ["inspire:352808", "inspire:377332", "inspire:373656"]
-        provenance: {uid: adb18877, ref: "inspire:1495841", locator: "p. 1 (NNLO needs tree-level [18], one-loop [19–21] and two-loop [22–24] parton-level amplitudes)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: adb18877, ref: "inspire:1495841", locator: "p. 1 (NNLO needs tree-level [18], one-loop [19–21] and two-loop [22–24] parton-level amplitudes)", source: agent, status: cross-checked, date: "2026-10-16"}
       RR:
         status: done
         approximations: ["original NNLOJET calculation at leading colour (Nc², NcNF, NF²) in all channels; full colour: inspire:1747058, inspire:2070536"]
         refs: ["inspire:1495841", "inspire:1747058", "inspire:2070536"]
-        provenance: {uid: 8ff1a787, ref: "inspire:1495841", locator: "p. 1 (double-real subprocesses gg→gggg, gg→qq̄gg, gg→qq̄qq̄; leading-colour contributions in all channels)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 8ff1a787, ref: "inspire:1495841", locator: "p. 1 (double-real subprocesses gg→gggg, gg→qq̄gg, gg→qq̄qq̄; leading-colour contributions in all channels)", source: agent, status: cross-checked, date: "2026-10-16"}
       ir_scheme:
         status: done
         approximations: ["antenna subtraction (NNLOJET)", "sector-improved residue subtraction (independent exact-colour calculation, inspire:1747058)"]
         refs: ["inspire:1495841", "inspire:1747058"]
-        provenance: {uid: 8a62f46f, ref: "inspire:1495841", locator: "p. 1 (antenna subtraction implemented in the parton-level event generator NNLOJET)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 8a62f46f, ref: "inspire:1495841", locator: "p. 1 (antenna subtraction implemented in the parton-level event generator NNLOJET)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         refs: ["inspire:2906156", "inspire:1495841", "inspire:2070536", "inspire:1747058"]
-        provenance: {uid: 83f180af, ref: "inspire:2906156", locator: "Abstract (open-source NNLOJET code for jet cross sections at NNLO QCD in hadron-hadron collisions)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 83f180af, ref: "inspire:2906156", locator: "Abstract (open-source NNLOJET code for jet cross sections at NNLO QCD in hadron-hadron collisions)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NLO EW"
     cells:
       1L:
         status: partial
         approximations: ["tree-level O(αsα, α²) and weak loop O(αs²α) corrections only"]
         refs: ["inspire:1188853"]
-        provenance: {uid: 07d894ba, ref: "inspire:1188853", locator: "Abstract (most important electroweak corrections to dijet production: tree-level O(αsα, α²) and weak loops O(αs²α))", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 07d894ba, ref: "inspire:1188853", locator: "Abstract (most important electroweak corrections to dijet production: tree-level O(αsα, α²) and weak loops O(αs²α))", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:inclusive-jets/lhc-13"
     collider: "col:lhc-13"
@@ -198,7 +198,7 @@ channels:
             uses_amplitudes: ["amp:2L/2to2-partons", "amp:1L/2to3-partons", "amp:1L/2to2-partons"]
             compared_to: ["meas:inclusive-jets/lhc-13/cms-2021", "meas:inclusive-jets/lhc-13/atlas-2017"]
             refs: ["inspire:1972986", "inspire:1634970", "inspire:1495841", "inspire:1681639"]
-            provenance: {uid: 2c62b3ba, ref: "inspire:1972986", locator: "Secs. 4.1–4.3 and 5, Fig. 6 (NNLO QCD CT14 ⊗ NP ⊗ EW); ATLAS: inspire:1634970 Sec. 9.4 (NNLOJET, MMHT 2014 NNLO, NP and EW corrections applied)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 2c62b3ba, ref: "inspire:1972986", locator: "Secs. 4.1–4.3 and 5, Fig. 6 (NNLO QCD CT14 ⊗ NP ⊗ EW); ATLAS: inspire:1634970 Sec. 9.4 (NNLOJET, MMHT 2014 NNLO, NP and EW corrections applied)", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NLO+NLL (joint threshold and jet-radius resummation)"
             accuracy:
               qcd: NLO
@@ -206,7 +206,7 @@ channels:
             codes: ["NLL-Jet", "MEKS"]
             compared_to: ["meas:inclusive-jets/lhc-13/cms-2021"]
             refs: ["inspire:1649956", "inspire:1972986"]
-            provenance: {uid: 58168b4d, ref: "inspire:1972986", locator: "Sec. 4.1, Eq. (3) (NLO+NLL k-factor from the NLL-Jet calculation of Liu, Moch, Ringer)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 58168b4d, ref: "inspire:1972986", locator: "Sec. 4.1, Eq. (3) (NLO+NLL k-factor from the NLL-Jet calculation of Liu, Moch, Ringer)", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NLO QCD (NLOJET++/APPLGRID) ⊗ NP ⊗ EW, CT14 NLO"
             accuracy:
               qcd: NLO
@@ -219,15 +219,15 @@ channels:
                 specific: "μR, μF variation (plus difference between pT and pT^max scale choices)"
                 method: "μR, μF varied by factors 1/2 and 2 excluding opposite variations; envelope"
                 size: {range: [10, 50], unit: "%", asymmetric: false}
-                provenance: {uid: 8205f519, ref: "inspire:1634970", locator: "Sec. 9.1 (scale uncertainty rising from 10% at pT ≈ 100 GeV in the central bin to about 50% at highest pT in the most forward bin)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 8205f519, ref: "inspire:1634970", locator: "Sec. 9.1 (scale uncertainty rising from 10% at pT ≈ 100 GeV in the central bin to about 50% at highest pT in the most forward bin)", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: PDF
                 specific: "CT14 NLO PDF uncertainty (68% CL)"
                 pdf_set: "CT14 NLO"
                 size: {range: [2, 12], unit: "%", asymmetric: false}
-                provenance: {uid: e897d7ad, ref: "inspire:1634970", locator: "Sec. 9.1 (PDF uncertainties vary from 2% to 12% depending on jet pT and rapidity)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: e897d7ad, ref: "inspire:1634970", locator: "Sec. 9.1 (PDF uncertainties vary from 2% to 12% depending on jet pT and rapidity)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:inclusive-jets/lhc-13/atlas-2017"]
             refs: ["inspire:1634970"]
-            provenance: {uid: 2ee16e27, ref: "inspire:1634970", locator: "Sec. 9.1 (NLOJET++ 4.1.3 with APPLGRID, CT14 NLO), Secs. 9.2–9.3 (NP and EW corrections)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 2ee16e27, ref: "inspire:1634970", locator: "Sec. 9.1 (NLOJET++ 4.1.3 with APPLGRID, CT14 NLO), Secs. 9.2–9.3 (NP and EW corrections)", source: agent, status: cross-checked, date: "2026-10-16"}
   - id: "chan:inclusive-jets/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -286,5 +286,5 @@ channels:
             uses_amplitudes: ["amp:1L/2to2-partons"]
             compared_to: ["meas:inclusive-jets/tevatron-1960/d0-2008", "meas:inclusive-jets/tevatron-1960/cdf-2008"]
             refs: ["inspire:779574", "inspire:790693"]
-            provenance: {uid: 49a33151, ref: "inspire:779574", locator: "Results text and Fig. 1 (NLO pQCD from fastNLO based on NLOJET++, CTEQ6.5M, corrected for non-perturbative effects); CDF inspire:790693 results text, Fig. 16 (fastNLO, CTEQ6.1M, corrected to hadron level)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 49a33151, ref: "inspire:779574", locator: "Results text and Fig. 1 (NLO pQCD from fastNLO based on NLOJET++, CTEQ6.5M, corrected for non-perturbative effects); CDF inspire:790693 results text, Fig. 16 (fastNLO, CTEQ6.1M, corrected to hadron level)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true

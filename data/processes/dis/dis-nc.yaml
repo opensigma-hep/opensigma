@@ -15,27 +15,27 @@ building_blocks:
       code:
         status: done
         refs: ["inspire:130340", "inspire:1377206"]
-        provenance: {uid: 73e2ae6c, ref: "inspire:130340", locator: "Abstract (full order-g² corrections to the coefficient functions of deep-inelastic structure functions, electroproduction and neutrino reactions); public implementation: QCDNUM used by HERAPDF2.0 (inspire:1377206, Sec. 6.1)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 73e2ae6c, ref: "inspire:130340", locator: "Abstract (full order-g² corrections to the coefficient functions of deep-inelastic structure functions, electroproduction and neutrino reactions); public implementation: QCDNUM used by HERAPDF2.0 (inspire:1377206, Sec. 6.1)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       code:
         status: done
         refs: ["inspire:511611", "inspire:318997", "inspire:1377206"]
-        provenance: {uid: b315ff8c, ref: "inspire:511611", locator: "Abstract (2-loop coefficient functions of F2, F3 and FL, in agreement with Zijlstra–van Neerven); gluonic part inspire:318997 Abstract; HERAPDF2.0 NNLO fit with QCDNUM: inspire:1377206 Sec. 6.1", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: b315ff8c, ref: "inspire:511611", locator: "Abstract (2-loop coefficient functions of F2, F3 and FL, in agreement with Zijlstra–van Neerven); gluonic part inspire:318997 Abstract; HERAPDF2.0 NNLO fit with QCDNUM: inspire:1377206 Sec. 6.1", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
       code:
         status: partial
         approximations: ["massless QCD, photon exchange: F2 and FL known at three loops", "no N3LO coefficient function for the γZ-interference structure function xF3 in the cited references"]
         refs: ["inspire:681335", "inspire:663841"]
-        provenance: {uid: 739341d0, ref: "inspire:681335", locator: "Abstract (full three-loop coefficient functions for F2 and FL in massless perturbative QCD, photon exchange); FL also inspire:663841 Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 739341d0, ref: "inspire:681335", locator: "Abstract (full three-loop coefficient functions for F2 and FL in massless perturbative QCD, photon exchange); FL also inspire:663841 Abstract", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NLO EW"
     cells:
       code:
         status: done
         approximations: ["single-photon bremsstrahlung included without cuts (inspire:269712)"]
         refs: ["inspire:269712", "inspire:296225"]
-        provenance: {uid: c70af036, ref: "inspire:296225", locator: "Abstract (HERACLES: single-photon emission from the lepton line, self-energy corrections and the complete set of one-loop weak corrections for NC and CC ep scattering at HERA); analytic NC results inspire:269712 Abstract", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: c70af036, ref: "inspire:296225", locator: "Abstract (HERACLES: single-photon emission from the lepton line, self-energy corrections and the complete set of one-loop weak corrections for NC and CC ep scattering at HERA); analytic NC results inspire:269712 Abstract", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:dis-nc/hera"
     collider: "col:hera"
@@ -114,9 +114,9 @@ channels:
             codes: ["QCDNUM", "HERAFitter"]
             compared_to: ["meas:dis-nc/hera/hera-2015-comb"]
             refs: ["inspire:1377206", "arXiv:1005.1481"]
-            provenance: {uid: 13399b46, ref: "inspire:1377206", locator: "Sec. 6.1 (theoretical formalism and settings: NNLO DGLAP with QCDNUM in HERAFitter, light-quark coefficient functions from QCDNUM, heavy-quark coefficient functions in RTOPT for NC, μr² = μf² = Q²)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 13399b46, ref: "inspire:1377206", locator: "Sec. 6.1 (theoretical formalism and settings: NNLO DGLAP with QCDNUM in HERAFitter, light-quark coefficient functions from QCDNUM, heavy-quark coefficient functions in RTOPT for NC, μr² = μf² = Q²)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "Massless N3LO coefficient functions for F2 and FL (photon exchange)"
             accuracy: {qcd: N3LO, approximations: ["massless quarks", "photon exchange only", "F2 and FL only"]}
             refs: ["inspire:681335", "inspire:663841"]
-            provenance: {uid: d059a2c9, ref: "inspire:681335", locator: "Abstract (full three-loop coefficient functions for F2 and FL; third-order coefficient functions for F2 are the dominant part of the N3LO corrections at not too small x)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: d059a2c9, ref: "inspire:681335", locator: "Abstract (full three-loop coefficient functions for F2 and FL; third-order coefficient functions for F2 are the dominant part of the N3LO corrections at not too small x)", source: agent, status: cross-checked, date: "2026-10-16"}

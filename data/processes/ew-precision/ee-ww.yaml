@@ -14,26 +14,26 @@ building_blocks:
       born:
         status: done
         refs: ["inspire:499024"]
-        provenance: {uid: 6d20e613, ref: "inspire:499024", locator: "Abstract (complete matrix elements for e⁺e⁻ → 4f and 4f + γ in the electroweak Standard Model)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 6d20e613, ref: "inspire:499024", locator: "Abstract (complete matrix elements for e⁺e⁻ → 4f and 4f + γ in the electroweak Standard Model)", source: agent, status: cross-checked, date: "2026-10-16"}
       1L:
         status: done
         approximations: ["charged-current e⁺e⁻ → 4f (ν_τ τ⁺ μ⁻ ν̄_μ, u d̄ μ⁻ ν̄_μ, u d̄ s c̄); complex-mass scheme"]
         refs: ["inspire:676264", "inspire:682093"]
-        provenance: {uid: abd3d87c, ref: "inspire:676264", locator: "Abstract (complete electroweak O(α) corrections for charged-current four-fermion production, complex gauge-boson masses)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: abd3d87c, ref: "inspire:676264", locator: "Abstract (complete electroweak O(α) corrections for charged-current four-fermion production, complex gauge-boson masses)", source: agent, status: cross-checked, date: "2026-10-16"}
       RV:
         status: done
         refs: ["inspire:499024"]
-        provenance: {uid: f8ea1c22, ref: "inspire:499024", locator: "Abstract (matrix elements for e⁺e⁻ → 4f + γ)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: f8ea1c22, ref: "inspire:499024", locator: "Abstract (matrix elements for e⁺e⁻ → 4f + γ)", source: agent, status: cross-checked, date: "2026-10-16"}
       ir_scheme:
         status: done
         approximations: ["subtraction method for real photon emission"]
         refs: ["inspire:682093"]
-        provenance: {uid: 36a8deb7, ref: "inspire:682093", locator: "Sec. 5.1 (results obtained using the subtraction method)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 36a8deb7, ref: "inspire:682093", locator: "Sec. 5.1 (results obtained using the subtraction method)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         approximations: ["double-pole approximation in RACOONWW and YFSWW3 (used for LEP 2); complete O(α) for charged-current 4f in Denner et al."]
         refs: ["inspire:529378", "inspire:529590", "inspire:682093"]
-        provenance: {uid: ab5c5609, ref: "inspire:1219330", locator: "Sec. 5.2.1 (YFSWW and RACOONWW compared to LEP data, LPA/DPA corrections)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: ab5c5609, ref: "inspire:1219330", locator: "Sec. 5.2.1 (YFSWW and RACOONWW compared to LEP data, LPA/DPA corrections)", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:ee-ww/lep2"
     collider: "col:lep2"
@@ -53,16 +53,16 @@ channels:
         variable: "σ_WW at √s = 206.6 GeV (highest of the eight energies combined above 175 GeV)"
         results:
           - measurement: "meas:ee-ww/lep2/lep-2013-combination"
-            total: {value_pct: 1.4, provenance: {uid: f75e31df, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: σ_WW = 17.20 ± 0.21 (stat) ± 0.11 (syst) pb, total ±0.24 pb; 0.24/17.20", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 1.4, provenance: {uid: f75e31df, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: σ_WW = 17.20 ± 0.21 (stat) ± 0.11 (syst) pb, total ±0.24 pb; 0.24/17.20", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
-                provenance: {uid: 53a61c7a, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: ±0.21 pb (stat) of 17.20 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 53a61c7a, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: ±0.21 pb (stat) of 17.20 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
                 size: {range: [0.64, 0.64], unit: "%", asymmetric: false}
-                provenance: {uid: f97fc1ec, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: ±0.11 pb (syst) of 17.20 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: f97fc1ec, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: ±0.11 pb (syst) of 17.20 pb; groupings in Table 5.2", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "Complete O(α) EW corrections to charged-current e⁺e⁻ → 4f (Denner, Dittmaier, Roth, Wieders)"
             accuracy:
@@ -70,7 +70,7 @@ channels:
               ew: NLO
               approximations: ["complete O(α) in the complex-mass scheme; QCD corrections only as a naive factor (1 + αs/π) per hadronically decaying W; ISR improvement beyond O(α)"]
             refs: ["inspire:676264", "inspire:682093"]
-            provenance: {uid: 9aaaae83, ref: "inspire:682093", locator: "Abstract; Sec. 5.1 (setup: naive QCD corrections, subtraction method)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 9aaaae83, ref: "inspire:682093", locator: "Abstract; Sec. 5.1 (setup: naive QCD corrections, subtraction method)", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
             headline: true
             accuracy:
@@ -78,7 +78,7 @@ channels:
               ew: NLO
               approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV; improved Born approximation near threshold"]
             codes: ["YFSWW3", "RACOONWW"]
-            total: {value_pct: 0.4, provenance: {uid: 799acd95, ref: "inspire:1219330", locator: "Sec. 5.2.1, text after Table 5.2: LPA/DPA theoretical uncertainty decreasing from 0.7% at 170 GeV to about 0.4% above 200 GeV; 2% in the threshold region", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 0.4, provenance: {uid: 799acd95, ref: "inspire:1219330", locator: "Sec. 5.2.1, text after Table 5.2: LPA/DPA theoretical uncertainty decreasing from 0.7% at 170 GeV to about 0.4% above 200 GeV; 2% in the threshold region", source: agent, status: cross-checked, date: "2026-10-16"}}
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
-            provenance: {uid: 6d76a756, ref: "inspire:1219330", locator: "Sec. 5.2.1, Fig. 5.1 and Table E.4 (YFSWW 17.145 pb, RACOONWW 17.087 pb at 206.6 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 6d76a756, ref: "inspire:1219330", locator: "Sec. 5.2.1, Fig. 5.1 and Table E.4 (YFSWW 17.145 pb, RACOONWW 17.087 pb at 206.6 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-16"}

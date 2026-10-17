@@ -6,6 +6,6 @@ status: done
 evaluation:
   kind: numerical
   detail: "masters by numerical solution of differential equations in (velocity, angle); results on a grid, plus threshold and high-energy expansions"
-  provenance: {uid: 19eb005c, ref: "inspire:1273586", locator: "Abstract (numerical solution of differential equations for master integrals; results on a large grid; threshold and high-energy expansions outside the grid)", source: agent, status: agent-draft, date: "2026-10-16"}
+  provenance: {uid: 19eb005c, ref: "inspire:1273586", locator: "Abstract (numerical solution of differential equations for master integrals; results on a large grid; threshold and high-energy expansions outside the grid)", source: agent, status: cross-checked, date: "2026-10-16"}
 refs: ["inspire:1273586"]
-provenance: {uid: 2f452f3b, ref: "inspire:1273586", locator: "Abstract (two-loop virtual amplitudes for top-quark pair production in gluon fusion, renormalised IR-finite remainders)", source: agent, status: agent-draft, date: "2026-10-16"}
+provenance: {uid: 2f452f3b, ref: "inspire:1273586", locator: "Abstract (two-loop virtual amplitudes for top-quark pair production in gluon fusion, renormalised IR-finite remainders)", source: agent, status: cross-checked, date: "2026-10-16"}

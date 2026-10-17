@@ -14,24 +14,24 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:467827"]
-        provenance: {uid: 9188601d, ref: "inspire:467827", locator: "Abstract (one-loop QCD helicity amplitudes for q q̄ → W+W−, ZZ, W±Z including leptonic decays)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 9188601d, ref: "inspire:467827", locator: "Abstract (one-loop QCD helicity amplitudes for q q̄ → W+W−, ZZ, W±Z including leptonic decays)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       2L:
         status: done
         amplitude: "amp:2L/qqbar-VV"
         refs: ["inspire:1353132"]
-        provenance: {uid: 50a9ed03, ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2 → 4 leptons, arbitrary vector-boson virtualities)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 50a9ed03, ref: "inspire:1353132", locator: "Abstract (two-loop massless QCD helicity amplitudes for q q̄' → V1 V2 → 4 leptons, arbitrary vector-boson virtualities)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: done
         refs: ["inspire:1452811"]
-        provenance: {uid: 09f88225, ref: "inspire:1452811", locator: "Abstract (first NNLO QCD computation for W±Z; inclusive on-shell and off-shell rates with the Z mass window)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 09f88225, ref: "inspire:1452811", locator: "Abstract (first NNLO QCD computation for W±Z; inclusive on-shell and off-shell rates with the Z mass window)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NLO EW"
     cells:
       1L:
         status: done
         refs: ["inspire:1618343"]
-        provenance: {uid: 4fe01735, ref: "inspire:1618343", locator: "Abstract (first NLO EW computation for the four-lepton final states μ+μ−e+νe, μ+μ−e−ν̄e, μ+μ−μ+νμ, μ+μ−μ−ν̄μ)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 4fe01735, ref: "inspire:1618343", locator: "Abstract (first NLO EW computation for the four-lepton final states μ+μ−e+νe, μ+μ−e−ν̄e, μ+μ−μ+νμ, μ+μ−μ−ν̄μ)", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:wz/lhc-13"
     collider: "col:lhc-13"
@@ -57,31 +57,31 @@ channels:
         variable: "σ_tot, all W and Z decay modes (extrapolated from the trilepton final states)"
         results:
           - measurement: "meas:wz/lhc-13/atlas-2019-tot"
-            total: {value_pct: 4.8, provenance: {uid: bd8c1c21, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot = 51.0 ± 0.8 (stat) ± 1.8 (exp. syst) ± 0.9 (mod. syst) ± 1.1 (lumi) pb, added in quadrature (= hepdata:ins1720438/Table 6, read by hand: values are strings, scripts.ingest_hepdata cannot parse them)", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 4.8, provenance: {uid: bd8c1c21, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot = 51.0 ± 0.8 (stat) ± 1.8 (exp. syst) ± 0.9 (mod. syst) ± 1.1 (lumi) pb, added in quadrature (= hepdata:ins1720438/Table 6, read by hand: values are strings, scripts.ingest_hepdata cannot parse them)", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: 5b73c994, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 0.8 (stat) of 51.0 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 5b73c994, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 0.8 (stat) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [3.5, 3.5], unit: "%", asymmetric: false}
-                provenance: {uid: '45163752', ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 1.8 (exp. syst) of 51.0 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: '45163752', ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 1.8 (exp. syst) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: acceptance_extrapolation
                 specific: "Modelling of the acceptance factor (PDF set, QCD scales, fragmentation)"
                 size: {range: [1.8, 1.8], unit: "%", asymmetric: false}
-                provenance: {uid: 6b350501, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 0.9 (mod. syst) of 51.0 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 6b350501, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 0.9 (mod. syst) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [2.2, 2.2], unit: "%", asymmetric: false}
-                provenance: {uid: f606f359, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 1.1 (lumi) of 51.0 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: f606f359, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 1.1 (lumi) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
           - measurement: "meas:wz/lhc-13/cms-2022-tot"
             total: {value_pct: 3.8, provenance: {uid: aa234a05, ref: "inspire:1949191", locator: "Summary: σ_tot(pp → WZ) = 50.6 ± 0.8 (stat) ± 1.4 (syst) ± 1.1 (lum) ± 0.5 (thy) = 50.6 ± 1.9 pb (the table of total cross sections lists the syst component as 1.5 pb)", source: agent, status: agent-draft, date: "2026-10-16"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: 3f2bbd11, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 0.8 (stat) of 50.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 3f2bbd11, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 0.8 (stat) of 50.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [3.0, 3.0], unit: "%", asymmetric: false}
@@ -89,11 +89,11 @@ channels:
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [2.2, 2.2], unit: "%", asymmetric: false}
-                provenance: {uid: c02c472e, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 1.1 (lum) of 50.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: c02c472e, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 1.1 (lum) of 50.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: acceptance_extrapolation
                 specific: "Theory modelling (acceptance extrapolation)"
                 size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
-                provenance: {uid: 5b19c154, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 0.5 (thy) of 50.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 5b19c154, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 0.5 (thy) of 50.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD × NLO EW (MATRIX), CMS setup"
             accuracy:
@@ -102,16 +102,16 @@ channels:
               approximations: ["NNLO QCD and NLO EW combined multiplicatively", "fixed scale at the mean of the W and Z masses"]
             codes: ["MATRIX", "OpenLoops"]
             uses_amplitudes: ["amp:2L/qqbar-VV"]
-            total: {value_pct: 2.2, provenance: {uid: 83b6d008, ref: "inspire:1949191", locator: "Table of total cross sections: matrix, NNLO QCD × NLO EWK: 50.7 +1.1 −1.0 (scale) pb; larger scale side; NNPDF3.1 NNLO luxQED", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 2.2, provenance: {uid: 83b6d008, ref: "inspire:1949191", locator: "Table of total cross sections: matrix, NNLO QCD × NLO EWK: 50.7 +1.1 −1.0 (scale) pb; larger scale side; NNPDF3.1 NNLO luxQED", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR and μF scale variation"
                 method: "scale variation of the fixed central scale (mW + mZ)/2 as quoted for the MATRIX prediction"
                 size: {range: [1.97, 2.17], unit: "%", asymmetric: true}
-                provenance: {uid: a253e110, ref: "inspire:1949191", locator: "Table of total cross sections: matrix, NNLO QCD × NLO EWK: 50.7 +1.1 −1.0 (scale) pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: a253e110, ref: "inspire:1949191", locator: "Table of total cross sections: matrix, NNLO QCD × NLO EWK: 50.7 +1.1 −1.0 (scale) pb", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:wz/lhc-13/cms-2022-tot"]
             refs: ["inspire:1949191", "inspire:1636973", "inspire:1452811", "inspire:1618343"]
-            provenance: {uid: f7578243, ref: "inspire:1949191", locator: "Table of total cross sections and theory-prediction paragraph (matrix v2.0.0_beta1; OpenLoops 2, Collier)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: f7578243, ref: "inspire:1949191", locator: "Table of total cross sections and theory-prediction paragraph (matrix v2.0.0_beta1; OpenLoops 2, Collier)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NNLO QCD (MATRIX), ATLAS setup, NNPDF3.0"
             accuracy:
@@ -119,13 +119,13 @@ channels:
               approximations: ["no EW corrections", "multiplied by 0.99 for QED final-state radiation (Powheg+Pythia estimate)"]
             codes: ["MATRIX"]
             uses_amplitudes: ["amp:2L/qqbar-VV"]
-            total: {value_pct: 2.2, provenance: {uid: 5b7b1017, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot^NNLO = 49.1 +1.1 −1.0 (scale) pb; larger scale side", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 2.2, provenance: {uid: 5b7b1017, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot^NNLO = 49.1 +1.1 −1.0 (scale) pb; larger scale side", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR and μF scale variation"
                 method: "μR and μF varied by factors of two around the nominal value (mW + mZ)/2"
                 size: {range: [2.04, 2.24], unit: "%", asymmetric: true}
-                provenance: {uid: 8aa4c54f, ref: "inspire:1720438", locator: "Sec. 10.1: 49.1 +1.1 −1.0 (scale) pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 8aa4c54f, ref: "inspire:1720438", locator: "Sec. 10.1: 49.1 +1.1 −1.0 (scale) pb", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:wz/lhc-13/atlas-2019-tot"]
             refs: ["inspire:1720438", "inspire:1452811"]
-            provenance: {uid: 736c67f0, ref: "inspire:1720438", locator: "Sec. 10.1 (MATRIX NNLO prediction, total phase space)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 736c67f0, ref: "inspire:1720438", locator: "Sec. 10.1 (MATRIX NNLO prediction, total phase space)", source: agent, status: cross-checked, date: "2026-10-16"}

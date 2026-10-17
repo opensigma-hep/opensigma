@@ -14,27 +14,27 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:621007"]
-        provenance: {uid: 00108b74, ref: "inspire:621007", locator: "Abstract (NLO QCD calculation for weak-boson fusion, as a flexible parton Monte Carlo program)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 00108b74, ref: "inspire:621007", locator: "Abstract (NLO QCD calculation for weak-boson fusion, as a flexible parton Monte Carlo program)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       code:
         status: done
         approximations: ["structure-function approach: no colour exchange between the two hadronic systems"]
         refs: ["inspire:849724", "inspire:1375305"]
-        provenance: {uid: 9a11dc72, ref: "inspire:849724", locator: "Abstract (total cross sections at NNLO via the structure function approach, factorization of QCD corrections between the two quark lines); inspire:1375305 Abstract (fully differential NNLO in the same limit)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 9a11dc72, ref: "inspire:849724", locator: "Abstract (total cross sections at NNLO via the structure function approach, factorization of QCD corrections between the two quark lines); inspire:1375305 Abstract (fully differential NNLO in the same limit)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
       code:
         status: done
         approximations: ["structure-function approach: no colour exchange between the two hadronic systems"]
         refs: ["inspire:1467221"]
-        provenance: {uid: 27c92a13, ref: "inspire:1467221", locator: "Abstract (inclusive VBF Higgs production at N3LO in the limit with no colour exchange between the hadronic systems)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 27c92a13, ref: "inspire:1467221", locator: "Abstract (inclusive VBF Higgs production at N3LO in the limit with no colour exchange between the hadronic systems)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NLO EW"
     cells:
       1L:
         status: done
         refs: ["inspire:754793"]
-        provenance: {uid: 293cbee0, ref: "inspire:754793", locator: "Abstract (NLO strong and electroweak corrections to Higgs + 2 jets via weak interactions; EW corrections reduce the cross sections by 5%)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 293cbee0, ref: "inspire:754793", locator: "Abstract (NLO strong and electroweak corrections to Higgs + 2 jets via weak interactions; EW corrections reduce the cross sections by 5%)", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:vbf-h/lhc-13"
     collider: "col:lhc-13"
@@ -60,46 +60,46 @@ channels:
         variable: "σ(qq → qqH) at m_H ≈ 125 GeV; ATLAS in |y_H| < 2.5 assuming SM branching fractions; CMS as signal strength relative to the SM"
         results:
           - measurement: "meas:vbf-h/lhc-13/atlas-2022-comb"
-            total: {value_pct: 12.2, provenance: {uid: 3e8db970, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 2 (VBF): 3.8562 pb, 'Total uncertainty' +0.47095/−0.43284 pb; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 12.2, provenance: {uid: 3e8db970, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 2 (VBF): 3.8562 pb, 'Total uncertainty' +0.47095/−0.43284 pb; larger side as % of the central value", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: other
                 specific: "Systematic uncertainty (all sources combined)"
                 size: {range: [8.5, 9.6], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104706/Figure 2a"
-                provenance: {uid: d56758ac, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 2, error 'Syst. uncertainty': +0.37054/−0.32654 pb of 3.8562 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: d56758ac, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 2, error 'Syst. uncertainty': +0.37054/−0.32654 pb of 3.8562 pb", source: agent, status: cross-checked, date: "2026-10-16"}
           - measurement: "meas:vbf-h/lhc-13/cms-2022-comb"
-            total: {value_pct: 15.0, provenance: {uid: 49d3952d, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_VBF = 0.80 ± 0.12 (stat+syst), also Fig. 2 of arXiv:2207.00043", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 15.0, provenance: {uid: 49d3952d, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_VBF = 0.80 ± 0.12 (stat+syst), also Fig. 2 of arXiv:2207.00043", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [11.3, 12.5], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104672/Production mode strength modifiers"
-                provenance: {uid: c1dcffad, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_VBF: +0.09/−0.10 (stat) of 0.80", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: c1dcffad, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_VBF: +0.09/−0.10 (stat) of 0.80", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "Systematic uncertainty (all sources combined)"
                 size: {range: [8.8, 10.0], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104672/Production mode strength modifiers"
-                provenance: {uid: 6be3f626, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_VBF: +0.08/−0.07 (syst) of 0.80", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 6be3f626, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_VBF: +0.08/−0.07 (syst) of 0.80", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "N3LO QCD (proVBFH), structure-function approach, m_H = 125.09 GeV"
             accuracy:
               qcd: N3LO
               approximations: ["no colour exchange between the two hadronic systems", "electroweak corrections not included in this prediction"]
             codes: ["proVBFH"]
-            total: {value_pct: 0.13, provenance: {uid: bb6b7514, ref: "arXiv:1606.00840", locator: "Table I, N3LO, 13 TeV: 3.928 pb +0.005/−0.001 pb (scale variation, larger side 0.13%); PDF uncertainty (about 2% at 13 TeV, PDF4LHC15) not included", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 0.13, provenance: {uid: bb6b7514, ref: "arXiv:1606.00840", locator: "Table I, N3LO, 13 TeV: 3.928 pb +0.005/−0.001 pb (scale variation, larger side 0.13%); PDF uncertainty (about 2% at 13 TeV, PDF4LHC15) not included", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation of both hadronic sectors"
                 method: "seven-point variation of μR, μF by a factor two around the squared momentum of the vector boson, 0.5 < μR/μF < 2"
                 size: {range: [0.03, 0.13], unit: "%", asymmetric: true}
-                provenance: {uid: 0cf08188, ref: "arXiv:1606.00840", locator: "Table I (N3LO, 13 TeV: +0.005/−0.001 pb of 3.928 pb) and text on the seven-point scale variation", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 0cf08188, ref: "arXiv:1606.00840", locator: "Table I (N3LO, 13 TeV: +0.005/−0.001 pb of 3.928 pb) and text on the seven-point scale variation", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: PDF
                 specific: "PDF4LHC15 prescription, quoted separately and not included in the total"
                 pdf_set: "PDF4LHC15_nnlo_mc"
                 size: {range: [2.0, 2.0], unit: "%", asymmetric: false}
-                provenance: {uid: a268c273, ref: "arXiv:1606.00840", locator: "Text after Table I: typical PDF uncertainties of about 2% at 13 TeV", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: a268c273, ref: "arXiv:1606.00840", locator: "Text after Table I: typical PDF uncertainties of about 2% at 13 TeV", source: agent, status: cross-checked, date: "2026-10-16"}
             refs: ["inspire:1467221"]
-            provenance: {uid: 5a5eadb4, ref: "arXiv:1606.00840", locator: "Table I and Sec. on phenomenology (M_H = 125.09 GeV, PDF4LHC15_nnlo_mc, αs(M_Z) = 0.118, central scale the squared vector-boson momentum)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 5a5eadb4, ref: "arXiv:1606.00840", locator: "Table I and Sec. on phenomenology (M_H = 125.09 GeV, PDF4LHC15_nnlo_mc, αs(M_Z) = 0.118, central scale the squared vector-boson momentum)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NNLO QCD (DIS approximation) + NLO EW (LHC Higgs Working Group, YR4), m_H = 125 GeV"
             accuracy:
@@ -107,22 +107,22 @@ channels:
               ew: NLO
               approximations: ["DIS (structure-function) approximation: t- and u-channel only", "photon-induced contribution added linearly", "s-channel contribution not included"]
             codes: ["HAWK"]
-            total: {value_pct: 2.1, provenance: {uid: 14e5f33e, ref: "arXiv:1610.07922", locator: "Table 25 (Sec. I.5.1.c), 13 TeV: 3781.7(1) fb, ∆scale +0.43/−0.33%, ∆PDF⊕αs ±2.1%; derived here as the larger scale side and PDF⊕αs added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 2.1, provenance: {uid: 14e5f33e, ref: "arXiv:1610.07922", locator: "Table 25 (Sec. I.5.1.c), 13 TeV: 3781.7(1) fb, ∆scale +0.43/−0.33%, ∆PDF⊕αs ±2.1%; derived here as the larger scale side and PDF⊕αs added in quadrature", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR = μF variation around M_W"
                 method: "μR = μF varied in M_W/2 < μ < 2 M_W"
                 size: {range: [0.33, 0.43], unit: "%", asymmetric: true}
-                provenance: {uid: 35feba0f, ref: "arXiv:1610.07922", locator: "Table 25, 13 TeV row (+0.43/−0.33%); scale variation described in Sec. I.5.1", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 35feba0f, ref: "arXiv:1610.07922", locator: "Table 25, 13 TeV row (+0.43/−0.33%); scale variation described in Sec. I.5.1", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: PDF
                 specific: "PDF uncertainty"
                 pdf_set: "PDF4LHC15_nnlo_100"
                 size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
-                provenance: {uid: a95fb22f, ref: "arXiv:1610.07922", locator: "Table 25, 13 TeV row (∆PDF/∆αs/∆PDF⊕αs = ±2.1/±0.5/±2.1%)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: a95fb22f, ref: "arXiv:1610.07922", locator: "Table 25, 13 TeV row (∆PDF/∆αs/∆PDF⊕αs = ±2.1/±0.5/±2.1%)", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: alphas
                 specific: "αs uncertainty"
                 size: {range: [0.5, 0.5], unit: "%", asymmetric: false}
-                provenance: {uid: 247ac96d, ref: "arXiv:1610.07922", locator: "Table 25, 13 TeV row (∆PDF/∆αs/∆PDF⊕αs = ±2.1/±0.5/±2.1%)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 247ac96d, ref: "arXiv:1610.07922", locator: "Table 25, 13 TeV row (∆PDF/∆αs/∆PDF⊕αs = ±2.1/±0.5/±2.1%)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:vbf-h/lhc-13/atlas-2022-comb", "meas:vbf-h/lhc-13/cms-2022-comb"]
             refs: ["arXiv:1610.07922"]
-            provenance: {uid: 847f6fbf, ref: "arXiv:1610.07922", locator: "Sec. I.5.1.c, eq. (I.5.6) and Table 25; cited by both experiments as a source of the SM prediction", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 847f6fbf, ref: "arXiv:1610.07922", locator: "Sec. I.5.1.c, eq. (I.5.6) and Table 25; cited by both experiments as a source of the SM prediction", source: agent, status: cross-checked, date: "2026-10-16"}

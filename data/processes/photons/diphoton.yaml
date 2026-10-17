@@ -16,32 +16,32 @@ building_blocks:
         status: done
         approximations: ["DIPHOX: direct, single and double fragmentation at NLO; gg → γγ at LO"]
         refs: ["inspire:510079"]
-        provenance: {uid: fc9504d2, ref: "inspire:510079", locator: "Abstract (full NLO calculation including single and double fragmentation, implemented as a parton-level generator)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: fc9504d2, ref: "inspire:510079", locator: "Abstract (full NLO calculation including single and double fragmentation, implemented as a parton-level generator)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
       2L:
         status: done
         amplitude: "amp:2L/qqbar-gammagamma"
         refs: ["inspire:582359"]
-        provenance: {uid: 31aa80a9, ref: "inspire:1426698", locator: "Sec. 2 (double-virtual amplitudes taken from ref. [57], Anastasiou-Glover-Tejeda-Yeomans)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 31aa80a9, ref: "inspire:1426698", locator: "Sec. 2 (double-virtual amplitudes taken from ref. [57], Anastasiou-Glover-Tejeda-Yeomans)", source: agent, status: cross-checked, date: "2026-10-16"}
       RV:
         status: done
         refs: ["inspire:1285360"]
-        provenance: {uid: cfc92582, ref: "inspire:1426698", locator: "Sec. 2 (real-virtual amplitudes in ref. [58], Campbell-Williams triphoton paper)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: cfc92582, ref: "inspire:1426698", locator: "Sec. 2 (real-virtual amplitudes in ref. [58], Campbell-Williams triphoton paper)", source: agent, status: cross-checked, date: "2026-10-16"}
       RR:
         status: done
         refs: ["inspire:508251"]
-        provenance: {uid: 96bb5f86, ref: "inspire:1426698", locator: "Sec. 2 (tree-level real-real amplitudes in ref. [59], Del Duca-Kilgore-Maltoni)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 96bb5f86, ref: "inspire:1426698", locator: "Sec. 2 (tree-level real-real amplitudes in ref. [59], Del Duca-Kilgore-Maltoni)", source: agent, status: cross-checked, date: "2026-10-16"}
       ir_scheme:
         status: done
         approximations: ["qT subtraction (2γNNLO)", "N-jettiness slicing (MCFM)", "antenna subtraction (NNLOJET)"]
         refs: ["inspire:939520", "inspire:1426698", "inspire:1887997"]
-        provenance: {uid: 9f5f200f, ref: "inspire:939520", locator: "Abstract (qT subtraction formalism); inspire:1426698 Sec. 1 (N-jettiness slicing); inspire:1887997 Sec. 8 (NNLOJET antenna subtraction)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 9f5f200f, ref: "inspire:939520", locator: "Abstract (qT subtraction formalism); inspire:1426698 Sec. 1 (N-jettiness slicing); inspire:1887997 Sec. 8 (NNLOJET antenna subtraction)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: partial
         approximations: ["direct component only, hybrid/smooth-cone isolation (ATLAS 2021 states NNLO fragmentation was not yet available)", "gg → γγ box enters at leading order (one-loop squared) only"]
         refs: ["inspire:939520", "inspire:1426698"]
-        provenance: {uid: '35016419', ref: "inspire:1887997", locator: "Sec. 8 (NNLOJET: NNLO includes loop-induced gg → γγ at leading-order accuracy; NNLO predictions for the fragmentation component are not yet available, as stated in 2021)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: '35016419', ref: "inspire:1887997", locator: "Sec. 8 (NNLOJET: NNLO includes loop-induced gg → γγ at leading-order accuracy; NNLO predictions for the fragmentation component are not yet available, as stated in 2021)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
       3L:
@@ -49,27 +49,27 @@ building_blocks:
         amplitude: "amp:3L/qqbar-gammagamma"
         approximations: ["gg → γγ three-loop helicity amplitudes (inspire:1977009): massless QCD"]
         refs: ["inspire:1834011", "inspire:1977009"]
-        provenance: {uid: d9df1ce1, ref: "inspire:1834011", locator: "Abstract (three-loop qq̄ → γγ helicity amplitudes); inspire:1977009 Abstract (three-loop gg → γγ helicity amplitudes in massless QCD)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: d9df1ce1, ref: "inspire:1834011", locator: "Abstract (three-loop qq̄ → γγ helicity amplitudes); inspire:1977009 Abstract (three-loop gg → γγ helicity amplitudes in massless QCD)", source: agent, status: cross-checked, date: "2026-10-16"}
       RV:
         status: done
         approximations: ["obtained from the NNLO γγ+jet calculation: full-colour two-loop five-point amplitude and analytic one-loop γγ+2j amplitudes", "nf = 5, no top-quark loops"]
         refs: ["inspire:3144736", "inspire:1863379"]
-        provenance: {uid: b128e275, ref: "inspire:3144736", locator: "Calculation section (second term of Eq. (1) is the NNLO pp → γγj cross section; two-loop five-point amplitude of ref. [7], one-loop amplitudes for γγ+2 jets; nf = 5 without top-quark loops)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: b128e275, ref: "inspire:3144736", locator: "Calculation section (second term of Eq. (1) is the NNLO pp → γγj cross section; two-loop five-point amplitude of ref. [7], one-loop amplitudes for γγ+2 jets; nf = 5 without top-quark loops)", source: agent, status: cross-checked, date: "2026-10-16"}
       RRR:
         status: done
         approximations: ["obtained from the NNLO γγ+jet calculation (seven-point tree-level amplitudes from avhlib)"]
         refs: ["inspire:3144736", "inspire:1863379"]
-        provenance: {uid: 836191f1, ref: "inspire:3144736", locator: "Calculation section (seven-point tree-level amplitudes computed with the avhlib library)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 836191f1, ref: "inspire:3144736", locator: "Calculation section (seven-point tree-level amplitudes computed with the avhlib library)", source: agent, status: cross-checked, date: "2026-10-16"}
       ir_scheme:
         status: done
         approximations: ["qT slicing at N3LO with residual power corrections; r_cut = 3.2e-4 chosen, NNLO power corrections 0.3 pb"]
         refs: ["inspire:3144736"]
-        provenance: {uid: 27116c67, ref: "inspire:3144736", locator: "Calculation section, Eq. (1) (qT slicing: N3LO matching kernels plus NNLO γγj above q_T^cut) and Results (r_cut choice)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: 27116c67, ref: "inspire:3144736", locator: "Calculation section, Eq. (1) (qT slicing: N3LO matching kernels plus NNLO γγj above q_T^cut) and Results (r_cut choice)", source: agent, status: cross-checked, date: "2026-10-16"}
       code:
         status: partial
         approximations: ["STRIPPER implementation; results for the fiducial cross section and dσ/dmγγ, with a 2% Monte Carlo integration uncertainty", "differential distribution has large statistical error bars in regions that contribute little to the total cross section"]
         refs: ["inspire:3144736"]
-        provenance: {uid: d8452229, ref: "inspire:3144736", locator: "Introduction (non-negligible Monte Carlo uncertainty of 2%) and Results (statistical uncertainty comparable to the NNLO scale uncertainty in differential results)", source: agent, status: agent-draft, date: "2026-10-16"}
+        provenance: {uid: d8452229, ref: "inspire:3144736", locator: "Introduction (non-negligible Monte Carlo uncertainty of 2%) and Results (statistical uncertainty comparable to the NNLO scale uncertainty in differential results)", source: agent, status: cross-checked, date: "2026-10-16"}
 channels:
   - id: "chan:diphoton/lhc-13"
     collider: "col:lhc-13"
@@ -100,19 +100,19 @@ channels:
               - category: background
                 specific: "Background estimation (R_j^iso-id 4.2, γγ pile-up 0.6, R_γj^iso 0.5, electron background 0.2)"
                 size: {range: [4.3, 4.3], unit: "%", asymmetric: false}
-                provenance: {uid: c9dbed78, ref: "inspire:1887997", locator: "Table 3, 'Background estimation'", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: c9dbed78, ref: "inspire:1887997", locator: "Table 3, 'Background estimation'", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: efficiency
                 specific: "Photon isolation (pile-up reweighting 3.5, data-driven correction 1.9, theory modelling of isolation 0.6)"
                 size: {range: [4.1, 4.1], unit: "%", asymmetric: false}
-                provenance: {uid: 4ef60dfb, ref: "inspire:1887997", locator: "Table 3, 'Photon isolation'", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 4ef60dfb, ref: "inspire:1887997", locator: "Table 3, 'Photon isolation'", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: efficiency
                 specific: "Photon reconstruction and identification (identification 2.9, reconstruction 0.4)"
                 size: {range: [3.0, 3.0], unit: "%", asymmetric: false}
-                provenance: {uid: d67345c0, ref: "inspire:1887997", locator: "Table 3, 'Photon reconstruction and identification'", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: d67345c0, ref: "inspire:1887997", locator: "Table 3, 'Photon reconstruction and identification'", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: lumi
                 specific: "Luminosity"
                 size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
-                provenance: {uid: 5db20cb7, ref: "inspire:1887997", locator: "Table 3, 'Luminosity'", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 5db20cb7, ref: "inspire:1887997", locator: "Table 3, 'Luminosity'", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "N3LO QCD (qT slicing, STRIPPER), hybrid-cone isolation, NNPDF3.0"
             accuracy:
@@ -120,20 +120,20 @@ channels:
               approximations: ["fiducial cross section; nf = 5 flavours without top-quark loops, α = 1/137", "hybrid isolation: smooth cone (R = 0.1, 0.15 ET) plus hard cone (R = 0.2, 0.09 ET)", "loop-induced gg → γγ contribution included, with the gg → γγg amplitude from OpenLoops"]
             codes: ["STRIPPER"]
             uses_amplitudes: ["amp:2L/qqbar-gammagamma", "amp:3L/qqbar-gammagamma"]
-            total: {value_pct: 3.0, provenance: {uid: 2d23d396, ref: "inspire:3144736", locator: "Results, Eq. (8): 31.2(6) +0.5 -0.7 pb; scale and statistical uncertainties added in quadrature gives about 3% on the total cross section", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 3.0, provenance: {uid: 2d23d396, ref: "inspire:3144736", locator: "Results, Eq. (8): 31.2(6) +0.5 -0.7 pb; scale and statistical uncertainties added in quadrature gives about 3% on the total cross section", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation"
                 method: "standard 7-point variation around μF = μR = mγγ; affected by residual statistical uncertainty"
                 size: {range: [1.6, 2.2], unit: "%", asymmetric: true}
-                provenance: {uid: a7e57803, ref: "inspire:3144736", locator: "Results, Eq. (8): +0.5 -0.7 pb on 31.2 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: a7e57803, ref: "inspire:3144736", locator: "Results, Eq. (8): +0.5 -0.7 pb on 31.2 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: numerical
                 specific: "Monte Carlo integration (statistical) uncertainty"
                 size: {range: [1.9, 1.9], unit: "%", asymmetric: false}
-                provenance: {uid: 46eb7495, ref: "inspire:3144736", locator: "Results, Eq. (8): (6) = 0.6 pb on 31.2 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 46eb7495, ref: "inspire:3144736", locator: "Results, Eq. (8): (6) = 0.6 pb on 31.2 pb", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:3144736"]
-            provenance: {uid: 0296d4f4, ref: "inspire:3144736", locator: "Calculation section (13 TeV, ATLAS fiducial cuts, NNPDF3.0, seven-point scale variation) and Results, Eqs. (8)-(9)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 0296d4f4, ref: "inspire:3144736", locator: "Calculation section (13 TeV, ATLAS fiducial cuts, NNPDF3.0, seven-point scale variation) and Results, Eqs. (8)-(9)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NNLO QCD (NNLOJET), hybrid-cone isolation, NNPDF3.0"
             accuracy:
@@ -141,47 +141,47 @@ channels:
               approximations: ["direct component only (no NNLO fragmentation), hybrid isolation: smooth cone n = 2, δ0 = 0.1, ε = 0.1 plus experimental cone", "loop-induced gg → γγ at leading-order accuracy", "no non-perturbative corrections"]
             codes: ["NNLOJET"]
             uses_amplitudes: ["amp:2L/qqbar-gammagamma"]
-            total: {value_pct: 8.1, provenance: {uid: f6b3aa87, ref: "inspire:1887997", locator: "Table 5: 29.7 +2.4 -2.0 pb; larger side as % of central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 8.1, provenance: {uid: f6b3aa87, ref: "inspire:1887997", locator: "Table 5: 29.7 +2.4 -2.0 pb; larger side as % of central value", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation"
                 method: "7-point variation, μf,r = c·mγγ with c = 0.5, 1, 2 and 0.5 <= cf/cr <= 2"
                 size: {range: [6.7, 8.1], unit: "%", asymmetric: true}
-                provenance: {uid: 33ff8381, ref: "inspire:1887997", locator: "Sec. 8 and Table 5 (29.7 +2.4 -2.0 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 33ff8381, ref: "inspire:1887997", locator: "Sec. 8 and Table 5 (29.7 +2.4 -2.0 pb)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:939520", "inspire:1426698"]
-            provenance: {uid: 6338b92f, ref: "inspire:1887997", locator: "Sec. 8 and Table 5, Fig. 10", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 6338b92f, ref: "inspire:1887997", locator: "Sec. 8 and Table 5, Fig. 10", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NLO QCD (Diphox), CT10 NLO"
             accuracy:
               qcd: NLO
               approximations: ["direct plus single and double fragmentation", "loop-induced gg → γγ at leading order", "no non-perturbative corrections"]
             codes: ["Diphox"]
-            total: {value_pct: 15.4, provenance: {uid: fa0e8062, ref: "inspire:1887997", locator: "Table 5: 20.8 +3.2 -2.9 pb; larger side as % of central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 15.4, provenance: {uid: fa0e8062, ref: "inspire:1887997", locator: "Table 5: 20.8 +3.2 -2.9 pb; larger side as % of central value", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation (fragmentation scale variation smaller)"
                 method: "7-point μR, μF variation around mγγ; fragmentation scale varied by factor 2"
                 size: {range: [13.9, 15.4], unit: "%", asymmetric: true}
-                provenance: {uid: 44501dbf, ref: "inspire:1887997", locator: "Sec. 8 and Table 5 (20.8 +3.2 -2.9 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 44501dbf, ref: "inspire:1887997", locator: "Sec. 8 and Table 5 (20.8 +3.2 -2.9 pb)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:510079"]
-            provenance: {uid: 1b600515, ref: "inspire:1887997", locator: "Sec. 8 and Table 5", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 1b600515, ref: "inspire:1887997", locator: "Sec. 8 and Table 5", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "Sherpa MEPS@NLO multi-leg merged + parton shower, NNPDF3.0 NNLO"
             accuracy:
               qcd: NLO
               shower_matched: true
               approximations: ["NLO multi-leg merged matrix elements with higher multiplicities at LO, parton shower and non-perturbative effects included (see Table 4)", "loop-induced gg → γγ at leading order"]
             codes: ["Sherpa"]
-            total: {value_pct: 23.2, provenance: {uid: b36c8921, ref: "inspire:1887997", locator: "Table 5: 33.2 +7.7 -5.6 pb; larger side as % of central value", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 23.2, provenance: {uid: b36c8921, ref: "inspire:1887997", locator: "Table 5: 33.2 +7.7 -5.6 pb; larger side as % of central value", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation (envelope also includes αs and PDF-replica variations, scale-dominated)"
                 method: "7-point μR, μF variation by reweighting; summed in quadrature with αs(mZ) 0.117-0.119 and NNPDF3.0 replicas"
                 size: {range: [16.9, 23.2], unit: "%", asymmetric: true}
-                provenance: {uid: 4f1433cd, ref: "inspire:1887997", locator: "Sec. 8 and Table 5 (33.2 +7.7 -5.6 pb)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 4f1433cd, ref: "inspire:1887997", locator: "Sec. 8 and Table 5 (33.2 +7.7 -5.6 pb)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:1887997"]
-            provenance: {uid: 4e41674e, ref: "inspire:1887997", locator: "Sec. 8 and Table 5", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: 4e41674e, ref: "inspire:1887997", locator: "Sec. 8 and Table 5", source: agent, status: cross-checked, date: "2026-10-16"}
   - id: "chan:diphoton/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -206,16 +206,16 @@ channels:
         variable: "σ = 12.47 ± 0.21 (stat) ± 3.74 (syst) pb"
         results:
           - measurement: "meas:diphoton/tevatron-1960/cdf-2011"
-            total: {value_pct: 30.0, provenance: {uid: 5406a7dd, ref: "inspire:915978", locator: "Table IV: 12.47 ± 0.21 (stat) ± 3.74 (syst) pb; stat and syst added in quadrature", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 30.0, provenance: {uid: 5406a7dd, ref: "inspire:915978", locator: "Table IV: 12.47 ± 0.21 (stat) ± 3.74 (syst) pb; stat and syst added in quadrature", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
-                provenance: {uid: 5164b344, ref: "inspire:915978", locator: "Table IV: ± 0.21 (stat) of 12.47 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 5164b344, ref: "inspire:915978", locator: "Table IV: ± 0.21 (stat) of 12.47 pb", source: agent, status: cross-checked, date: "2026-10-16"}
               - category: other
                 specific: "Total systematic uncertainty"
                 size: {range: [30.0, 30.0], unit: "%", asymmetric: false}
-                provenance: {uid: 7983f759, ref: "inspire:915978", locator: "Table IV: ± 3.74 (syst) of 12.47 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: 7983f759, ref: "inspire:915978", locator: "Table IV: ± 3.74 (syst) of 12.47 pb", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "ResBos: NLO matched to NNLL resummation, CTEQ6.1M"
             accuracy:
@@ -223,32 +223,32 @@ channels:
               resummation: [{accuracy: "NNLL", variable: "soft-gluon ISR"}]
               approximations: ["NLO matrix elements for qq̄ → γγ, gq → γγq and gg → γγ, adjusted to approximately account for fragmentation", "resummation matched to fixed-order NLO"]
             codes: ["ResBos"]
-            total: {value_pct: 21.7, provenance: {uid: 2b172fab, ref: "inspire:915978", locator: "Table IV: resbos 11.31 ± 2.45 (syst) pb", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 21.7, provenance: {uid: 2b172fab, ref: "inspire:915978", locator: "Table IV: resbos 11.31 ± 2.45 (syst) pb", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "Theoretical systematic uncertainty as quoted in Table IV"
                 method: "all scales varied by a factor 2 up and down around the default μ = M (conservative estimate of the scale uncertainty); whether the CTEQ6.1M 90% CL eigenvector PDF uncertainty is part of the quoted value is not stated in the text"
                 size: {range: [21.7, 21.7], unit: "%", asymmetric: false}
-                provenance: {uid: '86085370', ref: "inspire:915978", locator: "Table IV (resbos 11.31 ± 2.45 pb) and Sec. V.A (scale variation by a factor of 2)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: '86085370', ref: "inspire:915978", locator: "Table IV (resbos 11.31 ± 2.45 pb) and Sec. V.A (scale variation by a factor of 2)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:diphoton/tevatron-1960/cdf-2011"]
             refs: ["inspire:915978"]
-            provenance: {uid: dfe119ca, ref: "inspire:915978", locator: "Sec. V.A (resbos: soft-gluon ISR resummed to NNLL accuracy, matched to fixed-order NLO) and Table IV", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: dfe119ca, ref: "inspire:915978", locator: "Sec. V.A (resbos: soft-gluon ISR resummed to NNLL accuracy, matched to fixed-order NLO) and Table IV", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
           - label: "NLO QCD (Diphox), CTEQ6.1M"
             accuracy:
               qcd: NLO
               approximations: ["direct (85%) plus fragmentation (15%) contributions", "gg → γγ at LO only: the NLO gg → γγ correction (nearly 10% of the total, from gamma2mc) is not applied"]
             codes: ["Diphox"]
-            total: {value_pct: 5.2, provenance: {uid: 9eccd2bd, ref: "inspire:915978", locator: "Table IV: diphox 10.58 ± 0.55 (syst) pb", source: agent, status: agent-draft, date: "2026-10-16"}}
+            total: {value_pct: 5.2, provenance: {uid: 9eccd2bd, ref: "inspire:915978", locator: "Table IV: diphox 10.58 ± 0.55 (syst) pb", source: agent, status: cross-checked, date: "2026-10-16"}}
             uncertainties:
               - category: MHOU
                 specific: "Theoretical systematic uncertainty as quoted in Table IV"
                 method: "all scales varied by a factor 2 up and down around the default μ = M/2 (conservative estimate of the scale uncertainty); whether the CTEQ6.1M 90% CL eigenvector PDF uncertainty is part of the quoted value is not stated in the text"
                 size: {range: [5.2, 5.2], unit: "%", asymmetric: false}
-                provenance: {uid: ed3b6daf, ref: "inspire:915978", locator: "Table IV (diphox 10.58 ± 0.55 pb) and Sec. V.A (scale variation by a factor of 2)", source: agent, status: agent-draft, date: "2026-10-16"}
+                provenance: {uid: ed3b6daf, ref: "inspire:915978", locator: "Table IV (diphox 10.58 ± 0.55 pb) and Sec. V.A (scale variation by a factor of 2)", source: agent, status: cross-checked, date: "2026-10-16"}
             compared_to: ["meas:diphoton/tevatron-1960/cdf-2011"]
             refs: ["inspire:510079"]
-            provenance: {uid: c3cdfaee, ref: "inspire:915978", locator: "Sec. V.A (diphox NLO with fragmentation) and Table IV", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: c3cdfaee, ref: "inspire:915978", locator: "Sec. V.A (diphox NLO with fragmentation) and Table IV", source: agent, status: cross-checked, date: "2026-10-16"}
       - id: "obs:diphoton/tevatron-1960/dsigma-dm"
         name: "dσ/dMγγ, isolated photon pair"
         kind: differential
@@ -288,4 +288,4 @@ channels:
             codes: ["2γNNLO"]
             compared_to: ["meas:diphoton/tevatron-1960/d0-2013"]
             refs: ["inspire:939520"]
-            provenance: {uid: '83893e03', ref: "inspire:1215307", locator: "Abstract and text (comparison with diphox and resbos at NLO, 2γnnlo at NNLO, sherpa matched to parton shower); 2γnnlo uses MSTW2008 NNLO PDFs (Sec. on theory comparison)", source: agent, status: agent-draft, date: "2026-10-16"}
+            provenance: {uid: '83893e03', ref: "inspire:1215307", locator: "Abstract and text (comparison with diphox and resbos at NLO, 2γnnlo at NNLO, sherpa matched to parton shower); 2γnnlo uses MSTW2008 NNLO PDFs (Sec. on theory comparison)", source: agent, status: cross-checked, date: "2026-10-16"}
