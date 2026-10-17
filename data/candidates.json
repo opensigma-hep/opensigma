@@ -3702,5 +3702,165 @@
    "recid": 3072304,
    "title": "Probing the tW b vertex structure in t-channel single-top-quark production and decay in pp collisions at 13 TeV with the ATLAS detector"
   }
+ ],
+ "proc:dy-cc": [
+  {
+   "arxiv": "2509.18817",
+   "channels": [],
+   "matched_by": "(((t \"W boson\" or t \"W-boson\" or t \"W bosons\" or t \"W and Z\" or t \"W±\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t \"transverse momentum\" or t \"charge asymmetry\" or t \"differential\") and not t Higgs and not t top and not t \"mass\" and not t jets and not t \"same-sign\" and not t \"pair\" and not t WWZ and not t charm and not t search and tc article) or ((t \"W\" and t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"W\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\") and not t \"pair\"))) and de > 2023-01-01",
+   "recid": 2972386,
+   "title": "Measurement of the W → μν cross-sections as a function of the muon transverse momentum in pp collisions at 5.02 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:dy-cc/lhc-13"
+   ],
+   "matched_by": "(((t \"W boson\" or t \"W-boson\" or t \"W bosons\" or t \"W and Z\" or t \"W±\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t \"transverse momentum\" or t \"charge asymmetry\" or t \"differential\") and not t Higgs and not t top and not t \"mass\" and not t jets and not t \"same-sign\" and not t \"pair\" and not t WWZ and not t charm and not t search and tc article) or ((t \"W\" and t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"W\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\") and not t \"pair\"))) and de > 2023-01-01",
+   "recid": 2746212,
+   "title": "Mixed NNLO QCD×EW radiative corrections to W/Z production and decay"
+  },
+  {
+   "arxiv": "2604.12593",
+   "channels": [
+    "chan:dy-cc/lhc-13"
+   ],
+   "matched_by": "(((t \"W boson\" or t \"W-boson\" or t \"W bosons\" or t \"W and Z\" or t \"W±\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t \"transverse momentum\" or t \"charge asymmetry\" or t \"differential\") and not t Higgs and not t top and not t \"mass\" and not t jets and not t \"same-sign\" and not t \"pair\" and not t WWZ and not t charm and not t search and tc article) or ((t \"W\" and t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"W\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\") and not t \"pair\"))) and de > 2023-01-01",
+   "recid": 3144940,
+   "title": "Precision Measurement of the Muon Charge Asymmetry from <math display=\"inline\"><mi>W</mi></math>-Boson Decays in <math display=\"inline\"><mi>p</mi><mi>p</mi></math> Collisions at <math display=\"inline\"><mrow><msqrt><mrow><mi>s</mi></mrow></msqrt><mo>=</mo><mn>13</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></mrow></math> in the Forward Region"
+  }
+ ],
+ "proc:dy-nc": [
+  {
+   "arxiv": "2409.17770",
+   "channels": [],
+   "matched_by": "(((t \"Drell-Yan\" or t \"Drell–Yan\" or t \"Z boson\" or t \"Z-boson\" or t \"Z/γ*\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t asymmetry or t \"transverse momentum\" or t \"angular\" or t \"differential\" or t \"weak mixing angle\" or t \"mixing angle\") and not t Higgs and not t top and not t search and not t photon and not t \"W boson\" and not t \"in association\" and tc article) or ((t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"Drell-Yan\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\")))) and de > 2023-01-01",
+   "recid": 2839223,
+   "title": "Energy-scaling behavior of intrinsic transverse-momentum parameters in Drell-Yan simulation"
+  },
+  {
+   "arxiv": "2502.21088",
+   "channels": [],
+   "matched_by": "(((t \"Drell-Yan\" or t \"Drell–Yan\" or t \"Z boson\" or t \"Z-boson\" or t \"Z/γ*\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t asymmetry or t \"transverse momentum\" or t \"angular\" or t \"differential\" or t \"weak mixing angle\" or t \"mixing angle\") and not t Higgs and not t top and not t search and not t photon and not t \"W boson\" and not t \"in association\" and tc article) or ((t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"Drell-Yan\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\")))) and de > 2023-01-01",
+   "recid": 2895869,
+   "title": "Measurement of double-differential charged-current Drell-Yan cross-sections at high transverse masses in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2405.00612",
+   "channels": [],
+   "matched_by": "(((t \"Drell-Yan\" or t \"Drell–Yan\" or t \"Z boson\" or t \"Z-boson\" or t \"Z/γ*\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t asymmetry or t \"transverse momentum\" or t \"angular\" or t \"differential\" or t \"weak mixing angle\" or t \"mixing angle\") and not t Higgs and not t top and not t search and not t photon and not t \"W boson\" and not t \"in association\" and tc article) or ((t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"Drell-Yan\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\")))) and de > 2023-01-01",
+   "recid": 2782518,
+   "title": "Two-loop mixed QCD-EW corrections to charged current Drell-Yan"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"Drell-Yan\" or t \"Drell–Yan\" or t \"Z boson\" or t \"Z-boson\" or t \"Z/γ*\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t asymmetry or t \"transverse momentum\" or t \"angular\" or t \"differential\" or t \"weak mixing angle\" or t \"mixing angle\") and not t Higgs and not t top and not t search and not t photon and not t \"W boson\" and not t \"in association\" and tc article) or ((t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"Drell-Yan\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\")))) and de > 2023-01-01",
+   "recid": 2720971,
+   "title": "Mixed QCD-EW two-loop amplitudes for charged current Drell-Yan production"
+  },
+  {
+   "arxiv": "2308.12940",
+   "channels": [],
+   "matched_by": "(((t \"Drell-Yan\" or t \"Drell–Yan\" or t \"Z boson\" or t \"Z-boson\" or t \"Z/γ*\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t asymmetry or t \"transverse momentum\" or t \"angular\" or t \"differential\" or t \"weak mixing angle\" or t \"mixing angle\") and not t Higgs and not t top and not t search and not t photon and not t \"W boson\" and not t \"in association\" and tc article) or ((t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"Drell-Yan\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\")))) and de > 2023-01-01",
+   "recid": 2690798,
+   "title": "Measurement of the Z boson production cross-section in pp collisions at $ \\sqrt{s} $ = 5.02 TeV"
+  },
+  {
+   "arxiv": "2607.09124",
+   "channels": [],
+   "matched_by": "(((t \"Drell-Yan\" or t \"Drell–Yan\" or t \"Z boson\" or t \"Z-boson\" or t \"Z/γ*\") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t \"cross section\" or t \"cross sections\" or t asymmetry or t \"transverse momentum\" or t \"angular\" or t \"differential\" or t \"weak mixing angle\" or t \"mixing angle\") and not t Higgs and not t top and not t search and not t photon and not t \"W boson\" and not t \"in association\" and tc article) or ((t \"Drell-Yan\" and (t N3LO or t \"third order\" or t N3LL or t N4LL)) or (t \"Drell-Yan\" and t \"mixed\" and (t \"QCD-electroweak\" or t \"QCD-EW\" or t \"strong-electroweak\")))) and de > 2023-01-01",
+   "recid": 3179648,
+   "title": "Mixed QCD×EW corrections to the charged-current Drell-Yan process with leptonic decay at high transverse masses"
+  }
+ ],
+ "proc:ww": [
+  {
+   "arxiv": "2308.11577",
+   "channels": [
+    "chan:ww/lhc-13"
+   ],
+   "matched_by": "(((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs) or ((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\") and not t \"two jets\" and not t Higgs)) and de > 2023-01-01",
+   "recid": 2690111,
+   "title": "NNLO+PS W$^{+}$W$^{−}$ production using jet veto resummation at NNLL′"
+  },
+  {
+   "arxiv": "2412.16020",
+   "channels": [],
+   "matched_by": "(((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs) or ((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\") and not t \"two jets\" and not t Higgs)) and de > 2023-01-01",
+   "recid": 2861929,
+   "title": "Dimension-8 operators in W$^{+}$W$^{−}$ production via gluon fusion"
+  },
+  {
+   "arxiv": "2304.10264",
+   "channels": [],
+   "matched_by": "(((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs) or ((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\") and not t \"two jets\" and not t Higgs)) and de > 2023-01-01",
+   "recid": 2652893,
+   "title": "The Effects of the Widths on the One-Loop Electroweak Corrections to the pp⟶WW Process"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs) or ((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\") and not t \"two jets\" and not t Higgs)) and de > 2023-01-01",
+   "recid": 2771283,
+   "title": "Measurement of W+W- inclusive and differential cross sections in pp collisions at sqrt(s)=13.6 TeV with the CMS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs) or ((t WW or t \"W+W-\" or t \"W boson pair\" or t \"W-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\") and not t \"two jets\" and not t Higgs)) and de > 2023-01-01",
+   "recid": 3132636,
+   "title": "Measurement and interpretations of W±W±Z cross-sections in pppp collisions at s√s = 13 TeV with the ATLAS detector"
+  }
+ ],
+ "proc:wz": [
+  {
+   "arxiv": "2510.26462",
+   "channels": [],
+   "matched_by": "(((t WZ or t \"W Z\" or t \"W±Z\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs and not t \"two jets\" and tc article) or ((t WZ or t \"W Z\" or t \"W±Z\" or t \"W boson and a Z\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\") and not t \"two jets\" and tc article)) and de > 2023-01-01",
+   "recid": 3075219,
+   "title": "Electroweak corrections to doubly polarised WZ scattering at the LHC"
+  }
+ ],
+ "proc:zz": [
+  {
+   "arxiv": "2509.07072",
+   "channels": [
+    "chan:zz/lhc-13"
+   ],
+   "matched_by": "(((t ZZ or t \"Z boson pair\" or t \"four-lepton\" or t \"four leptons\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs and tc article) or ((t ZZ or t \"Z boson pair\" or t \"Z-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\" or t NLO) and not t Higgs and tc article)) and de > 2023-01-01",
+   "recid": 2968105,
+   "title": "Two-loop QCD corrections to ZH and off-shell Z boson pair production in gluon fusion"
+  },
+  {
+   "arxiv": "2607.01174",
+   "channels": [],
+   "matched_by": "(((t ZZ or t \"Z boson pair\" or t \"four-lepton\" or t \"four leptons\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs and tc article) or ((t ZZ or t \"Z boson pair\" or t \"Z-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\" or t NLO) and not t Higgs and tc article)) and de > 2023-01-01",
+   "recid": 3176189,
+   "title": "The cleanest of them all: NLO electroweak corrections to vector-boson scattering into doubly polarised ZZ pairs at the LHC"
+  },
+  {
+   "arxiv": "2503.00512",
+   "channels": [],
+   "matched_by": "(((t ZZ or t \"Z boson pair\" or t \"four-lepton\" or t \"four leptons\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs and tc article) or ((t ZZ or t \"Z boson pair\" or t \"Z-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\" or t NLO) and not t Higgs and tc article)) and de > 2023-01-01",
+   "recid": 2896275,
+   "title": "Threshold resummation for ZZ production"
+  },
+  {
+   "arxiv": "2401.17365",
+   "channels": [],
+   "matched_by": "(((t ZZ or t \"Z boson pair\" or t \"four-lepton\" or t \"four leptons\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs and tc article) or ((t ZZ or t \"Z boson pair\" or t \"Z-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\" or t NLO) and not t Higgs and tc article)) and de > 2023-01-01",
+   "recid": 2753513,
+   "title": "Polarized ZZ pairs in gluon fusion and vector boson fusion at the LHC"
+  },
+  {
+   "arxiv": "2404.02711",
+   "channels": [
+    "chan:zz/lhc-13"
+   ],
+   "matched_by": "(((t ZZ or t \"Z boson pair\" or t \"four-lepton\" or t \"four leptons\") and (collaboration:ATLAS or collaboration:CMS) and t \"cross\" and not t Higgs and tc article) or ((t ZZ or t \"Z boson pair\" or t \"Z-boson pair\") and (t NNLO or t N3LO or t \"electroweak corrections\" or t resummation or t \"gluon fusion\" or t NLO) and not t Higgs and tc article)) and de > 2023-01-01",
+   "recid": 2773780,
+   "title": "Measurement of differential ZZ + jets production cross sections in pp collisions at $ \\sqrt{s} $ = 13 TeV"
+  }
  ]
 }

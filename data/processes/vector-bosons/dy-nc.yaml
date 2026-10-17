@@ -4,12 +4,11 @@ family: "fam:vector-bosons"
 sector: SM
 description: "Production of a charged-lepton pair through an s-channel photon or Z boson, pp/pp̄ → Z/γ* → ℓ+ℓ− + X (ℓ = e, μ). The standard candle of hadron colliders: luminosity and PDF benchmark, input to m_W, sin²θ_eff and αs determinations, and the first hadron-collider process known at N3LO QCD."
 watch:
-  recids: [1768911, 1753680, 2816048, 2818125, 2044884, 2112612, 1869719, 2861949]
+  recids: []
   queries:
-    - 't "Drell-Yan" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)'
-    - 't "Z boson" and t "13 TeV" and (collaboration:ATLAS or collaboration:CMS) and (t "cross section" or t "transverse momentum" or t "angular")'
-    - 't "Drell-Yan" and (t N3LO or t "third order" or t N3LL or t N4LL)'
-    - 't "Drell-Yan" and t "mixed" and (t "QCD-electroweak" or t "QCD-EW" or t "strong-electroweak")'
+    - (t "Drell-Yan" or t "Drell–Yan" or t "Z boson" or t "Z-boson" or t "Z/γ*") and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t "cross section" or t "cross sections" or t asymmetry or t "transverse momentum" or t "angular" or t "differential" or t "weak mixing angle" or t "mixing angle") and not t Higgs and not t top and not t search and not t photon and not t "W boson" and not t "in association" and tc article
+    - (t "Drell-Yan" and (t N3LO or t "third order" or t N3LL or t N4LL)) or (t "Drell-Yan" and t "mixed" and (t "QCD-electroweak" or t "QCD-EW" or t "strong-electroweak"))
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -1255,7 +1254,7 @@ channels:
     collider: "col:lhc-8"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:dy-nc/lhc-8/sigma-fid", region: "Z peak, 66 < mℓℓ < 116 GeV, pT(ℓ) > 20 GeV, |η(ℓ)| < 2.4 (ATLAS fiducial cuts, Born level, e+μ combined)"}
     measurements:
       - id: "meas:dy-nc/lhc-8/atlas-2016-ptll-phistar"
@@ -1297,6 +1296,11 @@ channels:
         dataset: "8 TeV, 2.0 fb⁻¹, μμ, 2.0 < η(μ) < 4.5"
         ref: "inspire:1406555"
         hepdata: "hepdata:ins1406555/Table 2"
+      - id: meas:dy-nc/lhc-8/cms-2014-wz
+        experiment: CMS
+        dataset: 8 TeV, 18.2 pb⁻¹ (2012), e + μ, 60 < mℓℓ < 120 GeV
+        ref: inspire:1280200
+        hepdata: hepdata:ins1280200/Table 4
     observables:
       - id: "obs:dy-nc/lhc-8/sigma-fid"
         name: "Fiducial σ × B(Z/γ* → ℓℓ), Z-peak region"
@@ -1333,6 +1337,62 @@ channels:
                 specific: "Luminosity"
                 size: {range: [1.16, 1.16], unit: "%", asymmetric: false}
                 provenance: {uid: 3969ca83, ref: "inspire:1406555", locator: "Table 1, Z column, 'Luminosity'", source: agent, status: cross-checked, date: "2026-10-16"}
+          - measurement: meas:dy-nc/lhc-8/cms-2014-wz
+            total:
+              value_pct: 4.2
+              provenance:
+                uid: '71481503'
+                ref: hepdata:ins1280200/Table 4
+                locator: Table 4, column 2, quadrature sum of all errors (bin 3); bin 3 of the fiducial column is the flavour-combined σ×B = 0.41 ± 0.01 (stat) ± 0.01 (sys) ± 0.01 (lumi) nb (pT(ℓ) > 25 GeV, |η(ℓ)| < 2.1 for muons, 60 < mℓℓ < 120 GeV); HEPData values are rounded to 0.01 nb, so the relative total is only approximate
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 2.2
+                    - 2.5
+                  asymmetric: false
+                full_table: hepdata:ins1280200/Table 4
+                provenance:
+                  uid: e020a6f4
+                  ref: hepdata:ins1280200/Table 4
+                  locator: Table 4, column 2, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 2.2
+                    - 2.5
+                  asymmetric: false
+                full_table: hepdata:ins1280200/Table 4
+                provenance:
+                  uid: dd917188
+                  ref: hepdata:ins1280200/Table 4
+                  locator: Table 4, column 2, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 2.2
+                    - 2.5
+                  asymmetric: false
+                full_table: hepdata:ins1280200/Table 4
+                provenance:
+                  uid: 4d23fa08
+                  ref: hepdata:ins1280200/Table 4
+                  locator: Table 4, column 2, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
         predictions:
           - label: "NNLO QCD (FEWZ, ABM12/CT10/CT14/HERA1.5/MMHT14/NNPDF3.0), LHCb cuts"
             accuracy: {qcd: NNLO}
@@ -1341,6 +1401,38 @@ channels:
             compared_to: ["meas:dy-nc/lhc-8/lhcb-2016-wz"]
             refs: ["inspire:1406555", "inspire:877524", "inspire:1182519"]
             provenance: {uid: 9a1ae5ee, ref: "inspire:1406555", locator: "Sec. 2 (FEWZ [36, 37] at NNLO, scales at the boson mass varied by factors of two; total = PDF ⊕ αs at 68.3% CL ⊕ scale); numbers shown in figures only", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: NNLO QCD (FEWZ, MSTW2008), CMS fiducial acceptance
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - uncertainty includes αs, heavy-quark masses and scale variations as listed in the paper
+            codes:
+              - FEWZ
+            uses_amplitudes:
+              - amp:2L/qqbar-V
+            total:
+              value_pct: 2.5
+              provenance:
+                uid: b1bea2e8
+                ref: inspire:1280200
+                locator: 'Table 2 (fiducial block), Z: NNLO σ×B = 0.40 ± 0.01 nb; the paper quotes the total prediction 1.13 ± 0.04 nb (3.5%) for 60 < mℓℓ < 120 GeV; the fiducial relative uncertainty is only approximate because of the one-digit rounding'
+                source: agent
+                status: agent-draft
+                date: '2026-10-17'
+            compared_to:
+              - meas:dy-nc/lhc-8/cms-2014-wz
+            refs:
+              - inspire:1280200
+              - inspire:877524
+              - inspire:1182519
+            provenance:
+              uid: aab2a93b
+              ref: inspire:1280200
+              locator: theory-prediction paragraph (FEWZ at NNLO with MSTW2008, 68% CL uncertainties) and Table 2
+              source: agent
+              status: agent-draft
+              date: '2026-10-17'
+            headline: true
       - id: "obs:dy-nc/lhc-8/yll"
         name: "dσ/d|y(ℓℓ)|, Z-peak region (incl. forward)"
         kind: differential
