@@ -1,0 +1,35 @@
+id: "par:m-z"
+name: "Z boson mass"
+symbol: "m_Z"
+unit: "GeV"
+determinations:
+  - value: 91.1879
+    uncertainty: 0.0020
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: 5dcb77b0, ref: "inspire:3193100", locator: "PDG 2026 edition, Z MASS (PDG API summary S044M, OUR AVERAGE): 91.1879 ± 0.0020 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 91.1875
+    uncertainty: 0.0021
+    extracted_from: []
+    ref: "inspire:691576"
+    provenance: {uid: 41df3a8b, ref: "inspire:691576", locator: "Abstract and Table 2.13: LEP combination, m_Z = 91.1875 ± 0.0021 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 91.1893
+    uncertainty: 0.0031
+    extracted_from: []
+    ref: "inspire:691576"
+    provenance: {uid: e9f2a529, ref: "inspire:691576", locator: "Table 2.5 (lepton universality imposed), ALEPH, m_Z row: 91.1893 ± 0.0031 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 91.1863
+    uncertainty: 0.0028
+    extracted_from: []
+    ref: "inspire:691576"
+    provenance: {uid: 57317a4c, ref: "inspire:691576", locator: "Table 2.5 (lepton universality imposed), DELPHI, m_Z row: 91.1863 ± 0.0028 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 91.1894
+    uncertainty: 0.0030
+    extracted_from: []
+    ref: "inspire:691576"
+    provenance: {uid: fd42757f, ref: "inspire:691576", locator: "Table 2.5 (lepton universality imposed), L3, m_Z row: 91.1894 ± 0.0030 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 91.1853
+    uncertainty: 0.0029
+    extracted_from: []
+    ref: "inspire:691576"
+    provenance: {uid: 5e810a83, ref: "inspire:691576", locator: "Table 2.5 (lepton universality imposed), OPAL, m_Z row: 91.1853 ± 0.0029 GeV", source: agent, status: agent-draft, date: "2026-10-17"}

@@ -1,0 +1,30 @@
+id: "par:m-t"
+name: "Top quark mass"
+symbol: "m_t"
+unit: "GeV"
+determinations:
+  - value: 172.60
+    uncertainty: 0.27
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: f2f33ad6, ref: "inspire:3193100", locator: "PDG 2026 edition, t-Quark Mass (Direct Measurements) (PDG API summary Q007TP, OUR AVERAGE): 172.60 ± 0.27 GeV, scale factor 1.5", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 172.1
+    uncertainty: 0.6
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: 7bc6d99b, ref: "inspire:3193100", locator: "PDG 2026 edition, t-Quark Pole Mass from Cross-Section Measurements (PDG API summary Q007TP4, OUR AVERAGE): 172.1 ± 0.6 GeV; pole mass from σ(tt̄)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 172.52
+    uncertainty: 0.33
+    extracted_from: []
+    ref: "arXiv:2402.08713"
+    provenance: {uid: 5a859c3c, ref: "arXiv:2402.08713", locator: "Abstract: ATLAS+CMS combination of 15 direct measurements at 7 and 8 TeV, m_t = 172.52 ± 0.14 (stat) ± 0.30 (syst) GeV, total 0.33 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 171.77
+    uncertainty: 0.37
+    extracted_from: []
+    ref: "arXiv:2302.01967"
+    provenance: {uid: 3304670e, ref: "arXiv:2302.01967", locator: "Abstract: CMS 13 TeV, 36.3 fb⁻¹, lepton+jets, profile likelihood, m_t = 171.77 ± 0.37 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+  - value: 172.8
+    uncertainty: 1.7
+    extracted_from: ["meas:ttbar/lhc-13/atlas-2025-emu"]
+    ref: "inspire:2971071"
+    provenance: {uid: 131b7ec7, ref: "inspire:2971071", locator: "Abstract: pole mass from the σ(tt̄) measurement, m_t^pole = 172.8 +1.5/−1.7 GeV; asymmetric, the larger side (1.7) is stored", source: agent, status: agent-draft, date: "2026-10-17"}

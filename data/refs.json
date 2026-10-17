@@ -80,6 +80,15 @@
   "title": "Thrust at $N^{3}LL$ with Power Corrections and a Precision Global Fit for $\\alpha_{s}(mZ)$",
   "year": 2010
  },
+ "arXiv:1509.07645": {
+  "arxiv": "1509.07645",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2015jyu,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurement of the forward-backward asymmetry in $Z/\\gamma^{\\ast} \\rightarrow \\mu^{+}\\mu^{-}$ decays and determination of the effective weak mixing angle}\",\n    eprint = \"1509.07645\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"LHCB-PAPER-2015-039, CERN-PH-EP-2015-250\",\n    doi = \"10.1007/JHEP11(2015)190\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"190\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1007/JHEP11(2015)190",
+  "recid": 1394859,
+  "title": "Measurement of the forward-backward asymmetry in $Z/\\gamma^{\\ast} \\rightarrow \\mu^{+}\\mu^{-}$ decays and determination of the effective weak mixing angle",
+  "year": 2015
+ },
  "arXiv:1606.00840": {
   "arxiv": "1606.00840",
   "authors_short": "Dreyer and Karlberg",
@@ -115,6 +124,51 @@
   "recid": 1721113,
   "title": "High precision determination of $\\alpha_s$ from a global fit of jet rates",
   "year": 2019
+ },
+ "arXiv:2109.01113": {
+  "arxiv": "2109.01113",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2021bjt,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurement of the W boson mass}\",\n    eprint = \"2109.01113\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"LHCb-PAPER-2021-024, CERN-EP-2021-170\",\n    doi = \"10.1007/JHEP01(2022)036\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"036\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP01(2022)036",
+  "recid": 1915806,
+  "title": "Measurement of the W boson mass",
+  "year": 2021
+ },
+ "arXiv:2302.01967": {
+  "arxiv": "2302.01967",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2023ebf,\n    author = \"Tumasyan, Armen and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the top quark mass using a profile likelihood approach with the lepton~+~jets final states in proton{\\textendash}proton collisions at $\\sqrt{s}=13\\,\\text {Te}\\hspace{-.08em}\\text {V} $}\",\n    eprint = \"2302.01967\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-20-008, CERN-EP-2022-245\",\n    doi = \"10.1140/epjc/s10052-023-12050-4\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"83\",\n    number = \"10\",\n    pages = \"963\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1140/epjc/s10052-023-12050-4",
+  "recid": 2629755,
+  "title": "Measurement of the top quark mass using a profile likelihood approach with the lepton + jets final states in proton–proton collisions at $\\sqrt{s}=13\\,\\text {Te}\\hspace{-.08em}\\text {V} $",
+  "year": 2023
+ },
+ "arXiv:2402.08713": {
+  "arxiv": "2402.08713",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024dxp,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"ATLAS, CMS\",\n    title = \"{Combination of Measurements of the Top Quark Mass from Data Collected by the ATLAS and CMS Experiments at s=7 and 8~TeV}\",\n    eprint = \"2402.08713\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-22-001, ATLAS-TOPQ-2019-13, CERN-EP-2024-020\",\n    doi = \"10.1103/PhysRevLett.132.261902\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"132\",\n    number = \"26\",\n    pages = \"261902\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1103/PhysRevLett.132.261902",
+  "recid": 2789110,
+  "title": "Combination of Measurements of the Top Quark Mass from Data Collected by the ATLAS and CMS Experiments at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>7</mn></math> and 8 TeV",
+  "year": 2024
+ },
+ "arXiv:2403.15085": {
+  "arxiv": "2403.15085",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024erm,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the W-boson mass and width with the ATLAS detector using proton{\\textendash}proton collisions at $\\sqrt{s}=7$ TeV}\",\n    eprint = \"2403.15085\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2024-074\",\n    doi = \"10.1140/epjc/s10052-024-13190-x\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"84\",\n    number = \"12\",\n    pages = \"1309\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1140/epjc/s10052-024-13190-x",
+  "recid": 2771258,
+  "title": "Measurement of the W-boson mass and width with the ATLAS detector using proton–proton collisions at $\\sqrt{s}=7$ TeV",
+  "year": 2024
+ },
+ "arXiv:2412.13872": {
+  "arxiv": "2412.13872",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2024lrd,\n    author = \"Chekhovsky, Vladimir and others\",\n    collaboration = \"CMS\",\n    title = \"{High-precision measurement of the W boson mass with the CMS experiment}\",\n    eprint = \"2412.13872\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-23-002, CERN-EP-2024-308\",\n    doi = \"10.1038/s41586-026-10168-5\",\n    journal = \"Nature\",\n    volume = \"652\",\n    number = \"8109\",\n    pages = \"321--327\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1038/s41586-026-10168-5",
+  "recid": 2860928,
+  "title": "High-precision measurement of the W boson mass with the CMS experiment",
+  "year": 2024
  },
  "arXiv:2503.15043": {
   "arxiv": "2503.15043",
@@ -573,6 +627,15 @@
   "doi": "10.1103/PhysRevD.92.094028",
   "recid": 1394395,
   "title": "QCD corrections to ZZ production in gluon fusion at the LHC",
+  "year": 2015
+ },
+ "inspire:1394859": {
+  "arxiv": "1509.07645",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2015jyu,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurement of the forward-backward asymmetry in $Z/\\gamma^{\\ast} \\rightarrow \\mu^{+}\\mu^{-}$ decays and determination of the effective weak mixing angle}\",\n    eprint = \"1509.07645\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"LHCB-PAPER-2015-039, CERN-PH-EP-2015-250\",\n    doi = \"10.1007/JHEP11(2015)190\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"190\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1007/JHEP11(2015)190",
+  "recid": 1394859,
+  "title": "Measurement of the forward-backward asymmetry in $Z/\\gamma^{\\ast} \\rightarrow \\mu^{+}\\mu^{-}$ decays and determination of the effective weak mixing angle",
   "year": 2015
  },
  "inspire:1396331": {
@@ -1331,6 +1394,15 @@
   "title": "Dilepton Rapidity Distribution in Drell-Yan Production to Third Order in QCD",
   "year": 2021
  },
+ "inspire:1915806": {
+  "arxiv": "2109.01113",
+  "authors_short": "LHCb Collaboration",
+  "bibtex": "@article{LHCb:2021bjt,\n    author = \"Aaij, Roel and others\",\n    collaboration = \"LHCb\",\n    title = \"{Measurement of the W boson mass}\",\n    eprint = \"2109.01113\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"LHCb-PAPER-2021-024, CERN-EP-2021-170\",\n    doi = \"10.1007/JHEP01(2022)036\",\n    journal = \"JHEP\",\n    volume = \"01\",\n    pages = \"036\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1007/JHEP01(2022)036",
+  "recid": 1915806,
+  "title": "Measurement of the W boson mass",
+  "year": 2021
+ },
  "inspire:1920586": {
   "arxiv": null,
   "authors_short": "Barter",
@@ -1410,6 +1482,15 @@
   "doi": "10.1007/JHEP06(2022)022",
   "recid": 2056855,
   "title": "Mixed QCD-electroweak corrections to dilepton production at the LHC in the high invariant mass region",
+  "year": 2022
+ },
+ "inspire:2064224": {
+  "arxiv": null,
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2022hxs,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF\",\n    title = \"{High-precision measurement of the $W$          boson mass with the CDF II detector}\",\n    reportNumber = \"FERMILAB-PUB-22-254-PPD\",\n    doi = \"10.1126/science.abk1781\",\n    journal = \"Science\",\n    volume = \"376\",\n    number = \"6589\",\n    pages = \"170--176\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1126/science.abk1781",
+  "recid": 2064224,
+  "title": "High-precision measurement of the $W$          boson mass with the CDF II detector",
   "year": 2022
  },
  "inspire:2070536": {
@@ -1529,6 +1610,15 @@
   "title": "Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV using 139 fb$^{-1}$ of ATLAS data",
   "year": 2023
  },
+ "inspire:2629755": {
+  "arxiv": "2302.01967",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2023ebf,\n    author = \"Tumasyan, Armen and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the top quark mass using a profile likelihood approach with the lepton~+~jets final states in proton{\\textendash}proton collisions at $\\sqrt{s}=13\\,\\text {Te}\\hspace{-.08em}\\text {V} $}\",\n    eprint = \"2302.01967\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-20-008, CERN-EP-2022-245\",\n    doi = \"10.1140/epjc/s10052-023-12050-4\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"83\",\n    number = \"10\",\n    pages = \"963\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1140/epjc/s10052-023-12050-4",
+  "recid": 2629755,
+  "title": "Measurement of the top quark mass using a profile likelihood approach with the lepton + jets final states in proton–proton collisions at $\\sqrt{s}=13\\,\\text {Te}\\hspace{-.08em}\\text {V} $",
+  "year": 2023
+ },
  "inspire:2644969": {
   "arxiv": "2303.12781",
   "authors_short": "Camarda et al.",
@@ -1619,6 +1709,15 @@
   "title": "Measurement of vector boson production cross sections and their ratios using pp collisions at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13.6</mn></math> TeV with the ATLAS detector",
   "year": 2024
  },
+ "inspire:2771258": {
+  "arxiv": "2403.15085",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024erm,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the W-boson mass and width with the ATLAS detector using proton{\\textendash}proton collisions at $\\sqrt{s}=7$ TeV}\",\n    eprint = \"2403.15085\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2024-074\",\n    doi = \"10.1140/epjc/s10052-024-13190-x\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"84\",\n    number = \"12\",\n    pages = \"1309\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1140/epjc/s10052-024-13190-x",
+  "recid": 2771258,
+  "title": "Measurement of the W-boson mass and width with the ATLAS detector using proton–proton collisions at $\\sqrt{s}=7$ TeV",
+  "year": 2024
+ },
  "inspire:2775442": {
   "arxiv": "2404.06204",
   "authors_short": "ATLAS Collaboration",
@@ -1636,6 +1735,15 @@
   "recid": 277634,
   "title": "The One Particle Inclusive Differential Cross-Section for Heavy Quark Production in Hadronic Collisions",
   "year": 1989
+ },
+ "inspire:2789110": {
+  "arxiv": "2402.08713",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024dxp,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"ATLAS, CMS\",\n    title = \"{Combination of Measurements of the Top Quark Mass from Data Collected by the ATLAS and CMS Experiments at s=7 and 8~TeV}\",\n    eprint = \"2402.08713\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-22-001, ATLAS-TOPQ-2019-13, CERN-EP-2024-020\",\n    doi = \"10.1103/PhysRevLett.132.261902\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"132\",\n    number = \"26\",\n    pages = \"261902\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1103/PhysRevLett.132.261902",
+  "recid": 2789110,
+  "title": "Combination of Measurements of the Top Quark Mass from Data Collected by the ATLAS and CMS Experiments at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>7</mn></math> and 8 TeV",
+  "year": 2024
  },
  "inspire:279913": {
   "arxiv": null,
@@ -1689,6 +1797,15 @@
   "doi": "10.1007/JHEP02(2025)170",
   "recid": 2851712,
   "title": "Drell-Yan transverse-momentum spectra at N$^{3}$LL$^{′}$ and approximate N$^{4}$LL with SCETlib",
+  "year": 2024
+ },
+ "inspire:2860928": {
+  "arxiv": "2412.13872",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2024lrd,\n    author = \"Chekhovsky, Vladimir and others\",\n    collaboration = \"CMS\",\n    title = \"{High-precision measurement of the W boson mass with the CMS experiment}\",\n    eprint = \"2412.13872\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-23-002, CERN-EP-2024-308\",\n    doi = \"10.1038/s41586-026-10168-5\",\n    journal = \"Nature\",\n    volume = \"652\",\n    number = \"8109\",\n    pages = \"321--327\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1038/s41586-026-10168-5",
+  "recid": 2860928,
+  "title": "High-precision measurement of the W boson mass with the CMS experiment",
   "year": 2024
  },
  "inspire:2861949": {
@@ -1798,6 +1915,15 @@
   "recid": 318997,
   "title": "Contribution of the second order gluonic Wilson coefficient to the deep inelastic structure function",
   "year": 1991
+ },
+ "inspire:3193100": {
+  "arxiv": null,
+  "authors_short": "Particle Data Group Collaboration",
+  "bibtex": "@article{ParticleDataGroup:2026mpi,\n    author = \"Takahashi, F. and others\",\n    collaboration = \"Particle Data Group\",\n    title = \"{Review of Particle Physics}\",\n    doi = \"10.1142/s0217751x26300115\",\n    journal = \"Int. J. Mod. Phys. A\",\n    volume = \"41\",\n    number = \"22\",\n    pages = \"2630011\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1142/s0217751x26300115",
+  "recid": 3193100,
+  "title": "Review of Particle Physics",
+  "year": 2026
  },
  "inspire:332376": {
   "arxiv": null,
