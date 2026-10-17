@@ -4,10 +4,14 @@ family: "fam:ee-hadronic"
 sector: SM
 description: "Normalised distributions of the standard three-jet-like event-shape variables in e⁺e⁻ → γ*/Z → hadrons: thrust, heavy-jet mass, wide and total jet broadening, C-parameter and the Durham y₃. Measured at LEP1/LEP2 (and SLC, PETRA) and used for precise αs extractions; predictions combine NNLO fixed order (EERAD3 and an independent code) with resummation of two-jet-region logarithms (NLLA to N3LL′ in SCET) and fitted or modelled hadronisation corrections. This draft headlines thrust."
 watch:
-  recids: [769010, 636645, 858620, 1332934, 817454]
+  recids: []
   queries:
-    - 't "event shape" and t "e+ e-" and (t NNLL or t N3LL or t NNLO)'
-    - 't thrust and (t "e+ e-" or t "e+e-") and (t resummation or t N3LL or t NNLL)'
+    - 't thrust and (t "e+e-" or t "e+ e-" or t "e$^+$e$^-$" or t annihilation or t ALEPH or t LEP)'
+    - 't event and t shape and (t "e+e-" or t "e$^+$e$^-$" or t annihilation or t LEP or t alpha or t "strong coupling")'
+    - 't "event shapes" and (t resummation or t N3LL or t NNLL or t NNLO or t "strong coupling" or t alpha)'
+    - 't "C-parameter" and (t resummation or t N3LL or t NNLL or t "strong coupling" or t annihilation)'
+    - 't ALEPH and t archived and (t shape or t jet or t thrust or t correlator)'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -57,6 +61,11 @@ channels:
         dataset: "LEP1, √s = 91 GeV"
         ref: "inspire:669402"
         hepdata: "hepdata:ins669402/Table 1"
+      - id: "meas:ee-event-shapes/lep1/delphi-2000"
+        experiment: "DELPHI"
+        dataset: "LEP1, √s = 91.2 GeV (1994 data)"
+        ref: "inspire:522656"
+        hepdata: "hepdata:ins522656/Table 6"
     observables:
       - id: "obs:ee-event-shapes/lep1/thrust"
         name: "Thrust distribution (1/σ) dσ/dτ, τ = 1−T"
@@ -145,6 +154,47 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
+          - measurement: "meas:ee-event-shapes/lep1/delphi-2000"
+            total:
+              value_pct: 1.9
+              provenance:
+                uid: 761f5026
+                ref: hepdata:ins522656/Table 6
+                locator: Table 6, quadrature sum of all errors (bin 3)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.28
+                    - 23.0
+                  asymmetric: false
+                full_table: hepdata:ins522656/Table 6
+                provenance:
+                  uid: 425aeef3
+                  ref: hepdata:ins522656/Table 6
+                  locator: Table 6, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 0.82
+                    - 15.0
+                  asymmetric: false
+                full_table: hepdata:ins522656/Table 6
+                provenance:
+                  uid: 53efd755
+                  ref: hepdata:ins522656/Table 6
+                  locator: Table 6, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
         predictions:
           - label: "N3LL′ (SCET) + O(αs³) fixed order, R-gap soft function"
             accuracy:
@@ -157,6 +207,7 @@ channels:
                 method: "scan over profile-function parameters"
                 size: {range: [1.7, 1.7], asymmetric: false, regions: [{where: "Q = mZ, τ in [0.1, 0.3]", value: "±1.7"}]}
                 provenance: {uid: e9912330, ref: "arXiv:1006.3080", locator: "Sec. V, text on Fig. 9d (N3LL′ ±1.7%, N3LL ±3.4%, tail region τ in [0.1, 0.3])", source: agent, status: cross-checked, date: "2026-10-16"}
+            total: {value_pct: 1.7, provenance: {uid: 997d8311, ref: "arXiv:1006.3080", locator: "Sec. V, text on Fig. 9d (N3LL′ with R-gap soft function: relative uncertainty about ±1.7% in the tail region τ in [0.1, 0.3] at Q = mZ; also Sec. VII); perturbative profile-scan error only, quoted for the tail not the peak headline bin", source: agent, status: agent-draft, date: "2026-10-17"}}
             compared_to: ["meas:ee-event-shapes/lep1/aleph-2004", "meas:ee-event-shapes/lep1/opal-2005"]
             refs: ["arXiv:1006.3080"]
             provenance: {uid: 9ed24867, ref: "arXiv:1006.3080", locator: "Abstract; Sec. VI (fit data sets incl. ALEPH at 91.2 GeV and OPAL at 91 GeV)", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -178,6 +229,160 @@ channels:
             compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
             refs: ["arXiv:0711.4711", "arXiv:0707.1285"]
             provenance: {uid: 10beb00b, ref: "arXiv:0711.4711", locator: "Abstract; Sec. 6.1, Fig. 7 (thrust at Q = mZ vs ALEPH data; scale uncertainty reduced by about 30% from NLO to NNLO)", source: agent, status: cross-checked, date: "2026-10-16"}
+      - id: "obs:ee-event-shapes/lep1/c-parameter"
+        name: "C-parameter distribution (1/σ) dσ/dC"
+        kind: differential
+        variable: "C"
+        results:
+          - measurement: "meas:ee-event-shapes/lep1/aleph-2004"
+            total:
+              value_pct: 1.1
+              provenance:
+                uid: 79cf83f4
+                ref: hepdata:ins636645/Table 86
+                locator: Table 86, quadrature sum of all errors (bin 15)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.39
+                    - 29.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 86
+                provenance:
+                  uid: a497ff92
+                  ref: hepdata:ins636645/Table 86
+                  locator: Table 86, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 0.47
+                    - 97.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 86
+                provenance:
+                  uid: 881d2213
+                  ref: hepdata:ins636645/Table 86
+                  locator: Table 86, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: "meas:ee-event-shapes/lep1/opal-2005"
+            total:
+              value_pct: 1.2
+              provenance:
+                uid: cd302d7c
+                ref: hepdata:ins669402/Table 3
+                locator: Table 3, quadrature sum of all errors (bin 7)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.4
+                    - 1.7
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 3
+                provenance:
+                  uid: e67eb859
+                  ref: hepdata:ins669402/Table 3
+                  locator: Table 3, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 1.1
+                    - 5.2
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 3
+                provenance:
+                  uid: f7482f42
+                  ref: hepdata:ins669402/Table 3
+                  locator: Table 3, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: "meas:ee-event-shapes/lep1/delphi-2000"
+            total:
+              value_pct: 1.3
+              provenance:
+                uid: 1cf5c798
+                ref: hepdata:ins522656/Table 8
+                locator: Table 8, quadrature sum of all errors (bin 8)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.31
+                    - 5.2
+                  asymmetric: false
+                full_table: hepdata:ins522656/Table 8
+                provenance:
+                  uid: a023c0e9
+                  ref: hepdata:ins522656/Table 8
+                  locator: Table 8, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 1.0
+                    - 6.4
+                  asymmetric: false
+                full_table: hepdata:ins522656/Table 8
+                provenance:
+                  uid: 4f0e8d27
+                  ref: hepdata:ins522656/Table 8
+                  locator: Table 8, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: "N3LL′ (SCET) + O(αs³) fixed order, R-gap soft function"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL′", variable: "C"}]
+              approximations: ["O(αs³) fixed-order input: NNLO for the C-parameter distribution", "nonperturbative soft function with Ω1 in the R-gap scheme", "includes hadron-mass effects"]
+            total: {value_pct: 2.5, provenance: {uid: 10951c86, ref: "arXiv:1411.6633", locator: "Abstract and Conclusions (average perturbative uncertainty of the most accurate description about 2.5% in the fit region 0.25 < C < 0.65 at Q = mZ)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            refs: ["arXiv:1411.6633"]
+            provenance: {uid: 342d1c63, ref: "arXiv:1411.6633", locator: "Abstract (C-parameter in SCET at N3LL′ with O(αs³) fixed order and R-gap nonperturbative soft function)", source: agent, status: agent-draft, date: "2026-10-17"}
+          - label: "NNLO + NLLA matched"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NLLA", variable: "C"}]
+              approximations: ["parton level; hadronisation not included"]
+            compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
+            refs: ["arXiv:0803.0695"]
+            provenance: {uid: 81cca05d, ref: "arXiv:0803.0695", locator: "Introduction (C-parameter among the event shapes) and text before Fig. 3 (matched NLLA+NNLO compared to hadron-level ALEPH data)", source: agent, status: agent-draft, date: "2026-10-17"}
+          - label: "NNLO QCD fixed order"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton level; hadronisation not included", "fixed order O(αs³) for the distribution: NNLO"]
+            codes: ["EERAD3"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
+            refs: ["arXiv:0711.4711"]
+            provenance: {uid: '8444e055', ref: "arXiv:0711.4711", locator: "Sec. 6.4, Fig. 15 (C-parameter at Q = mZ vs ALEPH data; scale uncertainty reduced by about 40% from NLO to NNLO)", source: agent, status: agent-draft, date: "2026-10-17"}
   - id: "chan:ee-event-shapes/lep2"
     collider: "col:lep2"
     initial_state: "e+e-"
@@ -190,6 +395,21 @@ channels:
         dataset: "LEP2, √s = 206 GeV"
         ref: "inspire:636645"
         hepdata: "hepdata:ins636645/Table 61"
+      - id: "meas:ee-event-shapes/lep2/delphi-2003-207"
+        experiment: "DELPHI"
+        dataset: "LEP2, √s = 207 GeV (HEPData column 4 of the 200–207 GeV table)"
+        ref: "inspire:620250"
+        hepdata: "hepdata:ins620250/Table 39"
+      - id: "meas:ee-event-shapes/lep2/l3-2004-206"
+        experiment: "L3"
+        dataset: "LEP2, √s = 206.2 GeV"
+        ref: "inspire:652683"
+        hepdata: "hepdata:ins652683/Table 25"
+      - id: "meas:ee-event-shapes/lep2/opal-2005-197"
+        experiment: "OPAL"
+        dataset: "LEP2, mean √s = 197 GeV (189–209 GeV bin)"
+        ref: "inspire:669402"
+        hepdata: "hepdata:ins669402/Table 1"
     observables:
       - id: "obs:ee-event-shapes/lep2/thrust"
         name: "Thrust distribution (1/σ) dσ/dτ, τ = 1−T"
@@ -237,6 +457,129 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
+          - measurement: "meas:ee-event-shapes/lep2/delphi-2003-207"
+            total:
+              value_pct: 7.0
+              provenance:
+                uid: fc491071
+                ref: hepdata:ins620250/Table 39
+                locator: Table 39, column 4, quadrature sum of all errors (bin 3)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 5.2
+                    - 140.0
+                  asymmetric: false
+                full_table: hepdata:ins620250/Table 39
+                provenance:
+                  uid: cf6f2337
+                  ref: hepdata:ins620250/Table 39
+                  locator: Table 39, column 4, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 1.2
+                    - 57.0
+                  asymmetric: false
+                full_table: hepdata:ins620250/Table 39
+                provenance:
+                  uid: fbc06034
+                  ref: hepdata:ins620250/Table 39
+                  locator: Table 39, column 4, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: "meas:ee-event-shapes/lep2/l3-2004-206"
+            total:
+              value_pct: 4.7
+              provenance:
+                uid: ccd02833
+                ref: hepdata:ins652683/Table 25
+                locator: Table 25, column 3, quadrature sum of all errors (bin 2)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 2.9
+                    - 1500.0
+                  asymmetric: false
+                full_table: hepdata:ins652683/Table 25
+                provenance:
+                  uid: 83613a44
+                  ref: hepdata:ins652683/Table 25
+                  locator: Table 25, column 3, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 3.1
+                    - 500.0
+                  asymmetric: false
+                full_table: hepdata:ins652683/Table 25
+                provenance:
+                  uid: 540a9ffe
+                  ref: hepdata:ins652683/Table 25
+                  locator: Table 25, column 3, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: "meas:ee-event-shapes/lep2/opal-2005-197"
+            total:
+              value_pct: 4.5
+              provenance:
+                uid: d438d548
+                ref: hepdata:ins669402/Table 1
+                locator: Table 1, column 4, quadrature sum of all errors (bin 3)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 2.1
+                    - 12.0
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 1
+                provenance:
+                  uid: b59d441b
+                  ref: hepdata:ins669402/Table 1
+                  locator: Table 1, column 4, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 1.8
+                    - 17.0
+                  asymmetric: false
+                full_table: hepdata:ins669402/Table 1
+                provenance:
+                  uid: 7ffaa626
+                  ref: hepdata:ins669402/Table 1
+                  locator: Table 1, column 4, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
         predictions:
           - label: "N3LL′ (SCET) + O(αs³) fixed order, R-gap soft function"
             accuracy:

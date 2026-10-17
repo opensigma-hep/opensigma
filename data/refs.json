@@ -116,6 +116,15 @@
   "title": "NNLOPS simulation of Higgs boson production",
   "year": 2013
  },
+ "arXiv:1411.6633": {
+  "arxiv": "1411.6633",
+  "authors_short": "Hoang et al.",
+  "bibtex": "@article{Hoang:2014wka,\n    author = \"Hoang, Andr{\\'e} H. and Kolodrubetz, Daniel W. and Mateu, Vicent and Stewart, Iain W.\",\n    title = \"{$C$-parameter distribution at N$^3$LL' including power corrections}\",\n    eprint = \"1411.6633\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"UWTHPH-2014-07, MIT-CTP-4596, LPN14-123\",\n    doi = \"10.1103/PhysRevD.91.094017\",\n    journal = \"Phys. Rev. D\",\n    volume = \"91\",\n    number = \"9\",\n    pages = \"094017\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1103/PhysRevD.91.094017",
+  "recid": 1329974,
+  "title": "$C$-parameter distribution at N$^3$LL′ including power corrections",
+  "year": 2014
+ },
  "arXiv:1509.07645": {
   "arxiv": "1509.07645",
   "authors_short": "LHCb Collaboration",
@@ -879,6 +888,15 @@
   "doi": "10.1007/JHEP02(2015)153",
   "recid": 1325553,
   "title": "Measurement of the inclusive jet cross-section in proton-proton collisions at $ \\sqrt{s}=7 $ TeV using 4.5 fb$^{−1}$ of data with the ATLAS detector",
+  "year": 2014
+ },
+ "inspire:1329974": {
+  "arxiv": "1411.6633",
+  "authors_short": "Hoang et al.",
+  "bibtex": "@article{Hoang:2014wka,\n    author = \"Hoang, Andr{\\'e} H. and Kolodrubetz, Daniel W. and Mateu, Vicent and Stewart, Iain W.\",\n    title = \"{$C$-parameter distribution at N$^3$LL' including power corrections}\",\n    eprint = \"1411.6633\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"UWTHPH-2014-07, MIT-CTP-4596, LPN14-123\",\n    doi = \"10.1103/PhysRevD.91.094017\",\n    journal = \"Phys. Rev. D\",\n    volume = \"91\",\n    number = \"9\",\n    pages = \"094017\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1103/PhysRevD.91.094017",
+  "recid": 1329974,
+  "title": "$C$-parameter distribution at N$^3$LL′ including power corrections",
   "year": 2014
  },
  "inspire:1353120": {
@@ -3320,6 +3338,15 @@
   "title": "Deep inelastic structure functions at two loops",
   "year": 1999
  },
+ "inspire:522656": {
+  "arxiv": "hep-ex/0002026",
+  "authors_short": "DELPHI Collaboration",
+  "bibtex": "@article{DELPHI:2000uri,\n    author = \"Abreu, P. and others\",\n    collaboration = \"DELPHI\",\n    title = \"{Consistent measurements of alpha(s) from precise oriented event shape distributions}\",\n    eprint = \"hep-ex/0002026\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-EP-99-133\",\n    doi = \"10.1007/s100520000354\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"14\",\n    pages = \"557--584\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1007/s100520000354",
+  "recid": 522656,
+  "title": "Consistent measurements of alpha(s) from precise oriented event shape distributions",
+  "year": 2000
+ },
  "inspire:529378": {
   "arxiv": "hep-ph/0006307",
   "authors_short": "Denner et al.",
@@ -3536,6 +3563,15 @@
   "title": "Two loop QCD helicity amplitudes for massless quark massless gauge boson scattering",
   "year": 2003
  },
+ "inspire:620250": {
+  "arxiv": "hep-ex/0307048",
+  "authors_short": "DELPHI Collaboration",
+  "bibtex": "@article{DELPHI:2003yqh,\n    author = \"Abdallah, J. and others\",\n    collaboration = \"DELPHI\",\n    title = \"{A Study of the energy evolution of event shape distributions and their means with the DELPHI detector at LEP}\",\n    eprint = \"hep-ex/0307048\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-EP-2002-082\",\n    doi = \"10.1140/epjc/s2003-01198-0\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"29\",\n    pages = \"285--312\",\n    year = \"2003\"\n}\n",
+  "doi": "10.1140/epjc/s2003-01198-0",
+  "recid": 620250,
+  "title": "A Study of the energy evolution of event shape distributions and their means with the DELPHI detector at LEP",
+  "year": 2003
+ },
  "inspire:621007": {
   "arxiv": "hep-ph/0306109",
   "authors_short": "Figy et al.",
@@ -3615,6 +3651,15 @@
   "doi": "10.1016/j.physletb.2004.06.063",
   "recid": 647789,
   "title": "Two loop light fermion contribution to Higgs production and decays",
+  "year": 2004
+ },
+ "inspire:652683": {
+  "arxiv": "hep-ex/0406049",
+  "authors_short": "L3 Collaboration",
+  "bibtex": "@article{L3:2004cdh,\n    author = \"Achard, P. and others\",\n    collaboration = \"L3\",\n    title = \"{Studies of hadronic event structure in $e^{+} e^{-}$ annihilation from 30-GeV to 209-GeV with the L3 detector}\",\n    eprint = \"hep-ex/0406049\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-PH-EP-2004-024, CERN-EP-PH-2004-024\",\n    doi = \"10.1016/j.physrep.2004.07.002\",\n    journal = \"Phys. Rept.\",\n    volume = \"399\",\n    pages = \"71--174\",\n    year = \"2004\"\n}\n",
+  "doi": "10.1016/j.physrep.2004.07.002",
+  "recid": 652683,
+  "title": "Studies of hadronic event structure in $e^{+} e^{-}$ annihilation from 30-GeV to 209-GeV with the L3 detector",
   "year": 2004
  },
  "inspire:656898": {

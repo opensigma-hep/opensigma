@@ -5333,5 +5333,208 @@
    "title": "Les Houches 2023 – physics at TeV colliders: Report on the Standard Model precision wishlist",
    "channels": []
   }
+ ],
+ "proc:ee-event-shapes": [
+  {
+   "arxiv": "2510.22038",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3073756,
+   "title": "Unbinned measurement of thrust in $e^+e^-$ collisions at $\\sqrt{s}$ = 91.2 GeV with ALEPH archived data"
+  },
+  {
+   "arxiv": "2507.14349",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2952448,
+   "title": "Analysis note: measurement of thrust in $e^{+}e^{-}$ collisions at $\\sqrt{s}$ = 91 GeV with archived ALEPH data"
+  },
+  {
+   "arxiv": "2406.07916",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2797393,
+   "title": "Revisiting strong-coupling determinations from $e^+ e^-$ event shapes"
+  },
+  {
+   "arxiv": "2603.06524",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3127331,
+   "title": "Modern jet flavour tagging in hadronic Z decays with archived ALEPH data"
+  },
+  {
+   "arxiv": "2505.11828",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2922431,
+   "title": "Analysis note: measurement of energy-energy correlator in $e^{+}e^{-}$ collisions at $91$ GeV with archived ALEPH data"
+  },
+  {
+   "arxiv": "2301.01086",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2620143,
+   "title": "NNLO QCD corrections to event shapes at the LHC"
+  },
+  {
+   "arxiv": "2609.03002",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3199459,
+   "title": "A Task Force on Strong Coupling Determinations from Event Shapes"
+  },
+  {
+   "arxiv": "2501.01968",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2865304,
+   "title": "Measurement of the energy-energy correlator in the back-to-back limit using the archived ALEPH e+e- data at 91.2 GeV"
+  },
+  {
+   "arxiv": "2609.10716",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3202360,
+   "title": "Soft functions for generalised angularity event shapes at NNLO"
+  },
+  {
+   "arxiv": "2311.12768",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2724941,
+   "title": "Subleading power corrections for event shape variables in $e^+ e^-$ annihilation"
+  },
+  {
+   "arxiv": "2503.06130",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2898338,
+   "title": "A reanalysis of event shape distributions in electron-positron annihilation"
+  },
+  {
+   "arxiv": "2412.15164",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2861294,
+   "title": "On determining α$_{s}$(m$_{Z}$) from dijets in e$^{+}$e$^{−}$ thrust"
+  },
+  {
+   "arxiv": "2510.18762",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3071639,
+   "title": "Analysis note: measurement of thrust and track energy-energy correlator in $e^+e^-$ collisions at 91.2 GeV with DELPHI open data"
+  },
+  {
+   "arxiv": "2512.03263",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3088984,
+   "title": "NNLO+NNLL predictions for heavy-jet mass and C-parameter in Higgs decays to quarks and gluons"
+  },
+  {
+   "arxiv": "2601.02484",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3097508,
+   "title": "Resummation of the C-Parameter Sudakov Shoulder Using Effective Field Theory"
+  },
+  {
+   "arxiv": "2603.06091",
+   "channels": [
+    "chan:ee-event-shapes/lep1"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3127255,
+   "title": "On Thrust Resummation Ambiguities in $e^+e^-$ Annihilation into Hadrons"
+  },
+  {
+   "arxiv": "2306.02937",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2665830,
+   "title": "Full treatment of the thrust distribution in single inclusive e$^{+}$e$^{−}$→ h X processes"
+  },
+  {
+   "arxiv": "2311.03990",
+   "channels": [
+    "chan:ee-event-shapes/lep1",
+    "chan:ee-event-shapes/lep2"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2719854,
+   "title": "Effects of renormalon scheme and perturbative scale choices on determinations of the strong coupling from <math display=\"inline\"><mrow><msup><mrow><mi>e</mi></mrow><mrow><mo>+</mo></mrow></msup><msup><mrow><mi>e</mi></mrow><mrow><mo>-</mo></mrow></msup></mrow></math> event shapes"
+  },
+  {
+   "arxiv": "2607.22282",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 3183193,
+   "title": "Statistical validation of template-based parameter extraction from toy thrust distributions for future FCC-ee studies"
+  },
+  {
+   "arxiv": "2507.15387",
+   "channels": [],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2952151,
+   "title": "Spin correlations and Bell nonlocality in $ \\Lambda \\overline{\\Lambda} $ pair production from e$^{+}$e$^{−}$ collisions with a thrust cut"
+  },
+  {
+   "arxiv": "2502.01570",
+   "channels": [
+    "chan:ee-event-shapes/lep1",
+    "chan:ee-event-shapes/lep2"
+   ],
+   "matched_by": "((t thrust and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t ALEPH or t LEP)) or (t event and t shape and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t alpha or t \"strong coupling\")) or (t \"event shapes\" and (t resummation or t N3LL or t NNLL or t NNLO or t \"strong coupling\" or t alpha)) or (t \"C-parameter\" and (t resummation or t N3LL or t NNLL or t \"strong coupling\" or t annihilation)) or (t ALEPH and t archived and (t shape or t jet or t thrust or t correlator))) and de > 2023-01-01",
+   "recid": 2875254,
+   "title": "Thrust Distribution in Electron-Positron Annihilation at Full Next-to-Next-to-Next-to-Leading-Logarithmic Accuracy Including Next-to-Next-to-Leading-Order Terms in QCD"
+  }
+ ],
+ "proc:ee-jet-rates": [
+  {
+   "arxiv": "2603.06524",
+   "channels": [],
+   "matched_by": "(((t \"jet rate\" or t \"jet rates\") and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t ALEPH)) or (t Durham and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP) and (t NNLL or t N3LO or t resummation or t \"strong coupling\" or t alpha)) or (t \"event shapes\" and (t \"jet rate\" or t Durham or t y23 or t \"three-jet\")) or (t ALEPH and t archived and (t jet or t rate))) and de > 2023-01-01",
+   "recid": 3127331,
+   "title": "Modern jet flavour tagging in hadronic Z decays with archived ALEPH data"
+  },
+  {
+   "arxiv": "2403.06929",
+   "channels": [],
+   "matched_by": "(((t \"jet rate\" or t \"jet rates\") and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t ALEPH)) or (t Durham and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP) and (t NNLL or t N3LO or t resummation or t \"strong coupling\" or t alpha)) or (t \"event shapes\" and (t \"jet rate\" or t Durham or t y23 or t \"three-jet\")) or (t ALEPH and t archived and (t jet or t rate))) and de > 2023-01-01",
+   "recid": 2767704,
+   "title": "NLO+NLL′ accurate predictions for three-jet event shapes in hadronic Higgs decays"
+  },
+  {
+   "arxiv": "2501.18173",
+   "channels": [],
+   "matched_by": "(((t \"jet rate\" or t \"jet rates\") and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t ALEPH)) or (t Durham and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP) and (t NNLL or t N3LO or t resummation or t \"strong coupling\" or t alpha)) or (t \"event shapes\" and (t \"jet rate\" or t Durham or t y23 or t \"three-jet\")) or (t ALEPH and t archived and (t jet or t rate))) and de > 2023-01-01",
+   "recid": 2874195,
+   "title": "Fits of α$_{s}$ from event-shapes in the three-jet region: extension to all energies"
+  },
+  {
+   "arxiv": "2602.18185",
+   "channels": [
+    "chan:ee-jet-rates/lep1"
+   ],
+   "matched_by": "(((t \"jet rate\" or t \"jet rates\") and (t \"e+e-\" or t \"e+ e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP or t ALEPH)) or (t Durham and (t \"e+e-\" or t \"e$^+$e$^-$\" or t annihilation or t LEP) and (t NNLL or t N3LO or t resummation or t \"strong coupling\" or t alpha)) or (t \"event shapes\" and (t \"jet rate\" or t Durham or t y23 or t \"three-jet\")) or (t ALEPH and t archived and (t jet or t rate))) and de > 2023-01-01",
+   "recid": 3122111,
+   "title": "Four-Jet Rate in Electron-Positron Annihilation at Order <math display=\"inline\"><mrow><msubsup><mrow><mi>α</mi></mrow><mrow><mi>s</mi></mrow><mrow><mn>4</mn></mrow></msubsup></mrow></math>"
+  }
  ]
 }
