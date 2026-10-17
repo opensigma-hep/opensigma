@@ -1,0 +1,126 @@
+id: "proc:www"
+name: "WWW triboson production"
+family: "fam:vector-bosons"
+sector: SM
+description: "Production of three W bosons, pp → WWW (+ WH with H → WW* in the experimental signal definition), observed at the LHC in the same-sign dilepton plus jets and trilepton final states. Probes the triple and quartic gauge couplings and the electroweak symmetry-breaking sector. Known at NLO QCD and NLO EW, with the EW corrections small only because quark–photon and quark–antiquark contributions cancel."
+watch:
+  recids: [1769246, 1598778]
+  queries:
+    - '(t WWW or t "triple-W" or t "three W" or t "triple W") and (t NLO or t NNLO or t "electroweak" or t "cross section" or t "polarized" or t "measurement" or t "observation")'
+  last_run: '2026-10-16'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        approximations: ["on-shell W bosons, no leptonic decays in the original calculation"]
+        refs: ["inspire:782595"]
+        provenance: {uid: c2dc521b, ref: "inspire:782595", locator: "Abstract (NLO QCD for ZZZ, W+W−Z, W+ZZ and W+W−W+; virtual corrections via OPP reduction)", source: agent, status: agent-draft, date: "2026-10-17"}
+      ir_scheme:
+        status: done
+        refs: ["inspire:782595"]
+        provenance: {uid: '678e5694', ref: "inspire:782595", locator: "Abstract (real emission treated with dipole subtraction)", source: agent, status: agent-draft, date: "2026-10-17"}
+      code:
+        status: done
+        approximations: ["leptonic decays with spin correlations and off-shell contributions", "intermediate Higgs exchange included"]
+        refs: ["inspire:795633"]
+        provenance: {uid: 869b7eb5, ref: "inspire:795633", locator: "Abstract (O(αs) QCD corrections to pp → WWW + X with leptonic decays, spin correlations, off-shell effects, fully flexible Monte Carlo program)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        approximations: ["on-shell W bosons", "photon-induced channels with LUXqed photon PDF"]
+        refs: ["inspire:1598778"]
+        provenance: {uid: 96e9646d, ref: "inspire:1598778", locator: "Abstract (NLO EW corrections to WWW with on-shell W bosons, combined with NLO QCD)", source: agent, status: agent-draft, date: "2026-10-17"}
+      code:
+        status: done
+        approximations: ["leptonic decays, full off-shell contributions, also a triple-pole approximation"]
+        refs: ["inspire:1769246"]
+        provenance: {uid: 1de20a85, ref: "inspire:1769246", locator: "Abstract (NLO QCD and EW corrections to WWW with leptonically decaying W bosons, fully off-shell, with spin correlations; triple-pole approximation also provided)", source: agent, status: agent-draft, date: "2026-10-17"}
+channels:
+  - id: "chan:www/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:www/lhc-13/sigma-tot", region: "Inclusive pp → WWW at 13 TeV (on-shell WWW plus WH with H → WW*, all W decay modes)"}
+    measurements:
+      - id: "meas:www/lhc-13/atlas-2022-tot"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (2015–2018)"
+        ref: "inspire:2022440"
+      - id: "meas:www/lhc-13/cms-2020-tot"
+        experiment: "CMS"
+        dataset: "13 TeV, 137 fb⁻¹ (2016–2018)"
+        ref: "inspire:1802096"
+        hepdata: "hepdata:ins1802096/Table 1"
+    observables:
+      - id: "obs:www/lhc-13/sigma-tot"
+        name: "Total σ(pp → WWW)"
+        kind: total
+        variable: "σ_tot(pp → WWW), Higgs-boson contributions (WH → WWW*) counted as signal; extrapolated from the same-sign dilepton + jets and trilepton final states"
+        results:
+          - measurement: "meas:www/lhc-13/atlas-2022-tot"
+            total: {value_pct: 15.6, provenance: {uid: 55bde34a, ref: "inspire:2022440", locator: "Sec. on results: σ_meas(pp → WWW) = 820 ± 100 (stat) ± 80 (syst) fb; total taken as the quadrature sum, 128/820 (no HEPData record)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [12.2, 12.2], unit: "%", asymmetric: false}
+                provenance: {uid: b6dedeae, ref: "inspire:2022440", locator: "Sec. on results: σ_meas ± 100 (stat) of 820 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (combined); largest component 6% from data-driven nonprompt background estimates"
+                size: {range: [9.8, 9.8], unit: "%", asymmetric: false}
+                provenance: {uid: 9eba41ab, ref: "inspire:2022440", locator: "Sec. on results: σ_meas ± 80 (syst) of 820 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+          - measurement: "meas:www/lhc-13/cms-2020-tot"
+            total: {value_pct: 38.0, provenance: {uid: 1fdffe92, ref: "inspire:1802096", locator: "Table 1 (= hepdata:ins1802096/Table 1, WWW row, Higgs counted as signal): σ = 590 +160 −150 (stat) +160 −130 (syst) fb; upper side, quadrature sum 226/590 (the HEPData table holds a string value, '<200' for ZZZ, so scripts.ingest_hepdata cannot parse it)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [25.4, 27.1], unit: "%", asymmetric: true}
+                provenance: {uid: c27a6a50, ref: "inspire:1802096", locator: "Table 1, WWW, Higgs counted as signal: +160 −150 (stat) of 590 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (combined)"
+                size: {range: [22.0, 27.1], unit: "%", asymmetric: true}
+                provenance: {uid: 9a06f74b, ref: "inspire:1802096", locator: "Table 1, WWW, Higgs counted as signal: +160 −130 (syst) of 590 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "NLO QCD: Sherpa 2.2.2 (WWW) + Powheg Box v2 (WH → WWW*), ATLAS setup"
+            accuracy:
+              qcd: NLO
+              ew: LO
+              shower_matched: true
+              approximations: ["sum of on-shell WWW (209 ± 17 fb) and off-shell WH → WWW* (302 ± 8 fb)", "ATLAS states the numbers are consistent with NLO QCD + NLO EW for on-shell WWW and N3LO QCD + NLO EW for WH, but the quoted prediction is NLO QCD at LO EW"]
+            codes: ["Sherpa", "Powheg Box", "Pythia8"]
+            total: {value_pct: 3.5, provenance: {uid: defe90d1, ref: "inspire:2022440", locator: "Sec. on signal modelling: σ_pred(pp → WWW) = 511 ± 18 fb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:www/lhc-13/atlas-2022-tot"]
+            refs: ["inspire:2022440", "inspire:1598778"]
+            provenance: {uid: e4faba94, ref: "inspire:2022440", locator: "Abstract and Sec. on signal modelling (Sherpa 2.2.2 WWW, Powheg Box v2 + Pythia 8.235 WH)", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD calculations, CMS setup (WWW incl. VH)"
+            accuracy:
+              qcd: NLO
+              approximations: ["WWW including VH production with H → WW*", "uncertainty of approximately 10% quoted generically for the WWW, WWZ, WZZ and ZZZ predictions"]
+            total: {value_pct: 10.0, provenance: {uid: f0088815, ref: "inspire:1802096", locator: "Introduction: NLO SM calculations predict 509 fb for WWW at 13 TeV with uncertainties of approximately 10% [refs 8–12]", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:www/lhc-13/cms-2020-tot"]
+            refs: ["inspire:1802096", "arXiv:hep-ph/0703273", "inspire:782595", "inspire:795633", "inspire:1598778"]
+            provenance: {uid: 750f653f, ref: "inspire:1802096", locator: "Introduction (NLO predictions of refs [8–12] for WWW, WWZ, WZZ and ZZZ)", source: agent, status: agent-draft, date: "2026-10-17"}
+          - label: "NLO QCD + NLO EW, on-shell W−W+W+ (Dittmaier–Huss–Knippen)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              mixed: "multiplicative combination of the NLO QCD K-factor and the quark–antiquark EW correction, plus the additive quark–photon contribution"
+              approximations: ["on-shell W bosons, no leptonic decays", "W−W+W+ final state only (W+W−W− given separately, 0.076 pb at 13 TeV)", "no Higgs-strahlung WH contribution", "photon-induced channels with the LUXqed photon PDF", "missing higher-order EW corrections estimated at about 1%"]
+            codes: ["in-house (Dittmaier–Huss–Knippen)"]
+            total: {value_pct: 5.3, provenance: {uid: d9ce9658, ref: "inspire:1598778", locator: "Table 5(a), 13 TeV: σ_NLO(W−W+W+) = 0.136 +0.006 −0.005 (scale) ± 0.004 (PDF) pb; total = scale (larger side, 4.4%) and PDF (2.9%) added in quadrature", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR = μF scale variation"
+                method: "μR and μF varied together by factors 1/2 and 2 around the dynamic scale of eq. (3.4)"
+                size: {range: [3.7, 4.4], unit: "%", asymmetric: true}
+                provenance: {uid: c9c9fd5d, ref: "inspire:1598778", locator: "Table 5(a), 13 TeV: 0.136 +0.006 −0.005 (scale) pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: PDF
+                specific: "PDF uncertainty including the photon PDF (LUXqed)"
+                pdf_set: "NNPDF3.0QED (LUXqed for the photon-induced contributions)"
+                size: {range: [2.9, 2.9], unit: "%", asymmetric: false}
+                provenance: {uid: 96d10cb4, ref: "inspire:1598778", locator: "Table 5(a), 13 TeV: 0.136 ± 0.004 (PDF) pb", source: agent, status: agent-draft, date: "2026-10-17"}
+            refs: ["inspire:1598778", "inspire:1769246"]
+            provenance: {uid: 93daa3d3, ref: "inspire:1598778", locator: "Sec. 4 and Tables 3, 5 (LO and NLO cross sections at 13 TeV)", source: agent, status: agent-draft, date: "2026-10-17"}

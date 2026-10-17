@@ -4977,5 +4977,361 @@
    "recid": 2095825,
    "title": "Measurement of single top-quark production in the s-channel in proton-proton collisions at $\\mathrm{\\sqrt{s}=13~TeV}$ with the ATLAS detector"
   }
+ ],
+ "proc:vbs-ssww": [
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2902614,
+   "title": "NLO QCD Corrections to W+W+ Scattering at the LHC with Three Jets Matched to a Parton Shower",
+   "channels": [
+    "chan:vbs-ssww/lhc-13"
+   ]
+  },
+  {
+   "arxiv": "2405.18286",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2790901,
+   "title": "Full and approximated NLO predictions for like-sign W-boson scattering at the LHC",
+   "channels": [
+    "chan:vbs-ssww/lhc-13"
+   ]
+  },
+  {
+   "arxiv": "2410.04210",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2838764,
+   "title": "Study of same-sign W boson scattering and anomalous couplings in events with one tau lepton from pp collisions at $\\sqrt{s}=13$ TeV",
+   "channels": [
+    "chan:vbs-ssww/lhc-13"
+   ]
+  },
+  {
+   "arxiv": "2604.18025",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3147100,
+   "title": "Precision calculations for electroweak multi-boson processes",
+   "channels": []
+  },
+  {
+   "arxiv": "2505.08313",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2921000,
+   "title": "Observation of double parton scattering in same-sign W boson pair production in pp collisions at <math altimg=\"si43.svg\"><mrow><msqrt><mi>s</mi></msqrt><mo linebreak=\"goodbreak\">=</mo><mn>13</mn></mrow></math> TeV with the ATLAS detector",
+   "channels": []
+  },
+  {
+   "arxiv": "2604.27995",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3150595,
+   "title": "The status of theory in the electroweak sector: Radiative corrections, salient features, approximations",
+   "channels": []
+  },
+  {
+   "arxiv": "2503.11317",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2900453,
+   "title": "Evidence for Longitudinally Polarized <math display=\"inline\"><mi>W</mi></math> Bosons in the Electroweak Production of Same-Sign <math display=\"inline\"><mi>W</mi></math> Boson Pairs in Association with Two Jets in <math display=\"inline\"><mi>p</mi><mi>p</mi></math> Collisions at <math display=\"inline\"><mrow><msqrt><mrow><mi>s</mi></mrow></msqrt><mo>=</mo><mn>13</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></mrow></math> with the ATLAS Detector",
+   "channels": [
+    "chan:vbs-ssww/lhc-13"
+   ]
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3137936,
+   "title": "Off-shell effects and higher-orders in multi-boson final states",
+   "channels": []
+  },
+  {
+   "arxiv": "2409.03620",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2825255,
+   "title": "NLO EW and QCD corrections to polarised same-sign WW scattering at the LHC",
+   "channels": [
+    "chan:vbs-ssww/lhc-13"
+   ]
+  },
+  {
+   "arxiv": "2407.09246",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2807334,
+   "title": "Theoretical advances in electroweak, Higgs, and top physics at the LHC",
+   "channels": []
+  },
+  {
+   "arxiv": "2403.12192",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2769928,
+   "title": "QCD effects in electroweak $WZjj$ production at current and future hadron colliders",
+   "channels": []
+  },
+  {
+   "arxiv": "2506.10733",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2934057,
+   "title": "Precision phenomenology at multi-TeV muon colliders",
+   "channels": []
+  },
+  {
+   "arxiv": "2507.19285",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2954468,
+   "title": "EVAluation of the Equivalent Vector boson Approximation at highest energy colliders",
+   "channels": []
+  },
+  {
+   "arxiv": "2606.06436",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3165413,
+   "title": "Probing anomalous quartic gauge couplings in same-sign $W$ boson scattering with polarization and spin correlation",
+   "channels": []
+  },
+  {
+   "arxiv": "2511.20581",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3086301,
+   "title": "NNLO QCD predictions for $W\\gamma \\gamma $ production at the LHC",
+   "channels": []
+  },
+  {
+   "arxiv": "2502.07878",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2879253,
+   "title": "Weak bosons as partons below 10 TeV partonic center of momentum",
+   "channels": []
+  },
+  {
+   "arxiv": "2407.21558",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2813604,
+   "title": "NLO corrections to triple vector-boson production in final states with three charged leptons and two jets",
+   "channels": []
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2866434,
+   "title": "Theory of Diboson Production - Polarized & Unpolarized",
+   "channels": []
+  },
+  {
+   "arxiv": "2408.12314",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2820705,
+   "title": "Electroweak W$^{+}$W$^{+}$ production in association with three jets at NLO QCD matched with parton shower",
+   "channels": [
+    "chan:vbs-ssww/lhc-13"
+   ]
+  },
+  {
+   "arxiv": "2602.19842",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3122850,
+   "title": "MoCaNLO: a Monte Carlo integrator for NLO calculations",
+   "channels": []
+  },
+  {
+   "arxiv": "2603.24450",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3134110,
+   "title": "Prospect of the NUCLEUS experiment at Chooz for coherent elastic neutrino-nucleus scattering and new physics searches",
+   "channels": []
+  },
+  {
+   "arxiv": "2608.14419",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3191280,
+   "title": "NNLO QCD corrections to $WWγ$ production at the LHC",
+   "channels": []
+  },
+  {
+   "arxiv": "2406.11516",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2799239,
+   "title": "Tri-boson and WH production in the W$^{+}$W$^{+}$jj channel: predictions at full NLO accuracy and beyond",
+   "channels": [
+    "chan:vbs-ssww/lhc-13"
+   ]
+  },
+  {
+   "arxiv": "2602.22046",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3123650,
+   "title": "Resonance-aware parton-shower matching for off-shell top-antitop production with semi-leptonic decays at electron-positron colliders",
+   "channels": []
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 3073515,
+   "title": "Trioblóid Thriarach: Probing Quartic Gauge Couplings through Triple Massive Vector Boson Production at the ATLAS Experiment",
+   "channels": []
+  },
+  {
+   "arxiv": "2504.06689",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2909891,
+   "title": "Les Houches 2023 – physics at TeV colliders: Report on the Standard Model precision wishlist",
+   "channels": []
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2961944,
+   "title": "Precision predictions for vector-boson scattering",
+   "channels": []
+  },
+  {
+   "arxiv": "2502.00572",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2874750,
+   "title": "Local form factor subtraction for three-loop QCD corrections to electroweak production in quark-antiquark annihilation",
+   "channels": []
+  },
+  {
+   "arxiv": "2410.22148",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2843469,
+   "title": "Event generation with Sherpa 3",
+   "channels": []
+  },
+  {
+   "arxiv": "2404.06829",
+   "matched_by": "(refersto:recid:2692517 or refersto:recid:2799239 or (t \"same-sign\" and t \"W\" and (t \"pair\" or t \"pairs\" or t \"boson scattering\") and (collaboration:ATLAS or collaboration:CMS)) or ((t \"W+W+\" or t \"like-sign\" or t \"same-sign\") and t \"W\" and (t NLO or t NNLO or t \"electroweak corrections\" or t \"parton shower\") and (t \"scattering\" or t \"jj\" or t \"jets\"))) and de > 2023-01-01",
+   "recid": 2775815,
+   "title": "Electroweak, QCD and flavour physics studies with ATLAS data from Run 2 of the LHC",
+   "channels": []
+  }
+ ],
+ "proc:www": [
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2672000,
+   "title": "Recent triboson results from the CMS and ATLAS experiments",
+   "channels": []
+  },
+  {
+   "arxiv": "2603.02917",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 3125316,
+   "title": "Triply polarized WWW at the LHC: first glimpse at LO",
+   "channels": []
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2781033,
+   "title": "Multiboson production at the LHC",
+   "channels": []
+  },
+  {
+   "arxiv": "2407.21558",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2813604,
+   "title": "NLO corrections to triple vector-boson production in final states with three charged leptons and two jets",
+   "channels": []
+  },
+  {
+   "arxiv": "2608.14419",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 3191280,
+   "title": "NNLO QCD corrections to $WWγ$ production at the LHC",
+   "channels": []
+  },
+  {
+   "arxiv": "2312.07927",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2736537,
+   "title": "Logarithmic EW corrections at one-loop",
+   "channels": []
+  },
+  {
+   "arxiv": "2604.18025",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 3147100,
+   "title": "Precision calculations for electroweak multi-boson processes",
+   "channels": []
+  },
+  {
+   "arxiv": "2605.09444",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 3154229,
+   "title": "Non-factorisable electroweak virtual corrections to single-resonant processes",
+   "channels": []
+  },
+  {
+   "arxiv": "2511.20581",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 3086301,
+   "title": "NNLO QCD predictions for $W\\gamma \\gamma $ production at the LHC",
+   "channels": []
+  },
+  {
+   "arxiv": "2402.06867",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2757590,
+   "title": "Euler-heisenberg black holes in einsteinian cubic gravity",
+   "channels": []
+  },
+  {
+   "arxiv": "2402.16276",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2761761,
+   "title": "A panoramic study of K-factors for 111 processes at the 14 TeV LHC",
+   "channels": []
+  },
+  {
+   "arxiv": "2507.06568",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2944108,
+   "title": "Electroweak splitting functions in the Standard Model and beyond",
+   "channels": []
+  },
+  {
+   "arxiv": "2604.27995",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 3150595,
+   "title": "The status of theory in the electroweak sector: Radiative corrections, salient features, approximations",
+   "channels": []
+  },
+  {
+   "arxiv": "2406.11516",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2799239,
+   "title": "Tri-boson and WH production in the W$^{+}$W$^{+}$jj channel: predictions at full NLO accuracy and beyond",
+   "channels": [
+    "chan:www/lhc-13"
+   ]
+  },
+  {
+   "arxiv": "2403.00100",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2763679,
+   "title": "Search for heavy neutral leptons in final states with electrons, muons, and hadronically decaying tau leptons in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV",
+   "channels": []
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2746046,
+   "title": "Search for promptly decaying heavy neutral leptons in proton-proton collision events with trilepton final states using the CMS detector",
+   "channels": []
+  },
+  {
+   "arxiv": "2309.03870",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2694382,
+   "title": "Anomalies in particle physics and their implications for physics beyond the standard model",
+   "channels": []
+  },
+  {
+   "arxiv": "2504.06689",
+   "matched_by": "(refersto:recid:1769246 or refersto:recid:1598778 or ((t WWW or t \"triple-W\" or t \"three W\" or t \"triple W\") and (t NLO or t NNLO or t \"electroweak\" or t \"cross section\" or t \"polarized\" or t \"measurement\" or t \"observation\"))) and de > 2023-01-01",
+   "recid": 2909891,
+   "title": "Les Houches 2023 – physics at TeV colliders: Report on the Standard Model precision wishlist",
+   "channels": []
+  }
  ]
 }

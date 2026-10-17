@@ -332,6 +332,15 @@
   "title": "Antenna subtraction at NNLO",
   "year": 2005
  },
+ "arXiv:hep-ph/0703273": {
+  "arxiv": "hep-ph/0703273",
+  "authors_short": "Lazopoulos et al.",
+  "bibtex": "@article{Lazopoulos:2007ix,\n    author = \"Lazopoulos, Achilleas and Melnikov, Kirill and Petriello, Frank\",\n    title = \"{QCD corrections to tri-boson production}\",\n    eprint = \"hep-ph/0703273\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"UH-511-1101-07\",\n    doi = \"10.1103/PhysRevD.76.014001\",\n    journal = \"Phys. Rev. D\",\n    volume = \"76\",\n    pages = \"014001\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1103/PhysRevD.76.014001",
+  "recid": 747167,
+  "title": "QCD corrections to tri-boson production",
+  "year": 2007
+ },
  "arXiv:hep-ph/9609474": {
   "arxiv": "hep-ph/9609474",
   "authors_short": "Glover and Miller",
@@ -1421,6 +1430,15 @@
   "title": "Next-to-Next-to Leading Order QCD Predictions for Single Jet Inclusive Production at the LHC",
   "year": 2016
  },
+ "inspire:1496632": {
+  "arxiv": "1611.02951",
+  "authors_short": "Biedermann et al.",
+  "bibtex": "@article{Biedermann:2016yds,\n    author = \"Biedermann, Benedikt and Denner, Ansgar and Pellen, Mathieu\",\n    title = \"{Large electroweak corrections to vector-boson scattering at the Large Hadron Collider}\",\n    eprint = \"1611.02951\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1103/PhysRevLett.118.261801\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"118\",\n    number = \"26\",\n    pages = \"261801\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1103/PhysRevLett.118.261801",
+  "recid": 1496632,
+  "title": "Large electroweak corrections to vector-boson scattering at the Large Hadron Collider",
+  "year": 2016
+ },
  "inspire:1498315": {
   "arxiv": "1611.05338",
   "authors_short": "Biedermann et al.",
@@ -1511,6 +1529,15 @@
   "title": "Measurements of integrated and differential cross sections for isolated photon pair production in $pp$ collisions at $\\sqrt{s}=8$ TeV with the ATLAS detector",
   "year": 2017
  },
+ "inspire:1598778": {
+  "arxiv": "1705.03722",
+  "authors_short": "Dittmaier et al.",
+  "bibtex": "@article{Dittmaier:2017bnh,\n    author = \"Dittmaier, Stefan and Huss, Alexander and Knippen, Gernot\",\n    title = \"{Next-to-leading-order QCD and electroweak corrections to WWW production at proton-proton colliders}\",\n    eprint = \"1705.03722\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FR-PHENO-2017-004\",\n    doi = \"10.1007/JHEP09(2017)034\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"034\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1007/JHEP09(2017)034",
+  "recid": 1598778,
+  "title": "Next-to-leading-order QCD and electroweak corrections to WWW production at proton-proton colliders",
+  "year": 2017
+ },
  "inspire:1599076": {
   "arxiv": "1705.04105",
   "authors_short": "Czakon et al.",
@@ -1554,6 +1581,15 @@
   "doi": "10.1103/PhysRevD.96.072005",
   "recid": 1610623,
   "title": "Measurement of the differential cross sections for the associated production of a $W$ boson and jets in proton-proton collisions at $\\sqrt{s}=13$ TeV",
+  "year": 2017
+ },
+ "inspire:1613898": {
+  "arxiv": "1708.00268",
+  "authors_short": "Biedermann et al.",
+  "bibtex": "@article{Biedermann:2017bss,\n    author = \"Biedermann, Benedikt and Denner, Ansgar and Pellen, Mathieu\",\n    title = \"{Complete NLO corrections to W$^{+}$W$^{+}$ scattering and its irreducible background at the LHC}\",\n    eprint = \"1708.00268\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1007/JHEP10(2017)124\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"124\",\n    year = \"2017\"\n}\n",
+  "doi": "10.1007/JHEP10(2017)124",
+  "recid": 1613898,
+  "title": "Complete NLO corrections to W$^{+}$W$^{+}$ scattering and its irreducible background at the LHC",
   "year": 2017
  },
  "inspire:1618343": {
@@ -1943,6 +1979,15 @@
   "title": "Measurement of the transverse momentum distribution of Drell–Yan lepton pairs in proton–proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector",
   "year": 2019
  },
+ "inspire:1769246": {
+  "arxiv": "1912.04117",
+  "authors_short": "Dittmaier et al.",
+  "bibtex": "@article{Dittmaier:2019twg,\n    author = \"Dittmaier, Stefan and Knippen, Gernot and Schwan, Christopher\",\n    title = \"{Next-to-leading-order QCD and electroweak corrections to triple-W production with leptonic decays at the LHC}\",\n    eprint = \"1912.04117\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FR-PHENO-2019-007, TIF-UNIMI-2019-12\",\n    doi = \"10.1007/JHEP02(2020)003\",\n    journal = \"JHEP\",\n    volume = \"02\",\n    pages = \"003\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1007/JHEP02(2020)003",
+  "recid": 1769246,
+  "title": "Next-to-leading-order QCD and electroweak corrections to triple-W production with leptonic decays at the LHC",
+  "year": 2019
+ },
  "inspire:1773489": {
   "arxiv": "1912.13001",
   "authors_short": "Chen et al.",
@@ -1961,6 +2006,15 @@
   "title": "Associated top quark pair production with a heavy boson: differential cross sections at NLO+NNLL accuracy",
   "year": 2020
  },
+ "inspire:1794169": {
+  "arxiv": "2005.01173",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2020gfh,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of production cross sections of WZ and same-sign WW boson pairs in association with two jets in proton-proton collisions at $\\sqrt{s} =$ 13 TeV}\",\n    eprint = \"2005.01173\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-19-012, CERN-EP-2020-064\",\n    doi = \"10.1016/j.physletb.2020.135710\",\n    journal = \"Phys. Lett. B\",\n    volume = \"809\",\n    pages = \"135710\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1016/j.physletb.2020.135710",
+  "recid": 1794169,
+  "title": "Measurements of production cross sections of WZ and same-sign WW boson pairs in association with two jets in proton-proton collisions at $\\sqrt{s} =$ 13 TeV",
+  "year": 2020
+ },
  "inspire:1795270": {
   "arxiv": null,
   "authors_short": "ATLAS Collaboration",
@@ -1968,6 +2022,15 @@
   "doi": null,
   "recid": 1795270,
   "title": "Prospect for a measurement of the Weak Mixing Angle in $pp \\rightarrow Z/\\gamma^* \\rightarrow e^+e^-$ events with the ATLAS detector at the High Luminosity Large Hadron Collider",
+  "year": 2020
+ },
+ "inspire:1802096": {
+  "arxiv": "2006.11191",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2020hjs,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Observation of the Production of Three Massive Gauge Bosons at $\\sqrt {s}$ =13  TeV}\",\n    eprint = \"2006.11191\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-19-014, CERN-EP-2020-076\",\n    doi = \"10.1103/PhysRevLett.125.151802\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"125\",\n    number = \"15\",\n    pages = \"151802\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1103/PhysRevLett.125.151802",
+  "recid": 1802096,
+  "title": "Observation of the Production of Three Massive Gauge Bosons at $\\sqrt {s}$ =13  TeV",
   "year": 2020
  },
  "inspire:1808912": {
@@ -2231,6 +2294,15 @@
   "title": "Photon fragmentation in the antenna subtraction formalism",
   "year": 2022
  },
+ "inspire:2022440": {
+  "arxiv": "2201.13045",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2022xnu,\n    author = \"Aad, G. and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Observation of $WWW$ Production in $pp$ Collisions at $\\sqrt s$ =13{\\,}{\\,}TeV with the ATLAS Detector}\",\n    eprint = \"2201.13045\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2021-243\",\n    doi = \"10.1103/PhysRevLett.129.061803\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"129\",\n    number = \"6\",\n    pages = \"061803\",\n    year = \"2022\"\n}\n",
+  "doi": "10.1103/PhysRevLett.129.061803",
+  "recid": 2022440,
+  "title": "Observation of $WWW$ Production in $pp$ Collisions at $\\sqrt s$ =13  TeV with the ATLAS Detector",
+  "year": 2022
+ },
  "inspire:2044884": {
   "arxiv": "2203.01565",
   "authors_short": "Chen et al.",
@@ -2483,6 +2555,15 @@
   "title": "Third order QCD predictions for fiducial W-boson production",
   "year": 2023
  },
+ "inspire:2692517": {
+  "arxiv": "2308.16716",
+  "authors_short": "Dittmaier et al.",
+  "bibtex": "@article{Dittmaier:2023nac,\n    author = {Dittmaier, Stefan and Maierh{\\\"o}fer, Philipp and Schwan, Christopher and Winterhalder, Ramon},\n    title = \"{Like-sign W-boson scattering at the LHC {\\textemdash} approximations and full next-to-leading-order predictions}\",\n    eprint = \"2308.16716\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FR-PHENO-2023-09, IRMP-CP3-23-42\",\n    doi = \"10.1007/JHEP11(2023)022\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"022\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1007/JHEP11(2023)022",
+  "recid": 2692517,
+  "title": "Like-sign W-boson scattering at the LHC — approximations and full next-to-leading-order predictions",
+  "year": 2023
+ },
  "inspire:2694205": {
   "arxiv": "2309.02889",
   "authors_short": "ZEUS Collaboration",
@@ -2535,6 +2616,15 @@
   "doi": "10.22323/1.478.0120",
   "recid": 2727392,
   "title": "Electroweak Corrections to Double Higgs Production at the LHC",
+  "year": 2023
+ },
+ "inspire:2729396": {
+  "arxiv": "2312.00420",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023sua,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement and interpretation of same-sign W boson pair production in association with two jets in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector}\",\n    eprint = \"2312.00420\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-221\",\n    doi = \"10.1007/JHEP04(2024)026\",\n    journal = \"JHEP\",\n    volume = \"04\",\n    pages = \"026\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1007/JHEP04(2024)026",
+  "recid": 2729396,
+  "title": "Measurement and interpretation of same-sign W boson pair production in association with two jets in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector",
   "year": 2023
  },
  "inspire:2741343": {
@@ -3707,6 +3797,15 @@
   "title": "An NNLO subtraction formalism in hadron collisions and its application to Higgs boson production at the LHC",
   "year": 2007
  },
+ "inspire:747167": {
+  "arxiv": "hep-ph/0703273",
+  "authors_short": "Lazopoulos et al.",
+  "bibtex": "@article{Lazopoulos:2007ix,\n    author = \"Lazopoulos, Achilleas and Melnikov, Kirill and Petriello, Frank\",\n    title = \"{QCD corrections to tri-boson production}\",\n    eprint = \"hep-ph/0703273\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"UH-511-1101-07\",\n    doi = \"10.1103/PhysRevD.76.014001\",\n    journal = \"Phys. Rev. D\",\n    volume = \"76\",\n    pages = \"014001\",\n    year = \"2007\"\n}\n",
+  "doi": "10.1103/PhysRevD.76.014001",
+  "recid": 747167,
+  "title": "QCD corrections to tri-boson production",
+  "year": 2007
+ },
  "inspire:748563": {
   "arxiv": "0704.1740",
   "authors_short": "Moch and Rogal",
@@ -3833,6 +3932,15 @@
   "title": "Tops from Light Quarks: Full Mass Dependence at Two-Loops in QCD",
   "year": 2008
  },
+ "inspire:782595": {
+  "arxiv": "0804.0350",
+  "authors_short": "Binoth et al.",
+  "bibtex": "@article{Binoth:2008kt,\n    author = \"Binoth, T. and Ossola, G. and Papadopoulos, C. G. and Pittau, R.\",\n    title = \"{NLO QCD corrections to tri-boson production}\",\n    eprint = \"0804.0350\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1088/1126-6708/2008/06/082\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"082\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1088/1126-6708/2008/06/082",
+  "recid": 782595,
+  "title": "NLO QCD corrections to tri-boson production",
+  "year": 2008
+ },
  "inspire:783373": {
   "arxiv": "0804.2220",
   "authors_short": "Lazopoulos et al.",
@@ -3876,6 +3984,15 @@
   "doi": "10.1103/PhysRevLett.101.162001",
   "recid": 791166,
   "title": "NNLO corrections to 3-jet observables in electron-positron annihilation",
+  "year": 2008
+ },
+ "inspire:795633": {
+  "arxiv": "0809.0790",
+  "authors_short": "Campanario et al.",
+  "bibtex": "@article{Campanario:2008yg,\n    author = \"Campanario, F. and Hankele, V. and Oleari, C. and Prestel, S. and Zeppenfeld, D.\",\n    title = \"{QCD corrections to charged triple vector boson production with leptonic decay}\",\n    eprint = \"0809.0790\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"KA-TP-19-2008, FT-VV-08-0309\",\n    doi = \"10.1103/PhysRevD.78.094012\",\n    journal = \"Phys. Rev. D\",\n    volume = \"78\",\n    pages = \"094012\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevD.78.094012",
+  "recid": 795633,
+  "title": "QCD corrections to charged triple vector boson production with leptonic decay",
   "year": 2008
  },
  "inspire:795832": {
@@ -3939,6 +4056,15 @@
   "doi": "10.1088/1126-6708/2009/08/075",
   "recid": 822565,
   "title": "Electroweak corrections to W + jet hadroproduction including leptonic W-boson decays",
+  "year": 2009
+ },
+ "inspire:824865": {
+  "arxiv": "0907.0580",
+  "authors_short": "Jager et al.",
+  "bibtex": "@article{Jager:2009xx,\n    author = \"Jager, B. and Oleari, C. and Zeppenfeld, D.\",\n    title = \"{Next-to-leading order QCD corrections to W+ W+ jj and W- W- jj production via weak-boson fusion}\",\n    eprint = \"0907.0580\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"KA-TP-09-2009\",\n    doi = \"10.1103/PhysRevD.80.034022\",\n    journal = \"Phys. Rev. D\",\n    volume = \"80\",\n    pages = \"034022\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1103/PhysRevD.80.034022",
+  "recid": 824865,
+  "title": "Next-to-leading order QCD corrections to W+ W+ jj and W- W- jj production via weak-boson fusion",
   "year": 2009
  },
  "inspire:834437": {
@@ -4040,6 +4166,15 @@
   "title": "Thrust at $N^{3}LL$ with Power Corrections and a Precision Global Fit for $\\alpha_{s}(mZ)$",
   "year": 2010
  },
+ "inspire:863789": {
+  "arxiv": "1007.5313",
+  "authors_short": "Melia et al.",
+  "bibtex": "@article{Melia:2010bm,\n    author = \"Melia, Tom and Melnikov, Kirill and Rontsch, Raoul and Zanderighi, Giulia\",\n    title = \"{Next-to-leading order QCD predictions for $W^+W^+jj$ production at the LHC}\",\n    eprint = \"1007.5313\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1007/JHEP12(2010)053\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"053\",\n    year = \"2010\"\n}\n",
+  "doi": "10.1007/JHEP12(2010)053",
+  "recid": 863789,
+  "title": "Next-to-leading order QCD predictions for $W^+W^+jj$ production at the LHC",
+  "year": 2010
+ },
  "inspire:867473": {
   "arxiv": "1009.2450",
   "authors_short": "Re",
@@ -4128,6 +4263,15 @@
   "doi": "10.1103/PhysRevLett.107.152003",
   "recid": 917260,
   "title": "Associated WH production at hadron colliders: a fully exclusive QCD calculation at NNLO",
+  "year": 2011
+ },
+ "inspire:922009": {
+  "arxiv": "1108.0864",
+  "authors_short": "Jager and Zanderighi",
+  "bibtex": "@article{Jager:2011ms,\n    author = \"Jager, Barbara and Zanderighi, Giulia\",\n    title = \"{NLO corrections to electroweak and QCD production of W+W+ plus two jets in the POWHEGBOX}\",\n    eprint = \"1108.0864\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MZ-TH-11-20, OUTP-11-45P\",\n    doi = \"10.1007/JHEP11(2011)055\",\n    journal = \"JHEP\",\n    volume = \"11\",\n    pages = \"055\",\n    year = \"2011\"\n}\n",
+  "doi": "10.1007/JHEP11(2011)055",
+  "recid": 922009,
+  "title": "NLO corrections to electroweak and QCD production of W+W+ plus two jets in the POWHEGBOX",
   "year": 2011
  },
  "inspire:922830": {
