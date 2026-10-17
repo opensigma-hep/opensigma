@@ -85,17 +85,17 @@ channels:
                 size: {"range": [0.26, 43.0], "asymmetric": false}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: a9459783, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'Stat'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "RelativeSample"
                 size: {"range": [0.013, 18.0], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: 7a99f40d, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'RelativeSample'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "RelativeFSR"
                 size: {"range": [0.015, 12.0], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: 35d262f5, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'RelativeFSR'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "TimePtEta"
                 size: {"range": [1.5, 12.0], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
@@ -105,27 +105,27 @@ channels:
                 size: {"range": [0.13, 9.8], "asymmetric": false}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: 99cda920, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'Model'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "RelativeBal"
                 size: {"range": [0.055, 9.2], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: 57e5b670, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'RelativeBal'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "RelativeStatEC"
                 size: {"range": [0.00023, 7.4], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: 006e48cd, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'RelativeStatEC'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "RelativeJEREC1"
                 size: {"range": [0.0003, 6.0], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: b4859530, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'RelativeJEREC1'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "AbsoluteMPFBias"
                 size: {"range": [1.0, 5.9], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: 68f9575c, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'AbsoluteMPFBias'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: efficiency
                 specific: "Pref"
                 size: {"range": [0.0037, 5.2], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
@@ -185,7 +185,7 @@ channels:
                 specific: "Integrated luminosity (fully correlated)"
                 size: {range: [6.1, 6.1], unit: "%", asymmetric: false}
                 provenance: {uid: 7d385208, ref: "inspire:846483", locator: "Table I caption (additional fully correlated 6.1% luminosity uncertainty not shown in the table)", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Total systematic (dominated by jet energy calibration)"
                 size: {range: [6.8, 7.4], unit: "%", asymmetric: true}
                 provenance: {uid: 9807c8bd, ref: "inspire:846483", locator: "Table I, |y|max ≤ 0.4, mjj 0.400–0.450 TeV, systematic uncertainty column +7.4/−6.8%; text: dominated by jet energy calibration", source: agent, status: cross-checked, date: "2026-10-16"}

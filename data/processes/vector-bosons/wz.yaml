@@ -63,7 +63,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 5b73c994, ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 0.8 (stat) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [3.5, 3.5], unit: "%", asymmetric: false}
                 provenance: {uid: '45163752', ref: "inspire:1720438", locator: "Sec. 10.1: σ_tot ± 1.8 (exp. syst) of 51.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -82,7 +82,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 3f2bbd11, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 0.8 (stat) of 50.6 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [3.0, 3.0], unit: "%", asymmetric: false}
                 provenance: {uid: e0a80dce, ref: "inspire:1949191", locator: "Table of measured total cross sections, Combined: ± 1.5 (syst) of 50.6 pb", source: agent, status: agent-draft, date: "2026-10-16"}

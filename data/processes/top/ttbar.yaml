@@ -175,7 +175,7 @@ channels:
                 specific: "Statistical"
                 size: {range: [2.6, 2.6], unit: "%", asymmetric: false}
                 provenance: {uid: 06094cf6, ref: "inspire:1256082", locator: "Sec. IV: 0.20 pb (stat) of 7.60 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Total systematic uncertainty (all sources)"
                 size: {range: [3.8, 3.8], unit: "%", asymmetric: false}
                 provenance: {uid: 4c9adbaf, ref: "inspire:1256082", locator: "Sec. IV: 0.29 pb (syst) of 7.60 pb; individual contributions in Table IV", source: agent, status: cross-checked, date: "2026-10-16"}

@@ -75,7 +75,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:
@@ -116,7 +116,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:
@@ -181,7 +181,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:
@@ -244,7 +244,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-16'
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size:
                   range:

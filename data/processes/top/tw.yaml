@@ -81,7 +81,7 @@ channels:
                 size: {range: [1.1, 1.1], asymmetric: false}
                 full_table: "hepdata:ins2129461/Cross section"
                 provenance: {uid: 99545d6b, ref: "hepdata:ins2129461/Cross section", locator: "Cross section, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: syst
                 size: {range: [10.0, 10.0], asymmetric: true}
                 full_table: "hepdata:ins2129461/Cross section"

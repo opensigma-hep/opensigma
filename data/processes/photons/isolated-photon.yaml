@@ -136,7 +136,7 @@ channels:
                 size: {range: [0.92, 12.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1680459/Table 1"
                 provenance: {uid: 5579b0f0, ref: "hepdata:ins1680459/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {range: [6.0, 12.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1680459/Table 1"
@@ -276,7 +276,7 @@ channels:
                 size: {range: [0.48, 14.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins834437/Table 1"
                 provenance: {uid: 30a40444, ref: "hepdata:ins834437/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {range: [8.0, 16.0], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins834437/Table 1"
@@ -289,7 +289,7 @@ channels:
                 size: {range: [0.1, 13.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins698784/Table 1"
                 provenance: {uid: 1b8e70ea, ref: "hepdata:ins698784/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {range: [12.0, 23.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins698784/Table 1"

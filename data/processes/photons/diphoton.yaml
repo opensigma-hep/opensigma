@@ -212,7 +212,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
                 provenance: {uid: 5164b344, ref: "inspire:915978", locator: "Table IV: ± 0.21 (stat) of 12.47 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Total systematic uncertainty"
                 size: {range: [30.0, 30.0], unit: "%", asymmetric: false}
                 provenance: {uid: 7983f759, ref: "inspire:915978", locator: "Table IV: ± 3.74 (syst) of 12.47 pb", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -262,7 +262,7 @@ channels:
                 size: {range: [4.0, 30.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins915978/Table 1"
                 provenance: {uid: f4ba7e2e, ref: "hepdata:ins915978/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {range: [16.0, 40.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins915978/Table 1"
@@ -275,7 +275,7 @@ channels:
                 size: {range: [4.0, 22.0], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1215307/Table 1"
                 provenance: {uid: ab0b8a41, ref: "hepdata:ins1215307/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys"
                 size: {range: [11.0, 47.0], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins1215307/Table 1"

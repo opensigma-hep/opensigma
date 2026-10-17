@@ -590,7 +590,7 @@ channels:
                 size: {range: [0.54, 4.3], asymmetric: false}
                 full_table: "hepdata:ins3150032/Figure 3 ($A_{0}$)"
                 provenance: {uid: 8d7bac1f, ref: "hepdata:ins3150032/Figure 3 ($A_{0}$)", locator: "Figure 3 ($A_{0}$), error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.29, 38.0], asymmetric: true}
                 full_table: "hepdata:ins3150032/Figure 3 ($A_{0}$)"
@@ -674,7 +674,7 @@ channels:
                 size: {range: [0.51, 0.51], asymmetric: false}
                 full_table: "hepdata:ins1124333/Table 1"
                 provenance: {uid: 1b041e06, ref: "hepdata:ins1124333/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [1.0, 1.0], asymmetric: false}
                 full_table: "hepdata:ins1124333/Table 1"
@@ -706,7 +706,7 @@ channels:
                 size: {range: [1.0, 25.0], asymmetric: false}
                 full_table: "hepdata:ins856131/Table 2"
                 provenance: {uid: 99bb0e87, ref: "hepdata:ins856131/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.69, 13.0], asymmetric: false}
                 full_table: "hepdata:ins856131/Table 2"
@@ -719,7 +719,7 @@ channels:
                 size: {range: [3.2, 40.0], asymmetric: false}
                 full_table: "hepdata:ins744624/Table 1"
                 provenance: {uid: 9f68f0ad, ref: "hepdata:ins744624/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [1.8, 8.0], asymmetric: true}
                 full_table: "hepdata:ins744624/Table 1"
@@ -750,7 +750,7 @@ channels:
                 size: {range: [1.7, 78.0], asymmetric: false}
                 full_table: "hepdata:ins1124333/Table 2"
                 provenance: {uid: 457da431, ref: "hepdata:ins1124333/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.59, 1.1], asymmetric: false}
                 full_table: "hepdata:ins1124333/Table 2"
@@ -768,7 +768,7 @@ channels:
                 size: {range: [1.5, 86.0], asymmetric: false}
                 full_table: "hepdata:ins769689/Table 1"
                 provenance: {uid: 7fdf95ec, ref: "hepdata:ins769689/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [1.8, 10.0], asymmetric: false}
                 full_table: "hepdata:ins769689/Table 1"
@@ -781,7 +781,7 @@ channels:
                 size: {range: [0.96, 42.0], asymmetric: false}
                 full_table: "hepdata:ins856972/Table 1"
                 provenance: {uid: 608bde7f, ref: "hepdata:ins856972/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.1, 7.2], asymmetric: false}
                 full_table: "hepdata:ins856972/Table 1"
@@ -936,7 +936,7 @@ channels:
                 size: {range: [0.02, 0.099], asymmetric: false}
                 full_table: "hepdata:ins1502620/Table 3"
                 provenance: {uid: ac641364, ref: "hepdata:ins1502620/Table 3", locator: "Table 3, error 'stat' (range over all 12 W and Z rows; Z → ℓℓ row 0.06%)", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.34, 1.1], asymmetric: false}
                 full_table: "hepdata:ins1502620/Table 3"
@@ -1005,12 +1005,12 @@ channels:
                 size: {range: [0.19, 0.59], asymmetric: false}
                 full_table: "hepdata:ins1502620/Table 12"
                 provenance: {uid: b2570cc4, ref: "hepdata:ins1502620/Table 12", locator: "Table 12, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: uncor
                 size: {range: [0.09, 0.37], asymmetric: false}
                 full_table: "hepdata:ins1502620/Table 12"
                 provenance: {uid: 6e69de0a, ref: "hepdata:ins1502620/Table 12", locator: "Table 12, error 'uncor' (bin-to-bin uncorrelated systematic)", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: cor
                 size: {range: [0.28, 0.41], asymmetric: false}
                 full_table: "hepdata:ins1502620/Table 12"
@@ -1031,7 +1031,7 @@ channels:
                 size: {range: [1.2, 11.0], asymmetric: false}
                 full_table: "hepdata:ins1373300/Table 1"
                 provenance: {uid: 511a0f4b, ref: "hepdata:ins1373300/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.76, 5.2], asymmetric: false}
                 full_table: "hepdata:ins1373300/Table 1"
@@ -1081,12 +1081,12 @@ channels:
                 size: {range: [0.17, 4.2], asymmetric: false}
                 full_table: "hepdata:ins1300647/Table 2"
                 provenance: {uid: df3f2a59, ref: "hepdata:ins1300647/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys,uncor"
                 size: {range: [0.22, 2.0], asymmetric: false}
                 full_table: "hepdata:ins1300647/Table 2"
                 provenance: {uid: '87772835', ref: "hepdata:ins1300647/Table 2", locator: "Table 2, error 'sys,uncor'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys,cor"
                 size: {range: [0.34, 1.3], asymmetric: false}
                 full_table: "hepdata:ins1300647/Table 2"
@@ -1102,7 +1102,7 @@ channels:
                 size: {range: [1.5, 2.8], asymmetric: false}
                 full_table: "hepdata:ins1373300/Table 2"
                 provenance: {uid: ea7630fa, ref: "hepdata:ins1373300/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.96, 3.6], asymmetric: false}
                 full_table: "hepdata:ins1373300/Table 2"
@@ -1192,7 +1192,7 @@ channels:
                 size: {range: [0.29, 1.6], asymmetric: false}
                 full_table: "hepdata:ins1204784/Table 7"
                 provenance: {uid: f11bc474, ref: "hepdata:ins1204784/Table 7", locator: "Table 7, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.13, 0.58], asymmetric: false}
                 full_table: "hepdata:ins1204784/Table 7"
@@ -1210,7 +1210,7 @@ channels:
                 size: {range: [1.0, 18.0], asymmetric: false}
                 full_table: "hepdata:ins1373300/Table 3"
                 provenance: {uid: 95bd4921, ref: "hepdata:ins1373300/Table 3", locator: "Table 3, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.88, 38.0], asymmetric: false}
                 full_table: "hepdata:ins1373300/Table 3"
@@ -1354,7 +1354,7 @@ channels:
                 size: {range: [0.83, 27.0], asymmetric: false}
                 full_table: "hepdata:ins1406555/Table 2"
                 provenance: {uid: 43500c97, ref: "hepdata:ins1406555/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.72, 9.1], asymmetric: false}
                 full_table: "hepdata:ins1406555/Table 2"
@@ -1417,7 +1417,7 @@ channels:
                 size: {range: [0.92, 1.7], asymmetric: false}
                 full_table: "hepdata:ins1406555/Table 3"
                 provenance: {uid: 329b52a2, ref: "hepdata:ins1406555/Table 3", locator: "Table 3, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [0.85, 1.6], asymmetric: false}
                 full_table: "hepdata:ins1406555/Table 3"
@@ -1555,7 +1555,7 @@ channels:
                 size: {range: [0.65, 8.5], asymmetric: false}
                 full_table: "hepdata:ins1406555/Table 4"
                 provenance: {uid: be4d37bf, ref: "hepdata:ins1406555/Table 4", locator: "Table 4, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [1.1, 24.0], asymmetric: false}
                 full_table: "hepdata:ins1406555/Table 4"
@@ -1610,7 +1610,7 @@ channels:
                 size: {range: [1.6, 120.0], asymmetric: false}
                 full_table: "hepdata:ins1466778/Table 2"
                 provenance: {uid: 3b1ec72f, ref: "hepdata:ins1466778/Table 2", locator: "Table 2, error 'stat' (range over all pT bins; the large values are low-pT bins where A0 ≈ 0)", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys,sys"
                 size: {range: [0.86, 170.0], asymmetric: false}
                 full_table: "hepdata:ins1466778/Table 2"
@@ -1623,7 +1623,7 @@ channels:
                 size: {range: [1.2, 17.0], asymmetric: false}
                 full_table: "hepdata:ins1359451/Table 1"
                 provenance: {uid: e533dd8b, ref: "hepdata:ins1359451/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [1.3, 50.0], asymmetric: false}
                 full_table: "hepdata:ins1359451/Table 1"

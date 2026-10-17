@@ -63,12 +63,12 @@ channels:
                 size: {range: [0.42, 69.0], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 1"
                 provenance: {uid: 886d0d46, ref: "hepdata:ins1377206/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys,uncor"
                 size: {range: [0.21, 14.0], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 1"
                 provenance: {uid: a702cead, ref: "hepdata:ins1377206/Table 1", locator: "Table 1, error 'sys,uncor'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "sys,cor"
                 size: {range: [0.72, 7.4], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 1"
@@ -78,12 +78,12 @@ channels:
                 size: {range: [0.0, 3.6], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 1"
                 provenance: {uid: 6237943b, ref: "hepdata:ins1377206/Table 1", locator: "Table 1, error 'sys,rel'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: background
                 specific: "sys,$\\gamma p$"
                 size: {range: [0.0, 7.5], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 1"
                 provenance: {uid: ea1ddf9d, ref: "hepdata:ins1377206/Table 1", locator: "Table 1, error 'sys,$\\gamma p$'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: energy_scale
                 specific: "sys,had"
                 size: {range: [0.0, 2.9], asymmetric: false}
                 full_table: "hepdata:ins1377206/Table 1"

@@ -59,7 +59,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
                 provenance: {uid: 53a61c7a, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: ±0.21 pb (stat) of 17.20 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
                 size: {range: [0.64, 0.64], unit: "%", asymmetric: false}
                 provenance: {uid: f97fc1ec, ref: "inspire:1219330", locator: "Table E.2, √s = 206.6 GeV: ±0.11 pb (syst) of 17.20 pb; groupings in Table 5.2", source: agent, status: cross-checked, date: "2026-10-16"}

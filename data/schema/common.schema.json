@@ -51,7 +51,7 @@
       "additionalProperties": false,
       "required": ["category", "size", "provenance"],
       "properties": {
-        "category": {"enum": ["stat", "lumi", "energy_scale", "efficiency", "unfolding_model", "background", "acceptance_extrapolation", "beam", "pileup", "other"]},
+        "category": {"enum": ["stat", "lumi", "energy_scale", "efficiency", "unfolding_model", "background", "acceptance_extrapolation", "beam", "pileup", "syst_combined", "other"]},
         "specific": {"type": "string"},
         "size": {"$ref": "#/$defs/size"},
         "full_table": {"$ref": "#/$defs/ref"},

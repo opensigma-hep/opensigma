@@ -176,7 +176,7 @@ channels:
                 size: {range: [2.3, 2.3], asymmetric: false}
                 full_table: "hepdata:ins668026/Table 5"
                 provenance: {uid: f1342535, ref: "hepdata:ins668026/Table 5", locator: "Table 5, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: sys
                 size: {range: [14.0, 14.0], asymmetric: true}
                 full_table: "hepdata:ins668026/Table 5"

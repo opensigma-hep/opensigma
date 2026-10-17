@@ -105,7 +105,7 @@ channels:
                 specific: "Integrated luminosity"
                 size: {range: [0.96, 0.96], unit: "%", asymmetric: false}
                 provenance: {uid: e6dd9167, ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν 13 TeV: ± 44 (lumi.) of 4571 pb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [0.46, 0.46], unit: "%", asymmetric: false}
                 provenance: {uid: 3a879e3c, ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν 13 TeV: ± 21 (syst.) of 4571 pb", source: agent, status: cross-checked, date: "2026-10-16"}

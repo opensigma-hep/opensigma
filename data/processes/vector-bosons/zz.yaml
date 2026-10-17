@@ -70,7 +70,7 @@ channels:
                 size: {range: [1.7, 3.3], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1814609/Table 1"
                 provenance: {uid: 900e6c3a, ref: "hepdata:ins1814609/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "syst"
                 size: {range: [2.7, 3.3], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins1814609/Table 1"
@@ -87,7 +87,7 @@ channels:
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 3a97f049, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (stat) of 49.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
                 provenance: {uid: 2a2c394b, ref: "inspire:1849535", locator: "Table 2, on-shell ZZ region: ± 0.8 (syst) of 49.3 fb", source: agent, status: cross-checked, date: "2026-10-16"}
@@ -138,7 +138,7 @@ channels:
                 size: {range: [1.7, 3.3], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1814609/Table 2"
                 provenance: {uid: 3b98326c, ref: "hepdata:ins1814609/Table 2", locator: "Table 2, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: syst_combined
                 specific: "syst"
                 size: {range: [2.9, 3.5], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins1814609/Table 2"
