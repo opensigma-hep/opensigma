@@ -8,4 +8,4 @@
 '(?i)pile|purew': pileup
 '(?i)beam': beam
 '(?i)(eff|trigger|id|iso|btag)|^(ftag|pref)$': efficiency
-'(?i)^(sys|syst|systematics?)(,(sys|cor|uncor))?$|^(cor|uncor)$|uncorr\. unc': syst_combined  # source gives only a combined systematic
+'(?i)^(sys|syst|systematics?)\.?(,(sys|cor|uncor))?$|^(cor|uncor)$|uncorr\. unc': syst_combined  # source gives only a combined systematic

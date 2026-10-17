@@ -1,0 +1,138 @@
+id: "proc:ttw"
+name: "tt̄W associated production"
+family: "fam:top"
+sector: SM
+description: "Production of a top-antitop pair in association with a W boson, pp → tt̄W⁺ and tt̄W⁻. Initiated at Born level by light quark-antiquark annihilation only, with a large charge asymmetry, and a key background to tt̄H and four-top; the measured rate has consistently exceeded the NLO predictions. NNLO QCD (plus NLO EW) predictions exist, with the finite part of the two-loop virtual correction either approximated (soft-W approximation, massification) or, most recently, computed exactly in the generalised leading-colour limit."
+watch:
+  recids: []
+  queries:
+    - 't "ttW" or t "t\\bar{t}W" or t "t\\overline{t}W"'
+    - '(t "association with a W boson" or t "associated with a W boson") and t "top" and t "pair"'
+  last_run: '2026-10-16'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1112287", "inspire:1359461"]
+        provenance: {uid: 649ea3f7, ref: "inspire:1112287", locator: "Abstract (tt̄W± at NLO in MCFM with top and W decays and full spin correlations); inspire:1359461 abstract (MadGraph5_aMC@NLO, QCD and EW)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "NNLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:2672565"]
+        provenance: {uid: a6d7ace0, ref: "inspire:2672565", locator: "Introduction (tree-level and one-loop amplitudes can be evaluated with automated tools; OpenLoops and Recola used in the calculation)", source: agent, status: agent-draft, date: "2026-10-17"}
+      2L:
+        status: partial
+        amplitude: "amp:2L/qqbar-ttW-lc"
+        approximations: ["exact only in the generalised leading-colour approximation; the first NNLO calculation used instead a soft-W approximation or massification of leading-colour W + 4-parton amplitudes"]
+        refs: ["inspire:3187331", "inspire:2913464", "inspire:3166426", "inspire:2672565"]
+        provenance: {uid: 44add5d7, ref: "inspire:3166426", locator: "Abstract (NNLO QCD predictions based, for the first time, on a direct computation of the two-loop amplitudes in the generalised leading-colour limit); inspire:2672565 abstract (finite part of the two-loop virtual corrections estimated with two approaches)", source: agent, status: agent-draft, date: "2026-10-17"}
+      ir_scheme:
+        status: done
+        refs: ["inspire:2672565"]
+        provenance: {uid: f0318ad3, ref: "inspire:2672565", locator: "Calculation section (qT subtraction formalism extended to heavy-quark production, implemented in the Matrix framework)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "NLO EW"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1359461"]
+        provenance: {uid: 260492cb, ref: "inspire:1359461", locator: "Abstract (O(αS²α²) NLO contribution with all QCD, QED and weak effects in MadGraph5_aMC@NLO, combined with O(αS³α) and the dominant lowest-order terms)", source: agent, status: agent-draft, date: "2026-10-17"}
+channels:
+  - id: "chan:ttw/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:ttw/lhc-13/sigma-tot", region: "inclusive σ(tt̄W) = σ(tt̄W⁺) + σ(tt̄W⁻), mt = 172.5 GeV"}
+    measurements:
+      - id: "meas:ttw/lhc-13/atlas-2024-multilepton"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹ (2015–2018), two same-sign or three leptons"
+        ref: "inspire:2745375"
+        hepdata: "hepdata:ins2745375/Table 1"
+      - id: "meas:ttw/lhc-13/cms-2023-multilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (2016–2018), two or three leptons"
+        ref: "inspire:2136024"
+        hepdata: "hepdata:ins2136024/Figure 10"
+    observables:
+      - id: "obs:ttw/lhc-13/sigma-tot"
+        name: "Inclusive σ(tt̄W)"
+        kind: total
+        variable: "σ_tt̄W (W⁺ + W⁻), mt = 172.5 GeV"
+        results:
+          - measurement: "meas:ttw/lhc-13/atlas-2024-multilepton"
+            total: {value_pct: 9.9, provenance: {uid: b447e3ae, ref: "hepdata:ins2745375/Table 1", locator: "Table 1, σ(tt̄W) = 881.5 fb, stat +46.7/−46.1, syst +73.7/−69.2; quadrature sum, larger side sqrt(46.7² + 73.7²)/881.5 (abstract: 880 ± 80 fb)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Stat. Unc."
+                size: {range: [5.2, 5.3], asymmetric: true}
+                full_table: "hepdata:ins2745375/Table 1"
+                provenance: {uid: bb5f423c, ref: "hepdata:ins2745375/Table 1", locator: "Table 1, σ(tt̄W) row, columns 'Stat. Unc. (+)' 46.7 and '(−)' 46.1 relative to 881.5 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Syst. Unc."
+                size: {range: [7.9, 8.4], asymmetric: true}
+                full_table: "hepdata:ins2745375/Table 1"
+                provenance: {uid: 0e1745d4, ref: "hepdata:ins2745375/Table 1", locator: "Table 1, σ(tt̄W) row, columns 'Syst. Unc. (+)' 73.7 and '(−)' 69.2 relative to 881.5 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+          - measurement: "meas:ttw/lhc-13/cms-2023-multilepton"
+            total:
+              value_pct: 7.5
+              provenance: {uid: b5441e57, ref: "hepdata:ins2136024/Figure 10", locator: "Figure 10, quadrature sum of all errors (bin 6, combined)", source: hepdata, status: machine-verified, date: "2026-10-17"}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [4.6, 16.0], asymmetric: false}
+                full_table: "hepdata:ins2136024/Figure 10"
+                provenance: {uid: 0d2cd104, ref: "hepdata:ins2136024/Figure 10", locator: "Figure 10, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "syst"
+                size: {range: [5.6, 15.0], asymmetric: false}
+                full_table: "hepdata:ins2136024/Figure 10"
+                provenance: {uid: 5198db33, ref: "hepdata:ins2136024/Figure 10", locator: "Figure 10, error 'syst'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "NNLO QCD + NLO EW (approximate two-loop amplitude), ATLAS 2024 reference prediction"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["NNLO QCD exact except the finite part of the two-loop virtual correction, estimated with two approaches (soft-W approximation and massification of leading-colour W + 4-parton amplitudes)", "NLO EW and subleading terms added additively to NNLO QCD"]
+            codes: ["MATRIX", "OpenLoops", "Recola"]
+            uses_amplitudes: ["amp:2L/qqbar-ttbar"]
+            total: {value_pct: 7.4, provenance: {uid: cb445fcf, ref: "inspire:2745375", locator: "Abstract and Sec. 1: σ = 745 ± 50 (scale) ± 13 (2-loop approx.) ± 19 (PDF, αs) fb; the three added in quadrature, sqrt(50² + 13² + 19²)/745", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "7-point scale variation around μ0 = M/2, symmetrised (larger of up and down)"
+                size: {range: [6.7, 6.7], unit: "%", asymmetric: false}
+                provenance: {uid: ff852470, ref: "inspire:2672565", locator: "Table I, NNLO QCD + NLO EW: 745.3 fb with ±6.7% (scale); symmetrisation described in the Results section", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: approximation
+                specific: "finite part of the two-loop virtual correction"
+                size: {range: [1.8, 1.8], unit: "%", asymmetric: false}
+                provenance: {uid: f317d4fc, ref: "inspire:2672565", locator: "Table I, NNLO QCD + NLO EW: ± 1.8% from the two-loop approximation", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: PDF
+                specific: "PDF ⊕ αs"
+                pdf_set: "NNPDF31_nnlo_as_0118_luxqed"
+                size: {range: [2.6, 2.6], unit: "%", asymmetric: false}
+                provenance: {uid: 16400b3a, ref: "inspire:2745375", locator: "Abstract: ± 19 (PDF, αs) fb of 745 fb; PDF set per inspire:2672565, Calculation section", source: agent, status: agent-draft, date: "2026-10-17"}
+            compared_to: ["meas:ttw/lhc-13/atlas-2024-multilepton"]
+            refs: ["inspire:2672565", "inspire:2745375"]
+            provenance: {uid: 65eb4f40, ref: "inspire:2672565", locator: "Abstract and Table I (NNLO QCD + NLO EW, σ(tt̄W) = 745.3 fb; Matrix with qT subtraction, OpenLoops and Recola; two-loop finite part from soft-W approximation and massification; the soft-W approach extracts the tt̄W amplitude from the two-loop qq̄ → tt̄ amplitude of Bärnreuther et al., Ref. [31] = inspire:1273586)", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true
+          - label: "NNLO QCD with exact leading-colour two-loop amplitude (no EW), separate tt̄W⁺ and tt̄W⁻"
+            accuracy:
+              qcd: NNLO
+              approximations: ["two-loop amplitude exact in the generalised leading-colour approximation, double-virtual correction from an interpolation grid; no EW corrections", "published as σ(tt̄W⁺) = 489.4 fb and σ(tt̄W⁻) = 241.9 fb, no sum quoted"]
+            codes: ["MATRIX"]
+            uses_amplitudes: ["amp:2L/qqbar-ttW-lc"]
+            refs: ["inspire:3166426"]
+            provenance: {uid: b6abc61d, ref: "inspire:3166426", locator: "Table 2, row LCA (σ(tt̄W⁺) = 489.4 fb, σ(tt̄W⁻) = 241.9 fb) and Summary; Matrix and grid interpolation per inspire:3205972 Sec. 4", source: agent, status: agent-draft, date: "2026-10-17"}
+          - label: "NLO QCD + EW with NNLL soft-gluon resummation, CMS 2023 comparison"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold"}]
+              approximations: ["full NLO QCD and EW plus NNLL soft-gluon corrections (NLO+NNLL)"]
+            total: {value_pct: 26.2, provenance: {uid: 3d3d9a8c, ref: "inspire:2136024", locator: "Table 3, σ(tt̄W) NLO+NNLL = 592 +155 −97 (theo) fb; larger side 155/592", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:ttw/lhc-13/cms-2023-multilepton"]
+            refs: ["inspire:2136024", "inspire:1774757"]
+            provenance: {uid: f2ec3959, ref: "inspire:2136024", locator: "Sec. 3 and Table 3 (σ_tt̄W = 592 +155 −97 (theo) fb at NLO QCD and EW with NNLL QCD corrections; Ref. [16] = Kulesza et al., Eur. Phys. J. C 80 (2020) 428; uncertainty from ME scale variations and PDF choice)", source: agent, status: agent-draft, date: "2026-10-17"}

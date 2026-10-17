@@ -1,0 +1,314 @@
+id: "proc:dis-jets"
+name: "Inclusive jet and dijet production in NC DIS (e±p → e± + jets + X)"
+family: "fam:dis"
+sector: SM
+description: "Jet production in neutral-current deep inelastic scattering, e±p → e± + jets + X, measured at HERA in the Breit frame with the kt algorithm (inclusive-jet, dijet and trijet cross sections, double-differential in Q² and the jet transverse momentum). The data constrain the strong coupling and the gluon PDF. Predictions are available at NNLO QCD for inclusive-jet and dijet production (NNLOJET, antenna subtraction); an approximate N3LO result exists for laboratory-frame single-jet production."
+watch:
+  recids: []
+  queries:
+    - '(refersto:recid:1518159 or refersto:recid:1469089) and t jet and (t "deep inelastic" or t "deep-inelastic" or t DIS) and (t NNLO or t N3LO or t "strong coupling" or t "inclusive jet" or t dijet or t "di-jet")'
+    - '(collaboration:H1 or collaboration:ZEUS) and (t "inclusive jet" or t "inclusive-jet" or t dijet or t "jet production" or t multijet) and (t "deep inelastic" or t "deep-inelastic" or t "high Q") and not t photoproduction and not t azimuthal'
+  last_run: '2026-10-16'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:355105", "inspire:556003"]
+        provenance: {uid: 27209b0b, ref: "inspire:355105", locator: "Abstract (NLO QCD corrections to (2+1)-jet cross sections in DIS); three-jet cross section at NLO: inspire:556003 Abstract", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        approximations: ["massless partons", "γ*→qq̄g two-loop amplitudes used in three crossing regions of DIS kinematics"]
+        amplitude: "amp:2L/qqbar-Vg"
+        refs: ["inspire:567814", "inspire:587998"]
+        provenance: {uid: '93e98309', ref: "inspire:1518159", locator: "Sec. 3.4: 'Our NNLOjet implementation of jet production in DIS uses the same matrix elements [54-56] as were used in Z + j production, however in different kinematical crossings'; ref. [56] = hep-ph/0112081, hep-ph/0206067; three crossing regions required per DIS process", source: agent, status: agent-draft, date: "2026-10-17"}
+      RV:
+        status: done
+        refs: ["inspire:1518159"]
+        provenance: {uid: 26ebe5b7, ref: "inspire:1518159", locator: "Sec. 3.1 and 3.2.3 (real-virtual contributions: one-loop (n+1)-parton matrix elements with antenna subtraction)", source: agent, status: agent-draft, date: "2026-10-17"}
+      RR:
+        status: done
+        refs: ["inspire:1518159"]
+        provenance: {uid: 0126bb63, ref: "inspire:1518159", locator: "Sec. 3.1 and 3.2.2 (double-real contributions with antenna subtraction)", source: agent, status: agent-draft, date: "2026-10-17"}
+      ir_scheme:
+        status: done
+        refs: ["inspire:1518159", "inspire:1469089"]
+        provenance: {uid: c0d5f38c, ref: "inspire:1518159", locator: "Sec. 3.2 (application of the antenna subtraction method; initial-state identity-changing collinear limits Sec. 3.3)", source: agent, status: agent-draft, date: "2026-10-17"}
+      code:
+        status: done
+        approximations: ["massless partons (zero-mass variable-flavour-number scheme; calculations for massive partons unavailable)"]
+        refs: ["inspire:1518159", "inspire:1469089"]
+        provenance: {uid: 3f57dd51, ref: "inspire:1518159", locator: "Sec. 3.4 (implementation into NNLOjet; di-jet first reported in inspire:1469089); massless-parton statement: arXiv:2309.02889 Sec. 8", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "N3LO QCD"
+    cells:
+      code:
+        status: partial
+        approximations: ["Projection-to-Born: inclusive N3LO DIS coefficient functions combined with an exclusive NNLO calculation for the final state with an extra jet", "single-jet production in the laboratory frame only, not the Breit-frame observables of the HERA jet analyses"]
+        refs: ["inspire:1664411"]
+        provenance: {uid: 06dbac7e, ref: "inspire:1664411", locator: "Abstract (N3LO corrections to single-jet production in DIS in the laboratory frame via the Projection-to-Born method, compared with ZEUS data)", source: agent, status: agent-draft, date: "2026-10-17"}
+channels:
+  - id: "chan:dis-jets/hera"
+    collider: "col:hera"
+    initial_state: "e±p"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:dis-jets/hera/incl-jet", region: "inclusive kt jets in the Breit frame, 150 < Q² < 15000 GeV², 0.2 < y < 0.7, √s = 318 GeV (ZEUS: p⊥,Breit > 7 GeV; H1: 5 < pT < 50 GeV)"}
+    measurements:
+      - id: "meas:dis-jets/hera/h1-2014-high-q2"
+        experiment: "H1"
+        dataset: "HERA-II 2003-2007, 351 pb⁻¹, √s = 318 GeV, NC DIS 150 < Q² < 15000 GeV², inclusive jet, dijet and trijet, kt algorithm in the Breit frame"
+        ref: "inspire:1301218"
+        hepdata: "hepdata:ins1301218/Table 1"
+      - id: "meas:dis-jets/hera/zeus-2023"
+        experiment: "ZEUS"
+        dataset: "HERA-II 2004-2007, 347 pb⁻¹, √s = 318 GeV, NC DIS 150 < Q² < 15000 GeV², 0.2 < y < 0.7, inclusive jet, kt algorithm in the Breit frame"
+        ref: "inspire:2694205"
+        hepdata: "hepdata:ins2694205/Table 1"
+    observables:
+      - id: "obs:dis-jets/hera/incl-jet"
+        name: "Double-differential inclusive-jet cross section d²σ/dQ²dpT (Breit frame, kt algorithm)"
+        kind: differential
+        variable: "Q², pT,Breit; total = smallest relative total uncertainty over bins"
+        results:
+          - measurement: "meas:dis-jets/hera/h1-2014-high-q2"
+            total:
+              value_pct: 4.0
+              provenance:
+                uid: da14ef19
+                ref: hepdata:ins1301218/Table 1
+                locator: Table 1, quadrature sum of all errors (min over bins)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 2.7
+                    - 22.0
+                  asymmetric: false
+                full_table: hepdata:ins1301218/Table 1
+                provenance:
+                  uid: fd44e745
+                  ref: hepdata:ins1301218/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 2.9
+                    - 20.0
+                  asymmetric: false
+                full_table: hepdata:ins1301218/Table 1
+                provenance:
+                  uid: 705f2d6b
+                  ref: hepdata:ins1301218/Table 1
+                  locator: Table 1, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: "meas:dis-jets/hera/zeus-2023"
+            total:
+              value_pct: 5.0
+              provenance:
+                uid: 3fb8d497
+                ref: hepdata:ins2694205/Table 1
+                locator: Table 1, column 3, quadrature sum of all errors (min over bins)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 2.8
+                    - 33.0
+                  asymmetric: false
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: 6e0e62ef
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: uncor
+                size:
+                  range:
+                    - 0.92
+                    - 7.1
+                  asymmetric: false
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: 1a47b44f
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'uncor'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: energy_scale
+                specific: JES
+                size:
+                  range:
+                    - 1.3
+                    - 5.3
+                  asymmetric: true
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: '74011247'
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'JES'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: other
+                specific: model
+                size:
+                  range:
+                    - 0.94
+                    - 6.9
+                  asymmetric: false
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: a39d9057
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'model'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: other
+                specific: fake
+                size:
+                  range:
+                    - 0.83
+                    - 2.1
+                  asymmetric: false
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: dd387b72
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'fake'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: other
+                specific: Low-Q2
+                size:
+                  range:
+                    - 0.01
+                    - 4.2
+                  asymmetric: false
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: 9ab8456a
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'Low-Q2'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: other
+                specific: E-pZ
+                size:
+                  range:
+                    - 0.39
+                    - 6.3
+                  asymmetric: true
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: b7011577
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'E-pZ'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: other
+                specific: TME
+                size:
+                  range:
+                    - 0.3
+                    - 1.4
+                  asymmetric: false
+                full_table: hepdata:ins2694205/Table 1
+                provenance:
+                  uid: 6cc46cc2
+                  ref: hepdata:ins2694205/Table 1
+                  locator: Table 1, column 3, error 'TME'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: "NNLOJET NNLO, HERAPDF2.0Jets NNLO, μr² = μf² = Q² + pT,Breit², hadronisation and Z corrections (ZEUS setup)"
+            accuracy: {qcd: NNLO, approximations: ["massless partons (ZMVFNS)", "parton-to-hadron correction factors from Ariadne and Lepto, Z-exchange and γZ-interference correction factors applied", "QED Born-level"]}
+            codes: ["NNLOJET", "fastNLO"]
+            compared_to: ["meas:dis-jets/hera/zeus-2023"]
+            refs: ["arXiv:2309.02889", "inspire:1518159"]
+            provenance: {uid: 81a7efeb, ref: "arXiv:2309.02889", locator: "Sec. 8 (NNLOJet via fastNLO grids, HERAPDF2.0Jets NNLO PDF set, αs(MZ²) = 0.1155, μf² = μr² = Q² + p⊥,Breit², hadronisation and Z corrections); uncertainty sizes not quoted numerically in the text, so left out", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true
+          - label: "NNLOJET NNLO, NNPDF3.0 NNLO (αs(MZ) = 0.118), μ² = (Q² + pT,j²)/2"
+            accuracy: {qcd: NNLO, approximations: ["massless partons", "partonic level, no hadronisation correction"]}
+            codes: ["NNLOJET"]
+            compared_to: ["meas:dis-jets/hera/h1-2014-high-q2"]
+            refs: ["inspire:1518159"]
+            provenance: {uid: d57de68c, ref: "inspire:1518159", locator: "Sec. 4.2 (LO, NLO and NNLO predictions with NNPDF3.0 NNLO, αs(MZ) = 0.118; comparison with H1 high-Q² [arXiv:1406.4709], H1 low-Q² and ZEUS inclusive-jet data); abstract: inclusive single-jet production displays better perturbative convergence than di-jet production", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:dis-jets/hera/dijet"
+        name: "Double-differential dijet cross section d²σ/dQ²d⟨pT⟩₂ (Breit frame, kt algorithm)"
+        kind: differential
+        variable: "Q², ⟨pT⟩₂ = (pT,j1 + pT,j2)/2; total = smallest relative total uncertainty over bins"
+        results:
+          - measurement: "meas:dis-jets/hera/h1-2014-high-q2"
+            total:
+              value_pct: 4.8
+              provenance:
+                uid: f562baa0
+                ref: hepdata:ins1301218/Table 2
+                locator: Table 2, quadrature sum of all errors (min over bins)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 3.6
+                    - 27.0
+                  asymmetric: false
+                full_table: hepdata:ins1301218/Table 2
+                provenance:
+                  uid: '90595476'
+                  ref: hepdata:ins1301218/Table 2
+                  locator: Table 2, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 2.5
+                    - 14.0
+                  asymmetric: false
+                full_table: hepdata:ins1301218/Table 2
+                provenance:
+                  uid: 9206ca43
+                  ref: hepdata:ins1301218/Table 2
+                  locator: Table 2, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: "NNLOJET NNLO dijet, NNPDF3.0 NNLO (αs(MZ) = 0.118), μ² = (Q² + ⟨pT⟩₂²)/2"
+            accuracy: {qcd: NNLO, approximations: ["massless partons", "partonic level, no hadronisation correction", "event-selection cuts of some dijet measurements induce infrared sensitivity that destabilises the NNLO prediction"]}
+            codes: ["NNLOJET"]
+            compared_to: ["meas:dis-jets/hera/h1-2014-high-q2"]
+            refs: ["inspire:1469089", "inspire:1518159"]
+            provenance: {uid: 8802bc0f, ref: "inspire:1518159", locator: "Sec. 5.2 (comparison with H1 high-Q² [arXiv:1406.4709], H1 low-Q² and ZEUS dijet data); abstract: NNLO dijet predictions, perturbative stability depends on the event-selection cuts; first NNLO dijet result inspire:1469089 Abstract", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true

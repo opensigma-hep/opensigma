@@ -1,0 +1,156 @@
+id: "proc:w-jet"
+name: "W + jets (W → ℓν)"
+family: "fam:vector-bosons"
+sector: SM
+description: "Production of a charged lepton and a neutrino through a W boson in association with one or more hard jets, pp/pp̄ → W(→ ℓν) + ≥ n jets + X, from qq̄′ → Wg, qg → Wq′ and crossings. The dominant source of events with one lepton, missing energy and jets: a key background to top, Higgs and new-physics searches, a benchmark for multi-leg merged generators and for the W pT and jet-multiplicity modelling used in the W-mass measurement. The ≥ 1-jet inclusive rate is known at NNLO QCD, and NLO EW corrections are available."
+watch:
+  recids: [1610623]
+  queries:
+    - '(t "W+jet" or t "W+jets" or t "W + jet" or t "W + jets" or t "W boson in association with jets" or t "W boson in association with a jet" or t "W boson plus jet" or t "W-boson plus jet" or t "W-boson production in association with a jet") and not t "tagging"'
+  last_run: '2026-10-16'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:266596"]
+        provenance: {uid: 604fbfce, ref: "inspire:266596", locator: "Abstract (full computation of dσ/dqT² for W, Z and virtual γ production to second order in QCD at high and moderate qT, i.e. W + jet at O(αs²))", source: agent, status: agent-draft, date: "2026-10-17"}
+      RR:
+        status: done
+        refs: ["inspire:266596"]
+        provenance: {uid: f784f29f, ref: "inspire:266596", locator: "Abstract (second-order QCD computation including the qg, gg and singlet qq̄ + qq channels, analytic constituent cross sections dσ/dqT² dy)", source: agent, status: agent-draft, date: "2026-10-17"}
+      ir_scheme:
+        status: done
+        approximations: ["crossing of all-final-state NLO results with universal crossing functions"]
+        refs: ["inspire:33945"]
+        provenance: {uid: 5203ada0, ref: "inspire:33945", locator: "Abstract (NLO jet cross sections from a 'crossing' of all-final-state calculations; applied to jets in association with a vector boson including all decay correlations)", source: agent, status: agent-draft, date: "2026-10-17"}
+      code:
+        status: done
+        refs: ["inspire:33945", "inspire:822565"]
+        provenance: {uid: b363d3db, ref: "inspire:822565", locator: "Abstract (NLO QCD corrections to W + jet with leptonic W decays recalculated and implemented in a flexible Monte Carlo code, Tevatron and LHC; with inspire:33945 for the early NLO calculation including decay correlations)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-Vg"
+        refs: ["inspire:587998"]
+        provenance: {uid: d7cb0b02, ref: "inspire:587998", locator: "Abstract via amp:2L/qqbar-Vg (two-loop QCD helicity amplitudes for γ* → qq̄g, crossed to the V + jet amplitudes; the same vector-current structure enters W + jet)", source: agent, status: agent-draft, date: "2026-10-17"}
+      RV:
+        status: done
+        refs: ["inspire:446755"]
+        provenance: {uid: c9abf1bf, ref: "inspire:446755", locator: "Abstract (one-loop helicity amplitudes for e+e− → four partons, also those for W, Z or Drell-Yan production in association with two jets at hadron colliders)", source: agent, status: agent-draft, date: "2026-10-17"}
+      ir_scheme:
+        status: done
+        approximations: ["N-jettiness subtraction"]
+        refs: ["inspire:1358633"]
+        provenance: {uid: 2096d3a7, ref: "inspire:1358633", locator: "Abstract (complete NNLO calculation of W + jet using a new subtraction method built on the N-jettiness event-shape variable, valid for an arbitrary number of jets)", source: agent, status: agent-draft, date: "2026-10-17"}
+      code:
+        status: done
+        approximations: ["fixed-order parton level, with fiducial cuts and leptonic W decay; inclusive and exclusive one-jet bins, 8 and 13 TeV"]
+        refs: ["inspire:1358633", "inspire:1423065"]
+        provenance: {uid: 55b56713, ref: "inspire:1423065", locator: "Abstract (fiducial cross sections and differential distributions for W + jet at NNLO for 8 and 13 TeV, inclusive and exclusive one-jet bins, general and boosted selections)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:822565"]
+        provenance: {uid: 7669281f, ref: "inspire:822565", locator: "Abstract (first NLO EW calculation for W + jet hadroproduction including leptonic W decays, complex-mass scheme, all off-shell effects; Tevatron and LHC)", source: agent, status: agent-draft, date: "2026-10-17"}
+      code:
+        status: done
+        refs: ["inspire:1406942"]
+        provenance: {uid: a8213231, ref: "inspire:1406942", locator: "Abstract (automated NLO QCD+EW for off-shell V + up to two jets at 13 TeV with OpenLoops, Munich and Sherpa, including multijet merging)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - row: "NNLO QCD×EW"
+    cells:
+      code:
+        status: partial
+        approximations: ["parton-level combination of NNLO QCD and NLO EW with two-loop Sudakov logarithms, for use via reweighting of Monte Carlo samples"]
+        refs: ["inspire:1599401"]
+        provenance: {uid: 6c37dfcd, ref: "inspire:1599401", locator: "Abstract (combination of state-of-the-art calculations for all V + jets processes: NNLO QCD and NLO EW corrections supplemented by Sudakov logarithms at two loops, parton level)", source: agent, status: agent-draft, date: "2026-10-17"}
+channels:
+  - id: "chan:w-jet/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:w-jet/lhc-13/sigma-ge1j", region: "Fiducial σ(W(→ μν) + ≥ 1 jet), jets anti-kt R = 0.4, pT > 30 GeV, |y| < 2.4; pT(μ) > 25 GeV, |η(μ)| < 2.4, mT > 50 GeV"}
+    measurements:
+      - id: "meas:w-jet/lhc-13/cms-2017-ge1j"
+        experiment: "CMS"
+        dataset: "13 TeV, 2.2 fb⁻¹ (2015), muon channel"
+        ref: "inspire:1610623"
+        hepdata: "hepdata:ins1610623/Table 2"
+    observables:
+      - id: "obs:w-jet/lhc-13/sigma-ge1j"
+        name: "Fiducial σ(W + ≥ 1 jet)"
+        kind: fiducial
+        variable: "σ(W(→ μν) + ≥ 1 jet), stable-particle level"
+        results:
+          - measurement: "meas:w-jet/lhc-13/cms-2017-ge1j"
+            total: {value_pct: 2.7, provenance: {uid: 0bceba2d, ref: "hepdata:ins1610623/Table 2", locator: "Table 2, quadrature sum of all errors (bin 1, N_jets ≥ 1: 1072 pb)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties: []
+        predictions:
+          - label: "NNLO QCD W + ≥ 1 jet (N-jettiness subtraction), NNPDF3.0 NNLO"
+            accuracy:
+              qcd: NNLO
+              approximations: ["fixed order O(αs³): NNLO for the ≥ 1-jet rate", "non-perturbative correction from LO MG5_aMC + Pythia 8 with and without MPI and hadronisation, mostly 0.93–1.10", "muon final-state radiation effect estimated below 1%"]
+            codes: ["N-jettiness NNLO W + jet"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:w-jet/lhc-13/cms-2017-ge1j"]
+            refs: ["inspire:1358633", "inspire:1423065", "inspire:1610623"]
+            provenance: {uid: c6cd239b, ref: "inspire:1610623", locator: "Sec. 3 (Njetti NNLO for W + 1-jet, refs [9, 31], compared for events with one or more jets; NNPDF 3.0 NNLO; non-perturbative correction 0.93–1.10; FSR < 1%)", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true
+          - label: "MG5_aMC@NLO + Pythia 8, FxFx merging (NLO up to 2 jets, LO for 3 and 4)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO for W + 0, 1, 2 jets and LO for 3, 4 jets, FxFx merging scale 30 GeV", "NNPDF 3.0 NLO for the matrix elements"]
+            codes: ["MadGraph5_aMC@NLO 2.2.2", "Pythia 8"]
+            compared_to: ["meas:w-jet/lhc-13/cms-2017-ge1j"]
+            refs: ["inspire:1610623"]
+            provenance: {uid: b4538404, ref: "inspire:1610623", locator: "Sec. 3, description of the NLO MG5_aMC FxFx prediction (NLO accuracy for N = 0, 1, 2 and LO for N = 3, 4)", source: agent, status: agent-draft, date: "2026-10-17"}
+  - id: "chan:w-jet/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:w-jet/tevatron-1960/sigma-ge1j", region: "σ(W(→ eν) + ≥ 1 jet; ET(jet) > 25 GeV), jetclu cone R = 0.4, |η(jet)| < 2.0; ET(e) > 20 GeV, |η(e)| < 1.1, ET(ν) > 30 GeV, mT > 20 GeV"}
+    measurements:
+      - id: "meas:w-jet/tevatron-1960/cdf-2007-ge1j"
+        experiment: "CDF"
+        dataset: "1.96 TeV, 320 pb⁻¹ (Run II), W → eν only"
+        ref: "inspire:768579"
+        hepdata: "hepdata:ins768579/Table 6"
+    observables:
+      - id: "obs:w-jet/tevatron-1960/sigma-ge1j"
+        name: "σ(W(→ eν) + ≥ 1 jet), ET(jet) > 25 GeV"
+        kind: fiducial
+        variable: "σ × B(W → eν) for W + ≥ 1 jet with the leading jet ET > 25 GeV, corrected for detector effects, restricted W → eν decay phase space"
+        results:
+          - measurement: "meas:w-jet/tevatron-1960/cdf-2007-ge1j"
+            total: {value_pct: 10.0, provenance: {uid: df18f0e2, ref: "hepdata:ins768579/Table 6", locator: "Table 6, quadrature sum of all errors (bin 1, W + ≥ 1 jet: 53.5 pb)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [1.1, 1.1], asymmetric: false}
+                full_table: "hepdata:ins768579/Table 6"
+                provenance: {uid: ab7a61f6, ref: "hepdata:ins768579/Table 6", locator: "Table 6, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "sys"
+                size: {range: [8.6, 8.6], asymmetric: false}
+                full_table: "hepdata:ins768579/Table 6"
+                provenance: {uid: 65b00f0f, ref: "hepdata:ins768579/Table 6", locator: "Table 6, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: lumi
+                specific: "sys,Additional systematic error due to uncertainty on the integrated luminosity.//The data are corrected for all detector effects."
+                size: {range: [5.8, 5.8], asymmetric: false}
+                full_table: "hepdata:ins768579/Table 6"
+                provenance: {uid: 17a98662, ref: "hepdata:ins768579/Table 6", locator: "Table 6, error 'sys,Additional systematic error due to uncertainty on the integrated luminosity.//The data are corrected for all detector effects.'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "NLO QCD (MCFM), CTEQ6.1M"
+            accuracy:
+              qcd: NLO
+              approximations: ["fixed order: NLO for W + ≥ 1 jet, no parton shower or hadronisation", "μ = (m_W² + pT²(W))^½ with variations to a lower scale μ = pT(jet) and a higher scale 2μ", "cone jets R = 0.4 with partons merged within 1.3 R; non-perturbative corrections not applied to MCFM"]
+            codes: ["MCFM"]
+            compared_to: ["meas:w-jet/tevatron-1960/cdf-2007-ge1j"]
+            refs: ["inspire:583117", "inspire:768579"]
+            provenance: {uid: a9d61af5, ref: "inspire:768579", locator: "Prediction section: NLO predictions for W + 1 and W + 2 jets from MCFM [26] with CTEQ6.1M PDFs; scale definitions and jet definition paragraphs", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true

@@ -1,0 +1,11 @@
+id: "amp:2L/gg-HH-mt"
+process: "proc:hh"
+loops: 2
+corrections: QCD
+status: done
+evaluation:
+  kind: numerical
+  detail: "GoSam-generated amplitude, Reduze integral reduction, two-loop integrals evaluated numerically by sector decomposition (SecDec)"
+  provenance: {uid: 8e329aff, ref: "inspire:1450011", locator: "Abstract (virtual two-loop amplitude generated with an extension of GoSam, Reduze interface for the integral reduction, integrals calculated numerically with SecDec)", source: agent, status: agent-draft, date: "2026-10-17"}
+refs: ["inspire:1450011", "inspire:1481820"]
+provenance: {uid: 63c5a08d, ref: "inspire:1450011", locator: "Abstract (NLO QCD calculation for gg → HH with the full top-quark mass dependence throughout, two-loop virtual amplitude)", source: agent, status: agent-draft, date: "2026-10-17"}

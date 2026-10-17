@@ -1,0 +1,15 @@
+id: "amp:2L/qqbar-ttW-lc"
+process: "proc:ttw"
+loops: 2
+corrections: QCD
+status: partial
+approximations: ["generalised leading-colour approximation, exact dependence on mt and mW", "light-quark-initiated qq̄′ → tt̄W only (diagonal CKM), hard functions provided on a phase-space grid"]
+master_integrals:
+  status: done
+  refs: ["inspire:2913464"]
+evaluation:
+  kind: numerical
+  detail: "special functions by differential equations via power-series expansion; rational coefficients by finite-field reconstruction; hard functions on a grid"
+  provenance: {uid: bb979a22, ref: "inspire:3187331", locator: "Abstract (special functions evaluated numerically by solving differential equations through power-series expansions; rational coefficients reconstructed point by point from finite-field evaluations; hard functions on a phase-space grid)", source: agent, status: agent-draft, date: "2026-10-17"}
+refs: ["inspire:3187331", "inspire:2913464"]
+provenance: {uid: 142aeee1, ref: "inspire:3187331", locator: "Abstract (two-loop QCD amplitudes for tt̄W in the generalised leading-colour approximation, exact top and W mass dependence); Sec. 2, eq. (2.1) (partonic process u d̄ → t t̄ W⁺, diagonal CKM); inspire:2913464 abstract (complete set of two-loop Feynman integrals at leading colour)", source: agent, status: agent-draft, date: "2026-10-17"}
