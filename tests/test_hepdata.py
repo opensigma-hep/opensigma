@@ -1,9 +1,11 @@
+import json
+
 import pytest
 from ruamel.yaml import YAML
 
 from pathlib import Path
 
-from scripts import ingest_hepdata, linkcheck
+from scripts import ingest_hepdata, linkcheck, machine_verify
 from scripts.opensigma import hepdata
 
 ROOT = Path(__file__).parent.parent
@@ -172,3 +174,55 @@ def test_unlabelled_error_does_not_crash():
     t = {"dependent_variables": [{"values": [{"value": 2.0, "errors": [{"symerror": 0.2}]}]}]}
     assert hepdata.total_pct(t, 1) == pytest.approx(10.0)
     assert hepdata.summarize(t, LABEL_MAP, REF)[0]["specific"] == "error"
+
+
+def test_string_values_do_not_crash():  # e.g. ATLAS WZ ins1720438 "Table 6"
+    t = {"dependent_variables": [{"values": [{"value": "51.0", "errors": [
+        {"label": "stat", "symerror": "0.8"}, {"label": "sys", "symerror": "1.8"}]}, {"value": "0", "errors": []}]}]}
+    assert hepdata.total_pct(t, 1) == pytest.approx((0.8**2 + 1.8**2) ** 0.5 / 51 * 100)
+    assert [u["size"]["range"] for u in hepdata.summarize(t, LABEL_MAP, REF)] == [[1.6, 1.6], [3.5, 3.5]]
+
+
+# First column a theory prediction, second the measurement (e.g. CMS WZ ins1949191 "Total cross sections").
+COLS = {"dependent_variables": [
+    {"values": [{"value": 50.0, "errors": [{"label": "scale", "symerror": 1.0}]}]},
+    {"values": [{"value": 50.0, "errors": [{"label": "stat", "symerror": 2.5}]}]}]}
+
+
+def test_column_selects_dependent_variable():
+    assert hepdata.total_pct(COLS, None) == pytest.approx(2.0)
+    assert hepdata.total_pct(COLS, None, 2) == pytest.approx(5.0)
+    (u,) = hepdata.summarize(COLS, LABEL_MAP, REF, column=2)
+    assert u["specific"] == "stat" and u["provenance"]["locator"] == "Table 5, column 2, error 'stat'"
+    with pytest.raises(ValueError, match="column 3 out of range"):
+        hepdata.total_pct(COLS, None, 3)
+
+
+def test_ingest_column_round_trips_through_machine_verify(capsys):
+    assert ingest_hepdata.main(["ins1234567", "Table 5", "--column", "2"], fetch=lambda u: json.dumps(COLS)) == 0
+    (r,) = YAML(typ="safe").load(capsys.readouterr().out)["results"]
+    assert r["total"]["value_pct"] == 5.0 and ", column 2," in r["total"]["provenance"]["locator"]
+    assert all(ok for *_, ok in machine_verify._items(r, lambda ref: COLS, LABEL_MAP))
+
+
+def test_ingest_total_only_column(capsys):
+    t = {"dependent_variables": [{"values": [{"value": 4.0, "errors": [{"label": "Total", "symerror": 0.2}]}]}]}
+    assert ingest_hepdata.main(["ins1234567", "Table 5"], fetch=lambda u: json.dumps(t)) == 0
+    (r,) = YAML(typ="safe").load(capsys.readouterr().out)["results"]
+    assert r["total"]["value_pct"] == 5.0 and r["uncertainties"] == [] and r["total"]["provenance"]["ref"] == REF
+
+
+def test_dash_value_is_an_empty_bin():
+    t = {"dependent_variables": [{"values": [{"value": "-"}, {"value": 2.0, "errors": [{"symerror": 0.2}]}]}]}
+    assert hepdata.total_pct(t, None) == pytest.approx(10.0)
+    with pytest.raises(ValueError, match="bin 1 has value 0"):
+        hepdata.total_pct(t, 1)
+
+
+def test_bins_without_errors_are_not_zero_percent():  # CMS ins1949191 "Total cross sections", column 2
+    t = {"dependent_variables": [{"values": [{"value": 53.2}, {"value": 50.0, "errors": [{"symerror": 1.0}]}]}]}
+    assert hepdata.total_pct(t, None) == pytest.approx(2.0)
+    with pytest.raises(ValueError, match="no errors"):
+        hepdata.total_pct(t, 1)
+    with pytest.raises(ValueError, match="no non-zero bins with errors"):
+        hepdata.total_pct({"dependent_variables": [{"values": [{"value": 53.2}]}]}, None)

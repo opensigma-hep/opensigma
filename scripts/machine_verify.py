@@ -66,6 +66,11 @@ def check(root: Path, fetch=hepdata.fetch_table, apply: bool = False) -> list[Mi
     return bad
 
 
+def _column(pr) -> int:
+    c = hepdata.COLUMN.search(pr.get("locator", ""))
+    return int(c[1]) if c else 1
+
+
 def _items(result, table, label_map):
     """Yield (provenance, stored, fetched, within tolerance?)."""
     for u in result.get("uncertainties") or []:
@@ -75,7 +80,7 @@ def _items(result, table, label_map):
         if "full_table" not in u:
             yield pr, [float(x) for x in u["size"]["range"]], None, False
             continue
-        recomputed = hepdata.summarize(table(u["full_table"]), label_map, u["full_table"])
+        recomputed = hepdata.summarize(table(u["full_table"]), label_map, u["full_table"], column=_column(pr))
         hit = next((c for c in recomputed if (c["category"], c["specific"]) == (u["category"], u.get("specific"))), None)
         stored = [float(x) for x in u["size"]["range"]]
         fetched = hit and hit["size"]["range"]  # no exact (category, specific) match -> mismatch, never guess
@@ -84,7 +89,7 @@ def _items(result, table, label_map):
     pr = t.get("provenance", {})
     if pr.get("source") == "hepdata":
         b = re.search(r"\bbin (\d+)", pr["locator"])
-        raw = hepdata.total_pct(table(pr["ref"]), int(b[1]) if b else None)
+        raw = hepdata.total_pct(table(pr["ref"]), int(b[1]) if b else None, _column(pr))
         ok = any(_close(t["value_pct"], f) for f in (raw, hepdata.round_sig(raw)))
         yield pr, t["value_pct"], hepdata.round_sig(raw), ok
 

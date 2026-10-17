@@ -58,22 +58,26 @@ def _err_pct(err: dict, value: float) -> tuple[float, bool]:
     return abs(one(err["symerror"])), False
 
 
-def _bins(table: dict) -> list[list[tuple[str, float, bool]] | None]:
-    """Per bin, in original order: [(label, |err|/|value| in %, asymmetric)], or None for a zero-value bin.
+def _bins(table: dict, column: int = 1) -> list[list[tuple[str, float, bool]] | None]:
+    """Per bin, in original order: [(label, |err|/|value| in %, asymmetric)], or None for a zero-value or empty ('-') bin.
 
-    Uses the first dependent variable.
+    Uses the 1-based dependent variable `column`; HEPData may give values as strings ('51.0').
     """
-    return [
-        None if v["value"] == 0 else [(e.get("label", "error"), *_err_pct(e, v["value"])) for e in v.get("errors", [])]
-        for v in table["dependent_variables"][0]["values"]
-    ]
+    deps = table["dependent_variables"]
+    if not 1 <= column <= len(deps):
+        raise ValueError(f"column {column} out of range 1..{len(deps)}")
+    out = []
+    for v in deps[column - 1]["values"]:
+        value = 0.0 if v["value"] == "-" else float(v["value"])
+        out.append(None if value == 0 else [(e.get("label", "error"), *_err_pct(e, value)) for e in v.get("errors", [])])
+    return out
 
 
-def summarize(table: dict, label_map: dict, ref: str, today: date | None = None) -> list[dict]:
+def summarize(table: dict, label_map: dict, ref: str, today: date | None = None, column: int = 1) -> list[dict]:
     """One uncertainty_exp per error label; `ref` is `hepdata:ins<recid>/<table>`."""
-    name = ref.split("/", 1)[1]
+    name = ref.split("/", 1)[1] + col_locator(column)
     per_label: dict[str, list[tuple[float, bool]]] = {}
-    for b in filter(None, _bins(table)):
+    for b in filter(None, _bins(table, column)):
         for label, pct, asym in b:
             if TOTAL.search(label):
                 continue
@@ -93,7 +97,15 @@ def summarize(table: dict, label_map: dict, ref: str, today: date | None = None)
     return out
 
 
-def total_pct(table: dict, region_bin: int | None) -> float:
+def col_locator(column: int) -> str:
+    """Locator fragment naming a non-default column; machine_verify reads it back with COLUMN."""
+    return "" if column == 1 else f", column {column}"
+
+
+COLUMN = re.compile(r", column (\d+)\b")
+
+
+def total_pct(table: dict, region_bin: int | None, column: int = 1) -> float:
     """Relative total error (%) at 1-based bin `region_bin` (numbered over all bins), or min over non-zero bins.
 
     A bin's own total column wins; otherwise its errors are summed in quadrature.
@@ -102,14 +114,14 @@ def total_pct(table: dict, region_bin: int | None) -> float:
         given = [p for label, p, _ in b if TOTAL.search(label)]
         return max(given) if given else sum(p**2 for _, p, _ in b) ** 0.5
 
-    bins = _bins(table)
-    totals = [None if b is None else tot(b) for b in bins]
+    bins = _bins(table, column)
+    totals = [tot(b) if b else None for b in bins]  # no errors listed: unknown, not 0%
     if all(t is None for t in totals):
-        raise ValueError("table has no non-zero bins")
+        raise ValueError("table has no non-zero bins with errors")
     if region_bin is None:
         return min(t for t in totals if t is not None)
     if not 1 <= region_bin <= len(bins):
         raise ValueError(f"bin {region_bin} out of range 1..{len(bins)}")
     if totals[region_bin - 1] is None:
-        raise ValueError(f"bin {region_bin} has value 0; relative error undefined")
+        raise ValueError(f"bin {region_bin} has value 0 or '-', or no errors; relative error undefined")
     return totals[region_bin - 1]

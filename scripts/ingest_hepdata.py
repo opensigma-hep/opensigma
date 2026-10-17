@@ -1,9 +1,10 @@
-"""CLI: python -m scripts.ingest_hepdata ins1234567 "Table 5" [--bin 3] [--version 1]
+"""CLI: python -m scripts.ingest_hepdata ins1234567 "Table 5" [--bin 3] [--column 2] [--version 1]
 
 Prints a YAML `results:` snippet to stdout for an agent to paste in; never writes data files.
 """
 import argparse
 import sys
+from datetime import date
 from pathlib import Path
 
 from ruamel.yaml import YAML
@@ -18,6 +19,7 @@ def main(argv=None, fetch=hepdata.curl_get) -> int:
     ap.add_argument("recid", help="ins<digits>")
     ap.add_argument("table")
     ap.add_argument("--bin", type=int, default=None, help="1-based bin for total_pct; default minimum over bins")
+    ap.add_argument("--column", type=int, default=1, help="1-based dependent variable (table column); default 1")
     ap.add_argument("--version", type=int, default=1)
     a = ap.parse_args(argv)
     if not a.recid.startswith("ins") or not a.recid[3:].isdigit():
@@ -26,13 +28,16 @@ def main(argv=None, fetch=hepdata.curl_get) -> int:
     table = hepdata.fetch_table(recid, a.table, a.version, fetch=fetch)
     label_map = YAML(typ="safe").load(LABEL_MAP)
     ref = f"hepdata:ins{recid}/{a.table}"
-    unc = hepdata.summarize(table, label_map, ref)
+    unc = hepdata.summarize(table, label_map, ref, column=a.column)
     where = f"bin {a.bin}" if a.bin else "min over bins"
     result = {
         "measurement": "<MEAS-ID>",
         "total": {
-            "value_pct": hepdata.round_sig(hepdata.total_pct(table, a.bin)),
-            "provenance": {**unc[0]["provenance"], "locator": f"{a.table}, quadrature sum of all errors ({where})"},
+            "value_pct": hepdata.round_sig(hepdata.total_pct(table, a.bin, a.column)),
+            "provenance": {  # built here, not copied from unc[0]: a table with only a total column has no components
+                "ref": ref, "locator": f"{a.table}{hepdata.col_locator(a.column)}, quadrature sum of all errors ({where})",
+                "source": "hepdata", "status": "machine-verified", "date": date.today().isoformat(),
+            },
         },
         "uncertainties": unc,
     }
