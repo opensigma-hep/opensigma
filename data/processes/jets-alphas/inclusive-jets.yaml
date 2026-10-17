@@ -1,0 +1,290 @@
+id: "proc:inclusive-jets"
+name: "Inclusive jet production (pp/pp̄ → jet + X)"
+family: "fam:jets-alphas"
+sector: SM
+description: "Single-inclusive jet production, pp/pp̄ → jet + X, counting every jet in the event, double-differential in jet pT and rapidity. Probes the high-x gluon PDF and αs at the highest scales; known at NNLO QCD (leading and full colour) with NLO weak corrections and non-perturbative corrections applied multiplicatively."
+watch:
+  recids: [1972986, 1634970, 1495841, 1681639, 2070536, 1747058]
+  queries:
+    - 't "inclusive jet" and (collaboration:ATLAS or collaboration:CMS) and t "13 TeV"'
+    - 't "single jet inclusive" or (t "inclusive jet" and (t NNLO or t resummation))'
+    - 't "strong coupling" and t "inclusive jet"'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        amplitude: "amp:1L/2to2-partons"
+        refs: ["inspire:218454", "inspire:336137", "inspire:332376"]
+        provenance: {uid: 28bb2843, ref: "inspire:218454", locator: "Abstract (matrix elements squared for all 2→2 and 2→3 parton subprocesses at O(αs³))", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:623857", "inspire:727193", "inspire:1972986"]
+        provenance: {uid: fb90af42, ref: "inspire:1972986", locator: "Sec. 4.1 (fixed-order predictions at NLO and NNLO from NLOJet++ and NNLOJET, NLO implemented in fastNLO)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/2to2-partons"
+        refs: ["inspire:553143", "inspire:552493", "inspire:535309", "inspire:536445"]
+        provenance: {uid: 26c549aa, ref: "inspire:1495841", locator: "p. 1 (NNLO needs tree-level [18], one-loop [19–21] and two-loop [22–24] parton-level amplitudes)", source: agent, status: cross-checked, date: "2026-10-16"}
+      RV:
+        status: done
+        amplitude: "amp:1L/2to3-partons"
+        refs: ["inspire:352808", "inspire:377332", "inspire:373656"]
+        provenance: {uid: adb18877, ref: "inspire:1495841", locator: "p. 1 (NNLO needs tree-level [18], one-loop [19–21] and two-loop [22–24] parton-level amplitudes)", source: agent, status: cross-checked, date: "2026-10-16"}
+      RR:
+        status: done
+        approximations: ["original NNLOJET calculation at leading colour (Nc², NcNF, NF²) in all channels; full colour: inspire:1747058, inspire:2070536"]
+        refs: ["inspire:1495841", "inspire:1747058", "inspire:2070536"]
+        provenance: {uid: 8ff1a787, ref: "inspire:1495841", locator: "p. 1 (double-real subprocesses gg→gggg, gg→qq̄gg, gg→qq̄qq̄; leading-colour contributions in all channels)", source: agent, status: cross-checked, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["antenna subtraction (NNLOJET)", "sector-improved residue subtraction (independent exact-colour calculation, inspire:1747058)"]
+        refs: ["inspire:1495841", "inspire:1747058"]
+        provenance: {uid: 8a62f46f, ref: "inspire:1495841", locator: "p. 1 (antenna subtraction implemented in the parton-level event generator NNLOJET)", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:2906156", "inspire:1495841", "inspire:2070536", "inspire:1747058"]
+        provenance: {uid: 83f180af, ref: "inspire:2906156", locator: "Abstract (open-source NNLOJET code for jet cross sections at NNLO QCD in hadron-hadron collisions)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: partial
+        approximations: ["tree-level O(αsα, α²) and weak loop O(αs²α) corrections only"]
+        refs: ["inspire:1188853"]
+        provenance: {uid: 07d894ba, ref: "inspire:1188853", locator: "Abstract (most important electroweak corrections to dijet production: tree-level O(αsα, α²) and weak loops O(αs²α))", source: agent, status: cross-checked, date: "2026-10-16"}
+channels:
+  - id: "chan:inclusive-jets/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:inclusive-jets/lhc-13/d2sigma-dpt-dy", region: "anti-kT R = 0.4, |y| < 0.5, jet pT ≈ 400 GeV (CMS bin 395–468 GeV; ATLAS bin 376–408 GeV)"}
+    measurements:
+      - id: "meas:inclusive-jets/lhc-13/cms-2021"
+        experiment: "CMS"
+        dataset: "13 TeV, 36.3 fb⁻¹ (2016), anti-kT R = 0.4"
+        ref: "inspire:1972986"
+        hepdata: "hepdata:ins1972986/ak4_xsec_ybin1"
+      - id: "meas:inclusive-jets/lhc-13/atlas-2017"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 3.2 fb⁻¹ (2015), anti-kt R = 0.4"
+        ref: "inspire:1634970"
+        hepdata: "hepdata:ins1634970/Table 1"
+    observables:
+      - id: "obs:inclusive-jets/lhc-13/d2sigma-dpt-dy"
+        name: "Inclusive jet d²σ/dpT d|y| (anti-kT, R = 0.4)"
+        kind: differential
+        variable: "jet pT, |y|"
+        results:
+          - measurement: "meas:inclusive-jets/lhc-13/cms-2021"
+            total: {value_pct: 3.7, provenance: {uid: 8a8f1cbb, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, quadrature sum of all errors (bin 7)", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}}
+            uncertainties:
+              - category: other
+                specific: "all uncorr. unc. 1"
+                size: {"range": [0.33, 24.0], "asymmetric": false}
+                full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
+                provenance: {uid: '38899753', "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'all uncorr. unc. 1'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: other
+                specific: "RelativeFSR"
+                size: {"range": [0.083, 4.5], "asymmetric": false}
+                full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
+                provenance: {uid: 141c70a7, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'RelativeFSR'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: other
+                specific: "TimePtEta"
+                size: {"range": [1.4, 4.5], "asymmetric": false}
+                full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
+                provenance: {uid: f357fd6d, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'TimePtEta'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: other
+                specific: "FlavorQCD"
+                size: {"range": [0.088, 3.2], "asymmetric": false}
+                full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
+                provenance: {uid: ebdb6b38, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'FlavorQCD'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: other
+                specific: "AbsoluteMPFBias"
+                size: {"range": [1.1, 2.7], "asymmetric": false}
+                full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
+                provenance: {uid: f0310b6f, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'AbsoluteMPFBias'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: other
+                specific: "RelativeBal"
+                size: {"range": [0.75, 2.7], "asymmetric": false}
+                full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
+                provenance: {uid: '27072262', "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'RelativeBal'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: lumi
+                specific: "Lumi"
+                size: {"range": [1.2, 1.2], "asymmetric": false}
+                full_table: "hepdata:ins1972986/ak4_xsec_ybin1"
+                provenance: {uid: f1b82afb, "ref": "hepdata:ins1972986/ak4_xsec_ybin1", "locator": "ak4_xsec_ybin1, error 'Lumi'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+          - measurement: "meas:inclusive-jets/lhc-13/atlas-2017"
+            total: {value_pct: 4.9, provenance: {uid: e17c9945, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, quadrature sum of all errors (bin 13)", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {"range": [0.35, 36.0], "asymmetric": false}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: 0eabf362, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'stat'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_SingleParticle_HighPt"
+                size: {"range": [0.0, 22.0], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: 23902fff, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_SingleParticle_HighPt'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_PunchThrough_MC15"
+                size: {"range": [0.0, 10.0], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: c11361ae, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_PunchThrough_MC15'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_Gjet_Stat15"
+                size: {"range": [1.4e-23, 9.2], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: c843d9cb, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_Gjet_Stat15'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_LArESZee"
+                size: {"range": [1.3, 7.4], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: 3414992e, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_LArESZee'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_Gjet_Veto"
+                size: {"range": [0.36, 6.8], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: a31601bc, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_Gjet_Veto'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_MJB_Asym"
+                size: {"range": [9e-06, 6.6], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: 293ff175, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_MJB_Asym'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_Gjet_Generator"
+                size: {"range": [1.8, 6.5], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: 340ff705, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_Gjet_Generator'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_Gjet_Stat14"
+                size: {"range": [7.5e-23, 6.0], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: b0c19f8c, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_Gjet_Stat14'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_MJB_Stat16"
+                size: {"range": [0.0, 5.6], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: c4b0cc39, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_MJB_Stat16'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: energy_scale
+                specific: "syst_JES_Gjet_OOC"
+                size: {"range": [1.1, 5.5], "asymmetric": true}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: f67d5b15, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_JES_Gjet_OOC'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: lumi
+                specific: "syst_lumi"
+                size: {"range": [2.1, 2.1], "asymmetric": false}
+                full_table: "hepdata:ins1634970/Table 1"
+                provenance: {uid: 08a835ae, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_lumi'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD full colour (NNLOJET), μ = pT, ⊗ NP"
+            accuracy:
+              qcd: NNLO
+              approximations: ["full colour at NNLO", "non-perturbative corrections applied (calculation compared with CMS 13 TeV, inspire:1459051; not a measurement in this file)"]
+            codes: ["NNLOJET"]
+            uses_amplitudes: ["amp:2L/2to2-partons", "amp:1L/2to3-partons", "amp:1L/2to2-partons"]
+            refs: ["inspire:2070536", "inspire:1747058"]
+            provenance: {uid: c5dcb595, ref: "inspire:2070536", locator: "Abstract and Sec. 3 (single jet inclusive doubly differential in pT and |y| at NNLO full colour, compared with CMS 13 TeV [1605.04436])", source: agent, status: agent-draft, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO QCD (NNLOJET) ⊗ NP ⊗ NLO EW, as compared by CMS (CT14nnlo) and ATLAS (MMHT2014 NNLO)"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["NNLO from NNLOJET (Currie et al.); EW and NP corrections applied multiplicatively"]
+            codes: ["NNLOJET", "fastNLO"]
+            uses_amplitudes: ["amp:2L/2to2-partons", "amp:1L/2to3-partons", "amp:1L/2to2-partons"]
+            compared_to: ["meas:inclusive-jets/lhc-13/cms-2021", "meas:inclusive-jets/lhc-13/atlas-2017"]
+            refs: ["inspire:1972986", "inspire:1634970", "inspire:1495841", "inspire:1681639"]
+            provenance: {uid: 2c62b3ba, ref: "inspire:1972986", locator: "Secs. 4.1–4.3 and 5, Fig. 6 (NNLO QCD CT14 ⊗ NP ⊗ EW); ATLAS: inspire:1634970 Sec. 9.4 (NNLOJET, MMHT 2014 NNLO, NP and EW corrections applied)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NLO+NLL (joint threshold and jet-radius resummation)"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "threshold and jet radius (joint)"}]
+            codes: ["NLL-Jet", "MEKS"]
+            compared_to: ["meas:inclusive-jets/lhc-13/cms-2021"]
+            refs: ["inspire:1649956", "inspire:1972986"]
+            provenance: {uid: 58168b4d, ref: "inspire:1972986", locator: "Sec. 4.1, Eq. (3) (NLO+NLL k-factor from the NLL-Jet calculation of Liu, Moch, Ringer)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NLO QCD (NLOJET++/APPLGRID) ⊗ NP ⊗ EW, CT14 NLO"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["NP and EW corrections applied multiplicatively"]
+            codes: ["NLOJET++", "APPLGRID"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation (plus difference between pT and pT^max scale choices)"
+                method: "μR, μF varied by factors 1/2 and 2 excluding opposite variations; envelope"
+                size: {range: [10, 50], unit: "%", asymmetric: false}
+                provenance: {uid: 8205f519, ref: "inspire:1634970", locator: "Sec. 9.1 (scale uncertainty rising from 10% at pT ≈ 100 GeV in the central bin to about 50% at highest pT in the most forward bin)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "CT14 NLO PDF uncertainty (68% CL)"
+                pdf_set: "CT14 NLO"
+                size: {range: [2, 12], unit: "%", asymmetric: false}
+                provenance: {uid: e897d7ad, ref: "inspire:1634970", locator: "Sec. 9.1 (PDF uncertainties vary from 2% to 12% depending on jet pT and rapidity)", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:inclusive-jets/lhc-13/atlas-2017"]
+            refs: ["inspire:1634970"]
+            provenance: {uid: 2ee16e27, ref: "inspire:1634970", locator: "Sec. 9.1 (NLOJET++ 4.1.3 with APPLGRID, CT14 NLO), Secs. 9.2–9.3 (NP and EW corrections)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - id: "chan:inclusive-jets/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:inclusive-jets/tevatron-1960/d2sigma-dpt-dy", region: "midpoint cone R = 0.7, central rapidity, jet pT ≈ 200–260 GeV (D0 |y| < 0.4, 200–220 GeV; CDF |y| < 0.1, 224–259 GeV)"}
+    measurements:
+      - id: "meas:inclusive-jets/tevatron-1960/d0-2008"
+        experiment: "D0"
+        dataset: "1.96 TeV, 0.70 fb⁻¹, midpoint cone R = 0.7"
+        ref: "inspire:779574"
+        hepdata: "hepdata:ins779574/Table 1"
+      - id: "meas:inclusive-jets/tevatron-1960/cdf-2008"
+        experiment: "CDF"
+        dataset: "1.96 TeV, 1.13 fb⁻¹, Midpoint cone R = 0.7"
+        ref: "inspire:790693"
+        hepdata: "hepdata:ins790693/Table 1"
+    observables:
+      - id: "obs:inclusive-jets/tevatron-1960/d2sigma-dpt-dy"
+        name: "Inclusive jet d²σ/dpT dy (midpoint cone, R = 0.7)"
+        kind: differential
+        variable: "jet pT, |y|"
+        results:
+          - measurement: "meas:inclusive-jets/tevatron-1960/d0-2008"
+            total: {value_pct: 9.5, provenance: {uid: 800284cc, "ref": "hepdata:ins779574/Table 1", "locator": "Table 1, quadrature sum of all errors (bin 13)", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {"range": [0.28, 41.0], "asymmetric": false}
+                full_table: "hepdata:ins779574/Table 1"
+                provenance: {uid: c6b8f98c, "ref": "hepdata:ins779574/Table 1", "locator": "Table 1, error 'stat'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: other
+                specific: "sys"
+                size: {"range": [9.2, 23.0], "asymmetric": true}
+                full_table: "hepdata:ins779574/Table 1"
+                provenance: {uid: e6087b3c, "ref": "hepdata:ins779574/Table 1", "locator": "Table 1, error 'sys'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+          - measurement: "meas:inclusive-jets/tevatron-1960/cdf-2008"
+            total: {value_pct: 18.0, provenance: {uid: 8b7e36cd, "ref": "hepdata:ins790693/Table 1", "locator": "Table 1, quadrature sum of all errors (bin 10)", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {"range": [1.3, 45.0], "asymmetric": false}
+                full_table: "hepdata:ins790693/Table 1"
+                provenance: {uid: ed90b95b, "ref": "hepdata:ins790693/Table 1", "locator": "Table 1, error 'stat'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+              - category: other
+                specific: "sys"
+                size: {"range": [9.1, 43.0], "asymmetric": true}
+                full_table: "hepdata:ins790693/Table 1"
+                provenance: {uid: 383202a2, "ref": "hepdata:ins790693/Table 1", "locator": "Table 1, error 'sys'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
+        predictions:
+          - label: "NLO QCD (NLOJET++/fastNLO) ⊗ NP"
+            accuracy:
+              qcd: NLO
+              approximations: ["parton-to-hadron (non-perturbative) corrections applied"]
+            codes: ["NLOJET++", "fastNLO"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            compared_to: ["meas:inclusive-jets/tevatron-1960/d0-2008", "meas:inclusive-jets/tevatron-1960/cdf-2008"]
+            refs: ["inspire:779574", "inspire:790693"]
+            provenance: {uid: 49a33151, ref: "inspire:779574", locator: "Results text and Fig. 1 (NLO pQCD from fastNLO based on NLOJET++, CTEQ6.5M, corrected for non-perturbative effects); CDF inspire:790693 results text, Fig. 16 (fastNLO, CTEQ6.1M, corrected to hadron level)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true

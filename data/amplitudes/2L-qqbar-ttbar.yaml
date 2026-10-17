@@ -1,0 +1,11 @@
+id: "amp:2L/qqbar-ttbar"
+process: "proc:ttbar"
+loops: 2
+corrections: QCD
+status: done
+evaluation:
+  kind: semi-analytic
+  detail: "deep mass expansion around the high-energy limit combined with numerical solution of differential equations"
+  provenance: {uid: 1fc3be25, ref: "inspire:781013", locator: "Abstract (combination of a deep expansion in the mass around the high energy limit and numerical integration of a system of differential equations)", source: agent, status: cross-checked, date: "2026-10-16"}
+refs: ["inspire:781013", "inspire:1273586"]
+provenance: {uid: 659e2cb3, ref: "inspire:781013", locator: "Abstract (two-loop QCD corrections to massive quark-antiquark production in massless qq̄ annihilation, full mass dependence); inspire:1273586 abstract (same amplitude given on a grid)", source: agent, status: cross-checked, date: "2026-10-16"}

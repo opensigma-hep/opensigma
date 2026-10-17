@@ -1,0 +1,167 @@
+id: "proc:dy-cc"
+name: "Charged-current Drell–Yan (W → ℓν)"
+family: "fam:vector-bosons"
+sector: SM
+description: "Production of a charged lepton and a neutrino through an s-channel W boson, pp/pp̄ → W± → ℓ±ν + X (ℓ = e, μ). Largest single-boson rate at hadron colliders: benchmark for quark-flavour and charge-asymmetry PDF constraints, and the process behind the W-mass and W-width measurements. Known at N3LO QCD."
+watch:
+  recids: [2775442, 2816048, 1808912, 2691867, 2086427, 1818463, 1848458]
+  queries:
+    - 't "W boson" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb) and (t "cross section" or t "transverse momentum" or t "charge asymmetry")'
+    - 't "W" and t "Drell-Yan" and (t N3LO or t "third order" or t N3LL or t N4LL)'
+    - 't "W" and t "mixed" and (t "QCD-electroweak" or t "QCD-EW" or t "strong-electroweak")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        amplitude: "amp:1L/qqbar-V"
+        refs: ["inspire:140456"]
+        provenance: {uid: 20db96ab, ref: "inspire:140456", locator: "Abstract (radiative corrections to the lowest-order qq̄ annihilation diagram up to O(αs); same qq̄ → V* form factor as neutral current)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-V"
+        refs: ["inspire:686721"]
+        provenance: {uid: b7607803, ref: "inspire:686721", locator: "Abstract (two-loop massless quark form factor γ*→qq̄; same vector-current form factor for W)", source: agent, status: cross-checked, date: "2026-10-16"}
+      RV:
+        status: done
+        refs: ["inspire:300492"]
+        provenance: {uid: 3558d968, ref: "inspire:300492", locator: "Abstract (complete O(αs²) correction to the Drell-Yan K-factor, all qq̄, qg, gg and qq subprocesses)", source: agent, status: cross-checked, date: "2026-10-16"}
+      RR:
+        status: done
+        refs: ["inspire:300492"]
+        provenance: {uid: 7acc9a5a, ref: "inspire:300492", locator: "Abstract (complete O(αs²) correction to the Drell-Yan K-factor, all qq̄, qg, gg and qq subprocesses)", source: agent, status: cross-checked, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT subtraction"]
+        refs: ["inspire:815316"]
+        provenance: {uid: 99a1e12c, ref: "inspire:815316", locator: "Abstract (fully exclusive NNLO calculation for W and Z production with a recently proposed version of the subtraction formalism)", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:712998", "inspire:815316"]
+        provenance: {uid: d1b02679, ref: "inspire:712998", locator: "Abstract (O(αs²) corrections to the fully differential pp → W X → ℓν X cross section, retaining spin correlations)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "N3LO QCD"
+    cells:
+      3L:
+        status: done
+        amplitude: "amp:3L/qqbar-V"
+        refs: ["inspire:1808912"]
+        provenance: {uid: aebbff98, ref: "inspire:1808912", locator: "Abstract (partonic coefficient functions of a virtual W± boson at N3LO)", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: partial
+        approximations: ["fiducial N3LO via qT-resummation matched to W+jet at NNLO, shown for 5.02 TeV; public release announced as upcoming (CuTe-MCFM)", "N3LO rapidity and transverse-mass distributions: inspire:2086427"]
+        refs: ["inspire:2691867", "inspire:2086427"]
+        provenance: {uid: 0a60c737, ref: "inspire:2691867", locator: "Abstract (W production at the level of αs³ at fixed order and including transverse-momentum resummation; code to be released)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:562503"]
+        provenance: {uid: 96e96f29, ref: "inspire:562503", locator: "Abstract (complete set of EW O(α) corrections to Drell-Yan-like W production)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NNLO QCD×EW"
+    cells:
+      2L:
+        status: partial
+        approximations: ["on-shell W, leptonic decay at leading order (inspire:1818463)", "pole approximation for the finite two-loop part, reweighted (inspire:1848458)"]
+        refs: ["inspire:1818463", "inspire:1848458"]
+        provenance: {uid: 0dbed058, ref: "inspire:1848458", locator: "Abstract (all real and virtual contributions without approximation except the finite part of the two-loop virtual correction, in pole approximation)", source: agent, status: cross-checked, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT subtraction (inspire:1848458)", "nested soft-collinear subtraction, on-shell W (inspire:1818463)"]
+        refs: ["inspire:1848458", "inspire:1818463"]
+        provenance: {uid: 8ee84a1a, ref: "inspire:1848458", locator: "Abstract (qT-subtraction formulation derived from the NNLO QCD calculation for heavy-quark production)", source: agent, status: cross-checked, date: "2026-10-16"}
+channels:
+  - id: "chan:dy-cc/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:dy-cc/lhc-13/sigma-fid-wplus", region: "W+ → ℓ+ν fiducial (experiment-specific cuts: ATLAS pT(ℓ) > 25 GeV, mT > 50 GeV; CMS pT(ℓ) > 25 GeV, mT > 40 GeV)"}
+    measurements:
+      - id: "meas:dy-cc/lhc-13/atlas-2024-lowpu"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 338 pb⁻¹ (low-pileup runs, 2017–2018)"
+        ref: "inspire:2775442"
+      - id: "meas:dy-cc/lhc-13/cms-2024-lowpu"
+        experiment: "CMS"
+        dataset: "13 TeV, 206 pb⁻¹ (2017, low pileup)"
+        ref: "inspire:2816048"
+        hepdata: "hepdata:ins2816048/Figure 4"
+    observables:
+      - id: "obs:dy-cc/lhc-13/sigma-fid-wplus"
+        name: "Fiducial σ × B(W⁺ → ℓ⁺ν)"
+        kind: fiducial
+        variable: "σ_fid (experiment-specific lepton and mT cuts)"
+        results:
+          - measurement: "meas:dy-cc/lhc-13/atlas-2024-lowpu"
+            total: {value_pct: 1.1, provenance: {uid: 3b3070b1, ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν at 13 TeV: 4571 ± 3 (stat.) ± 21 (syst.) ± 44 (lumi.) pb; total 49 pb (Table 6, 'Data'); fiducial cuts pT(ℓ) > 25 GeV, mT > 50 GeV (Sec. 6)", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.066, 0.066], unit: "%", asymmetric: false}
+                provenance: {uid: '12465495', ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν 13 TeV: ± 3 (stat.) of 4571 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [0.96, 0.96], unit: "%", asymmetric: false}
+                provenance: {uid: e6dd9167, ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν 13 TeV: ± 44 (lumi.) of 4571 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: other
+                specific: "Experimental systematics excluding luminosity (combined)"
+                size: {range: [0.46, 0.46], unit: "%", asymmetric: false}
+                provenance: {uid: 3a879e3c, ref: "inspire:2775442", locator: "Table 3, W+→ℓ+ν 13 TeV: ± 21 (syst.) of 4571 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+          - measurement: "meas:dy-cc/lhc-13/cms-2024-lowpu"
+            total: {value_pct: 2.4, provenance: {uid: eace05b5, ref: "inspire:2816048", locator: "Table 2, W+→ℓ+ν: 5170 ± 20 (syst) ± 120 (lumi) pb (statistical uncertainty negligible); added in quadrature; pT(ℓ) > 25 GeV, mT > 40 GeV (Event selection section)", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.3, 2.3], unit: "%", asymmetric: false}
+                provenance: {uid: 2f5b763b, ref: "inspire:2816048", locator: "Caption of the 13 TeV fiducial systematic-uncertainty table (2.3% integrated luminosity uncertainty); Table 2: ± 120 (lumi) of 5170 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Efficiency (stat)"
+                size: {range: [0.23, 0.23], unit: "%", asymmetric: false}
+                provenance: {uid: bc757cfb, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', W+→ℓ+ν column", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: efficiency
+                specific: "Trigger prefire correction"
+                size: {range: [0.17, 0.17], unit: "%", asymmetric: false}
+                provenance: {uid: aee9314b, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', W+→ℓ+ν column", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: background
+                specific: "QCD multijet (syst)"
+                size: {range: [0.16, 0.16], unit: "%", asymmetric: false}
+                provenance: {uid: 13f26a72, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', W+→ℓ+ν column", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: background
+                specific: "EW + tt̄ cross section"
+                size: {range: [0.10, 0.10], unit: "%", asymmetric: false}
+                provenance: {uid: cb7d7371, ref: "inspire:2816048", locator: "Table 'Systematic uncertainties, in percent, for the fiducial inclusive cross sections at 13 TeV', W+→ℓ+ν column", source: agent, status: cross-checked, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO+NNLL QCD (DYTurbo), ATLAS cuts, NNPDF3.1"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "qT"}]
+            codes: ["DYTurbo"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            total: {value_pct: 1.3, provenance: {uid: 27d6eba4, ref: "inspire:2775442", locator: "Table 6, W+→ℓ+ν at 13 TeV, NNPDF31: 4510 +40 −30 (scale) ± 40 (PDF) pb; larger scale side and PDF added in quadrature", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μF, μR and resummation scale variations"
+                method: "factorisation, renormalisation and resummation scales varied by a factor two up and down, excluding opposite variations, envelope (Sec. 7.3)"
+                size: {range: [0.67, 0.89], unit: "%", asymmetric: true}
+                provenance: {uid: 0f9eecf6, ref: "inspire:2775442", locator: "Table 6, W+→ℓ+ν at 13 TeV, NNPDF31: +40 −30 (scale) of 4510 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF eigenvector/replica variations"
+                pdf_set: "NNPDF3.1 NNLO"
+                size: {range: [0.89, 0.89], unit: "%", asymmetric: false}
+                provenance: {uid: 037e36ef, ref: "inspire:2775442", locator: "Table 6, W+→ℓ+ν at 13 TeV, NNPDF31: ± 40 (PDF) of 4510 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:dy-cc/lhc-13/atlas-2024-lowpu"]
+            refs: ["inspire:2775442"]
+            provenance: {uid: e24c550a, ref: "inspire:2775442", locator: "Sec. 7.3 and Table 6 (DYTurbo v1.2.3, NNLO+NNLL, ATLAS fiducial cuts)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
+          - label: "NNLO+NNLL QCD (DYTurbo), CMS cuts, NNPDF4.0"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "qT"}]
+            codes: ["DYTurbo"]
+            uses_amplitudes: ["amp:2L/qqbar-V"]
+            total: {value_pct: 0.88, provenance: {uid: 864d2cc0, ref: "inspire:2816048", locator: "Table 2, W+→ℓ+ν at 13 TeV, NNPDF4.0: 5118 ± 45 pb (statistical, PDF, αS and scale uncertainties combined)", source: agent, status: cross-checked, date: "2026-10-16"}}
+            compared_to: ["meas:dy-cc/lhc-13/cms-2024-lowpu"]
+            refs: ["inspire:2816048"]
+            provenance: {uid: '39941647', ref: "inspire:2816048", locator: "Theory-prediction section and Table 2 (DYTurbo v1.3.2, NNLO+NNLL, NNPDF4.0)", source: agent, status: cross-checked, date: "2026-10-16"}

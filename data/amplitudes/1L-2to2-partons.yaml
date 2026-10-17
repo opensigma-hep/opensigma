@@ -1,0 +1,11 @@
+id: "amp:1L/2to2-partons"
+process: "proc:inclusive-jets"
+loops: 1
+corrections: QCD
+status: done
+evaluation:
+  kind: analytic
+  detail: "analytic O(αs³) matrix elements squared in n dimensions, all 2→2 parton subprocesses"
+  provenance: {uid: fef18838, ref: "inspire:218454", locator: "Abstract (matrix elements squared for all 2→2 and 2→3 parton subprocesses at O(αs³), presented in n dimensions)", source: agent, status: cross-checked, date: "2026-10-16"}
+refs: ["inspire:218454"]
+provenance: {uid: 2e58703d, ref: "inspire:218454", locator: "Abstract (matrix elements squared for all 2→2 and 2→3 parton scattering subprocesses calculated at O(αs³))", source: agent, status: cross-checked, date: "2026-10-16"}

@@ -1,0 +1,140 @@
+id: "proc:tth"
+name: "Higgs production with a top-quark pair (ttH)"
+family: "fam:higgs"
+sector: SM
+description: "Production of the SM Higgs boson in association with a top-antitop quark pair, pp → ttH + X: a direct probe of the top-quark Yukawa coupling. Known at NNLO QCD with approximated two-loop virtual amplitudes, matched to NNLL soft-gluon resummation and complete-NLO corrections (NNLO+NNLL+EW)."
+watch:
+  recids: [1494411, 2902128, 2851688, 2165654, 1304696, 2104706, 2104672]
+  queries:
+    - 't "Higgs" and (t "top quark pair" or t "top-antitop" or t "ttH" or t "tt̄H") and (t NNLO or t NNLL or t "two-loop" or t "electroweak" or t "resummation")'
+    - 't "ttH" and (collaboration:ATLAS or collaboration:CMS) and (t "cross section" or t "13 TeV" or t "13.6 TeV")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:559687"]
+        provenance: {uid: 79aeaac4, ref: "inspire:559687", locator: "Abstract (QCD corrections to pp/pp̄ → ttH + X at NLO in the Standard Model)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: partial
+        approximations: ["two-loop virtual amplitude approximated (soft Higgs boson approximation and a second approximation, combined by a weighted average, with an assigned systematic error)"]
+        refs: ["inspire:2165654", "inspire:2851688"]
+        provenance: {uid: 5ee99989, ref: "inspire:2902128", locator: "Sec. 2.1 and Sec. 3.3 (two-loop amplitudes estimated via two approximations combined by a weighted average, error Δvirt = 0.9%); inspire:2165654 Abstract (soft Higgs boson approximation for loop amplitudes)", source: agent, status: cross-checked, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["qT subtraction"]
+        refs: ["inspire:2902128"]
+        provenance: {uid: 3d06916a, ref: "inspire:2902128", locator: "Sec. 3.3, 'Numerical uncertainties' (fixed-order result obtained within the qT-subtraction formalism)", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: done
+        approximations: ["two-loop virtual amplitude approximated"]
+        refs: ["inspire:2165654", "inspire:2851688"]
+        provenance: {uid: dfbaab37, ref: "inspire:2851688", locator: "Abstract (first fully differential NNLO QCD calculation for ttH)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        approximations: ["QED effects not included in this reference"]
+        refs: ["inspire:1304696"]
+        provenance: {uid: c4e24968, ref: "inspire:1304696", locator: "Abstract (O(αS² α²) weak and QCD corrections to ttH, QED effects ignored)", source: agent, status: cross-checked, date: "2026-10-16"}
+channels:
+  - id: "chan:tth/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:tth/lhc-13/sigma-tth", region: "m_H = 125 GeV, inclusive over production kinematics (ATLAS: ttH, |y_H| < 2.5, absolute σ; CMS: signal strength μ_ttH)"}
+    measurements:
+      - id: "meas:tth/lhc-13/atlas-2022-comb"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
+        ref: "inspire:2104706"
+        hepdata: "hepdata:ins2104706/Figure 2a"
+      - id: "meas:tth/lhc-13/cms-2022-comb"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
+        ref: "inspire:2104672"
+        hepdata: "hepdata:ins2104672/Production mode strength modifiers"
+    observables:
+      - id: "obs:tth/lhc-13/sigma-tth"
+        name: "σ(ttH) in the Higgs decay-channel combination (ATLAS: σ(ttH); CMS: μ_ttH)"
+        kind: total
+        variable: "σ(pp → ttH) at m_H ≈ 125 GeV; ATLAS in |y_H| < 2.5 assuming SM branching fractions; CMS as signal strength relative to the SM"
+        results:
+          - measurement: "meas:tth/lhc-13/atlas-2022-comb"
+            total: {value_pct: 33.0, provenance: {uid: 45332bb6, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 5 (ttH): 0.36966 pb, 'Total uncertainty' +0.12212/−0.11901 pb; larger side as % of the central value", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [22.3, 23.4], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104706/Figure 2a"
+                provenance: {uid: b0ac8773, ref: "hepdata:ins2104706/Figure 2a", locator: "Figure 2a, bin 5, error 'Syst. uncertainty': +0.086565/−0.082251 pb of 0.36966 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+          - measurement: "meas:tth/lhc-13/cms-2022-comb"
+            total: {value_pct: 21.3, provenance: {uid: 9d02f834, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ttH = 0.94 +0.20/−0.19 (stat+syst), also Fig. 2 of arXiv:2207.00043; larger side as % of the central value", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [16.0, 16.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: '64954861', ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ttH: ±0.15 (stat) of 0.94", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: other
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [12.8, 13.8], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2104672/Production mode strength modifiers"
+                provenance: {uid: 31692b44, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ttH: +0.13/−0.12 (syst) of 0.94", source: agent, status: cross-checked, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO+NNLL+EW (dQCD/SCET average), m_H = 125 GeV"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              resummation: [{accuracy: "NNLL", variable: "soft-gluon (threshold)"}]
+              approximations: ["two-loop virtual amplitude approximated (error Δvirt assigned)", "complete-NLO corrections (QCD and EW) combined with NNLO+NNLL QCD", "central value: average of direct-QCD and SCET resummation, uncertainty band: envelope of the scale variations of both"]
+            total: {value_pct: 3.7, provenance: {uid: 52e87d89, ref: "arXiv:2503.15043", locator: "Table 2 (13.0 TeV, m_H = 125.00 GeV, combined NNLO+NNLL+EW column): 530.6 fb +1.7%/−2.3% (7-point scale variation); with Sec. 3.3 ΔPDF = 2.2% (eq. 3.8), Δαs = 1.7% (eq. 3.9), Δvirt = 0.9% (eq. 3.10); derived here as the larger scale side, ΔPDF, Δαs and Δvirt added in quadrature (the paper quotes them separately)", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF and resummation-scale variations (both resummation frameworks)"
+                method: "7-point scale variation, envelope over the direct-QCD and SCET resummation results"
+                size: {range: [1.7, 2.3], unit: "%", asymmetric: true}
+                provenance: {uid: d34bed54, ref: "arXiv:2503.15043", locator: "Table 2 (13.0 TeV, m_H = 125.00 GeV, combined NNLO+NNLL+EW column) and Sec. 3.2", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF uncertainty (PDF4LHC prescription)"
+                pdf_set: "PDF4LHC"
+                size: {range: [2.2, 2.2], unit: "%", asymmetric: false}
+                provenance: {uid: 6b3ab584, ref: "arXiv:2503.15043", locator: "Sec. 3.3, eq. (3.8)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: alphas
+                specific: "αs(m_Z) varied by 0.001"
+                size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
+                provenance: {uid: 2e6ec626, ref: "arXiv:2503.15043", locator: "Sec. 3.3, eq. (3.9)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: approximation
+                specific: "Approximation of the two-loop virtual contribution"
+                size: {range: [0.9, 0.9], unit: "%", asymmetric: false}
+                provenance: {uid: 554ce2e9, ref: "arXiv:2503.15043", locator: "Sec. 3.3, eq. (3.10)", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:tth/lhc-13/atlas-2022-comb", "meas:tth/lhc-13/cms-2022-comb"]
+            refs: ["inspire:2902128"]
+            provenance: {uid: cc62dbbe, ref: "arXiv:2503.15043", locator: "Table 2 and Sec. 3.2–3.3 (√S = 13 TeV, m_H = 125.00 GeV); published after both measurements, so not the prediction the experiments compared to", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
+          - label: "NLO QCD + NLO EW (LHC Higgs Working Group, YR4), m_H = 125 GeV"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+            total: {value_pct: 9.9, provenance: {uid: 8d0b3e49, ref: "arXiv:1610.07922", locator: "Table 229 (13 TeV, m_H = 125.0 GeV row): σ(NLO QCD+EW) = 507.1 fb, scale +5.8/−9.2%, αs ±2.0%, PDF ±3.0%, PDF+αs ±3.6%; derived here as the larger scale side and PDF+αs added in quadrature", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Scale variation"
+                method: "independent variation of μR, μF in μ/2 ≤ μR, μF ≤ 2μ with 1/2 ≤ μR/μF ≤ 2, μ = M_t + M_H/2"
+                size: {range: [5.8, 9.2], unit: "%", asymmetric: true}
+                provenance: {uid: 881a4f28, ref: "arXiv:1610.07922", locator: "Table 229, 13 TeV, m_H = 125.0 GeV row; scale variation described in Sec. I.6.2", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "PDF4LHC15"
+                size: {range: [3.0, 3.0], unit: "%", asymmetric: false}
+                provenance: {uid: c31dc190, ref: "arXiv:1610.07922", locator: "Table 229, 13 TeV, m_H = 125.0 GeV row", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: alphas
+                specific: "αs uncertainty"
+                size: {range: [2.0, 2.0], unit: "%", asymmetric: false}
+                provenance: {uid: 4ef401bb, ref: "arXiv:1610.07922", locator: "Table 229, 13 TeV, m_H = 125.0 GeV row", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:tth/lhc-13/atlas-2022-comb", "meas:tth/lhc-13/cms-2022-comb"]
+            refs: ["arXiv:1610.07922"]
+            provenance: {uid: 2f38de9e, ref: "arXiv:1610.07922", locator: "Table 229 (SM-like ttH cross section at 13 TeV); cited by both experiments as a source of the SM prediction", source: agent, status: cross-checked, date: "2026-10-16"}

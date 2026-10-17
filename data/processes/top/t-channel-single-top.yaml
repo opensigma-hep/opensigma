@@ -1,0 +1,149 @@
+id: "proc:t-channel-single-top"
+name: "t-channel single-top production"
+family: "fam:top"
+sector: SM
+description: "Electroweak production of a single top quark or antiquark through t-channel exchange of a virtual W boson (qb → q't), the dominant single-top mode at hadron colliders. Directly sensitive to |Vtb|, the b-quark and light-quark PDFs (via the t/t̄ ratio) and the Wtb vertex. Known at NNLO in QCD."
+watch:
+  recids: [2764820, 1712748, 1353120, 1834626, 1472815]
+  queries:
+    - 't "single top" and t "t-channel" and (collaboration:ATLAS or collaboration:CMS)'
+    - 't "single top" and (t "NNLO" or t "N3LO" or t "next-to-next-to-leading") and t "t-channel"'
+    - 't "single top" and t "electroweak" and t "t-channel" and t "NLO"'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:656898"]
+        provenance: {uid: c1ef47b9, ref: "inspire:656898", locator: "Abstract (NLO analysis of single-top production including top decay, radiative effects in production and decay)", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: done
+        refs: ["inspire:1300820"]
+        provenance: {uid: d8e56adc, ref: "inspire:1300820", locator: "Abstract (HatHor extended to single top-quark production; NLO QCD total cross sections)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      code:
+        status: done
+        approximations: ["production and decay in the on-shell and vertex-function approximation (inspire:1834626)", "structure-function approximation neglecting light/heavy-line cross-talk in the earliest calculation (inspire:1292824)"]
+        refs: ["inspire:1292824", "inspire:1472815", "inspire:1834626"]
+        provenance: {uid: f5d880e2, ref: "inspire:1834626", locator: "Abstract (NNLO t-channel single-top production and decay in the five-flavor scheme; resolves a disagreement between two previous NNLO calculations)", source: agent, status: cross-checked, date: "2026-10-16"}
+channels:
+  - id: "chan:t-channel-single-top/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:t-channel-single-top/lhc-13/sigma-t", region: "inclusive σ(tq) (top quark only), mt = 172.5 GeV"}
+    measurements:
+      - id: "meas:t-channel-single-top/lhc-13/atlas-2024-run2"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹ (full Run 2)"
+        ref: "inspire:2764820"
+        hepdata: "hepdata:ins2764820/Table 3"
+      - id: "meas:t-channel-single-top/lhc-13/cms-2019-35fb"
+        experiment: "CMS"
+        dataset: "13 TeV, 35.9 fb⁻¹ (2016)"
+        ref: "inspire:1712748"
+    observables:
+      - id: "obs:t-channel-single-top/lhc-13/sigma-t"
+        name: "Inclusive σ(tq), t-channel top-quark production"
+        kind: total
+        variable: "σ_t-ch(t) at mt = 172.5 GeV"
+        results:
+          - measurement: "meas:t-channel-single-top/lhc-13/atlas-2024-run2"
+            total: {value_pct: 5.9, provenance: {uid: 95dd01fa, ref: "inspire:2764820", locator: "Sec. 7 and Table 3, σ(tq) = 137 +8 −8 pb, relative precision +5.9%/−5.5%", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [0.4, 0.4], unit: "%", asymmetric: false}
+                provenance: {uid: 0b2d807c, ref: "hepdata:ins2764820/Table 3", locator: "Table 3 (paper), Data statistics, Δσ(tq)/σ(tq) column: +0.4/−0.4", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: acceptance_extrapolation
+                specific: "Signal modelling (tq generator, matching scale, parton shower, FSR)"
+                size: {range: [4.5, 4.9], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2764820/Table 3"
+                provenance: {uid: c9afb6d9, ref: "hepdata:ins2764820/Table 3", locator: "Table 3 (paper), Signal modelling, Δσ(tq)/σ(tq) column: +4.9/−4.5", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: background
+                specific: "Background modelling"
+                size: {range: [1.6, 1.8], unit: "%", asymmetric: true}
+                provenance: {uid: aac4a7e3, ref: "hepdata:ins2764820/Table 3", locator: "Table 3 (paper), Background modelling, Δσ(tq)/σ(tq) column: +1.8/−1.6", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: energy_scale
+                specific: "Jets (energy scale and resolution)"
+                size: {range: [2.0, 2.2], unit: "%", asymmetric: true}
+                provenance: {uid: 0f73e1bb, ref: "hepdata:ins2764820/Table 3", locator: "Table 3 (paper), Jets, Δσ(tq)/σ(tq) column: +2.2/−2.0", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [0.8, 0.9], unit: "%", asymmetric: true}
+                provenance: {uid: 30fbdfed, ref: "hepdata:ins2764820/Table 3", locator: "Table 3 (paper), Luminosity, Δσ(tq)/σ(tq) column: +0.9/−0.8", source: agent, status: cross-checked, date: "2026-10-16"}
+          - measurement: "meas:t-channel-single-top/lhc-13/cms-2019-35fb"
+            total: {value_pct: 14.6, provenance: {uid: 4e30374c, ref: "inspire:1712748", locator: "Sec. 8: σ_t-ch,t = 130 ± 19 pb; 19/130", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [0.8, 0.8], unit: "%", asymmetric: false}
+                provenance: {uid: fbc8d2a2, ref: "inspire:1712748", locator: "Sec. 8: ± 1 (stat) pb of 130 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: acceptance_extrapolation
+                specific: "Signal modelling (sig-mod)"
+                size: {range: [13.8, 13.8], unit: "%", asymmetric: false}
+                provenance: {uid: 238d5899, ref: "inspire:1712748", locator: "Sec. 8: ± 18 (sig-mod) pb of 130 pb; breakdown in Table 2", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [2.5, 2.5], unit: "%", asymmetric: false}
+                provenance: {uid: e144b7ad, ref: "inspire:1712748", locator: "Table 2, Luminosity, σ(t) column", source: agent, status: cross-checked, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD (MCFM 10.1, 5FS, PDF4LHC21), ATLAS 2024 comparison"
+            accuracy: {qcd: NNLO, approximations: ["production and decay in the on-shell and vertex-function approximation (inspire:1834626)"]}
+            codes: ["MCFM"]
+            total: {value_pct: 1.6, provenance: {uid: 6083ef9f, ref: "inspire:2764820", locator: "Sec. 3.1: σ(tq) = 134.2 ± 2.2 pb (relative uncertainty 1.6%), scale, PDF and αs uncertainties combined", source: agent, status: cross-checked, date: "2026-10-16"}}
+            compared_to: ["meas:t-channel-single-top/lhc-13/atlas-2024-run2"]
+            refs: ["inspire:2764820", "inspire:1834626"]
+            provenance: {uid: 5581ca65, ref: "inspire:2764820", locator: "Sec. 3.1 (MCFM 10.1 at NNLO in QCD; scale variation factor two, PDF4LHC21 Hessian PDF and αs uncertainties)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
+          - label: "NLO QCD (HatHor 2.1, 5FS), CMS 2019 comparison"
+            accuracy: {qcd: NLO}
+            codes: ["HatHor"]
+            total: {value_pct: 4.0, provenance: {uid: de389a12, ref: "inspire:1712748", locator: "Sec. 1, Eq. (1): σ_t-ch,t = 136.0 +4.1 −2.9 (scale) ± 3.5 (PDF+αS) pb; scale and PDF+αS added in quadrature, larger side", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "renormalisation and factorisation scale variation (Sec. 1)"
+                size: {range: [2.1, 3.0], unit: "%", asymmetric: true}
+                provenance: {uid: a54ec383, ref: "inspire:1712748", locator: "Sec. 1, Eq. (1): +4.1 −2.9 pb (scale) of 136.0 pb", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "PDF and αS(mZ) uncertainty (MSTW2008 68% CL NLO)"
+                pdf_set: "MSTW2008nlo68cl"
+                size: {range: [2.6, 2.6], unit: "%", asymmetric: false}
+                provenance: {uid: c9e63280, ref: "inspire:1712748", locator: "Sec. 1, Eq. (1): ± 3.5 pb (PDF+αS) of 136.0 pb", source: agent, status: agent-draft, date: "2026-10-16"}
+            compared_to: ["meas:t-channel-single-top/lhc-13/cms-2019-35fb"]
+            refs: ["inspire:1712748", "inspire:1300820"]
+            provenance: {uid: ee740603, ref: "inspire:1712748", locator: "Sec. 1, Eq. (1) (HATHOR 2.1, mt = 172.5 GeV, Vtb = 1, five-flavour scheme)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - id: "chan:t-channel-single-top/tevatron"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:t-channel-single-top/tevatron/sigma-t", region: "inclusive σ_t (t + t̄), mt = 172.5 GeV"}
+    measurements:
+      - id: "meas:t-channel-single-top/tevatron/cdf-d0-2015"
+        experiment: "combination"
+        dataset: "CDF + D0 combination, up to 9.7 fb⁻¹ per experiment, 1.96 TeV"
+        ref: "inspire:1353120"
+    observables:
+      - id: "obs:t-channel-single-top/tevatron/sigma-t"
+        name: "Inclusive σ(t-channel, t + t̄)"
+        kind: total
+        variable: "σ_t at mt = 172.5 GeV"
+        results:
+          - measurement: "meas:t-channel-single-top/tevatron/cdf-d0-2015"
+            total: {value_pct: 13.8, provenance: {uid: ce7abe9c, ref: "inspire:1353120", locator: "Abstract: σ_t = 2.25 +0.29 −0.31 pb; larger side 0.31/2.25", source: agent, status: cross-checked, date: "2026-10-16"}}
+            uncertainties: []
+        predictions:
+          - label: "NLO+NNLL QCD (approximate NNLO, Kidonakis)"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NNLL", variable: "soft/collinear gluon"}]
+              approximations: ["approximate NNLO from NNLL collinear and soft-gluon resummation, matched to NLO"]
+            total: {value_pct: 6.2, provenance: {uid: b953c78e, ref: "inspire:1353120", locator: "Introduction: σ_t = 2.10 ± 0.13 pb (NLO+NNLL); 0.13/2.10", source: agent, status: cross-checked, date: "2026-10-16"}}
+            compared_to: ["meas:t-channel-single-top/tevatron/cdf-d0-2015"]
+            refs: ["inspire:1353120", "inspire:892742"]
+            provenance: {uid: 9b382e05, ref: "inspire:1353120", locator: "Introduction (σ_t = 2.10 ± 0.13 pb, NLO QCD including NNLL corrections, Ref. [9] = Kidonakis, PRD 83, 091503) and Fig. 3 caption", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true

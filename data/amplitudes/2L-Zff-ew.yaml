@@ -1,0 +1,11 @@
+id: "amp:2L/Zff-ew"
+process: "proc:z-pole"
+loops: 2
+corrections: EW
+status: done
+evaluation:
+  kind: numerical
+  detail: "bosonic two-loop vertex: Mellin–Barnes and sector-decomposition numerical integration, dispersion relations for sub-loops"
+  provenance: {uid: 959fe1d7, ref: "inspire:1670617", locator: "Abstract, methods (a)-(c)", source: agent, status: cross-checked, date: "2026-10-16"}
+refs: ["inspire:1670617", "inspire:1740872"]
+provenance: {uid: 76e0d1c3, ref: "inspire:1670617", locator: "Abstract (bosonic two-loop corrections complete the full two-loop description of Z-boson partial widths and Z-peak cross section)", source: agent, status: cross-checked, date: "2026-10-16"}

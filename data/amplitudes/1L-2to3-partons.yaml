@@ -1,0 +1,11 @@
+id: "amp:1L/2to3-partons"
+process: "proc:inclusive-jets"
+loops: 1
+corrections: QCD
+status: done
+evaluation:
+  kind: analytic
+  detail: "analytic one-loop helicity amplitudes for five external partons (ggggg, qq̄ggg, four quarks + gluon)"
+  provenance: {uid: 8ffd4e43, ref: "inspire:373656", locator: "Abstract (analytic results for the one-loop corrections of the helicity amplitudes of the five-parton subprocesses with four quarks and one gluon); inspire:352808 Abstract (five-gluon one-loop helicity amplitudes); inspire:377332 Abstract (qq̄ggg one-loop amplitudes)", source: agent, status: cross-checked, date: "2026-10-16"}
+refs: ["inspire:352808", "inspire:377332", "inspire:373656"]
+provenance: {uid: '49e45806', ref: "inspire:377332", locator: "Abstract (completes the set of one-loop amplitudes needed for NLO three-jet production at hadron colliders)", source: agent, status: cross-checked, date: "2026-10-16"}

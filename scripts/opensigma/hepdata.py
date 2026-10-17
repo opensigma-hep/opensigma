@@ -39,6 +39,10 @@ def fetch_table(recid: int, table: str, version: int = 1, fetch=curl_get) -> dic
     return t
 
 
+# An error column that already is the total (e.g. "Total uncertainty", "stat+syst"): never a component.
+TOTAL = re.compile(r"(?i)^\s*(total|tot\b)|stat[^a-z]*\+[^a-z]*sys")
+
+
 def round_sig(x: float, n: int = 2) -> float:
     return float(f"{x:.{n}g}")
 
@@ -60,7 +64,7 @@ def _bins(table: dict) -> list[list[tuple[str, float, bool]] | None]:
     Uses the first dependent variable.
     """
     return [
-        None if v["value"] == 0 else [(e["label"], *_err_pct(e, v["value"])) for e in v.get("errors", [])]
+        None if v["value"] == 0 else [(e.get("label", "error"), *_err_pct(e, v["value"])) for e in v.get("errors", [])]
         for v in table["dependent_variables"][0]["values"]
     ]
 
@@ -71,6 +75,8 @@ def summarize(table: dict, label_map: dict, ref: str, today: date | None = None)
     per_label: dict[str, list[tuple[float, bool]]] = {}
     for b in filter(None, _bins(table)):
         for label, pct, asym in b:
+            if TOTAL.search(label):
+                continue
             per_label.setdefault(label, []).append((pct, asym))
     out = []
     for label, vals in per_label.items():
@@ -88,9 +94,16 @@ def summarize(table: dict, label_map: dict, ref: str, today: date | None = None)
 
 
 def total_pct(table: dict, region_bin: int | None) -> float:
-    """Quadrature sum of relative errors (%) at 1-based bin `region_bin` (numbered over all bins), or min over non-zero bins."""
+    """Relative total error (%) at 1-based bin `region_bin` (numbered over all bins), or min over non-zero bins.
+
+    A bin's own total column wins; otherwise its errors are summed in quadrature.
+    """
+    def tot(b):
+        given = [p for label, p, _ in b if TOTAL.search(label)]
+        return max(given) if given else sum(p**2 for _, p, _ in b) ** 0.5
+
     bins = _bins(table)
-    totals = [None if b is None else sum(p**2 for _, p, _ in b) ** 0.5 for b in bins]
+    totals = [None if b is None else tot(b) for b in bins]
     if all(t is None for t in totals):
         raise ValueError("table has no non-zero bins")
     if region_bin is None:

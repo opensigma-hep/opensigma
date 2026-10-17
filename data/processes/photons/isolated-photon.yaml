@@ -1,0 +1,321 @@
+id: "proc:isolated-photon"
+name: "Inclusive isolated prompt photon (pp/pp̄ → γ + X)"
+family: "fam:photons"
+sector: SM
+description: "Production of a single high-ET isolated photon in hadron collisions, dominated by quark–gluon Compton scattering qg → qγ and qq̄ → gγ plus parton-to-photon fragmentation. A direct probe of the gluon PDF and of perturbative QCD with a colourless final-state tag; the same parton-level process gives photon+jet. NNLO QCD is available both for the direct component alone (smooth/hybrid-cone isolation) and, since 2022, including photon fragmentation with the experimental fixed-cone isolation."
+watch:
+  recids: [2628741, 1748270, 1680459, 2075976, 1727794, 1503171, 584902]
+  queries:
+    - 't "isolated photon" and (collaboration:ATLAS or collaboration:CMS) and t cross'
+    - 't "direct photon" and (t NNLO or t N3LO or t "electroweak corrections")'
+    - 't "prompt photon" and (t "13 TeV" or t "13.6 TeV") and (collaboration:ATLAS or collaboration:CMS)'
+  last_run: '2026-10-15'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:294705"]
+        provenance: {uid: 781286b6, ref: "inspire:1727794", locator: "Sec. 1 (NLO QCD corrections for inclusive photon computed for fixed-cone isolation, refs [31-36] incl. Baer-Ohnemus-Owens)", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: done
+        approximations: ["JETPHOX: direct plus fragmentation components, parton-level (no shower)"]
+        refs: ["inspire:584902"]
+        provenance: {uid: '2e144481', ref: "inspire:584902", locator: "Abstract (NLO Monte Carlo programme with direct and fragmentation components, isolation criterion implemented)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qqbar-gammag"
+        refs: ["inspire:582359", "inspire:552493", "inspire:617216"]
+        provenance: {uid: ec4561fc, ref: "inspire:1727794", locator: "Sec. 3 (double-virtual matrix elements known as closed analytic expressions, refs [61,62])", source: agent, status: cross-checked, date: "2026-10-16"}
+      RV:
+        status: done
+        refs: ["inspire:397751"]
+        provenance: {uid: 667c1e8f, ref: "inspire:1727794", locator: "Sec. 3 (real-virtual matrix elements known as closed analytic expressions, refs [63,64])", source: agent, status: cross-checked, date: "2026-10-16"}
+      RR:
+        status: done
+        refs: ["inspire:508251"]
+        provenance: {uid: 430b7e45, ref: "inspire:1727794", locator: "Sec. 3 (double-real matrix elements, ref [65])", source: agent, status: cross-checked, date: "2026-10-16"}
+      ir_scheme:
+        status: done
+        approximations: ["antenna subtraction (NNLOJET)", "N-jettiness slicing (MCFM)"]
+        refs: ["inspire:1727794", "inspire:1503171"]
+        provenance: {uid: 524cd60b, ref: "inspire:1727794", locator: "Sec. 3 (antenna subtraction at NNLO in NNLOJET); inspire:1503171 Abstract (N-jettiness slicing)", source: agent, status: cross-checked, date: "2026-10-16"}
+      code:
+        status: done
+        approximations: ["NNLOJET with direct plus fragmentation (BFG II fragmentation functions, antenna approximation) and fixed-cone isolation as in the experiments", "earlier NNLO results are direct-only with hybrid-cone (NNLOJET) or dynamical-cone (MCFM) isolation"]
+        refs: ["inspire:2075976", "inspire:2012936", "inspire:1727794", "inspire:1503171"]
+        provenance: {uid: 5ab96f3d, ref: "inspire:2628741", locator: "Sec. 8, Nnlojet predictions (direct and fragmentation processes included; fragmentation component with BFG II in the antenna approximation, ref. [60]; fixed-cone requirements as in the experiment; ref. [19] = inspire:2075976)", source: agent, status: cross-checked, date: "2026-10-16"}
+channels:
+  - id: "chan:isolated-photon/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:isolated-photon/lhc-13/dsigma-det", region: "central photons (|η^γ| < 0.6 ATLAS; |y^γ| < 0.8 CMS), ET^γ spectrum (ATLAS 2023: ET^γ > 250 GeV, isolation cone R = 0.4)"}
+    measurements:
+      - id: "meas:isolated-photon/lhc-13/atlas-2023"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (2015–2018), R = 0.4"
+        ref: "inspire:2628741"
+        hepdata: "hepdata:ins2628741/Table 1"
+      - id: "meas:isolated-photon/lhc-13/atlas-2019"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 36.1 fb⁻¹ (2015–2016)"
+        ref: "inspire:1748270"
+        hepdata: "hepdata:ins1748270/Table 1"
+        superseded_by: "meas:isolated-photon/lhc-13/atlas-2023"
+      - id: "meas:isolated-photon/lhc-13/cms-2018"
+        experiment: "CMS"
+        dataset: "13 TeV, 2.26 fb⁻¹ (2015)"
+        ref: "inspire:1680459"
+        hepdata: "hepdata:ins1680459/Table 1"
+    observables:
+      - id: "obs:isolated-photon/lhc-13/dsigma-det"
+        name: "dσ/dET^γ, isolated photon, central region"
+        kind: differential
+        variable: "ET^γ (ATLAS: |η^γ| < 0.6, ET^γ > 125 GeV, fixed-cone isolation ET^iso < 4.8 GeV + 4.2e-3 ET^γ; CMS: d²σ/dET dy for |y^γ| < 0.8, ET^γ > 190 GeV)"
+        results:
+          - measurement: "meas:isolated-photon/lhc-13/atlas-2023"
+            total: {value_pct: 2.6, provenance: {uid: b831a818, ref: "hepdata:ins2628741/Table 1", locator: "Table 1, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [0.15, 52.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2628741/Table 1"
+                provenance: {uid: 484b01bd, ref: "hepdata:ins2628741/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: efficiency
+                specific: "sysPhotonID"
+                size: {range: [0.44, 0.65], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2628741/Table 1"
+                provenance: {uid: dc29bca4, ref: "hepdata:ins2628741/Table 1", locator: "Table 1, error 'sysPhotonID'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: background
+                specific: "sysBackground"
+                size: {range: [0.039, 0.81], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins2628741/Table 1"
+                provenance: {uid: ad526462, ref: "hepdata:ins2628741/Table 1", locator: "Table 1, error 'sysBackground'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sysLumi"
+                size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2628741/Table 1"
+                provenance: {uid: 7ab56725, ref: "hepdata:ins2628741/Table 1", locator: "Table 1, error 'sysLumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:isolated-photon/lhc-13/atlas-2019"
+            total: {value_pct: 3.1, provenance: {uid: 37404e1e, ref: "hepdata:ins1748270/Table 1", locator: "Table 1, quadrature sum of all errors (bin 4)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [0.12, 58.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1748270/Table 1"
+                provenance: {uid: 4a8d7dcc, ref: "hepdata:ins1748270/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: efficiency
+                specific: "sysPhotonID"
+                size: {range: [0.65, 1.3], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1748270/Table 1"
+                provenance: {uid: ddac18c4, ref: "hepdata:ins1748270/Table 1", locator: "Table 1, error 'sysPhotonID'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: energy_scale
+                specific: "SCALE_L2GAIN__1down,SCALE_L2GAIN__1up"
+                size: {range: [0.82, 2.8], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1748270/Table 1"
+                provenance: {uid: 80333f53, ref: "hepdata:ins1748270/Table 1", locator: "Table 1, error 'SCALE_L2GAIN__1down,SCALE_L2GAIN__1up'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: background
+                specific: "sysBackground"
+                size: {range: [0.14, 1.8], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins1748270/Table 1"
+                provenance: {uid: e523cb05, ref: "hepdata:ins1748270/Table 1", locator: "Table 1, error 'sysBackground'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: lumi
+                specific: "sysLumi"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1748270/Table 1"
+                provenance: {uid: 2b35ae52, ref: "hepdata:ins1748270/Table 1", locator: "Table 1, error 'sysLumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:isolated-photon/lhc-13/cms-2018"
+            total: {value_pct: 6.1, provenance: {uid: ac85a4cb, ref: "hepdata:ins1680459/Table 1", locator: "Table 1, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [0.92, 12.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1680459/Table 1"
+                provenance: {uid: 5579b0f0, ref: "hepdata:ins1680459/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys"
+                size: {range: [6.0, 12.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins1680459/Table 1"
+                provenance: {uid: 388994ff, ref: "hepdata:ins1680459/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "NNLO QCD (NNLOJET) with fragmentation, fixed-cone isolation, CT18NNLO"
+            accuracy:
+              qcd: NNLO
+              approximations: ["direct plus fragmentation (BFG II fragmentation functions in the antenna approximation)", "no electroweak corrections", "PDF and αs uncertainties not available: taken from the relative JETPHOX NLO uncertainties"]
+            codes: ["NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-gammag"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF, μf variation"
+                method: "scales varied by 0.5 and 2 as for JETPHOX, largest deviation among the variations (fragmentation scale μf = sqrt(ET · ET^max · R))"
+                size: {range: [1.0, 6.0], unit: "%", asymmetric: false}
+                provenance: {uid: 68dc7549, ref: "inspire:2628741", locator: "Sec. 8.2 (NNLO MHOU uncertainties in the range 1%-6%, smaller than NLO by a factor 2-15)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: nonpert
+                specific: "hadronisation and underlying event"
+                method: "±1% included for non-perturbative corrections"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: fc4ed773, ref: "inspire:2628741", locator: "Sec. 8.2 (±1% for non-perturbative corrections of the JETPHOX and NNLOJET predictions)", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:isolated-photon/lhc-13/atlas-2023"]
+            refs: ["inspire:2075976", "inspire:2012936"]
+            provenance: {uid: 4dcbeda5, ref: "inspire:2628741", locator: "Sec. 8, Nnlojet predictions and Table 2 ((N)NLO, fragmentation yes, fixed cone, CT18NNLO, μR = μF = ET^γ, αs(mZ) = 0.118)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
+          - label: "NLO QCD (JETPHOX 1.3.1), MMHT2014, μ = ET/2 (ATLAS 2023)"
+            accuracy: {qcd: NLO, approximations: ["no electroweak corrections", "parton level, direct plus fragmentation, fixed-cone isolation R = 0.4 and 0.2"]}
+            codes: ["JETPHOX"]
+            compared_to: ["meas:isolated-photon/lhc-13/atlas-2023"]
+            refs: ["inspire:584902"]
+            provenance: {uid: 23c49686, ref: "inspire:2628741", locator: "Sec. 8 and Sec. 8.2 (JETPHOX with MMHT2014 and BFG II; total theoretical uncertainty about 10%-15%, dominated by missing higher orders; per-source numbers not transcribed)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "Sherpa 2.2.2 NLO multi-leg merged + parton shower (ATLAS 2023)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO for γ+(1,2)-jet, LO for γ+(3,4)-jet", "hybrid-cone isolation at matrix-element level, no fragmentation contribution", "no electroweak corrections"]
+            codes: ["Sherpa 2.2.2"]
+            compared_to: ["meas:isolated-photon/lhc-13/atlas-2023"]
+            refs: ["inspire:2628741"]
+            provenance: {uid: 9c7515a9, ref: "inspire:2628741", locator: "Sec. 8 and Sec. 8.2 (Sherpa NLO with NNPDF3.0 NNLO; total theoretical uncertainty about 20%; per-source numbers not transcribed)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NNLO QCD (NNLOJET), hybrid-cone isolation, NNPDF3.1"
+            accuracy:
+              qcd: NNLO
+              approximations: ["direct photon only (Frixione isolation at small ΔR removes fragmentation)", "no electroweak corrections", "PDF and αs uncertainties not computed: ATLAS approximates them from JETPHOX NLO"]
+            codes: ["NNLOJET"]
+            uses_amplitudes: ["amp:2L/qqbar-gammag"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "scale variations of μR and μF around ET^γ as for the Sherpa 2.2.2 prediction (largest deviation among 6 variations)"
+                size: {range: [0.6, 5.0], unit: "%", asymmetric: false}
+                provenance: {uid: 7aee6106, ref: "inspire:1748270", locator: "Sec. 8.2 (scale uncertainties 0.6%-5%, smaller than NLO by a factor 2-20)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: nonpert
+                specific: "hadronisation and underlying event"
+                method: "ratio of particle-level Pythia with UE to parton-level without UE; 1% assigned"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: 7de6ffb4, ref: "inspire:1748270", locator: "Sec. 8.1 and Sec. 8.2 (1% uncertainty assigned to non-perturbative corrections)", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:isolated-photon/lhc-13/atlas-2019", "meas:isolated-photon/lhc-13/cms-2018"]
+            refs: ["inspire:1727794"]
+            provenance: {uid: 182c0aaf, ref: "inspire:1748270", locator: "Sec. 8 (NNLOJET prediction of ref. [16]: NNPDF3.1 NNLO, ET^γ scales, Gμ scheme αem = 1/132.232); Chen et al. Secs. 4.2-4.3 compare with ATLAS and CMS 13 TeV", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NLO QCD (JETPHOX 1.3.1), MMHT2014, BFG II fragmentation"
+            accuracy: {qcd: NLO, approximations: ["no electroweak corrections", "parton level, fixed-cone isolation, direct plus fragmentation"]}
+            codes: ["JETPHOX"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF, μf variation"
+                method: "scales varied by 0.5 and 2 with 0.5 <= μA/μB <= 2; largest deviation among 14 variations"
+                size: {range: [10.0, 15.0], unit: "%", asymmetric: true}
+                provenance: {uid: '29714827', ref: "inspire:1748270", locator: "Sec. 8.1 (10%-15% for JETPHOX)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "MMHT2014 Hessian error sets (50)"
+                pdf_set: "MMHT2014 NLO"
+                size: {range: [1.0, 6.0], unit: "%", asymmetric: false}
+                provenance: {uid: 7020b190, ref: "inspire:1748270", locator: "Sec. 8.1 (PDF uncertainty 1%-6% for JETPHOX)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: alphas
+                specific: "αs(mZ) = 0.118 / 0.122 PDF sets, scaled"
+                size: {range: [0.0, 3.0], unit: "%", asymmetric: false}
+                provenance: {uid: ed989e89, ref: "inspire:1748270", locator: "Sec. 8.1 (αs uncertainty less than 3% for JETPHOX)", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:isolated-photon/lhc-13/atlas-2019"]
+            refs: ["inspire:584902"]
+            provenance: {uid: 46acef0c, ref: "inspire:1748270", locator: "Sec. 8 and Table 2 (JETPHOX 1.3.1_2, NLO, fragmentation yes, fixed-cone isolation)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NLO QCD (JETPHOX 1.3.1), NNPDF3.0, BFG II fragmentation (CMS)"
+            accuracy: {qcd: NLO, approximations: ["parton level, direct plus fragmentation"]}
+            codes: ["JETPHOX"]
+            compared_to: ["meas:isolated-photon/lhc-13/cms-2018"]
+            refs: ["inspire:584902"]
+            provenance: {uid: 78dfd80c, ref: "inspire:1680459", locator: "Sec. 7 (JETPHOX 1.3.1, NNPDF3.0 NLO, BFG set II, scales = ET^γ varied from ET/2 to 2ET; numbers not transcribed)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "Sherpa 2.2.2 multi-leg merged (NLO γ+1,2j, LO γ+3,4j) + parton shower"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["no electroweak corrections", "hybrid-cone isolation at matrix-element level (Frixione R = 0.1) plus fixed cone ΔR = 0.4"]
+            codes: ["Sherpa 2.2.2"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "scales varied by 0.5 and 2; largest deviation among 6 variations"
+                size: {range: [20.0, 30.0], unit: "%", asymmetric: true}
+                provenance: {uid: 6bca1c9d, ref: "inspire:1748270", locator: "Sec. 8.1 (20%-30% for Sherpa 2.2.2)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "NNPDF3.0 100 replicas"
+                pdf_set: "NNPDF3.0 NNLO"
+                size: {range: [1.0, 9.0], unit: "%", asymmetric: false}
+                provenance: {uid: 296d3cc7, ref: "inspire:1748270", locator: "Sec. 8.1 (PDF uncertainty 1%-9% for Sherpa 2.2.2)", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:isolated-photon/lhc-13/atlas-2019"]
+            refs: ["inspire:1748270"]
+            provenance: {uid: '477e9615', ref: "inspire:1748270", locator: "Sec. 8 and Table 2 (Sherpa 2.2.2: NLO for γ+(1,2)-jet, LO for γ+(3,4)-jet, parton shower, hybrid cone)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - id: "chan:isolated-photon/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: partial
+    last_reviewed: "2026-10-16"
+    headline: {observable: "obs:isolated-photon/tevatron-1960/dsigma-det", region: "central photons (|η^γ| < 1.0 CDF; |η^γ| < 0.9 D0), ET^γ spectrum from 30 (CDF) / 23 (D0) GeV upwards"}
+    measurements:
+      - id: "meas:isolated-photon/tevatron-1960/cdf-2009"
+        experiment: "CDF"
+        dataset: "1.96 TeV, 2.5 fb⁻¹"
+        ref: "inspire:834437"
+        hepdata: "hepdata:ins834437/Table 1"
+      - id: "meas:isolated-photon/tevatron-1960/d0-2005"
+        experiment: "D0"
+        dataset: "1.96 TeV, 326 pb⁻¹"
+        ref: "inspire:698784"
+        hepdata: "hepdata:ins698784/Table 1"
+    observables:
+      - id: "obs:isolated-photon/tevatron-1960/dsigma-det"
+        name: "dσ/dET^γ, isolated photon, central region"
+        kind: differential
+        variable: "ET^γ (CDF: |η^γ| < 1.0, ET^γ > 30 GeV, ET^iso < 2 GeV in R = 0.4; D0: |η^γ| < 0.9, 23 < pT^γ < 300 GeV)"
+        results:
+          - measurement: "meas:isolated-photon/tevatron-1960/cdf-2009"
+            total: {value_pct: 8.3, provenance: {uid: 6e5896ee, ref: "hepdata:ins834437/Table 1", locator: "Table 1, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [0.48, 14.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins834437/Table 1"
+                provenance: {uid: 30a40444, ref: "hepdata:ins834437/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys"
+                size: {range: [8.0, 16.0], unit: "%", asymmetric: true}
+                full_table: "hepdata:ins834437/Table 1"
+                provenance: {uid: 776dc44a, ref: "hepdata:ins834437/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+          - measurement: "meas:isolated-photon/tevatron-1960/d0-2005"
+            total: {value_pct: 12.0, provenance: {uid: 3a9ed2a7, ref: "hepdata:ins698784/Table 1", locator: "Table 1, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-16"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [0.1, 13.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins698784/Table 1"
+                provenance: {uid: 1b8e70ea, ref: "hepdata:ins698784/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+              - category: other
+                specific: "sys"
+                size: {range: [12.0, 23.0], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins698784/Table 1"
+                provenance: {uid: cf5f1199, ref: "hepdata:ins698784/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
+        predictions:
+          - label: "NLO QCD (JETPHOX), CTEQ6.1M, BFG II fragmentation (CDF cuts)"
+            accuracy: {qcd: NLO, approximations: ["parton level, direct plus fragmentation", "hadronisation/UE correction factor C_had = 0.91 ± 0.03 applied"]}
+            codes: ["JETPHOX"]
+            uncertainties:
+              - category: MHOU
+                specific: "normalisation, factorisation and fragmentation scales"
+                method: "all three scales varied by a factor of two around ET^γ"
+                size: {range: [8.0, 15.0], unit: "%", asymmetric: false}
+                provenance: {uid: 1fddce89, ref: "inspire:834437", locator: "Results section, paragraph on theory (scale variation changes the prediction by 15% at low ET^γ and 8% at high ET^γ)", source: agent, status: cross-checked, date: "2026-10-16"}
+              - category: PDF
+                specific: "CTEQ6.1M Hessian error sets"
+                pdf_set: "CTEQ6.1M"
+                size: {range: [4.0, 13.0], unit: "%", asymmetric: false}
+                provenance: {uid: 3f8d14f0, ref: "inspire:834437", locator: "Results section, paragraph on theory (PDF uncertainty 4% at low ET^γ to 13% at high ET^γ)", source: agent, status: cross-checked, date: "2026-10-16"}
+            compared_to: ["meas:isolated-photon/tevatron-1960/cdf-2009"]
+            refs: ["inspire:584902"]
+            provenance: {uid: 9565accc, ref: "inspire:834437", locator: "Results section (JETPHOX with CTEQ6.1M, scales = ET^γ, isolation as for data, C_had correction)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
+          - label: "NLO QCD (JETPHOX), CTEQ6.1M, BFG fragmentation (D0 cuts)"
+            accuracy: {qcd: NLO, approximations: ["parton level, direct plus fragmentation"]}
+            codes: ["JETPHOX"]
+            compared_to: ["meas:isolated-photon/tevatron-1960/d0-2005"]
+            refs: ["inspire:584902"]
+            provenance: {uid: 7412f1f5, ref: "inspire:698784", locator: "Sec. on theory comparison (JETPHOX with CTEQ6.1M PDFs, BFG fragmentation, μR = μF = μf = pT^γ; scale and PDF uncertainty numbers not transcribed)", source: agent, status: cross-checked, date: "2026-10-16"}
