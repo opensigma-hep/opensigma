@@ -4,10 +4,12 @@ family: "fam:higgs"
 sector: SM
 description: "Production of the SM Higgs boson in association with a W or Z boson, qq̄ → V* → VH (plus the loop-induced gg → ZH): the Tevatron's main light-Higgs search channel (H → bb̄). Known at NNLO QCD with NLO electroweak corrections."
 watch:
-  recids: [1494411, 623567, 621983, 944447, 917260, 1225520, 2104706, 2104672]
+  recids: []
   queries:
-    - 't "Higgs" and (t "associated production" or t "Higgs-strahlung" or t "Higgsstrahlung") and (t "WH" or t "ZH" or t "vector boson") and (t NNLO or t N3LO or t "electroweak")'
-    - 't "Higgs" and (collaboration:ATLAS or collaboration:CMS) and (t "WH" or t "ZH" or t "VH") and t "cross section"'
+    - 't Higgs and (t "associated production" or t "Higgs-strahlung" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t "electroweak" or t "QCD corrections" or t "cross section" or t "differential" or t "template" or t "fiducial") and not t search and not t "pair" and not t "dark" and not t top'
+    - 'refersto:recid:944447 and t Higgs and (t "associated production" or t WH or t ZH or t VH or t "Higgs-strahlung")'
+    - 't Higgs and (collaboration:ATLAS or collaboration:CMS) and (t "13 TeV" or t "13.6 TeV") and (t WH or t ZH or t VH or t "associated production" or t "vector boson" or t "W or Z" or t "W boson" or t "Z boson") and not t search and not t "pair" and not t "dark" and (t "cross section" or t "cross-section" or t "cross sections" or t "template" or t "differential" or t "fiducial")'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NNLO QCD"
     cells:
@@ -180,4 +182,36 @@ channels:
             compared_to: ["meas:vh/tevatron-1960/cdf-d0-2013-comb"]
             refs: ["inspire:1225520"]
             provenance: {uid: 4c3ec75a, ref: "inspire:1225520", locator: "Sec. II (Event simulation): WH and ZH cross sections at NNLO precision in QCD and NLO in the electroweak corrections; Results, 'H → bb̄ Decay Mode' (p. 16)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
+  - id: "chan:vh/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:vh/lhc-8/mu-zh", region: "m_H = 125.09 GeV, inclusive over production kinematics, signal strength μ_ZH assuming SM branching fractions, combined 7 and 8 TeV data"}
+    measurements:
+      - id: "meas:vh/lhc-8/atlas-cms-2016-comb"
+        experiment: "combination"
+        dataset: "7 and 8 TeV, about 5 fb⁻¹ and 20 fb⁻¹ per experiment (Run 1), ATLAS + CMS combination of Higgs decay-channel analyses"
+        ref: "inspire:1468068"
+        hepdata: "hepdata:ins1468068/Table 9"
+    observables:
+      - id: "obs:vh/lhc-8/mu-zh"
+        name: "Signal strength μ_ZH (ATLAS + CMS Run-1 combination)"
+        kind: total
+        variable: "μ_ZH = σ(ZH)/σ_SM at m_H = 125.09 GeV, assuming SM Higgs branching fractions; 7 and 8 TeV data fitted with one signal strength per production process"
+        results:
+          - measurement: "meas:vh/lhc-8/atlas-cms-2016-comb"
+            total: {value_pct: 48.0, provenance: {uid: 4b7984a3, ref: "hepdata:ins1468068/Table 9", locator: "Table 9, quadrature sum of all errors (bin 4)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties: []
+        predictions:
+          - label: "NNLO QCD + NLO EW (LHC Higgs Cross Section WG, YR3), m_H = 125.09 GeV, 8 TeV"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["pp → ZH includes quark-initiated and gg → ZH contributions; gg → ZH calculated at NLO QCD only"]
+            total: {value_pct: 3.9, provenance: {uid: 4ce99840, ref: "arXiv:1606.02266", locator: "Table 1, 8 TeV column, ZH row: 0.414 ± 0.016 pb; relative uncertainty 0.016/0.414 derived from the rounded values (quadrature sum of QCD scale, PDF and αs, symmetric as quoted)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:vh/lhc-8/atlas-cms-2016-comb"]
+            refs: ["arXiv:1307.1347"]
+            provenance: {uid: ed48cd7c, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_ZH (= 1)", source: agent, status: agent-draft, date: "2026-10-17"}
             headline: true

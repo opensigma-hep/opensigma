@@ -4,10 +4,11 @@ family: "fam:heavy-flavour"
 sector: SM
 description: "Inclusive production of hadrons containing a b quark in hadron collisions, pp/pp̄ → H_b + X. A classic test of perturbative QCD with a heavy quark (bottom mass m_b ~ 4–5 GeV gives slow perturbative convergence and large scale uncertainties), a probe of the low-x gluon PDF in the forward region, and the normalisation for b-flavour yields and backgrounds. Predictions exist at NNLO QCD for on-shell b quarks (no fragmentation) and as FONLL (NLO + next-to-leading-log resummation of ln(pT/m_b), with fragmentation) for b hadrons."
 watch:
-  recids: [1824426, 1504058, 1485195, 668026, 1384271]
+  recids: []
   queries:
-    - 't "b-hadron" and t "production cross" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)'
-    - 't "bottom" and t "production" and t "hadron colliders" and (t NNLO or t FONLL or t "fragmentation")'
+    - '(collaboration:ATLAS or collaboration:CMS or collaboration:LHCb or collaboration:ALICE or collaboration:CDF) and (t "b-hadron" or t "beauty" or t "bottom" or t "b quark" or t "B meson" or t "B+") and (t "production cross" or t "cross-section" or t "cross section") and (t "TeV" or t "pp collisions")'
+    - '(t bottom or t beauty or t "b-hadron" or t "B-hadron" or t "B-meson") and (t hadroproduction or t "pair production" or t "open") and (t NNLO or t FONLL or t NNLL or t SACOT)'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -53,7 +54,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:b-hadron-production/lhc-13/sigma-hb-fwd", region: "2 < η < 5 (LHCb acceptance), all pT"}
     measurements:
       - id: "meas:b-hadron-production/lhc-13/lhcb-2017-hb"
@@ -148,6 +149,29 @@ channels:
             compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
             refs: ["inspire:468385", "inspire:553013", "inspire:1485195"]
             provenance: {uid: 7216b84d, ref: "inspire:1485195", locator: "Sec. 7 and Table 2 (FONLL with NNPDF3.0; uncertainties from scales, b-quark mass and PDFs)", source: agent, status: cross-checked, date: "2026-10-16"}
+      - id: "obs:b-hadron-production/lhc-13/dsigma-bplus-dpt"
+        name: "dσ(pp → B⁺ X)/dpT, |y| < 1.45 / 2.1"
+        kind: differential
+        variable: "pT of the B⁺ (single charge state, B⁺ → J/ψ K⁺); headline bin 10 < pT < 13 GeV with |y| < 1.45"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-13/cms-2017-bplus"
+            total: {value_pct: 19.0, provenance: {uid: f69825ca, ref: "hepdata:ins1485195/Table 1", locator: "Table 1, quadrature sum of all errors (bin 1)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: other
+                specific: "error"
+                size: {range: [10.0, 30.0], asymmetric: true}
+                full_table: "hepdata:ins1485195/Table 1"
+                provenance: {uid: 4029a3cc, ref: "hepdata:ins1485195/Table 1", locator: "Table 1, error 'error'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "FONLL (NLO + NLL), NNPDF3.0, B⁺"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_b"}]
+            codes: ["FONLL"]
+            total: {value_pct: 38.0, provenance: {uid: f101d37d, ref: "hepdata:ins1485195/Table 1", locator: "Table 1, column 2, quadrature sum of all errors (bin 1); larger side of the asymmetric FONLL band (bin 10 < pT < 13 GeV, |y| < 1.45)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
+            refs: ["inspire:468385", "inspire:553013", "inspire:1485195"]
+            provenance: {uid: 62ecfd29, ref: "inspire:1485195", locator: "hepdata Table 1, column FONLL, bin 10 < pT < 13 GeV, |y| < 1.45", source: agent, status: agent-draft, date: "2026-10-17"}
   - id: "chan:b-hadron-production/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -203,3 +227,59 @@ channels:
             refs: ["inspire:1824426"]
             provenance: {uid: f7d7f4ad, ref: "inspire:1824426", locator: "Sec. 3.2, Eqs. (4)–(5) (comparison with the CDF measurement)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
+  - id: "chan:b-hadron-production/lhc-7"
+    collider: "col:lhc-7"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:b-hadron-production/lhc-7/sigma-bplus-fid", region: "pT(B⁺) > 5 GeV, |y| < 2.4"}
+    measurements:
+      - id: "meas:b-hadron-production/lhc-7/cms-2011-bplus"
+        experiment: "CMS"
+        dataset: "7 TeV, 5.8 pb⁻¹ (2010)"
+        ref: "inspire:883318"
+        hepdata: "hepdata:ins883318/Table 1"
+    observables:
+      - id: "obs:b-hadron-production/lhc-7/sigma-bplus-fid"
+        name: "σ(pp → B⁺ X), pT > 5 GeV, |y| < 2.4"
+        kind: fiducial
+        variable: "σ for a single charge state, ½σ(B⁺ + B⁻), B⁺ → J/ψ K⁺, summed over all pT bins with pT > 5 GeV and |y| < 2.4"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-7/cms-2011-bplus"
+            total: {value_pct: 16.0, provenance: {uid: '02275287', ref: "hepdata:ins883318/Table 1", locator: "Table 1, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [8.5, 8.5], asymmetric: false}
+                full_table: "hepdata:ins883318/Table 1"
+                provenance: {uid: '0566e317', ref: "hepdata:ins883318/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "sys"
+                size: {range: [7.1, 7.1], asymmetric: false}
+                full_table: "hepdata:ins883318/Table 1"
+                provenance: {uid: d49d6066, ref: "hepdata:ins883318/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+              - category: lumi
+                specific: "sys,luminosity uncertainty"
+                size: {range: [11.0, 11.0], asymmetric: false}
+                full_table: "hepdata:ins883318/Table 1"
+                provenance: {uid: 3a3dcec3, ref: "hepdata:ins883318/Table 1", locator: "Table 1, error 'sys,luminosity uncertainty'", source: hepdata, status: machine-verified, date: "2026-10-17"}
+        predictions:
+          - label: "MC@NLO + HERWIG (NLO matched), CTEQ6M"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["m_b = 4.75 GeV, μR = μF = sqrt(m_b² + pT²), CTEQ6M PDFs; scale, mass and PDF variations as described in the paper"]
+            codes: ["MC@NLO"]
+            total: {value_pct: 36, provenance: {uid: a06df306, ref: "inspire:883318", locator: "text after Table 1 (Summary of the cross-section section): MC@NLO 25.5 +8.8 −5.4 (scale) +2.5 −1.8 (mass) ± 0.8 (PDF) µb; larger sides added in quadrature (9.2/25.5 = 36%)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:b-hadron-production/lhc-7/cms-2011-bplus"]
+            refs: ["inspire:883318"]
+            provenance: {uid: 5f86975a, ref: "inspire:883318", locator: "Sec. 'Results' (comparison of the differential and total cross sections with MC@NLO, m_b = 4.75 GeV, CTEQ6M)", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true
+          - label: "PYTHIA 6.4 (LO + parton shower)"
+            accuracy:
+              qcd: LO
+              approximations: ["m_b = 4.8 GeV, CTEQ6L1 PDFs, D6T tune; absolute normalisation 48.1 µb quoted without uncertainty"]
+            codes: ["PYTHIA"]
+            compared_to: ["meas:b-hadron-production/lhc-7/cms-2011-bplus"]
+            refs: ["inspire:883318"]
+            provenance: {uid: 0ad8e108, ref: "inspire:883318", locator: "text after Table 1: PYTHIA prediction 48.1 µb for pT > 5 GeV, |y| < 2.4", source: agent, status: agent-draft, date: "2026-10-17"}

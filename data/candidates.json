@@ -1,108 +1,149 @@
 {
  "proc:b-hadron-production": [
   {
-   "recid": 2782835,
-   "title": "Data-driven analysis of the beauty hadron production in pp collisions at the LHC with Bayesian unfolding",
    "arxiv": "2405.01444",
-   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
    "channels": [
     "chan:b-hadron-production/lhc-13"
-   ]
+   ],
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "recid": 2782835,
+   "title": "Data-driven analysis of the beauty hadron production in pp collisions at the LHC with Bayesian unfolding"
   },
   {
-   "recid": 2647720,
-   "title": "B-meson hadroproduction in the SACOT-m$_{T}$ scheme",
    "arxiv": "2303.17864",
-   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
    "channels": [
     "chan:b-hadron-production/lhc-13"
-   ]
+   ],
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "recid": 2647720,
+   "title": "B-meson hadroproduction in the SACOT-m$_{T}$ scheme"
   },
   {
-   "recid": 2629436,
-   "title": "B-hadron production at the LHC from bottom-quark pair production at NNLO+PS",
    "arxiv": "2302.01645",
-   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
    "channels": [
     "chan:b-hadron-production/lhc-13"
-   ]
+   ],
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "recid": 2629436,
+   "title": "B-hadron production at the LHC from bottom-quark pair production at NNLO+PS"
   },
   {
-   "recid": 2762380,
-   "title": "Measurement of beauty-quark production in pp collisions at $ \\sqrt{s} $ = 13 TeV via non-prompt D mesons",
    "arxiv": "2402.16417",
-   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
    "channels": [
     "chan:b-hadron-production/lhc-13"
-   ]
-  },
-  {
-   "recid": 3156631,
-   "title": "Inclusive charm and bottom quark pair production cross sections at hadron colliders at next-to-next-to-leading-order accuracy",
-   "arxiv": "2605.16019",
+   ],
    "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
-   "channels": [
-    "chan:b-hadron-production/lhc-13",
-    "chan:b-hadron-production/tevatron-1960"
-   ]
+   "recid": 2762380,
+   "title": "Measurement of beauty-quark production in pp collisions at $ \\sqrt{s} $ = 13 TeV via non-prompt D mesons"
   },
   {
-   "recid": 2869889,
-   "title": "Phenomenology of Bottom-Quark Pair Production at the LHC",
    "arxiv": null,
-   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
    "channels": [
     "chan:b-hadron-production/lhc-13"
-   ]
+   ],
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "recid": 2869889,
+   "title": "Phenomenology of Bottom-Quark Pair Production at the LHC"
   },
   {
-   "recid": 2787908,
-   "title": "Open bottom production at NNLO+NNLL",
    "arxiv": "2405.10772",
-   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
    "channels": [
     "chan:b-hadron-production/lhc-13"
-   ]
+   ],
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "recid": 2787908,
+   "title": "Open bottom production at NNLO+NNLL"
   },
   {
-   "recid": 2848281,
-   "title": "Open <math display=\"inline\"><mi>B</mi></math>-Hadron Production at Hadron Colliders in QCD at Next-to-Next-to-Leading-Order and Next-to-Next-to-Leading-Logarithmic Accuracy",
    "arxiv": "2411.09684",
-   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
    "channels": [
     "chan:b-hadron-production/lhc-13"
-   ]
+   ],
+   "matched_by": "(refersto:recid:1824426 or refersto:recid:1504058 or refersto:recid:1485195 or refersto:recid:668026 or refersto:recid:1384271 or (t \"b-hadron\" and t \"production cross\" and (collaboration:ATLAS or collaboration:CMS or collaboration:LHCb)) or (t \"bottom\" and t \"production\" and t \"hadron colliders\" and (t NNLO or t FONLL or t \"fragmentation\"))) and de > 2021-10-16",
+   "recid": 2848281,
+   "title": "Open <math display=\"inline\"><mi>B</mi></math>-Hadron Production at Hadron Colliders in QCD at Next-to-Next-to-Leading-Order and Next-to-Next-to-Leading-Logarithmic Accuracy"
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(((collaboration:ATLAS or collaboration:CMS or collaboration:LHCb or collaboration:ALICE or collaboration:CDF) and (t \"b-hadron\" or t \"beauty\" or t \"bottom\" or t \"b quark\" or t \"B meson\" or t \"B+\") and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"TeV\" or t \"pp collisions\")) or ((t bottom or t beauty or t \"b-hadron\" or t \"B-hadron\" or t \"B-meson\") and (t hadroproduction or t \"pair production\" or t \"open\") and (t NNLO or t FONLL or t NNLL or t SACOT))) and de > 2021-10-17",
+   "recid": 2909573,
+   "title": "Preliminary Physics Summary: measurement of B$^0$-meson production cross section in proton-proton collisions at $\\sqrt{s} = 13.6$ TeV",
+   "channels": []
+  },
+  {
+   "arxiv": "2112.09659",
+   "matched_by": "(((collaboration:ATLAS or collaboration:CMS or collaboration:LHCb or collaboration:ALICE or collaboration:CDF) and (t \"b-hadron\" or t \"beauty\" or t \"bottom\" or t \"b quark\" or t \"B meson\" or t \"B+\") and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"TeV\" or t \"pp collisions\")) or ((t bottom or t beauty or t \"b-hadron\" or t \"B-hadron\" or t \"B-meson\") and (t hadroproduction or t \"pair production\" or t \"open\") and (t NNLO or t FONLL or t NNLL or t SACOT))) and de > 2021-10-17",
+   "recid": 1992937,
+   "title": "Measurement of the production cross section for Z+b jets in proton-proton collisions at $\\sqrt s$ = 13  TeV",
+   "channels": []
+  },
+  {
+   "arxiv": "2403.15093",
+   "matched_by": "(((collaboration:ATLAS or collaboration:CMS or collaboration:LHCb or collaboration:ALICE or collaboration:CDF) and (t \"b-hadron\" or t \"beauty\" or t \"bottom\" or t \"b quark\" or t \"B meson\" or t \"B+\") and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"TeV\" or t \"pp collisions\")) or ((t bottom or t beauty or t \"b-hadron\" or t \"B-hadron\" or t \"B-meson\") and (t hadroproduction or t \"pair production\" or t \"open\") and (t NNLO or t FONLL or t NNLL or t SACOT))) and de > 2021-10-17",
+   "recid": 2771257,
+   "title": "Measurements of the production cross-section for a Z boson in association with b- or c-jets in proton–proton collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector",
+   "channels": []
+  },
+  {
+   "arxiv": "2605.31205",
+   "matched_by": "(((collaboration:ATLAS or collaboration:CMS or collaboration:LHCb or collaboration:ALICE or collaboration:CDF) and (t \"b-hadron\" or t \"beauty\" or t \"bottom\" or t \"b quark\" or t \"B meson\" or t \"B+\") and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"TeV\" or t \"pp collisions\")) or ((t bottom or t beauty or t \"b-hadron\" or t \"B-hadron\" or t \"B-meson\") and (t hadroproduction or t \"pair production\" or t \"open\") and (t NNLO or t FONLL or t NNLL or t SACOT))) and de > 2021-10-17",
+   "recid": 3163152,
+   "title": "Measurement of the cross-section for the production of a W boson in association with b-jets in pp collisions at $ \\sqrt{s}=13 $ TeV with the ATLAS detector",
+   "channels": []
+  },
+  {
+   "arxiv": "2609.17812",
+   "matched_by": "(((collaboration:ATLAS or collaboration:CMS or collaboration:LHCb or collaboration:ALICE or collaboration:CDF) and (t \"b-hadron\" or t \"beauty\" or t \"bottom\" or t \"b quark\" or t \"B meson\" or t \"B+\") and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"TeV\" or t \"pp collisions\")) or ((t bottom or t beauty or t \"b-hadron\" or t \"B-hadron\" or t \"B-meson\") and (t hadroproduction or t \"pair production\" or t \"open\") and (t NNLO or t FONLL or t NNLL or t SACOT))) and de > 2021-10-17",
+   "recid": 3204445,
+   "title": "The production of bottom-flavoured jets at the LHC through bottom-quark pair production at NNLO+PS",
+   "channels": []
   }
  ],
  "proc:charm-production": [
   {
-   "recid": 2862073,
-   "title": "Differential cross-section measurements of D$^{±}$ and $ {D}_s^{\\pm } $ meson production in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector",
-   "arxiv": "2412.15742",
-   "matched_by": "(refersto:recid:1396331 or refersto:recid:2697877 or refersto:recid:624447 or refersto:recid:1384271 or refersto:recid:1379948 or (t \"charm\" and t \"production cross\" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t \"pp collisions\" or t \"proton-proton\")) or (t \"charm\" and (t \"hadroproduction\" or t \"production\") and (t NNLO or t FONLL or t \"GM-VFNS\"))) and de > 2021-10-16",
-   "channels": [
-    "chan:charm-production/lhc-13"
-   ]
-  },
-  {
-   "recid": 2795374,
-   "title": "Charm total cross sections with nonuniversal fragmentation treatment",
    "arxiv": "2406.03581",
-   "matched_by": "(refersto:recid:1396331 or refersto:recid:2697877 or refersto:recid:624447 or refersto:recid:1384271 or refersto:recid:1379948 or (t \"charm\" and t \"production cross\" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t \"pp collisions\" or t \"proton-proton\")) or (t \"charm\" and (t \"hadroproduction\" or t \"production\") and (t NNLO or t FONLL or t \"GM-VFNS\"))) and de > 2021-10-16",
    "channels": [
     "chan:charm-production/lhc-13",
     "chan:charm-production/tevatron-1960"
-   ]
+   ],
+   "matched_by": "(refersto:recid:1396331 or refersto:recid:2697877 or refersto:recid:624447 or refersto:recid:1384271 or refersto:recid:1379948 or (t \"charm\" and t \"production cross\" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t \"pp collisions\" or t \"proton-proton\")) or (t \"charm\" and (t \"hadroproduction\" or t \"production\") and (t NNLO or t FONLL or t \"GM-VFNS\"))) and de > 2021-10-16",
+   "recid": 2795374,
+   "title": "Charm total cross sections with nonuniversal fragmentation treatment"
   },
   {
-   "recid": 3156631,
-   "title": "Inclusive charm and bottom quark pair production cross sections at hadron colliders at next-to-next-to-leading-order accuracy",
-   "arxiv": "2605.16019",
-   "matched_by": "(refersto:recid:1396331 or refersto:recid:2697877 or refersto:recid:624447 or refersto:recid:1384271 or refersto:recid:1379948 or (t \"charm\" and t \"production cross\" and (collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS) and (t \"pp collisions\" or t \"proton-proton\")) or (t \"charm\" and (t \"hadroproduction\" or t \"production\") and (t NNLO or t FONLL or t \"GM-VFNS\"))) and de > 2021-10-16",
-   "channels": [
-    "chan:charm-production/lhc-13",
-    "chan:charm-production/tevatron-1960"
-   ]
+   "arxiv": null,
+   "matched_by": "(((collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS or collaboration:CDF) and t charm and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"pp collisions\" or t \"proton-proton\" or t \"TeV\")) or (t charm and (t hadroproduction or t \"pair production\" or t \"total cross\") and (t NNLO or t FONLL or t \"GM-VFNS\" or t SACOT)) or (t charm and (t \"total cross\" or t \"total charm\") and (t LHC or t \"pp collisions\" or t \"proton-proton\"))) and de > 2021-10-17",
+   "recid": 2061292,
+   "title": "Charm cross section and fragmentation fractions in pp collisions with ALICE",
+   "channels": []
+  },
+  {
+   "arxiv": "2308.02285",
+   "matched_by": "(((collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS or collaboration:CDF) and t charm and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"pp collisions\" or t \"proton-proton\" or t \"TeV\")) or (t charm and (t hadroproduction or t \"pair production\" or t \"total cross\") and (t NNLO or t FONLL or t \"GM-VFNS\" or t SACOT)) or (t charm and (t \"total cross\" or t \"total charm\") and (t LHC or t \"pp collisions\" or t \"proton-proton\"))) and de > 2021-10-17",
+   "recid": 2685711,
+   "title": "Measurement of the production cross section for a W boson in association with a charm quark in proton–proton collisions at $\\sqrt{s} = 13\\,\\hbox {TeV}$",
+   "channels": []
+  },
+  {
+   "arxiv": null,
+   "matched_by": "(((collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS or collaboration:CDF) and t charm and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"pp collisions\" or t \"proton-proton\" or t \"TeV\")) or (t charm and (t hadroproduction or t \"pair production\" or t \"total cross\") and (t NNLO or t FONLL or t \"GM-VFNS\" or t SACOT)) or (t charm and (t \"total cross\" or t \"total charm\") and (t LHC or t \"pp collisions\" or t \"proton-proton\"))) and de > 2021-10-17",
+   "recid": 2110183,
+   "title": "Measurement of the production cross section of a W boson in association with a charm quark in proton-proton collisions at $\\sqrt{s}=13~\\mathrm{TeV}$",
+   "channels": []
+  },
+  {
+   "arxiv": "2405.14571",
+   "matched_by": "(((collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS or collaboration:CDF) and t charm and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"pp collisions\" or t \"proton-proton\" or t \"TeV\")) or (t charm and (t hadroproduction or t \"pair production\" or t \"total cross\") and (t NNLO or t FONLL or t \"GM-VFNS\" or t SACOT)) or (t charm and (t \"total cross\" or t \"total charm\") and (t LHC or t \"pp collisions\" or t \"proton-proton\"))) and de > 2021-10-17",
+   "recid": 2789567,
+   "title": "Charm fragmentation fractions and $\\mathbf {c\\overline{c}}$ cross section in p–Pb collisions at $\\mathbf {\\sqrt{s _{NN}}=5.02 TeV}$",
+   "channels": []
+  },
+  {
+   "arxiv": "2311.07523",
+   "matched_by": "(((collaboration:ALICE or collaboration:LHCb or collaboration:ATLAS or collaboration:CMS or collaboration:CDF) and t charm and (t \"production cross\" or t \"cross-section\" or t \"cross section\") and (t \"pp collisions\" or t \"proton-proton\" or t \"TeV\")) or (t charm and (t hadroproduction or t \"pair production\" or t \"total cross\") and (t NNLO or t FONLL or t \"GM-VFNS\" or t SACOT)) or (t charm and (t \"total cross\" or t \"total charm\") and (t LHC or t \"pp collisions\" or t \"proton-proton\"))) and de > 2021-10-17",
+   "recid": 2721938,
+   "title": "A novel phenomenological approach to total charm cross section measurements at the LHC",
+   "channels": []
   }
  ],
  "proc:diphoton": [
@@ -202,13 +243,6 @@
    "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
    "recid": 2876679,
    "title": "Two-loop helicity amplitudes for diphoton production with massive quark loop"
-  },
-  {
-   "arxiv": "2201.06982",
-   "channels": [],
-   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
-   "recid": 2012936,
-   "title": "Photon fragmentation in the antenna subtraction formalism"
   },
   {
    "arxiv": "2204.12602",
@@ -847,13 +881,6 @@
    "title": "Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV} using 139 fb$^{-1}$ of ATLAS data"
   },
   {
-   "arxiv": "2302.00510",
-   "channels": [],
-   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
-   "recid": 2628741,
-   "title": "Inclusive-photon production and its dependence on photon isolation in $pp$ collisions at $\\sqrt s=13$ TeV using 139 fb$^{-1}$ of ATLAS data"
-  },
-  {
    "arxiv": null,
    "channels": [],
    "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
@@ -1057,13 +1084,6 @@
    "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
    "recid": 2809004,
    "title": "Dissecting polytopes: Landau singularities and asymptotic expansions in 2 → 2 scattering"
-  },
-  {
-   "arxiv": "2503.22804",
-   "channels": [],
-   "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
-   "recid": 2906156,
-   "title": "NNLOJET: A parton-level event generator for jet cross sections at NNLO QCD accuracy"
   },
   {
    "arxiv": "2505.01245",
@@ -1372,6 +1392,20 @@
    "matched_by": "(refersto:recid:1887997 or refersto:recid:939520 or refersto:recid:1426698 or refersto:recid:1977009 or refersto:recid:1834011 or refersto:recid:3144736 or (t diphoton and (t NNLO or t N3LO or t \"three-loop\") and not t Higgs and not t entangled) or ((t \"diphoton production\" or t \"photon-pair production\") and (collaboration:ATLAS or collaboration:CMS) and t cross-section)) and de > 2021-10-16",
    "recid": 2791238,
    "title": "Stairway to discovery: A report on the CMS programme of cross section measurements from millibarns to femtobarns"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t diphoton or t \"photon-pair\" or t \"photon pair\" or t \"photon pairs\") and (t production or t cross or t NNLO or t N3LO or t QCD or t corrections or t predictions) and not t Higgs and not t entangled and not t entanglement and not t Reggeization and not t ALP and not t axion and not t resonance and not t search and not t jet and not t jets and not t ion and not t ions and not t heavy and not t UPC and not t ultraperipheral and not t dark) or ((t diphoton or t \"photon pair\" or t \"photon pairs\") and (collaboration:ATLAS or collaboration:CMS) and (t cross or t production) and not t Higgs and not t resonance and not t search and not t searches)) and de > 2023-01-01",
+   "recid": 2801159,
+   "title": "Spin-polarization effects in the one-photon pair production in a supercritical magnetic field"
+  },
+  {
+   "arxiv": "2308.00230",
+   "channels": [],
+   "matched_by": "(((t diphoton or t \"photon-pair\" or t \"photon pair\" or t \"photon pairs\") and (t production or t cross or t NNLO or t N3LO or t QCD or t corrections or t predictions) and not t Higgs and not t entangled and not t entanglement and not t Reggeization and not t ALP and not t axion and not t resonance and not t search and not t jet and not t jets and not t ion and not t ions and not t heavy and not t UPC and not t ultraperipheral and not t dark) or ((t diphoton or t \"photon pair\" or t \"photon pairs\") and (collaboration:ATLAS or collaboration:CMS) and (t cross or t production) and not t Higgs and not t resonance and not t search and not t searches)) and de > 2023-01-01",
+   "recid": 2684237,
+   "title": "Next-to-leading power resummed rapidity distributions near threshold for Drell-Yan and diphoton production"
   }
  ],
  "proc:isolated-photon": [
@@ -1421,6 +1455,7 @@
   },
   {
    "arxiv": null,
+   "channels": [],
    "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
    "recid": 3184989,
    "title": "Measurement of the differential cross section for inclusive isolated photon production in proton-proton collisions at sqrt(s) = 13.6 TeV"
@@ -2049,13 +2084,6 @@
    "title": "Differential cross-sections for events with missing transverse momentum and jets measured with the ATLAS detector in 13 TeV proton-proton collisions"
   },
   {
-   "arxiv": "2503.22804",
-   "channels": [],
-   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
-   "recid": 2906156,
-   "title": "NNLOJET: A parton-level event generator for jet cross sections at NNLO QCD accuracy"
-  },
-  {
    "arxiv": null,
    "channels": [],
    "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
@@ -2159,6 +2187,1520 @@
    "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
    "recid": 2617065,
    "title": "50 Years of Quantum Chromodynamics"
+  }
+ ],
+ "proc:ggh": [
+  {
+   "arxiv": "2510.17413",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3071216,
+   "title": "The inclusive Higgs boson cross-section in gluon-gluon fusion in soft-virtual approximation at fourth order in QCD"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3083139,
+   "title": "Finite-quark-mass effects on the higgs production cross section in the gluon-gluon fusion channel"
+  },
+  {
+   "arxiv": "2302.06623",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2632013,
+   "title": "Two-loop bottom mass effects on the Higgs transverse momentum spectrum in top-induced gluon fusion"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2669187,
+   "title": "Unfolding the Higgs. Differential cross section measurements of Higgs Boson production through gluon fusion in the H→WW∗→eνμν final state"
+  },
+  {
+   "arxiv": "2507.20882",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2954727,
+   "title": "Electroweak corrections to Higgs+jet production in gluon fusion"
+  },
+  {
+   "arxiv": "2606.05309",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3165405,
+   "title": "Interference effects in gluon-fusion Higgs boson production"
+  },
+  {
+   "arxiv": "2212.03258",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2611522,
+   "title": "Double insertions of SMEFT operators in gluon fusion Higgs boson production"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2698565,
+   "title": "MSSM higgs production via gluon-fusion : NLO SUSY-QCD corrections"
+  },
+  {
+   "arxiv": "2301.11875",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2627196,
+   "title": "Refining the GENEVA method for Higgs boson production via gluon fusion"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2721702,
+   "title": "Evaluation of QCD uncertainties for Higgs boson production through gluon fusion and in association with two top quarks for simplified template cross-section measurements"
+  },
+  {
+   "arxiv": "2501.14849",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2872501,
+   "title": "Measurements of the Higgs boson production cross section in the four-lepton final state in proton-proton collisions at $\\sqrt{s}$ = 13.6 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3210210,
+   "title": "NLO EW corrections to Di-Higgs production via gluon fusion in the forward limit"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2809676,
+   "title": "Measurements of Higgs boson production cross sections in the four-lepton final state at 13.6 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3116442,
+   "title": "Measurements of Inclusive and Differential Higgs Boson Production Cross Sections at 13.6 TeV in the $H \\rightarrow \\gamma \\gamma $ Decay Channel"
+  },
+  {
+   "arxiv": "2407.16320",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2810563,
+   "title": "Differential cross-section measurements of Higgs boson production in the H → τ$^{+}$τ$^{−}$ decay channel in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2504.17755",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2915441,
+   "title": "Measurements of inclusive and differential Higgs boson production cross sections at $\\sqrt{\\text{s}}=13.6$ TeV in the H → γγ decay channel"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3142278,
+   "title": "Measurements of inclusive and differential cross sections for Higgs boson production with decay to four leptons in proton-proton collisions at 13.6 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2809717,
+   "title": "Measurement of the Inclusive and Differential Higgs Boson Production Cross Sections in the Leptonic WW Decay Mode at $\\sqrt{s}$ = 13 TeV"
+  },
+  {
+   "arxiv": "2208.12279",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2142341,
+   "title": "Measurement of the Higgs boson inclusive and differential fiducial production cross sections in the diphoton decay channel with pp collisions at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3138183,
+   "title": "Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{-1}$ of data collected at $\\sqrt{s}$ = 13.6 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2053979,
+   "title": "Measurement of the Higgs boson inclusive and differential fiducial production cross sections in the diphoton decay channel with pp collisions at $sqrt{s}=$ 13 TeV with the CMS detector"
+  },
+  {
+   "arxiv": "2201.08269",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2014187,
+   "title": "Measurements of Higgs boson production cross-sections in the $H\\to\\tau^{+}\\tau^{-}$ decay channel in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2402.05742",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2756714,
+   "title": "Interpretations of the ATLAS measurements of Higgs boson production and decay rates and differential cross-sections in pp collisions at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2305.07532",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2659285,
+   "title": "Measurements of inclusive and differential cross sections for the Higgs boson production and decay to four-leptons in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2605.19016",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3157992,
+   "title": "Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{−1}$ of data collected at $ \\sqrt{s}=13.6 $ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2202.00487",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2023464,
+   "title": "Measurements of the Higgs boson inclusive and differential fiducial cross-sections in the diphoton decay channel with pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2503.19420",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2905253,
+   "title": "Measurements of the production cross-sections of a Higgs boson in association with a vector boson and decaying into WW$^{*}$ with the ATLAS detector at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2207.08615",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2116078,
+   "title": "Measurement of the total and differential Higgs boson production cross-sections at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector by combining the H → ZZ$^{*}$→ 4ℓ and H → γγ decay channels"
+  },
+  {
+   "arxiv": "2407.08012",
+   "channels": [
+    "chan:ggh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2806818,
+   "title": "Measurement of boosted Higgs bosons produced via vector boson fusion or gluon fusion in the H →$ \\textrm{b}\\overline{\\textrm{b}} $ decay mode using LHC proton-proton collision data at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2312.07562",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2736546,
+   "title": "Measurement of simplified template cross sections of the Higgs boson produced in association with <math display=\"inline\"><mi>W</mi></math> or <math display=\"inline\"><mi>Z</mi></math> bosons in the <math display=\"inline\"><mi>H</mi><mo stretchy=\"false\">→</mo><mi>b</mi><mover accent=\"true\"><mi>b</mi><mo stretchy=\"false\">¯</mo></mover></math> decay channel in proton-proton collisions at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>13</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></math>"
+  }
+ ],
+ "proc:tth": [
+  {
+   "arxiv": "2111.06712",
+   "channels": [
+    "chan:tth/lhc-13"
+   ],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 1967501,
+   "title": "Measurement of Higgs boson decay into $b$-quarks in associated production with a top-quark pair in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:tth/lhc-13"
+   ],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 2721702,
+   "title": "Evaluation of QCD uncertainties for Higgs boson production through gluon fusion and in association with two top quarks for simplified template cross-section measurements"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 2672001,
+   "title": "Measurements of Higgs boson associated production with top quarks at the ATLAS experiment"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 2866913,
+   "title": "Measurement of the associated production of a top-antitop-quark pair and a Higgs boson decaying into a $b \\bar b$ pair in $pp$ collisions at $\\sqrt s$ = 13 TeV using the ATLAS detector at the LHC"
+  },
+  {
+   "arxiv": "2510.23755",
+   "channels": [
+    "chan:tth/lhc-13"
+   ],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 3075436,
+   "title": "Measurement of the Higgs boson production in association with top quarks in multilepton final states in pp collisions at $ \\sqrt{s}=13 $ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2407.10904",
+   "channels": [
+    "chan:tth/lhc-13"
+   ],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 2808021,
+   "title": "Measurement of the associated production of a top-antitop-quark pair and a Higgs boson decaying into a $b\\bar{b}$ pair in pp collisions at $\\sqrt{s}=13$ TeV using the ATLAS detector at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 2761306,
+   "title": "Measurements of Higgs boson production in association with top quarks at the ATLAS experiment"
+  },
+  {
+   "arxiv": "2605.05880",
+   "channels": [],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 3152763,
+   "title": "Top-associated Higgs-boson production using perturbative fragmentation functions at next-to-leading-order"
+  },
+  {
+   "arxiv": "2606.20054",
+   "channels": [],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 3170352,
+   "title": "Nonstandard decays of vectorlike top partners in a two-Higgs-doublet model at the HL-LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\") and t Higgs and (t NNLO or t NNLL or t \"two-loop\" or t \"electroweak corrections\" or t resummation or t \"N3LO\") and not t \"decay\" and not t \"double\" and not t \"pair\") or (refersto:recid:2902128 and t Higgs and (t top or t ttH)) or ((t ttH or t \"top quark pair\" or t \"top-quark pair\" or t \"top-antitop\" or t \"top quarks\") and t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"production\" or t \"measurement\") and not t search and not t \"pair production\" and not t \"charged\" and not t \"dark\" and not t EFT and not t \"effective field theory\" and not t \"interpretation\" and not t \"global\" and not t \"flavour\")) and de > 2021-10-17",
+   "recid": 2061723,
+   "title": "$t\\overline{t}H$ measurement in final states with mulileptons using data taken during the Run 2 of the LHC with CMS"
+  }
+ ],
+ "proc:vbf-h": [
+  {
+   "arxiv": "2206.14630",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2103438,
+   "title": "Anomalous Higgs boson couplings in weak boson fusion production at NNLO in QCD"
+  },
+  {
+   "arxiv": "2407.08012",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2806818,
+   "title": "Measurement of boosted Higgs bosons produced via vector boson fusion or gluon fusion in the H →$ \\textrm{b}\\overline{\\textrm{b}} $ decay mode using LHC proton-proton collision data at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2407.09363",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2807339,
+   "title": "QCD corrections to Higgs boson production and <math display=\"inline\"><mi>H</mi><mo stretchy=\"false\">→</mo><mi>b</mi><mover accent=\"true\"><mi>b</mi><mo stretchy=\"false\">¯</mo></mover></math> decay in weak boson fusion"
+  },
+  {
+   "arxiv": "2304.03053",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2649598,
+   "title": "Integrated and differential fiducial cross-section measurements for the vector boson fusion production of the Higgs boson in the $H \\rightarrow WW^{\\ast}\\rightarrow e\\nu\\mu\\nu$ decay channel at 13 $\\text{TeV}$ with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2127253,
+   "title": "Measurement of the Fiducial Cross Section for Vector-boson-fusion Production of the Higgs Boson in the ww Decay Channel With the ATLAS Detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2829895,
+   "title": "Non-factorizable corrections to Higgs production in Vector Boson Fusion"
+  },
+  {
+   "arxiv": "2305.04407",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2657734,
+   "title": "On Evaluation of Nonfactorizable Corrections to Higgs Boson Production via Vector Boson Fusion"
+  },
+  {
+   "arxiv": "2507.22574",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2955484,
+   "title": "Higgs production via vector-boson fusion at the LHC"
+  },
+  {
+   "arxiv": "2506.12917",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2935122,
+   "title": "Double Higgs boson production via vector boson fusion in SMEFT"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2945356,
+   "title": "Differential cross-section measurements of Higgs boson production via vector-boson fusion in the π decay channel at √s = 13TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2502.09112",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2879663,
+   "title": "Precision tools for the simulation of double-Higgs production via vector-boson fusion"
+  },
+  {
+   "arxiv": "2201.01040",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2000365,
+   "title": "Influence of QCD parton showers in deep learning invisible Higgs bosons through vector boson fusion"
+  },
+  {
+   "arxiv": "2609.37919",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3209301,
+   "title": "One-loop QCD amplitudes for vector-boson-fusion Higgs-boson production to higher orders in $ε$"
+  },
+  {
+   "arxiv": "2308.01253",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2684710,
+   "title": "Measurement of the Higgs boson production via vector boson fusion and its decay into bottom quarks in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2609.02758",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3199153,
+   "title": "Next-to-Leading-Order Multi-Jet Merging of Higgs Boson Production via Vector Boson Fusion in the Presence of Anomalous Couplings"
+  },
+  {
+   "arxiv": "2305.08016",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2659737,
+   "title": "Nonfactorizable corrections to Higgs boson production in weak boson fusion"
+  },
+  {
+   "arxiv": "2309.06292",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2696696,
+   "title": "Scale dependence of non-factorizable virtual corrections to Higgs boson production in weak boson fusion"
+  },
+  {
+   "arxiv": "2305.12937",
+   "channels": [
+    "chan:vbf-h/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2661566,
+   "title": "Non-factorizable virtual corrections to Higgs boson production in weak boson fusion beyond the eikonal approximation"
+  },
+  {
+   "arxiv": "2610.01347",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 3210563,
+   "title": "Parton-shower and fixed-order QCD effects in Higgs boson production in weak-boson fusion and its decays to bottom quarks"
+  },
+  {
+   "arxiv": "2208.02338",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\" or t \"weak-boson fusion\") and (t N3LO or t NNLO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"cross-section\" or t \"differential\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1467221 and t Higgs and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t \"weak boson fusion\") and not t search and not t \"pair\" and not t \"dark\") or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"vector-boson fusion\" or t \"vector boson fusion\" or t VBF or t \"production modes\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
+   "recid": 2132341,
+   "title": "Test of <math display=\"inline\"><mi>C</mi><mi>P</mi></math> Invariance in Higgs Boson Vector-Boson-Fusion Production Using the <math display=\"inline\"><mrow><mi>H</mi><mo stretchy=\"false\">→</mo><mi>γ</mi><mi>γ</mi></mrow></math> Channel with the ATLAS Detector"
+  }
+ ],
+ "proc:vh": [
+  {
+   "arxiv": "2402.11506",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 2759527,
+   "title": "Higgs-strahlung at the LHC in the inert doublet model"
+  },
+  {
+   "arxiv": "2503.19420",
+   "channels": [
+    "chan:vh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 2905253,
+   "title": "Measurements of the production cross-sections of a Higgs boson in association with a vector boson and decaying into WW$^{*}$ with the ATLAS detector at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2601.08821",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 3103944,
+   "title": "Differential observables for the Higgs-strahlung process to all orders in EFT"
+  },
+  {
+   "arxiv": "2312.07562",
+   "channels": [
+    "chan:vh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 2736546,
+   "title": "Measurement of simplified template cross sections of the Higgs boson produced in association with <math display=\"inline\"><mi>W</mi></math> or <math display=\"inline\"><mi>Z</mi></math> bosons in the <math display=\"inline\"><mi>H</mi><mo stretchy=\"false\">→</mo><mi>b</mi><mover accent=\"true\"><mi>b</mi><mo stretchy=\"false\">¯</mo></mover></math> decay channel in proton-proton collisions at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>13</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></math>"
+  },
+  {
+   "arxiv": "2606.31286",
+   "channels": [
+    "chan:vh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 3175068,
+   "title": "Boosted Higgs-strahlung off a $W$ boson at next-to-next-to-next-to-leading order in QCD"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 2769091,
+   "title": "Precision phenomenology in higgs-strahlung with fully-differential cross sections at next-to-next-to-leading order"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 2661156,
+   "title": "Measurement of the Cross section for associated production of the Higgs boson and an electroweak boson in final states with two b quarks and two leptons in proton proton collisions at the Large Hadron Collider"
+  },
+  {
+   "arxiv": "2410.19611",
+   "channels": [
+    "chan:vh/lhc-13"
+   ],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 2842826,
+   "title": "Measurements of WH and ZH production with Higgs boson decays into bottom quarks and direct constraints on the charm Yukawa coupling in 13 TeV pp collisions with the ATLAS detector"
+  },
+  {
+   "arxiv": "2111.08372",
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 1969392,
+   "title": "Search for associated production of a Z boson with an invisibly decaying Higgs boson or dark matter candidates at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13</mn></math> TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t Higgs and (t \"associated production\" or t \"Higgs-strahlung\" or t Higgsstrahlung or t WH or t ZH or t VH) and (t NNLO or t N3LO or t \"electroweak\" or t \"QCD corrections\" or t \"cross section\" or t \"differential\" or t \"template\" or t \"fiducial\") and not t search and not t \"pair\" and not t \"dark\" and not t top) or (refersto:recid:944447 and t Higgs and (t \"associated production\" or t WH or t ZH or t VH or t \"Higgs-strahlung\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t WH or t ZH or t VH or t \"associated production\" or t \"vector boson\" or t \"W or Z\" or t \"W boson\" or t \"Z boson\") and not t search and not t \"pair\" and not t \"dark\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"template\" or t \"differential\" or t \"fiducial\"))) and de > 2021-10-17",
+   "recid": 2675030,
+   "title": "Measurement of Associated Production of Higgs Bosons Decaying to Pairs of $W$ Bosons with the ATLAS Detector at the Large Hadron Collider"
+  }
+ ],
+ "proc:dis-nc": [
+  {
+   "recid": 2780723,
+   "title": "Benchmark of deep-inelastic-scattering structure functions at $\\mathcal {O}\\left( \\alpha _s ^3\\right) $",
+   "arxiv": "2404.15711",
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": [
+    "chan:dis-nc/hera",
+    "chan:dis-cc/hera"
+   ]
+  },
+  {
+   "recid": 2753135,
+   "title": "disorder: Deep inelastic scattering at high orders",
+   "arxiv": "2401.16964",
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": [
+    "chan:dis-nc/hera"
+   ]
+  },
+  {
+   "recid": 2752463,
+   "title": "Yadism: yet another deep-inelastic scattering module",
+   "arxiv": "2401.15187",
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": [
+    "chan:dis-nc/hera",
+    "chan:dis-cc/hera"
+   ]
+  },
+  {
+   "recid": 2666757,
+   "title": "Measurement and QCD Analysis of Inclusive Jet Production in Deep Inelastic Scattering at HERA",
+   "arxiv": null,
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": []
+  },
+  {
+   "recid": 2176458,
+   "title": "Measurement and QCD analysis of inclusive jet production in deep inelastic scattering at ZEUS",
+   "arxiv": null,
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": []
+  },
+  {
+   "recid": 2704837,
+   "title": "Extraction of the neutron <math display=\"inline\"><mrow><msub><mrow><mi>F</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></math> structure function from inclusive proton and deuteron deep-inelastic scattering data",
+   "arxiv": "2309.16851",
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": []
+  },
+  {
+   "recid": 3150887,
+   "title": "Multiplicative matching of neutral current deep-inelastic scattering processes at next-to-leading order in PYTHIA 8",
+   "arxiv": "2605.00502",
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": []
+  },
+  {
+   "recid": 2700437,
+   "title": "Impact of inclusive electron ion collider data on collinear parton distributions",
+   "arxiv": "2309.11269",
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": []
+  },
+  {
+   "recid": 2970346,
+   "title": "Quantum Electrodynamics (QED) Analogs to Semi-Inclusive Deep-Inelastic Scattering (SIDIS), Drell-Yan, and the Corresponding Sivers Sign Change",
+   "arxiv": null,
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": []
+  },
+  {
+   "recid": 3090305,
+   "title": "The impact of inclusive electron ion collider data on the strong coupling determination in a global PDF fit",
+   "arxiv": "2512.06092",
+   "matched_by": "((refersto:recid:1377206 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t \"neutral current\" or t inclusive or t benchmark)) or (refersto:recid:681335 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"structure function\" or t N3LO or t \"high orders\" or t benchmark or t module)) or (refersto:recid:1377206 and t \"electron-ion collider\" and (t inclusive or t \"electron-proton\")) or (t \"deep inelastic\" and t \"neutral current\" and t \"electroweak\" and t \"radiative corrections\")) and de > 2021-10-17",
+   "channels": []
+  }
+ ],
+ "proc:dis-cc": [
+  {
+   "recid": 2913871,
+   "title": "Heavy quark mass effects in charged-current deep-inelastic scattering at approximate NNLO in the Aivazis-Collins-Olness-Tung scheme",
+   "arxiv": "2504.13317",
+   "matched_by": "((t \"deep inelastic\" and t \"charged current\" and (collaboration:H1 or collaboration:ZEUS or t HERA) and (t \"cross section\" or t combination or t \"structure function\")) or (refersto:recid:1472971 and (t \"deep inelastic\" or t \"deep-inelastic\") and (t \"charged current\" or t \"structure function\" or t N3LO)) or (t \"electroweak\" and t \"radiative corrections\" and t \"deep inelastic\" and t \"charged current\") or (refersto:recid:1377206 and t \"charged current\" and t \"deep inelastic\")) and de > 2021-10-17",
+   "channels": [
+    "chan:dis-cc/hera"
+   ]
+  }
+ ],
+ "proc:ee-ww": [
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"W pair production\" and t \"lepton colliders\") or (t \"W-pair production\" and t \"electron-positron\") or (t \"W-boson pair production\" and t \"lepton colliders\") or (t \"e+ e-\" and t \"W+ W-\")) and de > 2021-10-17",
+   "recid": 2862164,
+   "title": "W pair production at lepton colliders in the Feynman-diagram gauge"
+  },
+  {
+   "arxiv": "2406.08869",
+   "channels": [],
+   "matched_by": "((t \"W pair production\" and t \"lepton colliders\") or (t \"W-pair production\" and t \"electron-positron\") or (t \"W-boson pair production\" and t \"lepton colliders\") or (t \"e+ e-\" and t \"W+ W-\")) and de > 2021-10-17",
+   "recid": 2797764,
+   "title": "<math display=\"inline\"><mi>W</mi></math>-boson pair production at lepton colliders in the Feynman-diagram gauge"
+  },
+  {
+   "arxiv": "2401.01323",
+   "channels": [
+    "chan:ee-ww/lep2"
+   ],
+   "matched_by": "((t \"W pair production\" and t \"lepton colliders\") or (t \"W-pair production\" and t \"electron-positron\") or (t \"W-boson pair production\" and t \"lepton colliders\") or (t \"e+ e-\" and t \"W+ W-\")) and de > 2021-10-17",
+   "recid": 2742835,
+   "title": "Mixed QCD-EW corrections to W-pair production at electron-positron colliders"
+  },
+  {
+   "arxiv": "2604.04254",
+   "channels": [],
+   "matched_by": "((t \"W pair production\" and t \"lepton colliders\") or (t \"W-pair production\" and t \"electron-positron\") or (t \"W-boson pair production\" and t \"lepton colliders\") or (t \"e+ e-\" and t \"W+ W-\")) and de > 2021-10-17",
+   "recid": 3198281,
+   "title": "Importance of unitarity in the search for heavy neutrinos in \\(e^{+}e^{-}\\rightarrow W^{+}W^{-}\\)"
+  }
+ ],
+ "proc:z-pole": [
+  {
+   "arxiv": "2111.00066",
+   "channels": [
+    "chan:z-pole/lep1"
+   ],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 1957631,
+   "title": "Leading fermionic three-loop corrections to W-boson mass and Z-pole observables"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 3136018,
+   "title": "Electroweak Precision Physics at the FCC-ee"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2866041,
+   "title": "Electroweak heavy flavour precision observables : connecting open dots with the FCC-ee"
+  },
+  {
+   "arxiv": "2508.18022",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2963617,
+   "title": "Precision Measurements of the Electroweak Mixing Angle in the Region of the Z pole"
+  },
+  {
+   "arxiv": "2601.20717",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 3112519,
+   "title": "Summary of the Precision Measurements of the Electroweak Mixing Angle in the Region of the Z pole"
+  },
+  {
+   "arxiv": "2204.09921",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2070440,
+   "title": "Measurement of the effective weak mixing angle at the CEPC*"
+  },
+  {
+   "arxiv": "2312.08446",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2737318,
+   "title": "Using the effective weak mixing angle as an input parameter in SMEFT"
+  },
+  {
+   "arxiv": "2511.16534",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 3085150,
+   "title": "Electroweak precision tests"
+  },
+  {
+   "arxiv": "2302.11377",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2635492,
+   "title": "Electroweak precision test of axion-like particles"
+  },
+  {
+   "arxiv": "2304.00029",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2648225,
+   "title": "The importance of flavor in SMEFT Electroweak Precision Fits"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2970747,
+   "title": "Measurement of the effective weak mixing angle using $b\\bar{b}$, $c\\bar{c}$ and $s\\bar{s}$ final states at the CEPC"
+  },
+  {
+   "arxiv": "2610.04508",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 3211510,
+   "title": "Precision Electroweak Physics of Neutral Currents Below the Z-pole"
+  },
+  {
+   "arxiv": "2204.05085",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2065400,
+   "title": "Electroweak phase transition in 2HDM under Higgs, Z-pole, and W precision measurements"
+  },
+  {
+   "arxiv": "2608.18788",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 3192701,
+   "title": "Modelling electroweak interactions at lepton colliders - from the Z pole to the highest energies"
+  },
+  {
+   "arxiv": "2204.04204",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2064895,
+   "title": "Impact of the Recent Measurements of the Top-Quark and <math display=\"inline\"><mi>W</mi></math>-Boson Masses on Electroweak Precision Fits"
+  },
+  {
+   "arxiv": "2607.09861",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 3179893,
+   "title": "The Higgs boson through the lens of electroweak precision data"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2134693,
+   "title": "Combined effective field theory interpretation of Higgs boson and weak boson production and decay with ATLAS data and electroweak precision observables"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2514391,
+   "title": "The Study of The Standard Model Electroweak Precision Physics at Future Electron-Positron Colliders"
+  },
+  {
+   "arxiv": "2209.08078",
+   "channels": [],
+   "matched_by": "((refersto:recid:1740872 and t \"electroweak\" and (t \"Z\" or t \"precision\" or t \"FCC-ee\")) or (t \"electroweak\" and t \"precision\" and (t \"three-loop\" or t \"two-loop\" or t \"FCC-ee\")) or (t \"Z-pole\" and (t \"electroweak\" or t \"mixing angle\")) or (t \"effective weak mixing angle\")) and de > 2021-10-17",
+   "recid": 2153048,
+   "title": "Report of the Topical Group on Electroweak Precision Physics and Constraining New Physics for Snowmass 2021"
+  }
+ ],
+ "proc:dijets": [
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"dijet\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\") and (collaboration:ATLAS or collaboration:CMS) and not t search and not t resonance and not t \"diffractive\") or (t \"dijet\" and (t NNLO or t \"next-to-next-to-leading\" or t \"jet production\")) or (t \"strong coupling\" and (t dijet or t \"jet cross\"))) and de > 2023-01-01",
+   "recid": 2780445,
+   "title": "Dijet cross section in pp collisions at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13</mn><mspace width=\"0.25em\"/><mtext>TeV</mtext></math> with the CMS"
+  },
+  {
+   "arxiv": "2412.21165",
+   "channels": [],
+   "matched_by": "((t \"dijet\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\") and (collaboration:ATLAS or collaboration:CMS) and not t search and not t resonance and not t \"diffractive\") or (t \"dijet\" and (t NNLO or t \"next-to-next-to-leading\" or t \"jet production\")) or (t \"strong coupling\" and (t dijet or t \"jet cross\"))) and de > 2023-01-01",
+   "recid": 2863770,
+   "title": "Precise Determination of the Strong Coupling Constant from Dijet Cross Sections up to the Multi-TeV Range"
+  },
+  {
+   "arxiv": "2412.19694",
+   "channels": [],
+   "matched_by": "((t \"dijet\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\") and (collaboration:ATLAS or collaboration:CMS) and not t search and not t resonance and not t \"diffractive\") or (t \"dijet\" and (t NNLO or t \"next-to-next-to-leading\" or t \"jet production\")) or (t \"strong coupling\" and (t dijet or t \"jet cross\"))) and de > 2023-01-01",
+   "recid": 2863342,
+   "title": "Nonperturbative effects in triple-differential dijet and Z+jet production at the LHC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"dijet\" and (t \"cross section\" or t \"cross-section\" or t \"cross sections\") and (collaboration:ATLAS or collaboration:CMS) and not t search and not t resonance and not t \"diffractive\") or (t \"dijet\" and (t NNLO or t \"next-to-next-to-leading\" or t \"jet production\")) or (t \"strong coupling\" and (t dijet or t \"jet cross\"))) and de > 2023-01-01",
+   "recid": 2829921,
+   "title": "Elliptic Feynman integrals needed for NNLO QCD corrections to dijet production"
+  }
+ ],
+ "proc:inclusive-jets": [
+  {
+   "arxiv": "2401.11355",
+   "channels": [],
+   "matched_by": "((t \"inclusive jet\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\" and t \"cross\" and not t search) or (t \"single jet inclusive\" or (t \"inclusive jet\" and (t NNLO or t resummation or t \"next-to-next\"))) or (t \"strong coupling\" and t \"inclusive jet\") or (t \"jet\" and t \"13.6 TeV\" and t \"cross\" and (collaboration:ATLAS or collaboration:CMS) and not t search and not t \"tagging\")) and de > 2023-01-01",
+   "recid": 2750408,
+   "title": "Measurement of the double-differential inclusive jet cross section in proton-proton collisions at $ \\sqrt{s} $ = 5.02 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"inclusive jet\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\" and t \"cross\" and not t search) or (t \"single jet inclusive\" or (t \"inclusive jet\" and (t NNLO or t resummation or t \"next-to-next\"))) or (t \"strong coupling\" and t \"inclusive jet\") or (t \"jet\" and t \"13.6 TeV\" and t \"cross\" and (collaboration:ATLAS or collaboration:CMS) and not t search and not t \"tagging\")) and de > 2023-01-01",
+   "recid": 2671952,
+   "title": "Measurement and QCD analysis of double-differential inclusive jet cross sections at 13 TeV"
+  },
+  {
+   "arxiv": "2412.16665",
+   "channels": [],
+   "matched_by": "((t \"inclusive jet\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\" and t \"cross\" and not t search) or (t \"single jet inclusive\" or (t \"inclusive jet\" and (t NNLO or t resummation or t \"next-to-next\"))) or (t \"strong coupling\" and t \"inclusive jet\") or (t \"jet\" and t \"13.6 TeV\" and t \"cross\" and (collaboration:ATLAS or collaboration:CMS) and not t search and not t \"tagging\")) and de > 2023-01-01",
+   "recid": 2862527,
+   "title": "Determination of the strong coupling and its running from measurements of inclusive jet production"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"inclusive jet\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\" and t \"cross\" and not t search) or (t \"single jet inclusive\" or (t \"inclusive jet\" and (t NNLO or t resummation or t \"next-to-next\"))) or (t \"strong coupling\" and t \"inclusive jet\") or (t \"jet\" and t \"13.6 TeV\" and t \"cross\" and (collaboration:ATLAS or collaboration:CMS) and not t search and not t \"tagging\")) and de > 2023-01-01",
+   "recid": 2842404,
+   "title": "The strong coupling constant and its running from inclusive jet production at CMS"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"inclusive jet\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\" and t \"cross\" and not t search) or (t \"single jet inclusive\" or (t \"inclusive jet\" and (t NNLO or t resummation or t \"next-to-next\"))) or (t \"strong coupling\" and t \"inclusive jet\") or (t \"jet\" and t \"13.6 TeV\" and t \"cross\" and (collaboration:ATLAS or collaboration:CMS) and not t search and not t \"tagging\")) and de > 2023-01-01",
+   "recid": 3138158,
+   "title": "Determination of the strong coupling and its running from measurements of inclusive jet production at CMS"
+  },
+  {
+   "arxiv": "2410.01902",
+   "channels": [],
+   "matched_by": "((t \"inclusive jet\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\" and t \"cross\" and not t search) or (t \"single jet inclusive\" or (t \"inclusive jet\" and (t NNLO or t resummation or t \"next-to-next\"))) or (t \"strong coupling\" and t \"inclusive jet\") or (t \"jet\" and t \"13.6 TeV\" and t \"cross\" and (collaboration:ATLAS or collaboration:CMS) and not t search and not t \"tagging\")) and de > 2023-01-01",
+   "recid": 2836966,
+   "title": "Revisiting Single Inclusive Jet Production: Small-$R$ Resummation at Next-to-Leading Logarithm"
+  }
+ ],
+ "proc:t-channel-single-top": [
+  {
+   "arxiv": "2303.08814",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2642437,
+   "title": "Evaluating master integrals in non-factorizable corrections to t-channel single-top production at NNLO QCD"
+  },
+  {
+   "arxiv": "2603.13592",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3129475,
+   "title": "Measurement of the t-channel single top quark cross section in proton-proton collisions at $ \\sqrt{s}=5.02 $ TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2751525,
+   "title": "First measurement of the t-channel single top production in pp collisions at $\\sqrt{s} = 5.02$ TeV with the ATLAS experiment"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2955039,
+   "title": "Measurement of the t-channel single top quark cross section in pp collision data at sqrt(s) = 5.02 TeV"
+  },
+  {
+   "arxiv": "2510.23372",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3076420,
+   "title": "Constraints on effective field theories via quadruple-differential angular decay rates from t-channel single-top-quark production at $ \\sqrt{s}=13 $ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2512.08573",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3091282,
+   "title": "Measurement of the differential t-channel production cross-section of single top quarks and top antiquarks at <math altimg=\"si7.svg\"><mrow><msqrt><mi>s</mi></msqrt><mo linebreak=\"goodbreak\">=</mo></mrow></math>13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2310.01518",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2705679,
+   "title": "Measurement of t-channel single-top-quark production in pp collisions at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>5.02</mn></math> TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2512.09379",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3091958,
+   "title": "Probing t-channel single top-quark and antiquark production via differential cross-section measurements at <math altimg=\"si2.svg\"><mrow><msqrt><mi>s</mi></msqrt><mo linebreak=\"goodbreak\">=</mo></mrow></math>13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2202.11382",
+   "channels": [
+    "chan:t-channel-single-top/lhc-13"
+   ],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2036789,
+   "title": "Measurement of the polarisation of single top quarks and antiquarks produced in the t-channel at $ \\sqrt{s} $ = 13 TeV and bounds on the tWb dipole operator from the ATLAS experiment"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2697515,
+   "title": "Angular Distributions in t-channel Single-top Decay"
+  },
+  {
+   "arxiv": "2204.05770",
+   "channels": [
+    "chan:t-channel-single-top/lhc-13"
+   ],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2066227,
+   "title": "Non-factorisable contribution to t-channel single-top production"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2659467,
+   "title": "Non-factorisable corrections to $t$- channel single-top production: comparing results for the LHC and FCC"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2670310,
+   "title": "Measurement of $t$-Channel Single-Top-Quark Production in $pp$ Collisions at $\\sqrt{s} = 5.02$ TeV with the ATLAS Detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2827864,
+   "title": "Spinning tops: A search for new physics in t-channel single top quark production with the ATLAS detector at the LHC"
+  },
+  {
+   "arxiv": "2503.20033",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2904618,
+   "title": "Search for dark matter production in association with a single top quark in proton-proton collisions at $\\sqrt{s}$ = 13 TeV"
+  },
+  {
+   "arxiv": "2209.08990",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2153660,
+   "title": "Measurement of single top-quark production in the s-channel in proton–proton collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3068990,
+   "title": "Measurement of differential $t$-channel single top (anti)quark production cross-sections at 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3072304,
+   "title": "Probing the tW b vertex structure in t-channel single-top-quark production and decay in pp collisions at 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2508.14695",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2962610,
+   "title": "Search for the production of a Higgs boson in association with a single top quark in pp collisions at $ \\sqrt{s}=13 $ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2211.13138",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2514114,
+   "title": "Search for dark matter produced in association with a single top quark and an energetic $W$ boson in $\\sqrt{s}=$ 13 TeV $pp$ collisions with the ATLAS detector"
+  },
+  {
+   "arxiv": "2111.02860",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 1961177,
+   "title": "Inclusive and differential cross section measurements of single top quark production in association with a Z boson in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2110187,
+   "title": "Search for invisible particles produced in association with single top quarks in proton–proton collisions at $\\sqrt{s} =13$ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2610.11465",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3213833,
+   "title": "Observation of single top-quark production in the $s$-channel in proton--proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2411.12388",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2850080,
+   "title": "Measurement of the $t$-channel single top-quark production cross section at $\\sqrt{s}=13$ TeV with the ATLAS detector and interpretations of the measurement"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2672768,
+   "title": "Measurement of $t$-channel production of single top quarks and antiquarks in $pp$ collisions at 13 TeV using the full ATLAS Run 2 dataset"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2784367,
+   "title": "First $t$-channel single top measurement in $pp$ collisions at an energy in the centre-of-mass of $ \\sqrt{s}$ = 5.02 TeV with the ATLAS experiment"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3134463,
+   "title": "Measurement of single top and ttbar production cross sections in association with a photon in proton-proton \ncollisions at sqrt(s) = 13 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2071577,
+   "title": "Search for dark matter produced in association with a single top quark and an energetic $W$ boson in $\\sqrt{s}=13$ TeV ($pp$) collisions with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2818963,
+   "title": "Measurement of t-channel single top-quark production in proton-proton collisions at a center-of-mass energy of 13 TeV using the full ATLAS Run 2 dataset"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 3138181,
+   "title": "Search for the associated production of a Higgs boson and a single top quark in the $H \\to \\tau\\tau$ decay mode and combined measurement of $\\textit{tH}$ production using $\\textit{pp}$ collisions at 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2402.16561",
+   "channels": [],
+   "matched_by": "((t \"single top\" and t \"t-channel\") or (t \"single top\" and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"single top\" or t \"single-top\") and (t NNLO or t N3LO or t \"next-to-next\" or t \"third order\"))) and de > 2021-10-17",
+   "recid": 2762383,
+   "title": "Search for new particles in final states with a boosted top quark and missing transverse momentum in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  }
+ ],
+ "proc:ttbar": [
+  {
+   "arxiv": "2409.05960",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2826970,
+   "title": "Third-order correction to top-quark pair production near threshold II. Potential contributions"
+  },
+  {
+   "arxiv": "2305.09569",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2660310,
+   "title": "Electroweak radiative corrections to polarized top quark pair production"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3103675,
+   "title": "Progress on NNLO+PS predictions for top-quark pair production and decay"
+  },
+  {
+   "arxiv": "2507.11410",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2946562,
+   "title": "Towards NNLO QCD predictions for off-shell top-quark pair production and decays"
+  },
+  {
+   "arxiv": "2405.18912",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2791248,
+   "title": "Analytic NNLO QCD corrections to top quark pair production in electron-positron collisions"
+  },
+  {
+   "arxiv": "2604.27091",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3150962,
+   "title": "Measurement of the top quark pair production cross section in PbPb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=5.36 $ TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2701224,
+   "title": "Top-quark pair cross-section at $ \\sqrt{{s}}$ = 13.6 TeV with the ATLAS experiment"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2970916,
+   "title": "Measurement of the top quark pair production cross section in PbPb collisions at sqrtsNN=5.36 TeV"
+  },
+  {
+   "arxiv": "2406.03976",
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2795514,
+   "title": "Observation of quantum entanglement in top quark pair production in proton–proton collisions at $\\sqrt{s} = 13$ TeV"
+  },
+  {
+   "arxiv": "2202.02913",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2029232,
+   "title": "Two-loop infrared singularities in the production of a Higgs boson associated with a top-quark pair"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2013615,
+   "title": "Diboson and top quark pair production cross section measurements at 5.02 TeV in CMS"
+  },
+  {
+   "arxiv": "2409.14982",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2832100,
+   "title": "Search for same-charge top-quark pair production in pp collisions at $ \\sqrt{\\textrm{s}} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2202.12134",
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2037744,
+   "title": "Measurements of differential cross-sections in top-quark pair events with a high transverse momentum top quark and limits on beyond the Standard Model contributions to top-quark pair production with the ATLAS detector at $ \\sqrt{s} $ = 13 TeV"
+  },
+  {
+   "arxiv": "2510.00160",
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3006250,
+   "title": "Measurement of the dineutrino system kinematic variables in dileptonic top quark pair production in proton-proton collisions at $ \\sqrt{s}=13 $ TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2713567,
+   "title": "Observation of quantum entanglement in top-quark pair production using $pp$ collisions of $\\sqrt{s} = 13$~\\TeV\\ with the ATLAS detector"
+  },
+  {
+   "arxiv": "2110.15844",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 1955822,
+   "title": "Master integrals contributing to two-loop leading colour QCD helicity amplitudes for top-quark pair production in the gluon fusion channel"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3078982,
+   "title": "Measurement of top quark charge asymmetries in jet-associated top quark pair production at sqrts 13 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3185625,
+   "title": "Measurement of the $\\vert V_\\text{cb}\\vert$ element of the CKM matrix from top quark pair events in proton-proton collisions at $\\sqrt{s}= 13$ TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2814774,
+   "title": "Measurement of the dineutrino system kinematics in dileptonic top quark pair events in pp collisions at \\texorpdfstring{$\\sqrt{s} = 13\\,$}TeV"
+  },
+  {
+   "arxiv": "2507.05119",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2942928,
+   "title": "Search for heavy pseudoscalar and scalar bosons decaying to a top quark pair in proton–proton collisions at $\\sqrt{s} = 13\\,\\textrm{TeV}$"
+  },
+  {
+   "arxiv": "2312.15442",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2740639,
+   "title": "Reanalysis of the top-quark pair production via the e+e− annihilation near the threshold region up to N3LO QCD corrections"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2657492,
+   "title": "Leading-colour two-loop QCD corrections for top-quark pair production in association with a jet at a lepton collider"
+  },
+  {
+   "arxiv": "2111.06712",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 1967501,
+   "title": "Measurement of Higgs boson decay into $b$-quarks in associated production with a top-quark pair in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3108862,
+   "title": "Combination of ATLAS and CMS measurements of the azimuthal spin correlation variable in dilepton top quark pair events at 13 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2769324,
+   "title": "Search for heavy neutral Higgs bosons decaying to a top quark pair in 140 fb$^{-1}$ of proton-proton collision data at $\\sqrt{s}=13$ TeV"
+  },
+  {
+   "arxiv": "2404.18986",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2782461,
+   "title": "Search for heavy neutral Higgs bosons decaying into a top quark pair in 140 fb$^{−1}$ of proton-proton collision data at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": "2405.14757",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2789708,
+   "title": "Searches for violation of Lorentz invariance in top quark pair production using dilepton events in 13 TeV proton-proton collisions"
+  },
+  {
+   "arxiv": "2304.14247",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2654723,
+   "title": "Search for a new pseudoscalar decaying into a pair of muons in events with a top-quark pair at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>13</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></math> with the ATLAS detector"
+  },
+  {
+   "arxiv": "2208.12837",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2142913,
+   "title": "Search for new physics using effective field theory in 13 TeV pp collision events that contain a top quark pair and a boosted Z or Higgs boson"
+  },
+  {
+   "arxiv": "2409.11305",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2829504,
+   "title": "Measurement of top-quark pair production in association with charm quarks in proton–proton collisions at <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13</mn></math> TeV with the ATLAS detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2061253,
+   "title": "Combined searches for the production of supersymmetric top quark partners in proton-proton collisions at $\\sqrt {s}$ = 13 TeV"
+  },
+  {
+   "arxiv": "2311.03261",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2719537,
+   "title": "Search for new Higgs bosons via same-sign top quark pair production in association with a jet in proton-proton collisions at $\\sqrt{s}$ = 13 TeV"
+  },
+  {
+   "arxiv": "2211.09414",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2183196,
+   "title": "First Run 3 data/MC plots for the measurement of the top-quark pair production cross-section in pp collisions at centre-of-mass energy of 13.6 TeV with the ATLAS experiment at the LHC"
+  },
+  {
+   "arxiv": "2411.10186",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2849226,
+   "title": "Observation of <math display=\"inline\"><mrow><mi>t</mi><mover accent=\"true\"><mrow><mi>t</mi></mrow><mrow><mo stretchy=\"false\">¯</mo></mrow></mover></mrow></math> Production in Pb+Pb Collisions at <math display=\"inline\"><mrow><msqrt><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi>NN</mi></mrow></msub></mrow></msqrt><mo>=</mo><mn>5.02</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></mrow></math> with the ATLAS Detector"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3134463,
+   "title": "Measurement of single top and ttbar production cross sections in association with a photon in proton-proton \ncollisions at sqrt(s) = 13 TeV"
+  },
+  {
+   "arxiv": null,
+   "channels": [
+    "chan:ttbar/lhc-13"
+   ],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2095823,
+   "title": "Measurement of the ttbar charge asymmetry in highly boosted events in the single-lepton channel at 13 TeV"
+  },
+  {
+   "arxiv": "2512.17856",
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 3094414,
+   "title": "Search for ttbar resonances in final states with exactly one or two leptons using 140 fb$^{-1}$ of pp collision data at $\\sqrt{s}=13$ TeV with the ATLAS experiment"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "(((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (collaboration:ATLAS or collaboration:CMS) and t \"TeV\") or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\") and (t N3LO or t \"third order\" or t NNLO or t \"two-loop\" or t \"next-to-next\")) or ((t \"top quark pair\" or t \"top-quark pair\" or t \"ttbar\" or t \"t\\bar{t}\") and (t \"electroweak\" or t \"QCD-EW\" or t \"mixed QCD\"))) and de > 2021-10-17",
+   "recid": 2702726,
+   "title": "Observation of $t\\bar{t}$ production in lepton+jets and dilepton channels in $p$+Pb collisions at $\\sqrt{s_\\mathrm{NN}}=8.16\\;\\mathrm{TeV}$ with the ATLAS detector"
+  }
+ ],
+ "proc:tw": [
+  {
+   "arxiv": "2405.08023",
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2786748,
+   "title": "Inclusive and differential cross-section measurements in tW with CMS in Run 3"
+  },
+  {
+   "arxiv": "2502.18648",
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2894882,
+   "title": "Next-to-next-to-leading order threshold soft function for tW production"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2095812,
+   "title": "Measurement of inclusive and differential cross sections for single top quark production in association with a W boson at $\\sqrt{s}=13~\\mathrm{TeV}$"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 3132603,
+   "title": "Search for single production of a vector-like B' quark decaying to tW in the single-lepton final state"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2176258,
+   "title": "Inclusive and differential measurement of the single top quark cross-section in association with a W boson in the $e\\mu$ channel with CMS"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2773137,
+   "title": "Measurement of inclusive and differential cross sections for single top quark production in association with a W boson in proton-proton collisions at $\\sqrt{s}=13.6~\\mathrm{TeV}$"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2654306,
+   "title": "Measurement of inclusive and differential cross sections for single top quark production in association with a W boson in proton-proton collisions at $\\sqrt{s}= 13 \\text{ TeV}$"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2774518,
+   "title": "Measurement of inclusive and differential cross sections for single top quark production in association with a W boson in proton-proton collisions at $\\sqrt{s}$ = 13 TeV"
+  },
+  {
+   "arxiv": "2212.07190",
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2614239,
+   "title": "Complete two-loop QCD amplitudes for tW production at hadron colliders"
+  },
+  {
+   "arxiv": "2204.13500",
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2074199,
+   "title": "One-loop squared amplitudes for hadronic tW production at next-to-next-to-leading order in QCD"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2896979,
+   "title": "Searches for the rare tWZ and tWγ processes at the LHC using machine learning techniques"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2162327,
+   "title": "Search for B*$\\rightarrow $ tW with Full Run II Data at CMS"
+  },
+  {
+   "arxiv": "2510.13355",
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 3069982,
+   "title": "Search potential for b̃1→tWχ̃10 via χ̃1± at the LHC and HL-LHC, with multi-lepton signatures"
+  },
+  {
+   "arxiv": "2307.15653",
+   "channels": [
+    "chan:tw/lhc-13"
+   ],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2683250,
+   "title": "Resonance-aware NLOPS matching for off-shell $ t\\overline{t} $ + tW production with semileptonic decays"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2651015,
+   "title": "Single vector-like quark X production in the tW channel at high energy pp colliders"
+  },
+  {
+   "arxiv": "2211.13713",
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 2593385,
+   "title": "Analytic two-loop master integrals for tW production at hadron colliders. Part II"
+  },
+  {
+   "arxiv": null,
+   "channels": [],
+   "matched_by": "((t \"tW\" and (collaboration:ATLAS or collaboration:CMS or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"interference\" or t \"resummation\" or t \"soft\" or t \"cross-section\")) or (t \"single top\" and t \"association with a W\") or (t \"tW\" and (t \"cross-section\" or t \"cross section\" or t \"NLO\" or t \"NNLO\" or t \"N3LO\" or t \"QCD\" or t \"production\" or t \"LHC\"))) and de > 2021-10-17",
+   "recid": 3072304,
+   "title": "Probing the tW b vertex structure in t-channel single-top-quark production and decay in pp collisions at 13 TeV with the ATLAS detector"
   }
  ]
 }

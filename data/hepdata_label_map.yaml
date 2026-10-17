@@ -5,7 +5,7 @@
 '(?i)^(absolute|relative|flavorqcd|timepteta|jetflav|jetres|jer\b)|^sys,had$': energy_scale  # CMS JES/JER source names; HERA δ_had
 '(?i)unfold': unfolding_model
 '(?i)(bkg|background)|^sys,\$\\gamma p\$$': background  # HERA δ_γp: photoproduction background
-'(?i)pile': pileup
+'(?i)pile|purew': pileup
 '(?i)beam': beam
 '(?i)(eff|trigger|id|iso|btag)|^(ftag|pref)$': efficiency
-'(?i)^(sys|syst)(,(sys|cor|uncor))?$|^(cor|uncor)$|uncorr\. unc': syst_combined  # source gives only a combined systematic
+'(?i)^(sys|syst|systematics?)(,(sys|cor|uncor))?$|^(cor|uncor)$|uncorr\. unc': syst_combined  # source gives only a combined systematic

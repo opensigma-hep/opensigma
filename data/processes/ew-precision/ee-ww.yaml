@@ -4,10 +4,13 @@ family: "fam:ew-precision"
 sector: SM
 description: "Production of W-boson pairs in e⁺e⁻ annihilation above threshold, e⁺e⁻ → W⁺W⁻ → 4 fermions, studied at LEP 2 (√s = 161–209 GeV). The total and differential cross sections test the non-abelian gauge cancellations between the t-channel ν exchange and the s-channel γ/Z exchange, and the threshold cross section gives m_W. The LEP 2 benchmark theory is the O(α) double-pole approximation (RACOONWW, YFSWW3); the complete O(α) electroweak calculation for charged-current e⁺e⁻ → 4f is the most accurate prediction, and is needed at the precision of future e⁺e⁻ colliders."
 watch:
-  recids: [1219330, 529378, 529590, 676264, 682093]
+  recids: []
   queries:
-    - 't "W-pair" and t "e+ e-" and (t "electroweak corrections" or t "NNLO" or t "threshold")'
-    - 't "W pair production" and (t "FCC-ee" or t "linear collider" or t "LEP") and t "cross section"'
+    - 't "W pair production" and t "lepton colliders"'
+    - 't "W-pair production" and t "electron-positron"'
+    - 't "W-boson pair production" and t "lepton colliders"'
+    - 't "e+ e-" and t "W+ W-"'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO EW"
     cells:
@@ -39,7 +42,7 @@ channels:
     collider: "col:lep2"
     initial_state: "e⁺e⁻"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-17"
     headline: {observable: "obs:ee-ww/lep2/sigma-ww", region: "√s = 206.6 GeV, CC03 W-pair signal, SM W branching fractions assumed"}
     measurements:
       - id: "meas:ee-ww/lep2/lep-2013-combination"
@@ -82,3 +85,224 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: 6d76a756, ref: "inspire:1219330", locator: "Sec. 5.2.1, Fig. 5.1 and Table E.4 (YFSWW 17.145 pb, RACOONWW 17.087 pb at 206.6 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-16"}
+      - id: "obs:ee-ww/lep2/sigma-ww-182.7"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 182.7 GeV"
+        kind: total
+        variable: "σ_WW at √s = 182.7 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 2.1, provenance: {uid: d624a612, ref: "inspire:1219330", locator: "Table E.2, √s = 182.7 GeV: σ_WW = 15.92 ± 0.33 (stat) ± 0.11 (syst) pb, total ±0.34 pb; 0.34/15.92", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                provenance: {uid: 332400f1, ref: "inspire:1219330", locator: "Table E.2, √s = 182.7 GeV: ±0.33 pb (stat) of 15.92 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
+                size: {range: [0.69, 0.69], unit: "%", asymmetric: false}
+                provenance: {uid: d2f76b88, ref: "inspire:1219330", locator: "Table E.2, √s = 182.7 GeV: ±0.11 pb (syst) of 15.92 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: 2a0197e9, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 15.361 pb, RACOONWW 15.368 pb at 182.7 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-188.6"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 188.6 GeV"
+        kind: total
+        variable: "σ_WW at √s = 188.6 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 1.3, provenance: {uid: 3f511a1a, ref: "inspire:1219330", locator: "Table E.2, √s = 188.6 GeV: σ_WW = 16.05 ± 0.18 (stat) ± 0.1 (syst) pb, total ±0.21 pb; 0.21/16.05", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [1.1, 1.1], unit: "%", asymmetric: false}
+                provenance: {uid: 1e1eb6c7, ref: "inspire:1219330", locator: "Table E.2, √s = 188.6 GeV: ±0.18 pb (stat) of 16.05 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
+                size: {range: [0.62, 0.62], unit: "%", asymmetric: false}
+                provenance: {uid: 8d1be9e5, ref: "inspire:1219330", locator: "Table E.2, √s = 188.6 GeV: ±0.1 pb (syst) of 16.05 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: f6c99ccb, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 16.266 pb, RACOONWW 16.249 pb at 188.6 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-191.6"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 191.6 GeV"
+        kind: total
+        variable: "σ_WW at √s = 191.6 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 2.9, provenance: {uid: a7782faa, ref: "inspire:1219330", locator: "Table E.2, √s = 191.6 GeV: σ_WW = 16.42 ± 0.46 (stat) ± 0.1 (syst) pb, total ±0.47 pb; 0.47/16.42", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [2.8, 2.8], unit: "%", asymmetric: false}
+                provenance: {uid: c1fdf6f9, ref: "inspire:1219330", locator: "Table E.2, √s = 191.6 GeV: ±0.46 pb (stat) of 16.42 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
+                size: {range: [0.61, 0.61], unit: "%", asymmetric: false}
+                provenance: {uid: 28d03db2, ref: "inspire:1219330", locator: "Table E.2, √s = 191.6 GeV: ±0.1 pb (syst) of 16.42 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: a9308a23, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 16.568 pb, RACOONWW 16.519 pb at 191.6 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-195.5"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 195.5 GeV"
+        kind: total
+        variable: "σ_WW at √s = 195.5 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 1.7, provenance: {uid: 2a6d3eea, ref: "inspire:1219330", locator: "Table E.2, √s = 195.5 GeV: σ_WW = 16.99 ± 0.28 (stat) ± 0.1 (syst) pb, total ±0.29 pb; 0.29/16.99", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
+                provenance: {uid: ece4c685, ref: "inspire:1219330", locator: "Table E.2, √s = 195.5 GeV: ±0.28 pb (stat) of 16.99 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
+                size: {range: [0.59, 0.59], unit: "%", asymmetric: false}
+                provenance: {uid: e088411a, ref: "inspire:1219330", locator: "Table E.2, √s = 195.5 GeV: ±0.1 pb (syst) of 16.99 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: 742dd669, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 16.841 pb, RACOONWW 16.801 pb at 195.5 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-199.5"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 199.5 GeV"
+        kind: total
+        variable: "σ_WW at √s = 199.5 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 1.7, provenance: {uid: 03eafc18, ref: "inspire:1219330", locator: "Table E.2, √s = 199.5 GeV: σ_WW = 16.77 ± 0.27 (stat) ± 0.1 (syst) pb, total ±0.29 pb; 0.29/16.77", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
+                provenance: {uid: f9b097d9, ref: "inspire:1219330", locator: "Table E.2, √s = 199.5 GeV: ±0.27 pb (stat) of 16.77 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
+                size: {range: [0.6, 0.6], unit: "%", asymmetric: false}
+                provenance: {uid: afe345ec, ref: "inspire:1219330", locator: "Table E.2, √s = 199.5 GeV: ±0.1 pb (syst) of 16.77 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: 96747fea, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 17.017 pb, RACOONWW 16.979 pb at 199.5 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-201.6"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 201.6 GeV"
+        kind: total
+        variable: "σ_WW at √s = 201.6 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 2.4, provenance: {uid: c9dadc0a, ref: "inspire:1219330", locator: "Table E.2, √s = 201.6 GeV: σ_WW = 16.98 ± 0.39 (stat) ± 0.1 (syst) pb, total ±0.4 pb; 0.4/16.98", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [2.3, 2.3], unit: "%", asymmetric: false}
+                provenance: {uid: e22af7d5, ref: "inspire:1219330", locator: "Table E.2, √s = 201.6 GeV: ±0.39 pb (stat) of 16.98 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
+                size: {range: [0.59, 0.59], unit: "%", asymmetric: false}
+                provenance: {uid: defc60a4, ref: "inspire:1219330", locator: "Table E.2, √s = 201.6 GeV: ±0.1 pb (syst) of 16.98 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            total: {value_pct: 0.4, provenance: {uid: 853a90c0, ref: "inspire:1219330", locator: "Sec. 5.2.1, text after Table 5.2: LPA/DPA theoretical uncertainty about 0.4% at centre-of-mass energies larger than 200 GeV", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: f9c0a069, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 17.076 pb, RACOONWW 17.032 pb at 201.6 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-204.9"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 204.9 GeV"
+        kind: total
+        variable: "σ_WW at √s = 204.9 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 1.7, provenance: {uid: 2d00377d, ref: "inspire:1219330", locator: "Table E.2, √s = 204.9 GeV: σ_WW = 16.81 ± 0.27 (stat) ± 0.1 (syst) pb, total ±0.29 pb; 0.29/16.81", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
+                provenance: {uid: a9824722, ref: "inspire:1219330", locator: "Table E.2, √s = 204.9 GeV: ±0.27 pb (stat) of 16.81 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: syst_combined
+                specific: "Total systematic (LEP-correlated and uncorrelated components; theory on signal, background and luminosity, detector effects)"
+                size: {range: [0.59, 0.59], unit: "%", asymmetric: false}
+                provenance: {uid: f270cea5, ref: "inspire:1219330", locator: "Table E.2, √s = 204.9 GeV: ±0.1 pb (syst) of 16.81 pb; groupings in Table 5.2", source: agent, status: agent-draft, date: "2026-10-17"}
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            total: {value_pct: 0.4, provenance: {uid: f42bf810, ref: "inspire:1219330", locator: "Sec. 5.2.1, text after Table 5.2: LPA/DPA theoretical uncertainty about 0.4% at centre-of-mass energies larger than 200 GeV", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: e06c50de, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 17.128 pb, RACOONWW 17.079 pb at 204.9 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-161.3"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 161.3 GeV"
+        kind: total
+        variable: "σ_WW at √s = 161.3 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 12.0, provenance: {uid: e167e76d, ref: "inspire:1219330", locator: "Table 5.3, LEP column, √s = 161.3 GeV: σ_WW = 3.69 ± 0.45 pb; 0.45/3.69", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties: []
+        predictions:
+          - label: "Improved Born approximation near threshold (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: LO
+              approximations: ["improved Born approximation in the threshold region"]
+            codes: ["YFSWW3", "RACOONWW"]
+            total: {value_pct: 2, provenance: {uid: 7726dc69, ref: "inspire:1219330", locator: "Sec. 5.2.1, text after Table 5.2: larger theoretical uncertainty of 2% assigned in the threshold region", source: agent, status: agent-draft, date: "2026-10-17"}}
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: 6d564449, ref: "inspire:1219330", locator: "Sec. 5.2.1 and Fig. 5.1 (predictions compared with LEP data between 155 and 215 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+      - id: "obs:ee-ww/lep2/sigma-ww-172.1"
+        name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 172.1 GeV"
+        kind: total
+        variable: "σ_WW at √s = 172.1 GeV, SM W branching fractions assumed"
+        results:
+          - measurement: "meas:ee-ww/lep2/lep-2013-combination"
+            total: {value_pct: 5.8, provenance: {uid: c65ffb46, ref: "inspire:1219330", locator: "Table 5.3, LEP column, √s = 172.1 GeV: σ_WW = 12.0 ± 0.7 pb; 0.7/12.0", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties: []
+        predictions:
+          - label: "O(α) double-pole approximation (YFSWW3 / RACOONWW), as compared by LEP"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["leading/double-pole approximation to O(α) (LPA/DPA) above 170 GeV"]
+            codes: ["YFSWW3", "RACOONWW"]
+            compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
+            refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
+            provenance: {uid: b63a4108, ref: "inspire:1219330", locator: "Sec. 5.2.1 and Fig. 5.1 (predictions compared with LEP data between 155 and 215 GeV, mW = 80.35 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}

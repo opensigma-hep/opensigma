@@ -4,11 +4,12 @@ family: "fam:jets-alphas"
 sector: SM
 description: "Inclusive dijet production, pp/pp̄ → jj + X, measured as a function of the dijet invariant mass mjj and a rapidity variable (|y|max, y* or the boost y_b). Sensitive to the gluon PDF and αs over a wide range of scales; known at NNLO QCD (leading and full colour) with NLO weak and non-perturbative corrections applied multiplicatively."
 watch:
-  recids: [3095511, 2741343, 1601511, 1736275, 2070536]
+  recids: []
   queries:
-    - 't "dijet" and t "cross section" and (collaboration:ATLAS or collaboration:CMS) and t "13 TeV" and not t "search"'
-    - 't "dijet" and (t NNLO or t "next-to-next-to-leading") and t "jet production"'
-    - 't "strong coupling" and t dijet'
+    - 't "dijet" and (t "cross section" or t "cross-section" or t "cross sections") and (collaboration:ATLAS or collaboration:CMS) and not t search and not t resonance and not t "diffractive"'
+    - 't "dijet" and (t NNLO or t "next-to-next-to-leading" or t "jet production")'
+    - 't "strong coupling" and (t dijet or t "jet cross")'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -200,3 +201,154 @@ channels:
             refs: ["inspire:846483"]
             provenance: {uid: 31474e1d, ref: "inspire:846483", locator: "Text before Tables I–VI (NLO prediction computed with fastNLO based on NLOJET++ for MSTW2008NLO PDFs, αs(MZ) = 0.120, corrected for hadronization and underlying event)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
+  - id: "chan:dijets/lhc-7"
+    collider: "col:lhc-7"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:dijets/lhc-7/d2sigma-mjj-y", region: "y* < 0.5 (ATLAS anti-kt R = 0.4, mjj 1.06–1.18 TeV) / |y|max < 0.5 (CMS anti-kT R = 0.7, mjj 944–1181 GeV)"}
+    measurements:
+      - id: "meas:dijets/lhc-7/atlas-2013"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 4.5 fb⁻¹ (2011), anti-kt R = 0.4 (R = 0.6 also published)"
+        ref: "inspire:1268975"
+        hepdata: "hepdata:ins1268975/Table 1"
+      - id: "meas:dijets/lhc-7/cms-2012"
+        experiment: "CMS"
+        dataset: "7 TeV, 5.0 fb⁻¹ (2011), anti-kT R = 0.7"
+        ref: "inspire:1208923"
+        hepdata: "hepdata:ins1208923/Table 6"
+    observables:
+      - id: "obs:dijets/lhc-7/d2sigma-mjj-y"
+        name: "Dijet d²σ/dmjj dy (anti-kt R = 0.4 for ATLAS, anti-kT R = 0.7 for CMS; y = y* for ATLAS, |y|max for CMS)"
+        kind: differential
+        variable: "mjj, y* (ATLAS) / |y|max (CMS)"
+        results:
+          - measurement: meas:dijets/lhc-7/atlas-2013
+            total:
+              value_pct: 5.9
+              provenance:
+                uid: c849ed5b
+                ref: hepdata:ins1268975/Table 1
+                locator: Table 1, quadrature sum of all errors (bin 11)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.5
+                    - 14.0
+                  asymmetric: false
+                full_table: hepdata:ins1268975/Table 1
+                provenance:
+                  uid: b06f2da5
+                  ref: hepdata:ins1268975/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 0.0
+                    - 21.0
+                  asymmetric: true
+                full_table: hepdata:ins1268975/Table 1
+                provenance:
+                  uid: 28c22f9c
+                  ref: hepdata:ins1268975/Table 1
+                  locator: Table 1, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+          - measurement: meas:dijets/lhc-7/cms-2012
+            total:
+              value_pct: 6.1
+              provenance:
+                uid: ddabfc2c
+                ref: hepdata:ins1208923/Table 6
+                locator: Table 6, quadrature sum of all errors (bin 6)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-17'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.93
+                    - 64.0
+                  asymmetric: false
+                full_table: hepdata:ins1208923/Table 6
+                provenance:
+                  uid: e87ca28f
+                  ref: hepdata:ins1208923/Table 6
+                  locator: Table 6, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 5.6
+                    - 17.0
+                  asymmetric: true
+                full_table: hepdata:ins1208923/Table 6
+                provenance:
+                  uid: b0dc3b9b
+                  ref: hepdata:ins1208923/Table 6
+                  locator: Table 6, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-17'
+        predictions:
+          - label: "NLO QCD (NLOJET++/APPLGRID), μ = pT^max exp(0.3y*), ⊗ NP ⊗ NLO EW"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["NP corrections (PYTHIA 6.425 AUET2B) and EW corrections (tree-level O(αsα, α²) and weak loops O(αs²α)) applied multiplicatively"]
+            codes: ["NLOJET++", "APPLGRID"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation (hard-scatter and hadronisation factorisation scales)"
+                method: "μR and μF varied by a factor of 2 with all permutations except opposite variations; maximal deviation"
+                size: {range: [5, 15], unit: "%", asymmetric: true}
+                provenance: {uid: 6982f12e, ref: "inspire:1268975", locator: "Sec. 6.2 (scale uncertainty generally within +5%/−15% for the R = 0.4 calculation, ±10% for R = 0.6)", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: alphas
+                specific: "αS uncertainty"
+                size: {range: [4, 4], unit: "%", asymmetric: false}
+                provenance: {uid: 7af2ecf9, ref: "inspire:1268975", locator: "Sec. 6.2 (uncertainties from αS approximately ±4% across all dijet-mass and y* ranges)", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: nonpert
+                specific: "NP correction uncertainty"
+                method: "maximal deviation among PYTHIA AUET2B (CTEQ6L1) and HERWIG++ UE-EE-3 (MRST LO**, CTEQ6L1) plus statistical uncertainty of the nominal sample"
+                size: {range: [1, 5], unit: "%", asymmetric: false}
+                provenance: {uid: b677b801, ref: "inspire:1268975", locator: "Sec. 6.2 (increases from 1% for y* < 0.5 up to 5% for larger y*)", source: agent, status: agent-draft, date: "2026-10-17"}
+            compared_to: ["meas:dijets/lhc-7/atlas-2013"]
+            refs: ["inspire:1268975"]
+            provenance: {uid: 7c048a2e, ref: "inspire:1268975", locator: "Secs. 6.1–6.2 (NLOJet++ with APPLGRID, CT10/HERAPDF1.5/epATLJet13/MSTW2008/NNPDF2.1/NNPDF2.3/ABM11, μR = μF = pT^max exp(0.3y*); NP and EW corrections)", source: agent, status: agent-draft, date: "2026-10-17"}
+            headline: true
+          - label: "NLO QCD (NLOJet++/fastNLO), NNPDF2.1 NLO, μ = pT^ave, ⊗ NP"
+            accuracy:
+              qcd: NLO
+              approximations: ["NP corrections applied (average of PYTHIA 6 Z2 and HERWIG++ 2.4.2); no EW correction"]
+            codes: ["NLOJET++", "fastNLO"]
+            uses_amplitudes: ["amp:1L/2to2-partons"]
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "six-point (μF/μ, μR/μ) variation by factors 1/2 and 2; maximum deviation"
+                size: {range: [5, 10], unit: "%", asymmetric: false, regions: [{where: "outer |y|max bins and high dijet mass", value: "±40"}]}
+                provenance: {uid: 4aef3672, ref: "inspire:1208923", locator: "Sec. 6.2 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high dijet masses and jet pT)", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: alphas
+                specific: "αS(MZ) ± 0.001"
+                size: {range: [1, 2], unit: "%", asymmetric: false}
+                provenance: {uid: 0739aaad, ref: "inspire:1208923", locator: "Sec. 6.2 (variation of αS(MZ) by ±0.001 introduces an additional 1–2% uncertainty)", source: agent, status: agent-draft, date: "2026-10-17"}
+            compared_to: ["meas:dijets/lhc-7/cms-2012"]
+            refs: ["inspire:1208923"]
+            provenance: {uid: 14306cbb, ref: "inspire:1208923", locator: "Sec. 6 (NLOJet++ 2.0.1 in fastNLO 1.4, μR = μF = average pT of the two jets, CT10/MSTW2008NLO/NNPDF2.1/HERAPDF1.5/ABKM09; NP corrections of Sec. 6.3)", source: agent, status: agent-draft, date: "2026-10-17"}

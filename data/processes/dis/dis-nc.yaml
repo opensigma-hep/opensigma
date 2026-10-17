@@ -4,11 +4,13 @@ family: "fam:dis"
 sector: SM
 description: "Inclusive neutral-current deep inelastic scattering of electrons or positrons on protons through γ/Z exchange, e±p → e± X. The reduced cross section is expressed through the structure functions F2, FL and xF3; the HERA measurements span six orders of magnitude in Q² and x and are the backbone of proton-PDF fits (HERAPDF2.0) and of αs determinations from scaling violations. Massless QCD coefficient functions are known to third order for F2 and FL."
 watch:
-  recids: [1377206, 681335, 663841, 2762925, 2109062]
+  recids: []
   queries:
-    - 't "deep inelastic" and t "neutral current" and (t HERA or t H1 or t ZEUS)'
-    - 't "structure function" and (t N3LO or t "third order" or t "three-loop") and t "deep-inelastic"'
-    - 't "electroweak" and t "radiative corrections" and t "deep inelastic" and t "neutral current"'
+    - 'refersto:recid:1377206 and (t "deep inelastic" or t "deep-inelastic") and (t "structure function" or t "neutral current" or t inclusive or t benchmark)'
+    - 'refersto:recid:681335 and (t "deep inelastic" or t "deep-inelastic") and (t "structure function" or t N3LO or t "high orders" or t benchmark or t module)'
+    - 'refersto:recid:1377206 and t "electron-ion collider" and (t inclusive or t "electron-proton")'
+    - 't "deep inelastic" and t "neutral current" and t "electroweak" and t "radiative corrections"'
+  last_run: '2026-10-16'
 building_blocks:
   - row: "NLO QCD"
     cells:
@@ -120,3 +122,56 @@ channels:
             accuracy: {qcd: N3LO, approximations: ["massless quarks", "photon exchange only", "F2 and FL only"]}
             refs: ["inspire:681335", "inspire:663841"]
             provenance: {uid: d059a2c9, ref: "inspire:681335", locator: "Abstract (full three-loop coefficient functions for F2 and FL; third-order coefficient functions for F2 are the dominant part of the N3LO corrections at not too small x)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - id: "chan:dis-nc/eic"
+    collider: "col:eic"
+    initial_state: "e±p"
+    coverage: partial
+    last_reviewed: "2026-10-17"
+    headline: {observable: "obs:dis-nc/eic/sigma-r-proj", region: "unpolarised NC e±p reduced cross section, all (x, Q²) bins, optimistic systematics scenario, 10 fb⁻¹ per beam-energy setting"}
+    measurements:
+      - id: "meas:dis-nc/eic/yr-proj"
+        experiment: "EIC"
+        dataset: "EIC Yellow Report projection: unpolarised NC e±p pseudo-data (DJANGOH), 10 fb⁻¹, e.g. 18×275 GeV, optimistic systematics scenario"
+        ref: "arXiv:2103.05419"
+        projected: true
+        projection_source: {ref: "arXiv:2103.05419", date: "2021-03-08"}
+        assumptions: "Optimistic scenario: ≈1.5% uncorrelated (point-to-point) and ≈2.5% normalisation systematic uncertainty (conservative: 2.3% and 4.3%); statistical uncertainty 0.01-0.35% for 10 fb⁻¹; an additional 2% for y < 0.01 bins (YR Sec. 10.5, Table 10.5)"
+      - id: "meas:dis-nc/eic/early-science-proj"
+        experiment: "EIC"
+        dataset: "EIC early-science projection: inclusive electron-proton pseudo-data, two or three beam-energy configurations (10×250, 10×130, 5×130 GeV; 1 fb⁻¹ each), conservative systematics scenario"
+        ref: "arXiv:2602.00860"
+        projected: true
+        projection_source: {ref: "arXiv:2602.00860", date: "2026-01-31"}
+        assumptions: "Central values from HERAPDF2.0 NNLO smeared by the projected uncertainties; point-to-point systematic 1.9% (1% radiative corrections, 1.6% other, in quadrature) degrading as 1/y at low y, normalisation 3.4% uncorrelated between beam-energy configurations; statistical uncertainty negligible except at the largest x and Q² (Sec. 2)"
+    observables:
+      - id: "obs:dis-nc/eic/sigma-r-proj"
+        name: "Reduced NC cross section σr,NC(x, Q²), e±p, EIC projection"
+        kind: pseudo
+        variable: "x, Q²; relative total uncertainty per (x, Q²) point"
+        results:
+          - measurement: "meas:dis-nc/eic/yr-proj"
+            total: {value_pct: 3.0, provenance: {uid: cbf060f7, ref: "arXiv:2103.05419", locator: "Sec. 10.5, 'Inclusive Processes Systematics': ≈1.5% uncorrelated and ≈2.5% normalisation 'gives a total uncertainty on each point of ≈ 3%' (optimistic scenario); Table 10.5", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical (10 fb⁻¹)"
+                size: {range: [0.01, 0.35], asymmetric: false}
+                provenance: {uid: '593516e5', ref: "arXiv:2103.05419", locator: "Table 10.5, 'Statistics (10 fb⁻¹)', point-to-point 0.01-0.35%", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: other
+                specific: "Point-to-point systematics (radiative corrections, acceptance, bin migration, trigger and tracking efficiency; optimistic-conservative)"
+                size: {range: [1.5, 2.3], asymmetric: false}
+                provenance: {uid: 1147b392, ref: "arXiv:2103.05419", locator: "Table 10.5, point-to-point 'Total' 1.5-2.3% (2.5-3% for y < 0.01)", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: other
+                specific: "Normalisation (luminosity, electron purity, detector effects; optimistic-conservative)"
+                size: {range: [2.5, 4.3], asymmetric: false}
+                provenance: {uid: b19c36af, ref: "arXiv:2103.05419", locator: "Table 10.5, normalisation 'Total' 2.5-4.3%", source: agent, status: agent-draft, date: "2026-10-17"}
+          - measurement: "meas:dis-nc/eic/early-science-proj"
+            total: {value_pct: 3.9, provenance: {uid: c515692d, ref: "arXiv:2602.00860", locator: "Sec. 2: point-to-point 1.9% plus normalisation 3.4% 'the total systematic uncertainty attributed to each data point is 3.9 %'; statistical uncertainty for 1 fb⁻¹ negligible except at the largest x and Q²", source: agent, status: agent-draft, date: "2026-10-17"}}
+            uncertainties:
+              - category: other
+                specific: "Point-to-point systematics (1% radiative corrections, 1.6% bin migration, efficiency, background)"
+                size: {range: [1.9, 1.9], asymmetric: false}
+                provenance: {uid: f3a115f6, ref: "arXiv:2602.00860", locator: "Sec. 2: 'point-to-point uncorrelated systematic uncertainty of 1.9%' (degrades as 1/y at low y, Sec. 5)", source: agent, status: agent-draft, date: "2026-10-17"}
+              - category: other
+                specific: "Normalisation (luminosity 1.5%, electron purity and detector efficiency 3%)"
+                size: {range: [3.4, 3.4], asymmetric: false}
+                provenance: {uid: 70279b66, ref: "arXiv:2602.00860", locator: "Sec. 2: 'A normalisation uncertainty of 3.4% is also included for each data set'", source: agent, status: agent-draft, date: "2026-10-17"}
