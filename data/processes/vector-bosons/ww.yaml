@@ -89,7 +89,7 @@ channels:
                 ref: inspire:2923238
                 locator: 'Sec. 9.1: σ_total = 127 ± 1 (stat.) ± 4 (syst.) ± 1 (lumin.) pb, components added in quadrature (4.2 pb); the abstract quotes 127 ± 4 pb'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             uncertainties:
               - category: stat
@@ -105,7 +105,7 @@ channels:
                   ref: inspire:2923238
                   locator: 'Sec. 9.1: ± 1 (stat.) of 127 pb'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: syst_combined
                 specific: Experimental and theory systematics excluding luminosity (combined)
@@ -120,7 +120,7 @@ channels:
                   ref: inspire:2923238
                   locator: 'Sec. 9.1: ± 4 (syst.) of 127 pb'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: lumi
                 specific: Integrated luminosity
@@ -135,7 +135,7 @@ channels:
                   ref: inspire:2923238
                   locator: 'Sec. 9.1: ± 1 (lumin.) of 127 pb'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
         predictions:
           - label: "NNLO QCD qq̄ + NLO gg→WW + NLO EW (CMS)"
@@ -169,7 +169,7 @@ channels:
                 ref: inspire:2923238
                 locator: 'Fig. 9 legend: MATRIX 2.1 nNNLO QCD ⊗ NLO EW = 123 ± 1 (PDF) ± 2 (scale) pb; PDF and scale added in quadrature (caption: inner/outer band)'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-13/atlas-2025-fid
@@ -183,7 +183,7 @@ channels:
               ref: inspire:2923238
               locator: Sec. 8 (Matrix 2.1 prediction paragraphs) and Fig. 9
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
           - label: NNLO + NNLL threshold resummation (on-shell W pairs, NNPDF3.0)
             accuracy:
@@ -210,7 +210,7 @@ channels:
                   ref: inspire:2933960
                   locator: 'Table 3, row NNLO+NNLL, 13.0 TeV column: 114.378 pb +1.75% −1.58%'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
             refs:
               - inspire:2933960
@@ -219,7 +219,7 @@ channels:
               ref: inspire:2933960
               locator: 'Table 3 (total cross section from integrating the invariant-mass distribution, Qmin = 2 mW to √S), row NNLO+NNLL, 13.0 TeV column: 114.378 pb; PDF uncertainty only tabulated for the mass distribution (Table 2)'
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
       - id: "obs:ww/lhc-13/sigma-fid-0jet"
         name: "Fiducial σ(pp → W⁺W⁻ → eμνν), jet veto 35 GeV"
@@ -379,7 +379,7 @@ channels:
                 ref: 'hepdata:ins2923238/Meas. 1: Fiducial cross section'
                 locator: "Meas. 1, column 'MATRIX nNNLO QCD x NLO EW NNPDF3.1': 686.83 fb, scale ± 14.427 fb, PDF ± 6.9387 fb; scale and PDF added in quadrature (16.0 fb)"
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             uncertainties:
               - category: MHOU
@@ -396,7 +396,7 @@ channels:
                   ref: 'hepdata:ins2923238/Meas. 1: Fiducial cross section'
                   locator: Meas. 1, column 'MATRIX nNNLO QCD x NLO EW NNPDF3.1', scale ± 14.427 of 686.83 fb
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: PDF
                 specific: NNPDF3.1 luxQED replicas
@@ -412,7 +412,7 @@ channels:
                   ref: 'hepdata:ins2923238/Meas. 1: Fiducial cross section'
                   locator: Meas. 1, column 'MATRIX nNNLO QCD x NLO EW NNPDF3.1', PDF ± 6.9387 of 686.83 fb
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-13/atlas-2025-fid
@@ -426,7 +426,7 @@ channels:
               ref: inspire:2923238
               locator: Sec. 8, Table 6 and Meas. 1 (best available prediction of the integrated fiducial cross-section)
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
             headline: true
       - id: obs:ww/lhc-13/mll
@@ -495,7 +495,7 @@ channels:
                 ref: 'hepdata:ins2923238/Meas. 6: $m_{e\mu}$'
                 locator: "Meas. 6, column 'MATRIX nNNLO QCD x NLO EW', bin 1 (85 < m(eμ) < 95 GeV): 8.1717 fb/GeV, scale ± 0.17814, PDF ± 0.1283; added in quadrature"
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-13/atlas-2025-fid
@@ -509,7 +509,7 @@ channels:
               ref: inspire:2923238
               locator: Sec. 8 and Fig. 10–12 (differential comparison with MATRIX nNNLO QCD ⊗ NLO EW)
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
   - id: chan:ww/lhc-13.6
     collider: col:lhc-13.6
@@ -569,7 +569,7 @@ channels:
                   ref: hepdata:ins2796231/Main result
                   locator: Main result, error 'Systematic uncertainty'; category 'syst_combined' assigned by hand (label not in hepdata_label_map)
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: lumi
                 specific: Luminosity uncertainty
@@ -605,7 +605,7 @@ channels:
                 ref: inspire:2796231
                 locator: 'Introduction: MATRIX v2.1.0 at NNLO QCD and NLO EW, 125.8 ± 3.9 pb (QCD scales and PDFs), NNPDF3.0'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-13.6/cms-2024-tot
@@ -618,7 +618,7 @@ channels:
               ref: inspire:2796231
               locator: Introduction, theory paragraph (MATRIX v2.1.0 refs. [13, 14] therein)
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
             headline: true
           - label: NNLO + NNLL threshold resummation (on-shell W pairs, NNPDF3.0)
@@ -646,7 +646,7 @@ channels:
                   ref: inspire:2933960
                   locator: 'Table 3, row NNLO+NNLL, 13.6 TeV column: 121.367 pb +1.77% −1.6%'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
             refs:
               - inspire:2933960
@@ -655,7 +655,7 @@ channels:
               ref: inspire:2933960
               locator: 'Table 3 (total cross section from integrating the invariant-mass distribution, Qmin = 2 mW to √S), row NNLO+NNLL, 13.6 TeV column: 121.367 pb; PDF uncertainty only tabulated for the mass distribution (Table 2)'
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
     last_reviewed: "2026-10-17"
   - id: chan:ww/lhc-8
@@ -777,7 +777,7 @@ channels:
                   ref: hepdata:ins1382594/Table 1
                   locator: Table 1, error 'exp'; category 'syst_combined' assigned by hand (label not in hepdata_label_map)
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: acceptance_extrapolation
                 specific: theo
@@ -792,7 +792,7 @@ channels:
                   ref: hepdata:ins1382594/Table 1
                   locator: Table 1, error 'theo'; category 'acceptance_extrapolation' assigned by hand (label not in hepdata_label_map)
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: lumi
                 specific: lumi
@@ -825,7 +825,7 @@ channels:
                 ref: inspire:1382594
                 locator: 'Introduction and Sec. 7, Eq. (2) discussion: σ_NNLO(pp → W+W−) = 59.8 +1.3 −1.1 pb; larger side of the asymmetric band'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-8/cms-2016-tot
@@ -837,7 +837,7 @@ channels:
               ref: inspire:1382594
               locator: Introduction (σ_NNLO = 59.8 +1.3 −1.1 pb, their ref. [6])
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
             headline: true
           - label: NNLO QCD (qq̄ at O(αs²), non-resonant gg at LO, H → WW at O(αs⁴)), ATLAS
@@ -856,7 +856,7 @@ channels:
                 ref: inspire:1426515
                 locator: 'Table 9 (σ(NNLO_tot) = 63.2 +1.6 −1.4 (scale) ± 1.2 (PDF) pb); Sec. 9.1: scale and PDF added linearly, larger scale side: 1.6 + 1.2 = 2.8 pb'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-8/atlas-2016-tot
@@ -868,7 +868,7 @@ channels:
               ref: inspire:1426515
               locator: Sec. 9.1 and Table 9 (their refs. [3] and [46])
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
           - label: NNLO + NNLL threshold resummation (on-shell W pairs, NNPDF3.0)
             accuracy:
@@ -895,7 +895,7 @@ channels:
                   ref: inspire:2933960
                   locator: 'Table 3, row NNLO+NNLL, 8.0 TeV column: 57.185 pb +1.57% −1.45%'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
             refs:
               - inspire:2933960
@@ -904,7 +904,7 @@ channels:
               ref: inspire:2933960
               locator: 'Table 3 (total cross section from integrating the invariant-mass distribution, Qmin = 2 mW to √S), row NNLO+NNLL, 8.0 TeV column: 57.185 pb; PDF uncertainty only tabulated for the mass distribution (Table 2)'
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
     last_reviewed: "2026-10-17"
   - id: chan:ww/lhc-7
@@ -955,7 +955,7 @@ channels:
                   ref: hepdata:ins1190187/Table 3
                   locator: Table 3, error 'stat' (2.0 of 51.9 pb)
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: syst_combined
                 specific: sys_1 (combined systematic excluding luminosity)
@@ -971,7 +971,7 @@ channels:
                   ref: hepdata:ins1190187/Table 3
                   locator: Table 3, error 'sys_1' (3.9 of 51.9 pb)
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: lumi
                 specific: sys_2 (luminosity)
@@ -987,7 +987,7 @@ channels:
                   ref: hepdata:ins1190187/Table 3
                   locator: Table 3, error 'sys_2' (2.0 of 51.9 pb)
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
           - measurement: meas:ww/lhc-7/cms-2013-tot
             total:
@@ -997,7 +997,7 @@ channels:
                 ref: inspire:1237104
                 locator: 'Sec. 6: σ = 52.4 ± 2.0 (stat.) ± 4.5 (syst.) ± 1.2 (lum.) pb, added in quadrature (5.1 pb)'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             uncertainties:
               - category: stat
@@ -1013,7 +1013,7 @@ channels:
                   ref: inspire:1237104
                   locator: 'Results: ± 2.0 (stat.) of 52.4 pb'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: syst_combined
                 specific: Systematics excluding luminosity (combined)
@@ -1028,7 +1028,7 @@ channels:
                   ref: inspire:1237104
                   locator: 'Results: ± 4.5 (syst.) of 52.4 pb'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
               - category: lumi
                 specific: Integrated luminosity
@@ -1043,7 +1043,7 @@ channels:
                   ref: inspire:1237104
                   locator: 'Results: ± 1.2 (lum.) of 52.4 pb'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
         predictions:
           - label: NLO QCD (MCFM, CT10), ATLAS
@@ -1061,7 +1061,7 @@ channels:
                 ref: inspire:1190187
                 locator: 'Introduction: σ_NLO = 44.7 +2.1 −1.9 pb (MCFM, CT10), uncertainty +4.8% −4.2% from scale (μR, μF by a factor of two) and CT10 PDF variations; larger side'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-7/atlas-2012-tot
@@ -1073,7 +1073,7 @@ channels:
               ref: inspire:1190187
               locator: Introduction (MCFM [5] with CT10 PDFs)
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
             headline: true
           - label: NLO QCD (MCFM), CMS
@@ -1091,7 +1091,7 @@ channels:
                 ref: inspire:1237104
                 locator: 'Introduction and Sec. 6: σ_NLO(pp → W+W−) = 47.0 ± 2.0 pb'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:ww/lhc-7/cms-2013-tot
@@ -1103,7 +1103,7 @@ channels:
               ref: inspire:1237104
               locator: Introduction (their ref. [1], Campbell, Ellis and Williams)
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
           - label: NNLO + NNLL threshold resummation (on-shell W pairs, NNPDF3.0)
             accuracy:
@@ -1130,7 +1130,7 @@ channels:
                   ref: inspire:2933960
                   locator: 'Table 3, row NNLO+NNLL, 7.0 TeV column: 47.536 pb +1.58% −1.45%'
                   source: agent
-                  status: agent-draft
+                  status: cross-checked
                   date: '2026-10-17'
             refs:
               - inspire:2933960
@@ -1139,6 +1139,6 @@ channels:
               ref: inspire:2933960
               locator: 'Table 3 (total cross section from integrating the invariant-mass distribution, Qmin = 2 mW to √S), row NNLO+NNLL, 7.0 TeV column: 47.536 pb; PDF uncertainty only tabulated for the mass distribution (Table 2)'
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
     last_reviewed: "2026-10-17"

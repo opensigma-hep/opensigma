@@ -319,19 +319,19 @@ channels:
                 specific: "μR, μF variation (hard-scatter and hadronisation factorisation scales)"
                 method: "μR and μF varied by a factor of 2 with all permutations except opposite variations; maximal deviation"
                 size: {range: [5, 15], unit: "%", asymmetric: true}
-                provenance: {uid: 6982f12e, ref: "inspire:1268975", locator: "Sec. 6.2 (scale uncertainty generally within +5%/−15% for the R = 0.4 calculation, ±10% for R = 0.6)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 6982f12e, ref: "inspire:1268975", locator: "Sec. 6.2 (scale uncertainty generally within +5%/−15% for the R = 0.4 calculation, ±10% for R = 0.6)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αS uncertainty"
                 size: {range: [4, 4], unit: "%", asymmetric: false}
-                provenance: {uid: 7af2ecf9, ref: "inspire:1268975", locator: "Sec. 6.2 (uncertainties from αS approximately ±4% across all dijet-mass and y* ranges)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 7af2ecf9, ref: "inspire:1268975", locator: "Sec. 6.2 (uncertainties from αS approximately ±4% across all dijet-mass and y* ranges)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: nonpert
                 specific: "NP correction uncertainty"
                 method: "maximal deviation among PYTHIA AUET2B (CTEQ6L1) and HERWIG++ UE-EE-3 (MRST LO**, CTEQ6L1) plus statistical uncertainty of the nominal sample"
                 size: {range: [1, 5], unit: "%", asymmetric: false}
-                provenance: {uid: b677b801, ref: "inspire:1268975", locator: "Sec. 6.2 (increases from 1% for y* < 0.5 up to 5% for larger y*)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: b677b801, ref: "inspire:1268975", locator: "Sec. 6.2 (increases from 1% for y* < 0.5 up to 5% for larger y*)", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:dijets/lhc-7/atlas-2013"]
             refs: ["inspire:1268975"]
-            provenance: {uid: 7c048a2e, ref: "inspire:1268975", locator: "Secs. 6.1–6.2 (NLOJet++ with APPLGRID, CT10/HERAPDF1.5/epATLJet13/MSTW2008/NNPDF2.1/NNPDF2.3/ABM11, μR = μF = pT^max exp(0.3y*); NP and EW corrections)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 7c048a2e, ref: "inspire:1268975", locator: "Secs. 6.1–6.2 (NLOJet++ with APPLGRID, CT10/HERAPDF1.5/epATLJet13/MSTW2008/NNPDF2.1/NNPDF2.3/ABM11, μR = μF = pT^max exp(0.3y*); NP and EW corrections)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "NLO QCD (NLOJet++/fastNLO), NNPDF2.1 NLO, μ = pT^ave, ⊗ NP"
             accuracy:
@@ -344,11 +344,11 @@ channels:
                 specific: "μR, μF variation"
                 method: "six-point (μF/μ, μR/μ) variation by factors 1/2 and 2; maximum deviation"
                 size: {range: [5, 10], unit: "%", asymmetric: false, regions: [{where: "outer |y|max bins and high dijet mass", value: "±40"}]}
-                provenance: {uid: 4aef3672, ref: "inspire:1208923", locator: "Sec. 6.2 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high dijet masses and jet pT)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 4aef3672, ref: "inspire:1208923", locator: "Sec. 6.2 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high dijet masses and jet pT)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αS(MZ) ± 0.001"
                 size: {range: [1, 2], unit: "%", asymmetric: false}
-                provenance: {uid: 0739aaad, ref: "inspire:1208923", locator: "Sec. 6.2 (variation of αS(MZ) by ±0.001 introduces an additional 1–2% uncertainty)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 0739aaad, ref: "inspire:1208923", locator: "Sec. 6.2 (variation of αS(MZ) by ±0.001 introduces an additional 1–2% uncertainty)", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:dijets/lhc-7/cms-2012"]
             refs: ["inspire:1208923"]
-            provenance: {uid: 14306cbb, ref: "inspire:1208923", locator: "Sec. 6 (NLOJet++ 2.0.1 in fastNLO 1.4, μR = μF = average pT of the two jets, CT10/MSTW2008NLO/NNPDF2.1/HERAPDF1.5/ABKM09; NP corrections of Sec. 6.3)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 14306cbb, ref: "inspire:1208923", locator: "Sec. 6 (NLOJet++ 2.0.1 in fastNLO 1.4, μR = μF = average pT of the two jets, CT10/MSTW2008NLO/NNPDF2.1/HERAPDF1.5/ABKM09; NP corrections of Sec. 6.3)", source: agent, status: cross-checked, date: "2026-10-17"}

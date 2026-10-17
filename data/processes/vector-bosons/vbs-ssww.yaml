@@ -16,22 +16,22 @@ building_blocks:
         status: done
         approximations: ["EW-induced W+W+jj in the weak-boson-fusion approximation", "QCD-induced W+W+jj computed separately"]
         refs: ["inspire:824865", "inspire:863789"]
-        provenance: {uid: 896fbb73, ref: "inspire:824865", locator: "Abstract (NLO QCD for e+ νe μ+ νμ jj via weak boson fusion); second ref inspire:863789 abstract (NLO QCD to the QCD-mediated part of pp → W+W+jj)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 896fbb73, ref: "inspire:824865", locator: "Abstract (NLO QCD for e+ νe μ+ νμ jj via weak boson fusion); second ref inspire:863789 abstract (NLO QCD to the QCD-mediated part of pp → W+W+jj)", source: agent, status: cross-checked, date: "2026-10-17"}
       code:
         status: done
         refs: ["inspire:922009"]
-        provenance: {uid: f2589420, ref: "inspire:922009", locator: "Abstract (NLO QCD W+W+jj via vector-boson fusion matched to parton showers in the POWHEGBOX, complementing the QCD-induced code)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: f2589420, ref: "inspire:922009", locator: "Abstract (NLO QCD W+W+jj via vector-boson fusion matched to parton showers in the POWHEGBOX, complementing the QCD-induced code)", source: agent, status: cross-checked, date: "2026-10-17"}
   - row: "NLO EW"
     cells:
       1L:
         status: done
         approximations: ["EW-induced process pp → μ+ νμ e+ νe jj"]
         refs: ["inspire:1496632"]
-        provenance: {uid: b3490f73, ref: "inspire:1496632", locator: "Abstract (first full NLO EW corrections to off-shell vector-boson scattering, complete matrix elements, fully differential)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: b3490f73, ref: "inspire:1496632", locator: "Abstract (first full NLO EW corrections to off-shell vector-boson scattering, complete matrix elements, fully differential)", source: agent, status: cross-checked, date: "2026-10-17"}
       code:
         status: done
         refs: ["inspire:1613898", "inspire:2692517"]
-        provenance: {uid: ba4bae2e, ref: "inspire:1613898", locator: "Abstract (full NLO QCD and EW corrections to VBS and its irreducible background, complete amplitudes at all orders); second ref inspire:2692517 abstract (independent full NLO calculation in Bonsay, whole tower of NLO contributions)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: ba4bae2e, ref: "inspire:1613898", locator: "Abstract (full NLO QCD and EW corrections to VBS and its irreducible background, complete amplitudes at all orders); second ref inspire:2692517 abstract (independent full NLO calculation in Bonsay, whole tower of NLO contributions)", source: agent, status: cross-checked, date: "2026-10-17"}
 channels:
   - id: "chan:vbs-ssww/lhc-13"
     collider: "col:lhc-13"
@@ -56,35 +56,35 @@ channels:
         variable: "σ_fid, EW-induced W±W±jj (O(α⁶), interference with QCD-induced counted as signal in CMS); ATLAS fiducial region: pT(ℓ) > 27 GeV, mjj > 500 GeV, Δyjj > 2; CMS: pT(ℓ) > 20 GeV, mjj > 500 GeV, |Δηjj| > 2.5"
         results:
           - measurement: "meas:vbs-ssww/lhc-13/atlas-2024-fid-ew"
-            total: {value_pct: 9.9, provenance: {uid: fadc94d5, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW = 2.92 ± 0.22 (stat) ± 0.13 (mod. syst) ± 0.12 (exp. syst) ± 0.06 (lumi) fb; total taken as the quadrature sum, 0.29/2.92 (hepdata:ins2729396 has only differential tables)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 9.9, provenance: {uid: fadc94d5, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW = 2.92 ± 0.22 (stat) ± 0.13 (mod. syst) ± 0.12 (exp. syst) ± 0.06 (lumi) fb; total taken as the quadrature sum, 0.29/2.92 (hepdata:ins2729396 has only differential tables)", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [7.5, 7.5], unit: "%", asymmetric: false}
-                provenance: {uid: 0bf5b032, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.22 (stat) of 2.92 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 0bf5b032, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.22 (stat) of 2.92 fb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "Signal and background modelling (mod. syst)"
                 size: {range: [4.5, 4.5], unit: "%", asymmetric: false}
-                provenance: {uid: 5c1abb85, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.13 (mod. syst) of 2.92 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 5c1abb85, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.13 (mod. syst) of 2.92 fb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: syst_combined
                 specific: "Experimental systematics excluding luminosity (combined)"
                 size: {range: [4.1, 4.1], unit: "%", asymmetric: false}
-                provenance: {uid: 8eb2fa90, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.12 (exp. syst) of 2.92 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 8eb2fa90, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.12 (exp. syst) of 2.92 fb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
-                provenance: {uid: 25d61fb0, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.06 (lumi) of 2.92 fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 25d61fb0, ref: "inspire:2729396", locator: "Sec. 7.3: σ_fid^EW ± 0.06 (lumi) of 2.92 fb", source: agent, status: cross-checked, date: "2026-10-17"}
           - measurement: "meas:vbs-ssww/lhc-13/cms-2020-fid-ew"
             total: {value_pct: 11.0, provenance: {uid: 6db1cde2, ref: "hepdata:ins1794169/Table 5", locator: "Table 5, quadrature sum of all errors (bin 1)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [9.3, 9.3], unit: "%", asymmetric: false}
-                provenance: {uid: e490341b, ref: "inspire:1794169", locator: "Table 5, EW W±W±: σ = 3.98 ± 0.45 = ± 0.37 (stat) ± 0.25 (syst) fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: e490341b, ref: "inspire:1794169", locator: "Table 5, EW W±W±: σ = 3.98 ± 0.45 = ± 0.37 (stat) ± 0.25 (syst) fb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: syst_combined
                 specific: "Systematic uncertainty (combined, includes luminosity)"
                 size: {range: [6.3, 6.3], unit: "%", asymmetric: false}
-                provenance: {uid: 9fd5079d, ref: "inspire:1794169", locator: "Table 5, EW W±W±: σ = 3.98 ± 0.45 = ± 0.37 (stat) ± 0.25 (syst) fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 9fd5079d, ref: "inspire:1794169", locator: "Table 5, EW W±W±: σ = 3.98 ± 0.45 = ± 0.37 (stat) ± 0.25 (syst) fb", source: agent, status: cross-checked, date: "2026-10-17"}
         predictions:
           - label: "MadGraph5_aMC LO × NLO QCD+EW correction factors (CMS setup)"
             accuracy:
@@ -96,7 +96,7 @@ channels:
             total: {value_pct: 14.0, provenance: {uid: 795ee7ce, ref: "hepdata:ins1794169/Table 5", locator: "Table 5, column 3, quadrature sum of all errors (bin 1)", source: hepdata, status: machine-verified, date: "2026-10-17"}}
             compared_to: ["meas:vbs-ssww/lhc-13/cms-2020-fid-ew"]
             refs: ["inspire:1794169", "inspire:1496632", "inspire:1613898"]
-            provenance: {uid: 9bf216f3, ref: "inspire:1794169", locator: "Sec. 3 (simulation, NLO QCD and EW corrections applied to the LO cross sections, refs [35, 36]) and Table 5: 3.31 ± 0.47 fb, uncertainty includes MC statistics, PDF and scale", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 9bf216f3, ref: "inspire:1794169", locator: "Sec. 3 (simulation, NLO QCD and EW corrections applied to the LO cross sections, refs [35, 36]) and Table 5: 3.31 ± 0.47 fb, uncertainty includes MC statistics, PDF and scale", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "Sherpa 2.2.11 EW W±W±jj ⊗ NLO EW (mjj-dependent factors), ATLAS setup"
             accuracy:
@@ -105,42 +105,42 @@ channels:
               shower_matched: true
               approximations: ["Sherpa EW sample with up to one additional parton at LO, plus WWW and WH (H → WW) triboson contributions from Sherpa NLO and Powheg+Pythia8", "NLO EW applied via mjj-dependent correction factors of Biedermann–Denner–Pellen (about −15%)"]
             codes: ["Sherpa", "Powheg Box"]
-            total: {value_pct: 16.2, provenance: {uid: 7f525ddc, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Sherpa ⊗ NLO EW 2.10 ± 0.03 (PDF) +0.34 −0.23 (scale) fb; larger scale side as percentage of the central value", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 16.2, provenance: {uid: 7f525ddc, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Sherpa ⊗ NLO EW 2.10 ± 0.03 (PDF) +0.34 −0.23 (scale) fb; larger scale side as percentage of the central value", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR and μF scale variation"
                 method: "μR and μF varied up and down by a factor two, excluding opposite-direction variations (Sherpa, scales set to the WW invariant mass)"
                 size: {range: [11.0, 16.2], unit: "%", asymmetric: true}
-                provenance: {uid: 1ee17445, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Sherpa ⊗ NLO EW 2.10 +0.34 −0.23 (scale) fb; Sec. 6 (theory uncertainties) for the scale-variation prescription", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 1ee17445, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Sherpa ⊗ NLO EW 2.10 +0.34 −0.23 (scale) fb; Sec. 6 (theory uncertainties) for the scale-variation prescription", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF variations"
                 pdf_set: "NNPDF3.0 (set for the Sherpa EW sample not stated explicitly)"
                 size: {range: [1.4, 1.4], unit: "%", asymmetric: false}
-                provenance: {uid: 374a9144, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Sherpa ⊗ NLO EW 2.10 ± 0.03 (PDF) fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 374a9144, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Sherpa ⊗ NLO EW 2.10 ± 0.03 (PDF) fb", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:vbs-ssww/lhc-13/atlas-2024-fid-ew"]
             refs: ["inspire:2729396", "inspire:1613898"]
-            provenance: {uid: beed32a8, ref: "inspire:2729396", locator: "Sec. 3.1 (Sherpa EW combination) and Table 6", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: beed32a8, ref: "inspire:2729396", locator: "Sec. 3.1 (Sherpa EW combination) and Table 6", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "MadGraph5_aMC + Herwig7, LO, ATLAS setup"
             accuracy:
               qcd: LO
               shower_matched: true
               approximations: ["LO EW (α⁶) matrix element with dipole shower in Herwig7", "μR = μF = sqrt(pT(j1) pT(j2)); the μR variation vanishes at this order, so the scale uncertainty comes from μF"]
             codes: ["MadGraph5_aMC@NLO", "Herwig7"]
-            total: {value_pct: 8.7, provenance: {uid: 4152e4bf, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: MG5_aMC+Herwig7 2.53 ± 0.04 (PDF) +0.22 −0.19 (scale) fb; larger scale side as percentage of the central value", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 8.7, provenance: {uid: 4152e4bf, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: MG5_aMC+Herwig7 2.53 ± 0.04 (PDF) +0.22 −0.19 (scale) fb; larger scale side as percentage of the central value", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μF scale variation (no μR dependence at O(α⁶))"
                 method: "scales varied by factors of two as in the ATLAS prescription; only μF acts at this order"
                 size: {range: [7.5, 8.7], unit: "%", asymmetric: true}
-                provenance: {uid: c61d05f6, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: MG5_aMC+Herwig7 +0.22 −0.19 (scale) fb of 2.53 fb; Sec. 7.3 (renormalisation-scale variation exactly zero)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: c61d05f6, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: MG5_aMC+Herwig7 +0.22 −0.19 (scale) fb of 2.53 fb; Sec. 7.3 (renormalisation-scale variation exactly zero)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF variations"
                 pdf_set: "NNPDF3.0nlo"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: e5c88d75, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: MG5_aMC+Herwig7 2.53 ± 0.04 (PDF) fb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: e5c88d75, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: MG5_aMC+Herwig7 2.53 ± 0.04 (PDF) fb", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:vbs-ssww/lhc-13/atlas-2024-fid-ew"]
             refs: ["inspire:2729396"]
-            provenance: {uid: e5af58bb, ref: "inspire:2729396", locator: "Sec. 3.1 (MG5_aMC samples) and Table 6", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: e5af58bb, ref: "inspire:2729396", locator: "Sec. 3.1 (MG5_aMC samples) and Table 6", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "Powheg Box + Pythia8, NLO QCD in the VBS approximation, ATLAS setup"
             accuracy:
               qcd: NLO
@@ -149,7 +149,7 @@ channels:
             codes: ["Powheg Box", "Pythia8"]
             compared_to: ["meas:vbs-ssww/lhc-13/atlas-2024-fid-ew"]
             refs: ["inspire:2729396", "inspire:922009"]
-            provenance: {uid: df37ee11, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Powheg Box+Pythia 2.64 fb (central value only); Sec. 3.1 (sample description)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: df37ee11, ref: "inspire:2729396", locator: "Table 6, EW σ_fid: Powheg Box+Pythia 2.64 fb (central value only); Sec. 3.1 (sample description)", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "Complete NLO QCD+EW, off-shell pp → μ+νμ e+νe jj (Biedermann–Denner–Pellen)"
             accuracy:
               qcd: NLO
@@ -157,12 +157,12 @@ channels:
               mixed: "all NLO contributions O(α⁷), O(αsα⁶), O(αs²α⁵), O(αs³α⁴) with all interferences"
               approximations: ["full process (EW-induced + interference + QCD-induced, about 87% EW-induced at LO), not the EW-only fiducial cross section", "single μ+e+ flavour combination in a VBS setup with mjj > 500 GeV and |Δyjj| > 2.5, not the ATLAS/CMS fiducial regions", "photon-induced NLO contributions shown separately and not included in σ_NLO"]
             codes: ["Recola", "Collier"]
-            total: {value_pct: 2.7, provenance: {uid: 505489fa, ref: "inspire:1613898", locator: "Sec. 3.2, eq. (3.13): σ_NLO = 1.3577(7) +1.2(1)% −2.7(1)% fb (σ_LO = 1.6383 fb), larger scale side", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 2.7, provenance: {uid: 505489fa, ref: "inspire:1613898", locator: "Sec. 3.2, eq. (3.13): σ_NLO = 1.3577(7) +1.2(1)% −2.7(1)% fb (σ_LO = 1.6383 fb), larger scale side", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR and μF scale variation"
                 method: "independent μR and μF variation by factors 1/2 and 2 around the dynamic scale, 7-point envelope applied to the sum of all orders"
                 size: {range: [1.2, 2.7], unit: "%", asymmetric: true}
-                provenance: {uid: f016fb7a, ref: "inspire:1613898", locator: "Sec. 3.2, eq. (3.13): σ_NLO = 1.3577(7) +1.2(1)% −2.7(1)% fb; scale combinations in eq. (3.11)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: f016fb7a, ref: "inspire:1613898", locator: "Sec. 3.2, eq. (3.13): σ_NLO = 1.3577(7) +1.2(1)% −2.7(1)% fb; scale combinations in eq. (3.11)", source: agent, status: cross-checked, date: "2026-10-17"}
             refs: ["inspire:1613898", "inspire:1496632"]
-            provenance: {uid: 6aaa5218, ref: "inspire:1613898", locator: "Sec. 2 (calculation) and Sec. 3.2, Tables 2–3 (fiducial LO and NLO cross sections)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 6aaa5218, ref: "inspire:1613898", locator: "Sec. 2 (calculation) and Sec. 3.2, Tables 2–3 (fiducial LO and NLO cross sections)", source: agent, status: cross-checked, date: "2026-10-17"}

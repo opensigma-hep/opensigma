@@ -150,28 +150,28 @@ channels:
         variable: "x, Q²; relative total uncertainty per (x, Q²) point"
         results:
           - measurement: "meas:dis-nc/eic/yr-proj"
-            total: {value_pct: 3.0, provenance: {uid: cbf060f7, ref: "arXiv:2103.05419", locator: "Sec. 10.5, 'Inclusive Processes Systematics': ≈1.5% uncorrelated and ≈2.5% normalisation 'gives a total uncertainty on each point of ≈ 3%' (optimistic scenario); Table 10.5", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 3.0, provenance: {uid: cbf060f7, ref: "arXiv:2103.05419", locator: "Sec. 10.5, 'Inclusive Processes Systematics': ≈1.5% uncorrelated and ≈2.5% normalisation 'gives a total uncertainty on each point of ≈ 3%' (optimistic scenario); Table 10.5", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Statistical (10 fb⁻¹)"
                 size: {range: [0.01, 0.35], asymmetric: false}
-                provenance: {uid: '593516e5', ref: "arXiv:2103.05419", locator: "Table 10.5, 'Statistics (10 fb⁻¹)', point-to-point 0.01-0.35%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: '593516e5', ref: "arXiv:2103.05419", locator: "Table 10.5, 'Statistics (10 fb⁻¹)', point-to-point 0.01-0.35%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: other
                 specific: "Point-to-point systematics (radiative corrections, acceptance, bin migration, trigger and tracking efficiency; optimistic-conservative)"
                 size: {range: [1.5, 2.3], asymmetric: false}
-                provenance: {uid: 1147b392, ref: "arXiv:2103.05419", locator: "Table 10.5, point-to-point 'Total' 1.5-2.3% (2.5-3% for y < 0.01)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 1147b392, ref: "arXiv:2103.05419", locator: "Table 10.5, point-to-point 'Total' 1.5-2.3% (2.5-3% for y < 0.01)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: other
                 specific: "Normalisation (luminosity, electron purity, detector effects; optimistic-conservative)"
                 size: {range: [2.5, 4.3], asymmetric: false}
-                provenance: {uid: b19c36af, ref: "arXiv:2103.05419", locator: "Table 10.5, normalisation 'Total' 2.5-4.3%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: b19c36af, ref: "arXiv:2103.05419", locator: "Table 10.5, normalisation 'Total' 2.5-4.3%", source: agent, status: cross-checked, date: "2026-10-17"}
           - measurement: "meas:dis-nc/eic/early-science-proj"
-            total: {value_pct: 3.9, provenance: {uid: c515692d, ref: "arXiv:2602.00860", locator: "Sec. 2: point-to-point 1.9% plus normalisation 3.4% 'the total systematic uncertainty attributed to each data point is 3.9 %'; statistical uncertainty for 1 fb⁻¹ negligible except at the largest x and Q²", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 3.9, provenance: {uid: c515692d, ref: "arXiv:2602.00860", locator: "Sec. 2: point-to-point 1.9% plus normalisation 3.4% 'the total systematic uncertainty attributed to each data point is 3.9 %'; statistical uncertainty for 1 fb⁻¹ negligible except at the largest x and Q²", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: other
                 specific: "Point-to-point systematics (1% radiative corrections, 1.6% bin migration, efficiency, background)"
                 size: {range: [1.9, 1.9], asymmetric: false}
-                provenance: {uid: f3a115f6, ref: "arXiv:2602.00860", locator: "Sec. 2: 'point-to-point uncorrelated systematic uncertainty of 1.9%' (degrades as 1/y at low y, Sec. 5)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: f3a115f6, ref: "arXiv:2602.00860", locator: "Sec. 2: 'point-to-point uncorrelated systematic uncertainty of 1.9%' (degrades as 1/y at low y, Sec. 5)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: other
                 specific: "Normalisation (luminosity 1.5%, electron purity and detector efficiency 3%)"
                 size: {range: [3.4, 3.4], asymmetric: false}
-                provenance: {uid: 70279b66, ref: "arXiv:2602.00860", locator: "Sec. 2: 'A normalisation uncertainty of 3.4% is also included for each data set'", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 70279b66, ref: "arXiv:2602.00860", locator: "Sec. 2: 'A normalisation uncertainty of 3.4% is also included for each data set'", source: agent, status: cross-checked, date: "2026-10-17"}

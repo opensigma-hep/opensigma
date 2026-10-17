@@ -7,24 +7,24 @@ determinations:
     uncertainty: 0.0077
     extracted_from: []
     ref: "inspire:3193100"
-    provenance: {uid: 18b19456, ref: "inspire:3193100", locator: "PDG 2026 edition, W MASS (PDG API summary S043M, OUR EVALUATION, LHC-Tevatron M_W Working Group): 80.3625 ± 0.0077 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: 18b19456, ref: "inspire:3193100", locator: "PDG 2026 edition, W MASS (PDG API summary S043M, OUR EVALUATION, LHC-Tevatron M_W Working Group): 80.3625 ± 0.0077 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 80.4335
     uncertainty: 0.0094
     extracted_from: []
     ref: "inspire:2064224"
-    provenance: {uid: ab592c04, ref: "inspire:2064224", locator: "Abstract: CDF II, 8.8 fb⁻¹, M_W = 80,433.5 ± 6.4 (stat) ± 6.9 (syst) = 80,433.5 ± 9.4 MeV", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: ab592c04, ref: "inspire:2064224", locator: "Abstract: CDF II, 8.8 fb⁻¹, M_W = 80,433.5 ± 6.4 (stat) ± 6.9 (syst) = 80,433.5 ± 9.4 MeV", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 80.3665
     uncertainty: 0.0159
     extracted_from: []
     ref: "arXiv:2403.15085"
-    provenance: {uid: 3cbbcaf4, ref: "arXiv:2403.15085", locator: "Abstract: ATLAS 7 TeV, m_W = 80366.5 ± 9.8 (stat) ± 12.5 (syst) = 80366.5 ± 15.9 MeV", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: 3cbbcaf4, ref: "arXiv:2403.15085", locator: "Abstract: ATLAS 7 TeV, m_W = 80366.5 ± 9.8 (stat) ± 12.5 (syst) = 80366.5 ± 15.9 MeV", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 80.3602
     uncertainty: 0.0099
     extracted_from: []
     ref: "arXiv:2412.13872"
-    provenance: {uid: 982741d7, ref: "arXiv:2412.13872", locator: "Abstract: CMS 13 TeV, 2016 data, m_W = 80 360.2 ± 9.9 MeV", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: 982741d7, ref: "arXiv:2412.13872", locator: "Abstract: CMS 13 TeV, 2016 data, m_W = 80 360.2 ± 9.9 MeV", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 80.354
     uncertainty: 0.0316
     extracted_from: []
     ref: "arXiv:2109.01113"
-    provenance: {uid: 06d5a84d, ref: "arXiv:2109.01113", locator: "Abstract: LHCb 13 TeV, 1.7 fb⁻¹, m_W = 80354 ± 23 (stat) ± 10 (exp) ± 17 (theory) ± 9 (PDF) MeV; stored uncertainty is the four terms added in quadrature (31.6 MeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: 06d5a84d, ref: "arXiv:2109.01113", locator: "Abstract: LHCb 13 TeV, 1.7 fb⁻¹, m_W = 80354 ± 23 (stat) ± 10 (exp) ± 17 (theory) ± 9 (PDF) MeV; stored uncertainty is the four terms added in quadrature (31.6 MeV)", source: agent, status: cross-checked, date: "2026-10-17"}

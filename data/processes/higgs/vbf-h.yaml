@@ -155,8 +155,8 @@ channels:
               qcd: NNLO
               ew: NLO
               approximations: ["order quoted as NLO(QCD+EW) + approximate NNLO(QCD)"]
-            total: {value_pct: 2.5, provenance: {uid: 37b7192f, ref: "arXiv:1606.02266", locator: "Table 1, 8 TeV column, VBF row: 1.58 ± 0.04 pb; relative uncertainty 0.04/1.58 derived from the rounded values (quadrature sum of QCD scale, PDF and αs, symmetric as quoted)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 2.5, provenance: {uid: 37b7192f, ref: "arXiv:1606.02266", locator: "Table 1, 8 TeV column, VBF row: 1.58 ± 0.04 pb; relative uncertainty 0.04/1.58 derived from the rounded values (quadrature sum of QCD scale, PDF and αs, symmetric as quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:vbf-h/lhc-8/atlas-cms-2016-comb"]
             refs: ["arXiv:1307.1347"]
-            provenance: {uid: 01ee8a9a, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_VBF (= 1)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 01ee8a9a, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_VBF (= 1)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true

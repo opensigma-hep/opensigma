@@ -14,20 +14,20 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:266596"]
-        provenance: {uid: 604fbfce, ref: "inspire:266596", locator: "Abstract (full computation of dσ/dqT² for W, Z and virtual γ production to second order in QCD at high and moderate qT, i.e. W + jet at O(αs²))", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 604fbfce, ref: "inspire:266596", locator: "Abstract (full computation of dσ/dqT² for W, Z and virtual γ production to second order in QCD at high and moderate qT, i.e. W + jet at O(αs²))", source: agent, status: cross-checked, date: "2026-10-17"}
       RR:
         status: done
         refs: ["inspire:266596"]
-        provenance: {uid: f784f29f, ref: "inspire:266596", locator: "Abstract (second-order QCD computation including the qg, gg and singlet qq̄ + qq channels, analytic constituent cross sections dσ/dqT² dy)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: f784f29f, ref: "inspire:266596", locator: "Abstract (second-order QCD computation including the qg, gg and singlet qq̄ + qq channels, analytic constituent cross sections dσ/dqT² dy)", source: agent, status: cross-checked, date: "2026-10-17"}
       ir_scheme:
         status: done
         approximations: ["crossing of all-final-state NLO results with universal crossing functions"]
         refs: ["inspire:33945"]
-        provenance: {uid: 5203ada0, ref: "inspire:33945", locator: "Abstract (NLO jet cross sections from a 'crossing' of all-final-state calculations; applied to jets in association with a vector boson including all decay correlations)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 5203ada0, ref: "inspire:33945", locator: "Abstract (NLO jet cross sections from a 'crossing' of all-final-state calculations; applied to jets in association with a vector boson including all decay correlations)", source: agent, status: cross-checked, date: "2026-10-17"}
       code:
         status: done
         refs: ["inspire:33945", "inspire:822565"]
-        provenance: {uid: b363d3db, ref: "inspire:822565", locator: "Abstract (NLO QCD corrections to W + jet with leptonic W decays recalculated and implemented in a flexible Monte Carlo code, Tevatron and LHC; with inspire:33945 for the early NLO calculation including decay correlations)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: b363d3db, ref: "inspire:822565", locator: "Abstract (NLO QCD corrections to W + jet with leptonic W decays recalculated and implemented in a flexible Monte Carlo code, Tevatron and LHC; with inspire:33945 for the early NLO calculation including decay correlations)", source: agent, status: cross-checked, date: "2026-10-17"}
   - row: "NNLO QCD"
     cells:
       2L:
@@ -38,34 +38,34 @@ building_blocks:
       RV:
         status: done
         refs: ["inspire:446755"]
-        provenance: {uid: c9abf1bf, ref: "inspire:446755", locator: "Abstract (one-loop helicity amplitudes for e+e− → four partons, also those for W, Z or Drell-Yan production in association with two jets at hadron colliders)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: c9abf1bf, ref: "inspire:446755", locator: "Abstract (one-loop helicity amplitudes for e+e− → four partons, also those for W, Z or Drell-Yan production in association with two jets at hadron colliders)", source: agent, status: cross-checked, date: "2026-10-17"}
       ir_scheme:
         status: done
         approximations: ["N-jettiness subtraction"]
         refs: ["inspire:1358633"]
-        provenance: {uid: 2096d3a7, ref: "inspire:1358633", locator: "Abstract (complete NNLO calculation of W + jet using a new subtraction method built on the N-jettiness event-shape variable, valid for an arbitrary number of jets)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 2096d3a7, ref: "inspire:1358633", locator: "Abstract (complete NNLO calculation of W + jet using a new subtraction method built on the N-jettiness event-shape variable, valid for an arbitrary number of jets)", source: agent, status: cross-checked, date: "2026-10-17"}
       code:
         status: done
         approximations: ["fixed-order parton level, with fiducial cuts and leptonic W decay; inclusive and exclusive one-jet bins, 8 and 13 TeV"]
         refs: ["inspire:1358633", "inspire:1423065"]
-        provenance: {uid: 55b56713, ref: "inspire:1423065", locator: "Abstract (fiducial cross sections and differential distributions for W + jet at NNLO for 8 and 13 TeV, inclusive and exclusive one-jet bins, general and boosted selections)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 55b56713, ref: "inspire:1423065", locator: "Abstract (fiducial cross sections and differential distributions for W + jet at NNLO for 8 and 13 TeV, inclusive and exclusive one-jet bins, general and boosted selections)", source: agent, status: cross-checked, date: "2026-10-17"}
   - row: "NLO EW"
     cells:
       1L:
         status: done
         refs: ["inspire:822565"]
-        provenance: {uid: 7669281f, ref: "inspire:822565", locator: "Abstract (first NLO EW calculation for W + jet hadroproduction including leptonic W decays, complex-mass scheme, all off-shell effects; Tevatron and LHC)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 7669281f, ref: "inspire:822565", locator: "Abstract (first NLO EW calculation for W + jet hadroproduction including leptonic W decays, complex-mass scheme, all off-shell effects; Tevatron and LHC)", source: agent, status: cross-checked, date: "2026-10-17"}
       code:
         status: done
         refs: ["inspire:1406942"]
-        provenance: {uid: a8213231, ref: "inspire:1406942", locator: "Abstract (automated NLO QCD+EW for off-shell V + up to two jets at 13 TeV with OpenLoops, Munich and Sherpa, including multijet merging)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: a8213231, ref: "inspire:1406942", locator: "Abstract (automated NLO QCD+EW for off-shell V + up to two jets at 13 TeV with OpenLoops, Munich and Sherpa, including multijet merging)", source: agent, status: cross-checked, date: "2026-10-17"}
   - row: "NNLO QCD×EW"
     cells:
       code:
         status: partial
         approximations: ["parton-level combination of NNLO QCD and NLO EW with two-loop Sudakov logarithms, for use via reweighting of Monte Carlo samples"]
         refs: ["inspire:1599401"]
-        provenance: {uid: 6c37dfcd, ref: "inspire:1599401", locator: "Abstract (combination of state-of-the-art calculations for all V + jets processes: NNLO QCD and NLO EW corrections supplemented by Sudakov logarithms at two loops, parton level)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 6c37dfcd, ref: "inspire:1599401", locator: "Abstract (combination of state-of-the-art calculations for all V + jets processes: NNLO QCD and NLO EW corrections supplemented by Sudakov logarithms at two loops, parton level)", source: agent, status: cross-checked, date: "2026-10-17"}
 channels:
   - id: "chan:w-jet/lhc-13"
     collider: "col:lhc-13"
@@ -97,7 +97,7 @@ channels:
             uses_amplitudes: ["amp:2L/qqbar-Vg"]
             compared_to: ["meas:w-jet/lhc-13/cms-2017-ge1j"]
             refs: ["inspire:1358633", "inspire:1423065", "inspire:1610623"]
-            provenance: {uid: c6cd239b, ref: "inspire:1610623", locator: "Sec. 3 (Njetti NNLO for W + 1-jet, refs [9, 31], compared for events with one or more jets; NNPDF 3.0 NNLO; non-perturbative correction 0.93–1.10; FSR < 1%)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: c6cd239b, ref: "inspire:1610623", locator: "Sec. 3 (Njetti NNLO for W + 1-jet, refs [9, 31], compared for events with one or more jets; NNPDF 3.0 NNLO; non-perturbative correction 0.93–1.10; FSR < 1%)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "MG5_aMC@NLO + Pythia 8, FxFx merging (NLO up to 2 jets, LO for 3 and 4)"
             accuracy:
@@ -107,7 +107,7 @@ channels:
             codes: ["MadGraph5_aMC@NLO 2.2.2", "Pythia 8"]
             compared_to: ["meas:w-jet/lhc-13/cms-2017-ge1j"]
             refs: ["inspire:1610623"]
-            provenance: {uid: b4538404, ref: "inspire:1610623", locator: "Sec. 3, description of the NLO MG5_aMC FxFx prediction (NLO accuracy for N = 0, 1, 2 and LO for N = 3, 4)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: b4538404, ref: "inspire:1610623", locator: "Sec. 3, description of the NLO MG5_aMC FxFx prediction (NLO accuracy for N = 0, 1, 2 and LO for N = 3, 4)", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:w-jet/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -152,5 +152,5 @@ channels:
             codes: ["MCFM"]
             compared_to: ["meas:w-jet/tevatron-1960/cdf-2007-ge1j"]
             refs: ["inspire:583117", "inspire:768579"]
-            provenance: {uid: a9d61af5, ref: "inspire:768579", locator: "Prediction section: NLO predictions for W + 1 and W + 2 jets from MCFM [26] with CTEQ6.1M PDFs; scale definitions and jet definition paragraphs", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: a9d61af5, ref: "inspire:768579", locator: "Prediction section: NLO predictions for W + 1 and W + 2 jets from MCFM [26] with CTEQ6.1M PDFs; scale definitions and jet definition paragraphs", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true

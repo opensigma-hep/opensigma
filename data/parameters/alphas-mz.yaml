@@ -7,29 +7,29 @@ determinations:
     uncertainty: 0.0009
     extracted_from: []
     ref: "inspire:3193100"
-    provenance: {uid: d98ed35e, ref: "inspire:3193100", locator: "PDG 2026 edition, review 9 (Quantum Chromodynamics, revised August 2025), Sec. 9.4.8, eq. (9.25): αs(m_Z²) = 0.1180 ± 0.0009 (world average)", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: d98ed35e, ref: "inspire:3193100", locator: "PDG 2026 edition, review 9 (Quantum Chromodynamics, revised August 2025), Sec. 9.4.8, eq. (9.25): αs(m_Z²) = 0.1180 ± 0.0009 (world average)", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.1183
     uncertainty: 0.0007
     extracted_from: []
     ref: "inspire:3193100"
-    provenance: {uid: 6950746d, ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Sec. 9.4.7, eq. (9.23): FLAG 2024 lattice estimate αs(m_Z²) = 0.1183 ± 0.0007", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: 6950746d, ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Sec. 9.4.7, eq. (9.23): FLAG 2024 lattice estimate αs(m_Z²) = 0.1183 ± 0.0007", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.1170
     uncertainty: 0.0019
     extracted_from: ["meas:inclusive-jets/lhc-13/cms-2021"]
     ref: "inspire:1972986"
-    provenance: {uid: 23dca563, ref: "inspire:1972986", locator: "Abstract: CMS 13 TeV inclusive jets, NNLO QCD analysis with PDFs, αs(m_Z) = 0.1170 ± 0.0019", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: 23dca563, ref: "inspire:1972986", locator: "Abstract: CMS 13 TeV inclusive jets, NNLO QCD analysis with PDFs, αs(m_Z) = 0.1170 ± 0.0019", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.1171
     uncertainty: 0.0017
     extracted_from: []
     ref: "inspire:3193100"
-    provenance: {uid: '63e34038', ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Table 9.1, row 'τ decays & low Q²', unweighted pre-average", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: '63e34038', ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Table 9.1, row 'τ decays & low Q²', unweighted pre-average", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.1189
     uncertainty: 0.0037
     extracted_from: []
     ref: "inspire:3193100"
-    provenance: {uid: c7b063a6, ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Table 9.1, row 'e+ e− jets & shapes', unweighted pre-average (re-analyses of LEP event shapes and jet rates, NNLO+NLLA)", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: c7b063a6, ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Table 9.1, row 'e+ e− jets & shapes', unweighted pre-average (re-analyses of LEP event shapes and jet rates, NNLO+NLLA)", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.1221
     uncertainty: 0.0027
     extracted_from: []
     ref: "inspire:3193100"
-    provenance: {uid: ce8a9546, ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Table 9.1, row 'electroweak' (Z-pole fit), unweighted pre-average", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: ce8a9546, ref: "inspire:3193100", locator: "PDG 2026 review 9 (QCD), Table 9.1, row 'electroweak' (Z-pole fit), unweighted pre-average", source: agent, status: cross-checked, date: "2026-10-17"}

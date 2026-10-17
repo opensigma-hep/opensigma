@@ -15,7 +15,7 @@ building_blocks:
       code:
         status: done
         refs: ["inspire:355105", "inspire:556003"]
-        provenance: {uid: 27209b0b, ref: "inspire:355105", locator: "Abstract (NLO QCD corrections to (2+1)-jet cross sections in DIS); three-jet cross section at NLO: inspire:556003 Abstract", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 27209b0b, ref: "inspire:355105", locator: "Abstract (NLO QCD corrections to (2+1)-jet cross sections in DIS); three-jet cross section at NLO: inspire:556003 Abstract", source: agent, status: cross-checked, date: "2026-10-17"}
   - row: "NNLO QCD"
     cells:
       2L:
@@ -23,31 +23,31 @@ building_blocks:
         approximations: ["massless partons", "γ*→qq̄g two-loop amplitudes used in three crossing regions of DIS kinematics"]
         amplitude: "amp:2L/qqbar-Vg"
         refs: ["inspire:567814", "inspire:587998"]
-        provenance: {uid: '93e98309', ref: "inspire:1518159", locator: "Sec. 3.4: 'Our NNLOjet implementation of jet production in DIS uses the same matrix elements [54-56] as were used in Z + j production, however in different kinematical crossings'; ref. [56] = hep-ph/0112081, hep-ph/0206067; three crossing regions required per DIS process", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: '93e98309', ref: "inspire:1518159", locator: "Sec. 3.4: 'Our NNLOjet implementation of jet production in DIS uses the same matrix elements [54-56] as were used in Z + j production, however in different kinematical crossings'; ref. [56] = hep-ph/0112081, hep-ph/0206067; three crossing regions required per DIS process", source: agent, status: cross-checked, date: "2026-10-17"}
       RV:
         status: done
         refs: ["inspire:1518159"]
-        provenance: {uid: 26ebe5b7, ref: "inspire:1518159", locator: "Sec. 3.1 and 3.2.3 (real-virtual contributions: one-loop (n+1)-parton matrix elements with antenna subtraction)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 26ebe5b7, ref: "inspire:1518159", locator: "Sec. 3.1 and 3.2.3 (real-virtual contributions: one-loop (n+1)-parton matrix elements with antenna subtraction)", source: agent, status: cross-checked, date: "2026-10-17"}
       RR:
         status: done
         refs: ["inspire:1518159"]
-        provenance: {uid: 0126bb63, ref: "inspire:1518159", locator: "Sec. 3.1 and 3.2.2 (double-real contributions with antenna subtraction)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 0126bb63, ref: "inspire:1518159", locator: "Sec. 3.1 and 3.2.2 (double-real contributions with antenna subtraction)", source: agent, status: cross-checked, date: "2026-10-17"}
       ir_scheme:
         status: done
         refs: ["inspire:1518159", "inspire:1469089"]
-        provenance: {uid: c0d5f38c, ref: "inspire:1518159", locator: "Sec. 3.2 (application of the antenna subtraction method; initial-state identity-changing collinear limits Sec. 3.3)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: c0d5f38c, ref: "inspire:1518159", locator: "Sec. 3.2 (application of the antenna subtraction method; initial-state identity-changing collinear limits Sec. 3.3)", source: agent, status: cross-checked, date: "2026-10-17"}
       code:
         status: done
         approximations: ["massless partons (zero-mass variable-flavour-number scheme; calculations for massive partons unavailable)"]
         refs: ["inspire:1518159", "inspire:1469089"]
-        provenance: {uid: 3f57dd51, ref: "inspire:1518159", locator: "Sec. 3.4 (implementation into NNLOjet; di-jet first reported in inspire:1469089); massless-parton statement: arXiv:2309.02889 Sec. 8", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 3f57dd51, ref: "inspire:1518159", locator: "Sec. 3.4 (implementation into NNLOjet; di-jet first reported in inspire:1469089); massless-parton statement: arXiv:2309.02889 Sec. 8", source: agent, status: cross-checked, date: "2026-10-17"}
   - row: "N3LO QCD"
     cells:
       code:
         status: partial
         approximations: ["Projection-to-Born: inclusive N3LO DIS coefficient functions combined with an exclusive NNLO calculation for the final state with an extra jet", "single-jet production in the laboratory frame only, not the Breit-frame observables of the HERA jet analyses"]
         refs: ["inspire:1664411"]
-        provenance: {uid: 06dbac7e, ref: "inspire:1664411", locator: "Abstract (N3LO corrections to single-jet production in DIS in the laboratory frame via the Projection-to-Born method, compared with ZEUS data)", source: agent, status: agent-draft, date: "2026-10-17"}
+        provenance: {uid: 06dbac7e, ref: "inspire:1664411", locator: "Abstract (N3LO corrections to single-jet production in DIS in the laboratory frame via the Projection-to-Born method, compared with ZEUS data)", source: agent, status: cross-checked, date: "2026-10-17"}
 channels:
   - id: "chan:dis-jets/hera"
     collider: "col:hera"
@@ -250,10 +250,10 @@ channels:
             codes: ["NNLOJET", "fastNLO"]
             compared_to: ["meas:dis-jets/hera/zeus-2023"]
             refs: ["arXiv:2309.02889", "inspire:1518159"]
-            provenance: {uid: 81a7efeb, ref: "arXiv:2309.02889", locator: "Sec. 8 (NNLOJet via fastNLO grids, HERAPDF2.0Jets NNLO PDF set, αs(MZ²) = 0.1155, μf² = μr² = Q² + p⊥,Breit², hadronisation and Z corrections); uncertainty sizes not quoted numerically in the text, so left out", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 81a7efeb, ref: "arXiv:2309.02889", locator: "Sec. 8 (NNLOJet via fastNLO grids, HERAPDF2.0Jets NNLO PDF set, αs(MZ²) = 0.1155, μf² = μr² = Q² + p⊥,Breit², hadronisation and Z corrections); uncertainty sizes not quoted numerically in the text, so left out", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "NNLOJET NNLO, NNPDF3.0 NNLO (αs(MZ) = 0.118), μ² = (Q² + pT,j²)/2"
-            accuracy: {qcd: NNLO, approximations: ["massless partons", "partonic level, no hadronisation correction"]}
+            accuracy: {qcd: NNLO, approximations: ["massless partons", "hadronisation, Z-exchange and QED corrections applied multiplicatively"]}
             codes: ["NNLOJET"]
             compared_to: ["meas:dis-jets/hera/h1-2014-high-q2"]
             refs: ["inspire:1518159"]
@@ -306,7 +306,7 @@ channels:
                   date: '2026-10-17'
         predictions:
           - label: "NNLOJET NNLO dijet, NNPDF3.0 NNLO (αs(MZ) = 0.118), μ² = (Q² + ⟨pT⟩₂²)/2"
-            accuracy: {qcd: NNLO, approximations: ["massless partons", "partonic level, no hadronisation correction", "event-selection cuts of some dijet measurements induce infrared sensitivity that destabilises the NNLO prediction"]}
+            accuracy: {qcd: NNLO, approximations: ["massless partons", "hadronisation corrections from the experimental papers applied", "event-selection cuts of some dijet measurements induce infrared sensitivity that destabilises the NNLO prediction"]}
             codes: ["NNLOJET"]
             compared_to: ["meas:dis-jets/hera/h1-2014-high-q2"]
             refs: ["inspire:1469089", "inspire:1518159"]

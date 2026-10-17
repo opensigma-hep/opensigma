@@ -1417,7 +1417,7 @@ channels:
                 ref: inspire:1280200
                 locator: 'Table 2 (fiducial block), Z: NNLO σ×B = 0.40 ± 0.01 nb; the paper quotes the total prediction 1.13 ± 0.04 nb (3.5%) for 60 < mℓℓ < 120 GeV; the fiducial relative uncertainty is only approximate because of the one-digit rounding'
                 source: agent
-                status: agent-draft
+                status: cross-checked
                 date: '2026-10-17'
             compared_to:
               - meas:dy-nc/lhc-8/cms-2014-wz
@@ -1430,7 +1430,7 @@ channels:
               ref: inspire:1280200
               locator: theory-prediction paragraph (FEWZ at NNLO with MSTW2008, 68% CL uncertainties) and Table 2
               source: agent
-              status: agent-draft
+              status: cross-checked
               date: '2026-10-17'
             headline: true
       - id: "obs:dy-nc/lhc-8/yll"

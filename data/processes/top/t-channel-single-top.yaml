@@ -128,16 +128,16 @@ channels:
         variable: "pT(t)"
         results:
           - measurement: "meas:t-channel-single-top/lhc-13/atlas-2026-diff"
-            total: {value_pct: 3.6, provenance: {uid: 5ec59b1f, ref: "hepdata:ins3098996/Figure 9a,10a,11a", locator: "HEPData table 'Figure 9a,10a,11a' (normalised unfolded tq cross-section vs pT(t), parton level), 'Unfolded data', bin 2 (45 < pT(t) < 65 GeV): 0.0098078 with 'stat. unc.' 1.3% and 'syst. unc.' 3.3% added in quadrature (the ~190 individual nuisance-parameter entries of the table are not summed); not ingestable by scripts.ingest_hepdata", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 3.6, provenance: {uid: 5ec59b1f, ref: "hepdata:ins3098996/Figure 9a,10a,11a", locator: "HEPData table 'Figure 9a,10a,11a' (normalised unfolded tq cross-section vs pT(t), parton level), 'Unfolded data', bin 2 (45 < pT(t) < 65 GeV): 0.0098078 with 'stat. unc.' 1.3% and 'syst. unc.' 3.3% added in quadrature (the ~190 individual nuisance-parameter entries of the table are not summed); not ingestable by scripts.ingest_hepdata", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties: []
         predictions:
           - label: "NNLO QCD fixed order (MCFM, 5FS, dynamic DDIS scale), ATLAS 2026 comparison"
             accuracy: {qcd: NNLO, approximations: ["fixed order, stable top quark at parton level, 5FS; dynamic double-DIS scale (Q² for the light-quark line, Q² + mt² for the heavy-quark line)"]}
             codes: ["MCFM"]
-            total: {value_pct: 1.1, provenance: {uid: 5d097c48, ref: "hepdata:ins3098996/Figure 9a,10a,11a", locator: "HEPData table 'Figure 9a,10a,11a', column 'MCFM NNLO', bin 2 (45 < pT(t) < 65 GeV): 0.0095046 with 'syst. unc.' 0.00010348 (scale and αs uncertainty, per the Fig. 6 caption of the paper)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 1.1, provenance: {uid: 5d097c48, ref: "hepdata:ins3098996/Figure 9a,10a,11a", locator: "HEPData table 'Figure 9a,10a,11a', column 'MCFM NNLO', bin 2 (45 < pT(t) < 65 GeV): 0.0095046 with 'syst. unc.' 0.00010348 (scale and αs uncertainty, per the Fig. 6 caption of the paper)", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:t-channel-single-top/lhc-13/atlas-2026-diff"]
             refs: ["inspire:3098996", "inspire:1834626"]
-            provenance: {uid: 68d66b4a, ref: "inspire:3098996", locator: "Sec. 3 (MCFM NNLO, 5FS, dynamic DDIS scale, mt = 172.5 GeV; Ref. [50] = Campbell, Neumann, Sullivan, JHEP 02 (2021) 040) and Fig. 9a (normalised pT(t) vs MCFM LO/NLO/NNLO); headline bin 2: 45 < pT(t) < 65 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 68d66b4a, ref: "inspire:3098996", locator: "Sec. 3 (MCFM NNLO, 5FS, dynamic DDIS scale, mt = 172.5 GeV; Ref. [50] = Campbell, Neumann, Sullivan, JHEP 02 (2021) 040) and Fig. 9a (normalised pT(t) vs MCFM LO/NLO/NNLO); headline bin 2: 45 < pT(t) < 65 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:t-channel-single-top/tevatron"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -188,35 +188,35 @@ channels:
         variable: "σ_t-ch(t) at mt = 172.5 GeV"
         results:
           - measurement: "meas:t-channel-single-top/lhc-13.6/cms-2026-pas"
-            total: {value_pct: 3.9, provenance: {uid: 822b8346, ref: "inspire:3213951", locator: "Abstract: σ(tq) = 139.9 +5.4 −5.1 (syst) ± 0.9 (stat) pb; stat and syst added in quadrature, larger side sqrt(5.4² + 0.9²)/139.9", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 3.9, provenance: {uid: 822b8346, ref: "inspire:3213951", locator: "Abstract: σ(tq) = 139.9 +5.4 −5.1 (syst) ± 0.9 (stat) pb; stat and syst added in quadrature, larger side sqrt(5.4² + 0.9²)/139.9", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Statistical"
                 size: {range: [0.6, 0.6], unit: "%", asymmetric: false}
-                provenance: {uid: 6e38dbe4, ref: "inspire:3213951", locator: "Abstract: ± 0.9 (stat) pb of 139.9 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 6e38dbe4, ref: "inspire:3213951", locator: "Abstract: ± 0.9 (stat) pb of 139.9 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: syst_combined
                 specific: "Total systematic uncertainty"
                 size: {range: [3.6, 3.9], unit: "%", asymmetric: true}
-                provenance: {uid: c0d4ac7b, ref: "inspire:3213951", locator: "Abstract: +5.4 −5.1 (syst) pb of 139.9 pb; the Sec. 9 uncertainty breakdown (Table 3) is given for the inclusive σ(tq + t̄q) only", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: c0d4ac7b, ref: "inspire:3213951", locator: "Abstract: +5.4 −5.1 (syst) pb of 139.9 pb; the Sec. 9 uncertainty breakdown (Table 3) is given for the inclusive σ(tq + t̄q) only", source: agent, status: cross-checked, date: "2026-10-17"}
         predictions:
           - label: "NNLO QCD (MCFM 10.1, 5FS, PDF4LHC21)"
             accuracy: {qcd: NNLO, approximations: ["production and decay in the on-shell and vertex-function approximation (inspire:1834626)"]}
             codes: ["MCFM"]
-            total: {value_pct: 2.0, provenance: {uid: 4a072d38, ref: "inspire:3213951", locator: "Sec. 1: σ(tq) = 145.0 +1.7 −1.1 (scale) +2.3 −1.5 (PDF + αs) pb; scale and PDF + αs added in quadrature, larger side sqrt(1.7² + 2.3²)/145.0", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 2.0, provenance: {uid: 4a072d38, ref: "inspire:3213951", locator: "Sec. 1: σ(tq) = 145.0 +1.7 −1.1 (scale) +2.3 −1.5 (PDF + αs) pb; scale and PDF + αs added in quadrature, larger side sqrt(1.7² + 2.3²)/145.0", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation"
                 method: "renormalisation and factorisation scale variation (Sec. 1)"
                 size: {range: [0.8, 1.2], unit: "%", asymmetric: true}
-                provenance: {uid: f9361b20, ref: "inspire:3213951", locator: "Sec. 1: +1.7 −1.1 pb (scale) of 145.0 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: f9361b20, ref: "inspire:3213951", locator: "Sec. 1: +1.7 −1.1 pb (scale) of 145.0 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF and αs, Hessian (PDF4LHC21)"
                 pdf_set: "PDF4LHC21"
                 size: {range: [1.0, 1.6], unit: "%", asymmetric: true}
-                provenance: {uid: 8a9f9429, ref: "inspire:3213951", locator: "Sec. 1: +2.3 −1.5 pb (PDF + αs) of 145.0 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 8a9f9429, ref: "inspire:3213951", locator: "Sec. 1: +2.3 −1.5 pb (PDF + αs) of 145.0 pb", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:t-channel-single-top/lhc-13.6/cms-2026-pas"]
             refs: ["inspire:3213951", "inspire:1834626"]
-            provenance: {uid: dff67355, ref: "inspire:3213951", locator: "Sec. 1 (MCFM v10.1 at NNLO in QCD, mt = 172.5 GeV, PDF4LHC21 Hessian set at 68% CL; Fig. 6 legend: JHEP 02 (2021) 040)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: dff67355, ref: "inspire:3213951", locator: "Sec. 1 (MCFM v10.1 at NNLO in QCD, mt = 172.5 GeV, PDF4LHC21 Hessian set at 68% CL; Fig. 6 legend: JHEP 02 (2021) 040)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
   - id: "chan:t-channel-single-top/lhc-8"
     collider: "col:lhc-8"
@@ -241,36 +241,36 @@ channels:
         variable: "σ_t-ch(t) at mt = 172.5 GeV"
         results:
           - measurement: "meas:t-channel-single-top/lhc-8/atlas-2017-lj"
-            total: {value_pct: 7.6, provenance: {uid: ed948740, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): σ_tot(tq) = 56.7 +4.3 −3.8 pb; larger side 4.3/56.7", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 7.6, provenance: {uid: ed948740, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): σ_tot(tq) = 56.7 +4.3 −3.8 pb; larger side 4.3/56.7", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
-                provenance: {uid: 543fe927, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 0.9 (stat.) pb of 56.7 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 543fe927, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 0.9 (stat.) pb of 56.7 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: syst_combined
                 specific: "Experimental (detector) systematic uncertainties"
                 size: {range: [4.8, 4.8], unit: "%", asymmetric: false}
-                provenance: {uid: 4472923a, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 2.7 (exp.) pb of 56.7 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 4472923a, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 2.7 (exp.) pb of 56.7 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "Scale variation (signal modelling)"
                 size: {range: [3.0, 4.8], unit: "%", asymmetric: true}
-                provenance: {uid: db6e37c2, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): +2.7 −1.7 (scale) pb of 56.7 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: db6e37c2, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): +2.7 −1.7 (scale) pb of 56.7 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "PDF (signal modelling)"
                 size: {range: [0.7, 0.7], unit: "%", asymmetric: false}
-                provenance: {uid: f624ff0a, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 0.4 (PDF) pb of 56.7 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: f624ff0a, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 0.4 (PDF) pb of 56.7 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "NLO-matching method"
                 size: {range: [1.8, 1.8], unit: "%", asymmetric: false}
-                provenance: {uid: '3e730494', ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 1.0 (NLO-matching method) pb of 56.7 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: '3e730494', ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 1.0 (NLO-matching method) pb of 56.7 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "Parton shower"
                 size: {range: [1.9, 1.9], unit: "%", asymmetric: false}
-                provenance: {uid: a284ea03, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 1.1 (parton shower) pb of 56.7 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: a284ea03, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 1.1 (parton shower) pb of 56.7 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [1.9, 1.9], unit: "%", asymmetric: false}
-                provenance: {uid: 87803d96, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 1.1 (lumi.) pb of 56.7 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 87803d96, ref: "inspire:1512776", locator: "Sec. 10, Eq. (10): ± 1.1 (lumi.) pb of 56.7 pb", source: agent, status: cross-checked, date: "2026-10-17"}
           - measurement: "meas:t-channel-single-top/lhc-8/cms-2014-lj"
             total:
               value_pct: 8.6
@@ -290,25 +290,25 @@ channels:
           - label: "NLO QCD (HatHor 2.1, 5FS, PDF4LHC), ATLAS 2017 comparison"
             accuracy: {qcd: NLO}
             codes: ["HatHor"]
-            total: {value_pct: 4.2, provenance: {uid: e1958247, ref: "inspire:1512776", locator: "Sec. 1, Eq. (1a): σ(tq) = 54.9 +2.3 −1.9 pb, total uncertainty (PDF + αS added in quadrature to the scale uncertainty); larger side 2.3/54.9", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 4.2, provenance: {uid: e1958247, ref: "inspire:1512776", locator: "Sec. 1, Eq. (1a): σ(tq) = 54.9 +2.3 −1.9 pb, total uncertainty (PDF + αS added in quadrature to the scale uncertainty); larger side 2.3/54.9", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:t-channel-single-top/lhc-8/atlas-2017-lj"]
             refs: ["inspire:1512776", "inspire:1300820"]
-            provenance: {uid: 1092dbbc, ref: "inspire:1512776", locator: "Sec. 1, Eq. (1a) (HatHor v2.1, mt = 172.5 GeV, PDF4LHC prescription with MSTW2008, CT10 NLO, NNPDF3.0; restricted independent scale variations)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 1092dbbc, ref: "inspire:1512776", locator: "Sec. 1, Eq. (1a) (HatHor v2.1, mt = 172.5 GeV, PDF4LHC prescription with MSTW2008, CT10 NLO, NNPDF3.0; restricted independent scale variations)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "NLO+NNLL QCD (approximate NNLO, MSTW2008nnlo, 5FS), CMS 2014 comparison"
             accuracy:
               qcd: NLO
               resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold"}]
               approximations: ["approximate NNLO from NNLL soft-gluon resummation matched to NLO"]
-            total: {value_pct: 4.2, provenance: {uid: 2bb70120, ref: "inspire:1287736", locator: "Sec. 1, Eq. (2): σ(t) = 56.4 +2.1 −0.3 (scale) ± 1.1 (PDF) pb; scale and PDF added in quadrature, larger side sqrt(2.1² + 1.1²)/56.4", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 4.2, provenance: {uid: 2bb70120, ref: "inspire:1287736", locator: "Sec. 1, Eq. (2): σ(t) = 56.4 +2.1 −0.3 (scale) ± 1.1 (PDF) pb; scale and PDF added in quadrature, larger side sqrt(2.1² + 1.1²)/56.4", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:t-channel-single-top/lhc-8/cms-2014-lj"]
             refs: ["inspire:1287736"]
-            provenance: {uid: f61368ff, ref: "inspire:1287736", locator: "Sec. 1, Eqs. (1)-(2) (approximate NNLO + NNLL, MSTW08NNLO, five-flavour scheme, mt = 173 GeV, μR = μF = mt)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: f61368ff, ref: "inspire:1287736", locator: "Sec. 1, Eqs. (1)-(2) (approximate NNLO + NNLL, MSTW08NNLO, five-flavour scheme, mt = 173 GeV, μR = μF = mt)", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "NNLO QCD (structure-function approximation), ATLAS 2017 comparison"
             accuracy: {qcd: NNLO, approximations: ["structure-function approximation neglecting light/heavy-line cross-talk (inspire:1292824); mt = 173.2 GeV, μR = μF = mt"]}
             compared_to: ["meas:t-channel-single-top/lhc-8/atlas-2017-lj"]
             refs: ["inspire:1512776", "inspire:1292824"]
-            provenance: {uid: 44fea251, ref: "inspire:1512776", locator: "Sec. 1 (NNLO result 1.5% lower than the NLO value with the same settings; only a limited number of scale variations given, so no total is quoted) and Fig. 10", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 44fea251, ref: "inspire:1512776", locator: "Sec. 1 (NNLO result 1.5% lower than the NLO value with the same settings; only a limited number of scale variations given, so no total is quoted) and Fig. 10", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:t-channel-single-top/lhc-7"
     collider: "col:lhc-7"
     initial_state: "pp"
@@ -327,24 +327,24 @@ channels:
         variable: "σ_t-ch(t) at mt = 172.5 GeV"
         results:
           - measurement: "meas:t-channel-single-top/lhc-7/atlas-2014-lj"
-            total: {value_pct: 13.0, provenance: {uid: a6200c82, ref: "inspire:1303905", locator: "Sec. VIII: σ(tq) = 46 ± 1 (stat.) ± 6 (syst.) pb = 46 ± 6 pb; 6/46", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 13.0, provenance: {uid: a6200c82, ref: "inspire:1303905", locator: "Sec. VIII: σ(tq) = 46 ± 1 (stat.) ± 6 (syst.) pb = 46 ± 6 pb; 6/46", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [2.2, 2.2], unit: "%", asymmetric: false}
-                provenance: {uid: 6d04a877, ref: "inspire:1303905", locator: "Sec. VIII: ± 1 (stat.) pb of 46 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 6d04a877, ref: "inspire:1303905", locator: "Sec. VIII: ± 1 (stat.) pb of 46 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: syst_combined
                 specific: "Total systematic uncertainty"
                 size: {range: [13.0, 13.0], unit: "%", asymmetric: false}
-                provenance: {uid: 2fba2c3a, ref: "inspire:1303905", locator: "Sec. VIII: ± 6 (syst.) pb of 46 pb; breakdown in Table II", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 2fba2c3a, ref: "inspire:1303905", locator: "Sec. VIII: ± 6 (syst.) pb of 46 pb; breakdown in Table II", source: agent, status: cross-checked, date: "2026-10-17"}
         predictions:
           - label: "Approximate NNLO QCD (soft-gluon resummation, MSTW2008 NNLO, 5FS)"
             accuracy:
               qcd: NLO
               resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold"}]
               approximations: ["approximate NNLO from soft-gluon resummation; very close to the plain NLO calculation"]
-            total: {value_pct: 4.3, provenance: {uid: 1bb8f695, ref: "inspire:1303905", locator: "Sec. I: σ(tq) = 41.9 +1.8 −0.9 pb (scale and correlated PDF–αs uncertainty); larger side 1.8/41.9", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 4.3, provenance: {uid: 1bb8f695, ref: "inspire:1303905", locator: "Sec. I: σ(tq) = 41.9 +1.8 −0.9 pb (scale and correlated PDF–αs uncertainty); larger side 1.8/41.9", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:t-channel-single-top/lhc-7/atlas-2014-lj"]
             refs: ["inspire:1303905"]
-            provenance: {uid: 15240ab9, ref: "inspire:1303905", locator: "Sec. I (approximate NNLO, mt = 172.5 GeV, MSTW2008 NNLO PDF set; contributions of soft-gluon resummation relatively small, close to the NLO calculation)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 15240ab9, ref: "inspire:1303905", locator: "Sec. I (approximate NNLO, mt = 172.5 GeV, MSTW2008 NNLO PDF set; contributions of soft-gluon resummation relatively small, close to the NLO calculation)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true

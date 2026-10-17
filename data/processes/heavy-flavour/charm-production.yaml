@@ -154,19 +154,19 @@ channels:
               resummation: [{accuracy: "NLL", variable: "pT/m_c"}]
               approximations: ["prompt plus non-prompt D±, f(c → D±) = 0.219 ± 0.010 and f(b → D±) = 0.217 ± 0.011 from LEP averages", "NNPDF3.0nlo PDFs"]
             codes: ["FONLL"]
-            total: {value_pct: 23.0, provenance: {uid: b83a72e4, ref: "hepdata:ins2862073/Table 5", locator: "Table 5, column 3, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band (scale, c and b pole masses, PDF and fragmentation fractions, as listed in the paper's Sec. 3)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 23.0, provenance: {uid: b83a72e4, ref: "hepdata:ins2862073/Table 5", locator: "Table 5, column 3, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band (scale, c and b pole masses, PDF and fragmentation fractions, as listed in the paper's Sec. 3)", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-13/atlas-2024-dpm"]
             refs: ["inspire:468385", "inspire:1116414", "inspire:2862073"]
-            provenance: {uid: ac7c62bd, ref: "inspire:2862073", locator: "Sec. 3 (FONLL setup) and Table 6 / hepdata Table 5, column FONLL, 12 < pT < 100 GeV, |η| < 2.5", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: ac7c62bd, ref: "inspire:2862073", locator: "Sec. 3 (FONLL setup) and Table 6 / hepdata Table 5, column FONLL, 12 < pT < 100 GeV, |η| < 2.5", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "GM-VFNS (NLO), CT14nlo"
             accuracy:
               qcd: NLO
               approximations: ["CT14nlo PDFs, KKKS08 fragmentation functions; inclusive (prompt + non-prompt) values provided by the GM-VFNS authors"]
-            total: {value_pct: 21.0, provenance: {uid: c65b6f35, ref: "hepdata:ins2862073/Table 5", locator: "Table 5, column 2, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band (dominated by QCD scale variations)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 21.0, provenance: {uid: c65b6f35, ref: "hepdata:ins2862073/Table 5", locator: "Table 5, column 2, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band (dominated by QCD scale variations)", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-13/atlas-2024-dpm"]
             refs: ["inspire:1087276", "inspire:2862073"]
-            provenance: {uid: d5199a3a, ref: "inspire:2862073", locator: "Sec. 3 (GM-VFNS setup) and Table 6 / hepdata Table 5, column GM-VFNS, 12 < pT < 100 GeV, |η| < 2.5", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: d5199a3a, ref: "inspire:2862073", locator: "Sec. 3 (GM-VFNS setup) and Table 6 / hepdata Table 5, column GM-VFNS, 12 < pT < 100 GeV, |η| < 2.5", source: agent, status: cross-checked, date: "2026-10-17"}
       - id: "obs:charm-production/lhc-13/dsigma-dpt-dpm"
         name: "dσ(pp → D± X)/dpT, |η| < 2.5"
         kind: differential
@@ -196,96 +196,96 @@ channels:
               qcd: NLO
               resummation: [{accuracy: "NLL", variable: "pT/m_c"}]
             codes: ["FONLL"]
-            total: {value_pct: 30.0, provenance: {uid: cccca08e, ref: "hepdata:ins2862073/Table 2", locator: "Table 2, column 3, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band, bin 12 < pT < 15 GeV", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 30.0, provenance: {uid: cccca08e, ref: "hepdata:ins2862073/Table 2", locator: "Table 2, column 3, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band, bin 12 < pT < 15 GeV", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-13/atlas-2024-dpm"]
             refs: ["inspire:468385", "inspire:1116414", "inspire:2862073"]
-            provenance: {uid: e2633b96, ref: "inspire:2862073", locator: "Table 3 / hepdata Table 2, column FONLL, bin 12 < pT < 15 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: e2633b96, ref: "inspire:2862073", locator: "Table 3 / hepdata Table 2, column FONLL, bin 12 < pT < 15 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "GM-VFNS (NLO), CT14nlo"
             accuracy: {qcd: NLO}
-            total: {value_pct: 24.0, provenance: {uid: f9b08dcb, ref: "hepdata:ins2862073/Table 2", locator: "Table 2, column 2, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band, bin 12 < pT < 15 GeV", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 24.0, provenance: {uid: f9b08dcb, ref: "hepdata:ins2862073/Table 2", locator: "Table 2, column 2, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band, bin 12 < pT < 15 GeV", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-13/atlas-2024-dpm"]
             refs: ["inspire:1087276", "inspire:2862073"]
-            provenance: {uid: 6cee7f9c, ref: "inspire:2862073", locator: "Table 3 / hepdata Table 2, column GM-VFNS, bin 12 < pT < 15 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 6cee7f9c, ref: "inspire:2862073", locator: "Table 3 / hepdata Table 2, column GM-VFNS, bin 12 < pT < 15 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
       - id: "obs:charm-production/lhc-13/sigma-ccbar-total"
         name: "σ(pp → cc̄ X), inclusive (all pT, all y)"
         kind: total
         variable: "total charm-pair cross section in the full phase space; the measurement is extrapolated from ALICE and LHCb fiducial D⁰ data with a data-driven extrapolation function and charm fragmentation fractions measured in pp"
         results:
           - measurement: "meas:charm-production/lhc-13/yang-2025-total"
-            total: {value_pct: 15.5, provenance: {uid: ec9ccde4, ref: "inspire:3130935", locator: "Sec. 5, Eq. for σ_cc̄^tot(13 TeV) = 17.43 +2.70 −1.96 mb (total); larger side 2.70/17.43 = 15.5%", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 15.5, provenance: {uid: ec9ccde4, ref: "inspire:3130935", locator: "Sec. 5, Eq. for σ_cc̄^tot(13 TeV) = 17.43 +2.70 −1.96 mb (total); larger side 2.70/17.43 = 15.5%", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: syst_combined
                 specific: "ALICE + LHCb data (stat ⊕ syst, parts covered by fiducial data)"
                 size: {range: [3.0, 3.2], unit: "%", asymmetric: true}
-                provenance: {uid: cbc2de6b, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +0.56 −0.53 (data) of 17.43 mb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: cbc2de6b, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +0.56 −0.53 (data) of 17.43 mb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "ddFONLL extrapolation function parameters"
                 size: {range: [4.4, 4.5], unit: "%", asymmetric: true}
-                provenance: {uid: 426187a1, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +0.76 −0.78 (f~) of 17.43 mb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 426187a1, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +0.76 −0.78 (f~) of 17.43 mb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "PDF dependence of the ddFONLL extrapolation"
                 size: {range: [7.0, 8.4], unit: "%", asymmetric: true}
-                provenance: {uid: a7e645cd, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +1.47 −1.22 (PDF) of 17.43 mb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: a7e645cd, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +1.47 −1.22 (PDF) of 17.43 mb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: other
                 specific: "Charm fragmentation fractions in pp, f(c → D⁰)"
                 size: {range: [6.8, 12], unit: "%", asymmetric: true}
-                provenance: {uid: bfa02de3, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +2.05 −1.19 (f_pp) of 17.43 mb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: bfa02de3, ref: "inspire:3130935", locator: "Table 8, σ_cc̄^tot row: +2.05 −1.19 (f_pp) of 17.43 mb", source: agent, status: cross-checked, date: "2026-10-17"}
         predictions:
           - label: "NNLO QCD (MaunaKea, nf = 3), NNPDF4.0"
             accuracy:
               qcd: NNLO
               approximations: ["inclusive cc̄ in the fixed-flavour (nf = 3) scheme, static scale μF = μR = 2 m_c; no fragmentation or hadronisation", "NNPDF40_nnlo_pch_as_01180_nf_3"]
             codes: ["MaunaKea"]
-            total: {value_pct: 94, provenance: {uid: 05b6eb3b, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 94, provenance: {uid: 05b6eb3b, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF scale variation"
                 method: "7-point variation of μR, μF by factors of two around 2 m_c, excluding opposite variations"
                 size: {range: [60, 90], unit: "%", asymmetric: true}
-                provenance: {uid: '36128689', ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: Δscale +90% −60%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: '36128689', ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: Δscale +90% −60%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF uncertainty"
                 pdf_set: "NNPDF40_nnlo_pch_as_01180_nf_3"
                 size: {range: [6, 6], unit: "%", asymmetric: false}
-                provenance: {uid: a8efe8b5, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: ΔPDF +6% −6%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: a8efe8b5, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: ΔPDF +6% −6%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: parametric
                 specific: "Charm-quark mass variation"
                 size: {range: [15, 25], unit: "%", asymmetric: true}
-                provenance: {uid: fad20a36, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: Δm_c +25% −15%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: fad20a36, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: Δm_c +25% −15%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αs(mZ) variation"
                 size: {range: [0, 0.5], unit: "%", asymmetric: true}
-                provenance: {uid: 36fb53c4, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: Δαs +0% −0.5%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 36fb53c4, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: Δαs +0% −0.5%", source: agent, status: cross-checked, date: "2026-10-17"}
             refs: ["inspire:3156631"]
-            provenance: {uid: 12e4a00c, ref: "inspire:3156631", locator: "Sec. III.1 and Table 5 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 12e4a00c, ref: "inspire:3156631", locator: "Sec. III.1 and Table 5 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: cross-checked, date: "2026-10-17"}
 
           - label: "NNLO QCD (MaunaKea, nf = 3), CT18"
             accuracy:
               qcd: NNLO
               approximations: ["inclusive cc̄ in the fixed-flavour (nf = 3) scheme, static scale μF = μR = 2 m_c; no fragmentation or hadronisation", "CT18NNLO_NF3"]
             codes: ["MaunaKea"]
-            total: {value_pct: 137, provenance: {uid: e1d1f8f8, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 137, provenance: {uid: e1d1f8f8, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF scale variation"
                 method: "7-point variation of μR, μF by factors of two around 2 m_c, excluding opposite variations"
                 size: {range: [70, 125], unit: "%", asymmetric: true}
-                provenance: {uid: ab86993f, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb: Δscale +125% −70%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: ab86993f, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb: Δscale +125% −70%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF uncertainty"
                 pdf_set: "CT18NNLO_NF3"
                 size: {range: [8, 50], unit: "%", asymmetric: true}
-                provenance: {uid: 2be1e593, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb: ΔPDF +50% −8%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 2be1e593, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb: ΔPDF +50% −8%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: parametric
                 specific: "Charm-quark mass variation"
                 size: {range: [20, 25], unit: "%", asymmetric: true}
-                provenance: {uid: ad7c191b, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb: Δm_c +25% −20%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: ad7c191b, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb: Δm_c +25% −20%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αs(mZ) variation"
-                size: {range: [2, 2], unit: "%", asymmetric: true}
+                size: {range: [2, 2], unit: "%", asymmetric: false}
                 provenance: {uid: 07ce078e, ref: "inspire:3156631", locator: "Table 7 (√s = 13000 GeV row): σ(cc̄) = 11850 µb: Δαs +2% −2%", source: agent, status: agent-draft, date: "2026-10-17"}
             refs: ["inspire:3156631"]
-            provenance: {uid: 1457e9bb, ref: "inspire:3156631", locator: "Sec. III.1 and Table 7 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 1457e9bb, ref: "inspire:3156631", locator: "Sec. III.1 and Table 7 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:charm-production/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -334,40 +334,40 @@ channels:
         variable: "total charm-pair cross section in the full phase space, derived by the compilation of inspire:3156631 from the CDF fiducial σ(D⁺, 1.5 < pT < 14.5 GeV, |y| < 1) = 71.9 ± 6.8 ± 9.3 µb, the LEP fragmentation fraction and an extrapolation factor; not a direct CDF result"
         results:
           - measurement: "meas:charm-production/tevatron-1960/cdf-2017-dplus"
-            total: {value_pct: 53, provenance: {uid: 8e13a0a2, ref: "inspire:3156631", locator: "Table 1, CDF (1.96 TeV pp̄) row: total σ(cc̄) = 1700 +900 −300 µb ('t.w.', one total uncertainty quoted); larger side 900/1700 = 53%", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 53, provenance: {uid: 8e13a0a2, ref: "inspire:3156631", locator: "Table 1, CDF (1.96 TeV pp̄) row: total σ(cc̄) = 1700 +900 −300 µb ('t.w.', one total uncertainty quoted); larger side 900/1700 = 53%", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: acceptance_extrapolation
                 specific: "Extrapolation factor to the full phase space (5.2)"
                 size: {range: [10, 50], unit: "%", asymmetric: true}
-                provenance: {uid: 0686dfef, ref: "inspire:3156631", locator: "Table 1, CDF (1.96 TeV pp̄) row: extrapolation factor 5.2 with −10% +50% ('t.w.')", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 0686dfef, ref: "inspire:3156631", locator: "Table 1, CDF (1.96 TeV pp̄) row: extrapolation factor 5.2 with −10% +50% ('t.w.')", source: agent, status: cross-checked, date: "2026-10-17"}
         predictions:
           - label: "NNLO QCD (MaunaKea, nf = 3), NNPDF4.0"
             accuracy:
               qcd: NNLO
               approximations: ["inclusive cc̄ in the fixed-flavour (nf = 3) scheme, static scale μF = μR = 2 m_c; no fragmentation or hadronisation", "NNPDF40_nnlo_pch_as_01180_nf_3", "pp̄-equivalent correction factor R = 1.00 for CDF (Table 4), so the pp prediction is used"]
             codes: ["MaunaKea"]
-            total: {value_pct: 76, provenance: {uid: '34227812', ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 76, provenance: {uid: '34227812', ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF scale variation"
                 method: "7-point variation of μR, μF by factors of two around 2 m_c, excluding opposite variations"
                 size: {range: [50, 70], unit: "%", asymmetric: true}
-                provenance: {uid: 67ba8d0b, ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb: Δscale +70% −50%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 67ba8d0b, ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb: Δscale +70% −50%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF uncertainty"
                 pdf_set: "NNPDF40_nnlo_pch_as_01180_nf_3"
                 size: {range: [4, 4], unit: "%", asymmetric: false}
-                provenance: {uid: e65062a1, ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb: ΔPDF +4% −4%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: e65062a1, ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb: ΔPDF +4% −4%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: parametric
                 specific: "Charm-quark mass variation"
                 size: {range: [20, 30], unit: "%", asymmetric: true}
-                provenance: {uid: 4e5fe7b1, ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb: Δm_c +30% −20%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 4e5fe7b1, ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb: Δm_c +30% −20%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αs(mZ) variation"
-                size: {range: [1, 0.5], unit: "%", asymmetric: true}
+                size: {range: [0.5, 1], unit: "%", asymmetric: true}
                 provenance: {uid: fa43db31, ref: "inspire:3156631", locator: "Table 5 (√s = 1960 GeV row): σ(cc̄) = 2450 µb: Δαs +1% −0.5%", source: agent, status: agent-draft, date: "2026-10-17"}
             refs: ["inspire:3156631"]
-            provenance: {uid: 7f91f112, ref: "inspire:3156631", locator: "Sec. III.1 and Table 5 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 7f91f112, ref: "inspire:3156631", locator: "Sec. III.1 and Table 5 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
 
           - label: "NNLO QCD (MaunaKea, nf = 3), CT18"
@@ -375,28 +375,28 @@ channels:
               qcd: NNLO
               approximations: ["inclusive cc̄ in the fixed-flavour (nf = 3) scheme, static scale μF = μR = 2 m_c; no fragmentation or hadronisation", "CT18NNLO_NF3", "pp̄-equivalent correction factor R = 1.00 for CDF (Table 4), so the pp prediction is used"]
             codes: ["MaunaKea"]
-            total: {value_pct: 96, provenance: {uid: e42e02a4, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 96, provenance: {uid: e42e02a4, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb; scale, PDF, charm-mass and αs uncertainties (larger side of each) added in quadrature", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF scale variation"
                 method: "7-point variation of μR, μF by factors of two around 2 m_c, excluding opposite variations"
                 size: {range: [60, 90], unit: "%", asymmetric: true}
-                provenance: {uid: 7e695fb8, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb: Δscale +90% −60%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 7e695fb8, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb: Δscale +90% −60%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF uncertainty"
                 pdf_set: "CT18NNLO_NF3"
                 size: {range: [7, 14], unit: "%", asymmetric: true}
-                provenance: {uid: 5e00f132, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb: ΔPDF +14% −7%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 5e00f132, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb: ΔPDF +14% −7%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: parametric
                 specific: "Charm-quark mass variation"
                 size: {range: [25, 30], unit: "%", asymmetric: true}
-                provenance: {uid: 8cbcfd9d, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb: Δm_c +30% −25%", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 8cbcfd9d, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb: Δm_c +30% −25%", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αs(mZ) variation"
-                size: {range: [2, 1.5], unit: "%", asymmetric: true}
+                size: {range: [1.5, 2], unit: "%", asymmetric: true}
                 provenance: {uid: 9f1e12e4, ref: "inspire:3156631", locator: "Table 7 (√s = 1960 GeV row): σ(cc̄) = 3400 µb: Δαs +2% −1.5%", source: agent, status: agent-draft, date: "2026-10-17"}
             refs: ["inspire:3156631"]
-            provenance: {uid: 0f5c4663, ref: "inspire:3156631", locator: "Sec. III.1 and Table 7 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 0f5c4663, ref: "inspire:3156631", locator: "Sec. III.1 and Table 7 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:charm-production/lhc-7"
     collider: "col:lhc-7"
     initial_state: "pp"
@@ -421,58 +421,58 @@ channels:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [5.4, 5.4], unit: "%", asymmetric: false}
-                provenance: {uid: f6e6cb0c, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 18/331", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: f6e6cb0c, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 18/331", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: syst_combined
                 specific: "Systematic (excluding luminosity and branching fractions)"
                 size: {range: [8.5, 8.5], unit: "%", asymmetric: false}
-                provenance: {uid: e82a521b, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 28/331", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: e82a521b, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 28/331", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [3.6, 3.6], unit: "%", asymmetric: false}
-                provenance: {uid: 71bc6956, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 12/331", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 71bc6956, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 12/331", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: other
                 specific: "Branching fraction D*± → D⁰π±, D⁰ → K∓π±"
                 size: {range: [1.5, 1.5], unit: "%", asymmetric: false}
-                provenance: {uid: ee193729, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 5/331", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: ee193729, ref: "inspire:1408878", locator: "Sec. 8: sigma_vis(D*±) = 331 ± 18 (stat) ± 28 (syst) ± 12 (lum) ± 5 (br) µb; 5/331", source: agent, status: cross-checked, date: "2026-10-17"}
         predictions:
           - label: "FONLL (NLO + NLL), CTEQ6.6"
             accuracy: {qcd: NLO, resummation: [{accuracy: "NLL", variable: "pT/m_c"}]}
             codes: ["FONLL"]
-            total: {value_pct: 62, provenance: {uid: cf2682fc, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, FONLL; larger side of the total (quadrature sum of all theory sources) band +125 −79 of 202 µb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 62, provenance: {uid: cf2682fc, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, FONLL; larger side of the total (quadrature sum of all theory sources) band +125 −79 of 202 µb", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-7/atlas-2015-d"]
             refs: ["inspire:1408878", "inspire:468385", "inspire:1116414"]
             headline: true
-            provenance: {uid: 17981d2b, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), FONLL", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 17981d2b, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), FONLL", source: agent, status: cross-checked, date: "2026-10-17"}
 
           - label: "GM-VFNS (NLO)"
             accuracy: {qcd: NLO}
             codes: ["GM-VFNS"]
-            total: {value_pct: 44, provenance: {uid: 194bd39e, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, GM-VFNS; larger side of the total (quadrature sum of all theory sources) band +130 −150 of 340 µb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 44, provenance: {uid: 194bd39e, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, GM-VFNS; larger side of the total (quadrature sum of all theory sources) band +130 −150 of 340 µb", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-7/atlas-2015-d"]
             refs: ["inspire:1408878", "inspire:1087276"]
-            provenance: {uid: eb322aee, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), GM-VFNS", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: eb322aee, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), GM-VFNS", source: agent, status: cross-checked, date: "2026-10-17"}
 
           - label: "POWHEG + PYTHIA (NLO matched)"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["POWHEG", "PYTHIA"]
-            total: {value_pct: 113, provenance: {uid: ef4d03bd, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, POWHEG+PYTHIA; larger side of the total (quadrature sum of all theory sources) band +179 −85 of 158 µb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 113, provenance: {uid: ef4d03bd, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, POWHEG+PYTHIA; larger side of the total (quadrature sum of all theory sources) band +179 −85 of 158 µb", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-7/atlas-2015-d"]
             refs: ["inspire:1408878"]
-            provenance: {uid: a8a74a9d, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), POWHEG+PYTHIA", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: a8a74a9d, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), POWHEG+PYTHIA", source: agent, status: cross-checked, date: "2026-10-17"}
 
           - label: "POWHEG + HERWIG (NLO matched)"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["POWHEG", "HERWIG"]
-            total: {value_pct: 107, provenance: {uid: de943cb6, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, POWHEG+HERWIG; larger side of the total (quadrature sum of all theory sources) band +147 −72 of 137 µb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 107, provenance: {uid: de943cb6, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, POWHEG+HERWIG; larger side of the total (quadrature sum of all theory sources) band +147 −72 of 137 µb", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-7/atlas-2015-d"]
             refs: ["inspire:1408878"]
-            provenance: {uid: 4393d817, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), POWHEG+HERWIG", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 4393d817, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), POWHEG+HERWIG", source: agent, status: cross-checked, date: "2026-10-17"}
 
           - label: "MC@NLO (NLO matched)"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["MC@NLO"]
-            total: {value_pct: 80, provenance: {uid: ab5a09c9, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, MC@NLO; larger side of the total (quadrature sum of all theory sources) band +125 −72 of 157 µb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 80, provenance: {uid: ab5a09c9, ref: "inspire:1408878", locator: "Table 3, low-pT column for D*±, MC@NLO; larger side of the total (quadrature sum of all theory sources) band +125 −72 of 157 µb", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:charm-production/lhc-7/atlas-2015-d"]
             refs: ["inspire:1408878"]
-            provenance: {uid: 584d83af, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), MC@NLO", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 584d83af, ref: "inspire:1408878", locator: "Sec. 3 and Table 3 (3.5 < pT(D) < 20 GeV, |η| < 2.1, D*±), MC@NLO", source: agent, status: cross-checked, date: "2026-10-17"}
 

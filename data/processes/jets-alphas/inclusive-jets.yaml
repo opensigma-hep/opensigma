@@ -182,10 +182,10 @@ channels:
                 full_table: "hepdata:ins1634970/Table 1"
                 provenance: {uid: 08a835ae, "ref": "hepdata:ins1634970/Table 1", "locator": "Table 1, error 'syst_lumi'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
         predictions:
-          - label: "NNLO QCD full colour (NNLOJET), μ = ĤT (scalar sum of parton pT), ⊗ NP"
+          - label: "NNLO QCD full colour (NNLOJET), μ = ĤT (scalar sum of parton pT)"
             accuracy:
               qcd: NNLO
-              approximations: ["full colour at NNLO", "non-perturbative corrections applied (calculation compared with CMS 13 TeV, inspire:1459051; not a measurement in this file)"]
+              approximations: ["full colour at NNLO", "compared with CMS 13 TeV (inspire:1459051; not a measurement in this file)"]
             codes: ["NNLOJET"]
             uses_amplitudes: ["amp:2L/2to2-partons", "amp:1L/2to3-partons", "amp:1L/2to2-partons"]
             uncertainties:
@@ -193,7 +193,7 @@ channels:
                 specific: "μR, μF variation (scale only; PDF and αs not quoted)"
                 method: "seven-point μR, μF variation around μ = ĤT"
                 size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
-                provenance: {uid: 908f6ee0, ref: "inspire:2070536", locator: "Sec. 3.4 ('very small scale uncertainty (only about 1% at NNLO) at R = 0.4'): seven-point μR, μF variation around μ = ĤT; scale uncertainty only (PDF and αs not included), approximate and quoted for R = 0.4 in general, not for the headline bin", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 908f6ee0, ref: "inspire:2070536", locator: "Sec. 3.4 ('very small scale uncertainty (only about 1% at NNLO) at R = 0.4'): seven-point μR, μF variation around μ = ĤT; scale uncertainty only (PDF and αs not included), approximate and quoted for R = 0.4 in general, not for the headline bin", source: agent, status: cross-checked, date: "2026-10-17"}
             refs: ["inspire:2070536", "inspire:1747058"]
             provenance: {uid: c5dcb595, ref: "inspire:2070536", locator: "Abstract and Sec. 3 (single jet inclusive doubly differential in pT and |y| at NNLO full colour, compared with CMS 13 TeV [1605.04436])", source: agent, status: agent-draft, date: "2026-10-16"}
             headline: true
@@ -223,7 +223,7 @@ channels:
             codes: ["Stripper"]
             uses_amplitudes: ["amp:2L/2to2-partons", "amp:1L/2to3-partons", "amp:1L/2to2-partons"]
             refs: ["inspire:2905639", "inspire:3149757"]
-            provenance: {uid: e0cf0fbc, ref: "inspire:2905639", locator: "Abstract and Sec. 3 (first NNLL small-R resummation matched to NNLO via the Stripper fragmentation formalism; μR = μF = μJ = pT; NNPDF3.1 NNLO; 13 TeV LHC); Conclusions (threshold resummation not yet included). Follow-up: inspire:3149757 Secs. 2–3 (same NNLO+NNLL setup, scale choices pT and ĤT)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: e0cf0fbc, ref: "inspire:2905639", locator: "Abstract and Sec. 3 (first NNLL small-R resummation matched to NNLO via the Stripper fragmentation formalism; μR = μF = μJ = pT; NNPDF3.1 NNLO; 13 TeV LHC); Conclusions (threshold resummation not yet included). Follow-up: inspire:3149757 Secs. 2–3 (same NNLO+NNLL setup, scale choices pT and ĤT)", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "NLO QCD (NLOJET++/APPLGRID) ⊗ NP ⊗ EW, CT14 NLO"
             accuracy:
               qcd: NLO
@@ -549,19 +549,19 @@ channels:
                 specific: "μR, μF variation (plus difference to the alternative scale pT^jet)"
                 method: "μR, μF varied by factors 1/2 and 2 excluding opposite variations; envelope"
                 size: {range: [5, 50], unit: "%", asymmetric: true}
-                provenance: {uid: c8ae945c, ref: "inspire:1604271", locator: "Sec. 9.1 (CT14 NLO: scale uncertainty from around 5–10% at low pT in the central rapidity bin to about 50% in the highest pT bins of the most forward region; asymmetric, larger for R = 0.6 than R = 0.4)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: c8ae945c, ref: "inspire:1604271", locator: "Sec. 9.1 (CT14 NLO: scale uncertainty from around 5–10% at low pT in the central rapidity bin to about 50% in the highest pT bins of the most forward region; asymmetric, larger for R = 0.6 than R = 0.4)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "CT14 NLO PDF uncertainty (68% CL)"
                 pdf_set: "CT14 NLO"
                 size: {range: [5, 50], unit: "%", asymmetric: false}
-                provenance: {uid: b9639f43, ref: "inspire:1604271", locator: "Sec. 9.1 (PDF uncertainties vary from 5% to 50% depending on jet pT and rapidity)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: b9639f43, ref: "inspire:1604271", locator: "Sec. 9.1 (PDF uncertainties vary from 5% to 50% depending on jet pT and rapidity)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αs uncertainty (Δαs = 0.0015)"
                 size: {range: [3, 3], unit: "%", asymmetric: false}
-                provenance: {uid: 2fada47e, ref: "inspire:1604271", locator: "Sec. 9.1 (the αs uncertainty is about 3% and rather constant over the phase space)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 2fada47e, ref: "inspire:1604271", locator: "Sec. 9.1 (the αs uncertainty is about 3% and rather constant over the phase space)", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:inclusive-jets/lhc-8/atlas-2017"]
             refs: ["inspire:1604271"]
-            provenance: {uid: b074883d, ref: "inspire:1604271", locator: "Secs. 9.1–9.3 (NLOJet++ 4.1.3 with APPLGRID, CT14/MMHT2014/NNPDF3.0/HERAPDF2.0, μR = μF = pT^jet,max; EW corrections of Sec. 9.2; NP corrections of Sec. 9.3)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: b074883d, ref: "inspire:1604271", locator: "Secs. 9.1–9.3 (NLOJet++ 4.1.3 with APPLGRID, CT14/MMHT2014/NNPDF3.0/HERAPDF2.0, μR = μF = pT^jet,max; EW corrections of Sec. 9.2; NP corrections of Sec. 9.3)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "NLO QCD (NLOJet++/fastNLO), μ = leading-jet pT, ⊗ NP ⊗ NLO EW (high pT)"
             accuracy:
@@ -575,20 +575,20 @@ channels:
                 specific: "μR, μF variation"
                 method: "six-point (μR/μ, μF/μ) variation by factors 1/2 and 2; largest variation"
                 size: {range: [5, 10], unit: "%", asymmetric: false, regions: [{where: "outer |y| bins and high pT", value: "±40"}]}
-                provenance: {uid: 069fea1a, ref: "inspire:1487277", locator: "Sec. 5 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high pT)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 069fea1a, ref: "inspire:1487277", locator: "Sec. 5 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high pT)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF uncertainty of the six NLO sets"
                 pdf_set: "CT10, MSTW2008, NNPDF2.1, NNPDF3.0, HERAPDF1.5, ABM11 (each with its own prescription)"
                 size: {range: [5, 30], unit: "%", asymmetric: false, regions: [{where: "outer rapidity region at high pT", value: "±50"}]}
-                provenance: {uid: a6b3d679, ref: "inspire:1487277", locator: "Sec. 5 (PDF uncertainty varies from 5% to 30% in the entire pT range for |y| ≤ 1.5; as large as 50% at high pT beyond |y| = 1.5, up to 100% for CT10 and HERAPDF1.5)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: a6b3d679, ref: "inspire:1487277", locator: "Sec. 5 (PDF uncertainty varies from 5% to 30% in the entire pT range for |y| ≤ 1.5; as large as 50% at high pT beyond |y| = 1.5, up to 100% for CT10 and HERAPDF1.5)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: nonpert
                 specific: "NP correction uncertainty (central rapidity bin)"
                 method: "envelope of LO- and NLO-based generator predictions"
                 size: {range: [0.06, 1.4], unit: "%", asymmetric: false}
-                provenance: {uid: db15f8a6, ref: "inspire:1487277", locator: "Sec. 5 (1.4% at pT ~ 100 GeV to 0.06% at ~2.5 TeV in the central rapidity bin) and Fig. 1 caption (envelope of LO- and NLO-based predictions)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: db15f8a6, ref: "inspire:1487277", locator: "Sec. 5 (1.4% at pT ~ 100 GeV to 0.06% at ~2.5 TeV in the central rapidity bin) and Fig. 1 caption (envelope of LO- and NLO-based predictions)", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:inclusive-jets/lhc-8/cms-2016"]
             refs: ["inspire:1487277"]
-            provenance: {uid: 0dd1ceeb, ref: "inspire:1487277", locator: "Sec. 5 (NLOJet++ 4.1.3 in fastNLO 2.1, six NLO PDF sets, μR = μF = leading-jet pT, EW corrections of the cited ref. [34] for high-pT jets, Fig. 2)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 0dd1ceeb, ref: "inspire:1487277", locator: "Sec. 5 (NLOJet++ 4.1.3 in fastNLO 2.1, six NLO PDF sets, μR = μF = leading-jet pT, EW corrections of the cited ref. [34] for high-pT jets, Fig. 2)", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:inclusive-jets/lhc-7"
     collider: "col:lhc-7"
     initial_state: "pp"
@@ -824,7 +824,7 @@ channels:
             uses_amplitudes: ["amp:1L/2to2-partons"]
             compared_to: ["meas:inclusive-jets/lhc-7/atlas-2014"]
             refs: ["inspire:1325553"]
-            provenance: {uid: '85554891', ref: "inspire:1325553", locator: "Secs. 5.1, 5.2 and 5.4 (NLOJET++ 4.1.2 with APPLGRID, CT10/MSTW2008/NNPDF2.1/ABM11/HERAPDF1.5, μR = μF = pT^max; NP corrections; EW corrections of the cited ref. [48]); uncertainties only shown in Fig. 1", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: '85554891', ref: "inspire:1325553", locator: "Secs. 5.1, 5.2 and 5.4 (NLOJET++ 4.1.2 with APPLGRID, CT10/MSTW2008/NNPDF2.1/ABM11/HERAPDF1.5, μR = μF = pT^max; NP corrections; EW corrections of the cited ref. [48]); uncertainties only shown in Fig. 1", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "NLO QCD (NLOJet++/fastNLO), NNPDF2.1 NLO, μ = pT, ⊗ NP"
             accuracy:
@@ -837,11 +837,11 @@ channels:
                 specific: "μR, μF variation"
                 method: "six-point (μF/μ, μR/μ) variation by factors 1/2 and 2; maximum deviation"
                 size: {range: [5, 10], unit: "%", asymmetric: false, regions: [{where: "outer |y| bins, high dijet mass and jet pT", value: "±40"}]}
-                provenance: {uid: 37908d6c, ref: "inspire:1208923", locator: "Sec. 6.2 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high dijet masses and jet pT)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 37908d6c, ref: "inspire:1208923", locator: "Sec. 6.2 (scale uncertainty ranges from 5% to 10% for |y| < 1.5 and increases to 40% for the outer |y| bins and for high dijet masses and jet pT)", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: alphas
                 specific: "αS(MZ) ± 0.001"
                 size: {range: [1, 2], unit: "%", asymmetric: false}
-                provenance: {uid: 28422cb6, ref: "inspire:1208923", locator: "Sec. 6.2 (variation of αS(MZ) by ±0.001 introduces an additional 1–2% uncertainty)", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 28422cb6, ref: "inspire:1208923", locator: "Sec. 6.2 (variation of αS(MZ) by ±0.001 introduces an additional 1–2% uncertainty)", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:inclusive-jets/lhc-7/cms-2012"]
             refs: ["inspire:1208923"]
-            provenance: {uid: 4bf21b3e, ref: "inspire:1208923", locator: "Sec. 6 (NLOJet++ 2.0.1 in fastNLO 1.4, μR = μF = jet pT, CT10/MSTW2008NLO/NNPDF2.1/HERAPDF1.5/ABKM09; NP corrections of Sec. 6.3)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 4bf21b3e, ref: "inspire:1208923", locator: "Sec. 6 (NLOJet++ 2.0.1 in fastNLO 1.4, μR = μF = jet pT, CT10/MSTW2008NLO/NNPDF2.1/HERAPDF1.5/ABKM09; NP corrections of Sec. 6.3)", source: agent, status: cross-checked, date: "2026-10-17"}

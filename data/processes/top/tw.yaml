@@ -162,7 +162,7 @@ channels:
             codes: ["POWHEG", "PYTHIA"]
             compared_to: ["meas:tw/lhc-13/cms-2022-emu-diff"]
             refs: ["inspire:2129461"]
-            provenance: {uid: 02e35f2f, ref: "inspire:2129461", locator: "Sec. 2 (POWHEG v2 NLO tW, DR nominal, PYTHIA 8, NNPDF3.1 NNLO) and Fig. 8 (leading-lepton pT; HEPData 'Figure 8a', column 'tW PH DR + P8'); headline bin 3: 45 < pT(ℓ1) < 55 GeV", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 02e35f2f, ref: "inspire:2129461", locator: "Sec. 2 (POWHEG v2 NLO tW, DR nominal, PYTHIA 8, NNPDF3.1 NNLO) and Fig. 8 (leading-lepton pT; HEPData 'Figure 8a', column 'tW PH DR + P8'); headline bin 3: 45 < pT(ℓ1) < 55 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:tw/lhc-13.6"
     collider: "col:lhc-13.6"
     initial_state: "pp"
@@ -207,21 +207,21 @@ channels:
               qcd: NLO
               resummation: [{accuracy: "N3LL (approximate)", variable: "soft-gluon threshold"}]
               approximations: ["complete NLO plus approximate higher-order soft-gluon corrections ('aN3LO' in the CMS paper, with N3LL soft-gluon resummation terms)"]
-            total: {value_pct: 3.6, provenance: {uid: 196aab48, ref: "inspire:2827552", locator: "Sec. 1: σ_tW^SM = 87.9 +2.0 −1.9 (scale) ± 2.4 (PDF + αS) pb (also HEPData 'Cross section', second dependent variable); scale and PDF + αS added in quadrature, larger side sqrt(2.0² + 2.4²)/87.9", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 3.6, provenance: {uid: 196aab48, ref: "inspire:2827552", locator: "Sec. 1: σ_tW^SM = 87.9 +2.0 −1.9 (scale) ± 2.4 (PDF + αS) pb (also HEPData 'Cross section', second dependent variable); scale and PDF + αS added in quadrature, larger side sqrt(2.0² + 2.4²)/87.9", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation"
                 method: "renormalisation and factorisation scale variations (Sec. 1)"
                 size: {range: [2.2, 2.3], unit: "%", asymmetric: true}
-                provenance: {uid: 544d6659, ref: "inspire:2827552", locator: "Sec. 1: +2.0 −1.9 pb (scale) of 87.9 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 544d6659, ref: "inspire:2827552", locator: "Sec. 1: +2.0 −1.9 pb (scale) of 87.9 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF and αS (PDF4LHC21)"
                 pdf_set: "PDF4LHC21"
                 size: {range: [2.7, 2.7], unit: "%", asymmetric: false}
-                provenance: {uid: d0b80783, ref: "inspire:2827552", locator: "Sec. 1: ± 2.4 pb (PDF + αS) of 87.9 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: d0b80783, ref: "inspire:2827552", locator: "Sec. 1: ± 2.4 pb (PDF + αS) of 87.9 pb", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:tw/lhc-13.6/cms-2024-emu"]
             refs: ["inspire:2827552", "inspire:1848114"]
-            provenance: {uid: 0af4b731, ref: "inspire:2827552", locator: "Sec. 1 (aN3LO with soft-gluon resummation, mt = 172.5 GeV, PDF4LHC21; Refs. [15-17] = Kidonakis and Yamanaka, Kidonakis)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 0af4b731, ref: "inspire:2827552", locator: "Sec. 1 (aN3LO with soft-gluon resummation, mt = 172.5 GeV, PDF4LHC21; Refs. [15-17] = Kidonakis and Yamanaka, Kidonakis)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
   - id: "chan:tw/lhc-8"
     collider: "col:lhc-8"
@@ -246,32 +246,32 @@ channels:
         variable: "σ_tW at mt = 172.5 GeV"
         results:
           - measurement: "meas:tw/lhc-8/atlas-2015-dilepton"
-            total: {value_pct: 17.0, provenance: {uid: efb09cee, ref: "inspire:1397635", locator: "Table 4, Total (+16/−17% on the signal strength); σ = 23.0 ± 1.3 (stat.) +3.2 −3.5 (syst.) ± 1.1 (lumi.) pb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 17.0, provenance: {uid: efb09cee, ref: "inspire:1397635", locator: "Table 4, Total (+16/−17% on the signal strength); σ = 23.0 ± 1.3 (stat.) +3.2 −3.5 (syst.) ± 1.1 (lumi.) pb", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
                 size: {range: [5.8, 5.8], unit: "%", asymmetric: false}
-                provenance: {uid: b08bf9a9, ref: "inspire:1397635", locator: "Table 4, Statistical", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: b08bf9a9, ref: "inspire:1397635", locator: "Table 4, Statistical", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: lumi
                 specific: "Integrated luminosity"
                 size: {range: [4.7, 4.7], unit: "%", asymmetric: false}
-                provenance: {uid: 5734eeb8, ref: "inspire:1397635", locator: "Table 4, Luminosity", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 5734eeb8, ref: "inspire:1397635", locator: "Table 4, Luminosity", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: acceptance_extrapolation
                 specific: "ISR/FSR (theory modelling)"
                 size: {range: [8.2, 9.4], unit: "%", asymmetric: true}
-                provenance: {uid: ce1c98a6, ref: "inspire:1397635", locator: "Table 4, Theory modelling, ISR/FSR: +8.2/−9.4", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: ce1c98a6, ref: "inspire:1397635", locator: "Table 4, Theory modelling, ISR/FSR: +8.2/−9.4", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: energy_scale
                 specific: "Jets (detector)"
                 size: {range: [9.0, 9.9], unit: "%", asymmetric: true}
-                provenance: {uid: b45fdf6c, ref: "inspire:1397635", locator: "Table 4, Detector, Jet: +9.0/−9.9", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: b45fdf6c, ref: "inspire:1397635", locator: "Table 4, Detector, Jet: +9.0/−9.9", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: efficiency
                 specific: "Leptons (detector)"
                 size: {range: [3.0, 3.0], unit: "%", asymmetric: false}
-                provenance: {uid: f6e9c61c, ref: "inspire:1397635", locator: "Table 4, Detector, Lepton", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: f6e9c61c, ref: "inspire:1397635", locator: "Table 4, Detector, Lepton", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: background
                 specific: "Background normalisation"
                 size: {range: [2.6, 2.9], unit: "%", asymmetric: true}
-                provenance: {uid: 741062d7, ref: "inspire:1397635", locator: "Table 4, Background norm.: +2.9/−2.6", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 741062d7, ref: "inspire:1397635", locator: "Table 4, Background norm.: +2.9/−2.6", source: agent, status: cross-checked, date: "2026-10-17"}
           - measurement: "meas:tw/lhc-8/cms-2014-dilepton"
             total:
               value_pct: 23.0
@@ -283,37 +283,37 @@ channels:
               qcd: NLO
               resummation: [{accuracy: "NNLL", variable: "soft-gluon threshold"}]
               approximations: ["NLO plus NNLL soft-gluon corrections (approximate NNLO)"]
-            total: {value_pct: 6.8, provenance: {uid: 4ce234b3, ref: "inspire:1397635", locator: "Sec. 1: σ_Wt = 22.37 ± 1.52 pb (scale variation mt/2 to 2mt and 90% CL MSTW2008 NNLO PDF errors combined)", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 6.8, provenance: {uid: 4ce234b3, ref: "inspire:1397635", locator: "Sec. 1: σ_Wt = 22.37 ± 1.52 pb (scale variation mt/2 to 2mt and 90% CL MSTW2008 NNLO PDF errors combined)", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:tw/lhc-8/atlas-2015-dilepton"]
             refs: ["inspire:1397635"]
-            provenance: {uid: 65d77a7e, ref: "inspire:1397635", locator: "Sec. 1 (NLO with NNLL soft-gluon corrections, Ref. [26] = Kidonakis; mt = 172.5 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 65d77a7e, ref: "inspire:1397635", locator: "Sec. 1 (NLO with NNLL soft-gluon corrections, Ref. [26] = Kidonakis; mt = 172.5 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "Approximate NNLO QCD (soft-gluon), CMS 2014 comparison"
             accuracy:
               qcd: NLO
               approximations: ["complete NLO plus approximate NNLO soft-gluon corrections (called 'NNLO' in the CMS paper)"]
-            total: {value_pct: 6.9, provenance: {uid: 5215a276, ref: "inspire:1276827", locator: "Introduction: σ_tW = 22.2 ± 0.6 (scale) ± 1.4 (PDF) pb; scale and PDF added in quadrature, sqrt(0.6² + 1.4²)/22.2", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 6.9, provenance: {uid: 5215a276, ref: "inspire:1276827", locator: "Introduction: σ_tW = 22.2 ± 0.6 (scale) ± 1.4 (PDF) pb; scale and PDF added in quadrature, sqrt(0.6² + 1.4²)/22.2", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation"
                 method: "factorisation and renormalisation scale variations (Introduction)"
                 size: {range: [2.7, 2.7], unit: "%", asymmetric: false}
-                provenance: {uid: ff241c36, ref: "inspire:1276827", locator: "Introduction: ± 0.6 pb (scale) of 22.2 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: ff241c36, ref: "inspire:1276827", locator: "Introduction: ± 0.6 pb (scale) of 22.2 pb", source: agent, status: cross-checked, date: "2026-10-17"}
               - category: PDF
                 specific: "PDF uncertainty"
                 pdf_set: "not specified in the CMS Introduction"
                 size: {range: [6.3, 6.3], unit: "%", asymmetric: false}
-                provenance: {uid: 1c2033a1, ref: "inspire:1276827", locator: "Introduction: ± 1.4 pb (PDF) of 22.2 pb", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 1c2033a1, ref: "inspire:1276827", locator: "Introduction: ± 1.4 pb (PDF) of 22.2 pb", source: agent, status: cross-checked, date: "2026-10-17"}
             compared_to: ["meas:tw/lhc-8/cms-2014-dilepton"]
             refs: ["inspire:1276827"]
-            provenance: {uid: d5a60db9, ref: "inspire:1276827", locator: "Introduction (approximate NNLO, Ref. [18] = Kidonakis, NNLL threshold resummation)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: d5a60db9, ref: "inspire:1276827", locator: "Introduction (approximate NNLO, Ref. [18] = Kidonakis, NNLL threshold resummation)", source: agent, status: cross-checked, date: "2026-10-17"}
           - label: "NLO QCD (HatHor 2.1), ATLAS 2015 comparison"
             accuracy: {qcd: NLO}
             codes: ["HatHor"]
-            total: {value_pct: 10.0, provenance: {uid: '887e9703', ref: "inspire:1397635", locator: "Sec. 1: σ_Wt = 18.8 ± 0.8 (scale) ± 1.7 (PDF) pb; scale and PDF added in quadrature, sqrt(0.8² + 1.7²)/18.8", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 10.0, provenance: {uid: '887e9703', ref: "inspire:1397635", locator: "Sec. 1: σ_Wt = 18.8 ± 0.8 (scale) ± 1.7 (PDF) pb; scale and PDF added in quadrature, sqrt(0.8² + 1.7²)/18.8", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:tw/lhc-8/atlas-2015-dilepton"]
             refs: ["inspire:1397635"]
-            provenance: {uid: e4c641b7, ref: "inspire:1397635", locator: "Sec. 1 (HatHor v2.1, PDF4LHC prescription with CT10, MSTW2008nlo68cl, NNPDF2.3)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: e4c641b7, ref: "inspire:1397635", locator: "Sec. 1 (HatHor v2.1, PDF4LHC prescription with CT10, MSTW2008nlo68cl, NNPDF2.3)", source: agent, status: cross-checked, date: "2026-10-17"}
   - id: "chan:tw/lhc-7"
     collider: "col:lhc-7"
     initial_state: "pp"
@@ -336,34 +336,34 @@ channels:
         variable: "σ_tW at mt = 172.5 GeV"
         results:
           - measurement: "meas:tw/lhc-7/atlas-2012-dilepton"
-            total: {value_pct: 34.0, provenance: {uid: 1cff4f16, ref: "inspire:1116151", locator: "Table 2, Total (34% observed); σ_Wt = 16.8 ± 2.9 (stat) ± 4.9 (syst) pb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 34.0, provenance: {uid: 1cff4f16, ref: "inspire:1116151", locator: "Table 2, Total (34% observed); σ_Wt = 16.8 ± 2.9 (stat) ± 4.9 (syst) pb", source: agent, status: cross-checked, date: "2026-10-17"}}
             uncertainties:
               - category: stat
                 specific: "Data statistics"
-                size: {range: [17.0, 17.0], unit: "%", asymmetric: false}
+                size: {range: [17.3, 17.3], unit: "%", asymmetric: false}
                 provenance: {uid: 736b7d3e, ref: "inspire:1116151", locator: "Sec. 6: ± 2.9 (stat) pb of 16.8 pb", source: agent, status: agent-draft, date: "2026-10-17"}
               - category: syst_combined
                 specific: "All systematics"
                 size: {range: [29.0, 29.0], unit: "%", asymmetric: false}
-                provenance: {uid: 16ae5c34, ref: "inspire:1116151", locator: "Table 2, All systematics (29%, observed); breakdown by source in the same table", source: agent, status: agent-draft, date: "2026-10-17"}
+                provenance: {uid: 16ae5c34, ref: "inspire:1116151", locator: "Table 2, All systematics (29%, observed); breakdown by source in the same table", source: agent, status: cross-checked, date: "2026-10-17"}
           - measurement: "meas:tw/lhc-7/cms-2013-dilepton"
-            total: {value_pct: 31.0, provenance: {uid: 26e7e66e, ref: "inspire:1185781", locator: "Abstract: σ = 16 +5 −4 pb (statistical and systematic combined); larger side 5/16, from values rounded to 1 pb", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 31.3, provenance: {uid: 26e7e66e, ref: "inspire:1185781", locator: "Abstract: σ = 16 +5 −4 pb (statistical and systematic combined); larger side 5/16, from values rounded to 1 pb", source: agent, status: agent-draft, date: "2026-10-17"}}
             uncertainties: []
         predictions:
           - label: "Approximate NNLO QCD (soft-gluon), ATLAS 2012 comparison"
             accuracy:
               qcd: NLO
               approximations: ["complete NLO plus approximate higher-order soft-gluon corrections (Kidonakis)"]
-            total: {value_pct: 7.0, provenance: {uid: 2dc636a3, ref: "inspire:1116151", locator: "Sec. 1: σ_Wt^theory = 15.7 ± 1.1 pb for mt = 172.5 GeV; 1.1/15.7", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 7.0, provenance: {uid: 2dc636a3, ref: "inspire:1116151", locator: "Sec. 1: σ_Wt^theory = 15.7 ± 1.1 pb for mt = 172.5 GeV; 1.1/15.7", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:tw/lhc-7/atlas-2012-dilepton"]
             refs: ["inspire:1116151"]
-            provenance: {uid: 7297f0cd, ref: "inspire:1116151", locator: "Sec. 1 (theory prediction, Ref. [5], mt = 172.5 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 7297f0cd, ref: "inspire:1116151", locator: "Sec. 1 (theory prediction, Ref. [5], mt = 172.5 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
           - label: "Approximate NNLO QCD (soft-gluon), CMS 2013 comparison"
             accuracy:
               qcd: NLO
               approximations: ["complete NLO plus approximate higher-order soft-gluon corrections"]
-            total: {value_pct: 8.1, provenance: {uid: f68d719d, ref: "inspire:1185781", locator: "Introduction: σ_tW = 15.6 ± 0.4 +1.0 −1.2 pb (abstract); the two uncertainties added in quadrature, larger side sqrt(0.4² + 1.2²)/15.6", source: agent, status: agent-draft, date: "2026-10-17"}}
+            total: {value_pct: 8.1, provenance: {uid: f68d719d, ref: "inspire:1185781", locator: "Introduction: σ_tW = 15.6 ± 0.4 +1.0 −1.2 pb (abstract); the two uncertainties added in quadrature, larger side sqrt(0.4² + 1.2²)/15.6", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:tw/lhc-7/cms-2013-dilepton"]
             refs: ["inspire:1185781"]
-            provenance: {uid: 97d69c78, ref: "inspire:1185781", locator: "Introduction (approximate NNLO prediction, mt = 172.5 GeV)", source: agent, status: agent-draft, date: "2026-10-17"}
+            provenance: {uid: 97d69c78, ref: "inspire:1185781", locator: "Introduction (approximate NNLO prediction, mt = 172.5 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}

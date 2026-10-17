@@ -7,29 +7,29 @@ determinations:
     uncertainty: 0.00012
     extracted_from: []
     ref: "inspire:3193100"
-    provenance: {uid: c1db6c33, ref: "inspire:3193100", locator: "PDG 2026 edition, sin²(θ_eff) (PDG API summary S044SEF, OUR AVERAGE): 0.23148 ± 0.00012", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: c1db6c33, ref: "inspire:3193100", locator: "PDG 2026 edition, sin²(θ_eff) (PDG API summary S044SEF, OUR AVERAGE): 0.23148 ± 0.00012", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.23153
     uncertainty: 0.00016
     extracted_from: []
     ref: "inspire:691576"
-    provenance: {uid: be0d9b90, ref: "inspire:691576", locator: "Abstract and eq. (7.11): LEP + SLD combination, sin²θ_eff^lept = 0.23153 ± 0.00016", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: be0d9b90, ref: "inspire:691576", locator: "Abstract and eq. (7.11): LEP + SLD combination, sin²θ_eff^lept = 0.23153 ± 0.00016", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.23152
     uncertainty: 0.00031
     extracted_from: ["meas:dy-nc/lhc-13/cms-2024-afb"]
     ref: "inspire:2818125"
-    provenance: {uid: 1abdaf23, ref: "inspire:2818125", locator: "Abstract: CMS 13 TeV, 138 fb⁻¹, A_FB with CT18Z, sin²θ_eff^lept = 0.23152 ± 0.00031 (experimental and theory)", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: 1abdaf23, ref: "inspire:2818125", locator: "Abstract: CMS 13 TeV, 138 fb⁻¹, A_FB with CT18Z, sin²θ_eff^lept = 0.23152 ± 0.00031 (experimental and theory)", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.23148
     uncertainty: 0.00033
     extracted_from: ["meas:dy-nc/tevatron-1960/tevatron-2018-sin2theta"]
     ref: "inspire:1649135"
-    provenance: {uid: c68afbd0, ref: "inspire:1649135", locator: "Abstract: CDF + D0 Run II combination, sin²θ_eff^lept = 0.23148 ± 0.00033", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: c68afbd0, ref: "inspire:1649135", locator: "Abstract: CDF + D0 Run II combination, sin²θ_eff^lept = 0.23148 ± 0.00033", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.23101
     uncertainty: 0.00053
     extracted_from: ["meas:dy-nc/lhc-8/cms-2018-afb"]
     ref: "inspire:1676216"
-    provenance: {uid: a7b16180, ref: "inspire:1676216", locator: "Abstract: CMS 8 TeV, 0.23101 ± 0.00036 (stat) ± 0.00018 (syst) ± 0.00016 (theo) ± 0.00031 (PDF) = 0.23101 ± 0.00053", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: a7b16180, ref: "inspire:1676216", locator: "Abstract: CMS 8 TeV, 0.23101 ± 0.00036 (stat) ± 0.00018 (syst) ± 0.00016 (theo) ± 0.00031 (PDF) = 0.23101 ± 0.00053", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 0.23142
     uncertainty: 0.00106
     extracted_from: []
     ref: "arXiv:1509.07645"
-    provenance: {uid: b7523724, ref: "arXiv:1509.07645", locator: "Abstract: LHCb 7+8 TeV, 0.23142 ± 0.00073 (stat) ± 0.00052 (syst) ± 0.00056 (theory); stored uncertainty is the three terms added in quadrature (1.06e-3)", source: agent, status: agent-draft, date: "2026-10-17"}
+    provenance: {uid: b7523724, ref: "arXiv:1509.07645", locator: "Abstract: LHCb 7+8 TeV, 0.23142 ± 0.00073 (stat) ± 0.00052 (syst) ± 0.00056 (theory); stored uncertainty is the three terms added in quadrature (1.06e-3)", source: agent, status: cross-checked, date: "2026-10-17"}
