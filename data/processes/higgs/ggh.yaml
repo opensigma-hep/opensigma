@@ -42,6 +42,12 @@ building_blocks:
         approximations: ["effective theory, m_t → ∞, other quarks massless", "inspire:1353668 and inspire:1419073: expansion of the partonic cross section around threshold, truncated at high order; inspire:1653133: exact partonic N3LO formula"]
         refs: ["inspire:1353668", "inspire:1419073", "inspire:1653133"]
         provenance: {uid: db4f82f7, ref: "inspire:1653133", locator: "Abstract (first exact formula for a partonic hadron-collider cross section at N3LO; previously approximated by an expansion around threshold, inspire:1353668)", source: agent, status: cross-checked, date: "2026-10-16"}
+      RV:
+        status: done
+        approximations: ["effective theory, m_t → ∞"]
+        amplitude: "amp:2L/H-3partons-eft"
+        refs: ["inspire:1081564"]
+        provenance: {uid: ef56c309, ref: "inspire:1081564", locator: "Abstract (two-loop QCD corrections to the helicity amplitudes for H → ggg and H → q q̄ g, i.e. Higgs + jet, in the infinite-top-mass effective theory)", source: agent, status: agent-draft, date: "2026-10-18"}
   - row: "NLO EW"
     cells:
       2L:

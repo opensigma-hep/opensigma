@@ -28,6 +28,13 @@ building_blocks:
         approximations: ["production and decay in the on-shell and vertex-function approximation (inspire:1834626)", "structure-function approximation neglecting light/heavy-line cross-talk in the earliest calculation (inspire:1292824)"]
         refs: ["inspire:1292824", "inspire:1472815", "inspire:1834626"]
         provenance: {uid: f5d880e2, ref: "inspire:1834626", locator: "Abstract (NNLO t-channel single-top production and decay in the five-flavor scheme; resolves a disagreement between two previous NNLO calculations)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        approximations: ["partonic-level results; top-leg infrared divergences regularised with a complex top mass"]
+        refs: ["inspire:864961", "inspire:802488"]
+        provenance: {uid: b6dc22bb, ref: "inspire:864961", locator: "Abstract (complete one-loop electroweak corrections to single-top s and t channel production within SANC, partonic level); inspire:802488 Abstract (O(α³) corrections to t-channel single top)", source: agent, status: agent-draft, date: "2026-10-18"}
 channels:
   - id: "chan:t-channel-single-top/lhc-13"
     collider: "col:lhc-13"

@@ -1,0 +1,12 @@
+id: "amp:2L/gg-gammagamma-ew"
+process: "proc:diphoton"
+loops: 2
+corrections: mixed
+status: done
+approximations: ["loop-induced gg → γγ channel: NLO electroweak corrections to the one-loop gluon-fusion amplitude", "includes full third-generation quark and Higgs-boson contributions", "α(0) scheme for external photons; light-quark (first two generations) part also in inspire:3073011"]
+evaluation:
+  kind: numerical
+  detail: "masters from numerically solved differential equations in an optimised basis, AMFlow boundary conditions, 19,380 phase-space points"
+  provenance: {uid: bf54d5fa, ref: "inspire:3204601", locator: "Sec. III (differential equations in s and t with optimised basis, boundary conditions with AMFlow, masters at 19,380 phase-space points)", source: agent, status: agent-draft, date: "2026-10-18"}
+refs: ["inspire:3204601", "inspire:3073011"]
+provenance: {uid: ce150d25, ref: "inspire:3204601", locator: "Abstract (complete NLO electroweak corrections to gg → γγ including full third-generation quark and Higgs contributions, two-loop integrals)", source: agent, status: agent-draft, date: "2026-10-18"}

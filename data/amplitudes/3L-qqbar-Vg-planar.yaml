@@ -1,0 +1,12 @@
+id: "amp:3L/qqbar-Vg-planar"
+process: "proc:z-jet"
+loops: 3
+corrections: QCD
+status: partial
+approximations: ["planar (leading-colour) contributions only: colour factors N^3, N^2 Nf, N Nf^2, Nf^3", "V = Z, W±, γ*; massless QCD"]
+evaluation:
+  kind: analytic
+  detail: "planar finite remainders in multiple polylogarithms (alphabet y, z, 1-y, 1-z, y+z, 1-y-z); evaluated numerically with GiNaC via PolyLogTools"
+  provenance: {uid: 55ee7192, ref: "inspire:2683225", locator: "Abstract (finite remainders in multiple polylogarithms); Sec. 2 (alphabet, 95625 scalar integrals reduced to 291 canonical basis elements); Sec. 4 (GiNaC/PolyLogTools evaluation, Table 1)", source: agent, status: agent-draft, date: "2026-10-18"}
+refs: ["inspire:2683225"]
+provenance: {uid: '058e0080', ref: "inspire:2683225", locator: "Abstract (planar three-loop QCD corrections to the helicity amplitudes for V + q + q̄ + g, V = Z, W±, γ*; relevant to V+jet production)", source: agent, status: agent-draft, date: "2026-10-18"}
