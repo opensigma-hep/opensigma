@@ -110,7 +110,7 @@ building_blocks:
         approximations: ["closed-fermion-loop contributions only", "worked out for u ū → μ+ μ− (inspire:3161892) and e+e− → μ+μ−, uū, dd̄ (inspire:3093612)"]
         amplitude: "amp:2L/qqbar-ll-ew-fermionic"
         refs: ["inspire:3161892", "inspire:3093612"]
-        provenance: {uid: a4e8abe1, ref: "inspire:3161892", locator: "Abstract (complete set of second-order virtual corrections with a closed fermion loop for u ū → μ+ μ−, one of the building blocks for NNLO EW); Sec. 1 (full set of second-order EW corrections still missing); inspire:3093612 Abstract (NNLO EW fermionic corrections to fermion-pair production, e+e− → μ+μ−, uū, dd̄)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: a4e8abe1, ref: "inspire:3161892", locator: "Abstract (complete set of second-order virtual corrections with a closed fermion loop for u ū → μ+ μ−, one of the building blocks for NNLO EW); Sec. 1 (full set of second-order EW corrections still missing); inspire:3093612 Abstract (NNLO EW fermionic corrections to fermion-pair production, e+e− → μ+μ−, uū, dd̄)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:dy-nc/lhc-13"
     collider: "col:lhc-13"

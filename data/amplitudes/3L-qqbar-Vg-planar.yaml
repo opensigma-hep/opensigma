@@ -7,6 +7,6 @@ approximations: ["planar (leading-colour) contributions only: colour factors N^3
 evaluation:
   kind: analytic
   detail: "planar finite remainders in multiple polylogarithms (alphabet y, z, 1-y, 1-z, y+z, 1-y-z); evaluated numerically with GiNaC via PolyLogTools"
-  provenance: {uid: 55ee7192, ref: "inspire:2683225", locator: "Abstract (finite remainders in multiple polylogarithms); Sec. 2 (alphabet, 95625 scalar integrals reduced to 291 canonical basis elements); Sec. 4 (GiNaC/PolyLogTools evaluation, Table 1)", source: agent, status: agent-draft, date: "2026-10-18"}
+  provenance: {uid: 55ee7192, ref: "inspire:2683225", locator: "Abstract (finite remainders in multiple polylogarithms); Sec. 2 (alphabet, 95625 scalar integrals reduced to 291 canonical basis elements); Sec. 4 (GiNaC/PolyLogTools evaluation, Table 1)", source: agent, status: cross-checked, date: "2026-10-18"}
 refs: ["inspire:2683225"]
-provenance: {uid: '058e0080', ref: "inspire:2683225", locator: "Abstract (planar three-loop QCD corrections to the helicity amplitudes for V + q + q̄ + g, V = Z, W±, γ*; relevant to V+jet production)", source: agent, status: agent-draft, date: "2026-10-18"}
+provenance: {uid: '058e0080', ref: "inspire:2683225", locator: "Abstract (planar three-loop QCD corrections to the helicity amplitudes for V + q + q̄ + g, V = Z, W±, γ*; relevant to V+jet production)", source: agent, status: cross-checked, date: "2026-10-18"}

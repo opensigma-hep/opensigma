@@ -57,17 +57,17 @@ building_blocks:
         status: done
         approximations: ["obtained from W+jet at NNLO (O(αs³)), computed with 1-jettiness slicing"]
         refs: ["inspire:2691867"]
-        provenance: {uid: 404b8481, ref: "inspire:2691867", locator: "Sec. 2, Fixed order (N3LO via nested slicing; the NNLO W+jet calculation above the qT cutoff, with 1-jettiness slicing, supplies the real-virtual part)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: 404b8481, ref: "inspire:2691867", locator: "Sec. 2, Fixed order (N3LO via nested slicing; the NNLO W+jet calculation above the qT cutoff, with 1-jettiness slicing, supplies the real-virtual part)", source: agent, status: cross-checked, date: "2026-10-18"}
       RRR:
         status: done
         approximations: ["obtained from W+jet at NNLO (O(αs³)), computed with 1-jettiness slicing"]
         refs: ["inspire:2691867"]
-        provenance: {uid: dd1b9e48, ref: "inspire:2691867", locator: "Sec. 2, Fixed order (NNLO W+jet above the qT cutoff, with 1-jettiness slicing, supplies the multi-real contributions)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: dd1b9e48, ref: "inspire:2691867", locator: "Sec. 2, Fixed order (NNLO W+jet above the qT cutoff, with 1-jettiness slicing, supplies the multi-real contributions)", source: agent, status: cross-checked, date: "2026-10-18"}
       ir_scheme:
         status: done
         approximations: ["nested slicing: qT slicing at N3LO with 1-jettiness slicing for the NNLO W+jet term", "residual slicing-cutoff effects included as an additional uncertainty (Sec. 2.1)"]
         refs: ["inspire:2691867"]
-        provenance: {uid: c2f9c2b9, ref: "inspire:2691867", locator: "Sec. 2, Fixed order and Cutoff effects (N3LO singularities regularised with qT slicing; residual slicing-cutoff effects not negligible at αs³)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: c2f9c2b9, ref: "inspire:2691867", locator: "Sec. 2, Fixed order and Cutoff effects (N3LO singularities regularised with qT slicing; residual slicing-cutoff effects not negligible at αs³)", source: agent, status: cross-checked, date: "2026-10-18"}
   - row: "NLO EW"
     cells:
       1L:

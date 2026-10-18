@@ -61,13 +61,13 @@ building_blocks:
         status: done
         amplitude: "amp:3L/2to2-partons"
         refs: ["inspire:1897402", "inspire:2107829", "inspire:1995045"]
-        provenance: {uid: ffffe4cc, ref: "inspire:2107829", locator: "Introduction (concludes the analytical calculation of all four-parton scattering amplitudes in three-loop QCD: qq' → qq̄' and crossed channels, gg → gg, qq̄ → gg and crossed channels, in full-colour massless QCD)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: ffffe4cc, ref: "inspire:2107829", locator: "Introduction (concludes the analytical calculation of all four-parton scattering amplitudes in three-loop QCD: qq' → qq̄' and crossed channels, gg → gg, qq̄ → gg and crossed channels, in full-colour massless QCD)", source: agent, status: cross-checked, date: "2026-10-18"}
       RV:
         status: done
         amplitude: "amp:2L/2to3-partons"
         approximations: ["full colour, all partonic channels (ggggg, qq̄ggg, four quarks + gluon, identical and different flavours)"]
         refs: ["inspire:2723232", "inspire:2723256", "inspire:2728739"]
-        provenance: {uid: 498b1b40, ref: "inspire:2723232", locator: "Abstract and Introduction (all two-loop helicity amplitudes for five partons in all relevant flavour configurations, retaining all colour structures; five gluons, two quarks + three gluons, four quarks + one gluon)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: 498b1b40, ref: "inspire:2723232", locator: "Abstract and Introduction (all two-loop helicity amplitudes for five partons in all relevant flavour configurations, retaining all colour structures; five gluons, two quarks + three gluons, four quarks + one gluon)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:dijets/lhc-13"
     collider: "col:lhc-13"

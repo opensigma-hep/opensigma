@@ -7,6 +7,6 @@ approximations: ["gg → ZH only, large-m_t limit: first three terms of the 1/m_
 evaluation:
   kind: analytic
   detail: "asymptotic expansion; analytic results for the first three 1/m_t terms of all form factors; numerical routines in C++ library ggxy"
-  provenance: {uid: ee8e7fb1, ref: "inspire:3088088", locator: "Abstract (analytic results for the first three terms in the 1/m_t expansion of all form factors; numerical routines in the C++ library ggxy)", source: agent, status: agent-draft, date: "2026-10-18"}
+  provenance: {uid: ee8e7fb1, ref: "inspire:3088088", locator: "Abstract (analytic results for the first three terms in the 1/m_t expansion of all form factors; numerical routines in the C++ library ggxy)", source: agent, status: cross-checked, date: "2026-10-18"}
 refs: ["inspire:3088088"]
-provenance: {uid: 9140be4f, ref: "inspire:3088088", locator: "Abstract (three-loop virtual corrections to gg → ZH in the large-m_t limit)", source: agent, status: agent-draft, date: "2026-10-18"}
+provenance: {uid: 9140be4f, ref: "inspire:3088088", locator: "Abstract (three-loop virtual corrections to gg → ZH in the large-m_t limit)", source: agent, status: cross-checked, date: "2026-10-18"}

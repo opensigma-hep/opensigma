@@ -47,7 +47,7 @@ building_blocks:
         approximations: ["effective theory, m_t → ∞"]
         amplitude: "amp:2L/H-3partons-eft"
         refs: ["inspire:1081564"]
-        provenance: {uid: ef56c309, ref: "inspire:1081564", locator: "Abstract (two-loop QCD corrections to the helicity amplitudes for H → ggg and H → q q̄ g, i.e. Higgs + jet, in the infinite-top-mass effective theory)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: ef56c309, ref: "inspire:1081564", locator: "Abstract (two-loop QCD corrections to the helicity amplitudes for H → ggg and H → q q̄ g, i.e. Higgs + jet, in the infinite-top-mass effective theory)", source: agent, status: cross-checked, date: "2026-10-18"}
   - row: "NLO EW"
     cells:
       2L:

@@ -35,7 +35,7 @@ building_blocks:
         approximations: ["gg → ZH channel only", "large-m_t limit, first three 1/m_t terms"]
         amplitude: "amp:3L/gg-ZH-htl"
         refs: ["inspire:3088088"]
-        provenance: {uid: 5f6282c5, ref: "inspire:3088088", locator: "Abstract (three-loop virtual corrections to gg → ZH in the large-m_t limit; analytic results for the first three terms of the 1/m_t expansion)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: 5f6282c5, ref: "inspire:3088088", locator: "Abstract (three-loop virtual corrections to gg → ZH in the large-m_t limit; analytic results for the first three terms of the 1/m_t expansion)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:vh/lhc-13"
     collider: "col:lhc-13"

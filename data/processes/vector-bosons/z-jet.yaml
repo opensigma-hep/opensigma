@@ -71,7 +71,7 @@ building_blocks:
         approximations: ["bosonic corrections only (closed fermion loops neglected)", "boosted-Z region, numerical grid in (pT,Z, yZ)"]
         amplitude: "amp:2L/qqbar-Zg-qcdew-bosonic"
         refs: ["inspire:2739971"]
-        provenance: {uid: e7b996a7, ref: "inspire:2739971", locator: "Abstract (bosonic contribution to the two-loop mixed QCD-electroweak amplitudes for Z + jet, evaluated numerically on a grid in rapidity and transverse momentum of the Z)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: e7b996a7, ref: "inspire:2739971", locator: "Abstract (bosonic contribution to the two-loop mixed QCD-electroweak amplitudes for Z + jet, evaluated numerically on a grid in rapidity and transverse momentum of the Z)", source: agent, status: cross-checked, date: "2026-10-18"}
   - row: "N3LO QCD"
     cells:
       3L:
@@ -79,7 +79,7 @@ building_blocks:
         approximations: ["planar (leading-colour) contributions only"]
         amplitude: "amp:3L/qqbar-Vg-planar"
         refs: ["inspire:2683225"]
-        provenance: {uid: 94fd4ca7, ref: "inspire:2683225", locator: "Abstract (planar three-loop QCD helicity amplitudes for V + q q̄ + g, V = Z, W±, γ*; finite remainders in multiple polylogarithms)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: 94fd4ca7, ref: "inspire:2683225", locator: "Abstract (planar three-loop QCD helicity amplitudes for V + q q̄ + g, V = Z, W±, γ*; finite remainders in multiple polylogarithms)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:z-jet/lhc-13"
     collider: "col:lhc-13"

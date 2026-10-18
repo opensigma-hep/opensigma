@@ -75,15 +75,15 @@ building_blocks:
       1L:
         status: done
         refs: ["inspire:1235289"]
-        provenance: {uid: 7511ac1e, ref: "inspire:1235289", locator: "Abstract (full electroweak one-loop corrections to on-shell γγ production at hadron colliders with full vector-boson mass dependence)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: 7511ac1e, ref: "inspire:1235289", locator: "Abstract (full electroweak one-loop corrections to on-shell γγ production at hadron colliders with full vector-boson mass dependence)", source: agent, status: cross-checked, date: "2026-10-18"}
       code:
         status: done
         refs: ["inspire:1607902", "inspire:1235289"]
-        provenance: {uid: 1e218dc0, ref: "inspire:1607902", locator: "Abstract (NLO electroweak corrections to γγ + 0, 1, 2 jets with GoSam and Sherpa, fully automated)", source: agent, status: agent-draft, date: "2026-10-18"}
+        provenance: {uid: 1e218dc0, ref: "inspire:1607902", locator: "Abstract (NLO electroweak corrections to γγ + 0, 1, 2 jets with GoSam and Sherpa, fully automated)", source: agent, status: cross-checked, date: "2026-10-18"}
   - row: "NNLO QCD×EW"
     cells:
       2L:
-        status: done
+        status: partial
         approximations: ["loop-induced gluon-fusion channel only: NLO EW corrections to the one-loop gg → γγ amplitude, a channel that first enters at NNLO in QCD (inspire:3204601 Sec. 1)"]
         amplitude: "amp:2L/gg-gammagamma-ew"
         refs: ["inspire:3204601", "inspire:3073011"]

@@ -9,4 +9,4 @@ evaluation:
   detail: "expansion in 1/m_t (5 box-type, 8 triangle terms); analytic form factors in the soft-virtual approximation"
   provenance: {uid: e33da97f, ref: "inspire:1752549", locator: "Abstract (five expansion terms for the box-type form factors, eight for the triangle, analytic soft-virtual results)", source: agent, status: agent-draft, date: "2026-10-18"}
 refs: ["inspire:1752549", "inspire:2793119", "inspire:2903347"]
-provenance: {uid: c2ef12e3, ref: "inspire:1752549", locator: "Abstract (three-loop virtual corrections to gg → HH in the large top quark mass limit)", source: agent, status: agent-draft, date: "2026-10-18"}
+provenance: {uid: c2ef12e3, ref: "inspire:1752549", locator: "Abstract (three-loop virtual corrections to gg → HH in the large top quark mass limit)", source: agent, status: cross-checked, date: "2026-10-18"}
