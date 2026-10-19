@@ -46,6 +46,13 @@ building_blocks:
         approximations: ["NNLOJET with direct plus fragmentation (BFG II fragmentation functions, antenna approximation) and fixed-cone isolation as in the experiments", "earlier NNLO results are direct-only with hybrid-cone (NNLOJET) or dynamical-cone (MCFM) isolation"]
         refs: ["inspire:2075976", "inspire:2012936", "inspire:1727794", "inspire:1503171"]
         provenance: {uid: 5ab96f3d, ref: "inspire:2628741", locator: "Sec. 8, Nnlojet predictions (direct and fragmentation processes included; fragmentation component with BFG II in the antenna approximation, ref. [60]; fixed-cone requirements as in the experiment; ref. [19] = inspire:2075976)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: partial
+        approximations: ["weak one-loop corrections (analytic) with high-energy asymptotic expressions, plus dominant two-loop EW logarithms"]
+        refs: ["inspire:690698"]
+        provenance: {uid: 4cc5b394, ref: "inspire:690698", locator: "Abstract (analytic results for the weak one-loop corrections to q̄q → γ g and crossed channels; asymptotic expressions in the high-energy region; dominant two-loop EW contributions)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:isolated-photon/lhc-13"
     collider: "col:lhc-13"

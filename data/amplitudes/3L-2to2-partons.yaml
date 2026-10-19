@@ -1,0 +1,11 @@
+id: "amp:3L/2to2-partons"
+process: "proc:inclusive-jets"
+loops: 3
+corrections: QCD
+status: done
+evaluation:
+  kind: analytic
+  detail: "helicity amplitudes (finite remainders) in harmonic polylogarithms up to weight six, in full-colour massless QCD"
+  provenance: {uid: 5bb87755, ref: "inspire:2107829", locator: "Introduction (this paper concludes the analytical calculation of all four-parton scattering amplitudes in three-loop QCD; qq̄ → gg and crossed channels in full-colour massless QCD); p. 8-9 (analytical result in terms of harmonic polylogarithms); HPLs up to transcendental weight six per the conversion table described in the same paper; inspire:1897402 Abstract (four-quark: reduced to masters, expressed in harmonic polylogarithms); inspire:1995045 Abstract (four-gluon: results expressed in harmonic polylogarithms)", source: agent, status: cross-checked, date: "2026-10-18"}
+refs: ["inspire:1897402", "inspire:2107829", "inspire:1995045"]
+provenance: {uid: 9e8e6464, ref: "inspire:2107829", locator: "Introduction (qq' → qq̄' and crossed channels in inspire:1897402, gg → gg in inspire:1995045, qq̄ → gg and crossed channels in this paper: all four-parton scattering amplitudes in three-loop QCD); inspire:1897402 Abstract (all relevant partonic channels, equal and different quark flavours); inspire:1995045 Introduction (gluon-gluon scattering in full, non-planar QCD)", source: agent, status: cross-checked, date: "2026-10-18"}

@@ -1,0 +1,12 @@
+id: "amp:2L/qqbar-ll-ew-fermionic"
+process: "proc:dy-nc"
+loops: 2
+corrections: EW
+status: partial
+approximations: ["closed-fermion-loop second-order EW virtual corrections only; the full set of two-loop EW corrections is still missing", "worked out for u ū → μ+ μ− (also e+e− → μ+μ−, uū, dd̄ in inspire:3093612)", "final-state muon mass neglected where no photon couples to it"]
+evaluation:
+  kind: numerical
+  detail: "KIRA/FireFly reduction; masters evaluated numerically with AMFlow and SeaSyde (Oceann framework); fermionic part also via dispersion relations (inspire:3093612)"
+  provenance: {uid: 90b4df73, ref: "inspire:3161892", locator: "Sec. 5.2 (reduction with KIRA and FireFly, numerical evaluation of masters with AMFlow and SeaSyde within Oceann); inspire:3093612 Abstract (semi-numerical technique with dispersion relations for the fermion sub-loop)", source: agent, status: cross-checked, date: "2026-10-18"}
+refs: ["inspire:3161892", "inspire:3093612"]
+provenance: {uid: 195f9d22, ref: "inspire:3161892", locator: "Abstract (UV-renormalised, IR-subtracted finite contribution of the complete set of second-order virtual corrections with a closed fermion loop to u ū → μ+ μ−); Sec. 1 (full set of second-order EW corrections still missing)", source: agent, status: cross-checked, date: "2026-10-18"}

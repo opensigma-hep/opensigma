@@ -1,0 +1,12 @@
+id: "amp:3L/gg-HH-htl"
+process: "proc:hh"
+loops: 3
+corrections: QCD
+status: partial
+approximations: ["large top-quark mass limit: five expansion terms for the box-type and eight for the triangle form factors", "analytic results only in the soft-virtual approximation", "one-particle-reducible part: inspire:2793119; large-Nc, one closed top loop, forward limit with full m_t: inspire:2903347"]
+evaluation:
+  kind: semi-analytic
+  detail: "expansion in 1/m_t (5 box-type, 8 triangle terms); analytic form factors in the soft-virtual approximation"
+  provenance: {uid: e33da97f, ref: "inspire:1752549", locator: "Abstract (five expansion terms for the box-type form factors, eight for the triangle, analytic soft-virtual results)", source: agent, status: agent-draft, date: "2026-10-18"}
+refs: ["inspire:1752549", "inspire:2793119", "inspire:2903347"]
+provenance: {uid: c2ef12e3, ref: "inspire:1752549", locator: "Abstract (three-loop virtual corrections to gg → HH in the large top quark mass limit)", source: agent, status: cross-checked, date: "2026-10-18"}

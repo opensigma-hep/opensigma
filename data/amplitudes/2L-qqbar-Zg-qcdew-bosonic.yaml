@@ -1,0 +1,12 @@
+id: "amp:2L/qqbar-Zg-qcdew-bosonic"
+process: "proc:z-jet"
+loops: 2
+corrections: mixed
+status: partial
+approximations: ["bosonic corrections only: contributions from closed fermion loops neglected", "boosted region, finite remainders given on a two-dimensional grid in (pT,Z, yZ)", "channels q q̄ → g Z and q g → q Z, diagonal CKM, no b-quark induced contributions"]
+evaluation:
+  kind: numerical
+  detail: "masters evaluated numerically with the Auxiliary Mass Flow method (AMFlow); finite remainders on a (pT,Z, yZ) grid"
+  provenance: {uid: 6bd8f0f8, ref: "inspire:2739971", locator: "Abstract (Feynman integrals computed numerically with Auxiliary Mass Flow; amplitudes evaluated on a two-dimensional grid in rapidity and transverse momentum of the Z boson); Sec. 3.3 and Sec. 5", source: agent, status: cross-checked, date: "2026-10-18"}
+refs: ["inspire:2739971"]
+provenance: {uid: 5d059c43, ref: "inspire:2739971", locator: "Abstract (bosonic contribution to the two-loop mixed QCD-electroweak amplitudes for Z + jet production); Sec. 2 (O(α αs) virtual corrections, bosonic only)", source: agent, status: cross-checked, date: "2026-10-18"}

@@ -1,0 +1,12 @@
+id: "amp:2L/H-3partons-eft"
+process: "proc:ggh"
+loops: 2
+corrections: QCD
+status: done
+approximations: ["effective theory with infinite top-quark mass", "processes H → ggg and H → q q̄ g (crossed to gg → Hg, q q̄ → Hg, qg → Hq)"]
+evaluation:
+  kind: analytic
+  detail: "finite parts in one- and two-dimensional harmonic polylogarithms (HPLs, 2dHPLs) up to weight 4"
+  provenance: {uid: 44b47352, ref: "inspire:1081564", locator: "Abstract (finite parts in one- and two-dimensional harmonic polylogarithms); Sec. 5.1 (masters of ref. [50] in HPLs and 2dHPLs; Laurent expansion of the coefficients contains HPLs and 2dHPLs up to weight 4)", source: agent, status: cross-checked, date: "2026-10-18"}
+refs: ["inspire:1081564"]
+provenance: {uid: 2816d39a, ref: "inspire:1081564", locator: "Abstract (two-loop QCD corrections to the helicity amplitudes for H → ggg and H → q q̄ g in an effective theory with infinite top-quark mass)", source: agent, status: cross-checked, date: "2026-10-18"}

@@ -66,6 +66,14 @@ building_blocks:
         approximations: ["parton-level combination of NNLO QCD and NLO EW with two-loop Sudakov logarithms, for use via reweighting of Monte Carlo samples"]
         refs: ["inspire:1599401"]
         provenance: {uid: 6c37dfcd, ref: "inspire:1599401", locator: "Abstract (combination of state-of-the-art calculations for all V + jets processes: NNLO QCD and NLO EW corrections supplemented by Sudakov logarithms at two loops, parton level)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "N3LO QCD"
+    cells:
+      3L:
+        status: partial
+        approximations: ["planar (leading-colour) contributions only"]
+        amplitude: "amp:3L/qqbar-Vg-planar"
+        refs: ["inspire:2683225"]
+        provenance: {uid: 40fefa13, ref: "inspire:2683225", locator: "Abstract (planar three-loop QCD helicity amplitudes for V + q q̄ + g with V = Z, W±, γ*, relevant to vector-boson-plus-jet production)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:w-jet/lhc-13"
     collider: "col:lhc-13"

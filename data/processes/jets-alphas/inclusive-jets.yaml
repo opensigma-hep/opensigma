@@ -56,6 +56,19 @@ building_blocks:
         approximations: ["tree-level O(αsα, α²) and weak loop O(αs²α) corrections only"]
         refs: ["inspire:1188853"]
         provenance: {uid: 07d894ba, ref: "inspire:1188853", locator: "Abstract (most important electroweak corrections to dijet production: tree-level O(αsα, α²) and weak loops O(αs²α))", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "N3LO QCD"
+    cells:
+      3L:
+        status: done
+        amplitude: "amp:3L/2to2-partons"
+        refs: ["inspire:1897402", "inspire:2107829", "inspire:1995045"]
+        provenance: {uid: 65784f9a, ref: "inspire:2107829", locator: "Introduction (concludes the analytical calculation of all four-parton scattering amplitudes in three-loop QCD: qq' → qq̄' and crossed channels, gg → gg, qq̄ → gg and crossed channels, in full-colour massless QCD)", source: agent, status: cross-checked, date: "2026-10-18"}
+      RV:
+        status: done
+        amplitude: "amp:2L/2to3-partons"
+        approximations: ["full colour, all partonic channels (ggggg, qq̄ggg, four quarks + gluon, identical and different flavours)"]
+        refs: ["inspire:2723232", "inspire:2723256", "inspire:2728739"]
+        provenance: {uid: 5ce4725b, ref: "inspire:2723232", locator: "Abstract and Introduction (all two-loop helicity amplitudes for five partons in all relevant flavour configurations, retaining all colour structures; five gluons, two quarks + three gluons, four quarks + one gluon)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:inclusive-jets/lhc-13"
     collider: "col:lhc-13"

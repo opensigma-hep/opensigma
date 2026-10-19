@@ -30,6 +30,13 @@ building_blocks:
         approximations: ["approximate N3LO from third-order soft-gluon corrections added to the NNLO result; final-state b-quarks treated as massless"]
         refs: ["inspire:2894376"]
         provenance: {uid: eb75693f, ref: "inspire:2894376", locator: "Abstract (approximate N3LO from the expansion of the resummed cross section to third order; massless b-quarks)", source: agent, status: cross-checked, date: "2026-10-17"}
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: done
+        approximations: ["partonic-level results; top-leg infrared divergences regularised with a complex top mass"]
+        refs: ["inspire:864961"]
+        provenance: {uid: fa67366f, ref: "inspire:864961", locator: "Abstract (complete one-loop electroweak corrections to single-top s and t channel production within SANC, partonic level)", source: agent, status: cross-checked, date: "2026-10-18"}
 channels:
   - id: "chan:s-channel-single-top/tevatron"
     collider: "col:tevatron-1960"
