@@ -93,7 +93,7 @@ export function drawIdeogram(el, dets, unit, names, onPick) {
   if (unit) svg.append('text').attr('class', 'axis-label').attr('x', (m.l + W - m.r) / 2).attr('y', H - 4).attr('text-anchor', 'middle').text(unit);
   const g = svg.append('g').selectAll('g').data(dets.map((d, i) => ({ ...d, i }))).join('g')
     .attr('class', 'det').attr('transform', (d) => `translate(0,${m.t + d.i * ROW + ROW / 2})`);
-  const short = (t) => { t = t.replace(' Collaboration', ''); return t.length > 34 ? t.slice(0, 33) + '…' : t; }; // full name stays in the tooltip
+  const short = (t) => { t = t.replace(' Collaboration', '').replace('Particle Data Group', 'PDG'); return t.length > 34 ? t.slice(0, 33) + '…' : t; }; // full name stays in the tooltip
   g.append('text').attr('class', 'det-label').attr('x', m.l - 10).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => short(names[d.i]));
   g.append('line').attr('class', 'err').attr('x1', (d) => x(d.value - d.uncertainty)).attr('x2', (d) => x(d.value + d.uncertainty));
   g.append('circle').attr('class', 'pt').attr('cx', (d) => x(d.value)).attr('r', 5);

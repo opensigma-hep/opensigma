@@ -7,7 +7,10 @@ export function render(main, data, route) {
   const dets = par.determinations ?? [];
   const head = ['Value', 'Extracted from', 'Reference', 'Status'];
   const plot = el('div', { className: 'ideogram-wrap' });
-  const names = dets.map((d) => refText(d.ref, data.refs[d.ref] ?? {}));
+  const base = dets.map((d) => refText(d.ref, data.refs[d.ref] ?? {}));
+  // Same source cited twice (e.g. several PDG rows): tell them apart by the row, note or section in the locator.
+  const tag = (loc) => (/'([^']+)'/.exec(loc) ?? /\(([^)]+)\)\s*$/.exec(loc) ?? /(Sec\. [\d.]+|Table [\d.]+|[Ee]q\. \([\d.]+\))/.exec(loc))?.[1];
+  const names = base.map((n, i) => (base.filter((m) => m === n).length > 1 ? `${n} · ${tag(dets[i].provenance.locator) ?? '#' + (i + 1)}` : n));
   drawIdeogram(plot, dets, par.unit, names, (d) => reveal(main.querySelector(`tr[data-i="${d.i}"]`)));
   fill(main,
     el('nav', { className: 'crumbs' }, link('', 'Families'), ' › ', el('a', { href: '#/parameters' }, 'Parameters')),
