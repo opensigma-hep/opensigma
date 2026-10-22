@@ -1,4 +1,4 @@
-// Hash routing: "#/<id>", "#/about", "#/search?q=…", "" or "#/" for the home view.
+// Hash routing: "#/<id>", "#/about", "#/amplitudes", "#/parameters", "#/search?q=…", "" or "#/" for the home view.
 const VIEW_BY_PREFIX = {
   fam: 'family', proc: 'process', chan: 'channel', obs: 'observable',
   amp: 'amplitude', par: 'parameter', col: 'collider',
@@ -14,7 +14,7 @@ function decode(s) {
 export function parseHash(hash, aliases, ids, parents = {}) {
   const path = hash.replace(/^#\/?/, '');
   if (path === '') return { view: 'families' };
-  if (path === 'about') return { view: 'about' };
+  if (['about', 'amplitudes', 'parameters'].includes(path)) return { view: path };
   if (path === 'search' || path.startsWith('search?')) {
     // Not URLSearchParams: it would turn a literal '+' into a space.
     const raw = path.slice(7).split('&').find((kv) => kv.startsWith('q='));

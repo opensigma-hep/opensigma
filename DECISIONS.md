@@ -101,3 +101,11 @@ uncertainty — repeated per observable.
     keyboard + screen-reader accessible, desktop-first (matrix scrolls horizontally on mobile).
 22. **BSM extension point (default):** `sector: SM` field on families/processes; BSM later = new sector value +
     its own families, no schema restructuring.
+23. **Navigation and graphics (2026-10-22):** header links to new index pages `#/amplitudes` and `#/parameters`; `col:` ids get a
+    collider page (every channel at that collider, by family) and the family-matrix column heads link to it. Home = intro,
+    totals, family tiles with a channel-by-highest-order bar, and an all-families precision landscape (clickable).
+    Observable page: precision-over-time chart (measurement and prediction totals by year, best-so-far lines; points jump
+    to their row/card); the building-block matrix moved off it (link to the process page instead of a duplicate).
+    Process page: one channel summary table replaces the channel list and the per-channel prediction list; the
+    building-block matrix is a compact status grid whose cells open their full record (refs, approximations, ✓/⚑).
+    Channel page lists its candidate papers by title. Parameter page: clickable ideogram of determinations.

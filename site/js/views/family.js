@@ -59,7 +59,7 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
     .style('max-width', `${W}px`).style('min-width', `min(${W}px, 40rem)`)
     .attr('role', 'group').attr('aria-label', `${fam.name}: processes by collider`);
   patterns(d3, svg);
-  svg.append('g').selectAll('text').data(cols).join('text').attr('class', 'colhead')
+  svg.append('g').selectAll('a').data(cols).join('a').attr('class', 'colhead').attr('href', (c) => toHash(c.id)).append('text')
     .attr('x', (_, i) => LW + i * CW + CW / 2).attr('y', HH - 14).attr('text-anchor', 'middle').text((c) => c.name);
   const rowG = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (_, i) => `translate(0,${HH + i * CH})`);
   rowG.append('a').attr('class', 'rowhead').attr('href', (p) => toHash(p)).append('text').attr('x', 8).attr('y', CH / 2 - 2).text((p) => procName[p]);

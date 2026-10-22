@@ -8,7 +8,7 @@ export function scatterPoints(summary, includeProj) {
     .map(([id, s]) => ({ id, x: s[xk], y: s.th_pct }));
 }
 
-/** points: [{id, x, y, name}]; draws into `el` using the global d3 (loaded from cdnjs in index.html). */
+/** points: [{id, x, y, name, color?}]; draws into `el` using the global d3 (loaded from cdnjs in index.html). */
 export function drawScatter(el, points) {
   const d3 = window.d3;
   el.replaceChildren();
@@ -43,5 +43,6 @@ export function drawScatter(el, points) {
     .attr('href', (p) => toHash(p.id))
     .attr('aria-label', (p) => `${p.name}: experiment ${fmt(p.x)}%, theory ${fmt(p.y)}%`)
     .call((a) => a.append('title').text((p) => `${p.name}: exp ${fmt(p.x)}%, theory ${fmt(p.y)}%`))
-    .append('circle').attr('class', 'pt').attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.y)).attr('r', 6);
+    .append('circle').attr('class', 'pt').attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.y)).attr('r', 6)
+    .style('fill', (p) => p.color ?? null); // optional per-point colour (home page: by family)
 }

@@ -8,10 +8,12 @@ export const BB_COLS = ['born', '1L', '2L', '3L', 'RV', 'RR', 'RRR', 'ir_scheme'
 
 export function el(tag, attrs = {}, ...kids) {
   const e = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) e[k] = v;
+  for (const [k, v] of Object.entries(attrs)) k === 'dataset' ? Object.assign(e.dataset, v) : (e[k] = v);
   e.append(...kids.flat().filter((k) => k != null));
   return e;
 }
+/** replaceChildren that flattens arrays and drops null/undefined (which it would otherwise print). */
+export const fill = (host, ...kids) => host.replaceChildren(...kids.flat().filter((k) => k != null));
 export const none = (what) => el('p', { className: 'none-yet' }, `No ${what} yet.`);
 export const link = (id, text) => el('a', { href: toHash(id) }, text ?? id);
 export const sep = (nodes, s = ', ') => nodes.flatMap((n, i) => (i ? [s, n] : [n]));
@@ -23,6 +25,7 @@ export function index(data) {
   const m = new Map();
   const col = Object.fromEntries((data.colliders ?? []).map((c) => [c.id, c.name]));
   for (const f of data.families ?? []) m.set(f.id, { node: f, label: f.name, kind: 'fam' });
+  for (const c of data.colliders ?? []) m.set(c.id, { node: c, label: c.name, kind: 'col' });
   for (const a of data.amplitudes ?? []) m.set(a.id, { node: a, label: a.id, kind: 'amp' });
   for (const p of data.parameters ?? []) m.set(p.id, { node: p, label: p.name, kind: 'par' });
   for (const p of data.processes ?? []) {
@@ -91,35 +94,71 @@ export function evalChip(ev) {
   return c;
 }
 
-/** Process building-block matrix: rows as given, the fixed column set, empty cells for missing entries. */
+const BB_HEAD = { born: 'Born', ir_scheme: 'IR scheme', code: 'Code' };
+const BB_MARK = { done: '●', partial: '◐', missing: '○' };
+
+/** One building-block cell in full: status, approximations, amplitude link, refs, verification. */
+function stamp(r, c, cell, data) {
+  const idx = index(data);
+  const note = cell.approximations?.length || cell.amplitude
+    ? el('div', { className: 'stamp-note' },
+      cell.approximations?.length ? el('div', {}, cell.approximations.join(', ')) : null,
+      cell.amplitude ? el('div', {}, link(cell.amplitude, 'amplitude →'), ' ', evalChip(idx.get(cell.amplitude)?.node.evaluation)) : null)
+    : null;
+  return el('div', { className: 'stamp bb-' + cell.status },
+    el('div', { className: 'stamp-head' }, cell.status),
+    el('strong', {}, `${r.row} · ${BB_HEAD[c] ?? c}`),
+    note,
+    cell.refs?.length ? el('div', { className: 'small' }, ...refList(cell.refs, data.refs)) : null,
+    el('div', {}, prov(cell.provenance, `${r.row} ${c}: ${cell.status}`)));
+}
+
+/** Process building-block matrix: a compact status grid; selecting a cell shows its references and status below. */
 export function bbTable(proc, data) {
-  const refs = data.refs, idx = index(data);
   const rows = proc.building_blocks ?? [];
   if (!rows.length) return none('building blocks');
+  const panel = el('div', { className: 'bb-panel' }, el('p', { className: 'small' }, 'Select a cell for its references, approximations and verification status.'));
+  panel.setAttribute('aria-live', 'polite');
+  const all = el('button', { type: 'button', className: 'btn', textContent: 'Show all cells' });
+  all.addEventListener('click', () => panel.replaceChildren(...rows.flatMap((r) =>
+    BB_COLS.filter((c) => r.cells?.[c]).map((c) => stamp(r, c, r.cells[c], data)))));
   const t = el('table', { className: 'bb' },
-    el('thead', {}, el('tr', {}, el('th', { scope: 'col' }, 'Correction'), ...BB_COLS.map((c) => el('th', { scope: 'col' }, c)))));
+    el('thead', {}, el('tr', {}, el('th', { scope: 'col' }, 'Correction'), ...BB_COLS.map((c) => el('th', { scope: 'col' }, BB_HEAD[c] ?? c)))));
   const body = el('tbody');
   for (const r of rows) {
     const tr = el('tr', {}, el('th', { scope: 'row' }, r.row));
     for (const c of BB_COLS) {
       const cell = r.cells?.[c];
       if (!cell) { tr.append(el('td', { className: 'empty' })); continue; }
-      // Stamp: status word, then a note box (approximations, amplitude link) only when there is something to say.
-      const note = cell.approximations?.length || cell.amplitude
-        ? el('div', { className: 'stamp-note' },
-          cell.approximations?.length ? el('div', {}, cell.approximations.join(', ')) : null,
-          cell.amplitude ? el('div', {}, link(cell.amplitude, 'amplitude →'), ' ', evalChip(idx.get(cell.amplitude)?.node.evaluation)) : null)
-        : null;
-      tr.append(el('td', {}, el('div', { className: 'stamp bb-' + cell.status },
-        el('div', { className: 'stamp-head' }, cell.status),
-        note,
-        cell.refs?.length ? el('div', { className: 'small' }, ...refList(cell.refs, refs)) : null,
-        el('div', {}, prov(cell.provenance, `${r.row} ${c}: ${cell.status}`)))));
+      const extra = [cell.approximations?.length && '≈', cell.amplitude && 'A'].filter(Boolean).join(' ');
+      const b = el('button', { type: 'button', className: 'bb-cell bb-' + cell.status },
+        el('span', { ariaHidden: 'true' }, BB_MARK[cell.status] ?? '?'), ` ${cell.status}`, extra ? el('sup', {}, ' ' + extra) : null);
+      b.title = [cell.approximations?.join(', '), (cell.refs ?? []).map((x) => refText(x, data.refs[x.split(', ')[0]] ?? {})).join(', ')].filter(Boolean).join(' · ');
+      b.setAttribute('aria-label', `${r.row}, ${BB_HEAD[c] ?? c}: ${cell.status}${extra ? ' with notes' : ''}. Show details`);
+      b.addEventListener('click', () => {
+        t.querySelectorAll('.bb-cell[aria-pressed="true"]').forEach((x) => x.setAttribute('aria-pressed', 'false'));
+        b.setAttribute('aria-pressed', 'true');
+        panel.replaceChildren(stamp(r, c, cell, data));
+      });
+      tr.append(el('td', {}, b));
     }
     body.append(tr);
   }
   t.append(body);
-  return el('div', { className: 'matrix-scroll' }, t);
+  return el('div', {}, el('div', { className: 'matrix-scroll' }, t),
+    el('p', { className: 'legend' }, el('span', {}, '● done · ◐ partial · ○ missing'), el('span', {}, '≈ approximations · A amplitude in the library'), all),
+    panel);
+}
+
+/** "N candidate papers not yet incorporated" for a channel, as a list of INSPIRE links (null when none). */
+export function candidateList(data, proc, chanId) {
+  const list = (data.candidates?.[proc.id] ?? []).filter((c) => c.channels?.includes(chanId));
+  if (!list.length) return null;
+  return el('details', { className: 'cands' },
+    el('summary', {}, `${list.length} candidate paper${list.length === 1 ? '' : 's'} not yet incorporated`),
+    el('ul', {}, ...list.map((c) => el('li', {},
+      el('a', { href: `https://inspirehep.net/literature/${c.recid}`, textContent: c.title.replace(/<[^>]+>/g, '') }),
+      c.arxiv ? ` · arXiv:${c.arxiv}` : ''))));
 }
 
 /** Button that copies getText() to the clipboard, falling back to a selected textarea. */
@@ -164,7 +203,7 @@ export function measTable(data, rows) {
     if (m.preliminary) notes.push('preliminary');
     if (m.assumptions) notes.push(m.assumptions);
     const cls = [m.projected && 'projected', m.superseded_by && 'superseded', m.preliminary && 'preliminary'].filter(Boolean).join(' ');
-    const tr = el('tr', { className: cls },
+    const tr = el('tr', { className: cls, dataset: { id: m.id } },
       el('td', {}, m.experiment), el('td', {}, m.dataset ?? ''),
       ...(withTotal ? [el('td', {}, total ? [`${total.value_pct} %`, el('br'), prov(total.provenance, `${total.value_pct} %`)] : '—')] : []),
       el('td', {}, refLink(m.ref, refs)),

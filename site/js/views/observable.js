@@ -1,4 +1,6 @@
-import { el, none, link, idLink, index, breadcrumb, refLink, refList, prov, bbTable, copyButton, facts, measTable, sep } from '../leaf.js';
+import { el, fill, none, link, idLink, index, breadcrumb, refLink, refList, prov, copyButton, facts, measTable, sep } from '../leaf.js';
+import { ORDERS } from '../matrix.js';
+import { historyPoints, drawHistory, reveal } from '../charts.js';
 import { accuracyChips, fmtSize, parseRegionValue, parseTargetPct } from '../format.js';
 import { collectBibtex } from '../bibtex.js';
 
@@ -19,25 +21,38 @@ export function render(main, data, route) {
   const best = results.find((r) => r.measurement === sum.exp_measurement);
   if (S.id !== obs.id) S = { id: obs.id, i: Math.max(0, results.indexOf(best)) };
 
-  main.replaceChildren(
+  fill(main,
     breadcrumb(data, obs.id),
     el('h1', {}, obs.name),
     facts([
       ['Kind', obs.kind], ['Variable', obs.variable],
       ['Channel coverage', chan.coverage],
       ['Last reviewed', chan.last_reviewed + (cell.stale ? ' (may be outdated)' : '')],
-      ['Candidate papers not yet incorporated', String(cell.candidates ?? 0)],
+      ['Candidate papers', cell.candidates ? link(chan.id, `${cell.candidates} not yet incorporated (listed on the channel page)`) : null],
       ['Headline region', chan.headline?.observable === obs.id ? chan.headline.region : null],
     ]),
     el('div', { className: 'actions' },
       copyButton('Copy link', () => location.href),
       copyButton('Copy BibTeX', () => collectBibtex([obs, ...results.map((r) => meas[r.measurement])], data.refs))),
     section('Headline', headline(data, sum, head, best, obs.theory_target)),
+    history(data, obs, meas),
     section('Measurements', results.length ? measTable(data, results.map((r) => ({ m: meas[r.measurement], total: r.total }))) : none('measurements')),
     section('Uncertainty budget', budget(data, results, meas, head)),
-    section('Predictions', ...predictions(data, preds), ...ingredients(data, obs.resummation_ingredients)),
-    section('Building blocks', el('details', {}, el('summary', {}, `${proc.name}: building-block matrix`), bbTable(proc, data))),
+    section('Predictions', ...predictions(data, preds), ...ingredients(data, obs.resummation_ingredients),
+      el('p', { className: 'small' }, 'Which loop amplitudes, real-emission pieces and subtraction schemes exist at each order: ',
+        link(proc.id, `${proc.name} building blocks`), '.')),
   );
+}
+
+function history(data, obs, meas) {
+  const pts = historyPoints(obs, meas, data.refs);
+  const host = el('div', { className: 'history-wrap' });
+  const pick = (p) => reveal(document.querySelector(p.kind === 'meas' ? `table.meas tr[data-id="${CSS.escape(p.key)}"]` : `article.pred[data-id="${p.key}"]`));
+  const box = section('Precision over time', host,
+    el('p', { className: 'legend' }, el('span', {}, '■ measurement (open: projected)'),
+      ...ORDERS.map((o, i) => { const s = el('span', { className: 'dot' }); s.style.setProperty('--c', `var(--ord-${i + 1})`); return el('span', {}, s, `${o} prediction`); }),
+      el('span', {}, 'lines: best so far · select a point to jump to it')));
+  return drawHistory(host, pts, pick) ? box : null;
 }
 
 function headline(data, sum, head, best, target) {
@@ -167,7 +182,7 @@ function details(data, bar, color) {
 
 function predictions(data, preds) {
   if (!preds.length) return [none('predictions')];
-  return preds.map((p) => el('article', { className: 'pred' },
+  return preds.map((p, i) => el('article', { className: 'pred', dataset: { id: String(i) } },
     el('h3', {}, p.label, p.headline ? el('span', { className: 'chip head' }, 'headline') : null),
     el('ul', { className: 'chips' }, ...accuracyChips(p.accuracy).map((c) => el('li', { className: 'chip' }, c))),
     facts([
