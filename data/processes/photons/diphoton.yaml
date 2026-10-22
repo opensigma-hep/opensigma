@@ -274,7 +274,7 @@ channels:
             codes: ["Powheg Box Res", "MiNNLOPS", "Pythia8"]
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2072920"]
-            provenance: {uid: e4da5f9b, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 9 (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: e4da5f9b, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 9 (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "NNLO QCD with full top-quark mass dependence (2γNNLO, qT subtraction), smooth-cone isolation, NNPDF3.1: dσ/dmγγ"
             accuracy:
               qcd: NNLO
@@ -282,7 +282,7 @@ channels:
             codes: ["2γNNLO"]
             uses_amplitudes: ["amp:2L/qqbar-gammagamma", "amp:2L/qqbar-gammagamma-mq"]
             refs: ["inspire:2689908", "inspire:2690115"]
-            provenance: {uid: c1219eff, ref: "inspire:2689908", locator: "Sec. 2 (massive contributions, Fig. 1) and Sec. 3 (setup; Fig. 2 ratio to five light flavours, deviation range [-0.4%, 0.8%])", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: c1219eff, ref: "inspire:2689908", locator: "Sec. 2 (massive contributions, Fig. 1) and Sec. 3 (setup; Fig. 2 ratio to five light flavours, deviation range [-0.4%, 0.8%])", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:diphoton/lhc-13/dsigma-dpt"
         name: "dσ/dpT,γγ, isolated photon pair"
         kind: differential
@@ -342,10 +342,10 @@ channels:
                 specific: "μR, μF variation"
                 method: "7-point variation around μ0 = E_T,γγ = sqrt(mγγ² + pT,γγ²), 1/2 <= μR/μF <= 2"
                 size: {range: [2, 10], unit: "%", asymmetric: false}
-                provenance: {uid: 4ed1e1e1, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 4ed1e1e1, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: cross-checked, date: "2026-10-22"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
-            provenance: {uid: c0881c28, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: c0881c28, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "MiNNLOPS NNLO+PS (Powheg Box Res + Pythia8), NNPDF3.1: dσ/dpT,γγ"
             accuracy:
               qcd: NLO
@@ -354,7 +354,7 @@ channels:
             codes: ["Powheg Box Res", "MiNNLOPS", "Pythia8"]
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2072920"]
-            provenance: {uid: 4b275d4c, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 9; flat offset of about 10% at large pT,γγ (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 4b275d4c, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 9; flat offset of about 10% at large pT,γγ (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:diphoton/lhc-13/dsigma-dat"
         name: "dσ/da_T, isolated photon pair"
         kind: differential
@@ -414,10 +414,10 @@ channels:
                 specific: "μR, μF variation"
                 method: "7-point variation around μ0 = E_T,γγ = sqrt(mγγ² + pT,γγ²), 1/2 <= μR/μF <= 2"
                 size: {range: [2, 10], unit: "%", asymmetric: false}
-                provenance: {uid: 70ecf74c, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 70ecf74c, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: cross-checked, date: "2026-10-22"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
-            provenance: {uid: afb46e29, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: afb46e29, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:diphoton/lhc-13/dsigma-dphistar"
         name: "dσ/dφ*_η, isolated photon pair"
         kind: differential
@@ -477,10 +477,10 @@ channels:
                 specific: "μR, μF variation"
                 method: "7-point variation around μ0 = E_T,γγ = sqrt(mγγ² + pT,γγ²), 1/2 <= μR/μF <= 2"
                 size: {range: [2, 10], unit: "%", asymmetric: false}
-                provenance: {uid: f13890b6, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: f13890b6, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: cross-checked, date: "2026-10-22"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
-            provenance: {uid: 1f9f4fc2, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 1f9f4fc2, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "MiNNLOPS NNLO+PS (Powheg Box Res + Pythia8), NNPDF3.1: dσ/dφ*η"
             accuracy:
               qcd: NLO
@@ -489,7 +489,7 @@ channels:
             codes: ["Powheg Box Res", "MiNNLOPS", "Pythia8"]
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2072920"]
-            provenance: {uid: 5de8f23b, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 11 (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 5de8f23b, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 11 (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:diphoton/lhc-13/dsigma-dphiacop"
         name: "dσ/dφ_acop, isolated photon pair"
         kind: differential
@@ -549,10 +549,10 @@ channels:
                 specific: "μR, μF variation"
                 method: "7-point variation around μ0 = E_T,γγ = sqrt(mγγ² + pT,γγ²), 1/2 <= μR/μF <= 2"
                 size: {range: [2, 10], unit: "%", asymmetric: false}
-                provenance: {uid: 01665ce4, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 01665ce4, ref: "inspire:2872231", locator: "Sec. III, discussion of Fig. 1 (scale uncertainty drops from ±(10…15)% at NLO to ±(2…10)% at NNLO where the variable is sufficiently large)", source: agent, status: cross-checked, date: "2026-10-22"}
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
-            provenance: {uid: 6ee82cec, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 6ee82cec, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "MiNNLOPS NNLO+PS (Powheg Box Res + Pythia8), NNPDF3.1: dσ/dφacop"
             accuracy:
               qcd: NLO
@@ -561,7 +561,7 @@ channels:
             codes: ["Powheg Box Res", "MiNNLOPS", "Pythia8"]
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2072920"]
-            provenance: {uid: 4d84ee18, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 11 (as Δφγγ) (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 4d84ee18, ref: "inspire:2072920", locator: "Sec. 3.1 (NNPDF3.1, scales), Sec. 4.2 (Pythia8 settings) and Sec. 4.3, Fig. 11 (as Δφγγ) (comparison with ATLAS 13 TeV data; no numbers transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
   - id: "chan:diphoton/lhc-8"
     collider: "col:lhc-8"
     initial_state: "pp"

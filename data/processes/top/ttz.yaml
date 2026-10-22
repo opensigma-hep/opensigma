@@ -149,26 +149,25 @@ channels:
         variable: "σ(tt̄Z + tWZ), 70 < mℓℓ < 110 GeV (resonant and non-resonant ℓ+ℓ−)"
         results:
           - measurement: "meas:ttz/lhc-13/cms-2024-multilepton"
-            total: {value_pct: 6.1, provenance: {uid: 4fcaf3b2, ref: "inspire:2844499", locator: "Abstract and Summary: σ(tt̄Z + tWZ) = 1.14 ± 0.07 pb; 0.07/1.14 (Sec. 6: 1.14 ± 0.05 (stat) ± 0.04 (syst) pb)", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 6.1, provenance: {uid: 4fcaf3b2, ref: "inspire:2844499", locator: "Abstract and Summary: σ(tt̄Z + tWZ) = 1.14 ± 0.07 pb; 0.07/1.14 (Sec. 6: 1.14 ± 0.05 (stat) ± 0.04 (syst) pb)", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical"
                 size: {range: [4.4, 4.4], asymmetric: false}
-                provenance: {uid: 5f0e9802, ref: "inspire:2844499", locator: "Sec. 6: ± 0.05 (stat) pb of 1.14 pb", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 5f0e9802, ref: "inspire:2844499", locator: "Sec. 6: ± 0.05 (stat) pb of 1.14 pb", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: syst_combined
                 specific: "Systematic"
                 size: {range: [3.5, 3.5], asymmetric: false}
-                provenance: {uid: 36d40b8c, ref: "inspire:2844499", locator: "Sec. 6: ± 0.04 (syst) pb of 1.14 pb", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 36d40b8c, ref: "inspire:2844499", locator: "Sec. 6: ± 0.04 (syst) pb of 1.14 pb", source: agent, status: cross-checked, date: "2026-10-22"}
         predictions:
           - label: "NLO QCD (MadGraph5_aMC@NLO signal generator), CMS 2024 comparison"
             accuracy:
               qcd: NLO
               approximations: ["σ(tt̄Z) = 0.84 ± 0.08 pb and σ(tWZ) = 0.14 ± 0.01 pb from the signal generators; measured μ(tt̄Z + tWZ) = 1.17 ± 0.07"]
             codes: ["MadGraph5_aMC@NLO"]
-            total: {value_pct: 9.5, provenance: {uid: ecaaa322, ref: "inspire:2844499", locator: "Sec. 6: predicted σ(tt̄Z) = 0.84 ± 0.08 pb (tt̄Z component, 0.08/0.84; tWZ 0.14 ± 0.01 pb)", source: agent, status: agent-draft, date: "2026-10-22"}}
             compared_to: ["meas:ttz/lhc-13/cms-2024-multilepton"]
             refs: ["inspire:2844499"]
-            provenance: {uid: 1493af70, ref: "inspire:2844499", locator: "Sec. 3 (tt̄Z and tWZ generated at NLO with MG5_aMC@NLO v2.6.5) and Sec. 6 (predicted cross sections in the 70 < mℓℓ < 110 GeV phase space)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 1493af70, ref: "inspire:2844499", locator: "Sec. 3 (tt̄Z and tWZ generated at NLO with MG5_aMC@NLO v2.6.5) and Sec. 6 (predicted cross sections in the 70 < mℓℓ < 110 GeV phase space)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:ttz/lhc-13/pt-z"
         name: "Normalised 1/σ dσ/dpT(Z), tt̄Z + tWZ, ≥ 3ℓ"
         kind: differential
@@ -193,7 +192,7 @@ channels:
           - label: "NLO QCD + PS (MadGraph5_aMC@NLO), CMS 2024 comparison"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["MadGraph5_aMC@NLO"]
-            total: {value_pct: 0.67, provenance: {uid: 3a599458, ref: "hepdata:ins2844499/ZPt_normalized_ttZtWZ", locator: "column 'Predicted (aMC@NLO)', bin 2 (50 < pT(Z) < 100 GeV): 0.0057689 +0.0000387 −0.0000380 ('theo': scale, PDF and parton-shower uncertainties per paper Sec. 6); larger side", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 0.67, provenance: {uid: 3a599458, ref: "hepdata:ins2844499/ZPt_normalized_ttZtWZ", locator: "column 'Predicted (aMC@NLO)', bin 2 (50 < pT(Z) < 100 GeV): 0.0057689 +0.0000387 −0.0000380 ('theo': scale, PDF and parton-shower uncertainties per paper Sec. 6); larger side", source: agent, status: cross-checked, date: "2026-10-22"}}
             compared_to: ["meas:ttz/lhc-13/cms-2024-multilepton"]
             refs: ["inspire:2844499"]
-            provenance: {uid: 96f7821c, ref: "inspire:2844499", locator: "Sec. 6 and Fig. 13 (normalised differential cross sections compared with the MC prediction; uncertainties from μR, μF, PDFs and parton showers summed in quadrature)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 96f7821c, ref: "inspire:2844499", locator: "Sec. 6 and Fig. 13 (normalised differential cross sections compared with the MC prediction; uncertainties from μR, μF, PDFs and parton showers summed in quadrature)", source: agent, status: cross-checked, date: "2026-10-22"}

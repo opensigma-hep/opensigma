@@ -10,6 +10,6 @@ master_integrals:
 evaluation:
   kind: analytic
   detail: "canonical basis; iterated integrals over elliptic and polylogarithmic forms; series-expansion representations for numerics"
-  provenance: {uid: b98a765c, ref: "inspire:2874702", locator: "Abstract (canonical basis for all integrals, independent iterated integrals over elliptic and polylogarithmic differential forms; series expansion representations for the whole amplitudes for numerical evaluation)", source: agent, status: agent-draft, date: "2026-10-22"}
+  provenance: {uid: b98a765c, ref: "inspire:2874702", locator: "Abstract (canonical basis for all integrals, independent iterated integrals over elliptic and polylogarithmic differential forms; series expansion representations for the whole amplitudes for numerical evaluation)", source: agent, status: cross-checked, date: "2026-10-22"}
 refs: ["inspire:2874702", "inspire:2876679"]
-provenance: {uid: a94fd482, ref: "inspire:2876679", locator: "Abstract and Sec. 1 (two-loop helicity amplitudes for gg → γγ and qq̄ → γγ with full top-quark mass dependence in the loop; gluon-initiated amplitude contributes at N3LO); inspire:2874702 Abstract", source: agent, status: agent-draft, date: "2026-10-22"}
+provenance: {uid: a94fd482, ref: "inspire:2876679", locator: "Abstract and Sec. 1 (two-loop helicity amplitudes for gg → γγ and qq̄ → γγ with full top-quark mass dependence in the loop; gluon-initiated amplitude contributes at N3LO); inspire:2874702 Abstract", source: agent, status: cross-checked, date: "2026-10-22"}

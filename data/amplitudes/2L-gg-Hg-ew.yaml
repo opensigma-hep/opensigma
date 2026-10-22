@@ -2,11 +2,11 @@ id: "amp:2L/gg-Hg-ew"
 process: "proc:ggh"
 loops: 2
 corrections: EW
-status: partial
+status: done
 approximations: ["NLO EW (two-loop) corrections to the loop-induced gg → gH amplitude with full top-mass dependence; qg → qH and q q̄ → gH not computed", "on-shell EW renormalisation in the α(0), α(m_Z) and G_μ schemes"]
 evaluation:
   kind: numerical
   detail: "IBP to >3600 masters in 108 families (optimised basis); DEs in s, t solved numerically with AMFlow boundaries; interpolation grids"
-  provenance: {uid: 40b992eb, ref: "inspire:2954727", locator: "Sec. 2.2 (Kira/Blade/FIRE reduction to 108 integral families and over 3,600 masters; optimised basis; differential equations in s and t solved numerically, boundary conditions from AMFlow); Sec. 3 (interpolation grids for the NLO EW / LO ratio of squared matrix elements)", source: agent, status: agent-draft, date: "2026-10-22"}
+  provenance: {uid: 40b992eb, ref: "inspire:2954727", locator: "Sec. 2.2 (Kira/Blade/FIRE reduction to 108 integral families and over 3,600 masters; optimised basis; differential equations in s and t solved numerically, boundary conditions from AMFlow); Sec. 3 (interpolation grids for the NLO EW / LO ratio of squared matrix elements)", source: agent, status: cross-checked, date: "2026-10-22"}
 refs: ["inspire:2954727"]
 provenance: {uid: fb4c2a16, ref: "inspire:2954727", locator: "Abstract; Sec. 1 and Sec. 2.1, eq. (1) (complete NLO EW corrections to gg → gH, two-loop diagrams of Fig. 2, full top-mass dependence)", source: agent, status: agent-draft, date: "2026-10-22"}

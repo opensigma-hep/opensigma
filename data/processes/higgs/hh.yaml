@@ -100,31 +100,31 @@ channels:
                 size: {range: [25.0, 50.0], unit: "%", asymmetric: true}
                 provenance: {uid: 03aed335, ref: "inspire:3124422", locator: "arXiv:2602.23991, Results: +0.4/−0.2 (theory) of 0.8 central value; leading theory sources: ggF HH normalisation (top-mass renormalisation scheme and scale) and single-H production with heavy-flavour jets", source: agent, status: cross-checked, date: "2026-10-17"}
           - measurement: "meas:hh/lhc-13/atlas-2024-comb"
-            total: {value_pct: 240.0, provenance: {uid: 9159e8ae, ref: "inspire:2798812", locator: "arXiv:2406.09971, results paragraph after the μ_HH definition: μ_HH = 0.5 +1.2/−1.0 (expected 1.0 +1.2/−1.0); larger side 1.2/0.5 = 240% of the central value; normalised to σ_SM(ggF+VBF) = 32.8 +2.1/−7.2 fb; 95% CL upper limit 2.9 (2.4 expected)", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 240.0, provenance: {uid: 9159e8ae, ref: "inspire:2798812", locator: "arXiv:2406.09971, results paragraph after the μ_HH definition: μ_HH = 0.5 +1.2/−1.0 (expected 1.0 +1.2/−1.0); larger side 1.2/0.5 = 240% of the central value; normalised to σ_SM(ggF+VBF) = 32.8 +2.1/−7.2 fb; 95% CL upper limit 2.9 (2.4 expected)", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical"
                 size: {range: [160.0, 180.0], unit: "%", asymmetric: true}
-                provenance: {uid: ea9a300d, ref: "inspire:2798812", locator: "arXiv:2406.09971, results paragraph: +0.9/−0.8 (stat) of 0.5 central value", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: ea9a300d, ref: "inspire:2798812", locator: "arXiv:2406.09971, results paragraph: +0.9/−0.8 (stat) of 0.5 central value", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: syst_combined
                 specific: "Systematic (all sources combined)"
                 size: {range: [120.0, 140.0], unit: "%", asymmetric: true}
-                provenance: {uid: e6b27304, ref: "inspire:2798812", locator: "arXiv:2406.09971, results paragraph: +0.7/−0.6 (syst) of 0.5 central value", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: e6b27304, ref: "inspire:2798812", locator: "arXiv:2406.09971, results paragraph: +0.7/−0.6 (syst) of 0.5 central value", source: agent, status: cross-checked, date: "2026-10-22"}
           - measurement: "meas:hh/lhc-13/atlas-2026-bbtautau"
-            total: {value_pct: 53.8, provenance: {uid: 3aeec283, ref: "inspire:3184980", locator: "arXiv:2607.26879, Abstract and Sec. 11 (Conclusion): μ_HH = 2.6 +1.4/−1.0; larger side 1.4/2.6 = 53.8% of the central value; observed (expected) significance 2.6 (1.2)σ, 95% CL upper limit 5.3 (2.4 expected, background-only)", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 53.8, provenance: {uid: 3aeec283, ref: "inspire:3184980", locator: "arXiv:2607.26879, Abstract and Sec. 11 (Conclusion): μ_HH = 2.6 +1.4/−1.0; larger side 1.4/2.6 = 53.8% of the central value; observed (expected) significance 2.6 (1.2)σ, 95% CL upper limit 5.3 (2.4 expected, background-only)", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical (symmetrised)"
                 size: {range: [35.0, 35.0], unit: "%", asymmetric: false}
-                provenance: {uid: ba2e28c4, ref: "inspire:3184980", locator: "arXiv:2607.26879, Table 5: Statistical 0.91 of μ_HH = 2.6 (total 1.20, mean of up and down)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: ba2e28c4, ref: "inspire:3184980", locator: "arXiv:2607.26879, Table 5: Statistical 0.91 of μ_HH = 2.6 (total 1.20, mean of up and down)", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: syst_combined
                 specific: "Experimental uncertainties combined (τ_had, jets, flavour tagging, E_T^miss, leptons, pile-up, luminosity)"
                 size: {range: [7.7, 7.7], unit: "%", asymmetric: false}
-                provenance: {uid: f71751ba, ref: "inspire:3184980", locator: "arXiv:2607.26879, Table 5: Experimental uncertainties 0.20 of μ_HH = 2.6", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: f71751ba, ref: "inspire:3184980", locator: "arXiv:2607.26879, Table 5: Experimental uncertainties 0.20 of μ_HH = 2.6", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: other
                 specific: "Modelling uncertainties combined (largest: HH signal 0.54, other SM Higgs 0.25, background template statistics 0.21, tW 0.21)"
                 size: {range: [27.3, 27.3], unit: "%", asymmetric: false}
-                provenance: {uid: a427fe49, ref: "inspire:3184980", locator: "arXiv:2607.26879, Table 5: Modelling uncertainties 0.71 of μ_HH = 2.6", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: a427fe49, ref: "inspire:3184980", locator: "arXiv:2607.26879, Table 5: Modelling uncertainties 0.71 of μ_HH = 2.6", source: agent, status: cross-checked, date: "2026-10-22"}
         predictions:
           - label: "LHC HH WG recommendation: NNLO FTapprox × K(N3LO+N3LL / NNLO, large-m_t) × K_EW, PDF4LHC21_40, 13 TeV"
             accuracy: {qcd: N3LO, ew: NLO, resummation: [{accuracy: "N3LL", variable: "soft-gluon threshold"}], approximations: ["NNLO FTapprox (full-mass NLO + reweighted large-m_t NNLO) rescaled by the large-m_t N3LO+N3LL / NNLO K-factor", "multiplicative NLO electroweak K-factor, no scale uncertainty assigned", "scale uncertainty taken from NNLO FTapprox only; mt = 173.0 GeV, five-flavour scheme, mb = 0"]}
@@ -211,40 +211,40 @@ channels:
             accuracy: {qcd: NNLO, shower_matched: true, approximations: ["Born, single-virtual, single-real and double-real contributions with exact m_t dependence; real-virtual and double-virtual approximated (FT-approx)", "Pythia8 shower with QED shower, hadronisation and MPI switched off", "μ_R for the two overall powers of αs set to m_HH/2"]}
             codes: ["MiNNLOPS (POWHEG-BOX-RES)", "Pythia8"]
             uses_amplitudes: ["amp:2L/gg-HH-mt"]
-            total: {value_pct: 9.5, provenance: {uid: 969db614, ref: "inspire:3165416", locator: "arXiv:2606.05300, Table 2, FT-approx at 13 TeV: 32.32 +9.5%/−8.1% fb (scale variation only); larger side taken", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 9.5, provenance: {uid: 969db614, ref: "inspire:3165416", locator: "arXiv:2606.05300, Table 2, FT-approx at 13 TeV: 32.32 +9.5%/−8.1% fb (scale variation only); larger side taken", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: MHOU
                 specific: "Renormalisation and factorisation scale"
                 method: "7-point variation of K_R, K_F by a factor of two around K_R = K_F = 0.5, 1/2 ≤ K_R/K_F ≤ 2"
                 size: {range: [8.1, 9.5], unit: "%", asymmetric: true}
                 full_table: "arXiv:2606.05300, Table 2"
-                provenance: {uid: f1ce4f36, ref: "arXiv:2606.05300, Table 2", locator: "Table 2, FT-approx at 13 TeV: 32.32 +9.5%/−8.1% fb; scale setup Sec. 4 (seven-point variations)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: f1ce4f36, ref: "arXiv:2606.05300, Table 2", locator: "Table 2, FT-approx at 13 TeV: 32.32 +9.5%/−8.1% fb; scale setup Sec. 4 (seven-point variations)", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: approximation
                 specific: "Treatment of the unknown finite-m_t real-virtual and double-virtual terms (spread of FT-approx-0, FT-approx, FT-approx-2 and NLO-I)"
                 size: {range: [1.5, 1.5], unit: "%", asymmetric: false}
                 full_table: "arXiv:2606.05300, Table 2"
-                provenance: {uid: 5d290b17, ref: "arXiv:2606.05300, Sec. 4.2", locator: "Sec. 4.2, paragraph before Table 1: the three full-theory approximations and NLO-I 'differ by less than 1.5%' (Table 2: 32.04, 32.32, 31.88, 31.98 fb); upper bound taken", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 5d290b17, ref: "arXiv:2606.05300, Sec. 4.2", locator: "Sec. 4.2, paragraph before Table 1: the three full-theory approximations and NLO-I 'differ by less than 1.5%' (Table 2: 32.04, 32.32, 31.88, 31.98 fb); upper bound taken", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:3165416"]
-            provenance: {uid: 40f91af4, ref: "inspire:3165416", locator: "arXiv:2606.05300, Abstract and Sec. 4.2, Table 2 (FT-approx, 13 TeV, PDF4LHC21_40, setup in Sec. 4)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 40f91af4, ref: "inspire:3165416", locator: "arXiv:2606.05300, Abstract and Sec. 4.2, Table 2 (FT-approx, 13 TeV, PDF4LHC21_40, setup in Sec. 4)", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "NNLO+NNLL'(T0)+PS in GENEVA, FTapprox (exact m_t up to NLO, Born-reweighted real-virtual), PDF4LHC15_nnlo_100, μ = m_HH/2"
             accuracy: {qcd: NNLO, shower_matched: true, resummation: [{accuracy: "NNLL'", variable: "zero-jettiness T0"}], approximations: ["B0, B1, B2 and V0 terms with exact m_t (OpenLoops; two-loop virtual from interpolated HHgrid)", "real-virtual V1 reweighted by the exact-m_t Born; double-virtual enters through the two-loop hard function", "3-point correlated scale variation only"]}
             codes: ["Geneva", "OpenLoops", "HHgrid"]
             uses_amplitudes: ["amp:2L/gg-HH-mt"]
-            total: {value_pct: 5.7, provenance: {uid: 703fc959, ref: "inspire:2944853", locator: "arXiv:2507.08558, Table 1, NNLO FTapprox at 13 TeV, μ = m_HH/2: (31.19 ± 0.38) +2.8%/−5.7% fb (scale only); larger side taken", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 5.7, provenance: {uid: 703fc959, ref: "inspire:2944853", locator: "arXiv:2507.08558, Table 1, NNLO FTapprox at 13 TeV, μ = m_HH/2: (31.19 ± 0.38) +2.8%/−5.7% fb (scale only); larger side taken", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: MHOU
                 specific: "Renormalisation and factorisation scale"
                 method: "3-point correlated variation of μ_R = μ_F by a factor of two around m_HH/2"
                 size: {range: [2.8, 5.7], unit: "%", asymmetric: true}
                 full_table: "arXiv:2507.08558, Table 1"
-                provenance: {uid: 83d3b595, ref: "arXiv:2507.08558, Table 1", locator: "Table 1, NNLO FTapprox at 13 TeV: +2.8%/−5.7% (3-point inclusive scale variations, Sec. 3 text after Table 2)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 83d3b595, ref: "arXiv:2507.08558, Table 1", locator: "Table 1, NNLO FTapprox at 13 TeV: +2.8%/−5.7% (3-point inclusive scale variations, Sec. 3 text after Table 2)", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: numerical
                 specific: "Monte Carlo statistical uncertainty"
                 size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
                 full_table: "arXiv:2507.08558, Table 1"
-                provenance: {uid: 1a72bb51, ref: "arXiv:2507.08558, Table 1", locator: "Table 1, 13 TeV: ± 0.38 fb (statistical) on 31.19 fb = 1.2%", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 1a72bb51, ref: "arXiv:2507.08558, Table 1", locator: "Table 1, 13 TeV: ± 0.38 fb (statistical) on 31.19 fb = 1.2%", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:2944853"]
-            provenance: {uid: bea0cad0, ref: "inspire:2944853", locator: "arXiv:2507.08558, Abstract, Sec. 2.1 (FTapprox definition) and Table 1 (13 TeV, μ = m_HH/2)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: bea0cad0, ref: "inspire:2944853", locator: "arXiv:2507.08558, Abstract, Sec. 2.1 (FTapprox definition) and Table 1 (13 TeV, μ = m_HH/2)", source: agent, status: cross-checked, date: "2026-10-22"}
   - id: "chan:hh/lhc-13.6"
     collider: "col:lhc-13.6"
     initial_state: "pp"
@@ -267,14 +267,14 @@ channels:
                 method: "7-point variation of μ_R, μ_F around m_HH/2"
                 size: {range: [13.3, 15.0], unit: "%", asymmetric: true}
                 full_table: "arXiv:2610.20551, Table 1"
-                provenance: {uid: f89619c4, ref: "arXiv:2610.20551, Table 1", locator: "Table 1, κλ = 1, √s = 13.6 TeV: σ = 28.06 fb, scale unc. +15.0%/−13.3%", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: f89619c4, ref: "arXiv:2610.20551, Table 1", locator: "Table 1, κλ = 1, √s = 13.6 TeV: σ = 28.06 fb, scale unc. +15.0%/−13.3%", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: parametric
                 specific: "Top-quark mass scheme (dynamical scheme: R variation +5.0/−0.2%, δ variation +1.5/−0.1%, combined in quadrature)"
                 size: {range: [0.2, 5.2], unit: "%", asymmetric: true}
                 full_table: "arXiv:2610.20551, Table 1"
-                provenance: {uid: a4b35b89, ref: "arXiv:2610.20551, Table 1", locator: "Table 1, κλ = 1, √s = 13.6 TeV: Δσ_tot +5.2%/−0.2% (Δσ_R +5.0/−0.2, Δσ_δ +1.5/−0.1); same total at 14 TeV in eq. (17)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: a4b35b89, ref: "arXiv:2610.20551, Table 1", locator: "Table 1, κλ = 1, √s = 13.6 TeV: Δσ_tot +5.2%/−0.2% (Δσ_R +5.0/−0.2, Δσ_δ +1.5/−0.1); same total at 14 TeV in eq. (17)", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:3215229"]
-            provenance: {uid: 440913a0, ref: "inspire:3215229", locator: "arXiv:2610.20551, Sec. 3 (dynamical scheme), Sec. 4 Table 1 (κλ = 1: σ = 28.06 fb at 13.6 TeV) and Sec. 5", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 440913a0, ref: "inspire:3215229", locator: "arXiv:2610.20551, Sec. 3 (dynamical scheme), Sec. 4 Table 1 (κλ = 1: σ = 28.06 fb at 13.6 TeV) and Sec. 5", source: agent, status: cross-checked, date: "2026-10-22"}
   - id: "chan:hh/lhc-hl"
     collider: "col:lhc-hl"
     initial_state: "pp"

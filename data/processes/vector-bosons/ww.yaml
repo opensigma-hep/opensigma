@@ -322,7 +322,7 @@ channels:
             uses_amplitudes: ["amp:2L/qqbar-VV"]
             compared_to: ["meas:ww/lhc-13/atlas-2019-fid", "meas:ww/lhc-13/cms-2020-tot"]
             refs: ["inspire:2690111"]
-            provenance: {uid: fdccaf65, ref: "inspire:2690111", locator: "Abstract; Sec. 2.3 (NNLL′ jet-veto resummation); Sec. 4.6, Table 2 (ATLAS/CMS fiducial regions) and Fig. 7 (exclusive 0-jet cross section vs pT^cut against ATLAS and CMS 13 TeV data; gg rescaled by k = 1.7)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: fdccaf65, ref: "inspire:2690111", locator: "Abstract; Sec. 2.3 (NNLL′ jet-veto resummation); Sec. 4.6, Table 2 (ATLAS/CMS fiducial regions) and Fig. 7 (exclusive 0-jet cross section vs pT^cut against ATLAS and CMS 13 TeV data; gg rescaled by k = 1.7)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: obs:ww/lhc-13/sigma-fid-incl
         name: Fiducial σ(pp → W⁺W⁻ → eμνν), jet-inclusive
         kind: fiducial

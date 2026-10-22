@@ -37,9 +37,9 @@ determinations:
     uncertainty: 0.0012
     extracted_from: ["obs:ee-event-shapes/lep1/thrust", "obs:ee-event-shapes/lep2/thrust"]
     ref: "arXiv:2412.15164"
-    provenance: {uid: 059187d3, ref: "arXiv:2412.15164", locator: "Sec. 6.1, eq. (6.1) and Table 3: global N3LL′ + O(αs³) thrust fit, τ in [6 GeV/Q, 0.15], Q = 35-207 GeV, αs(mZ) = 0.1136 ± 0.0012 (total); without QED (−0.0005) and b-mass effects", source: agent, status: agent-draft, date: "2026-10-22"}
+    provenance: {uid: 059187d3, ref: "arXiv:2412.15164", locator: "Sec. 6.1, eq. (6.1) and Table 3: global N3LL′ + O(αs³) thrust fit, τ in [6 GeV/Q, 0.15], Q = 35-207 GeV, αs(mZ) = 0.1136 ± 0.0012 (total); without QED (−0.0005) and b-mass effects", source: agent, status: cross-checked, date: "2026-10-22"}
   - value: 0.1181
     uncertainty: 0.0018
     extracted_from: ["obs:ee-event-shapes/lep1/thrust"]
     ref: "arXiv:2502.01570"
-    provenance: {uid: 5127d92b, ref: "arXiv:2502.01570", locator: "Eq. (20): N3LL + NNLO (Laplace-space resummation) fit to LEP and SLD thrust data at Q = mZ, 0 < τ < 0.15, αs(mZ²) = 0.1181 ± 0.0018 (exp. + perturbative)", source: agent, status: agent-draft, date: "2026-10-22"}
+    provenance: {uid: 5127d92b, ref: "arXiv:2502.01570", locator: "Eq. (20): N3LL + NNLO (Laplace-space resummation) fit to LEP and SLD thrust data at Q = mZ, 0 < τ < 0.15, αs(mZ²) = 0.1181 ± 0.0018 (exp. + perturbative)", source: agent, status: cross-checked, date: "2026-10-22"}

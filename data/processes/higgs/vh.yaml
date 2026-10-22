@@ -40,22 +40,22 @@ building_blocks:
         status: partial
         approximations: ["W+H only: obtained from W+H+jet at NNLO (O(αs³) above the qT cut) in NNLOJET, amplitudes from OpenLoops 2"]
         refs: ["inspire:3175068"]
-        provenance: {uid: 66c97283, ref: "inspire:3175068", locator: "arXiv:2606.31286, Methodology (above-cut contribution from NNLO pp → W+H + 1 jet in NNLOJET with antenna subtraction, OpenLoops2 amplitudes)", source: agent, status: agent-draft, date: "2026-10-22"}
+        provenance: {uid: 66c97283, ref: "inspire:3175068", locator: "arXiv:2606.31286, Methodology (above-cut contribution from NNLO pp → W+H + 1 jet in NNLOJET with antenna subtraction, OpenLoops2 amplitudes)", source: agent, status: cross-checked, date: "2026-10-22"}
       RRR:
         status: partial
         approximations: ["W+H only: obtained from W+H+jet at NNLO (O(αs³) above the qT cut) in NNLOJET"]
         refs: ["inspire:3175068"]
-        provenance: {uid: ce0d4d58, ref: "inspire:3175068", locator: "arXiv:2606.31286, Methodology (above-cut pp → W+H + 1 jet at NNLO; double-real dominates the 3M core-hour runtime)", source: agent, status: agent-draft, date: "2026-10-22"}
+        provenance: {uid: ce0d4d58, ref: "inspire:3175068", locator: "arXiv:2606.31286, Methodology (above-cut pp → W+H + 1 jet at NNLO; double-real dominates the 3M core-hour runtime)", source: agent, status: cross-checked, date: "2026-10-22"}
       ir_scheme:
         status: partial
         approximations: ["W+H only: qT slicing with the N3LO expansion of the RadISH resummation formula below the cut, qT_cut = 5 GeV, linear power corrections added for symmetric cuts"]
         refs: ["inspire:3175068"]
-        provenance: {uid: e54969d3, ref: "inspire:3175068", locator: "arXiv:2606.31286, Methodology, Eq. (1) (qT slicing; below-cut from RadISH at N3LO) and Validation section (qT_cut = 5 GeV, slicing error from ±1 GeV variation)", source: agent, status: agent-draft, date: "2026-10-22"}
+        provenance: {uid: e54969d3, ref: "inspire:3175068", locator: "arXiv:2606.31286, Methodology, Eq. (1) (qT slicing; below-cut from RadISH at N3LO) and Validation section (qT_cut = 5 GeV, slicing error from ±1 GeV variation)", source: agent, status: cross-checked, date: "2026-10-22"}
       code:
         status: partial
         approximations: ["inclusive WH and ZH at N3LO (n3loxs, inspire:2151031)", "fully differential only for pp → W+(→ e+ν)H in the boosted regime (inspire:3175068)", "top-Yukawa terms only at O(yt αs²); ZH fully differential and gg → ZH at higher order missing"]
         refs: ["inspire:2151031", "inspire:3175068"]
-        provenance: {uid: c52eb99c, ref: "inspire:3175068", locator: "arXiv:2606.31286, Introduction (inclusive N3LO known, Ref. [13] = arXiv:2209.06138; differential limited to NNLO before this work) and Conclusions (first fully differential N3LO for pp → W+(→ e+ν)H; ZH would also need gg → ZH); inspire:2151031 Abstract (inclusive VH at N3LO, public code n3loxs)", source: agent, status: agent-draft, date: "2026-10-22"}
+        provenance: {uid: c52eb99c, ref: "inspire:3175068", locator: "arXiv:2606.31286, Introduction (inclusive N3LO known, Ref. [13] = arXiv:2209.06138; differential limited to NNLO before this work) and Conclusions (first fully differential N3LO for pp → W+(→ e+ν)H; ZH would also need gg → ZH); inspire:2151031 Abstract (inclusive VH at N3LO, public code n3loxs)", source: agent, status: cross-checked, date: "2026-10-22"}
 channels:
   - id: "chan:vh/lhc-13"
     collider: "col:lhc-13"
@@ -90,18 +90,18 @@ channels:
         variable: "pT(V) at truth level in STXS 1.2 bins (75–150, 150–250, 250–400, 400–600, > 600 GeV; ATLAS also N_jet = 0 / ≥ 1 splits for ZH), separately for W(ℓν)H and Z(ℓℓ/νν)H"
         results:
           - measurement: "meas:vh/lhc-13/atlas-2024-vhbb-stxs"
-            total: {value_pct: 26.6, provenance: {uid: 72f98f10, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, W(ℓν)H 250 < pT(W) < 400 GeV (smallest relative uncertainty over the N_jet-inclusive bins): 7.9 ± 2.1 fb; 2.1/7.9 (text, Sec. 10.3, quotes 25%)", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 26.6, provenance: {uid: 72f98f10, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, W(ℓν)H 250 < pT(W) < 400 GeV (smallest relative uncertainty over the N_jet-inclusive bins): 7.9 ± 2.1 fb; 2.1/7.9 (text, Sec. 10.3, quotes 25%)", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical (incl. floating background normalisations and signal migrations)"
                 size: {range: [22.8, 22.8], unit: "%", asymmetric: false}
-                provenance: {uid: ddec0b85, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, W(ℓν)H 250–400 GeV: Stat. unc. 1.8 fb of 7.9 fb", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: ddec0b85, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, W(ℓν)H 250–400 GeV: Stat. unc. 1.8 fb of 7.9 fb", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: background
                 specific: "Background-modelling systematics (Th. bkg.)"
                 size: {range: [10.1, 10.1], unit: "%", asymmetric: false}
-                provenance: {uid: 7c2bf594, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, W(ℓν)H 250–400 GeV: Syst. unc. Th. bkg. 0.8 fb of 7.9 fb", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 7c2bf594, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, W(ℓν)H 250–400 GeV: Syst. unc. Th. bkg. 0.8 fb of 7.9 fb", source: agent, status: cross-checked, date: "2026-10-22"}
           - measurement: "meas:vh/lhc-13/cms-2023-vhbb-stxs"
-            total: {value_pct: 31.9, provenance: {uid: 58e8f65c, ref: "hepdata:ins2736546/Table 1", locator: "HEPData v1 'Table 1', observed σB, bin 4 (ZH 250 < pT(Z) < 400 GeV): 6.9 ± 2.2 fb (smallest relative uncertainty; WH 250–400 GeV: 11.9 ± 3.8 fb); single symmetrised total error and a '<0' bin, so not ingestable by scripts.ingest_hepdata", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 31.9, provenance: {uid: 58e8f65c, ref: "hepdata:ins2736546/Table 1", locator: "HEPData v1 'Table 1', observed σB, bin 4 (ZH 250 < pT(Z) < 400 GeV): 6.9 ± 2.2 fb (smallest relative uncertainty; WH 250–400 GeV: 11.9 ± 3.8 fb); single symmetrised total error and a '<0' bin, so not ingestable by scripts.ingest_hepdata", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties: []
         predictions:
           - label: "NLO+PS QCD (Powheg MiNLO + Pythia 8), normalised to inclusive NNLO QCD + NLO EW, pT(V)-dependent NLO EW (HAWK)"
@@ -111,10 +111,10 @@ channels:
               shower_matched: true
               approximations: ["pT(V) shape at NLO+PS (MiNLO); normalisation inclusive NNLO QCD", "NLO EW as a pT(V)-dependent factor from HAWK", "gg → ZH at NLO+NLL"]
             codes: ["POWHEG-BOX", "MiNLO", "Pythia 8", "VH@NNLO", "HAWK"]
-            total: {value_pct: 4.2, provenance: {uid: a65be3b4, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, SM prediction for W(ℓν)H 250–400 GeV: 5.90 ± 0.25 fb", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 4.2, provenance: {uid: a65be3b4, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 8, SM prediction for W(ℓν)H 250–400 GeV: 5.90 ± 0.25 fb", source: agent, status: cross-checked, date: "2026-10-22"}}
             compared_to: ["meas:vh/lhc-13/atlas-2024-vhbb-stxs", "meas:vh/lhc-13/cms-2023-vhbb-stxs"]
             refs: ["inspire:2842826", "inspire:2736546"]
-            provenance: {uid: 3fb4c64d, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 1 and notes (qq → VH: Powheg Box v2 + GoSam + MiNLO, Pythia 8, NNLO(QCD)+NLO(EW) normalisation, pT(V)-dependent NLO EW from Hawk; gg → ZH NLO+NLL) and Table 8; arXiv:2312.07562 Sec. 2 (POWHEG v2 + MINLO, rescaled to NNLO QCD and NLO EW with VH@NNLO and HAWK)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 3fb4c64d, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 1 and notes (qq → VH: Powheg Box v2 + GoSam + MiNLO, Pythia 8, NNLO(QCD)+NLO(EW) normalisation, pT(V)-dependent NLO EW from Hawk; gg → ZH NLO+NLL) and Table 8; arXiv:2312.07562 Sec. 2 (POWHEG v2 + MINLO, rescaled to NNLO QCD and NLO EW with VH@NNLO and HAWK)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:vh/lhc-13/sigma-wh"
         name: "σ(WH) in the Higgs decay-channel combination (ATLAS: σ(WH); CMS: μ_WH)"
         kind: total
@@ -299,16 +299,16 @@ channels:
               qcd: N3LO
               approximations: ["N3LO correction from qT slicing (qT_cut = 5 GeV); NNLO from NNLOJET", "O(yt αs²) virtual top-Yukawa terms in the heavy-top limit, real-emission ones with full m_t", "no EW corrections"]
             codes: ["NNLOJET", "RadISH", "OpenLoops"]
-            total: {value_pct: 0.85, provenance: {uid: e04539b0, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1, N3LO, pT(H) ≥ 250 GeV: (3.62 ± 0.01) pb +0.5%/−0.8%; derived here as the larger scale side (0.8%) and the numerical/slicing error (0.28%) in quadrature; PDF uncertainty not quoted", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 0.85, provenance: {uid: e04539b0, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1, N3LO, pT(H) ≥ 250 GeV: (3.62 ± 0.01) pb +0.5%/−0.8%; derived here as the larger scale side (0.8%) and the numerical/slicing error (0.28%) in quadrature; PDF uncertainty not quoted", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: MHOU
                 specific: "7-point μR, μF variation"
                 method: "μR, μF varied by a factor two around Q = m(WH), 1/4 < μR/μF < 4"
                 size: {range: [0.5, 0.8], unit: "%", asymmetric: true}
-                provenance: {uid: eb20a29e, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 (N3LO, pT(H) ≥ 250 GeV: +0.5%/−0.8%) and Computational Setup", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: eb20a29e, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 (N3LO, pT(H) ≥ 250 GeV: +0.5%/−0.8%) and Computational Setup", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: numerical
                 specific: "Monte Carlo and qT-slicing error (qT_cut varied by ±1 GeV)"
                 size: {range: [0.28, 0.28], unit: "%", asymmetric: false}
-                provenance: {uid: 2ab6f565, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 (± 0.01 pb of 3.62 pb, conservative MC + slicing error) and Validation section", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 2ab6f565, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 (± 0.01 pb of 3.62 pb, conservative MC + slicing error) and Validation section", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:3175068"]
-            provenance: {uid: b385d5b6, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 and Computational Setup (√s = 13.6 TeV, NNPDF40_an3lo_as_01180, m_H = 125.09 GeV, Gμ scheme); N3LO corrections about +1.5% over NNLO in the boosted setup", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: b385d5b6, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 and Computational Setup (√s = 13.6 TeV, NNPDF40_an3lo_as_01180, m_H = 125.09 GeV, Gμ scheme); N3LO corrections about +1.5% over NNLO in the boosted setup", source: agent, status: cross-checked, date: "2026-10-22"}

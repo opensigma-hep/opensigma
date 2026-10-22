@@ -146,15 +146,15 @@ channels:
         variable: "A_c^ℓ = [N(Δy^ℓ > 0) − N(Δy^ℓ < 0)] / [N(Δy^ℓ > 0) + N(Δy^ℓ < 0)], Δy^ℓ = |y(ℓ+)| − |y(ℓ−)| of the leptons from the t and t̄ decays"
         results:
           - measurement: "meas:ttw/lhc-13/cms-2025-diff-ac"
-            total: {value_pct: 95.0, provenance: {uid: 53f756f4, ref: "inspire:2970691", locator: "Abstract and Summary: A_c^ℓ = −0.19 +0.16 −0.18; larger side 0.18/0.19", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 94.7, provenance: {uid: 53f756f4, ref: "inspire:2970691", locator: "Abstract and Summary: A_c^ℓ = −0.19 +0.16 −0.18; larger side 0.18/0.19", source: agent, status: agent-draft, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical"
-                size: {range: [74.0, 84.0], asymmetric: true}
+                size: {range: [73.7, 84.2], asymmetric: true}
                 provenance: {uid: 862d1bce, ref: "inspire:2970691", locator: "Sec. 8: A_c^ℓ = −0.19 +0.05 −0.06 (syst) +0.14 −0.16 (stat); stat relative to 0.19", source: agent, status: agent-draft, date: "2026-10-22"}
               - category: syst_combined
                 specific: "Systematic"
-                size: {range: [26.0, 32.0], asymmetric: true}
+                size: {range: [26.3, 31.6], asymmetric: true}
                 provenance: {uid: 0fe42179, ref: "inspire:2970691", locator: "Sec. 8: +0.05 −0.06 (syst) of 0.19", source: agent, status: agent-draft, date: "2026-10-22"}
         predictions:
           - label: "NLO QCD + PS (MadGraph5_aMC@NLO FxFx + Pythia 8, QCD and EW tt̄W production), CMS 2025 comparison"
@@ -163,7 +163,7 @@ channels:
               shower_matched: true
               approximations: ["nominal signal model with O(αs³α) QCD and O(αsα³) EW production; NLO for tt̄W + 0 and 1 partons, FxFx merged"]
             codes: ["MadGraph5_aMC@NLO", "Pythia8"]
-            total: {value_pct: 7.1, provenance: {uid: 2c73a4c6, ref: "inspire:2970691", locator: "Sec. 8 and Abstract: expectation −0.085 ± 0.006 from NLO simulations; 0.006/0.085", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 7.1, provenance: {uid: 2c73a4c6, ref: "inspire:2970691", locator: "Sec. 8 and Abstract: expectation −0.085 ± 0.006 from NLO simulations; 0.006/0.085", source: agent, status: cross-checked, date: "2026-10-22"}}
             compared_to: ["meas:ttw/lhc-13/cms-2025-diff-ac"]
             refs: ["inspire:2970691"]
-            provenance: {uid: 7a4e55b3, ref: "inspire:2970691", locator: "Sec. 3 (nominal tt̄W signal from MG5_aMC@NLO v2.6.5 with αs³α and αsα³ terms, NLO for tt̄W with and without an additional parton, FxFx, Pythia 8.240) and Sec. 8", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 7a4e55b3, ref: "inspire:2970691", locator: "Sec. 3 (nominal tt̄W signal from MG5_aMC@NLO v2.6.5 with αs³α and αsα³ terms, NLO for tt̄W with and without an additional parton, FxFx, Pythia 8.240) and Sec. 8", source: agent, status: cross-checked, date: "2026-10-22"}

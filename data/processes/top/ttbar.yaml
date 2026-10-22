@@ -248,24 +248,24 @@ channels:
                 full_table: "hepdata:ins2795514/Table 1"
                 provenance: {uid: d7642c7b, ref: "hepdata:ins2795514/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-22"}
           - measurement: "meas:ttbar/lhc-13/atlas-2024-entanglement"
-            total: {value_pct: 3.5, provenance: {uid: 1b0ea71d, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Total uncertainty column ΔD [%] at D_observed = −0.537 (3.5%); Sec. 1.3: D = −0.537 ± 0.002 (stat) ± 0.019 (syst) for 340 < m(tt̄) < 380 GeV", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 3.5, provenance: {uid: 1b0ea71d, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Total uncertainty column ΔD [%] at D_observed = −0.537 (3.5%); Sec. 1.3: D = −0.537 ± 0.002 (stat) ± 0.019 (syst) for 340 < m(tt̄) < 380 GeV", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Total statistical uncertainty"
                 size: {range: [0.3, 0.3], asymmetric: false}
-                provenance: {uid: 0b32058b, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Total statistical uncertainty, ΔD [%] at D_observed", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 0b32058b, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Total statistical uncertainty, ΔD [%] at D_observed", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: unfolding_model
                 specific: "Signal modelling (enters via the detector-to-particle-level calibration curve)"
                 size: {range: [3.2, 3.2], asymmetric: false}
-                provenance: {uid: a34c299f, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Signal modeling, ΔD [%] at D_observed", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: a34c299f, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Signal modeling, ΔD [%] at D_observed", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: background
                 specific: "Backgrounds"
                 size: {range: [0.9, 0.9], asymmetric: false}
-                provenance: {uid: efb3e7e3, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Backgrounds, ΔD [%] at D_observed", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: efb3e7e3, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Backgrounds, ΔD [%] at D_observed", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: energy_scale
                 specific: "Jets"
                 size: {range: [0.7, 0.7], asymmetric: false}
-                provenance: {uid: 3f210add, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Jets, ΔD [%] at D_observed", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 3f210add, ref: "inspire:2721895", locator: "arXiv:2311.07288, Table 1, Jets, ΔD [%] at D_observed", source: agent, status: cross-checked, date: "2026-10-22"}
         predictions:
           - label: "NLO+PS (POWHEG v2 + Pythia 8) with η_t toponium contribution, CMS 2024 comparison"
             accuracy:
@@ -273,10 +273,10 @@ channels:
               shower_matched: true
               approximations: ["η_t (toponium) contribution added from a LO MG5_aMC@NLO simplified model", "parton level, 345 < m(tt̄) < 400 GeV, βz(tt̄) < 0.9"]
             codes: ["POWHEG-BOX", "Pythia8", "MadGraph5_aMC@NLO"]
-            total: {value_pct: 0.61, provenance: {uid: 7eb043f4, ref: "hepdata:ins2795514/Table 3", locator: "Table 3, row 'Powhegv2+Pythia8+η_t': D = −0.4668 ± 0.0016 (stat) ± 0.0023 (sys, scale and PDF per paper Fig. 9 caption); added in quadrature, 0.0028/0.4668", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 0.61, provenance: {uid: 7eb043f4, ref: "hepdata:ins2795514/Table 3", locator: "Table 3, row 'Powhegv2+Pythia8+η_t': D = −0.4668 ± 0.0016 (stat) ± 0.0023 (sys, scale and PDF per paper Fig. 9 caption); added in quadrature, 0.0028/0.4668", source: agent, status: cross-checked, date: "2026-10-22"}}
             compared_to: ["meas:ttbar/lhc-13/cms-2024-entanglement"]
             refs: ["inspire:2795514"]
-            provenance: {uid: 44eb4055, ref: "inspire:2795514", locator: "Sec. 5 (POWHEG v2 NLO tt̄ with spin correlations, η_t from MG5_aMC@NLO 2.6.5 at LO) and Fig. 9 (D compared with MC predictions with and without η_t); HEPData Table 3", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 44eb4055, ref: "inspire:2795514", locator: "Sec. 5 (POWHEG v2 NLO tt̄ with spin correlations, η_t from MG5_aMC@NLO 2.6.5 at LO) and Fig. 9 (D compared with MC predictions with and without η_t); HEPData Table 3", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "NLO+PS (POWHEG v2 hvq + Pythia 8), ATLAS 2024 comparison"
             accuracy:
               qcd: NLO
@@ -285,43 +285,43 @@ channels:
             codes: ["POWHEG-BOX", "Pythia8"]
             compared_to: ["meas:ttbar/lhc-13/atlas-2024-entanglement"]
             refs: ["inspire:2721895"]
-            provenance: {uid: b03ba04f, ref: "inspire:2721895", locator: "arXiv:2311.07288, Sec. 1.3 (expected D = −0.470 from Powheg+Pythia), Methods (Powheg Box v2 hvq at NLO, Pythia 8.230) and Fig. 2(b)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: b03ba04f, ref: "inspire:2721895", locator: "arXiv:2311.07288, Sec. 1.3 (expected D = −0.470 from Powheg+Pythia), Methods (Powheg Box v2 hvq at NLO, Pythia 8.230) and Fig. 2(b)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:ttbar/lhc-13/sigma-fid-boosted"
         name: "Fiducial σ(tt̄), lepton+jets, boosted hadronic top (pT > 355 GeV), particle level"
         kind: fiducial
         variable: "σ_fid(tt̄), pT(t,had) > 355 GeV"
         results:
           - measurement: "meas:ttbar/lhc-13/atlas-2022-boosted-ljets"
-            total: {value_pct: 4.3, provenance: {uid: 8eec9469, ref: "inspire:2037744", locator: "Table 2, Total (+4.1/−4.3%, with JSF); Sec. 6: σ = 1.267 ± 0.005 (stat) ± 0.053 (syst) pb", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 4.3, provenance: {uid: 8eec9469, ref: "inspire:2037744", locator: "Table 2, Total (+4.1/−4.3%, with JSF); Sec. 6: σ = 1.267 ± 0.005 (stat) ± 0.053 (syst) pb", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical (data)"
                 size: {range: [0.4, 0.4], asymmetric: false}
-                provenance: {uid: '0e410387', ref: "inspire:2037744", locator: "Table 2, Statistical (data), with JSF", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: '0e410387', ref: "inspire:2037744", locator: "Table 2, Statistical (data), with JSF", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: efficiency
                 specific: "b-tagging"
                 size: {range: [2.4, 2.4], asymmetric: false}
-                provenance: {uid: bf5ef669, ref: "inspire:2037744", locator: "Table 2, b-tagging, with JSF", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: bf5ef669, ref: "inspire:2037744", locator: "Table 2, b-tagging, with JSF", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: acceptance_extrapolation
                 specific: "tt̄ hadronisation modelling"
                 size: {range: [2.0, 2.0], asymmetric: false}
-                provenance: {uid: ccb75e20, ref: "inspire:2037744", locator: "Table 2, Hadronisation, with JSF", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: ccb75e20, ref: "inspire:2037744", locator: "Table 2, Hadronisation, with JSF", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: acceptance_extrapolation
                 specific: "Radiation (ISR/FSR + hdamp)"
                 size: {range: [1.0, 1.6], asymmetric: true}
-                provenance: {uid: '5e235516', ref: "inspire:2037744", locator: "Table 2, Radiation (ISR/FSR + hdamp), with JSF: +1.0/−1.6", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: '5e235516', ref: "inspire:2037744", locator: "Table 2, Radiation (ISR/FSR + hdamp), with JSF: +1.0/−1.6", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: lumi
                 specific: "Luminosity"
                 size: {range: [1.8, 1.8], asymmetric: false}
-                provenance: {uid: ac4cf6e3, ref: "inspire:2037744", locator: "Table 2, Luminosity", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: ac4cf6e3, ref: "inspire:2037744", locator: "Table 2, Luminosity", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: energy_scale
                 specific: "Jets (with in-situ jet scale factor, JSF)"
                 size: {range: [0.7, 0.7], asymmetric: false}
-                provenance: {uid: 4f1cd97c, ref: "inspire:2037744", locator: "Table 2, Jets, with JSF", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 4f1cd97c, ref: "inspire:2037744", locator: "Table 2, Jets, with JSF", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: background
                 specific: "Background modelling"
                 size: {range: [0.6, 0.6], asymmetric: false}
-                provenance: {uid: 2a30f178, ref: "inspire:2037744", locator: "Table 2, Background modelling", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 2a30f178, ref: "inspire:2037744", locator: "Table 2, Background modelling", source: agent, status: cross-checked, date: "2026-10-22"}
         predictions:
           - label: "NLO+PS (Powheg + Pythia 8) normalised to NNLO+NNLL σ(tt̄), ATLAS 2022 comparison"
             accuracy:
@@ -331,14 +331,14 @@ channels:
             codes: ["POWHEG-BOX", "Pythia8"]
             compared_to: ["meas:ttbar/lhc-13/atlas-2022-boosted-ljets"]
             refs: ["inspire:2037744"]
-            provenance: {uid: 235c05e5, ref: "inspire:2037744", locator: "Sec. 2 (MC normalised to σ(tt̄) NNLO+NNLL = 832 ± 51 pb; NNLO reweighting of pT(t), m(tt̄), pT(tt̄)), Sec. 6 and Fig. 9; HEPData Table 1, column 'SIG (PWG+PY8)' = 1.4806 pb", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 235c05e5, ref: "inspire:2037744", locator: "Sec. 2 (MC normalised to σ(tt̄) NNLO+NNLL = 832 ± 51 pb; NNLO reweighting of pT(t), m(tt̄), pT(tt̄)), Sec. 6 and Fig. 9; HEPData Table 1, column 'SIG (PWG+PY8)' = 1.4806 pb", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:ttbar/lhc-13/pt-nunu"
         name: "Normalised 1/σ dσ/dpT(νν), dilepton, particle level (fiducial)"
         kind: differential
         variable: "pT(νν) of the dineutrino system"
         results:
           - measurement: "meas:ttbar/lhc-13/cms-2025-dineutrino"
-            total: {value_pct: 4.0, provenance: {uid: 2bc40c7c, ref: "hepdata:ins3006250/Figure_008-a", locator: "HEPData v2 table 'Figure_008-a' (paper Fig. 8 upper), column 6 'Data', bin 2 (40 < pT(νν) < 68 GeV): 0.012470 ± 0.00050 ('Stat + syst'); v1 of the record gives 3.9%, scripts.machine_verify fetches v1 only, hence source agent", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 4.0, provenance: {uid: 2bc40c7c, ref: "hepdata:ins3006250/Figure_008-a", locator: "HEPData v2 table 'Figure_008-a' (paper Fig. 8 upper), column 6 'Data', bin 2 (40 < pT(νν) < 68 GeV): 0.012470 ± 0.00050 ('Stat + syst'); v1 of the record gives 3.9%, scripts.machine_verify fetches v1 only, hence source agent", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties: []
         predictions:
           - label: "NNLO QCD fixed order, production and decay in the narrow-width approximation, CMS 2025 comparison"
@@ -346,37 +346,37 @@ channels:
               qcd: NNLO
               approximations: ["fixed order, narrow-width approximation for the top-quark decays"]
             uses_amplitudes: ["amp:2L/qqbar-ttbar", "amp:2L/gg-ttbar"]
-            total: {value_pct: 0.88, provenance: {uid: 6c7490f4, ref: "hepdata:ins3006250/Figure_008-a", locator: "HEPData v2 table 'Figure_008-a', column 5 'NNLO', bin 2 (40 < pT(νν) < 68 GeV): 0.011998 +0.000105 −0.000033 ('theoretical': ME scale and PDF, per paper Sec. 7); larger side", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 0.88, provenance: {uid: 6c7490f4, ref: "hepdata:ins3006250/Figure_008-a", locator: "HEPData v2 table 'Figure_008-a', column 5 'NNLO', bin 2 (40 < pT(νν) < 68 GeV): 0.011998 +0.000105 −0.000033 ('theoretical': ME scale and PDF, per paper Sec. 7); larger side", source: agent, status: cross-checked, date: "2026-10-22"}}
             compared_to: ["meas:ttbar/lhc-13/cms-2025-dineutrino"]
             refs: ["inspire:3006250", "inspire:1813241"]
-            provenance: {uid: ef7adecb, ref: "inspire:3006250", locator: "Sec. 7 (fixed-order NLO and NNLO predictions of Ref. [29] = Czakon, Mitov, Poncelet, JHEP 05 (2021) 212, narrow-width approximation, ME scale and PDF uncertainties) and Fig. 8", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: ef7adecb, ref: "inspire:3006250", locator: "Sec. 7 (fixed-order NLO and NNLO predictions of Ref. [29] = Czakon, Mitov, Poncelet, JHEP 05 (2021) 212, narrow-width approximation, ME scale and PDF uncertainties) and Fig. 8", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "NLO+PS (POWHEG v2 + Pythia 8), CMS 2025 comparison"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["POWHEG-BOX", "Pythia8"]
             compared_to: ["meas:ttbar/lhc-13/cms-2025-dineutrino"]
             refs: ["inspire:3006250"]
-            provenance: {uid: dab5f3f6, ref: "inspire:3006250", locator: "Sec. 3 (POWHEG v2 at NLO in QCD, mt = 172.5 GeV, interfaced to Pythia 8) and Sec. 7 / Fig. 8 (also compared: POWHEG+HERWIG, MC@NLO+PYTHIA, fixed-order NLO)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: dab5f3f6, ref: "inspire:3006250", locator: "Sec. 3 (POWHEG v2 at NLO in QCD, mt = 172.5 GeV, interfaced to Pythia 8) and Sec. 7 / Fig. 8 (also compared: POWHEG+HERWIG, MC@NLO+PYTHIA, fixed-order NLO)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:ttbar/lhc-13/ac-boosted"
         name: "Charge asymmetry A_C (Δ|y|), m(tt̄) > 750 GeV, parton level, full phase space"
         kind: asymmetry
         variable: "A_C = [N(Δ|y| > 0) − N(Δ|y| < 0)] / [N(Δ|y| > 0) + N(Δ|y| < 0)], m(tt̄) > 750 GeV"
         results:
           - measurement: "meas:ttbar/lhc-13/cms-2022-boosted-ac"
-            total: {value_pct: 164.0, provenance: {uid: 2ed71114, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6 (all values in %), row M(tt̄) > 750 GeV: A_C = 0.42, total +0.64 −0.69; larger side 0.69/0.42 (HEPData 'Figure 3 full' v1 bin 1 instead lists 0.68 ± 0.68, disagreeing with the paper)", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 164.3, provenance: {uid: 2ed71114, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6 (all values in %), row M(tt̄) > 750 GeV: A_C = 0.42, total +0.64 −0.69; larger side 0.69/0.42 (HEPData 'Figure 3 full' v1 bin 1 instead lists 0.68 ± 0.68, disagreeing with the paper)", source: agent, status: agent-draft, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical"
-                size: {range: [105.0, 105.0], asymmetric: false}
+                size: {range: [104.8, 104.8], asymmetric: false}
                 provenance: {uid: c22a09be, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6, M(tt̄) > 750 GeV, Stat ± 0.44 of 0.42 (%)", source: agent, status: agent-draft, date: "2026-10-22"}
               - category: syst_combined
                 specific: "Systematic"
-                size: {range: [79.0, 105.0], asymmetric: true}
+                size: {range: [78.6, 104.8], asymmetric: true}
                 provenance: {uid: a61fdb37, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6, M(tt̄) > 750 GeV, Syst +0.33 −0.44 of 0.42 (%); MC statistical ± 0.32 listed separately", source: agent, status: agent-draft, date: "2026-10-22"}
         predictions:
           - label: "NNLO QCD + NLO EW, CMS 2022 comparison"
-            accuracy: {qcd: NNLO, ew: NLO}
+            accuracy: {qcd: NLO, ew: NLO, approximations: ["O(αs⁴) (NNLO for σ(tt̄)); A_C vanishes at Born level, so this is NLO for the asymmetry"]}
             uses_amplitudes: ["amp:2L/qqbar-ttbar", "amp:2L/gg-ttbar"]
-            total: {value_pct: 7.4, provenance: {uid: 01bf13c3, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6, Prediction column, M(tt̄) > 750 GeV: 0.94 +0.05 −0.07 (%); larger side 0.07/0.94", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 7.4, provenance: {uid: 01bf13c3, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6, Prediction column, M(tt̄) > 750 GeV: 0.94 +0.05 −0.07 (%); larger side 0.07/0.94", source: agent, status: cross-checked, date: "2026-10-22"}}
             compared_to: ["meas:ttbar/lhc-13/cms-2022-boosted-ac"]
             refs: ["inspire:2132366", "inspire:1635526"]
             provenance: {uid: c93b6117, ref: "inspire:2132366", locator: "arXiv:2208.02751, Sec. 6 and Fig. 3 (theoretical prediction including NNLO QCD and NLO EW corrections from Ref. [5] = Czakon et al., PRD 98 (2018) 014003)", source: agent, status: agent-draft, date: "2026-10-22"}
@@ -386,56 +386,56 @@ channels:
         variable: "A_E (energy difference of t and t̄ in tt̄j, jet approximately perpendicular to the top quarks)"
         results:
           - measurement: "meas:ttbar/lhc-13/cms-2025-pas-ae"
-            total: {value_pct: 37.0, provenance: {uid: 60d74a72, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 2 (A_E = −6.3 ± 2.3 %) and Table 3 (Total ± 2.3); 2.3/6.3", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 36.5, provenance: {uid: 60d74a72, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 2 (A_E = −6.3 ± 2.3 %) and Table 3 (Total ± 2.3); 2.3/6.3", source: agent, status: agent-draft, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Data statistical uncertainty"
-                size: {range: [25.0, 25.0], asymmetric: false}
+                size: {range: [25.4, 25.4], asymmetric: false}
                 provenance: {uid: 0b046bb9, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 3, Data statistical uncertainty ± 1.6 of A_E = −6.3 (%)", source: agent, status: agent-draft, date: "2026-10-22"}
               - category: background
                 specific: "MC modelling (MC normalisation, W+jets control-region extrapolation)"
-                size: {range: [21.0, 21.0], asymmetric: false}
+                size: {range: [20.6, 20.6], asymmetric: false}
                 provenance: {uid: ae08751d, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 3, MC modeling ± 1.3 of A_E = −6.3 (%); definition in Sec. 8", source: agent, status: agent-draft, date: "2026-10-22"}
               - category: energy_scale
                 specific: "Jet energy corrections"
                 size: {range: [4.8, 4.8], asymmetric: false}
-                provenance: {uid: 21692d9a, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 3, Jet energy corrections ± 0.3 of A_E = −6.3 (%)", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 21692d9a, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 3, Jet energy corrections ± 0.3 of A_E = −6.3 (%)", source: agent, status: cross-checked, date: "2026-10-22"}
         predictions:
           - label: "NLO+PS (MG5_aMC@NLO FxFx, tt̄ + up to two partons at NLO, + Pythia 8), CMS PAS reference"
             accuracy: {qcd: NLO, shower_matched: true, approximations: ["FxFx-merged tt̄ + 0, 1, 2 partons at NLO; NLO for the tt̄j observable"]}
             codes: ["MadGraph5_aMC@NLO", "Pythia8"]
-            total: {value_pct: 19.0, provenance: {uid: e0289f36, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 2, SM (MG5 aMC@NLO+PYTHIA 8): A_E = −1.6 ± 0.3 (%) (MC statistical, PS, ME scale and PDF, per Sec. 8); 0.3/1.6", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 18.8, provenance: {uid: e0289f36, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Table 2, SM (MG5 aMC@NLO+PYTHIA 8): A_E = −1.6 ± 0.3 (%) (MC statistical, PS, ME scale and PDF, per Sec. 8); 0.3/1.6", source: agent, status: agent-draft, date: "2026-10-22"}}
             compared_to: ["meas:ttbar/lhc-13/cms-2025-pas-ae"]
             refs: ["inspire:3078982"]
-            provenance: {uid: 563fcb3f, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Sec. 3 (MG5_aMC@NLO 2.4.2 with up to two additional partons at NLO, FxFx, SM reference prediction) and Table 2 (also POWHEG+PYTHIA 8: −0.5 ± 0.3, POWHEG+HERWIG 7: −0.1 ± 0.1)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: 563fcb3f, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Sec. 3 (MG5_aMC@NLO 2.4.2 with up to two additional partons at NLO, FxFx, SM reference prediction) and Table 2 (also POWHEG+PYTHIA 8: −0.5 ± 0.3, POWHEG+HERWIG 7: −0.1 ± 0.1)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:ttbar/lhc-13/dphi-ll"
         name: "Normalised 1/σ dσ/dΔφ(ℓ+ℓ−), dilepton, parton level (ATLAS+CMS combination)"
         kind: differential
         variable: "Δφ(ℓ+, ℓ−) in the laboratory frame"
         results:
           - measurement: "meas:ttbar/lhc-13/atlas-cms-2026-dphi-combination"
-            total: {value_pct: 0.70, provenance: {uid: 7b95fc76, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Table 3, Nominal fractional uncertainty, bin π/3 − π/2 (0.70%); Table 4, Combination: 0.3013 ± 0.0015 ± 0.0015 rad⁻¹", source: agent, status: agent-draft, date: "2026-10-22"}}
+            total: {value_pct: 0.70, provenance: {uid: 7b95fc76, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Table 3, Nominal fractional uncertainty, bin π/3 − π/2 (0.70%); Table 4, Combination: 0.3013 ± 0.0015 ± 0.0015 rad⁻¹", source: agent, status: cross-checked, date: "2026-10-22"}}
             uncertainties:
               - category: stat
                 specific: "Statistical (data and MC statistics)"
                 size: {range: [0.50, 0.50], asymmetric: false}
-                provenance: {uid: 7e3bb2dd, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Table 4, Combination, bin π/3 − π/2: ± 0.0015 (stat) of 0.3013", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: 7e3bb2dd, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Table 4, Combination, bin π/3 − π/2: ± 0.0015 (stat) of 0.3013", source: agent, status: cross-checked, date: "2026-10-22"}
               - category: syst_combined
                 specific: "Systematic"
                 size: {range: [0.50, 0.50], asymmetric: false}
-                provenance: {uid: c7a42a50, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Table 4, Combination, bin π/3 − π/2: ± 0.0015 (syst) of 0.3013", source: agent, status: agent-draft, date: "2026-10-22"}
+                provenance: {uid: c7a42a50, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Table 4, Combination, bin π/3 − π/2: ± 0.0015 (syst) of 0.3013", source: agent, status: cross-checked, date: "2026-10-22"}
         predictions:
           - label: "NNLO QCD in production and decay (narrow-width approximation, NNPDF3.1, μR = μF = HT/4), ATLAS+CMS comparison"
             accuracy: {qcd: NNLO, approximations: ["fixed order, narrow-width approximation, NNLO in production and decay"]}
             uses_amplitudes: ["amp:2L/qqbar-ttbar", "amp:2L/gg-ttbar"]
             compared_to: ["meas:ttbar/lhc-13/atlas-cms-2026-dphi-combination"]
             refs: ["inspire:3108862", "inspire:1714024"]
-            provenance: {uid: a606e2a5, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Sec. 2 and Sec. 4 (NNLO QCD of Ref. [29] = Behring et al., PRL 123 (2019) 082001, μR = μF = HT/4) and Table 5 (χ²/DOF 1.7, probability 13% with measurement uncertainties)", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: a606e2a5, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Sec. 2 and Sec. 4 (NNLO QCD of Ref. [29] = Behring et al., PRL 123 (2019) 082001, μR = μF = HT/4) and Table 5 (χ²/DOF 1.7, probability 13% with measurement uncertainties)", source: agent, status: cross-checked, date: "2026-10-22"}
           - label: "NLO QCD + weak, expanded normalised distribution (μR = μF = mt), ATLAS+CMS comparison"
             accuracy: {qcd: NLO, ew: NLO, approximations: ["normalised distribution expanded in powers of the strong and weak couplings; weak (not full EW) corrections"]}
             compared_to: ["meas:ttbar/lhc-13/atlas-cms-2026-dphi-combination"]
             refs: ["inspire:3108862", "inspire:849672", "inspire:1388866"]
-            provenance: {uid: ffd62d99, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Sec. 2 and Sec. 4 (NLO in the strong and weak couplings, Refs. [19, 30, 31] = Bernreuther, Heisler, Si; Bernreuther, Si) and Table 5", source: agent, status: agent-draft, date: "2026-10-22"}
+            provenance: {uid: ffd62d99, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Sec. 2 and Sec. 4 (NLO in the strong and weak couplings, Refs. [19, 30, 31] = Bernreuther, Heisler, Si; Bernreuther, Si) and Table 5", source: agent, status: cross-checked, date: "2026-10-22"}
   - id: "chan:ttbar/tevatron"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"

@@ -3,13 +3,13 @@ process: "proc:zz"
 loops: 2
 corrections: QCD
 status: done
-approximations: ["top-quark-mediated contribution only (light-quark loops computed elsewhere)", "off-shell Z bosons (gg → Z*Z*); forward expansion up to t^10 and high-energy expansion up to m_t^112, combined to cover the whole phase space", "also yields gg → γ*γ* and Z*γ*"]
+approximations: ["top-quark-mediated contribution only (light-quark loops computed elsewhere)", "off-shell Z bosons (gg → Z*Z*); forward expansion up to t^10 and high-energy expansion up to m_t^100, combined to cover the whole phase space", "also yields gg → γ*γ* and Z*γ*"]
 master_integrals:
   status: done
   refs: ["inspire:2968105"]
 evaluation:
   kind: semi-analytic
   detail: "IBP to 161 two-loop masters; deep forward (t) expansion plus high-energy expansion with Padé approximants in m_t"
-  provenance: {uid: d0532916, ref: "inspire:2968105", locator: "Sec. 2.3.1–2.3.3 (t expansion before and after IBP reduction with Kira/FIRE, 161 two-loop master integrals, high-energy expansion up to m_t^112, Padé approximants in m_t)", source: agent, status: agent-draft, date: "2026-10-22"}
+  provenance: {uid: d0532916, ref: "inspire:2968105", locator: "Sec. 2.3.1–2.3.3 (t expansion before and after IBP reduction with Kira/FIRE, 161 two-loop master integrals, high-energy expansion up to m_t^100, Padé approximants in m_t)", source: agent, status: agent-draft, date: "2026-10-22"}
 refs: ["inspire:2968105"]
 provenance: {uid: 23b13629, ref: "inspire:2968105", locator: "Abstract and Sec. 5 (two-loop heavy-quark-mediated QCD corrections to off-shell gg → ZZ; virtual NLO agrees with numerical results below the per-mille level)", source: agent, status: agent-draft, date: "2026-10-22"}

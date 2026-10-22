@@ -44,7 +44,7 @@ building_blocks:
         amplitude: "amp:2L/ee-WW-qcdew"
         approximations: ["on-shell W⁺W⁻ production only (no decays, no off-shell 4f)", "O(ααs) corrections enter only through quark loops (virtual); effect ≈ 1.1% in the α(0) scheme, strongly suppressed in the G_μ scheme"]
         refs: ["arXiv:2401.01323"]
-        provenance: {uid: a82c9d87, ref: "arXiv:2401.01323", locator: "Abstract; Sec. 2.2 (O(ααs) contributions); Sec. 4.1, Fig. 7 and Table 3 (δ_QCD-EW ≈ 1.1% in α(0), e.g. 1.1256% vs 0.0154% (G_μ) at √s = 200 GeV)", source: agent, status: agent-draft, date: "2026-10-22"}
+        provenance: {uid: a82c9d87, ref: "arXiv:2401.01323", locator: "Abstract; Sec. 2.2 (O(ααs) contributions); Sec. 4.1, Fig. 7 and Table 3 (δ_QCD-EW ≈ 1.1% in α(0), e.g. 1.1256% vs 0.0154% (G_μ) at √s = 200 GeV)", source: agent, status: cross-checked, date: "2026-10-22"}
 channels:
   - id: "chan:ee-ww/lep2"
     collider: "col:lep2"

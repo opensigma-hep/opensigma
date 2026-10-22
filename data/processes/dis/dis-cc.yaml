@@ -127,7 +127,7 @@ channels:
             codes: ["apfel++"]
             compared_to: ["meas:dis-cc/hera/hera-2015-comb"]
             refs: ["inspire:2913871"]
-            provenance: {uid: dc12b903, ref: "inspire:2913871", locator: "Sec. I (aSACOT-χ extended to CC F2, FL, F3; implementation in APFEL++) and Sec. III, Fig. 4 (HERA CC e∓p at √s = 318 GeV, CT18 NNLO; Δχ² = 0.2 for 82 CC points vs ZM)", source: agent, status: agent-draft, date: 2026-10-22}
+            provenance: {uid: dc12b903, ref: "inspire:2913871", locator: "Sec. I (aSACOT-χ extended to CC F2, FL, F3; implementation in APFEL++) and Sec. III, Fig. 4 (HERA CC e∓p at √s = 318 GeV, CT18 NNLO; Δχ² = 0.2 for 82 CC points vs ZM)", source: agent, status: cross-checked, date: 2026-10-22}
   - id: "chan:dis-cc/eic"
     collider: "col:eic"
     initial_state: "e±p"
