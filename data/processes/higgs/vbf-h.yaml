@@ -19,6 +19,32 @@ building_blocks:
         provenance: {uid: 00108b74, ref: "inspire:621007", locator: "Abstract (NLO QCD calculation for weak-boson fusion, as a flexible parton Monte Carlo program)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
+      1L:
+        status: done
+        approximations: ["one-loop helicity amplitudes (factorisable and non-factorisable) through O(ε²), input for the exact non-factorisable two-loop finite remainder"]
+        amplitude: "amp:1L/qQ-qQH-vbf-eps"
+        refs: ["inspire:3209301"]
+        provenance: {uid: c9fcd62d, ref: "inspire:3209301", locator: "Abstract; Sec. 1 (first step towards exact non-factorisable virtual corrections at NNLO) and Sec. 8 Conclusion (contributions up to O(ε²); O(ε) terms needed for the non-factorisable two-loop finite remainder)", source: agent, status: agent-draft, date: "2026-10-22"}
+      2L:
+        status: partial
+        approximations: ["non-factorisable two-loop amplitude known only in the eikonal expansion: leading power (inspire:1741440; fully analytic in inspire:2657734) and next-to-leading power in p⊥,H/√s (inspire:2661566)", "exact non-factorisable two-loop five-point amplitude with two massive propagators still missing"]
+        refs: ["inspire:1741440", "inspire:2657734", "inspire:2661566", "inspire:2659737"]
+        provenance: {uid: b4bee07b, ref: "inspire:2659737", locator: "Abstract and Sec. I (two-loop qQ → q'Q'+H finite part so far only in the eikonal approximation; going beyond it requires two-loop five-point amplitudes with two massive propagators, beyond the state of the art); inspire:2657734 Abstract (fully analytic leading-power result); inspire:2661566 Abstract and Sec. 7 (next-to-eikonal correction, O(20)% change of the non-factorisable estimate)", source: agent, status: agent-draft, date: "2026-10-22"}
+      RV:
+        status: done
+        approximations: ["factorisable part in the structure-function approach (inspire:1375305)", "non-factorisable real-virtual computed in inspire:2659737, using one-loop qQ → q'Q'Hg amplitudes from the NLO QCD computation of H+j production in WBF"]
+        refs: ["inspire:1375305", "inspire:2659737"]
+        provenance: {uid: ccecd901, ref: "inspire:2659737", locator: "Abstract (two-loop contribution combined with real-virtual and double-real non-factorisable corrections) and Sec. I (one-loop amplitudes extracted from the NLO H+j WBF computation, Ref. [18])", source: agent, status: agent-draft, date: "2026-10-22"}
+      RR:
+        status: done
+        approximations: ["factorisable part in the structure-function approach (inspire:1375305)", "non-factorisable double-real computed in inspire:2659737"]
+        refs: ["inspire:1375305", "inspire:2659737"]
+        provenance: {uid: 2cc0c6d2, ref: "inspire:2659737", locator: "Abstract and Sec. II (non-factorisable double-real emission, Eqs. (1)–(5))", source: agent, status: agent-draft, date: "2026-10-22"}
+      ir_scheme:
+        status: done
+        approximations: ["non-factorisable part: abelian, soft-only singularities; subtraction borrowed from the non-factorisable single-top computation"]
+        refs: ["inspire:2659737"]
+        provenance: {uid: 64589fdc, ref: "inspire:2659737", locator: "Sec. I and Sec. II (subtraction scheme borrowed almost verbatim from non-factorisable corrections to single-top production, Ref. [17]; only soft singularities)", source: agent, status: agent-draft, date: "2026-10-22"}
       code:
         status: done
         approximations: ["structure-function approach: no colour exchange between the two hadronic systems"]
@@ -31,6 +57,11 @@ building_blocks:
         approximations: ["structure-function approach: no colour exchange between the two hadronic systems"]
         refs: ["inspire:1467221"]
         provenance: {uid: 27c92a13, ref: "inspire:1467221", locator: "Abstract (inclusive VBF Higgs production at N3LO in the limit with no colour exchange between the hadronic systems)", source: agent, status: cross-checked, date: "2026-10-16"}
+      3L:
+        status: partial
+        approximations: ["non-factorisable O(β0 αs³) contribution only (running of αs), leading eikonal approximation"]
+        refs: ["inspire:2696696"]
+        provenance: {uid: cfadd441, ref: "inspire:2696696", locator: "Abstract and Sec. 5 (three-loop non-factorisable O(β0 αs³) contribution; renormalisation-scale dependence reduced from O(20)% to below O(5)%); Sec. 4 (leading eikonal two-loop amplitude, Eq. (8), next-to-eikonal not included)", source: agent, status: agent-draft, date: "2026-10-22"}
   - row: "NLO EW"
     cells:
       1L:
@@ -42,7 +73,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:vbf-h/lhc-13/sigma-vbf", region: "m_H = 125 GeV, inclusive over production kinematics (ATLAS: VBF, |y_H| < 2.5, absolute σ; CMS: signal strength μ_VBF)"}
     measurements:
       - id: "meas:vbf-h/lhc-13/atlas-2022-comb"
@@ -55,7 +86,81 @@ channels:
         dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
         ref: "inspire:2104672"
         hepdata: "hepdata:ins2104672/Production mode strength modifiers"
+      - id: "meas:vbf-h/lhc-13/atlas-2023-ww-fid"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (2015–2018), VBF H → WW* → eνμν"
+        ref: "inspire:2649598"
     observables:
+      - id: "obs:vbf-h/lhc-13/sigma-fid-ww"
+        name: "Fiducial σ(VBF H → WW* → eνμν)"
+        kind: fiducial
+        variable: "σ_fid, particle level, VBF phase space with eμ final state (fiducial definition in Table 2 of arXiv:2304.03053)"
+        results:
+          - measurement: "meas:vbf-h/lhc-13/atlas-2023-ww-fid"
+            total: {value_pct: 23.8, provenance: {uid: c9886df9, ref: "inspire:2649598", locator: "Sec. 8.1, Eq. (5): σ_fid = 1.68 ± 0.40 fb = 1.68 ± 0.33 (stat) ± 0.23 (syst) fb; 0.40/1.68 (Table 4 quotes 23% total)", source: agent, status: agent-draft, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [19.6, 19.6], unit: "%", asymmetric: false}
+                provenance: {uid: cffbea86, ref: "inspire:2649598", locator: "Sec. 8.1, Eq. (5): ± 0.33 (stat) of 1.68 fb (Table 4: 20%)", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: syst_combined
+                specific: "Total systematic uncertainty"
+                size: {range: [13.7, 13.7], unit: "%", asymmetric: false}
+                provenance: {uid: 80a76d44, ref: "inspire:2649598", locator: "Sec. 8.1, Eq. (5): ± 0.23 (syst) of 1.68 fb (Table 4: total systematics 13%)", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: background
+                specific: "tt̄ modelling (largest background-modelling source)"
+                size: {range: [6, 6], unit: "%", asymmetric: false}
+                provenance: {uid: 73ff67b4, ref: "inspire:2649598", locator: "Table 4, σ_fid column, 'tt̄ modeling' row: 6%", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: energy_scale
+                specific: "Jets, pile-up and E_T^miss"
+                size: {range: [5, 5], unit: "%", asymmetric: false}
+                provenance: {uid: 73d8072e, ref: "inspire:2649598", locator: "Table 4, σ_fid column, 'Jets & Pile-up & E_T^miss' row: 5%", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [1.5, 1.5], unit: "%", asymmetric: false}
+                provenance: {uid: 7b9759fe, ref: "inspire:2649598", locator: "Table 4, σ_fid column, 'Luminosity' row: 1.5%", source: agent, status: agent-draft, date: "2026-10-22"}
+        predictions:
+          - label: "NLO QCD+EW + approx. NNLO QCD normalisation, NLO+PS (Powheg+Pythia 8)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              shower_matched: true
+              approximations: ["fiducial shape at NLO QCD matched to the Pythia 8 shower (dipole recoil)", "normalised to the inclusive NLO QCD+EW cross section with approximate NNLO QCD correction"]
+            codes: ["POWHEG-BOX", "Pythia 8"]
+            total: {value_pct: 1.9, provenance: {uid: e5934054, ref: "inspire:2649598", locator: "Sec. 8.1: integrated fiducial cross section predicted by Powheg+Pythia 8 is 2.07 ± 0.04 fb (scale variations, PDF and αs); 0.04/2.07", source: agent, status: agent-draft, date: "2026-10-22"}}
+            compared_to: ["meas:vbf-h/lhc-13/atlas-2023-ww-fid"]
+            refs: ["inspire:2649598"]
+            provenance: {uid: fb7825b2, ref: "inspire:2649598", locator: "Sec. 3.1 and Table 1 (Powheg+Pythia 8: NLO QCD & EW + approx. NNLO QCD, NNPDF3.0NLO, AZNLO); Fig. 9 (comparison with σ_fid)", source: agent, status: agent-draft, date: "2026-10-22"}
+          - label: "NLO+PS QCD (MG5_aMC@NLO + Herwig 7)"
+            accuracy: {qcd: NLO, shower_matched: true, approximations: ["LO EW", "CKKW scheme for ME–PS overlap removal", "Higgs decay via MadSpin"]}
+            codes: ["MG5_aMC@NLO", "Herwig 7"]
+            compared_to: ["meas:vbf-h/lhc-13/atlas-2023-ww-fid"]
+            refs: ["inspire:2649598"]
+            provenance: {uid: 053e5c11, ref: "inspire:2649598", locator: "Sec. 3.1 and Table 1 (MG5+Herwig 7: NLO QCD, LO EW, NNPDF30NLO); Sec. 8.1 (4–5% above Powheg+Pythia 8) and Fig. 9", source: agent, status: agent-draft, date: "2026-10-22"}
+          - label: "NLO QCD+EW fixed order, parton level (VBFNLO @ NLO)"
+            accuracy: {qcd: NLO, ew: NLO, approximations: ["parton level, no shower", "missing τ-lepton decays corrected multiplicatively from VBFNLO @ LO+Pythia 8"]}
+            codes: ["VBFNLO"]
+            compared_to: ["meas:vbf-h/lhc-13/atlas-2023-ww-fid"]
+            refs: ["inspire:2649598"]
+            provenance: {uid: 4106f99e, ref: "inspire:2649598", locator: "Sec. 3.1 (VBFNLO 2.7.1 at NLO in QCD and EW; k-factors 0.81 QCD, 0.99 EW in the fiducial phase space); Sec. 8.1 and Fig. 9", source: agent, status: agent-draft, date: "2026-10-22"}
+      - id: "obs:vbf-h/lhc-13/sigma-fid-bb"
+        name: "Fiducial σ(pp → H(→ bb̄) jj), VBF cuts with two b jets"
+        kind: fiducial
+        variable: "σ_fid with ≥ 2 b jets (pT > 65 GeV, |y| < 2.5) and WBF cuts on the two leading light jets (pT > 25 GeV, |y| < 4.5, |Δy| > 4.5, m_jj > 600 GeV, y1·y2 < 0); anti-kT R = 0.4"
+        predictions:
+          - label: "NNLO QCD production × NNLO QCD H → bb̄ decay (massive b quarks in the decay), narrow-width approximation"
+            accuracy:
+              qcd: NNLO
+              approximations: ["narrow-width approximation, production and decay factorised", "Br(H → bb̄) fixed to 0.5824", "b quarks massless in production; only b quarks from the decay are flavour-tagged", "decay scale fixed at μ = m_H (not varied)"]
+            total: {value_pct: 2.0, provenance: {uid: '1670e555', ref: "arXiv:2407.09363", locator: "Sec. III, Eq. (8): σ^NNLO = 44.6 +0.9/−0.6 fb (μR = μF varied by 2 around μ0); larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-22"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR = μF variation in production"
+                method: "μR = μF = 2μ0 and μ0/2 with μ0² = (m_H/2)·sqrt(m_H²/4 + pT,H²); decay scale fixed"
+                size: {range: [1.3, 2.0], unit: "%", asymmetric: true}
+                provenance: {uid: 097eee62, ref: "arXiv:2407.09363", locator: "Sec. III, Eqs. (7)–(8); text after Eq. (8): scale uncertainties ~2% at NNLO do not capture missing higher orders (NNLO is 10% below NLO)", source: agent, status: agent-draft, date: "2026-10-22"}
+            refs: ["inspire:2807339"]
+            provenance: {uid: 71b2c30b, ref: "arXiv:2407.09363", locator: "Sec. II (Eqs. (1)–(5), combination of NNLO production and decay) and Sec. III (13 TeV, NNPDF31_nnlo_as_0118, selection following the ATLAS analysis, Ref. [7]); fiducial σ reduced by about 40% from LO to NNLO", source: agent, status: agent-draft, date: "2026-10-22"}
       - id: "obs:vbf-h/lhc-13/sigma-vbf"
         name: "σ(VBF) in the Higgs decay-channel combination (ATLAS: σ(VBF); CMS: μ_VBF)"
         kind: total

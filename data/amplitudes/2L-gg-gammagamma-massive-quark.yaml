@@ -1,0 +1,15 @@
+id: "amp:2L/gg-gammagamma-mq"
+process: "proc:diphoton"
+loops: 2
+corrections: QCD
+status: done
+approximations: ["two-loop QCD corrections to loop-induced gg → γγ with full top-quark mass dependence; enters at N3LO (O(αs³)) in QCD (inspire:2876679 Sec. 1)", "earlier studies used numerical or semi-numerical evaluations (inspire:2876679 Sec. 1); first analytic results in inspire:2874702 and inspire:2876679"]
+master_integrals:
+  status: done
+  refs: ["inspire:2874702"]
+evaluation:
+  kind: analytic
+  detail: "canonical basis; iterated integrals over elliptic and polylogarithmic forms; series-expansion representations for numerics"
+  provenance: {uid: b98a765c, ref: "inspire:2874702", locator: "Abstract (canonical basis for all integrals, independent iterated integrals over elliptic and polylogarithmic differential forms; series expansion representations for the whole amplitudes for numerical evaluation)", source: agent, status: agent-draft, date: "2026-10-22"}
+refs: ["inspire:2874702", "inspire:2876679"]
+provenance: {uid: a94fd482, ref: "inspire:2876679", locator: "Abstract and Sec. 1 (two-loop helicity amplitudes for gg → γγ and qq̄ → γγ with full top-quark mass dependence in the loop; gluon-initiated amplitude contributes at N3LO); inspire:2874702 Abstract", source: agent, status: agent-draft, date: "2026-10-22"}

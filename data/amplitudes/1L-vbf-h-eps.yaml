@@ -1,0 +1,15 @@
+id: "amp:1L/qQ-qQH-vbf-eps"
+process: "proc:vbf-h"
+loops: 1
+corrections: QCD
+status: done
+approximations: ["helicity amplitudes through O(ε²), factorisable and non-factorisable", "anticommuting γ5 and BMHV schemes agree at O(ε⁰) but differ from O(ε¹) on"]
+master_integrals:
+  status: done
+  refs: ["inspire:3209301"]
+evaluation:
+  kind: semi-analytic
+  detail: "18 pentagon-family masters via ε-factorised DEs; algebraically independent basis functions evaluated by numerical DE integration (DiffExp)"
+  provenance: {uid: 6bf24164, ref: "inspire:3209301", locator: "Sec. 5 (master basis of 18 integrals, ε-factorised differential equations; MPL representation up to weight 2 found suboptimal, DEs solved numerically order by order in ε; boundary transport with DiffExp)", source: agent, status: agent-draft, date: "2026-10-22"}
+refs: ["inspire:3209301"]
+provenance: {uid: 19e66f75, ref: "inspire:3209301", locator: "Abstract and Sec. 8 Conclusion (one-loop QCD helicity amplitudes for VBF Higgs production to O(ε²), spinor-helicity and projector methods, different γ5 schemes)", source: agent, status: agent-draft, date: "2026-10-22"}

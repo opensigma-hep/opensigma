@@ -28,12 +28,30 @@ building_blocks:
         status: done
         refs: ["arXiv:0802.0813", "arXiv:0904.1077"]
         provenance: {uid: 433d0769, ref: "arXiv:0802.0813", locator: "p. 3 (parton-level program EERAD3, matrix elements with up to five external partons, jet rates for any IR-safe algorithm); independent NNLO jet rates: arXiv:0904.1077 abstract (Durham, Geneva, Jade-E0, Cambridge)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "N3LO QCD"
+    cells:
+      3L:
+        status: partial
+        amplitude: "amp:3L/qqbar-Vg-planar"
+        approximations: ["planar (leading-colour) three-loop γ*→qq̄g"]
+        refs: ["inspire:2683225"]
+        provenance: {uid: e16122cd, ref: "inspire:2683225", locator: "Abstract (planar three-loop helicity amplitudes for V + q q̄ g, V = γ*, Z, W; continued to all kinematic regions)", source: agent, status: agent-draft, date: "2026-10-22"}
+      RV:
+        status: partial
+        amplitude: "amp:2L/Vstar-4partons-lc"
+        approximations: ["two-loop γ*→4 partons in the leading-colour approximation (planar) and one-loop γ*→5 partons (OpenLoops2), as used for the NNLO four-jet rate"]
+        refs: ["arXiv:2602.18185"]
+        provenance: {uid: f9d1cb07, ref: "arXiv:2602.18185", locator: "Sec. II and II.1 (two-loop finite remainders in LCA crossed to the decay region; five-parton one-loop amplitudes from OpenLoops2)", source: agent, status: agent-draft, date: "2026-10-22"}
+      RRR:
+        status: done
+        refs: ["arXiv:2602.18185"]
+        provenance: {uid: 303f4d66, ref: "arXiv:2602.18185", locator: "Sec. II (six-parton tree-level amplitudes from OpenLoops2)", source: agent, status: agent-draft, date: "2026-10-22"}
 channels:
   - id: "chan:ee-jet-rates/lep1"
     collider: "col:lep1"
     initial_state: "e+e-"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:ee-jet-rates/lep1/y23", region: "−ln y₂₃ in [4.0, 4.2] (y₂₃ ≈ 0.015–0.018), Q = mZ; ALEPH bin 16, OPAL bin y₂₃ in [0.012, 0.0225]"}
     measurements:
       - id: "meas:ee-jet-rates/lep1/aleph-2004"
@@ -318,3 +336,65 @@ channels:
             refs: ["arXiv:1902.08158", "arXiv:1607.03111"]
             provenance: {uid: dd14ea63, ref: "arXiv:1902.08158", locator: "Abstract; Sec. 1 (N3LO two-jet rate from NNLO three-jet rate and N3LO σ_tot; NNLL from arXiv:1607.03111); data-set table (ALEPH at 91.2 GeV)", source: agent, status: cross-checked, date: "2026-10-16"}
             headline: true
+      - id: "obs:ee-jet-rates/lep1/r4"
+        name: "Durham four-jet rate R₄(y_cut)"
+        kind: ratio
+        variable: "ln y_cut (Durham), σ(4-jet)/σ_had"
+        results:
+          - measurement: "meas:ee-jet-rates/lep1/aleph-2004"
+            total:
+              value_pct: 4.8
+              provenance:
+                uid: 157d672f
+                ref: hepdata:ins636645/Table 211
+                locator: Table 211, quadrature sum of all errors (bin 28)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-22'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.2
+                    - 100.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 211
+                provenance:
+                  uid: f91aa4f3
+                  ref: hepdata:ins636645/Table 211
+                  locator: Table 211, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-22'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 0.0
+                    - 100.0
+                  asymmetric: false
+                full_table: hepdata:ins636645/Table 211
+                provenance:
+                  uid: 3ef77b1d
+                  ref: hepdata:ins636645/Table 211
+                  locator: Table 211, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-22'
+        predictions:
+          - label: "NNLO QCD (O(αs⁴)) four-jet rate"
+            accuracy:
+              qcd: NNLO
+              approximations: ["two-loop finite remainder in the leading-colour approximation (planar), without vector-coupling singlet closed-fermion-loop terms", "massless quarks, N_f = 5, no top loops; singlet contributions not systematically included", "fixed order, parton level; normalised to σ_had at O(αs⁴)"]
+            codes: ["NNLOJET", "OpenLoops2", "PentagonFunctions++"]
+            uses_amplitudes: ["amp:2L/Vstar-4partons-lc"]
+            uncertainties:
+              - category: MHOU
+                specific: "renormalisation scale, symmetrised (maximum of up/down variation)"
+                method: "μr varied in [√s/2, 2√s], correlated between numerator and σ_had"
+                size: {range: [3, 5], asymmetric: false, regions: [{where: "perturbative region 10⁻³ ≲ y_cut ≲ 10⁻¹, Q = mZ", value: "±5"}]}
+                provenance: {uid: 5d09f3dc, ref: "arXiv:2602.18185", locator: "Sec. III, text on Fig. 1 (theory uncertainty from ±15% at NLO to ±(3%-5%) at NNLO in the perturbative region; unsymmetrised (+0%, -(3-5)%))", source: agent, status: agent-draft, date: "2026-10-22"}
+            compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
+            refs: ["arXiv:2602.18185"]
+            provenance: {uid: 2c52b891, ref: "arXiv:2602.18185", locator: "Abstract; Sec. II (NNLOJET, antenna subtraction, LCA two-loop remainder, OpenLoops2); Sec. III, Fig. 1 (compared to ALEPH EPJC 35 (2004), ref. [87], at √s = 91.2 GeV)", source: agent, status: agent-draft, date: "2026-10-22"}

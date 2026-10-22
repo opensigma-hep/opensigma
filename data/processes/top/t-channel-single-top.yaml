@@ -23,6 +23,22 @@ building_blocks:
         provenance: {uid: d8e56adc, ref: "inspire:1300820", locator: "Abstract (HatHor extended to single top-quark production; NLO QCD total cross sections)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "NNLO QCD"
     cells:
+      2L:
+        status: done
+        amplitude: "amp:2L/qb-qt-nonfact"
+        approximations: ["non-factorisable (colour-suppressed) two-loop part computed numerically on a phase-space grid; it was the last missing piece of the two-loop virtual corrections"]
+        refs: ["inspire:1908346", "inspire:2066227"]
+        provenance: {uid: 33cd26ab, ref: "inspire:1908346", locator: "Abstract (non-factorisable contribution to the two-loop helicity amplitude for t-channel single top, the last missing piece of the two-loop virtual corrections); inspire:2066227 Sec. 4.2 (two-loop amplitude of Ref. [35] used for the double-virtual, O(ε) terms from a fixed phase-space grid)", source: agent, status: agent-draft, date: "2026-10-22"}
+      RV:
+        status: done
+        approximations: ["non-factorisable real-virtual contribution from inspire:2066227 (one-loop five-point amplitudes, QCDLoops); factorisable part from the NNLO calculations listed under code"]
+        refs: ["inspire:2066227"]
+        provenance: {uid: 1a205fb1, ref: "inspire:2066227", locator: "Abstract and Sec. 1 (double-real and real-virtual non-factorisable contributions computed, completing the infrared-finite non-factorisable O(αs²) correction); Sec. 3.2 and Sec. 4.2 (real-virtual cross section, one-loop amplitudes)", source: agent, status: agent-draft, date: "2026-10-22"}
+      RR:
+        status: done
+        approximations: ["non-factorisable double-real contribution from inspire:2066227; factorisable part from the NNLO calculations listed under code"]
+        refs: ["inspire:2066227"]
+        provenance: {uid: 5470b916, ref: "inspire:2066227", locator: "Sec. 1 and Sec. 3.1 (double-real non-factorisable cross section and subtraction terms); Abstract (non-factorisable corrections change σ and distributions by about half a percent)", source: agent, status: agent-draft, date: "2026-10-22"}
       code:
         status: done
         approximations: ["production and decay in the on-shell and vertex-function approximation (inspire:1834626)", "structure-function approximation neglecting light/heavy-line cross-talk in the earliest calculation (inspire:1292824)"]
@@ -40,7 +56,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:t-channel-single-top/lhc-13/sigma-t", region: "inclusive σ(tq) (top quark only), mt = 172.5 GeV"}
     measurements:
       - id: "meas:t-channel-single-top/lhc-13/atlas-2024-run2"
@@ -57,6 +73,10 @@ channels:
         dataset: "13 TeV, 140 fb⁻¹ (full Run 2), lepton+jets"
         ref: "inspire:3098996"
         hepdata: "hepdata:ins3098996/Figure 9a,10a,11a"
+      - id: "meas:t-channel-single-top/lhc-13/atlas-2022-polarisation"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (2015–2018), lepton+jets (one lepton, two jets, one b-tagged)"
+        ref: "inspire:2036789"
     observables:
       - id: "obs:t-channel-single-top/lhc-13/sigma-t"
         name: "Inclusive σ(tq), t-channel top-quark production"
@@ -145,6 +165,48 @@ channels:
             compared_to: ["meas:t-channel-single-top/lhc-13/atlas-2026-diff"]
             refs: ["inspire:3098996", "inspire:1834626"]
             provenance: {uid: 68d66b4a, ref: "inspire:3098996", locator: "Sec. 3 (MCFM NNLO, 5FS, dynamic DDIS scale, mt = 172.5 GeV; Ref. [50] = Campbell, Neumann, Sullivan, JHEP 02 (2021) 040) and Fig. 9a (normalised pT(t) vs MCFM LO/NLO/NNLO); headline bin 2: 45 < pT(t) < 65 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:t-channel-single-top/lhc-13/pol-z-top"
+        name: "Top-quark polarisation P_z′ along the spectator-quark direction, t-channel"
+        kind: asymmetry
+        variable: "P_z′ from the direction cosine of the charged lepton in the top-quark rest frame (selected top-quark event sample)"
+        results:
+          - measurement: "meas:t-channel-single-top/lhc-13/atlas-2022-polarisation"
+            total: {value_pct: 11.0, provenance: {uid: d8672d00, ref: "inspire:2036789", locator: "Abstract: P_z′ = 0.91 ± 0.10 (top quarks); 0.10/0.91; Table 5 total systematic ± 0.096, total statistical ± 0.022", source: agent, status: agent-draft, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Total statistical uncertainty"
+                size: {range: [2.4, 2.4], asymmetric: false}
+                provenance: {uid: 5dcfa658, ref: "inspire:2036789", locator: "Table 5, Total statistical uncertainty, ΔP_z′(t) = ± 0.022 of 0.91", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: energy_scale
+                specific: "Jet energy resolution"
+                size: {range: [7.7, 7.7], asymmetric: false}
+                provenance: {uid: bc16d5f9, ref: "inspire:2036789", locator: "Table 5, Jet energy resolution, ΔP_z′(t) = ± 0.070 of 0.91", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: acceptance_extrapolation
+                specific: "Modelling (t-channel signal)"
+                size: {range: [6.7, 6.7], asymmetric: false}
+                provenance: {uid: ae8e110e, ref: "inspire:2036789", locator: "Table 5, Modelling (t-channel), ΔP_z′(t) = ± 0.061 of 0.91", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: energy_scale
+                specific: "Jet energy scale"
+                size: {range: [3.6, 3.6], asymmetric: false}
+                provenance: {uid: 6039fa9c, ref: "inspire:2036789", locator: "Table 5, Jet energy scale, ΔP_z′(t) = ± 0.033 of 0.91", source: agent, status: agent-draft, date: "2026-10-22"}
+        predictions:
+          - label: "NNLO QCD (stable top quark, CT18nnlo, μR = μF = mt/2), ATLAS 2022 comparison"
+            accuracy: {qcd: NNLO, approximations: ["fixed-order parton-level calculation with stable top quarks, exactly one light-flavour jet and the analysis acceptance requirement on it"]}
+            total: {value_pct: 0.52, provenance: {uid: 2ae1e7a7, ref: "inspire:2036789", locator: "Introduction: P(t) = 0.965 ± 0.003 (scale) +0.003 −0.004 (PDF + αs); scale and PDF + αs added in quadrature, larger side sqrt(0.003² + 0.004²)/0.965", source: agent, status: agent-draft, date: "2026-10-22"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "scales varied by factors 2.0 and 0.5 around mt/2"
+                size: {range: [0.31, 0.31], asymmetric: false}
+                provenance: {uid: 24ed7452, ref: "inspire:2036789", locator: "Introduction: ± 0.003 (scale) of 0.965", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: PDF
+                specific: "PDF + αs"
+                pdf_set: "CT18nnlo"
+                size: {range: [0.31, 0.41], asymmetric: true}
+                provenance: {uid: 651c7e9e, ref: "inspire:2036789", locator: "Introduction: +0.003 −0.004 (PDF + αs) of 0.965", source: agent, status: agent-draft, date: "2026-10-22"}
+            compared_to: ["meas:t-channel-single-top/lhc-13/atlas-2022-polarisation"]
+            refs: ["inspire:2036789", "inspire:1620902"]
+            provenance: {uid: 17a3ad2f, ref: "inspire:2036789", locator: "Introduction (NNLO calculation based on Ref. [8] = Berger, Gao, Zhu, JHEP 11 (2017) 158; CT18nnlo, μR = μF = mt/2) and Fig. 5 (red point: parton-level NNLO prediction)", source: agent, status: agent-draft, date: "2026-10-22"}
   - id: "chan:t-channel-single-top/tevatron"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"

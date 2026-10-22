@@ -42,7 +42,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:www/lhc-13/sigma-tot", region: "Inclusive pp → WWW at 13 TeV (on-shell WWW plus WH with H → WW*, all W decay modes)"}
     measurements:
       - id: "meas:www/lhc-13/atlas-2022-tot"
@@ -124,3 +124,24 @@ channels:
                 provenance: {uid: 96d10cb4, ref: "inspire:1598778", locator: "Table 5(a), 13 TeV: 0.136 ± 0.004 (PDF) pb", source: agent, status: cross-checked, date: "2026-10-17"}
             refs: ["inspire:1598778", "inspire:1769246"]
             provenance: {uid: 93daa3d3, ref: "inspire:1598778", locator: "Sec. 4 and Tables 3, 5 (LO and NLO cross sections at 13 TeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:www/lhc-13/sigma-fid-sslljj"
+        name: "Fiducial σ(pp → μ⁺νμ e⁺νe jj), tri-boson phase space"
+        kind: fiducial
+        variable: "σ_fid for two same-sign leptons + two jets in a tri-boson (W±W±W∓ → ℓνℓνjj) selection: pT(ℓ) > 20 GeV, |y(ℓ)| < 2.5, 40 < mℓℓ < 400 GeV, jets pT > 20 GeV, |y| < 4.5, two hardest jets mjj < 160 GeV and |Δyjj| < 1.5 (simplified ATLAS cuts); WWW, WH and residual VBS all contribute"
+        predictions:
+          - label: "Complete NLO QCD+EW, off-shell pp → μ⁺νμ e⁺νe jj in tri-boson phase space (Denner–Pellen–Schönherr–Schumann)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              mixed: "all NLO orders O(α⁷), O(αsα⁶), O(αs²α⁵), O(αs³α⁴) with all interferences"
+              approximations: ["single μ⁺e⁺ flavour combination (W⁺W⁺ charge only)", "at LO O(α⁶) about 53% WWW, 41% WH and 3% VBS (on-shell decomposition)", "NLO corrections +47%, dominated by QCD; EW −4.6% relative to O(α⁶) including +2.6% photon-induced", "NLO QCD+PS predictions with approximate EW corrections also given (Sherpa)"]
+            codes: ["MoCaNLO", "Recola", "Sherpa"]
+            total: {value_pct: 6.1, provenance: {uid: 24b887db, ref: "inspire:2799239", locator: "Sec. 3.3, eq. (13): σ_NLO = 1.545(2) +6.1% −5.1% fb (σ_LO = 1.05206 fb, Table 1); larger scale side", source: agent, status: agent-draft, date: "2026-10-22"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR and μF scale variation"
+                method: "7-point scale variation around the dynamical scale of eq. (2)"
+                size: {range: [5.1, 6.1], unit: "%", asymmetric: true}
+                provenance: {uid: 4d8de0f6, ref: "inspire:2799239", locator: "Sec. 3.3, eq. (13): +6.1% −5.1%; 7-point prescription stated below Table 1", source: agent, status: agent-draft, date: "2026-10-22"}
+            refs: ["inspire:2799239"]
+            provenance: {uid: b9988ae7, ref: "inspire:2799239", locator: "Abstract; Sec. 2.6 (event selection), Sec. 3.2 Table 2 (on-shell decomposition) and Sec. 3.3 Table 5 and eq. (13) (full NLO)", source: agent, status: agent-draft, date: "2026-10-22"}

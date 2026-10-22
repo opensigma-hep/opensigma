@@ -54,7 +54,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:b-hadron-production/lhc-13/sigma-hb-fwd", region: "2 < η < 5 (LHCb acceptance), all pT"}
     measurements:
       - id: "meas:b-hadron-production/lhc-13/lhcb-2017-hb"
@@ -67,6 +67,14 @@ channels:
         dataset: "13 TeV, 48.1 pb⁻¹ (2015)"
         ref: "inspire:1485195"
         hepdata: "hepdata:ins1485195/Table 7"
+      - id: "meas:b-hadron-production/lhc-13/alice-2024-bbbar-mid"
+        experiment: "ALICE"
+        dataset: "13 TeV, minimum-bias, 2016–2018; bb̄ dσ/dy from non-prompt D⁰, D⁺, Ds⁺ and Λc⁺ cross sections extrapolated with FONLL+PYTHIA 8"
+        ref: "inspire:2762380"
+      - id: "meas:b-hadron-production/lhc-13/bai-2024-unfolded"
+        experiment: "combination"
+        dataset: "13 TeV, Bayesian unfolding of ALICE non-prompt D⁰ (|y| < 0.5) and LHCb non-prompt J/ψ (2 < y < 4.5) cross sections to the bb̄ cross section, weighted average of the two channels (not an experimental collaboration result)"
+        ref: "inspire:2782835"
     observables:
       - id: "obs:b-hadron-production/lhc-13/sigma-hb-fwd"
         name: "σ(pp → H_b X), 2 < η < 5"
@@ -119,6 +127,26 @@ channels:
             compared_to: ["meas:b-hadron-production/lhc-13/lhcb-2017-hb"]
             refs: ["inspire:1384271", "inspire:1504058"]
             provenance: {uid: 022299fd, ref: "inspire:1504058", locator: "text after Table 3 and Fig. 2 (FONLL prediction by Cacciari, Mangano, Nason)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NNLO+PS (MiNNLO_PS bb̄ + Pythia8), all B hadrons"
+            accuracy:
+              qcd: NNLO
+              shower_matched: true
+              approximations: ["MiNNLO_PS for bb̄ production, 4FS with m_b = 4.92 GeV pole mass, NNPDF31_nnlo_as_0118_nf_4", "Pythia8 Monash 2013 tune with hadronisation and MPI"]
+            codes: ["MiNNLO_PS", "POWHEG-BOX", "Pythia8"]
+            total: {value_pct: 12.3, provenance: {uid: 66fb6b2f, ref: "inspire:2629436", locator: "Table 1, LHCb-3 [20] 13 TeV row (pp → B + X): MiNNLO_PS 116.2(3) +7.6% −12.3% µb; larger side of the scale variation", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF scale variation"
+                method: "7-point variation of K_R, K_F by a factor of two, 1/2 ≤ K_R/K_F ≤ 2"
+                size: {range: [7.6, 12.3], unit: "%", asymmetric: true}
+                provenance: {uid: 687a1484, ref: "inspire:2629436", locator: "Table 1, LHCb-3 13 TeV row: +7.6% −12.3%; 7-point variation described in Sec. 3", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: numerical
+                specific: "Monte Carlo integration"
+                size: {range: [0.26, 0.26], unit: "%", asymmetric: false}
+                provenance: {uid: '7e137594', ref: "inspire:2629436", locator: "Table 1, LHCb-3 13 TeV row: numerical error (3) in the last digit of 116.2 µb", source: agent, status: agent-draft, date: 2026-10-22}
+            compared_to: ["meas:b-hadron-production/lhc-13/lhcb-2017-hb"]
+            refs: ["inspire:2629436"]
+            provenance: {uid: b03270e1, ref: "inspire:2629436", locator: "Sec. 3, Table 1 (LHCb-3 [20] = PRL 118 (2017) 052002) and Fig. 6 (ηB distribution)", source: agent, status: agent-draft, date: 2026-10-22}
       - id: "obs:b-hadron-production/lhc-13/sigma-bplus-fid"
         name: "σ(pp → B⁺ X), CMS fiducial region"
         kind: fiducial
@@ -149,6 +177,26 @@ channels:
             compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
             refs: ["inspire:468385", "inspire:553013", "inspire:1485195"]
             provenance: {uid: 7216b84d, ref: "inspire:1485195", locator: "Sec. 7 and Table 2 (FONLL with NNPDF3.0; uncertainties from scales, b-quark mass and PDFs)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NNLO+PS (MiNNLO_PS bb̄ + Pythia8), B⁺"
+            accuracy:
+              qcd: NNLO
+              shower_matched: true
+              approximations: ["MiNNLO_PS for bb̄ production, 4FS with m_b = 4.92 GeV pole mass, NNPDF31_nnlo_as_0118_nf_4", "Pythia8 Monash 2013 tune with hadronisation and MPI"]
+            codes: ["MiNNLO_PS", "POWHEG-BOX", "Pythia8"]
+            total: {value_pct: 13.2, provenance: {uid: 70924f83, ref: "inspire:2629436", locator: "Table 1, CMS [16] 13 TeV row (pp → B⁺ + X): MiNNLO_PS 11.47(6) +11.3% −13.2% µb; larger side of the scale variation", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF scale variation"
+                method: "7-point variation of K_R, K_F by a factor of two, 1/2 ≤ K_R/K_F ≤ 2"
+                size: {range: [11.3, 13.2], unit: "%", asymmetric: true}
+                provenance: {uid: 0489dadd, ref: "inspire:2629436", locator: "Table 1, CMS 13 TeV row: +11.3% −13.2%", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: numerical
+                specific: "Monte Carlo integration"
+                size: {range: [0.52, 0.52], unit: "%", asymmetric: false}
+                provenance: {uid: f29a3b1f, ref: "inspire:2629436", locator: "Table 1, CMS 13 TeV row: numerical error (6) in the last digit of 11.47 µb", source: agent, status: agent-draft, date: 2026-10-22}
+            compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
+            refs: ["inspire:2629436"]
+            provenance: {uid: 0292c01c, ref: "inspire:2629436", locator: "Sec. 3, Table 1 (CMS [16] = PLB 771 (2017) 435; prediction somewhat below the measurement)", source: agent, status: agent-draft, date: 2026-10-22}
       - id: "obs:b-hadron-production/lhc-13/dsigma-bplus-dpt"
         name: "dσ(pp → B⁺ X)/dpT, |y| < 1.45 / 2.1"
         kind: differential
@@ -172,6 +220,87 @@ channels:
             compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
             refs: ["inspire:468385", "inspire:553013", "inspire:1485195"]
             provenance: {uid: 62ecfd29, ref: "inspire:1485195", locator: "hepdata Table 1, column FONLL, bin 10 < pT < 13 GeV, |y| < 1.45", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "NNLO+PS (MiNNLO_PS bb̄ + Pythia8), B⁺"
+            accuracy:
+              qcd: NNLO
+              shower_matched: true
+              approximations: ["MiNNLO_PS for bb̄ production, 4FS with m_b = 4.92 GeV pole mass, NNPDF31_nnlo_as_0118_nf_4", "Pythia8 Monash 2013 tune with hadronisation and MPI"]
+            codes: ["MiNNLO_PS", "POWHEG-BOX", "Pythia8"]
+            compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
+            refs: ["inspire:2629436"]
+            provenance: {uid: 3ac1489d, ref: "inspire:2629436", locator: "Sec. 3, Fig. 4 (pT,B⁺ and y_B⁺ distributions compared with CMS 13 TeV data; numerical values only shown graphically)", source: agent, status: agent-draft, date: 2026-10-22}
+          - label: "SACOT-mT GM-VFNS (NLO), B±"
+            accuracy:
+              qcd: NLO
+              approximations: ["SACOT-mT general-mass variable-flavour-number scheme: massive fixed-order (direct) terms matched to zero-mass terms with heavy-quark PDFs and FFs, collinear ln(pT/m_b) resummed", "KKSS08 B-meson fragmentation functions", "scale uncertainty from the envelope of 17 combinations of μren, μfact, μfrag around sqrt(pT² + m_b²)"]
+            compared_to: ["meas:b-hadron-production/lhc-13/cms-2017-bplus"]
+            refs: ["inspire:2647720"]
+            provenance: {uid: e253d2f8, ref: "inspire:2647720", locator: "Sec. 2, Eqs. (19)–(20) (scale choice and 17-point envelope) and Sec. 3, Fig. 7 lowest panel (CMS 13 TeV B± data [30]); numerical values only shown graphically", source: agent, status: agent-draft, date: 2026-10-22}
+      - id: "obs:b-hadron-production/lhc-13/dsigma-bbbar-dy-mid"
+        name: "dσ(pp → bb̄ X)/dy at midrapidity, |y| < 0.5"
+        kind: differential
+        variable: "y (value at |y| < 0.5), bb̄-pair cross section per unit rapidity, all pT; obtained from non-prompt charm hadrons (ALICE) or from Bayesian unfolding of non-prompt D⁰ and J/ψ data (combination)"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-13/alice-2024-bbbar-mid"
+            total: {value_pct: 18.3, provenance: {uid: 5434e8c2, ref: "inspire:2762380", locator: "Sec. 5.3, Eq. (6): dσ_bb̄/dy = 75.2 ± 3.2 (stat.) ± 5.2 (syst.) +12.3 −3.2 (extrap.) µb; larger sides added in quadrature (18.3%)", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [4.3, 4.3], unit: "%", asymmetric: false}
+                provenance: {uid: 23b5614c, ref: "inspire:2762380", locator: "Eq. (6): ± 3.2 (stat.) of 75.2 µb", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: syst_combined
+                specific: "Systematic uncertainty of the visible non-prompt charm-hadron cross sections"
+                size: {range: [6.9, 6.9], unit: "%", asymmetric: false}
+                provenance: {uid: 01fcdcae, ref: "inspire:2762380", locator: "Eq. (6): ± 5.2 (syst.) of 75.2 µb", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: acceptance_extrapolation
+                specific: "FONLL+PYTHIA 8 extrapolation to the bb̄ cross section (FONLL, fragmentation fractions, BR)"
+                size: {range: [4.3, 16.4], unit: "%", asymmetric: true}
+                provenance: {uid: f890d484, ref: "inspire:2762380", locator: "Eq. (6): +12.3 −3.2 (extrap.) of 75.2 µb; extrapolation factors in Table 2", source: agent, status: agent-draft, date: 2026-10-22}
+          - measurement: "meas:b-hadron-production/lhc-13/bai-2024-unfolded"
+            total: {value_pct: 8.1, provenance: {uid: 4a0c1ca9, ref: "inspire:2782835", locator: "Sec. 4 (equation for dσ_bb̄/dy at |y_b| < 0.5, 13 TeV): 68.3 ± 5.5 µb; Table 1, 13 TeV 'average' column, total uncertainty 8.1%", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties:
+              - category: stat
+                specific: "Statistics of the measured non-prompt D⁰ and J/ψ data"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                provenance: {uid: d5511737, ref: "inspire:2782835", locator: "Table 1, 13 TeV 'average' column, 'Measured non-prompt data stat.'", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: syst_combined
+                specific: "Systematics of the measured non-prompt D⁰ and J/ψ data (fully correlated over pT)"
+                size: {range: [5.2, 5.2], unit: "%", asymmetric: false}
+                provenance: {uid: 0a164182, ref: "inspire:2782835", locator: "Table 1, 13 TeV 'average' column, 'Measured non-prompt data syst.'", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: other
+                specific: "Branching ratios of inclusive b-hadron decays to D⁰ and J/ψ (PDG)"
+                size: {range: [5.2, 5.2], unit: "%", asymmetric: false}
+                provenance: {uid: a7f47853, ref: "inspire:2782835", locator: "Table 1, 13 TeV 'average' column, 'Branching ratio of h_B decay'", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: unfolding_model
+                specific: "Beauty-hadron pT shape in the response matrix (PYTHIA 8 vs FONLL)"
+                size: {range: [2.7, 2.7], unit: "%", asymmetric: false}
+                provenance: {uid: fa6c228a, ref: "inspire:2782835", locator: "Table 1, 13 TeV 'average' column, 'Beauty hadron pT shape'", source: agent, status: agent-draft, date: 2026-10-22}
+        predictions:
+          - label: "FONLL (NLO + NLL), b quarks"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_b"}]
+            codes: ["FONLL"]
+            compared_to: ["meas:b-hadron-production/lhc-13/alice-2024-bbbar-mid", "meas:b-hadron-production/lhc-13/bai-2024-unfolded"]
+            refs: ["inspire:468385", "inspire:1116414", "inspire:2762380"]
+            provenance: {uid: 63af5cd6, ref: "inspire:2762380", locator: "Sec. 5.3 and Fig. 8 left (measurement lies at the upper edge of the FONLL band; numerical values only shown graphically); also inspire:2782835 Fig. 6 right", source: agent, status: agent-draft, date: 2026-10-22}
+          - label: "NNLO QCD (MATRIX, nf = 4), b quarks"
+            accuracy:
+              qcd: NNLO
+              approximations: ["parton-level b quarks, no fragmentation"]
+            codes: ["MATRIX"]
+            uses_amplitudes: ["amp:2L/gg-ttbar", "amp:2L/qqbar-ttbar"]
+            compared_to: ["meas:b-hadron-production/lhc-13/alice-2024-bbbar-mid"]
+            refs: ["inspire:1824426", "inspire:2762380"]
+            provenance: {uid: 600f672e, ref: "inspire:2762380", locator: "Sec. 5.3 and Fig. 8 left (NNLO calculation [94] = Catani et al., smaller uncertainty than FONLL, central value closer to data; numerical values only shown graphically)", source: agent, status: agent-draft, date: 2026-10-22}
+      - id: "obs:b-hadron-production/lhc-13/sigma-bbbar-total"
+        name: "σ(pp → bb̄ X), full phase space"
+        kind: total
+        variable: "total bb̄-pair cross section in 4π, from the Bayesian unfolding of non-prompt D⁰ and J/ψ data without separate pT or y extrapolation"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-13/bai-2024-unfolded"
+            total: {value_pct: 7.9, provenance: {uid: 09804c51, ref: "inspire:2782835", locator: "Sec. 4 (equation for σ_bb̄ in the full phase space, 13 TeV): 499.8 ± 39.6 µb (7.9%)", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties: []
   - id: "chan:b-hadron-production/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"
@@ -231,7 +360,7 @@ channels:
     collider: "col:lhc-7"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:b-hadron-production/lhc-7/sigma-bplus-fid", region: "pT(B⁺) > 5 GeV, |y| < 2.4"}
     measurements:
       - id: "meas:b-hadron-production/lhc-7/cms-2011-bplus"
@@ -239,6 +368,11 @@ channels:
         dataset: "7 TeV, 5.8 pb⁻¹ (2010)"
         ref: "inspire:883318"
         hepdata: "hepdata:ins883318/Table 1"
+      - id: "meas:b-hadron-production/lhc-7/atlas-2013-bplus"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 2.4 fb⁻¹"
+        ref: "inspire:1240670"
+        hepdata: "hepdata:ins1240670/Table 1"
     observables:
       - id: "obs:b-hadron-production/lhc-7/sigma-bplus-fid"
         name: "σ(pp → B⁺ X), pT > 5 GeV, |y| < 2.4"
@@ -283,3 +417,111 @@ channels:
             compared_to: ["meas:b-hadron-production/lhc-7/cms-2011-bplus"]
             refs: ["inspire:883318"]
             provenance: {uid: 0ad8e108, ref: "inspire:883318", locator: "text after Table 1: PYTHIA prediction 48.1 µb for pT > 5 GeV, |y| < 2.4", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:b-hadron-production/lhc-7/sigma-bplus-atlas-fid"
+        name: "σ(pp → B⁺ X), 9 < pT < 120 GeV, |y| < 2.25"
+        kind: fiducial
+        variable: "σ(B⁺) integrated over 9 < pT < 120 GeV and |y| < 2.25, B± → J/ψ(→ μμ) K±, corrected for the branching ratios"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-7/atlas-2013-bplus"
+            total: {value_pct: 8.3, provenance: {uid: 4fa69acd, ref: "inspire:1240670", locator: "Sec. 7, integrated cross section: 10.6 ± 0.3 (stat.) ± 0.7 (syst.) ± 0.2 (lumi.) ± 0.4 (B) µb; added in quadrature (8.3%)", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [2.8, 2.8], unit: "%", asymmetric: false}
+                provenance: {uid: 369bc85a, ref: "inspire:1240670", locator: "Sec. 7: ± 0.3 (stat.) of 10.6 µb", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: syst_combined
+                specific: "Total systematic uncertainty (excluding luminosity and branching ratio)"
+                size: {range: [6.6, 6.6], unit: "%", asymmetric: false}
+                provenance: {uid: be250f3e, ref: "inspire:1240670", locator: "Sec. 7: ± 0.7 (syst.) of 10.6 µb", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.9, 1.9], unit: "%", asymmetric: false}
+                provenance: {uid: 88020d77, ref: "inspire:1240670", locator: "Sec. 7: ± 0.2 (lumi.) of 10.6 µb (luminosity uncertainty 1.8%, Sec. 6 item 8)", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: other
+                specific: "Branching ratio B± → J/ψ K±, J/ψ → μμ"
+                size: {range: [3.8, 3.8], unit: "%", asymmetric: false}
+                provenance: {uid: 43562ee5, ref: "inspire:1240670", locator: "Sec. 7: ± 0.4 (B) of 10.6 µb (branching-ratio uncertainty 3.4%, Sec. 6 item 7)", source: agent, status: agent-draft, date: 2026-10-22}
+        predictions:
+          - label: "FONLL (NLO + NLL), B⁺"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "pT/m_b"}]
+              approximations: ["σ(pp → bX) · f(b̄ → B⁺) with f = (40.1 ± 0.8)%"]
+            codes: ["FONLL"]
+            total: {value_pct: 35.6, provenance: {uid: 2125781c, ref: "inspire:1240670", locator: "Sec. 7: FONLL 8.6 +3.0 −1.9 (scale) ± 0.6 (m_b) µb; larger sides added in quadrature (3.06/8.6 = 35.6%)", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF scale variation"
+                method: "renormalisation and factorisation scale variation around μ = sqrt(m_b² + pT²)"
+                size: {range: [22.1, 34.9], unit: "%", asymmetric: true}
+                provenance: {uid: 58ab10d0, ref: "inspire:1240670", locator: "Sec. 7: +3.0 −1.9 (scale) of 8.6 µb", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: parametric
+                specific: "b-quark mass"
+                size: {range: [7.0, 7.0], unit: "%", asymmetric: false}
+                provenance: {uid: 9759f0ba, ref: "inspire:1240670", locator: "Sec. 7: ± 0.6 (m_b) of 8.6 µb", source: agent, status: agent-draft, date: 2026-10-22}
+            compared_to: ["meas:b-hadron-production/lhc-7/atlas-2013-bplus"]
+            refs: ["inspire:468385", "inspire:1240670"]
+            provenance: {uid: 97b00c94, ref: "inspire:1240670", locator: "Sec. 7, FONLL integrated prediction below the measured value", source: agent, status: agent-draft, date: 2026-10-22}
+          - label: "NNLO+PS (MiNNLO_PS bb̄ + Pythia8), B⁺"
+            accuracy:
+              qcd: NNLO
+              shower_matched: true
+              approximations: ["MiNNLO_PS for bb̄ production, 4FS with m_b = 4.92 GeV pole mass, NNPDF31_nnlo_as_0118_nf_4", "Pythia8 Monash 2013 tune with hadronisation and MPI"]
+            codes: ["MiNNLO_PS", "POWHEG-BOX", "Pythia8"]
+            total: {value_pct: 14.0, provenance: {uid: 7391d713, ref: "inspire:2629436", locator: "Table 1, ATLAS [12] 7 TeV row (pp → B⁺ + X): MiNNLO_PS 10.17(5) +13.3% −14.0% µb; larger side of the scale variation", source: agent, status: agent-draft, date: 2026-10-22}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF scale variation"
+                method: "7-point variation of K_R, K_F by a factor of two, 1/2 ≤ K_R/K_F ≤ 2"
+                size: {range: [13.3, 14.0], unit: "%", asymmetric: true}
+                provenance: {uid: dfbc6f5f, ref: "inspire:2629436", locator: "Table 1, ATLAS 7 TeV row: +13.3% −14.0%", source: agent, status: agent-draft, date: 2026-10-22}
+              - category: numerical
+                specific: "Monte Carlo integration"
+                size: {range: [0.49, 0.49], unit: "%", asymmetric: false}
+                provenance: {uid: 44aaba6d, ref: "inspire:2629436", locator: "Table 1, ATLAS 7 TeV row: numerical error (5) in the last digit of 10.17 µb", source: agent, status: agent-draft, date: 2026-10-22}
+            compared_to: ["meas:b-hadron-production/lhc-7/atlas-2013-bplus"]
+            refs: ["inspire:2629436"]
+            provenance: {uid: 0c2a7056, ref: "inspire:2629436", locator: "Sec. 3, Table 1 (ATLAS [12] = JHEP 10 (2013) 042)", source: agent, status: agent-draft, date: 2026-10-22}
+      - id: "obs:b-hadron-production/lhc-7/d2sigma-bplus-atlas"
+        name: "d²σ(pp → B⁺ X)/dpT dy, ATLAS, 9 < pT < 120 GeV, |y| < 2.25"
+        kind: differential
+        variable: "pT of the B⁺ in four |y| slices up to 2.25 (σ × B(B⁺ → J/ψ K⁺ → μμK⁺)); headline bin 9 < pT < 13 GeV, |y| < 0.5 (hepdata Table 1)"
+        results:
+          - measurement: "meas:b-hadron-production/lhc-7/atlas-2013-bplus"
+            total: {value_pct: 8.5, provenance: {uid: 87dcbf29, ref: "hepdata:ins1240670/Table 1", locator: "Table 1, quadrature sum of all errors (bin 1)", source: hepdata, status: machine-verified, date: 2026-10-22}}
+            uncertainties:
+              - category: stat
+                specific: "stat"
+                size: {range: [2.2, 14.0], asymmetric: false}
+                full_table: "hepdata:ins1240670/Table 1"
+                provenance: {uid: 12af7a51, ref: "hepdata:ins1240670/Table 1", locator: "Table 1, error 'stat'", source: hepdata, status: machine-verified, date: 2026-10-22}
+              - category: syst_combined
+                specific: "sys"
+                size: {range: [5.8, 14.0], asymmetric: false}
+                full_table: "hepdata:ins1240670/Table 1"
+                provenance: {uid: 62d822e4, ref: "hepdata:ins1240670/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: 2026-10-22}
+        predictions:
+          - label: "NNLO+NNLL (massive NNLO matched to NNLL collinear resummation, FONLL-type), B⁺"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL", variable: "pT/m_b"}]
+              approximations: ["σ(m) massive nf = 4 NNLO plus G(pT)·(σ(0) − σ(0)|FO) with massless nf = 5 NNLO and perturbative fragmentation at NNLL, G(pT) = pT²/(pT² + c² m²), c = 5 for B hadrons", "b → B fragmentation function of inspire:2164515, identical for all B species with LEP fragmentation fractions; m = 4.92 GeV, NNPDF3.1", "15-point scale variation around μ² = m² + pT²"]
+            codes: ["STRIPPER", "APFEL"]
+            uses_amplitudes: ["amp:2L/gg-ttbar", "amp:2L/qqbar-ttbar", "amp:2L/2to2-partons"]
+            compared_to: ["meas:b-hadron-production/lhc-7/atlas-2013-bplus"]
+            refs: ["inspire:2848281"]
+            provenance: {uid: 345a3467, ref: "inspire:2848281", locator: "Sec. II (Eqs. (1)–(3), STRIPPER, two-loop massive amplitudes from ref. [35], massless from ref. [42]) and Sec. III, Fig. 2 (B⁺ pT spectrum vs 7 TeV ATLAS data [53], all rapidity slices in the ancillary files); numerical values only shown graphically", source: agent, status: agent-draft, date: 2026-10-22}
+          - label: "NNLO+PS (MiNNLO_PS bb̄ + Pythia8), B⁺"
+            accuracy:
+              qcd: NNLO
+              shower_matched: true
+              approximations: ["MiNNLO_PS for bb̄ production, 4FS with m_b = 4.92 GeV pole mass, NNPDF31_nnlo_as_0118_nf_4", "Pythia8 Monash 2013 tune with hadronisation and MPI"]
+            codes: ["MiNNLO_PS", "POWHEG-BOX", "Pythia8"]
+            compared_to: ["meas:b-hadron-production/lhc-7/atlas-2013-bplus"]
+            refs: ["inspire:2629436"]
+            provenance: {uid: d1326db6, ref: "inspire:2629436", locator: "Sec. 3, Fig. 3 (single- and double-differential pT,B⁺ in y_B⁺ slices vs ATLAS 7 TeV data); numerical values only shown graphically", source: agent, status: agent-draft, date: 2026-10-22}
+        resummation_ingredients:
+          - name: "NNLL perturbative heavy-quark fragmentation with soft-gluon resummation of the heavy-quark FF and NNLL DGLAP evolution (APFEL), matched to massive NNLO"
+            status: "done (B hadrons, and B-decay products J/ψ and muons via EvtGen or FF convolution)"
+            refs: ["inspire:2848281", "inspire:2164515"]
+            provenance: {uid: 45757c87, ref: "inspire:2848281", locator: "Sec. II, paragraph after the description of the massless calculation: 'Soft-gluon resummation of the heavy quark FF is performed as described in ref. [38]. DGLAP evolution is performed using the APFEL library'; decays: Sec. II, paragraph on B-hadron decays", source: agent, status: agent-draft, date: 2026-10-22}

@@ -1,0 +1,12 @@
+id: "amp:2L/Vstar-4partons-lc"
+process: "proc:ee-jet-rates"
+loops: 2
+corrections: QCD
+status: partial
+approximations: ["leading-colour approximation (planar diagrams only), N_f/N_c fixed", "vector-coupling singlet closed-fermion-loop contributions neglected", "massless quarks; γ*/Z → 4 partons in the decay region"]
+evaluation:
+  kind: analytic
+  detail: "planar finite remainders crossed from V+2-jet production; new one-mass pentagon-function basis for 1→4 decay kinematics, PentagonFunctions++"
+  provenance: {uid: 1df9e709, ref: "arXiv:2602.18185", locator: "Sec. II.1, eq. (3) (finite remainders as rational coefficients times pentagon functions; decay-channel basis implemented in PentagonFunctions++); Appendix", source: agent, status: agent-draft, date: "2026-10-22"}
+refs: ["arXiv:2602.18185"]
+provenance: {uid: cc9fb315, ref: "arXiv:2602.18185", locator: "Abstract; Sec. II (two-loop γ*→4 partons in the LCA, Catani-scheme finite remainders, used for the NNLO four-jet rate)", source: agent, status: agent-draft, date: "2026-10-22"}

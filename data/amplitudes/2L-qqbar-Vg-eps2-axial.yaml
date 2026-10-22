@@ -1,0 +1,12 @@
+id: "amp:2L/qqbar-Vg-eps2-axial"
+process: "proc:z-jet"
+loops: 2
+corrections: QCD
+status: done
+approximations: ["V = Z, W±, γ*; massless QCD, vector and axial-vector couplings, singlet and non-singlet contributions", "channels qq̄ → Vg, qg → Vq, gg → Vg (axial-vector gg → Vg new; vanishes for W±)", "two-loop amplitudes to O(ε²), one-loop to O(ε⁴), for use in N3LO V + jet"]
+evaluation:
+  kind: analytic
+  detail: "masters (canonical basis) in MPLs with alphabet {y, z, 1−y, 1−z, y+z, 1−y−z}; IBP reduction with Kira2; continued to all scattering regions"
+  provenance: {uid: 78f8db97, ref: "inspire:2669874", locator: "Sec. 4 (Kira2 IBP reduction to canonical-basis masters, MPLs with alphabet {y, z, 1 − y, 1 − z, y + z, 1 − y − z}, O(ε⁴) at one loop and O(ε²) at two loops); Sec. 6.3 (analytic continuation)", source: agent, status: agent-draft, date: "2026-10-22"}
+refs: ["inspire:2669874"]
+provenance: {uid: 768c364b, ref: "inspire:2669874", locator: "Abstract (two-loop QCD corrections to all partonic channels for V = Z, W±, γ* + jet, vector and axial-vector couplings, extended to O(ε²); finite remainders continued to qq̄ → Vg, qg → Vq and gg → Vg)", source: agent, status: agent-draft, date: "2026-10-22"}

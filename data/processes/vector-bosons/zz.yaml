@@ -29,6 +29,12 @@ building_blocks:
         provenance: {uid: 49d6997f, ref: "inspire:1384273", locator: "Abstract (complete NNLO QCD corrections to four-charged-lepton production in the ZZ signal region, fiducial cross sections and distributions); inclusive: inspire:1295500 abstract", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
+      2L:
+        status: partial
+        approximations: ["loop-induced gg → ZZ only (the NLO virtual of the gg channel); three-loop qq̄ → ZZ not available", "top-quark-mediated gg → Z*Z* with full m_t dependence via combined forward (t) and high-energy expansions, off-shell Z bosons", "light-quark loops from earlier massless calculations"]
+        amplitude: "amp:2L/gg-ZZ-mt"
+        refs: ["inspire:2968105"]
+        provenance: {uid: 638a5b9a, ref: "inspire:2968105", locator: "Abstract and Sec. 5 (two-loop heavy-quark-mediated virtual corrections to off-shell gg → ZZ, forward and high-energy expansions covering the whole phase space; Introduction: light-quark helicity amplitudes in Refs. [25, 26])", source: agent, status: agent-draft, date: "2026-10-22"}
       code:
         status: partial
         approximations: ["only the gluon-fusion channel gg → ZZ at NLO QCD, massless-quark loops (the loop-induced part of N3LO)"]
@@ -45,7 +51,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:zz/lhc-13/sigma-fid", region: "Fiducial ZZ → 4ℓ (CMS: 60 < mℓℓ < 120 GeV, mℓℓ′ > 4 GeV, pT(ℓ1,ℓ2,ℓ3/4) > 20/10/5 GeV; ATLAS: on-shell ZZ region of the four-lepton measurement)"}
     measurements:
       - id: "meas:zz/lhc-13/cms-2021-incl"
@@ -57,6 +63,11 @@ channels:
         experiment: "ATLAS"
         dataset: "13 TeV, 139 fb⁻¹ (2015–2018)"
         ref: "inspire:1849535"
+      - id: meas:zz/lhc-13/cms-2024-zzjets
+        experiment: CMS
+        dataset: 13 TeV, 138 fb⁻¹ (2016–2018), 4ℓ + jets, 60 < m(Z1,Z2) < 120 GeV
+        ref: inspire:2773780
+        hepdata: hepdata:ins2773780/Figure 7 (right)
     observables:
       - id: "obs:zz/lhc-13/sigma-fid"
         name: "Fiducial σ(pp → ZZ → 4ℓ)"
@@ -217,6 +228,69 @@ channels:
               source: agent
               status: cross-checked
               date: '2026-10-17'
+      - id: obs:zz/lhc-13/njets
+        name: 1/σ_fid dσ/dN_jets, ZZ → 4ℓ + jets, normalised
+        kind: differential
+        variable: "N_jets (anti-kT R = 0.4, pT > 30 GeV, |η| < 4.7; bins 0, 1, 2, ≥ 3), on-shell 60 < m(Z1,Z2) < 120 GeV, normalised to the fiducial cross section"
+        results:
+          - measurement: meas:zz/lhc-13/cms-2024-zzjets
+            total:
+              value_pct: 4.3
+              provenance:
+                uid: 139b3006
+                ref: hepdata:ins2773780/Figure 7 (right)
+                locator: Figure 7 (right), quadrature sum of all errors (min over bins)
+                source: hepdata
+                status: machine-verified
+                date: '2026-10-22'
+            uncertainties:
+              - category: stat
+                specific: statistical uncertainty
+                size:
+                  range: [2.3, 10.0]
+                  asymmetric: false
+                full_table: hepdata:ins2773780/Figure 7 (right)
+                provenance:
+                  uid: 525b4d27
+                  ref: hepdata:ins2773780/Figure 7 (right)
+                  locator: Figure 7 (right), error 'statistical uncertainty'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-22'
+              - category: syst_combined
+                specific: systematic uncertainty
+                size:
+                  range: [3.6, 12.0]
+                  asymmetric: true
+                full_table: hepdata:ins2773780/Figure 7 (right)
+                provenance:
+                  uid: b69a9b64
+                  ref: hepdata:ins2773780/Figure 7 (right)
+                  locator: Figure 7 (right), error 'systematic uncertainty'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-10-22'
+        predictions:
+          - label: nNNLO+PS (MiNNLO_PS qq̄ → 4ℓ + NLO+PS gg → 4ℓ, Powheg + Pythia8)
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["qq̄ → ZZ NNLO+PS (MiNNLO_PS): NNLO for the inclusive normalisation, NLO for ZZ + 1 jet, LO for 2 jets", "loop-induced gg → 4ℓ at NLO matched to the shower, Higgs-mediated contribution included", "full pp → ℓ⁺ℓ⁻ℓ′⁺ℓ′⁻ with spin correlations, interference and off-shell effects", "no EW corrections in the N_jets distribution"]
+            codes: ["Powheg-Box", "MiNNLO_PS", "Pythia8"]
+            uses_amplitudes: ["amp:2L/qqbar-VV"]
+            compared_to: [meas:zz/lhc-13/cms-2024-zzjets]
+            refs: ["inspire:2773780", "inspire:1903617", "inspire:1846979"]
+            provenance: {uid: 04fccf90, ref: "inspire:2773780", locator: "Sec. 3 (simulation: nNNLO+PS predictions [22, 23], MiNNLO_PS accurate at NNLO inclusive and NLO for Z+1 jet) and Sec. 8.2, Fig. 7 (right): best description of the N_jets distribution", source: agent, status: agent-draft, date: "2026-10-22"}
+            headline: true
+          - label: MG5_aMC@NLO FxFx (0+1 jet NLO) qq̄ → ZZ + MCFM gg → ZZ + Powheg H → ZZ + MG5 EW ZZjj
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["qq̄ → ZZ with 0 and 1 jet at NLO merged with FxFx, scaled to NNLO inclusive (K = 1.1)", "gg → ZZ from MCFM v7.0 at LO normalised to NLO (K = 1.7)", "EW ZZjj at LO"]
+            codes: ["MG5_aMC@NLO", "MCFM", "Powheg-Box", "Pythia8"]
+            compared_to: [meas:zz/lhc-13/cms-2024-zzjets]
+            refs: ["inspire:2773780", "inspire:1293923"]
+            provenance: {uid: 8958acf5, ref: "inspire:2773780", locator: "Sec. 3 (MG5_aMC v2.4.2 nominal qq̄ → ZZ sample, FxFx merging of 0- and 1-jet NLO; NNLO K factor 1.1 for qq̄ and NLO for gg) and Fig. 7 (right)", source: agent, status: agent-draft, date: "2026-10-22"}
   - id: chan:zz/lhc-8
     collider: col:lhc-8
     initial_state: pp

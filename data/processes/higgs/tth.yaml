@@ -46,7 +46,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:tth/lhc-13/sigma-tth", region: "m_H = 125 GeV, inclusive over production kinematics (ATLAS: ttH, |y_H| < 2.5, absolute σ; CMS: signal strength μ_ttH)"}
     measurements:
       - id: "meas:tth/lhc-13/atlas-2022-comb"
@@ -59,6 +59,10 @@ channels:
         dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of Higgs decay-channel analyses"
         ref: "inspire:2104672"
         hepdata: "hepdata:ins2104672/Production mode strength modifiers"
+      - id: "meas:tth/lhc-13/atlas-2024-bb"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹ (Run 2), H → bb̄, single-lepton and dilepton final states"
+        ref: "inspire:2808021"
     observables:
       - id: "obs:tth/lhc-13/sigma-tth"
         name: "σ(ttH) in the Higgs decay-channel combination (ATLAS: σ(ttH); CMS: μ_ttH)"
@@ -86,6 +90,17 @@ channels:
                 size: {range: [12.8, 13.8], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins2104672/Production mode strength modifiers"
                 provenance: {uid: 31692b44, ref: "hepdata:ins2104672/Production mode strength modifiers", locator: "Production mode strength modifiers, μ_ttH: +0.13/−0.12 (syst) of 0.94", source: agent, status: cross-checked, date: "2026-10-16"}
+          - measurement: "meas:tth/lhc-13/atlas-2024-bb"
+            total: {value_pct: 24.6, provenance: {uid: 9486b32e, ref: "arXiv:2407.10904", locator: "Sec. 8, eq. (5) and abstract: σ_ttH = 411 +101/−92 fb (m_H = 125.09 GeV), from μ_ttH = 0.81 +0.22/−0.19 (eq. 2) times the SM 507 fb; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [13.1, 13.1], unit: "%", asymmetric: false}
+                provenance: {uid: f4d59e17, ref: "arXiv:2407.10904", locator: "Sec. 8, eq. (5): ±54 (stat.) fb of 411 fb", source: agent, status: agent-draft, date: "2026-10-22"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined; dominated by ttH signal and tt̄ + jets background modelling)"
+                size: {range: [18.2, 20.7], unit: "%", asymmetric: true}
+                provenance: {uid: 36f0e9db, ref: "arXiv:2407.10904", locator: "Sec. 8, eq. (5): +85/−75 (syst.) fb of 411 fb; dominant sources from Sec. 9 (Conclusion)", source: agent, status: agent-draft, date: "2026-10-22"}
         predictions:
           - label: "NNLO+NNLL+EW (dQCD/SCET average), m_H = 125 GeV"
             accuracy:

@@ -1,0 +1,12 @@
+id: "amp:2L/gg-HH-ew"
+process: "proc:hh"
+loops: 2
+corrections: EW
+status: done
+approximations: ["complete NLO EW two-loop virtuals for gg → HH: inspire:2727392", "top-Yukawa-induced (Higgs and Goldstone exchange) and light-quark-loop classes evaluated separately in inspire:3093560", "light-quark loops analytically: amp:2L/gg-HH-ew-lq"]
+evaluation:
+  kind: numerical
+  detail: "projectors on form factors, Feynman parametrisation with end-point subtractions and IBP per diagram, complex masses + Richardson extrapolation"
+  provenance: {uid: 7c36ec6b, ref: "inspire:3093560", locator: "arXiv:2512.14823, Sec. 3.1.1 (triangles: Feynman parametrisation, end-point subtractions, IBP, small imaginary propagator masses) and Sec. 3.1.2 (boxes: projectors of eq. (10), Richardson extrapolation)", source: agent, status: agent-draft, date: "2026-10-22"}
+refs: ["inspire:2727392", "inspire:3093560"]
+provenance: {uid: 99758c3e, ref: "inspire:3093560", locator: "arXiv:2512.14823, Abstract and Sec. 1 (full top-Yukawa-induced corrections incl. Higgs and Goldstone exchange, plus light-quark loops; first complete NLO EW corrections in Ref. [27] = inspire:2727392, Abstract)", source: agent, status: agent-draft, date: "2026-10-22"}

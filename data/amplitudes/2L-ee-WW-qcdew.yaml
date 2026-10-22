@@ -1,0 +1,15 @@
+id: "amp:2L/ee-WW-qcdew"
+process: "proc:ee-ww"
+loops: 2
+corrections: mixed
+status: done
+approximations: ["on-shell W⁺W⁻ (no W decays); O(ααs) from gluon exchange in quark loops of γ/Z self-energies and the VWW vertex, plus O(ααs) counterterms"]
+master_integrals:
+  status: done
+  refs: ["arXiv:2401.01323"]
+evaluation:
+  kind: analytic
+  detail: "canonical DEs (Magnus transformation); masters as ε-series to ε⁴ in Goncharov polylogarithms up to weight four"
+  provenance: {uid: a9c543e7, ref: "arXiv:2401.01323", locator: "Abstract; Sec. 3 (canonical system, boundary conditions, analytic continuation; Table 1 GPL weights)", source: agent, status: agent-draft, date: "2026-10-22"}
+refs: ["arXiv:2401.01323"]
+provenance: {uid: 37221d6a, ref: "arXiv:2401.01323", locator: "Abstract; Sec. 2.2, eq. (17) (O(ααs) two-loop amplitude for e⁺e⁻ → W⁺W⁻ with on-shell W bosons)", source: agent, status: agent-draft, date: "2026-10-22"}
