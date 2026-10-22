@@ -1,0 +1,15 @@
+id: "amp:2L/qqbar-gammagamma-mq"
+process: "proc:diphoton"
+loops: 2
+corrections: QCD
+status: done
+approximations: ["two-loop qq̄ → γγ with a closed heavy-quark (top) loop, full mass dependence; enters at NNLO QCD (inspire:2876679 Sec. 1)", "first computed with masters from DiffExp generalised power series (inspire:2690115); fully analytic in inspire:2874702; helicity amplitudes with on-shell mass renormalisation in inspire:2876679; numerical loop-momentum-space evaluation of the fermion-loop contributions in inspire:3071685"]
+master_integrals:
+  status: done
+  refs: ["inspire:2690115", "inspire:2874702"]
+evaluation:
+  kind: analytic
+  detail: "canonical basis; iterated integrals over elliptic and polylogarithmic forms; series-expansion representations for numerics"
+  provenance: {uid: ad52c5c0, ref: "inspire:2874702", locator: "Abstract (canonical basis for all integrals, independent iterated integrals over elliptic and polylogarithmic differential forms; series expansion representations for the whole amplitudes for numerical evaluation)", source: agent, status: cross-checked, date: "2026-10-22"}
+refs: ["inspire:2690115", "inspire:2874702", "inspire:2876679", "inspire:3071685"]
+provenance: {uid: 220d915f, ref: "inspire:2690115", locator: "Abstract (two-loop form factors for diphoton production in the quark annihilation channel with full heavy-quark mass dependence; masters by differential equations solved with generalised power series); inspire:2874702 Abstract (analytic qq̄ → γγ and gg → γγ via a heavy-quark loop); inspire:2876679 Abstract; inspire:3071685 Abstract and Sec. 1 (qq̄ → γγ, light or heavy quark loops)", source: agent, status: cross-checked, date: "2026-10-22"}

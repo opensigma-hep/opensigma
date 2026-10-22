@@ -32,9 +32,9 @@ building_blocks:
     cells:
       2L:
         status: done
-        amplitude: "amp:2L/qqbar-Vg"
-        refs: ["inspire:587998"]
-        provenance: {uid: d7cb0b02, ref: "inspire:587998", locator: "Abstract via amp:2L/qqbar-Vg (two-loop QCD helicity amplitudes for γ* → qq̄g, crossed to the V + jet amplitudes; the same vector-current structure enters W + jet)", source: agent, status: agent-draft, date: "2026-10-17"}
+        amplitude: "amp:2L/qqbar-Vg-eps2-axial"
+        refs: ["inspire:587998", "inspire:2669874"]
+        provenance: {uid: d7cb0b02, ref: "inspire:2669874", locator: "Abstract and Sec. 6.2–6.3 (two-loop QCD helicity amplitudes for V = Z, W±, γ* + jet with vector and axial-vector couplings, analytically continued to qq̄ → Vg and qg → Vq; Sec. 7: V gqq̄ cross-checked against earlier results up to weight 4); decay-region γ* → qq̄g amplitudes first in inspire:587998", source: agent, status: cross-checked, date: "2026-10-22"}
       RV:
         status: done
         refs: ["inspire:446755"]
@@ -68,6 +68,12 @@ building_blocks:
         provenance: {uid: 6c37dfcd, ref: "inspire:1599401", locator: "Abstract (combination of state-of-the-art calculations for all V + jets processes: NNLO QCD and NLO EW corrections supplemented by Sudakov logarithms at two loops, parton level)", source: agent, status: cross-checked, date: "2026-10-17"}
   - row: "N3LO QCD"
     cells:
+      2L:
+        status: done
+        approximations: ["two-loop amplitudes to O(ε²) and one-loop to O(ε⁴) in massless QCD, as needed by the three-loop finite remainder"]
+        amplitude: "amp:2L/qqbar-Vg-eps2-axial"
+        refs: ["inspire:2669874"]
+        provenance: {uid: 3baacff2, ref: "inspire:2669874", locator: "Abstract and Sec. 7 (two-loop QCD amplitudes for V = Z, W±, γ* + jet, qq̄ → Vg, qg → Vq, gg → Vg incl. axial-vector singlet; renormalised helicity coefficients to O(ε⁴) at one loop and O(ε²) at two loops in the ancillary files, 'an essential ingredient for the N3LO V+jet amplitudes')", source: agent, status: cross-checked, date: "2026-10-22"}
       3L:
         status: partial
         approximations: ["planar (leading-colour) contributions only"]
@@ -79,7 +85,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:w-jet/lhc-13/sigma-ge1j", region: "Fiducial σ(W(→ μν) + ≥ 1 jet), jets anti-kt R = 0.4, pT > 30 GeV, |y| < 2.4; pT(μ) > 25 GeV, |η(μ)| < 2.4, mT > 50 GeV"}
     measurements:
       - id: "meas:w-jet/lhc-13/cms-2017-ge1j"
@@ -87,6 +93,11 @@ channels:
         dataset: "13 TeV, 2.2 fb⁻¹ (2015), muon channel"
         ref: "inspire:1610623"
         hepdata: "hepdata:ins1610623/Table 2"
+      - id: "meas:w-jet/lhc-13/atlas-2025-highpt"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹ (2015–2018), e and μ channels combined"
+        ref: "inspire:2860146"
+        hepdata: "hepdata:ins2860146/Figure 04"
     observables:
       - id: "obs:w-jet/lhc-13/sigma-ge1j"
         name: "Fiducial σ(W + ≥ 1 jet)"
@@ -116,6 +127,78 @@ channels:
             compared_to: ["meas:w-jet/lhc-13/cms-2017-ge1j"]
             refs: ["inspire:1610623"]
             provenance: {uid: b4538404, ref: "inspire:1610623", locator: "Sec. 3, description of the NLO MG5_aMC FxFx prediction (NLO accuracy for N = 0, 1, 2 and LO for N = 3, 4)", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:w-jet/lhc-13/sigma-highpt"
+        name: "Fiducial σ(W + jets), leading jet pT > 500 GeV"
+        kind: fiducial
+        variable: "σ(W(→ ℓν) + ≥ 1 jet) with pT(j1) > 500 GeV (ATLAS inclusive region), particle level: exactly one dressed lepton pT > 30 GeV, |η| < 2.5; anti-kt R = 0.4 jets pT > 30 GeV, |y| < 2.5, ΔR(ℓ, jet) > 0.4; inclusive in jet flavour"
+        results:
+          - measurement: "meas:w-jet/lhc-13/atlas-2025-highpt"
+            total: {value_pct: 3.3, provenance: {uid: fb0208e0, ref: "inspire:2860146", locator: "Table 4, 'Total uncertainty', Inclusive column (σfid = 778 ± 3 (stat.) ± 25 (syst.+stat.) fb, Table 5)", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - {category: background, specific: "Background modelling", size: {range: [2.0, 2.0], unit: "%", asymmetric: false}, provenance: {uid: 71248fa6, ref: "inspire:2860146", locator: "Table 4, 'Background modelling', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+              - {category: energy_scale, specific: "JES/JER", size: {range: [1.3, 1.3], unit: "%", asymmetric: false}, provenance: {uid: 3c919a4f, ref: "inspire:2860146", locator: "Table 4, 'JES/JER', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+              - {category: efficiency, specific: "b-tagging", size: {range: [1.2, 1.2], unit: "%", asymmetric: false}, provenance: {uid: 8ede6a7f, ref: "inspire:2860146", locator: "Table 4, 'b-tagging', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+              - {category: efficiency, specific: "Lepton", size: {range: [0.8, 0.8], unit: "%", asymmetric: false}, provenance: {uid: 2841793c, ref: "inspire:2860146", locator: "Table 4, 'Lepton', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+              - {category: lumi, specific: "Luminosity", size: {range: [0.8, 0.8], unit: "%", asymmetric: false}, provenance: {uid: 9963f7a8, ref: "inspire:2860146", locator: "Table 4, 'Luminosity', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+              - {category: stat, specific: "Data statistical", size: {range: [0.4, 0.4], unit: "%", asymmetric: false}, provenance: {uid: f9f53d56, ref: "inspire:2860146", locator: "Table 4, 'Data statistical', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+              - {category: unfolding_model, specific: "Unfolding", size: {range: [0.34, 0.34], unit: "%", asymmetric: false}, provenance: {uid: 4bf4d138, ref: "inspire:2860146", locator: "Table 4, 'Unfolding', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+              - {category: pileup, specific: "Pile-up", size: {range: [0.19, 0.19], unit: "%", asymmetric: false}, provenance: {uid: 5b56588b, ref: "inspire:2860146", locator: "Table 4, 'Pile-up', Inclusive column", source: agent, status: cross-checked, date: "2026-10-22"}}
+        predictions:
+          - label: "NNLO QCD W + 1 jet (MCFM, N-jettiness), NNPDF3.0nnlo"
+            accuracy:
+              qcd: NNLO
+              approximations: ["fixed order O(αs³): NNLO for the W + ≥ 1 jet rate, N-jettiness slicing with τcut = 10⁻⁴", "μ = (m²ℓν + Σ pT²(jets))^½, scales varied coherently by a factor two; no PDF uncertainty", "non-perturbative effects negligible; an EW-corrected variant (MCFM QCD+EW, 680 fb) applies the Sherpa EWvirt/QCD ratio bin by bin"]
+            codes: ["MCFM"]
+            uncertainties:
+              - category: MHOU
+                specific: "scale variation, inclusive region (σ = 765 fb)"
+                method: "coherent variation of μR and μF by a factor of two, avoiding asymmetric variations"
+                size: {range: [3.4, 3.4], unit: "%", asymmetric: false}
+                provenance: {uid: b5b69d9f, ref: "inspire:2860146", locator: "Table 5, Inclusive block, MCFM: 765 ± 26 (scale) fb; method Sec. 9", source: agent, status: cross-checked, date: "2026-10-22"}
+            compared_to: ["meas:w-jet/lhc-13/atlas-2025-highpt"]
+            refs: ["inspire:1358633", "inspire:2860146"]
+            provenance: {uid: 1cd213b0, ref: "inspire:2860146", locator: "Sec. 9 (MCFM W + 1-jet NNLO, refs [23, 98, 99], N-jettiness τcut, scale and PDF choices, EW extrapolation from Sherpa) and Table 5", source: agent, status: agent-draft, date: "2026-10-22"}
+            headline: true
+          - label: "Sherpa 2.2.11 MEPS@NLO with NLO virtual EW corrections (multiplicative)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              shower_matched: true
+              approximations: ["NLO QCD and NLO EWvirt matrix elements for up to two jets, LO up to five, MEPS@NLO", "NLO EW: virtual corrections only, multiplicative scheme; reduce the inclusive σ by 10–12%", "NNPDF3.0nnlo"]
+            codes: ["Sherpa 2.2.11", "Comix", "OpenLoops"]
+            uncertainties:
+              - category: EW_missing
+                specific: "envelope of additive, multiplicative and exponentiated EW combination schemes, inclusive region"
+                size: {range: [4.4, 4.4], unit: "%", asymmetric: false}
+                provenance: {uid: c9f78db2, ref: "inspire:2860146", locator: "Table 5, Inclusive block, Sherpa 2.2.11 QCD+EW: 733 ± 32 (EW virt) fb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: MHOU
+                specific: "QCD-only Sherpa 2.2.11 scale variation, inclusive region (σ = 823 fb)"
+                method: "7-point variation of μR and μF in matrix element and parton shower by factors 0.5 and 2"
+                size: {range: [25.5, 43.7], unit: "%", asymmetric: true, regions: [{where: "inclusive region, σ = 823 +360/−210 fb", value: "+43.7/−25.5"}]}
+                provenance: {uid: 8c526dcf, ref: "inspire:2860146", locator: "Table 5, Inclusive block, Sherpa 2.2.11: +360 −210 (scale) fb; method Sec. 3", source: agent, status: cross-checked, date: "2026-10-22"}
+            compared_to: ["meas:w-jet/lhc-13/atlas-2025-highpt"]
+            refs: ["inspire:2860146"]
+            provenance: {uid: 0e951b40, ref: "inspire:2860146", locator: "Sec. 3 (Sherpa 2.2.11 configuration and EWvirt schemes); Sec. 9 and Table 5", source: agent, status: cross-checked, date: "2026-10-22"}
+          - label: "MG5_aMC@NLO + Pythia 8, FxFx (NLO up to 3 jets)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO matrix elements for up to three additional jets, FxFx merging", "NNPDF3.1luxQED, Pythia 8.240 A14 tune"]
+            codes: ["MadGraph5_aMC@NLO 2.6.5", "Pythia 8.240"]
+            uncertainties:
+              - category: MHOU
+                specific: "scale variation, inclusive region (σ = 851 fb)"
+                method: "variations of the renormalisation and factorisation scales"
+                size: {range: [10.6, 15.3], unit: "%", asymmetric: true, regions: [{where: "inclusive region, σ = 851 +90/−130 fb", value: "+10.6/−15.3"}]}
+                provenance: {uid: 20624f47, ref: "inspire:2860146", locator: "Table 5, Inclusive block, MadGraph5_aMC@NLO+Pythia8: +90 −130 (scale) fb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: PDF
+                specific: "PDF eigenvector variations, inclusive region"
+                pdf_set: "NNPDF3.1luxQED"
+                size: {range: [0.7, 0.7], unit: "%", asymmetric: false}
+                provenance: {uid: c584a18a, ref: "inspire:2860146", locator: "Table 5, Inclusive block, MadGraph5_aMC@NLO+Pythia8: ±6 (PDF) fb on 851 fb", source: agent, status: cross-checked, date: "2026-10-22"}
+            compared_to: ["meas:w-jet/lhc-13/atlas-2025-highpt"]
+            refs: ["inspire:2860146"]
+            provenance: {uid: b74e5543, ref: "inspire:2860146", locator: "Sec. 3 (MG5_aMC@NLO FxFx sample) and Table 5", source: agent, status: cross-checked, date: "2026-10-22"}
   - id: "chan:w-jet/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"

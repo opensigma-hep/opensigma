@@ -2,7 +2,9 @@ import { parseHash, toHash } from './router.js';
 import * as families from './views/families.js';
 import * as family from './views/family.js';
 import * as notfound from './views/notfound.js';
-import * as placeholder from './views/placeholder.js';
+import * as collider from './views/collider.js';
+import * as lists from './views/lists.js';
+import * as insights from './views/insights.js';
 import * as observable from './views/observable.js';
 import * as channel from './views/channel.js';
 import * as process from './views/process.js';
@@ -10,15 +12,18 @@ import * as amplitude from './views/amplitude.js';
 import * as parameter from './views/parameter.js';
 import * as about from './views/about.js';
 import * as search from './views/search.js';
-import { copyButton } from './leaf.js';
+import { copyButton, label } from './leaf.js';
 import { releaseBibtex } from './bibtex.js';
 
-// Later tasks replace the placeholder entries.
 const views = {
   families, notfound,
   family, process, channel, observable, amplitude, parameter, about,
-  search, collider: placeholder,
+  search, collider, amplitudes: { render: lists.amplitudes }, parameters: { render: lists.parameters },
+  gaps: { render: insights.gaps }, 'next-run': { render: insights.nextRun }, timeline: { render: insights.timeline },
 };
+
+const TITLES = { about: 'About', amplitudes: 'Amplitude library', parameters: 'Parameters', gaps: 'Gap finder',
+  'next-run': 'Next-run ranking', timeline: 'Theory progress' };
 
 const THEME_KEY = 'opensigma-theme';
 const root = document.documentElement;
@@ -85,7 +90,8 @@ function route() {
   const r = parseHash(location.hash, data.derived.aliases, idset, data.derived.parents);
   if (r.redirected) history.replaceState(null, '', toHash(r.id));
   views[r.view].render(main, data, r);
-  document.title = (r.id ?? r.q ?? r.view) + ' · OpenSigma';
+  document.title = (r.id ? label(data, r.id) : r.q ?? TITLES[r.view] ?? r.view) + ' · OpenSigma';
+  for (const a of document.querySelectorAll('header nav a')) a.toggleAttribute('aria-current', a.hash === '#/' + r.view);
   if (r.view === 'families') document.title = 'OpenSigma';
   if (!first) main.focus({ preventScroll: true });
   first = false;

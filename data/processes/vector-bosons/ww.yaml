@@ -38,7 +38,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:ww/lhc-13/sigma-tot", region: "Total inclusive pp → W⁺W⁻, 13 TeV (extrapolated to the full phase space)"}
     measurements:
       - id: "meas:ww/lhc-13/cms-2020-tot"
@@ -312,6 +312,17 @@ channels:
             compared_to: ["meas:ww/lhc-13/atlas-2019-fid"]
             refs: ["inspire:1734263", "inspire:1636973"]
             provenance: {uid: 55b7ee1a, ref: "inspire:1734263", locator: "Sec. 8, Table 5", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "NNLO+PS with NNLL′ jet-veto resummation (Geneva + SCETlib + Pythia8), qq̄ + gg × k-factor"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "NNLL′", variable: "pT of the hardest jet (jet veto)"}]
+              shower_matched: true
+              approximations: ["NNLO+PS for qq̄ → W⁺W⁻ → eμνν with p_T(j1) as resolution variable (NLL′ for the second jet)", "loop-induced gg channel only at LO, multiplied by the inclusive NLO k-factor 1.7 of the ATLAS analysis", "no EW corrections", "formal logarithmic accuracy after showering not claimed", "nf = 4 scheme, MSHT20nnlo_nf4", "compared as a function of the veto scale in Fig. 7 only; no integrated number quoted"]
+            codes: ["Geneva", "SCETlib", "Pythia8"]
+            uses_amplitudes: ["amp:2L/qqbar-VV"]
+            compared_to: ["meas:ww/lhc-13/atlas-2019-fid", "meas:ww/lhc-13/cms-2020-tot"]
+            refs: ["inspire:2690111"]
+            provenance: {uid: fdccaf65, ref: "inspire:2690111", locator: "Abstract; Sec. 2.3 (NNLL′ jet-veto resummation); Sec. 4.6, Table 2 (ATLAS/CMS fiducial regions) and Fig. 7 (exclusive 0-jet cross section vs pT^cut against ATLAS and CMS 13 TeV data; gg rescaled by k = 1.7)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: obs:ww/lhc-13/sigma-fid-incl
         name: Fiducial σ(pp → W⁺W⁻ → eμνν), jet-inclusive
         kind: fiducial

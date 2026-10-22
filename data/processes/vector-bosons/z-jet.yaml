@@ -74,6 +74,12 @@ building_blocks:
         provenance: {uid: e7b996a7, ref: "inspire:2739971", locator: "Abstract (bosonic contribution to the two-loop mixed QCD-electroweak amplitudes for Z + jet, evaluated numerically on a grid in rapidity and transverse momentum of the Z)", source: agent, status: cross-checked, date: "2026-10-18"}
   - row: "N3LO QCD"
     cells:
+      2L:
+        status: done
+        approximations: ["two-loop amplitudes to O(ε²) and one-loop to O(ε⁴) in massless QCD, as needed by the three-loop finite remainder"]
+        amplitude: "amp:2L/qqbar-Vg-eps2-axial"
+        refs: ["inspire:2669874"]
+        provenance: {uid: 112ab473, ref: "inspire:2669874", locator: "Abstract and Sec. 7 (two-loop QCD amplitudes for V = Z, W±, γ* + jet, qq̄ → Vg, qg → Vq, gg → Vg incl. axial-vector singlet; renormalised helicity coefficients to O(ε⁴) at one loop and O(ε²) at two loops in the ancillary files, 'an essential ingredient for the N3LO V+jet amplitudes')", source: agent, status: cross-checked, date: "2026-10-22"}
       3L:
         status: partial
         approximations: ["planar (leading-colour) contributions only"]
@@ -85,7 +91,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:z-jet/lhc-13/sigma-ge1j", region: "Fiducial σ(Z/γ*(→ ℓℓ) + ≥ 1 jet), jets anti-kt R = 0.4, pT > 30 GeV, |y| < 2.5 (ATLAS) or 2.4 (CMS); 71 < mℓℓ < 111 GeV"}
     measurements:
       - id: "meas:z-jet/lhc-13/atlas-2017-ge1j"
@@ -98,6 +104,26 @@ channels:
         dataset: "13 TeV, 2.19 fb⁻¹ (2015), e and μ channels combined"
         ref: "inspire:1667854"
         hepdata: "hepdata:ins1667854/Table 2a"
+      - id: "meas:z-jet/lhc-13/cms-2023-diff-36fb"
+        experiment: "CMS"
+        dataset: "13 TeV, 35.9 fb⁻¹ (2016), e and μ channels combined"
+        ref: "inspire:2078067"
+        hepdata: "hepdata:ins2078067/Table 3a"
+      - id: "meas:z-jet/lhc-13/cms-2023-azimuthal"
+        experiment: "CMS"
+        dataset: "13 TeV, 36.3 fb⁻¹ (2016), e and μ channels combined (BLUE)"
+        ref: "inspire:2172990"
+        hepdata: "hepdata:ins2172990/Table 10"
+      - id: "meas:z-jet/lhc-13/cms-2026-triple-diff"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (2016–2018), μμ channel"
+        ref: "inspire:3210105"
+        hepdata: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05"
+      - id: "meas:z-jet/lhc-13/atlas-2023-highpt"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (2015–2018), e and μ channels combined (BLUE)"
+        ref: "inspire:2077570"
+        hepdata: "hepdata:ins2077570/Table 4"
     observables:
       - id: "obs:z-jet/lhc-13/sigma-ge1j"
         name: "Fiducial σ(Z/γ* + ≥ 1 jet)"
@@ -205,6 +231,253 @@ channels:
             compared_to: ["meas:z-jet/lhc-13/atlas-2017-ge1j", "meas:z-jet/lhc-13/cms-2018-ge1j"]
             refs: ["inspire:1514251", "inspire:1667854"]
             provenance: {uid: 73de74c8, ref: "inspire:1667854", locator: "Sec. 4 (second calculation: MEs at NLO for Z + N jets, N = 0..2, FxFx merging scale 30 GeV); ATLAS inspire:1514251 Sec. 3.2 (FxFx, matching scale 25 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:z-jet/lhc-13/sigma-highpt"
+        name: "Fiducial σ(Z + jets), leading jet pT ≥ 500 GeV"
+        kind: fiducial
+        variable: "σ(Z/γ*(→ ℓℓ) + ≥ 1 jet) with pT(j1) ≥ 500 GeV (ATLAS high-pT region), particle level, dressed leptons, 71 ≤ mℓℓ ≤ 111 GeV, anti-kt R = 0.4 jets pT ≥ 100 GeV, |y| < 2.5"
+        results:
+          - measurement: "meas:z-jet/lhc-13/atlas-2023-highpt"
+            total: {value_pct: 5.3, provenance: {uid: 9d135fdc, ref: "inspire:2077570", locator: "Table 3, 'Total uncertainty', High-pT column (σ = 72.3 ± 1.5 (stat) ± 3.5 (syst) fb, Table 4)", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Data stat. uncertainty"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                provenance: {uid: 4640b713, ref: "inspire:2077570", locator: "Table 3, 'Data stat. uncertainty', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: energy_scale
+                specific: "JES/JER"
+                size: {range: [3.2, 3.2], unit: "%", asymmetric: false}
+                provenance: {uid: d36b16e0, ref: "inspire:2077570", locator: "Table 3, 'JES/JER', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: background
+                specific: "Background modelling"
+                size: {range: [2.0, 2.0], unit: "%", asymmetric: false}
+                provenance: {uid: c09f2085, ref: "inspire:2077570", locator: "Table 3, 'Background modelling', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
+                provenance: {uid: 4d543e66, ref: "inspire:2077570", locator: "Table 3, 'Luminosity', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: efficiency
+                specific: "Lepton"
+                size: {range: [1.6, 1.6], unit: "%", asymmetric: false}
+                provenance: {uid: eacad2f3, ref: "inspire:2077570", locator: "Table 3, 'Lepton', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: unfolding_model
+                specific: "Signal modelling"
+                size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
+                provenance: {uid: 55b67ff4, ref: "inspire:2077570", locator: "Table 3, 'Signal modelling', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: unfolding_model
+                specific: "Unfolding"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: b06a400b, ref: "inspire:2077570", locator: "Table 3, 'Unfolding', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: pileup
+                specific: "Pile-up"
+                size: {range: [0.4, 0.4], unit: "%", asymmetric: false}
+                provenance: {uid: 141c2eee, ref: "inspire:2077570", locator: "Table 3, 'Pile-up', High-pT column", source: agent, status: cross-checked, date: "2026-10-22"}
+        predictions:
+          - label: "NNLO QCD Z + jet (NNLOjet), NNPDF3.1nnlo"
+            accuracy:
+              qcd: NNLO
+              approximations: ["fixed order O(αs³): NNLO for the Z + ≥ 1 jet rate", "pure QCD at parton level, Born-to-dressed-lepton and overlap-removal scale factors applied; no PDF uncertainty", "μ0 = ½(ET,Z + Σ pT,partons); non-perturbative corrections consistent with zero for pT(j1) > 100 GeV"]
+            codes: ["NNLOjet"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            uncertainties:
+              - category: MHOU
+                specific: "QCD scale variations, high-pT region (σ = 76 fb)"
+                method: "envelope of μR, μF variations by factors of two with 0.5 ≤ μR/μF ≤ 2"
+                size: {range: [13.2, 15.8], unit: "%", asymmetric: true, regions: [{where: "pT(j1) ≥ 500 GeV, σ = 76 +10/−12 fb", value: "+13.2/−15.8"}]}
+                provenance: {uid: e9748e60, ref: "inspire:2077570", locator: "Table 4, High-pT block, NNLOjet@NNLO: 76 +10 −12 (Scale) fb; method Sec. 7", source: agent, status: cross-checked, date: "2026-10-22"}
+            compared_to: ["meas:z-jet/lhc-13/atlas-2023-highpt"]
+            refs: ["inspire:1382345", "inspire:2077570"]
+            provenance: {uid: b99ec0ed, ref: "inspire:2077570", locator: "Sec. 3 (NNLOjet@NNLO sample, NNPDF3.1nnlo, central scale, scale factors) and Table 4 (High-pT region)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
+          - label: "Sherpa 2.2.11 MEPS@NLO with NLO virtual EW corrections"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              shower_matched: true
+              approximations: ["NLO QCD matrix elements for up to two partons, LO up to five, MEPS@NLO", "NLO EW: virtual corrections only (additive scheme nominal), no EW parton shower", "NNPDF3.0nnlo"]
+            codes: ["Sherpa 2.2.11", "Comix", "OpenLoops"]
+            uncertainties:
+              - category: MHOU
+                specific: "QCD scale variations, high-pT region (σ = 69 fb)"
+                method: "envelope of μR, μF variations by factors of two with 0.5 ≤ μR/μF ≤ 2"
+                size: {range: [24.6, 40.6], unit: "%", asymmetric: true, regions: [{where: "pT(j1) ≥ 500 GeV, σ = 69 +28/−17 fb", value: "+40.6/−24.6"}]}
+                provenance: {uid: cc69d301, ref: "inspire:2077570", locator: "Table 4, High-pT block, Sherpa 2.2.11: +28 −17 (Scale) fb on 69 fb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: PDF
+                specific: "PDF variations, high-pT region"
+                pdf_set: "NNPDF3.0nnlo"
+                size: {range: [1.4, 2.9], unit: "%", asymmetric: true, regions: [{where: "pT(j1) ≥ 500 GeV", value: "+2.9/−1.4"}]}
+                provenance: {uid: bcf28c54, ref: "inspire:2077570", locator: "Table 4, High-pT block, Sherpa 2.2.11: +2 −1 (PDF) fb on 69 fb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: EW_missing
+                specific: "envelope of additive, multiplicative and exponentiated EW combination schemes"
+                size: {range: [2.9, 2.9], unit: "%", asymmetric: false}
+                provenance: {uid: cf105701, ref: "inspire:2077570", locator: "Table 4, High-pT block, Sherpa 2.2.11: ±2 (EW) fb on 69 fb; schemes Sec. 3", source: agent, status: cross-checked, date: "2026-10-22"}
+            compared_to: ["meas:z-jet/lhc-13/atlas-2023-highpt"]
+            refs: ["inspire:2077570"]
+            provenance: {uid: c1966192, ref: "inspire:2077570", locator: "Sec. 3 (Sherpa 2.2.11 configuration, NLO virtual EW) and Table 4", source: agent, status: cross-checked, date: "2026-10-22"}
+          - label: "MG5_aMC@NLO + Pythia 8, FxFx (NLO up to 3 jets)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO matrix elements for up to three additional partons, FxFx merging", "NNPDF3.1nnlo, Pythia 8.240 A14 tune"]
+            codes: ["MadGraph5_aMC@NLO 2.6.5", "Pythia 8.240"]
+            uncertainties:
+              - category: MHOU
+                specific: "QCD scale variations, high-pT region (σ = 78 fb)"
+                method: "envelope of μR, μF variations by factors of two with 0.5 ≤ μR/μF ≤ 2"
+                size: {range: [11.5, 15.4], unit: "%", asymmetric: true, regions: [{where: "pT(j1) ≥ 500 GeV, σ = 78 +9/−12 fb", value: "+11.5/−15.4"}]}
+                provenance: {uid: 56fc7a23, ref: "inspire:2077570", locator: "Table 4, High-pT block, MG5_aMC+Py8 FxFx: +9 −12 (Scale) fb on 78 fb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: PDF
+                specific: "PDF variations, high-pT region"
+                pdf_set: "NNPDF3.1nnlo"
+                size: {range: [1.3, 5.1], unit: "%", asymmetric: true, regions: [{where: "pT(j1) ≥ 500 GeV", value: "+5.1/−1.3"}]}
+                provenance: {uid: 11a84e07, ref: "inspire:2077570", locator: "Table 4, High-pT block, MG5_aMC+Py8 FxFx: +4 −1 (PDF) fb on 78 fb", source: agent, status: cross-checked, date: "2026-10-22"}
+            compared_to: ["meas:z-jet/lhc-13/atlas-2023-highpt"]
+            refs: ["inspire:2077570"]
+            provenance: {uid: 3c3fad47, ref: "inspire:2077570", locator: "Sec. 3 (MG5_aMC+Py8 FxFx sample) and Table 4", source: agent, status: cross-checked, date: "2026-10-22"}
+      - id: "obs:z-jet/lhc-13/ptj1"
+        name: "dσ/dpT(j1), Z + ≥ 1 jet"
+        kind: differential
+        variable: "leading-jet pT, 30–1500 GeV, Z/γ*(→ ee, μμ) + ≥ 1 jet; dressed leptons pT > 30 (20) GeV, |η| < 2.4, mℓℓ = 91 ± 20 GeV; anti-kt R = 0.4 jets pT > 30 GeV, |y| < 2.4, ΔR(ℓ, j) > 0.4"
+        results:
+          - measurement: "meas:z-jet/lhc-13/cms-2023-diff-36fb"
+            total: {value_pct: 3.5, provenance: {uid: 4e41a841, ref: "hepdata:ins2078067/Table 3a", locator: "Table 3a, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "stat, Stat."
+                size: {range: [0.12, 11], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2078067/Table 3a"
+                provenance: {uid: 4e865a63, ref: "hepdata:ins2078067/Table 3a", locator: "Table 3a, dependent variable 'stat, Stat.' (%), range over the 15 pT(j1) bins 30–1500 GeV", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: energy_scale
+                specific: "sys, JES"
+                size: {range: [1.2, 6.8], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2078067/Table 3a"
+                provenance: {uid: 39f52703, ref: "hepdata:ins2078067/Table 3a", locator: "Table 3a, dependent variable 'sys, JES' (%), range over the 15 pT(j1) bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: lumi
+                specific: "sys, Lumi"
+                size: {range: [2.4, 2.8], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2078067/Table 3a"
+                provenance: {uid: eca031bb, ref: "hepdata:ins2078067/Table 3a", locator: "Table 3a, dependent variable 'sys, Lumi' (%), range over the 15 pT(j1) bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: unfolding_model
+                specific: "sys, Unf. sys."
+                size: {range: [0.25, 2.7], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2078067/Table 3a"
+                provenance: {uid: 2c77e0bc, ref: "hepdata:ins2078067/Table 3a", locator: "Table 3a, dependent variable 'sys, Unf. sys.' (%), range over the 15 pT(j1) bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: pileup
+                specific: "sys, Pileup"
+                size: {range: [0.049, 1.4], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2078067/Table 3a"
+                provenance: {uid: f591490b, ref: "hepdata:ins2078067/Table 3a", locator: "Table 3a, dependent variable 'sys, Pileup' (%), range over the 15 pT(j1) bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: efficiency
+                specific: "sys, Eff."
+                size: {range: [0.0, 1.1], unit: "%", asymmetric: false}
+                full_table: "hepdata:ins2078067/Table 3a"
+                provenance: {uid: 4584e1e3, ref: "hepdata:ins2078067/Table 3a", locator: "Table 3a, dependent variable 'sys, Eff.' (%), range over the 15 pT(j1) bins", source: agent, status: cross-checked, date: "2026-10-22"}
+        predictions:
+          - label: "MG5_aMC@NLO + Pythia 8, FxFx (NLO up to 2 jets)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO matrix elements for Z + 0, 1, 2 jets, FxFx merging scale 30 GeV", "NNPDF 3.0 NLO, Pythia 8.212 CUETP8M1 tune"]
+            codes: ["MadGraph5_aMC@NLO 2.2.2", "Pythia 8.212"]
+            compared_to: ["meas:z-jet/lhc-13/cms-2023-diff-36fb"]
+            refs: ["inspire:2078067"]
+            provenance: {uid: 674a0638, ref: "inspire:2078067", locator: "Sec. 6 (NLO MG5_aMC prediction); Sec. 10 and Fig. 6 (jet pT comparisons)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
+          - label: "GENEVA 1.0-RC3 (NNLO Drell–Yan + NNLL′τ) + Pythia 8"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NNLL′", variable: "0-jettiness τ (beam thrust)"}]
+              shower_matched: true
+              approximations: ["NNLO for inclusive Drell–Yan, hence NLO for the Z + ≥ 1 jet leading-jet pT distribution (effectively LO at two jets)", "NNPDF3.1 NNLO, αs(mZ) = 0.118"]
+            codes: ["GENEVA 1.0-RC3", "Pythia 8"]
+            compared_to: ["meas:z-jet/lhc-13/cms-2023-diff-36fb"]
+            refs: ["inspire:2078067"]
+            provenance: {uid: 663d858e, ref: "inspire:2078067", locator: "Sec. 6 (GENEVA description, NNLL′τ); Sec. 10 (GENEVA effectively LO at two jets, compared for ≥ 1 and ≥ 2 jets; good agreement for leading-jet pT)", source: agent, status: cross-checked, date: "2026-10-22"}
+      - id: "obs:z-jet/lhc-13/dphi-zj1"
+        name: "dσ/dΔφ(Z, j1), pT(Z) > 100 GeV"
+        kind: differential
+        variable: "azimuthal separation between the Z boson and the leading jet for pT(Z) > 100 GeV; dressed leptons pT > 25 (20) GeV, |η| < 2.4, 76 < mℓℓ < 106 GeV; anti-kt R = 0.4 jets pT > 30 GeV, |η| < 2.4, ΔR(ℓ, j) > 0.4"
+        results:
+          - measurement: "meas:z-jet/lhc-13/cms-2023-azimuthal"
+            total: {value_pct: 2.1, provenance: {uid: '249771e2', ref: "hepdata:ins2172990/Table 10", locator: "Table 10, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+            uncertainties:
+              - {category: stat, specific: "stat", size: {range: [0.19, 1.2], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: 3661a339, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: energy_scale, specific: "JES", size: {range: [0.053, 1.2], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: d085c481, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'JES'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: energy_scale, specific: "JER", size: {range: [0.0067, 0.51], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: c7228cf8, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'JER'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: energy_scale, specific: "LES", size: {range: [0.68, 1.1], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: d22d48c2, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'LES'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: efficiency, specific: "Eff", size: {range: [0.77, 0.89], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: 027ccf69, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'Eff'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: efficiency, specific: "Pref", size: {range: [0.13, 1.6], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: 429dc54e, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'Pref'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: lumi, specific: "Lumi", size: {range: [1.2, 1.2], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: aedb4181, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'Lumi'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: background, specific: "Bkg", size: {range: [0.038, 0.44], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: 50dd27e6, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'Bkg'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: pileup, specific: "PU", size: {range: [0.12, 0.67], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: d2698d7b, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'PU'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: unfolding_model, specific: "Unf model", size: {range: [0.54, 3.2], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: e9d0c6ac, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'Unf model'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: unfolding_model, specific: "Unf stat", size: {range: [0.51, 3.1], asymmetric: false}, full_table: "hepdata:ins2172990/Table 10", provenance: {uid: 0077f354, ref: "hepdata:ins2172990/Table 10", locator: "Table 10, error 'Unf stat'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+        predictions:
+          - label: "MG5_aMC@NLO + Pythia 8, FxFx (NLO up to 2 jets), with MPI"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO matrix elements for Z + 0, 1, 2 jets, FxFx merging scale 30 GeV: Δφ(Z, j1) ≠ π starts at Z + 2 partons, so NLO for this distribution", "NNPDF 3.0 NLO, Pythia 8.212 CUETP8M1 tune with MPI"]
+            codes: ["MadGraph5_aMC@NLO 2.2.2", "Pythia 8.212"]
+            compared_to: ["meas:z-jet/lhc-13/cms-2023-azimuthal"]
+            refs: ["inspire:2172990"]
+            provenance: {uid: 5d9025ff, ref: "inspire:2172990", locator: "Sec. 3 (MG5_aMC+PY8 (≤ 2j NLO), Table 1); Sec. 5 and Fig. 5 (Δφ(Z, j1) comparison with and without MPI)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
+          - label: "MG5_aMC@NLO + CASCADE3 (Z + 2 partons NLO, PB-TMD PDFs and TMD shower)"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO for Z + 2 partons (pT > 15 GeV), hence NLO for Δφ(Z, j1) away from π; the region Δφ → π is not accessible", "PB-NLO-HERAI+II-2018 set 2 TMD PDFs with PB initial-state shower (CASCADE3), FSR and hadronisation from Pythia 6, no MPI", "normalised by an overall factor 1.2"]
+            codes: ["MadGraph5_aMC@NLO 2.6.9", "CASCADE 3.2.1", "Pythia 6.428"]
+            compared_to: ["meas:z-jet/lhc-13/cms-2023-azimuthal"]
+            refs: ["inspire:2172990"]
+            provenance: {uid: d6a47879, ref: "inspire:2172990", locator: "Sec. 3 (MG5_aMC+CA3 (Z+2 NLO) description, normalisation factor 1.2); Sec. 5 and Fig. 6 (agreement at high pT(Z), Δφ → π not accessible)", source: agent, status: cross-checked, date: "2026-10-22"}
+      - id: "obs:z-jet/lhc-13/ptz-ystar-yb"
+        name: "d³σ/(dpT(Z) dy* dyb), Z + jet triple-differential"
+        kind: differential
+        variable: "Z boson pT in bins of y* = ½|yZ − yj1| and yb = ½|yZ + yj1|; headline table 0 < yb < 0.5, 0 < y* < 0.5, pT(Z) 25–1000 GeV; muons pT > 29 GeV, |η| < 2.4, |mμμ − mZ| < 20 GeV, pT(Z) > 25 GeV; leading jet pT > 20 GeV, |y| < 2.4"
+        results:
+          - measurement: "meas:z-jet/lhc-13/cms-2026-triple-diff"
+            total: {value_pct: 1.6, provenance: {uid: 93fcfb6b, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+            uncertainties:
+              - {category: stat, specific: "stat,Stat", size: {range: [0.29, 2.1], asymmetric: false}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 24a7ea80, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'stat,Stat'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: efficiency, specific: "sys,-eff_j_PUJetID_down,+eff_j_PUJetID_up", size: {range: [0.74, 1.1], asymmetric: true}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: f2cac6af, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,-eff_j_PUJetID_down,+eff_j_PUJetID_up'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: energy_scale, specific: "sys,-scale_j_FlavorQCD_down,+scale_j_FlavorQCD_up", size: {range: [0.01, 4.9], asymmetric: true}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 7885a815, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,-scale_j_FlavorQCD_down,+scale_j_FlavorQCD_up'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: energy_scale, specific: "sys,-scale_j_PileUpDataMC_correlated_down,+scale_j_PileUpDataMC_correlated_up", size: {range: [0.0094, 3.2], asymmetric: true}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 76ef4dbb, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,-scale_j_PileUpDataMC_correlated_down,+scale_j_PileUpDataMC_correlated_up'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: unfolding_model, specific: "sys,unfolding_model", size: {range: [0.005, 1.4], asymmetric: false}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 0f29fb01, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,unfolding_model'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: unfolding_model, specific: "sys,unfolding_stat", size: {range: [0.12, 0.36], asymmetric: false}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 58d61721, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,unfolding_stat'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: background, specific: "sys,-bkg_gen_down,+bkg_gen_up", size: {range: [0.11, 1.1], asymmetric: true}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 4d0bd955, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,-bkg_gen_down,+bkg_gen_up'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: lumi, specific: "sys,-lumi_13TeV_15161718_down,+lumi_13TeV_15161718_up", size: {range: [0.62, 0.7], asymmetric: true}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 798a4500, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,-lumi_13TeV_15161718_down,+lumi_13TeV_15161718_up'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+              - {category: pileup, specific: "sys,-pileup_down,+pileup_up", size: {range: [0.046, 0.55], asymmetric: true}, full_table: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", provenance: {uid: 55c84ec7, ref: "hepdata:ins3210105/CrossSection_ZpT_YB_00_05_YS_00_05", locator: "CrossSection_ZpT_YB_00_05_YS_00_05, error 'sys,-pileup_down,+pileup_up'", source: hepdata, status: machine-verified, date: "2026-10-22"}}
+        predictions:
+          - label: "NNLO QCD (NNLOJET via APPLfast) × NLO EW (MG5_aMC) × NP, PDF4LHC21"
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations: ["fixed order O(αs³ α²): NNLO for Z + jet; NLO EW O(αs α³) from MG5_aMC@NLO 3.7.0 combined multiplicatively, half the multiplicative−additive difference (up to 4% at high pT(Z)) as uncertainty; no mixed O(αs² α³) terms", "NP correction factors from Herwig 7 and Sherpa (envelope, arXiv:2412.19694)", "PDF4LHC21 NNLO; data exceed the prediction by up to 12% in the central (yb, y*) region"]
+            codes: ["NNLOJET", "APPLfast", "fastNLO", "MadGraph5_aMC@NLO 3.7.0"]
+            uses_amplitudes: ["amp:2L/qqbar-Vg"]
+            compared_to: ["meas:z-jet/lhc-13/cms-2026-triple-diff"]
+            refs: ["inspire:1382345", "inspire:3210105"]
+            provenance: {uid: 6ab362c5, ref: "inspire:3210105", locator: "Sec. 7 (eqs. (5)–(8): NNLOJET via APPLfast, NLO EW from MG5_aMC 3.7.0, multiplicative combination, NP from Ref. [82]; Fig. 5 caption PDF4LHC21); Sec. 8 and Figs. 8–9 (comparison, up to 12% underestimate in the central region)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
+          - label: "POWHEG MiNNLOPS + Pythia 8 + PHOTOS"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NNLO for inclusive Drell–Yan, NLO in the one-jet phase space", "PDF4LHC21 NLO"]
+            codes: ["POWHEG MiNNLOPS", "Pythia 8", "PHOTOS 3.64"]
+            compared_to: ["meas:z-jet/lhc-13/cms-2026-triple-diff"]
+            refs: ["inspire:3210105"]
+            provenance: {uid: f9d9ec15, ref: "inspire:3210105", locator: "Sec. 5 (MiNNLOPS: NNLO for zero-jet DY, NLO in the one-jet phase space); Sec. 8 and Fig. 7 (somewhat better description of high y*)", source: agent, status: cross-checked, date: "2026-10-22"}
+          - label: "MG5_aMC@NLO FxFx + Pythia 8"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["NLO in the one-jet phase space, FxFx merging", "PDF4LHC15 NLO"]
+            codes: ["MadGraph5_aMC@NLO", "Pythia 8"]
+            compared_to: ["meas:z-jet/lhc-13/cms-2026-triple-diff"]
+            refs: ["inspire:3210105"]
+            provenance: {uid: a92609e3, ref: "inspire:3210105", locator: "Sec. 8 and Fig. 7 (MG5_aMC@NLO FxFx + Pythia8, NLO accuracy in the one-jet phase space, PDF4LHC15)", source: agent, status: cross-checked, date: "2026-10-22"}
   - id: "chan:z-jet/tevatron-1960"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"

@@ -1,6 +1,7 @@
 """Summarise HEPData table errors into schema-valid `uncertainty_exp` snippets (no uid: scripts.assign_uids adds it)."""
 import re
 import subprocess
+import time
 import urllib.parse
 from datetime import date
 
@@ -9,8 +10,12 @@ from ruamel.yaml.error import YAMLError
 
 
 # HEPData's Cloudflare returns 403 to urllib (even with an honest UA) but 200 to curl: all HEPData HTTP goes through curl.
-def curl_get(url: str, run=subprocess.run) -> str:
-    r = run(["curl", "-sSfL", "--max-time", "60", url], capture_output=True, text=True)
+def curl_get(url: str, run=subprocess.run, sleep=time.sleep) -> str:
+    for wait in (30, 60, 120, None):  # 429 = throttled (60 requests/min), not broken: back off and retry
+        r = run(["curl", "-sSfL", "--max-time", "60", url], capture_output=True, text=True)
+        if not (r.returncode and "429" in r.stderr) or wait is None:
+            break
+        sleep(wait)
     if r.returncode:
         raise OSError(f"curl {url} failed ({r.returncode}): {r.stderr.strip()}")
     return r.stdout

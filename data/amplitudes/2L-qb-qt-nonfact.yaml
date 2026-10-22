@@ -1,0 +1,15 @@
+id: "amp:2L/qb-qt-nonfact"
+process: "proc:t-channel-single-top"
+loops: 2
+corrections: QCD
+status: done
+approximations: ["non-factorisable (colour-suppressed) part only, interactions between the light- and heavy-quark lines (inspire:2066227 abstract)", "q b → q′ t channel computed, q̄ b → q̄′ t obtained by crossing (inspire:2066227 Sec. 4.2)"]
+master_integrals:
+  status: done
+  refs: ["inspire:1908346"]
+evaluation:
+  kind: semi-analytic
+  detail: "analytic reduction to master integrals; masters evaluated numerically with the auxiliary mass flow method; results on a phase-space grid"
+  provenance: {uid: 62e63a7a, ref: "inspire:1908346", locator: "Abstract (analytic reduction to master integrals and the auxiliary mass flow method for their fast numerical evaluation); inspire:2066227 Sec. 4.2 (results obtained numerically for a fixed grid of phase-space points)", source: agent, status: cross-checked, date: "2026-10-22"}
+refs: ["inspire:1908346"]
+provenance: {uid: 982557c1, ref: "inspire:1908346", locator: "Abstract (non-factorisable contribution to the two-loop helicity amplitude for t-channel single-top production, the last missing piece of the two-loop virtual corrections)", source: agent, status: cross-checked, date: "2026-10-22"}

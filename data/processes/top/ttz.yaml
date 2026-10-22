@@ -37,7 +37,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:ttz/lhc-13/sigma-tot", region: "inclusive σ(tt̄Z), on-shell Z (70 < m_ff < 110 GeV), mt = 172.5 GeV"}
     measurements:
       - id: "meas:ttz/lhc-13/atlas-2024-multilepton"
@@ -49,6 +49,11 @@ channels:
         experiment: "CMS"
         dataset: "13 TeV, 77.5 fb⁻¹ (2016–2017), 3ℓ + 4ℓ"
         ref: "inspire:1746445"
+      - id: "meas:ttz/lhc-13/cms-2024-multilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (2016–2018), ≥ 3ℓ; tt̄Z and tWZ measured together"
+        ref: "inspire:2844499"
+        hepdata: "hepdata:ins2844499/ZPt_normalized_ttZtWZ"
     observables:
       - id: "obs:ttz/lhc-13/sigma-tot"
         name: "Inclusive σ(tt̄Z)"
@@ -138,3 +143,56 @@ channels:
             compared_to: ["meas:ttz/lhc-13/cms-2019-multilepton"]
             refs: ["inspire:1746445", "inspire:1359461", "inspire:1670211"]
             provenance: {uid: cb1eea12, ref: "inspire:1746445", locator: "Sec. 3 (theoretical prediction computed at NLO QCD and EW accuracy with MadGraph5_aMC@NLO, Refs. [29-31] = Handbook of LHC Higgs cross sections 4, Frixione et al. 1504.03446, Frederix et al. 1804.10017)", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:ttz/lhc-13/sigma-ttz-twz"
+        name: "Inclusive σ(tt̄Z + tWZ)"
+        kind: total
+        variable: "σ(tt̄Z + tWZ), 70 < mℓℓ < 110 GeV (resonant and non-resonant ℓ+ℓ−)"
+        results:
+          - measurement: "meas:ttz/lhc-13/cms-2024-multilepton"
+            total: {value_pct: 6.1, provenance: {uid: 4fcaf3b2, ref: "inspire:2844499", locator: "Abstract and Summary: σ(tt̄Z + tWZ) = 1.14 ± 0.07 pb; 0.07/1.14 (Sec. 6: 1.14 ± 0.05 (stat) ± 0.04 (syst) pb)", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [4.4, 4.4], asymmetric: false}
+                provenance: {uid: 5f0e9802, ref: "inspire:2844499", locator: "Sec. 6: ± 0.05 (stat) pb of 1.14 pb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [3.5, 3.5], asymmetric: false}
+                provenance: {uid: 36d40b8c, ref: "inspire:2844499", locator: "Sec. 6: ± 0.04 (syst) pb of 1.14 pb", source: agent, status: cross-checked, date: "2026-10-22"}
+        predictions:
+          - label: "NLO QCD (MadGraph5_aMC@NLO signal generator), CMS 2024 comparison"
+            accuracy:
+              qcd: NLO
+              approximations: ["σ(tt̄Z) = 0.84 ± 0.08 pb and σ(tWZ) = 0.14 ± 0.01 pb from the signal generators; measured μ(tt̄Z + tWZ) = 1.17 ± 0.07"]
+            codes: ["MadGraph5_aMC@NLO"]
+            compared_to: ["meas:ttz/lhc-13/cms-2024-multilepton"]
+            refs: ["inspire:2844499"]
+            provenance: {uid: 1493af70, ref: "inspire:2844499", locator: "Sec. 3 (tt̄Z and tWZ generated at NLO with MG5_aMC@NLO v2.6.5) and Sec. 6 (predicted cross sections in the 70 < mℓℓ < 110 GeV phase space)", source: agent, status: cross-checked, date: "2026-10-22"}
+      - id: "obs:ttz/lhc-13/pt-z"
+        name: "Normalised 1/σ dσ/dpT(Z), tt̄Z + tWZ, ≥ 3ℓ"
+        kind: differential
+        variable: "pT(Z)"
+        results:
+          - measurement: "meas:ttz/lhc-13/cms-2024-multilepton"
+            total:
+              value_pct: 8.1
+              provenance: {uid: 9e3cfdc4, ref: "hepdata:ins2844499/ZPt_normalized_ttZtWZ", locator: "ZPt_normalized_ttZtWZ, quadrature sum of all errors (bin 2, 50 < pT(Z) < 100 GeV)", source: hepdata, status: machine-verified, date: "2026-10-22"}
+            uncertainties:
+              - category: syst_combined
+                specific: syst
+                size: {range: [2.5, 5.5], asymmetric: true}
+                full_table: "hepdata:ins2844499/ZPt_normalized_ttZtWZ"
+                provenance: {uid: '32197274', ref: "hepdata:ins2844499/ZPt_normalized_ttZtWZ", locator: "ZPt_normalized_ttZtWZ, error 'syst'", source: hepdata, status: machine-verified, date: "2026-10-22"}
+              - category: stat
+                specific: stat
+                size: {range: [6.8, 13.0], asymmetric: false}
+                full_table: "hepdata:ins2844499/ZPt_normalized_ttZtWZ"
+                provenance: {uid: f052e57f, ref: "hepdata:ins2844499/ZPt_normalized_ttZtWZ", locator: "ZPt_normalized_ttZtWZ, error 'stat'", source: hepdata, status: machine-verified, date: "2026-10-22"}
+        predictions:
+          - label: "NLO QCD + PS (MadGraph5_aMC@NLO), CMS 2024 comparison"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 0.67, provenance: {uid: 3a599458, ref: "hepdata:ins2844499/ZPt_normalized_ttZtWZ", locator: "column 'Predicted (aMC@NLO)', bin 2 (50 < pT(Z) < 100 GeV): 0.0057689 +0.0000387 −0.0000380 ('theo': scale, PDF and parton-shower uncertainties per paper Sec. 6); larger side", source: agent, status: cross-checked, date: "2026-10-22"}}
+            compared_to: ["meas:ttz/lhc-13/cms-2024-multilepton"]
+            refs: ["inspire:2844499"]
+            provenance: {uid: 96f7821c, ref: "inspire:2844499", locator: "Sec. 6 and Fig. 13 (normalised differential cross sections compared with the MC prediction; uncertainties from μR, μF, PDFs and parton showers summed in quadrature)", source: agent, status: cross-checked, date: "2026-10-22"}

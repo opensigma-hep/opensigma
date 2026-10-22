@@ -43,7 +43,7 @@ channels:
     collider: "col:hera"
     initial_state: "e±p"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:dis-cc/hera/sigma-r-em", region: "Q² = 1000 GeV², x = 0.032, e−p at √s = 318 GeV"}
     measurements:
       - id: "meas:dis-cc/hera/hera-2015-comb"
@@ -122,6 +122,12 @@ channels:
             accuracy: {qcd: N3LO, approximations: ["massless quarks", "approximate x-space parametrisations of the three-loop coefficient functions"]}
             refs: ["inspire:1472971", "inspire:805947"]
             provenance: {uid: 79225d25, ref: "inspire:1472971", locator: "Abstract (third-order coefficient functions for F2, FL and F3 in ν-ν̄ charged-current DIS, compact approximate expressions); F3: inspire:805947 Abstract", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "aSACOT-χ (approximate NNLO heavy-quark mass effects in the ACOT scheme), CC F2, FL, F3 (apfel++)"
+            accuracy: {qcd: NNLO, approximations: ["SACOT-χ with full mass dependence at NLO; NNLO mass effects approximated by χ (n-)rescaling in the intermediate-mass scheme of inspire:1091243", "CT18 NNLO PDFs for the HERA comparison", "mass effects not resolved by the HERA CC data: Δχ² = 0.2 against zero-mass for the 82 CC points"]}
+            codes: ["apfel++"]
+            compared_to: ["meas:dis-cc/hera/hera-2015-comb"]
+            refs: ["inspire:2913871"]
+            provenance: {uid: dc12b903, ref: "inspire:2913871", locator: "Sec. I (aSACOT-χ extended to CC F2, FL, F3; implementation in APFEL++) and Sec. III, Fig. 4 (HERA CC e∓p at √s = 318 GeV, CT18 NNLO; Δχ² = 0.2 for 82 CC points vs ZM)", source: agent, status: cross-checked, date: 2026-10-22}
   - id: "chan:dis-cc/eic"
     collider: "col:eic"
     initial_state: "e±p"

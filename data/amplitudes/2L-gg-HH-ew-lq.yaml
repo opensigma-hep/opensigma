@@ -1,0 +1,13 @@
+id: "amp:2L/gg-HH-ew-lq"
+process: "proc:hh"
+loops: 2
+corrections: EW
+status: done
+approximations: ["light-quark-mediated two-loop EW contributions only"]
+master_integrals: {status: done, refs: ["inspire:2902817"]}
+evaluation:
+  kind: analytic
+  detail: "canonical dlog DEs; Chen iterated integrals up to weight six over logarithmic kernels, uniform-weight function basis"
+  provenance: {uid: 54bb132f, ref: "inspire:2902817", locator: "arXiv:2503.16620, Abstract (canonical master-integral basis in dlog form, boundary constants from the large-mass expansion, Chen iterated integrals up to transcendental weight six, numerical routines provided)", source: agent, status: cross-checked, date: "2026-10-22"}
+refs: ["inspire:2902817"]
+provenance: {uid: 486661ac, ref: "inspire:2902817", locator: "arXiv:2503.16620, Abstract (two-loop EW corrections to gg → HH mediated by light quarks, fully analytical)", source: agent, status: cross-checked, date: "2026-10-22"}

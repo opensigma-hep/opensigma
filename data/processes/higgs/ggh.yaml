@@ -61,12 +61,18 @@ building_blocks:
         approximations: ["effective theory approach, light-quark contribution (inspire:803217)", "NLO QCD correction to the mixed term in the soft approximation (inspire:1651501)"]
         refs: ["inspire:803217", "inspire:1651501", "inspire:1492553"]
         provenance: {uid: 86f6115b, ref: "inspire:803217", locator: "Abstract (3-loop O(α αs) correction from light quarks via an effective theory; top and bottom contributions estimated)", source: agent, status: cross-checked, date: "2026-10-16"}
+      RV:
+        status: partial
+        approximations: ["two-loop NLO EW amplitude for gg → gH only (qg and q q̄ channels not computed), full top-mass dependence", "evaluated numerically on interpolation grids with simplified masses (m_W = 80, m_Z = 91, m_t = 172 GeV, other masses and widths zero)"]
+        amplitude: "amp:2L/gg-Hg-ew"
+        refs: ["inspire:2954727"]
+        provenance: {uid: 9829fa40, ref: "inspire:2954727", locator: "Abstract and Sec. 1 (first complete NLO EW corrections to the gg → gH channel with full top-mass dependence); Sec. 2.1, eq. (1) (only the dominant gg channel considered); Sec. 3, eq. (17) (simplified mass input for the grids)", source: agent, status: cross-checked, date: "2026-10-22"}
 channels:
   - id: "chan:ggh/lhc-13"
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:ggh/lhc-13/sigma-ggf", region: "m_H = 125 GeV, inclusive over production kinematics (ATLAS: ggF+bbH, |y_H| < 2.5, absolute σ; CMS: signal strength μ_ggH)"}
     measurements:
       - id: "meas:ggh/lhc-13/atlas-2022-comb"
@@ -84,6 +90,10 @@ channels:
         dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of the H → γγ, ZZ, WW and ττ differential measurements; extrapolated to the full phase space, all production modes"
         ref: "inspire:2913615"
         hepdata: "hepdata:ins2913615/PT(H)"
+      - id: "meas:ggh/lhc-13/atlas-2022-tot-comb"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (Run 2), combination of the H → ZZ* → 4ℓ and H → γγ total and differential measurements, extrapolated to the full phase space, all production modes"
+        ref: "inspire:2116078"
     observables:
       - id: "obs:ggh/lhc-13/sigma-ggf"
         name: "σ(ggF) in the Higgs decay-channel combination (ATLAS: σ(ggF+bbH); CMS: μ_ggH)"
@@ -184,6 +194,45 @@ channels:
             compared_to: ["meas:ggh/lhc-13/cms-2025-diff-comb"]
             refs: ["arXiv:1309.0017", "arXiv:1610.07922"]
             provenance: {uid: 3e8b8cc4, ref: "arXiv:2504.13081", locator: "Sec. 6, paragraph on the theoretical predictions (MG5_aMC@NLO v2.6.5 weighted to NNLOPS, ref. [25]; POWHEG also shown) and Fig. 1; NNLOPS accuracy from the abstract of arXiv:1309.0017", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "NLO EW corrections to H + jet in the gg → gH channel, full top-mass dependence (G_μ scheme)"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              approximations: ["gg → gH channel only; LO QCD for the pT(H) distribution", "Higgs pT > 20 GeV, CT18NLO, μ = sqrt(pT² + m_H²); not the CMS phase space, EW K-factor only", "EW correction about +4.3% on the pT > 20 GeV cross section, decreasing from about 1.05 at low pT(H) to about 0.95 at high pT(H)"]
+            uses_amplitudes: ["amp:2L/gg-Hg-ew"]
+            refs: ["inspire:2954727"]
+            provenance: {uid: 235f3fce, ref: "inspire:2954727", locator: "Sec. 3, Table 1 (G_μ scheme: σ_LO = 7.91 pb, σ_NLO-EW = 8.25 pb, K = 1.043, √s = 13 TeV) and Fig. 5 with its discussion (K-factor in pT(H) from about 1.05 to about 0.95)", source: agent, status: cross-checked, date: "2026-10-22"}
+        resummation_ingredients:
+          - name: "Two-loop (NNLO) TMD gluon beam functions with a massive bottom quark (top-induced ggF, q_T ~ m_b ≪ m_H), enabling NNLL′ q_T resummation with full m_b/q_T dependence"
+            status: "done (N3LL needs the quark-mass correction to the three-loop rapidity anomalous dimension, still unknown)"
+            refs: ["inspire:2632013"]
+            provenance: {uid: '342518e8', ref: "inspire:2632013", locator: "Abstract; Sec. 7 (Conclusion): TMD gluon beam functions at NNLO with one massive flavour, anomalous dimensions confirmed for NNLL′, only the quark-mass correction to the three-loop rapidity anomalous dimension missing for N3LL", source: agent, status: cross-checked, date: "2026-10-22"}
+      - id: "obs:ggh/lhc-13/sigma-tot-h"
+        name: "Total Higgs production cross section σ(pp → H + X), all production modes (ATLAS 4ℓ + γγ combination)"
+        kind: total
+        variable: "σ(pp → H + X) in the full phase space, m_H = 125.09 GeV, sum of all production modes (ggF-dominated), from the H → ZZ* → 4ℓ and H → γγ fiducial measurements extrapolated with SM acceptances"
+        results:
+          - measurement: "meas:ggh/lhc-13/atlas-2022-tot-comb"
+            total: {value_pct: 7.2, provenance: {uid: d06e34fb, ref: "arXiv:2207.08615", locator: "Sec. 5 (Results), first paragraph, and abstract: combined σ = 55.5 +4.0/−3.8 pb; larger side as % of the central value", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [5.8, 5.8], unit: "%", asymmetric: false}
+                provenance: {uid: 95912d88, ref: "arXiv:2207.08615", locator: "Sec. 5, first paragraph: ±3.2 (stat.) pb of 55.5 pb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [4.0, 4.3], unit: "%", asymmetric: true}
+                provenance: {uid: 8a4dfd25, ref: "arXiv:2207.08615", locator: "Sec. 5, first paragraph: +2.4/−2.2 (syst.) pb of 55.5 pb", source: agent, status: cross-checked, date: "2026-10-22"}
+        predictions:
+          - label: "SM sum of production modes (LHC Higgs Working Group, YR4), ggF at N3LO, m_H = 125.09 GeV"
+            accuracy:
+              qcd: N3LO
+              approximations: ["sum of ggF (48.5 ± 2.4 pb), VBF, VH, bbH and ttH + tH cross sections from the LHC Higgs Working Group; N3LO refers to the dominant ggF term, the other modes at their YR4 accuracy"]
+            total: {value_pct: 4.5, provenance: {uid: 69fd96c4, ref: "arXiv:2207.08615", locator: "Sec. 5, first paragraph: SM prediction 55.6 ± 2.5 pb (Fig. 2: QCD higher-order uncertainty in quadrature with PDF + αs); relative uncertainty 2.5/55.6 derived here", source: agent, status: cross-checked, date: "2026-10-22"}}
+            compared_to: ["meas:ggh/lhc-13/atlas-2022-tot-comb"]
+            refs: ["arXiv:1610.07922"]
+            provenance: {uid: 71fea0b1, ref: "arXiv:2207.08615", locator: "Sec. 2 (per-mode cross sections from the LHC Higgs Working Group, Ref. [35] = YR4, for m_H = 125.09 GeV) and Sec. 5", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
   - id: "chan:ggh/lhc-8"
     collider: "col:lhc-8"
     initial_state: "pp"
@@ -214,4 +263,41 @@ channels:
             compared_to: ["meas:ggh/lhc-8/atlas-cms-2016-comb"]
             refs: ["arXiv:1307.1347"]
             provenance: {uid: a8a70f20, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_ggF (= 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
+  - id: "chan:ggh/lhc-13.6"
+    collider: "col:lhc-13.6"
+    initial_state: "pp"
+    coverage: stub
+    last_reviewed: "2026-10-22"
+    headline: {observable: "obs:ggh/lhc-13.6/sigma-ggf", region: "m_H = 125 GeV, inclusive gg → H cross section"}
+    observables:
+      - id: "obs:ggh/lhc-13.6/sigma-ggf"
+        name: "Inclusive σ(gg → H) at 13.6 TeV"
+        kind: total
+        variable: "σ(gg → H + X) at m_H = 125 GeV, √s = 13.6 TeV, inclusive"
+        predictions:
+          - label: "N4LO in the soft-virtual approximation (N4LOsv), HEFT rescaled by the exact LO, PDF4LHC21, αs(m_Z) = 0.118"
+            accuracy:
+              qcd: N4LO
+              approximations: ["fourth order only in the soft-virtual (threshold) approximation on top of exact N3LO (iHixs-2), from the four-loop gluon form factor, four-loop gg splitting function moments and threshold-resummation estimates of process-dependent coefficients", "heavy-top effective theory rescaled by the exact LO cross section (m_t = 172.5 GeV on-shell, n_f = 5)", "no electroweak corrections", "μR = μF = m_H/2; N4LOsv shifts σ by −0.1% relative to N3LO"]
+            total: {value_pct: 4.9, provenance: {uid: 42313d0f, ref: "arXiv:2510.17413", locator: "Table 2, PDF4LHC21 row: σ = 51.5 pb, δ(scale) +0.5/−2.3%, δ(PDF+αs) ±4.3%; derived here as the larger scale side and PDF+αs added in quadrature (the paper quotes them separately)", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Seven-point μR, μF variation"
+                method: "μR, μF varied independently in [m_H/4, m_H] around m_H/2 with 1/2 ≤ (μR/μR^c)/(μF/μF^c) ≤ 2; envelope"
+                size: {range: [0.5, 2.3], unit: "%", asymmetric: true}
+                provenance: {uid: 851b38f3, ref: "arXiv:2510.17413", locator: "Table 2, PDF4LHC21 row, δ(Scale) +0.5/−2.3; method Sec. 3, eq. (4)", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: PDF
+                specific: "Intrinsic PDF uncertainty"
+                pdf_set: "PDF4LHC21_40"
+                size: {range: [1.7, 1.7], unit: "%", asymmetric: false}
+                provenance: {uid: a5055397, ref: "arXiv:2510.17413", locator: "Table 2, PDF4LHC21 row, δ(PDF) ±1.7 (Table 1, αs from LHAPDF, quotes ±0.6 for the same set)", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: alphas
+                specific: "αs(m_Z) varied by ±1σ (0.1165–0.1195)"
+                size: {range: [4.0, 4.0], unit: "%", asymmetric: false}
+                provenance: {uid: 0df9bd6f, ref: "arXiv:2510.17413", locator: "Table 2, PDF4LHC21 row, δ(αs) ±4.0; variation range in Sec. 3, Case-II", source: agent, status: cross-checked, date: "2026-10-22"}
+            codes: ["iHixs-2"]
+            uses_amplitudes: ["amp:3L/gg-H-eft"]
+            refs: ["inspire:3071216"]
+            provenance: {uid: 4d0075ca, ref: "arXiv:2510.17413", locator: "Sec. 2–3, eq. (5) (√S = 13.6 TeV, m_H = 125 GeV, m_t = 172.5 GeV, μ = m_H/2, n_f = 5) and Table 2 (Case-II, αs(m_Z) = 0.118)", source: agent, status: cross-checked, date: "2026-10-22"}
             headline: true

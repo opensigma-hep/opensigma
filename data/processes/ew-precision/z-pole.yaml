@@ -25,6 +25,11 @@ building_blocks:
         amplitude: "amp:2L/Zff-ew"
         refs: ["inspire:1670617", "inspire:1740872"]
         provenance: {uid: c0ef375b, ref: "inspire:1670617", locator: "Abstract (bosonic two-loop corrections complete the full two-loop description of Z-boson precision observables)", source: agent, status: cross-checked, date: "2026-10-16"}
+      3L:
+        status: partial
+        approximations: ["leading fermionic three-loop corrections only (maximal number of closed fermion loops): O(α³) and mixed O(α²αs)", "for M_W (via Δr), sin²θ_eff and the Z partial and total widths"]
+        refs: ["inspire:1780829", "inspire:1957631"]
+        provenance: {uid: 1b465cdd, ref: "inspire:1780829", locator: "Abstract (three-loop diagrams with three closed fermion loops for Δr/M_W, sin²θ_eff and Z partial/total widths); arXiv:2111.00066 Sec. 1 and Table 2 (O(α³) and O(α²αs) leading fermionic results, e.g. Δ sin²θ_eff = 1.34×10⁻⁵ and 1.31×10⁻⁵)", source: agent, status: agent-draft, date: "2026-10-22"}
   - row: "NNLO QCD×EW"
     cells:
       2L:
@@ -49,7 +54,7 @@ channels:
     collider: "col:lep1"
     initial_state: "e⁺e⁻"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:z-pole/lep1/sigma-had0", region: "Z peak, pure-Z-exchange hadronic pole cross section σ⁰_had (QED-deconvoluted pseudo-observable)"}
     measurements:
       - id: "meas:z-pole/lep1/lep-2005-combination"

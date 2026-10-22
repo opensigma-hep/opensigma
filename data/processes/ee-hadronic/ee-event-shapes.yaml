@@ -48,9 +48,13 @@ channels:
     collider: "col:lep1"
     initial_state: "e+e-"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:ee-event-shapes/lep1/thrust", region: "τ = 1−T in [0.02, 0.03] (peak region), Q = mZ"}
     measurements:
+      - id: "meas:ee-event-shapes/lep1/aleph-archived-2025"
+        experiment: "ALEPH"
+        dataset: "LEP1, √s = 91.2 GeV, 1994 archived data (40 pb⁻¹, 1.36 M events); unbinned ML (OmniFold) unfolding of thrust; values only in figures, no HEPData"
+        ref: "inspire:3073756"
       - id: "meas:ee-event-shapes/lep1/aleph-2004"
         experiment: "ALEPH"
         dataset: "LEP1, √s = 91.2 GeV"
@@ -229,6 +233,41 @@ channels:
             compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
             refs: ["arXiv:0711.4711", "arXiv:0707.1285"]
             provenance: {uid: 10beb00b, ref: "arXiv:0711.4711", locator: "Abstract; Sec. 6.1, Fig. 7 (thrust at Q = mZ vs ALEPH data; scale uncertainty reduced by about 30% from NLO to NNLO)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "N3LL′ (SCET) + O(αs³), R-gap, dijet-region fit (2024 update)"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL′", variable: "τ = 1−T"}]
+              approximations: ["O(αs³) fixed-order input: NNLO for the thrust distribution; O(αs³) non-singular from CoLoRFulNNLO", "adds two- and three-loop soft functions, three-loop jet function and four-loop cusp anomalous dimension to the 2010 analysis", "R-gap shape function; three-jet and subleading dijet power corrections modelled as uncertainties", "default results without b-mass and QED corrections"]
+            compared_to: ["meas:ee-event-shapes/lep1/aleph-2004", "meas:ee-event-shapes/lep1/opal-2005", "meas:ee-event-shapes/lep1/delphi-2000", "meas:ee-event-shapes/lep1/aleph-archived-2025"]
+            refs: ["arXiv:2412.15164"]
+            provenance: {uid: 6ff07149, ref: "arXiv:2412.15164", locator: "Abstract; Sec. 3 (data sets incl. ALEPH [13], OPAL [10], DELPHI [8] at 91.2 GeV); Sec. 6, Table 3; Sec. 7 (new ingredients, CoLoRFulNNLO non-singular); compared to the archived ALEPH data in arXiv:2510.22038, Fig. 2 (ref. [4])", source: agent, status: cross-checked, date: "2026-10-22"}
+          - label: "N3LL (Laplace space, with N4LL terms) + NNLO, two-parameter analytic hadronisation model"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N3LL", variable: "τ = 1−T (resummed in Laplace-conjugate space)"}]
+              approximations: ["all terms up to O(αs³): NNLO for the thrust distribution; integrated distribution reproduces the N3LO total cross section", "available N4LL terms included (few-permille effect); O(αs⁴) hard and remainder terms unknown", "nonperturbative effects from a Gaussian shape function with two parameters fitted to data"]
+            compared_to: ["meas:ee-event-shapes/lep1/aleph-2004", "meas:ee-event-shapes/lep1/opal-2005", "meas:ee-event-shapes/lep1/delphi-2000"]
+            refs: ["arXiv:2502.01570"]
+            provenance: {uid: 4822314c, ref: "arXiv:2502.01570", locator: "Abstract; text on Fig. 1 (N4LL impact at few-permille level); Eqs. (18)-(20) and Fig. 2 (fit to LEP and SLD data at Q = mZ, refs [46]-[51] incl. DELPHI EPJC 14 (2000), ALEPH EPJC 35 (2004), OPAL EPJC 40 (2005))", source: agent, status: cross-checked, date: "2026-10-22"}
+          - label: "N4LL + O(αs³), conjugate- vs direct-space resummation"
+            accuracy:
+              qcd: NNLO
+              resummation: [{accuracy: "N4LL", variable: "τ = 1−T (conjugate and direct space)"}]
+              approximations: ["fixed order up to O(αs³) (EERAD for the αs³ term): NNLO for the distribution (labelled N3LO for the cumulant in the paper)", "perturbative only; nonperturbative corrections not considered"]
+            uncertainties:
+              - category: approximation
+                specific: "resummation-prescription ambiguity: direct- vs conjugate-space N4LL + O(αs³) matched predictions"
+                size: {range: [5, 5], asymmetric: false, regions: [{where: "τ in [0.06, 0.15] (αs fit region)", value: "±5"}]}
+                provenance: {uid: 924f8ef0, ref: "arXiv:2603.06091", locator: "Sec. 8, Conclusions ('differ at the level of 5% in the region usually considered for fits of the strong coupling, τ in [0.06, 0.15]'); Sec. 5, Fig. 7", source: agent, status: cross-checked, date: "2026-10-22"}
+            refs: ["arXiv:2603.06091"]
+            provenance: {uid: 74200ac3, ref: "arXiv:2603.06091", locator: "Abstract; Sec. 4 (all ingredients for N4LL available); Sec. 5 (matching to fixed order up to αs³, EERAD; Figs. 7-8); Sec. 5 end (non-perturbative corrections not considered)", source: agent, status: cross-checked, date: "2026-10-22"}
+          - label: "N3LL′ (SCET) + O(αs²), renormalon-scheme (R vs R*) and profile-scale variations"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "N3LL′", variable: "τ = 1−T"}]
+              approximations: ["fixed-order matching O(αs²) only: NLO for the thrust distribution (new O(αs³) EERAD3 matching computed but not used in the fits)", "gapped dijet shape function in three renormalon-cancellation schemes with two sets of profile functions; scheme and profile choices shift fitted αs(mZ) between 0.1124 and 0.1161", "no b-mass, hadron-mass or QED effects"]
+            refs: ["arXiv:2311.03990"]
+            provenance: {uid: '41393157', ref: "arXiv:2311.03990", locator: "Abstract (N3LL′ matched to O(αs²), three renormalon schemes, two profile sets, global fit 35-207 GeV); Sec. V.3, Table 2 (default window: αs(mZ) from 0.1124 to 0.1161 across schemes and profiles); Sec. V.4 (O(αs³) matching not used; no b/hadron masses, QED)", source: agent, status: cross-checked, date: "2026-10-22"}
       - id: "obs:ee-event-shapes/lep1/c-parameter"
         name: "C-parameter distribution (1/σ) dσ/dC"
         kind: differential
@@ -383,11 +422,24 @@ channels:
             compared_to: ["meas:ee-event-shapes/lep1/aleph-2004"]
             refs: ["arXiv:0711.4711"]
             provenance: {uid: '8444e055', ref: "arXiv:0711.4711", locator: "Sec. 6.4, Fig. 15 (C-parameter at Q = mZ vs ALEPH data; scale uncertainty reduced by about 40% from NLO to NNLO)", source: agent, status: cross-checked, date: "2026-10-17"}
+          - label: "NLL + NLO Sudakov-shoulder resummation at C = 3/4 (SCET)"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "NLL", variable: "C − 3/4 (Sudakov shoulder)"}]
+              approximations: ["fixed order O(αs²): NLO for the distribution", "resums the shoulder logarithms at C = 3/4 only", "perturbative; no comparison to data"]
+            uncertainties:
+              - category: MHOU
+                specific: "NLL+NLO shoulder-region uncertainty"
+                method: "correlated hard/jet/soft scale variation through profile-function parameters"
+                size: {range: [15, 20], asymmetric: false, regions: [{where: "shoulder region, C ≳ 3/4", value: "±20"}]}
+                provenance: {uid: '7351e207', ref: "arXiv:2601.02484", locator: "Sec. 8, Conclusions (current theoretical uncertainty ±15-20%, NNLL expected ±5-10%); Sec. 6.3 (NLL+NLO band from profile-parameter variations)", source: agent, status: cross-checked, date: "2026-10-22"}
+            refs: ["arXiv:2601.02484"]
+            provenance: {uid: 8bb184d4, ref: "arXiv:2601.02484", locator: "Abstract; Sec. 1.3; Sec. 6.3, Fig. 5 (matched NLL+NLO with αs(MZ) = 0.118); Sec. 8 (LEP data sparse in the shoulder region, no data comparison)", source: agent, status: cross-checked, date: "2026-10-22"}
   - id: "chan:ee-event-shapes/lep2"
     collider: "col:lep2"
     initial_state: "e+e-"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:ee-event-shapes/lep2/thrust", region: "τ = 1−T in [0.02, 0.04], √s = 206 GeV"}
     measurements:
       - id: "meas:ee-event-shapes/lep2/aleph-2004-206"
@@ -599,3 +651,10 @@ channels:
             compared_to: ["meas:ee-event-shapes/lep2/aleph-2004-206"]
             refs: ["arXiv:0711.4711"]
             provenance: {uid: 795dd82a, ref: "arXiv:0711.4711", locator: "Sec. 6.1, Fig. 8 (thrust at Q = 133 ... 206 GeV vs ALEPH data)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "N3LL′ (SCET) + O(αs²), renormalon-scheme (R vs R*) and profile-scale variations"
+            accuracy:
+              qcd: NLO
+              resummation: [{accuracy: "N3LL′", variable: "τ = 1−T"}]
+              approximations: ["fixed-order matching O(αs²) only: NLO for the thrust distribution (new O(αs³) EERAD3 matching computed but not used in the fits)", "gapped dijet shape function in three renormalon-cancellation schemes with two sets of profile functions; scheme and profile choices shift fitted αs(mZ) between 0.1124 and 0.1161", "no b-mass, hadron-mass or QED effects"]
+            refs: ["arXiv:2311.03990"]
+            provenance: {uid: 6f962c6b, ref: "arXiv:2311.03990", locator: "Abstract (N3LL′ matched to O(αs²), three renormalon schemes, two profile sets, global fit 35-207 GeV); Sec. V.3, Table 2 (default window: αs(mZ) from 0.1124 to 0.1161 across schemes and profiles); Sec. V.4 (O(αs³) matching not used; no b/hadron masses, QED); LEP2 energies included in the global fit", source: agent, status: cross-checked, date: "2026-10-22"}

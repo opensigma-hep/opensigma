@@ -161,6 +161,24 @@ def test_curl_get_raises_on_failure():
         hepdata.curl_get("https://www.hepdata.net/x", run=run)
 
 
+def test_curl_get_backs_off_on_429_then_succeeds():
+    from types import SimpleNamespace
+    out = iter([SimpleNamespace(returncode=56, stdout="", stderr="curl: (56) The requested URL returned error: 429")] * 2
+               + [SimpleNamespace(returncode=0, stdout="yaml: body", stderr="")])
+    waits = []
+    assert hepdata.curl_get("https://www.hepdata.net/x", run=lambda cmd, **kw: next(out), sleep=waits.append) == "yaml: body"
+    assert waits == [30, 60]
+
+
+def test_curl_get_gives_up_after_repeated_429():
+    from types import SimpleNamespace
+    r = SimpleNamespace(returncode=22, stdout="", stderr="error: 429")
+    waits = []
+    with pytest.raises(OSError, match="429"):
+        hepdata.curl_get("https://www.hepdata.net/x", run=lambda cmd, **kw: r, sleep=waits.append)
+    assert waits == [30, 60, 120]
+
+
 def test_total_column_is_used_not_double_counted():
     t = {"dependent_variables": [{"values": [{"value": 10.0, "errors": [
         {"label": "Total uncertainty", "symerror": 0.68}, {"label": "Syst. uncertainty", "symerror": 0.5}]}]}]}

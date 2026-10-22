@@ -43,7 +43,7 @@ channels:
     collider: "col:hera"
     initial_state: "e±p"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:dis-nc/hera/sigma-r-ep", region: "Q² = 200 GeV², x = 0.0032, e+p at √s = 318 GeV"}
     measurements:
       - id: "meas:dis-nc/hera/hera-2015-comb"
@@ -122,6 +122,16 @@ channels:
             accuracy: {qcd: N3LO, approximations: ["massless quarks", "photon exchange only", "F2 and FL only"]}
             refs: ["inspire:681335", "inspire:663841"]
             provenance: {uid: d059a2c9, ref: "inspire:681335", locator: "Abstract (full three-loop coefficient functions for F2 and FL; third-order coefficient functions for F2 are the dominant part of the N3LO corrections at not too small x)", source: agent, status: cross-checked, date: "2026-10-16"}
+          - label: "Massless N3LO NC structure functions F2, FL, xF3 (γ/Z) and reduced cross sections, public codes apfel++ and hoppet (benchmarked)"
+            accuracy: {qcd: N3LO, approximations: ["massless quarks, variable-flavour-number scheme", "MVV parametrisations of the coefficient and splitting functions beyond NLO (about 10⁻⁴ relative accuracy)", "benchmark with toy initial-scale PDFs, not compared with HERA data; agreement between the two codes at the 10⁻⁵ level for Q in [2, 100] GeV, x in [10⁻⁵, 0.9]"]}
+            codes: ["apfel++", "hoppet"]
+            refs: ["inspire:2780723"]
+            provenance: {uid: 6e7fc3fa, ref: "inspire:2780723", locator: "Sec. 1 (O(αs³) structure functions public in hoppet v1.3.0 and apfel++ v4.8.0), Sec. 2.2 (NC F3^{γ/Z} decomposition), Sec. 3 (MVV parametrisations beyond NLO) and Sec. 5 (NC and CC structure functions and reduced cross sections agree at the 10⁻⁵ level)", source: agent, status: cross-checked, date: 2026-10-22}
+          - label: "N3LO DIS structure functions in FFNS and ZM-VFNS with PineAPPL grids (yadism)"
+            accuracy: {qcd: N3LO, approximations: ["unpolarised NC light, heavy and asymptotic coefficient functions up to N3LO; heavy-quark NC N3LO coefficients approximate (from resummation and high-virtuality limits), with an uncertainty propagated to the result", "renormalisation-scale variation up to N3LO, factorisation-scale variation up to NNLO (N3LO through EKO)", "GM-VFNS built from the high-virtuality limits of the heavy-flavour coefficients; benchmarked against APFEL++ and QCDNUM"]}
+            codes: ["yadism", "PineAPPL"]
+            refs: ["inspire:2752463"]
+            provenance: {uid: 4eb55f12, ref: "inspire:2752463", locator: "Abstract; Sec. 1 (scale variations to N3LO/NNLO, GM-VFNS with EKO) and Sec. 2.3, Table 1 and following text (light, heavy and asymptotic coefficients up to N3LO except CC; heavy NC N3LO approximate with uncertainty)", source: agent, status: cross-checked, date: 2026-10-22}
   - id: "chan:dis-nc/eic"
     collider: "col:eic"
     initial_state: "e±p"

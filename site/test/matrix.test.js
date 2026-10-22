@@ -9,36 +9,29 @@ const cell = (o = {}) => ({
   has_target: false, ...o,
 });
 
-test('null ratio hatched', () => {
-  const s = cellState(cell({ ratio: null }), 'ratio', false);
-  assert.equal(s.pattern, 'hatch');
-  assert.equal(cellState(cell({ ratio: null, ratio_with_projections: 1 }), 'ratio', true).pattern, 'none');
-  assert.equal(cellState(cell({ ratio: null }), 'order', false).pattern, 'none');
-});
-
-test('stub with no QCD order hatched in order mode too', () => {
-  assert.equal(cellState(cell({ max_qcd: null, ratio: null, coverage: 'stub' }), 'order', false).pattern, 'hatch');
+test('null ratio hatched, unless projections supply one', () => {
+  assert.equal(cellState(cell({ ratio: null }), false).pattern, 'hatch');
+  assert.equal(cellState(cell({ ratio: null, ratio_with_projections: 1 }), true).pattern, 'none');
 });
 
 test('partial coverage texture', () => {
-  const s = cellState(cell({ coverage: 'partial' }), 'order', false);
-  assert.equal(s.pattern, 'partial');
-  assert.notEqual(s.pattern, 'hatch');
+  assert.equal(cellState(cell({ coverage: 'partial' }), false).pattern, 'partial');
 });
 
 test('missing cell', () => {
-  const s = cellState(undefined, 'order', false);
+  const s = cellState(undefined, false);
   assert.equal(s.label, 'no channel');
   assert.equal(s.pattern, 'none');
 });
 
-test('labels and fills', () => {
-  assert.equal(cellState(cell(), 'order', false).label, 'NNLO QCD, 3 measurements');
-  assert.equal(cellState(cell({ n_measurements: 1 }), 'order', false).label, 'NNLO QCD, 1 measurement');
-  assert.match(cellState(cell(), 'order', false).fill, /--ord-3/);
-  assert.match(cellState(cell({ ratio: 0.3 }), 'ratio', false).fill, /--rat-1/);
-  assert.match(cellState(cell({ ratio: 1 }), 'ratio', false).fill, /--rat-3/);
-  assert.match(cellState(cell({ ratio: 5 }), 'ratio', false).fill, /--rat-5/);
+test('labels carry the QCD order; fills follow the ratio', () => {
+  assert.equal(cellState(cell(), false).label, 'NNLO QCD, precision ratio 2 (theory/experiment), 3 measurements');
+  assert.equal(cellState(cell({ n_measurements: 1, max_qcd: null, ratio: null }), false).label, 'no QCD prediction, no precision ratio, 1 measurement');
+  assert.match(cellState(cell({ ratio: 0.3 }), false).fill, /--rat-1/);
+  assert.match(cellState(cell({ ratio: 1 }), false).fill, /--rat-3/);
+  assert.match(cellState(cell({ ratio: 5 }), false).fill, /--rat-5/);
+  assert.match(cellState(cell(), false).fill, /--rat-4/); // ratio 2
+  assert.match(cellState(cell(), true).fill, /--rat-1/); // ratio_with_projections 0.5
 });
 
 test('columns only used colliders, ordered', () => {

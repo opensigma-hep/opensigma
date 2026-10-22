@@ -4,7 +4,7 @@ import { scatterPoints, drawScatter } from '../scatter.js';
 
 // View state lives in the module (no persistence): reset only when the family changes.
 let S = null;
-const fresh = (id) => ({ id, mode: 'order', proj: false, colliders: null, minOrder: 'any', minStatus: 'any', hasTarget: false, scatter: false });
+const fresh = (id) => ({ id, proj: false, colliders: null, minOrder: 'any', minStatus: 'any', hasTarget: false, scatter: false });
 
 const CW = 132, CH = 52, LW = 220, HH = 44;
 
@@ -24,11 +24,6 @@ const field = (legend, ...kids) => el('fieldset', {}, el('legend', {}, legend), 
 const check = (label, key, redraw) => {
   const i = el('input', { type: 'checkbox', checked: S[key] });
   i.addEventListener('change', () => { S[key] = i.checked; redraw(); });
-  return el('label', {}, i, ' ' + label);
-};
-const radio = (name, label, value, redraw) => {
-  const i = el('input', { type: 'radio', name, value, checked: S.mode === value });
-  i.addEventListener('change', () => { S.mode = value; redraw(); });
   return el('label', {}, i, ' ' + label);
 };
 function select(label, key, options, redraw) {
@@ -59,7 +54,7 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
     .style('max-width', `${W}px`).style('min-width', `min(${W}px, 40rem)`)
     .attr('role', 'group').attr('aria-label', `${fam.name}: processes by collider`);
   patterns(d3, svg);
-  svg.append('g').selectAll('text').data(cols).join('text').attr('class', 'colhead')
+  svg.append('g').selectAll('a').data(cols).join('a').attr('class', 'colhead').attr('href', (c) => toHash(c.id)).append('text')
     .attr('x', (_, i) => LW + i * CW + CW / 2).attr('y', HH - 14).attr('text-anchor', 'middle').text((c) => c.name);
   const rowG = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (_, i) => `translate(0,${HH + i * CH})`);
   rowG.append('a').attr('class', 'rowhead').attr('href', (p) => toHash(p)).append('text').attr('x', 8).attr('y', CH / 2 - 2).text((p) => procName[p]);
@@ -69,7 +64,7 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
     for (const [c, col] of cols.entries()) {
       const hit = byKey.get(proc + '|' + col.id);
       const g = svg.append('g').attr('transform', `translate(${LW + c * CW},${HH + r * CH})`);
-      const st = cellState(hit?.[1], S.mode, S.proj);
+      const st = cellState(hit?.[1], S.proj);
       if (!hit) { g.append('rect').attr('class', 'none').attr('x', 3).attr('y', 3).attr('width', CW - 6).attr('height', CH - 6).attr('rx', 4)
         .append('title').text('no channel'); continue; }
       const cell = hit[1];
@@ -80,9 +75,12 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
         .attr('rx', 4).attr('fill', fill);
       box('base', st.fill);
       if (st.pattern !== 'none') box('tex', `url(#pm-${st.pattern})`);
+      const ord = cell.max_qcd ?? 'no prediction';
+      a.append('rect').attr('class', 'badge').attr('x', 8).attr('y', 6).attr('width', ord.length * 7.5 + 10).attr('height', 17).attr('rx', 8);
+      a.append('text').attr('class', 'badge-text order').attr('x', 13).attr('y', 18).text(ord);
       const txt = `${cell.n_measurements} meas.` + (cell.candidates > 0 ? ` · ${cell.candidates} cand.` : '');
-      a.append('rect').attr('class', 'badge').attr('x', 8).attr('y', CH - 24).attr('width', txt.length * 6 + 10).attr('height', 17).attr('rx', 8);
-      a.append('text').attr('class', 'badge-text').attr('x', 13).attr('y', CH - 12).text(txt);
+      a.append('rect').attr('class', 'badge').attr('x', 8).attr('y', CH - 22).attr('width', txt.length * 6 + 10).attr('height', 17).attr('rx', 8);
+      a.append('text').attr('class', 'badge-text').attr('x', 13).attr('y', CH - 10).text(txt);
       if (cell.stale) {
         a.append('text').attr('x', CW - 12).attr('y', 18).attr('text-anchor', 'middle').attr('fill', 'var(--fg)')
           .style('font-size', '14px').text('⚠').append('title').text('may be outdated');
@@ -99,16 +97,15 @@ function legend() {
     return s;
   };
   const item = (fill, pat, text) => { const s = sw(fill, pat); s.append(text); return s; };
-  const ord = el('div', { className: 'legend' }, el('span', {}, 'Highest QCD order:'),
-    ...ORDERS.map((o, i) => item(`var(--ord-${i + 1})`, null, o)));
   const rat = el('div', { className: 'legend' }, el('span', {}, 'Theory / experiment uncertainty:'),
     ...RATIO_LABELS.map((t, i) => item(`var(--rat-${i + 1})`, null, t)),
     el('span', {}, '< 1: theory more precise · > 1: theory is the bottleneck'));
   const common = el('div', { className: 'legend' },
-    item('var(--cell-empty)', 'hatch', 'no value (hatched)'), item('var(--ord-3)', 'partial', 'partial coverage (dotted)'),
+    item('var(--cell-empty)', 'hatch', 'no precision ratio (hatched)'), item('var(--rat-3)', 'partial', 'partial coverage (dotted)'),
+    el('span', {}, 'top label: highest QCD order of any prediction'),
     el('span', {}, '⚠ may be outdated'), el('span', {}, 'meas. = measurements, cand. = candidate papers'),
     el('span', {}, 'dashed outline: no channel; faded: excluded by filters'));
-  return [S.mode === 'ratio' ? rat : ord, common];
+  return [rat, common];
 }
 
 export function render(el_, data, route) {
@@ -159,7 +156,6 @@ export function render(el_, data, route) {
     return el('label', {}, i, ' ' + c.name);
   });
   const controls = el('div', { className: 'controls' },
-    field('Colour by', radio('mode', 'QCD order', 'order', redraw), radio('mode', 'Precision ratio', 'ratio', redraw)),
     field('Data', check('Include projections', 'proj', redraw), check('Has theory target', 'hasTarget', redraw), check('Show scatter', 'scatter', redraw)),
     field('Colliders', ...colChecks),
     select('Min. accuracy', 'minOrder', [['any', 'any'], ...ORDERS.map((o) => [o, `≥ ${o}`])], redraw),

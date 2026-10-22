@@ -37,7 +37,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-16"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:vbs-ssww/lhc-13/sigma-fid-ew", region: "Fiducial EW W±W±jj → ℓ±νℓ±ν jj (two same-sign e/μ, ≥ 2 jets, mjj > 500 GeV, VBS cuts as in each experiment)"}
     measurements:
       - id: "meas:vbs-ssww/lhc-13/atlas-2024-fid-ew"
@@ -49,6 +49,10 @@ channels:
         dataset: "13 TeV, 137 fb⁻¹ (2016–2018)"
         ref: "inspire:1794169"
         hepdata: "hepdata:ins1794169/Table 5"
+      - id: "meas:vbs-ssww/lhc-13/atlas-2025-pol"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹ (2015–2018), polarised EW W±W±jj"
+        ref: "inspire:2900453"
     observables:
       - id: "obs:vbs-ssww/lhc-13/sigma-fid-ew"
         name: "Fiducial σ(EW W±W±jj)"
@@ -166,3 +170,63 @@ channels:
                 provenance: {uid: f016fb7a, ref: "inspire:1613898", locator: "Sec. 3.2, eq. (3.13): σ_NLO = 1.3577(7) +1.2(1)% −2.7(1)% fb; scale combinations in eq. (3.11)", source: agent, status: cross-checked, date: "2026-10-17"}
             refs: ["inspire:1613898", "inspire:1496632"]
             provenance: {uid: 6aaa5218, ref: "inspire:1613898", locator: "Sec. 2 (calculation) and Sec. 3.2, Tables 2–3 (fiducial LO and NLO cross sections)", source: agent, status: cross-checked, date: "2026-10-17"}
+      - id: "obs:vbs-ssww/lhc-13/sigma-fid-wl"
+        name: "Fiducial σB(EW W±_L W±jj), at least one longitudinal W"
+        kind: fiducial
+        variable: "σB of polarised EW W±W±jj with at least one longitudinally polarised W (W_L W_X = LL + LT + TL), polarisation vectors in the W±W± centre-of-mass frame; ATLAS fiducial region: two same-sign e/μ with pT > 27 GeV, |η| < 2.5, mℓℓ > 20 GeV, VBS jet cuts, τ decays excluded"
+        results:
+          - measurement: "meas:vbs-ssww/lhc-13/atlas-2025-pol"
+            total: {value_pct: 34.1, provenance: {uid: 1130f53a, ref: "inspire:2900453", locator: "Table 1, W_L±W±jj (W±W± CM frame): measured σB = 0.88 ± 0.30 (tot.) fb, 0.30/0.88; observed (expected) significance 3.3 (4.0) σ (abstract)", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [31.8, 31.8], unit: "%", asymmetric: false}
+                provenance: {uid: a83b26d1, ref: "inspire:2900453", locator: "Table 1, W_L±W±jj: ± 0.28 (stat.) of 0.88 fb", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: acceptance_extrapolation
+                specific: "Modelling systematics (signal/background theory, MC and data-driven-background statistics)"
+                size: {range: [5.7, 5.7], unit: "%", asymmetric: false}
+                provenance: {uid: 8e99d57a, ref: "inspire:2900453", locator: "Table 1, W_L±W±jj: ± 0.05 (mod. syst.) of 0.88 fb; caption defines the modelling uncertainty", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: syst_combined
+                specific: "Experimental systematics (combined)"
+                size: {range: [9.1, 9.1], unit: "%", asymmetric: false}
+                provenance: {uid: c49e77ec, ref: "inspire:2900453", locator: "Table 1, W_L±W±jj: ± 0.08 (exp. syst.) of 0.88 fb", source: agent, status: cross-checked, date: "2026-10-22"}
+        predictions:
+          - label: "Sherpa 3 polarised W±W±jj (0+1 jet LO merged) ⊗ NLO EW, off-shell corrections, ATLAS setup"
+            accuracy:
+              qcd: LO
+              ew: NLO
+              shower_matched: true
+              approximations: ["on-shell polarised W bosons in the narrow-width approximation, up to one extra parton at LO merged with the Sherpa shower", "VBS approximation (no s-channel or triboson diagrams); missing diagrams and off-shell effects corrected with unpolarised ℓ±νℓ±νjj Sherpa 3 samples via particle-level neural-network reweighting (about 10%)", "NLO EW corrections included", "uncertainty from PDF, αs, parton shower and scale variations, dominated by scales (about 24%)"]
+            codes: ["Sherpa"]
+            total: {value_pct: 24.6, provenance: {uid: 8e7a0cbc, ref: "inspire:2900453", locator: "Table 1, W_L±W±jj: predicted σB = 1.18 ± 0.29 fb, 0.29/1.18", source: agent, status: cross-checked, date: "2026-10-22"}}
+            compared_to: ["meas:vbs-ssww/lhc-13/atlas-2025-pol"]
+            refs: ["inspire:2900453"]
+            provenance: {uid: 50644bad, ref: "inspire:2900453", locator: "Signal-modelling paragraph (Sherpa 3, NNPDF3.0nlo, VBS approximation, NN-based off-shell corrections) and Table 1 with caption", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
+  - id: "chan:vbs-ssww/lhc-13.6"
+    collider: "col:lhc-13.6"
+    initial_state: "pp"
+    coverage: stub
+    last_reviewed: "2026-10-22"
+    observables:
+      - id: obs:vbs-ssww/lhc-13.6/sigma-fid-ll
+        name: Fiducial σ(pp → e⁺νe μ⁺νμ jj), doubly longitudinal W_L W_L (EW production)
+        kind: fiducial
+        variable: σ_fid of the LL polarisation state in the VBS fiducial setup of arXiv:2409.03620
+        predictions:
+          - label: "NLO EW + NLO QCD, polarised pp → e⁺νe μ⁺νμ jj in the double-pole approximation (Denner–Haitz–Pelliccioli)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              mixed: "O(α⁷) and O(αsα⁶) corrections to the O(α⁶) VBS signal, added"
+              approximations: ["quoted total is for the doubly longitudinal LL state only (W_L W_X = LL + LT + TL is not given as one number)", "polarisation split at matrix-element level in the double-pole approximation, W⁺W⁺ CM frame", "single e⁺μ⁺ flavour channel in the authors' own VBS setup, not the ATLAS fiducial region", "QCD-induced and interference backgrounds not included in the polarised signal"]
+            codes: ["BBMC", "MoCaNLO", "Recola", "Collier"]
+            total: {value_pct: 2.1, provenance: {uid: b67243eb, ref: "inspire:2825255", locator: "Table 3, LL: σ_NLO EW+QCD = 0.12715(8) +1.0% −2.1% fb (σ_LO = 0.14879 fb); larger scale side", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR and μF scale variation"
+                method: "conventional 7-point variation by a factor two around the common dynamical scale of eq. (37); 1–3% at NLO EW+QCD, weakly polarisation dependent"
+                size: {range: [1.0, 2.1], unit: "%", asymmetric: true}
+                provenance: {uid: '825065e7', ref: "inspire:2825255", locator: "Table 3, LL: +1.0% −2.1%; setup paragraph around eq. (37) (7-point variation) and text after Table 3 (scale uncertainty of 1–3% for the NLO EW+QCD prediction)", source: agent, status: cross-checked, date: "2026-10-22"}
+            refs: ["inspire:2825255"]
+            provenance: {uid: a23e4a66, ref: "inspire:2825255", locator: "Abstract and Sec. 3.2, Tables 3–4 (NLO EW and QCD corrections to polarised cross sections and polarisation fractions)", source: agent, status: agent-draft, date: "2026-10-22"}

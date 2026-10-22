@@ -37,12 +37,20 @@ building_blocks:
         approximations: ["double-pole approximation in RACOONWW and YFSWW3 (used for LEP 2); complete O(α) for charged-current 4f in Denner et al."]
         refs: ["inspire:529378", "inspire:529590", "inspire:682093"]
         provenance: {uid: ab5c5609, ref: "inspire:1219330", locator: "Sec. 5.2.1 (YFSWW and RACOONWW compared to LEP data, LPA/DPA corrections)", source: agent, status: cross-checked, date: "2026-10-16"}
+  - row: "NNLO QCD×EW"
+    cells:
+      2L:
+        status: partial
+        amplitude: "amp:2L/ee-WW-qcdew"
+        approximations: ["on-shell W⁺W⁻ production only (no decays, no off-shell 4f)", "O(ααs) corrections enter only through quark loops (virtual); effect ≈ 1.1% in the α(0) scheme, strongly suppressed in the G_μ scheme"]
+        refs: ["arXiv:2401.01323"]
+        provenance: {uid: a82c9d87, ref: "arXiv:2401.01323", locator: "Abstract; Sec. 2.2 (O(ααs) contributions); Sec. 4.1, Fig. 7 and Table 3 (δ_QCD-EW ≈ 1.1% in α(0), e.g. 1.1256% vs 0.0154% (G_μ) at √s = 200 GeV)", source: agent, status: cross-checked, date: "2026-10-22"}
 channels:
   - id: "chan:ee-ww/lep2"
     collider: "col:lep2"
     initial_state: "e⁺e⁻"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:ee-ww/lep2/sigma-ww", region: "√s = 206.6 GeV, CC03 W-pair signal, SM W branching fractions assumed"}
     measurements:
       - id: "meas:ee-ww/lep2/lep-2013-combination"

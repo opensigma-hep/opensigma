@@ -91,7 +91,7 @@ channels:
     collider: "col:lhc-13"
     initial_state: "pp"
     coverage: partial
-    last_reviewed: "2026-10-17"
+    last_reviewed: "2026-10-22"
     headline: {observable: "obs:dy-cc/lhc-13/sigma-fid-wplus", region: "W+ → ℓ+ν fiducial (experiment-specific cuts: ATLAS pT(ℓ) > 25 GeV, mT > 50 GeV; CMS pT(ℓ) > 25 GeV, mT > 40 GeV)"}
     measurements:
       - id: "meas:dy-cc/lhc-13/atlas-2024-lowpu"
@@ -107,6 +107,10 @@ channels:
         experiment: LHCb
         dataset: 13 TeV, 5.1 fb⁻¹, μ, 25 < pT(μ) < 55 GeV, 2.0 < η(μ) < 4.5
         ref: inspire:3144939
+      - id: meas:dy-cc/lhc-13/lhcb-2026-asym
+        experiment: LHCb
+        dataset: 13 TeV, 5.1 fb⁻¹ (2016–2018), μ, 25 < pT(μ) < 55 GeV, 2.0 < η(μ) < 4.5
+        ref: inspire:3144940
       - id: meas:dy-cc/lhc-13/atlas-2026-wpt
         experiment: ATLAS
         dataset: 13 TeV, 338 pb⁻¹ (low-pileup runs, 2017–2018), e + μ, full lepton phase space
@@ -312,6 +316,55 @@ channels:
               source: agent
               status: cross-checked
               date: '2026-10-17'
+      - id: obs:dy-cc/lhc-13/muon-asym-lhcb
+        name: Muon charge asymmetry A(η_μ) from W → μν, forward region
+        kind: asymmetry
+        variable: "η_μ (18 bins, 2.0 < η_μ < 4.5), 25 < pT(μ) < 55 GeV; A = (dσ(W⁺→μ⁺ν) − dσ(W⁻→μ⁻ν̄))/(sum)"
+        results:
+          - measurement: meas:dy-cc/lhc-13/lhcb-2026-asym
+            total: {value_pct: 1.9, provenance: {uid: 5c0f613e, ref: "inspire:3144940", locator: "Table 2, bin 2.625 < η_μ < 2.750: A = (261 ± 3 (stat) ± 4 (syst)) × 10⁻³; stat and syst added in quadrature, 5/261 (no HEPData record found)", source: agent, status: cross-checked, date: "2026-10-22"}}
+            uncertainties:
+              - category: stat
+                specific: "Data statistics"
+                size: {range: [3, 6], unit: "×10⁻³ (absolute, on A)", asymmetric: false}
+                provenance: {uid: ed362e9d, ref: "inspire:3144940", locator: "Table 2, first uncertainty (stat), range over the 18 η_μ bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: efficiency
+                specific: "Reconstruction efficiency (tracking, muon identification, trigger; tag-and-probe)"
+                size: {range: [1.9, 6.1], unit: "×10⁻³ (absolute, on A)", asymmetric: false}
+                provenance: {uid: c71b24fd, ref: "inspire:3144940", locator: "Table 1, column ε_rec, range over the 18 η_μ bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: acceptance_extrapolation
+                specific: "Generator correction (DYTurbo scale variations, DYTurbo vs Powheg, MSHT20/NNPDF31/CT18 PDF variations)"
+                size: {range: [1.4, 19.4], unit: "×10⁻³ (absolute, on A)", asymmetric: false}
+                provenance: {uid: d62cf6e1, ref: "inspire:3144940", locator: "Table 1, column Generator, range over the 18 η_μ bins (largest at 4.00 < η_μ < 4.25)", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: energy_scale
+                specific: "Muon momentum smearing model"
+                size: {range: [0.3, 2.4], unit: "×10⁻³ (absolute, on A)", asymmetric: false}
+                provenance: {uid: '44871271', ref: "inspire:3144940", locator: "Table 1, column Smearing, range over the 18 η_μ bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: efficiency
+                specific: "Selection efficiency (ε_sel)"
+                size: {range: [0.1, 1.2], unit: "×10⁻³ (absolute, on A)", asymmetric: false}
+                provenance: {uid: 9c0757eb, ref: "inspire:3144940", locator: "Table 1, column ε_sel, range over the 18 η_μ bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: background
+                specific: "QCD (misidentified hadron) background modelling"
+                size: {range: [0.2, 1.5], unit: "×10⁻³ (absolute, on A)", asymmetric: false}
+                provenance: {uid: f3b992e5, ref: "inspire:3144940", locator: "Table 1, column QCD Bkg, range over the 18 η_μ bins", source: agent, status: cross-checked, date: "2026-10-22"}
+              - category: unfolding_model
+                specific: "FSR correction (ResBos + Photos vs Powheg + Pythia)"
+                size: {range: [0.1, 2.2], unit: "×10⁻³ (absolute, on A)", asymmetric: false}
+                provenance: {uid: 574ceb49, ref: "inspire:3144940", locator: "Table 1, column FSR, range over the 18 η_μ bins", source: agent, status: cross-checked, date: "2026-10-22"}
+        predictions:
+          - label: ResBos 2 (NNPDF4.0), LHCb setup
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - "the Letter states agreement with NNLO QCD predictions; the logarithmic accuracy of the ResBos 2 resummation is not stated"
+                - "uncertainty combines PDF and scale variations; MSHT20 and CT18 variants also shown"
+            codes: [ResBos2]
+            total: {value_pct: 1.9, provenance: {uid: 56b94e60, ref: "inspire:3144940", locator: "Table 2, ResBos 2 NNPDF40 column, bin 2.625 < η_μ < 2.750: (262 ± 5) × 10⁻³ (PDF and scale)", source: agent, status: cross-checked, date: "2026-10-22"}}
+            compared_to: [meas:dy-cc/lhc-13/lhcb-2026-asym]
+            refs: ["inspire:3144940"]
+            provenance: {uid: cdadde0a, ref: "inspire:3144940", locator: "Text before Table 2 (Powheg with CT18, ResBos 2 [58] with MSHT20, NNPDF40 and CT18; uncertainties from PDF and scale variations) and Table 2", source: agent, status: agent-draft, date: "2026-10-22"}
+            headline: true
   - id: chan:dy-cc/lhc-13.6
     collider: col:lhc-13.6
     initial_state: pp
