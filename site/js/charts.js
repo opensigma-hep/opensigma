@@ -111,3 +111,31 @@ export function reveal(node) {
   const f = node.querySelector('a, button, summary') ?? node;
   f.focus?.({ preventScroll: true });
 }
+
+/** Channels reaching each QCD order over time (step lines); milestone dots sit on their line and are pickable. */
+export function drawTimeline(el, tl, onPick) {
+  const d3 = window.d3;
+  el.replaceChildren();
+  if (!tl.years.length) return;
+  const W = 760, H = 320, m = { t: 14, r: 96, b: 36, l: 44 };
+  const x = d3.scaleLinear(d3.extent(tl.years), [m.l, W - m.r]);
+  const y = d3.scaleLinear([0, tl.total], [H - m.b, m.t]).nice();
+  const svg = d3.select(el).append('svg').attr('class', 'history timeline').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'group').attr('aria-label', 'Number of channels with a prediction at each QCD order, by year');
+  svg.append('g').attr('class', 'grid').selectAll('line').data(y.ticks(5)).join('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y).attr('y2', y);
+  svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(10).tickFormat(d3.format('d')));
+  svg.append('g').attr('class', 'axis').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5));
+  svg.append('text').attr('class', 'axis-label').attr('transform', `translate(12,${(m.t + H - m.b) / 2}) rotate(-90)`)
+    .attr('text-anchor', 'middle').text('Channels');
+  const color = (lv) => `var(--ord-${ORDERS.indexOf(lv) + 1})`;
+  const line = d3.line().curve(d3.curveStepAfter).x((_, i) => x(tl.years[i])).y((v) => y(v));
+  for (const [lv, vals] of Object.entries(tl.series)) {
+    svg.append('path').attr('class', `tl-line tl-${lv}`).attr('d', line(vals)).attr('stroke', color(lv));
+    svg.append('text').attr('class', 'tl-end').attr('x', W - m.r + 6).attr('y', y(vals.at(-1))).attr('dy', '0.32em').text(`≥ ${lv}: ${vals.at(-1)}`);
+  }
+  const yAt = (ms) => y(tl.series[ms.level][tl.years.indexOf(ms.year)]);
+  const dots = svg.append('g').selectAll('circle').data(tl.milestones).join('circle').attr('class', 'pt-pred')
+    .attr('cx', (ms) => x(ms.year)).attr('cy', yAt).attr('r', 4.5).attr('fill', (ms) => color(ms.level));
+  const txt = (ms) => `${ms.year}: ${ms.proc.name} reaches ${ms.level} (${ms.label})`;
+  pickable(dots, (ms) => `${txt(ms)}. Open the observable`, txt, onPick);
+}

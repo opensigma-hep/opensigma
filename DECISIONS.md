@@ -109,3 +109,9 @@ uncertainty — repeated per observable.
     Process page: one channel summary table replaces the channel list and the per-channel prediction list; the
     building-block matrix is a compact status grid whose cells open their full record (refs, approximations, ✓/⚑).
     Channel page lists its candidate papers by title. Parameter page: clickable ideogram of determinations.
+24. **Catalogue-wide views, matrix colouring (2026-10-22):** family-matrix cells are coloured by the theory ÷ experiment
+    ratio only (supersedes the order/ratio switch of #8); each cell prints its highest QCD order. New pages, all derived
+    in the browser, nothing stored: `#/gaps` (partial/missing building blocks per process, worst ratio first),
+    `#/next-run` (projected measurements vs today's headline theory on the same observable only, never another
+    observable's theory; no estimate = listed as a gap) and `#/timeline` (channels with a prediction at ≥ NLO/NNLO/N3LO
+    per year, year = earliest reference the prediction cites; first-time-per-process milestones link to the observable).
