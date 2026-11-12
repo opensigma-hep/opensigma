@@ -10,6 +10,7 @@ from pathlib import Path
 from ruamel.yaml import YAML
 
 from scripts.opensigma.derive import derive
+from scripts.opensigma.lint import group_issues, lint_data
 from scripts.opensigma.load import LoadError, load_repo
 from scripts.opensigma.refs import update_cache
 from scripts.opensigma.validate import _plain, validate
@@ -59,6 +60,7 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default="site/data.json")
     ap.add_argument("--check", action="store_true", help="validate only; never write --out")
     ap.add_argument("--offline", action="store_true")
+    ap.add_argument("--lint-summary", action="store_true", help="print only per-kind warning counts instead of every warning line")
     ap.add_argument("--today", type=date.fromisoformat, default=None)
     a = ap.parse_args(argv)
     today = a.today or date.today()
@@ -70,10 +72,21 @@ def main(argv=None) -> int:
         print(f"ERROR {e}")
         return 1
     issues = validate(repo, Path(a.schema))
-    failed = False
-    for i in issues:
-        print(f"{i.level.upper()} {i.file} {i.path}: {i.msg}")
-        failed |= i.level == "error"
+    if not any(i.level == "error" for i in issues):
+        issues += lint_data(repo)
+    errs, groups = group_issues(issues)
+    failed = bool(errs)
+    show = lambda i: print(f"{i.level.upper()} {i.file} {i.path}: {i.msg}")  # noqa: E731
+    for i in errs:
+        show(i)
+    for kind, items in groups.items():
+        if a.lint_summary:
+            continue
+        print(f"-- {len(items)} warning(s): {kind}")
+        for i in items:
+            show(i)
+    if groups:  # trailing line, after the (possibly long) warning list
+        print(f"warnings: {sum(map(len, groups.values()))} (" + ", ".join(f"{k}={len(v)}" for k, v in groups.items()) + ")")
     try:
         release = _release(root)
     except ValueError as e:

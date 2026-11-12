@@ -1,11 +1,15 @@
 # regex -> experimental uncertainty category; first match wins, no match -> other
-'(?i)^stat': stat
-'(?i)lumi': lumi
-'(?i)(jes|jet energy|scale)|^les$': energy_scale  # LES: CMS lepton energy scale
-'(?i)^(absolute|relative|flavorqcd|timepteta|jetflav|jetres|jer\b)|^sys,had$': energy_scale  # CMS JES/JER source names; HERA δ_had
-'(?i)unfold|^unf\b': unfolding_model
-'(?i)(bkg|background)|^sys,\$\\gamma p\$$': background  # HERA δ_γp: photoproduction background
+# Each regex is tried on the raw label and on a normalised one (camelCase and punctuation split into lower-case words:
+# "sysPhotonID" -> "sys photon id"), so short tokens can be word-anchored with \b ("Fiducial", "width", "effects",
+# "Sideband" no longer match id/eff). Digits stay attached to their word ("Stat15" is not the word "stat").
+'(?i)^(absolute|relative|flavorqcd|timepteta|jetflav|jetres|jer\b)|^sys,had$': energy_scale  # CMS JES/JER source names; HERA δ_had; before stat: RelativeStatEC is a JES source
+'(?i)^stat|\bstat\b': stat  # also "Unf stat": the statistical part of an unfolding
+'(?i)\blum': lumi  # lumi, Lumi, Luminosity, Lum
+'(?i)\bjes|jet energy|\b(energy|momentum|lepton|muon|electron|photon|jet|absolute|calibration) scale|^scale\b|\bscale[ _][jle]\b|^les$': energy_scale  # LES: CMS lepton energy scale; scale_j: CMS jet scale; a bare "QCD scale" is not an energy scale
+'(?i)unfold|\bunf\b|^model$': unfolding_model
+'(?i)(bkg|background|sideband|\bfakes?\b)|^sys,\$\\gamma p\$$': background  # HERA δ_γp: photoproduction background
 '(?i)pile|purew|^pu$': pileup
 '(?i)beam': beam
-'(?i)(eff|trigger|id|iso|btag)|^(ftag|pref)$': efficiency
+'(?i)\b(eff|efficiency|efficiencies|trigger|id|iso|isolation|b ?tag)\b|^(ftag|pref)$': efficiency
+'(?i)acceptance|extrapolat|\b(theo\w*|thy|qcd)\b': acceptance_extrapolation  # theory-side modelling of the acceptance
 '(?i)^(sys|syst|systematics?)\.?(,(sys|cor|uncor))?$|^(cor|uncor)$|uncorr\. unc|^systematic uncertainty$': syst_combined  # source gives only a combined systematic

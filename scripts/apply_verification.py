@@ -1,6 +1,6 @@
 """CLI for the verify workflow: python -m scripts.apply_verification --root data --issue-body-file F ...
 
-Prints `outcome=<..>`, `uid=<..>`, `maintainers=<comma list>` lines (appended to $GITHUB_OUTPUT by the workflow).
+Prints `outcome=<..>`, `uid=<..>`, `maintainers=<comma list>` lines (outcome dispute_needs_maintainer: a verify of a disputed datum by a non-maintainer) (appended to $GITHUB_OUTPUT by the workflow).
 Always exits 0 for a handled outcome; the workflow decides what to do with it.
 """
 import argparse
@@ -18,6 +18,7 @@ def main(argv=None) -> int:
     ap.add_argument("--created-at", required=True, help="ISO timestamp of the account creation")
     ap.add_argument("--issue-url", required=True)
     ap.add_argument("--action-label", required=True, choices=verify.ACTIONS)
+    ap.add_argument("--fallback-assignee", default="", help="GitHub handle(s), comma-separated, allowed to resolve disputes besides the family maintainers")
     ap.add_argument("--today", help="YYYY-MM-DD override (tests)")
     a = ap.parse_args(argv)
 
@@ -32,7 +33,7 @@ def main(argv=None) -> int:
     elif not verify.account_old_enough(datetime.fromisoformat(a.created_at), now):
         outcome = "too_young"
     else:
-        outcome = verify.apply(root, uid, a.action_label, a.user, a.issue_url, now.date())
+        outcome = verify.apply(root, uid, a.action_label, a.user, a.issue_url, now.date(), a.fallback_assignee)
     maint = verify.maintainers_for(root, uid) if uid else []
     print(f"outcome={outcome}\nuid={uid}\nmaintainers={','.join(maint)}")
     return 0
