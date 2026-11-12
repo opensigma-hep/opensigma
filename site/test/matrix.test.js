@@ -75,3 +75,12 @@ test('cellOrder: the EW order stands in when QCD is LO or absent', () => {
   assert.equal(cellOrder({ max_qcd: null, max_ew: null }), null);
   assert.match(cellState(cell({ max_qcd: 'LO', max_ew: 'NLO' }), false).label, /^NLO EW, /);
 });
+
+import { ratioText, anyTarget } from '../js/matrix.js';
+test('ratio text and target detection', () => {
+  assert.equal(ratioText(0.654), '×0.65');
+  assert.equal(ratioText(null), null);
+  assert.equal(cellState(cell({ ratio: 2 }), false).ratioText, '×2');
+  assert.equal(anyTarget({ a: cell(), b: cell() }), false);
+  assert.equal(anyTarget({ a: cell(), b: cell({ has_target: true }) }), true);
+});

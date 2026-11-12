@@ -6,6 +6,8 @@
   /* Precision ratio theory/experiment, diverging blue (<1, theory better) - gray - red (>1, theory is the bottleneck). */
   --rat-1: #2a78d6; --rat-2: #9ec5f4; --rat-3: #cfcec8; --rat-4: #f2a4a3; --rat-5: #e34948;
   --cell-empty: #ecebe6;
+  /* Helvetica Neue first: San Francisco (system-ui) misplaces combining marks as in t̄t. */
+  --font: "Helvetica Neue", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
   --bad: #b3261e; --bad-bg: #fbe9e7; --good: #1d6b36; --good-bg: #e3f2e7; --chip-bg: #eef3fb;
 }
 @media (prefers-color-scheme: dark) {
@@ -30,7 +32,7 @@
 * { box-sizing: border-box; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
-  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font: 16px/1.5 var(--font);
 }
 a { color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -75,7 +77,7 @@ h1 { font-size: 1.5rem; margin: .5rem 0 1rem; }
 .controls select { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .2rem .4rem; }
 .matrix-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
 svg.matrix { display: block; width: 100%; height: auto; }
-svg.matrix text { fill: var(--fg); font: 13px system-ui, sans-serif; }
+svg.matrix text { fill: var(--fg); font: 13px var(--font); }
 svg.matrix .colhead { font-weight: 600; }
 svg.matrix .rowhead text { fill: var(--accent); font-weight: 600; font-size: 14px; }
 svg.matrix .rowhead:hover text, svg.matrix .rowhead:focus-visible text { text-decoration: underline; }
@@ -95,7 +97,7 @@ svg.matrix .badge { fill: var(--surface); stroke: var(--border); }
 .legend svg { width: 22px; height: 16px; border: 1px solid var(--border); }
 .scatter-wrap { max-width: 30rem; margin-top: 1rem; }
 svg.scatter { width: 100%; height: auto; }
-svg.scatter text { fill: var(--muted); font: 12px system-ui, sans-serif; }
+svg.scatter text { fill: var(--muted); font: 12px var(--font); }
 svg.scatter .axis path, svg.scatter .axis line { stroke: var(--border); }
 svg.scatter .grid line { stroke: var(--border); stroke-opacity: .5; }
 svg.scatter .diag { stroke: var(--muted); stroke-dasharray: 5 4; }
@@ -146,7 +148,7 @@ table.meas tr.preliminary td:first-child::after { content: " (prelim.)"; color: 
 .eval-semi-analytic { color: var(--accent); }
 .eval-numerical { color: var(--fg); }
 svg.budget { width: 100%; height: auto; display: block; max-width: 40rem; }
-svg.budget text { fill: var(--fg); font: 13px system-ui, sans-serif; }
+svg.budget text { fill: var(--fg); font: 13px var(--font); }
 svg.budget .axis text { fill: var(--muted); font-size: 11px; }
 svg.budget .axis path, svg.budget .axis line { stroke: var(--border); }
 svg.budget .seg { stroke: var(--surface); stroke-width: 1; cursor: pointer; outline: none; }
@@ -162,7 +164,8 @@ svg.budget .tick-total { stroke: var(--fg); stroke-width: 2; }
 .ladder dt { white-space: nowrap; }
 
 /* Navigation */
-header nav { display: flex; gap: 1rem; }
+header nav { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+header nav a { padding: .35rem 0; }
 header nav a[aria-current] { font-weight: 700; text-decoration: none; }
 svg.matrix .colhead text { fill: var(--accent); }
 svg.matrix .colhead:hover text, svg.matrix .colhead:focus-visible text { text-decoration: underline; }
@@ -177,7 +180,7 @@ svg.matrix .colhead:hover text, svg.matrix .colhead:focus-visible text { text-de
 /* Charts on leaf pages */
 .history-wrap, .ideogram-wrap { max-width: 44rem; }
 svg.history, svg.ideogram { width: 100%; height: auto; display: block; }
-svg.history text, svg.ideogram text { fill: var(--muted); font: 12px system-ui, sans-serif; }
+svg.history text, svg.ideogram text { fill: var(--muted); font: 12px var(--font); }
 svg.ideogram .det-label { fill: var(--fg); }
 svg.history .axis path, svg.history .axis line, svg.ideogram .axis path, svg.ideogram .axis line { stroke: var(--border); }
 svg.history .grid line { stroke: var(--border); stroke-opacity: .5; }
@@ -249,3 +252,23 @@ a.ext::after { content: "\00a0\2197"; font-size: .85em; }
 .linklist { margin: .25rem 0 .75rem; padding-left: 1.25rem; }
 dl.groups dt { font-weight: 700; margin-top: .9rem; }
 dl.groups dd { margin: .15rem 0 0; }
+
+/* Header: one line when wide; nav drops to its own row below 56rem (toggle stays beside the search box) */
+@media (max-width: 56rem) {
+  header nav { order: 3; flex: 1 0 100%; }
+  #theme-toggle { order: 2; }
+  #search-form { flex-basis: 6rem; }
+}
+
+/* Mobile: charts scroll inside their wrapper instead of shrinking to unreadable text */
+.scatter-wrap, .history-wrap, .ideogram-wrap, .timeline-wrap, .feyn { overflow-x: auto; max-width: 100%; }
+@media (max-width: 40rem) {
+  main { padding: 12px 16px; }
+  .scatter-wrap svg, .history-wrap svg, .ideogram-wrap svg, .timeline-wrap svg { min-width: 32rem; }
+  .landscape .scatter-wrap { flex-basis: 100%; }
+  .vf { display: inline-block; min-width: 24px; min-height: 24px; line-height: 24px; text-align: center; }
+  .table-scroll { overflow-x: auto; }
+  .proc-intro { flex-direction: column; }
+  .proc-intro .feyn, .proc-intro figcaption { max-width: 100%; flex-basis: auto; }
+  .atlas { grid-template-columns: 1fr; }
+}
