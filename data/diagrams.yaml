@@ -445,3 +445,44 @@ proc:h-jet:
     - {from: b, to: a, type: fermion}
     - {from: c, to: oh, type: scalar, label: "H"}
     - {from: d, to: og, type: gluon, label: "g"}
+
+proc:tttt:
+  title: "g g → t t̄ t t̄"
+  note: "One of many O(αs⁴) diagrams: a gluon radiated off a top quark splits into a second t t̄ pair."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [0.8, 1.5], b: [1.6, 1.5], c: [2.4, 0.9], d: [3.2, 1.4], o1: [4, 0.2], o2: [4, 1.0], o3: [4, 1.9], o4: [4, 2.8]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: a, type: gluon, label: "g"}
+    - {from: a, to: b, type: gluon}
+    - {from: b, to: c, type: fermion}
+    - {from: c, to: o1, type: fermion, label: "t"}
+    - {from: c, to: d, type: gluon}
+    - {from: d, to: o2, type: fermion, label: "t"}
+    - {from: d, to: o3, type: antifermion, label: "t̄"}
+    - {from: b, to: o4, type: antifermion, label: "t̄"}
+
+proc:tt-gamma:
+  title: "g g → t t̄ γ"
+  note: "The photon is radiated off a top quark; q q̄ initial states and radiation off the top decay products also contribute."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1, 1.5], b: [2, 1.5], c: [3, 0.9], o1: [4, 0.3], og: [4, 1.5], o2: [4, 2.7]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: a, type: gluon, label: "g"}
+    - {from: a, to: b, type: gluon}
+    - {from: b, to: c, type: fermion}
+    - {from: c, to: o1, type: fermion, label: "t"}
+    - {from: c, to: og, type: photon, label: "γ"}
+    - {from: b, to: o2, type: antifermion, label: "t̄"}
+
+proc:tzq:
+  title: "q b → q′ t Z"
+  note: "t-channel single top with the Z radiated off the top quark; radiation off the other quark lines and off the W is not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], c: [3, 2.35], o1: [4, 0.5], oz: [4, 1.7], o2: [4, 2.8]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: a, to: o1, type: fermion, label: "d"}
+    - {from: i2, to: b, type: fermion, label: "b"}
+    - {from: b, to: c, type: fermion}
+    - {from: c, to: o2, type: fermion, label: "t"}
+    - {from: c, to: oz, type: boson, label: "Z"}
+    - {from: a, to: b, type: boson, label: "W"}
