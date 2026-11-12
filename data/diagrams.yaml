@@ -386,3 +386,62 @@ proc:dis-jets:
     - {from: c, to: b, type: fermion}
     - {from: b, to: o2, type: fermion, label: "q"}
     - {from: c, to: o3, type: antifermion, label: "q̄"}
+
+# ---- Added 2026-11-12 with the new processes ----
+proc:w-gamma:
+  title: "q q̄′ → W⁺ γ"
+  note: "Photon radiated off the incoming quark; radiation off the W (triple gauge coupling) is not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: a, to: b, type: fermion, label: "u"}
+    - {from: i2, to: b, type: antifermion, label: "d̄"}
+    - {from: a, to: o1, type: photon, label: "γ"}
+    - {from: b, to: o2, type: boson, label: "W⁺"}
+
+proc:z-gamma:
+  title: "q q̄ → Z γ"
+  note: "t-channel quark exchange; there is no s-channel diagram at leading order."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: a, to: b, type: fermion, label: "q"}
+    - {from: i2, to: b, type: antifermion, label: "q̄"}
+    - {from: a, to: o1, type: photon, label: "γ"}
+    - {from: b, to: o2, type: boson, label: "Z"}
+
+proc:vbf-z:
+  title: "q q → q′ q′ Z (W⁺W⁻ fusion)"
+  note: "Vector-boson fusion; Z bremsstrahlung off a quark line and multiperipheral diagrams are not shown."
+  points: {i1: [0, 0.4], i2: [0, 2.6], a: [2, 0.6], b: [2, 2.4], c: [2, 1.5], o1: [4, 0.3], o2: [4, 2.7], oz: [4, 1.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: a, to: o1, type: fermion, label: "q′"}
+    - {from: i2, to: b, type: fermion, label: "q"}
+    - {from: b, to: o2, type: fermion, label: "q′"}
+    - {from: a, to: c, type: boson, label: "W", flip: true}
+    - {from: b, to: c, type: boson, label: "W", flip: true}
+    - {from: c, to: oz, type: boson, label: "Z"}
+
+proc:h-decays:
+  title: "H → b b̄"
+  note: "The largest branching ratio; H → WW*, ZZ*, ττ, μμ are also tree level, H → γγ, Zγ, gg are loop induced."
+  points: {i: [0.4, 1.5], a: [2, 1.5], o1: [3.8, 0.5], o2: [3.8, 2.5]}
+  edges:
+    - {from: i, to: a, type: scalar, label: "H"}
+    - {from: a, to: o1, type: fermion, label: "b"}
+    - {from: a, to: o2, type: antifermion, label: "b̄"}
+
+proc:h-jet:
+  title: "g g → H g (top-quark loop)"
+  note: "Box diagram; triangle diagrams with a three-gluon vertex and q g, q q̄ channels also contribute."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.4, 0.75], b: [1.4, 2.25], c: [2.8, 0.75], d: [2.8, 2.25], oh: [4, 0.5], og: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: b, type: gluon, label: "g"}
+    - {from: a, to: c, type: fermion, label: "t"}
+    - {from: c, to: d, type: fermion}
+    - {from: d, to: b, type: fermion}
+    - {from: b, to: a, type: fermion}
+    - {from: c, to: oh, type: scalar, label: "H"}
+    - {from: d, to: og, type: gluon, label: "g"}
