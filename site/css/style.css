@@ -238,3 +238,9 @@ svg.matrix .thumb { color: var(--fg); }
 .atlas-card span { color: var(--muted); font-size: .875rem; }
 /* not system-ui: San Francisco misplaces the combining macron of q̄, t̄ */
 .feyn figcaption, .atlas-card span { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+/* Glossary tooltips and page */
+.term { color: inherit; text-decoration: underline dotted; text-underline-offset: .15em; cursor: help; }
+.term:hover, .term:focus-visible { text-decoration-style: solid; }
+dl.glossary { max-width: 48rem; }
+dl.glossary dt { font-weight: 600; margin-top: .9rem; scroll-margin-top: 4rem; }
+dl.glossary dd { margin: .15rem 0 0; }

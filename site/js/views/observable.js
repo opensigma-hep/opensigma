@@ -1,7 +1,7 @@
-import { el, fill, none, link, idLink, index, breadcrumb, refLink, refList, prov, copyButton, facts, measTable, sep } from '../leaf.js';
+import { el, fill, none, link, idLink, index, breadcrumb, refLink, refList, prov, copyButton, facts, measTable, sep, term, defLine, accChips } from '../leaf.js';
 import { ORDERS } from '../matrix.js';
 import { historyPoints, drawHistory, reveal } from '../charts.js';
-import { accuracyChips, fmtSize, parseRegionValue, parseTargetPct } from '../format.js';
+import { fmtSize, parseRegionValue, parseTargetPct } from '../format.js';
 import { collectBibtex } from '../bibtex.js';
 
 // Which experimental result the budget shows; kept while the observable stays the same.
@@ -25,11 +25,11 @@ export function render(main, data, route) {
     breadcrumb(data, obs.id),
     el('h1', {}, obs.name),
     facts([
-      ['Kind', obs.kind], ['Variable', obs.variable],
-      ['Channel coverage', chan.coverage],
-      ['Last reviewed', chan.last_reviewed + (cell.stale ? ' (may be outdated)' : '')],
-      ['Candidate papers', cell.candidates ? link(chan.id, `${cell.candidates} not yet incorporated (listed on the channel page)`) : null],
-      ['Headline region', chan.headline?.observable === obs.id ? chan.headline.region : null],
+      ['Kind', term(obs.kind, { scope: 'kind' })], ['Variable', obs.variable],
+      ['Channel coverage', term(chan.coverage, { scope: 'coverage' })],
+      [term('Last reviewed'), chan.last_reviewed + (cell.stale ? ' (may be outdated)' : '')],
+      [term('Candidate papers'), cell.candidates ? link(chan.id, `${cell.candidates} not yet incorporated (listed on the channel page)`) : null],
+      [term('Headline region'), chan.headline?.observable === obs.id ? chan.headline.region : null],
     ]),
     el('div', { className: 'actions' },
       copyButton('Copy link', () => location.href),
@@ -58,9 +58,9 @@ function history(data, obs, meas) {
 function headline(data, sum, head, best, target) {
   const tnum = parseTargetPct(target?.required_total);
   const rows = [
-    ['Theory (headline prediction)', sum.th_pct, sum.th_pct != null && pct(sum.th_pct), head?.total?.provenance],
-    ['Best experiment', sum.exp_pct, sum.exp_pct != null && pct(sum.exp_pct), best?.total?.provenance],
-    ['Theory target (required)', tnum, target?.required_total, target?.provenance],
+    [term('Theory (headline prediction)', { key: 'headline' }), sum.th_pct, sum.th_pct != null && pct(sum.th_pct), head?.total?.provenance],
+    [term('Best experiment'), sum.exp_pct, sum.exp_pct != null && pct(sum.exp_pct), best?.total?.provenance],
+    [term('Theory target (required)'), tnum, target?.required_total, target?.provenance],
   ];
   const max = Math.max(...rows.map((r) => r[1] ?? 0));
   const strip = el('div', { className: 'strip' });
@@ -95,8 +95,8 @@ function budget(data, results, meas, head) {
   const draw = () => {
     const r = results[S.i];
     const bars = [];
-    if (r) bars.push({ name: `Experiment: ${meas[r.measurement].experiment} ${meas[r.measurement].dataset ?? ''}`, total: r.total.value_pct, groups: groups(r.uncertainties) });
-    if (head?.uncertainties?.length) bars.push({ name: `Theory: ${head.label}`, total: head.total?.value_pct, groups: groups(head.uncertainties) });
+    if (r) bars.push({ scope: 'exp', name: `Experiment: ${meas[r.measurement].experiment} ${meas[r.measurement].dataset ?? ''}`, total: r.total.value_pct, groups: groups(r.uncertainties) });
+    if (head?.uncertainties?.length) bars.push({ scope: 'th', name: `Theory: ${head.label}`, total: head.total?.value_pct, groups: groups(head.uncertainties) });
     wrap.replaceChildren();
     if (results.length > 1) {
       const s = el('select', {}, ...results.map((x, i) => el('option', { value: i, selected: i === S.i, textContent: `${meas[x.measurement].experiment} ${meas[x.measurement].dataset ?? ''}` })));
@@ -158,6 +158,7 @@ function details(data, bar, color) {
     const sw = el('span', { className: 'swatch' });
     sw.style.background = color(g.cat);
     const d = el('details', {}, el('summary', {}, sw, ` ${g.cat}`, g.v > 0 ? ` · ${+g.v.toFixed(3)} %` : ''),
+      defLine(g.cat, bar.scope),
       el('ul', {}, ...g.items.map((u) => el('li', {},
         el('strong', {}, u.specific ?? u.category), ': ', fmtSize(u.size), u.size.asymmetric ? ' (asymmetric)' : '', ' ',
         prov(u.provenance, fmtSize(u.size), u.full_table),
@@ -183,8 +184,8 @@ function details(data, bar, color) {
 function predictions(data, preds) {
   if (!preds.length) return [none('predictions')];
   return preds.map((p, i) => el('article', { className: 'pred', dataset: { id: String(i) } },
-    el('h3', {}, p.label, p.headline ? el('span', { className: 'chip head' }, 'headline') : null),
-    el('ul', { className: 'chips' }, ...accuracyChips(p.accuracy).map((c) => el('li', { className: 'chip' }, c))),
+    el('h3', {}, p.label, p.headline ? term('headline', { cls: 'chip head' }) : null),
+    accChips(p.accuracy),
     facts([
       ['Total', p.total ? [pct(p.total.value_pct), ' ', prov(p.total.provenance, pct(p.total.value_pct))] : null],
       ['Codes', p.codes?.length ? p.codes.join(', ') : null],
@@ -197,6 +198,6 @@ function predictions(data, preds) {
 
 function ingredients(data, list) {
   if (!list?.length) return [];
-  return [el('h3', {}, 'Resummation ingredients'), el('ul', { className: 'ingredients' }, ...list.map((r) => el('li', {},
+  return [el('h3', {}, term('Resummation ingredients')), el('ul', { className: 'ingredients' }, ...list.map((r) => el('li', {},
     el('strong', {}, r.name), `: ${r.status} · `, ...refList(r.refs, data.refs), ' ', prov(r.provenance, `${r.name}: ${r.status}`))))];
 }

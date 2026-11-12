@@ -1,4 +1,4 @@
-import { el, fill, link, idLink, index, none } from '../leaf.js';
+import { el, fill, link, idLink, index, none, term, BB_HEAD } from '../leaf.js';
 import { gaps as findGaps, nextRun as rankNext, orderTimeline } from '../insights.js';
 import { ORDERS } from '../matrix.js';
 import { drawTimeline } from '../charts.js';
@@ -19,7 +19,7 @@ export function gaps(main, data) {
       el('th', { scope: 'row' }, link(g.proc.id, g.proc.name)),
       el('td', {}, g.worst ? link(g.worst.chan, r2(g.worst.ratio)) : '—'),
       el('td', {}, el('ul', { className: 'chips' }, ...g.open.map((o) => {
-        const c = el('li', { className: `chip gap-${o.status}` }, `${o.row} · ${o.col}: ${o.status}`);
+        const c = el('li', { className: `chip gap-${o.status}` }, term(o.row), ' · ', term(BB_HEAD[o.col] ?? o.col), ': ', term(o.status, { scope: 'bb' }));
         if (o.approximations.length) c.title = o.approximations.join(', ');
         return c;
     })))))) : none('gaps'),

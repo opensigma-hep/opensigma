@@ -1,4 +1,4 @@
-import { el, fill, none, link, idLink, index, facts, refList, prov, evalChip } from '../leaf.js';
+import { el, fill, none, link, idLink, index, facts, refList, prov, evalChip, term, sep } from '../leaf.js';
 
 export function render(main, data, route) {
   const amp = index(data).get(route.id).node;
@@ -9,9 +9,9 @@ export function render(main, data, route) {
     el('h1', {}, amp.id),
     facts([
       ['Process', idLink(data, amp.process)], ['Loops', String(amp.loops)], ['Corrections', amp.corrections],
-      ['Status', amp.status], ['Approximations', amp.approximations?.length ? amp.approximations.join(', ') : null],
-      ['Master integrals', mi ? [mi.status, ' · ', ...refList(mi.refs, data.refs)] : 'not recorded'],
-      ['Evaluation', ev ? [evalChip(ev), ev.detail ? ' ' + ev.detail : '', ' ', prov(ev.provenance, `${amp.id}: ${ev.kind}`)] : 'not recorded'],
+      ['Status', term(amp.status, { scope: 'bb' })], ['Approximations', amp.approximations?.length ? sep(amp.approximations.map((x) => term(x, { loose: true }))) : null],
+      [term('Master integrals'), mi ? [mi.status, ' · ', ...refList(mi.refs, data.refs)] : 'not recorded'],
+      [term('Evaluation'), ev ? [evalChip(ev), ev.detail ? ' ' + ev.detail : '', ' ', prov(ev.provenance, `${amp.id}: ${ev.kind}`)] : 'not recorded'],
       ['References', refList(amp.refs, data.refs)],
       ['Record', prov(amp.provenance, `${amp.id}: ${amp.status}`)],
     ]),

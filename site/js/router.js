@@ -1,4 +1,4 @@
-// Hash routing: "#/<id>", "#/about", "#/amplitudes", "#/parameters", "#/processes", "#/gaps", "#/next-run", "#/timeline", "#/search?q=…", "" or "#/" for the home view.
+// Hash routing: "#/<id>", "#/about", "#/amplitudes", "#/parameters", "#/processes", "#/gaps", "#/next-run", "#/timeline", "#/glossary" or "#/glossary?t=<term>", "#/search?q=…", "" or "#/" for the home view.
 const VIEW_BY_PREFIX = {
   fam: 'family', proc: 'process', chan: 'channel', obs: 'observable',
   amp: 'amplitude', par: 'parameter', col: 'collider',
@@ -15,6 +15,10 @@ export function parseHash(hash, aliases, ids, parents = {}) {
   const path = hash.replace(/^#\/?/, '');
   if (path === '') return { view: 'families' };
   if (['about', 'amplitudes', 'parameters', 'processes', 'gaps', 'next-run', 'timeline'].includes(path)) return { view: path };
+  if (path === 'glossary' || path.startsWith('glossary?')) {
+    const raw = path.slice(9).split('&').find((kv) => kv.startsWith('t='));
+    return raw ? { view: 'glossary', t: decode(raw.slice(2)) } : { view: 'glossary' };
+  }
   if (path === 'search' || path.startsWith('search?')) {
     // Not URLSearchParams: it would turn a literal '+' into a space.
     const raw = path.slice(7).split('&').find((kv) => kv.startsWith('q='));
