@@ -1,4 +1,5 @@
 import { el, fill, none, link, idLink, index, facts, term } from '../leaf.js';
+import { cellOrder } from '../matrix.js';
 
 // Every channel at one collider, grouped by family: "what is known at LHC 13 TeV?".
 export function render(main, data, route) {
@@ -7,13 +8,13 @@ export function render(main, data, route) {
   const sqrts = [col.sqrts_gev].flat().map((g) => (g >= 1000 ? `${g / 1000} TeV` : `${g} GeV`)).join('–');
   const byFam = new Map(data.families.map((f) => [f.id, []]));
   for (const p of data.processes) for (const c of p.channels) if (c.collider === col.id) byFam.get(p.family).push([p, c]);
-  const head = ['Process', 'Highest QCD order', 'Measurements', 'Observables', 'Coverage', 'Candidates'];
+  const head = ['Process', 'Highest order', 'Measurements', 'Observables', 'Coverage', 'Candidates'];
   const groups = [...byFam].filter(([, l]) => l.length).map(([fid, l]) => [el('h2', {}, idLink(data, fid)),
     el('div', { className: 'table-scroll' }, el('table', { className: 'meas' },
       el('thead', {}, el('tr', {}, ...head.map((h) => el('th', { scope: 'col' }, term(h))))),
       el('tbody', {}, ...l.map(([p, c]) => {
         const s = cells[c.id] ?? {};
-        return el('tr', {}, el('th', { scope: 'row' }, link(c.id, p.name)), el('td', {}, s.max_qcd ?? '—'),
+        return el('tr', {}, el('th', { scope: 'row' }, link(c.id, p.name)), el('td', {}, cellOrder(s) ?? '—'),
           el('td', {}, String(s.n_measurements ?? 0)), el('td', {}, String((c.observables ?? []).length)),
           el('td', {}, term(c.coverage, { scope: 'coverage' }), s.stale ? [' (', term('may be outdated'), ')'] : null), el('td', {}, String(s.candidates ?? 0)));
       }))))]);

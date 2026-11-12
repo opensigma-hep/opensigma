@@ -1,4 +1,4 @@
-import { el, fill, link, idLink, index, none, term, BB_HEAD } from '../leaf.js';
+import { el, fill, link, idLink, index, none, term, BB_HEAD, refLink } from '../leaf.js';
 import { gaps as findGaps, nextRun as rankNext, orderTimeline } from '../insights.js';
 import { ORDERS } from '../matrix.js';
 import { drawTimeline } from '../charts.js';
@@ -48,12 +48,12 @@ export function nextRun(main, data) {
 export function timeline(main, data) {
   const tl = orderTimeline(data);
   const plot = el('div', { className: 'history-wrap timeline-wrap' });
-  drawTimeline(plot, tl, (ms) => { location.hash = toHash(ms.obs.id); });
+  drawTimeline(plot, tl, (ms) => { location.hash = toHash(ms.proc.id); });
   const lvls = Object.keys(tl.series);
   fill(main,
     el('h1', {}, 'Theory progress'),
-    el('p', {}, `How many of the ${tl.total} channels had a prediction at each QCD order, year by year. Dots mark the first time a process reached an order; select one to open the observable that shows it.`),
-    el('p', { className: 'small' }, 'Year = earliest reference cited by the prediction, so it tracks when the calculation appeared, not when an experiment first compared to it.'),
+    el('p', {}, `How many of the ${tl.total} processes had reached each QCD order, year by year. Dots mark the year a process reached an order; select one to open the process and its building-block grid.`),
+    el('p', { className: 'small' }, 'Read from the building-block grid, not from the predictions: a process reaches an order when the “code” cell (combined calculation or public code) of that order’s row is done, in the year of that cell’s earliest reference. An NLO row without a code cell counts once all its recorded cells are done, in the year the last of them appeared. Rows whose code cell is partial, or that record only amplitudes beyond NLO, are not counted, so this errs on the late side. A line counts a process from the first year it reached that order or a higher one.'),
     plot,
     el('p', { className: 'legend' }, ...lvls.map((lv) => {
       const sw = el('span', { className: `tl-key tl-${lv}` });
@@ -61,8 +61,8 @@ export function timeline(main, data) {
       return el('span', {}, sw, `≥ ${lv}`);
     })),
     el('h2', {}, 'Milestones'),
-    tl.milestones.length ? table(['Year', 'Process', 'Order', 'First shown in'], [...tl.milestones].reverse().map((ms) => el('tr', {},
-      el('td', {}, String(ms.year)), el('th', { scope: 'row' }, link(ms.proc.id, ms.proc.name)), el('td', {}, ms.level),
-      el('td', {}, idLink(data, ms.obs.id), el('div', { className: 'small' }, ms.label))))) : none('predictions with dated references'),
+    tl.milestones.length ? table(['Year', 'Process', 'Order', 'Dated by'], [...tl.milestones].reverse().map((ms) => el('tr', {},
+      el('td', {}, String(ms.year)), el('th', { scope: 'row' }, link(ms.proc.id, ms.proc.name)), el('td', {}, `${ms.level} QCD`),
+      el('td', {}, refLink(ms.ref, data.refs))))) : none('completed building-block rows with dated references'),
   );
 }

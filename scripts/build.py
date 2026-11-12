@@ -42,6 +42,16 @@ def _release(root: Path) -> dict | None:
     return rel
 
 
+def _site_candidates(candidates: dict) -> dict:
+    """What the site reads: channel-tagged candidates only (the per-cell counts in `derived` come from the full list)."""
+    out = {}
+    for pid, cands in candidates.items():
+        tagged = [{k: c.get(k) for k in ("recid", "title", "arxiv", "channels")} for c in cands if c.get("channels")]
+        if tagged:
+            out[pid] = tagged
+    return out
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default="data")
@@ -80,6 +90,7 @@ def main(argv=None) -> int:
     repo = load_repo(root)  # refs.json may have been refreshed online
     if not a.check:
         out = {"build": {"date": today.isoformat(), "git_sha": _git_sha(), "release": release}, **_plain(repo), "derived": derive(repo, today)}
+        out["candidates"] = _site_candidates(repo["candidates"])
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
         Path(a.out).write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return 0

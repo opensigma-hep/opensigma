@@ -39,39 +39,46 @@ export function nextRun(data) {
   return rows.sort((a, b) => (b.ratio ?? -Infinity) - (a.ratio ?? -Infinity));
 }
 
-/** Earliest cited year of a prediction (the calculation usually predates the comparison paper that also cites it). */
-function predYear(p, refs) {
-  const ys = [...(p.refs ?? []), p.total?.provenance?.ref].filter(Boolean)
-    .map((r) => refs[r.split(', ')[0]]?.year).filter((y) => y != null);
-  return ys.length ? Math.min(...ys) : null;
+/**
+ * When a process reached a QCD order, read off the building-block row of exactly that order ("NNLO QCD"):
+ * - the row has a `code` cell (combined calculation / public code): reached iff that cell is done, in the year of its earliest reference;
+ * - an NLO row without one: reached iff every recorded cell is done, in the year the last of them appeared
+ *   (latest over cells of the cell's earliest reference). Beyond NLO, loop amplitudes alone are not a cross section.
+ * Returns {year, ref} or null.
+ */
+function rowReached(row, level, refs) {
+  const first = (cell) => (cell.refs ?? []).map((ref) => ({ year: refs[ref.split(', ')[0]]?.year, ref }))
+    .filter((x) => x.year != null).reduce((a, b) => (a && a.year <= b.year ? a : b), null);
+  const cells = row.cells ?? {};
+  if (cells.code) return cells.code.status === 'done' ? first(cells.code) : null;
+  const all = Object.values(cells);
+  if (level !== 'NLO' || !all.length || all.some((c) => c.status !== 'done')) return null;
+  const firsts = all.map(first);
+  return firsts.includes(null) ? null : firsts.reduce((a, b) => (a.year >= b.year ? a : b));
 }
 
 /**
- * For each QCD order from NLO up: how many channels had a prediction at that order or higher, per year.
- * Milestones: the first year each process reached each order, with the observable that shows it.
+ * Milestones: the year each process reached NLO / NNLO / N3LO QCD, from its own building-block row of that order (rowReached).
+ * Series: per year, how many processes had reached that order or a higher one (so a process with no NLO row counts from its NNLO year).
  */
 export function orderTimeline(data, until = new Date().getFullYear()) {
   const levels = ORDERS.slice(1, 4); // NLO, NNLO, N3LO
-  const reached = []; // per channel: {level: year}
-  const milestones = new Map(); // `${proc}|${level}` -> {proc, level, year, obs, label}
-  for (const proc of data.processes) for (const chan of proc.channels) {
+  const milestones = [];
+  const reached = data.processes.map((proc) => { // per process: {level: year}
     const r = {};
-    for (const obs of chan.observables ?? []) for (const p of obs.predictions ?? []) {
-      const year = predYear(p, data.refs);
-      if (year == null) continue;
-      for (const lv of levels) {
-        if (ORDERS.indexOf(p.accuracy.qcd) < ORDERS.indexOf(lv)) continue;
-        if (!(r[lv] <= year)) r[lv] = year;
-        const k = `${proc.id}|${lv}`;
-        if (!(milestones.get(k)?.year <= year)) milestones.set(k, { proc, level: lv, year, obs, label: p.label });
-      }
+    for (const level of levels) {
+      const row = (proc.building_blocks ?? []).find((b) => b.row === `${level} QCD`);
+      const hit = row && rowReached(row, level, data.refs);
+      if (!hit) continue;
+      milestones.push({ proc, level, ...hit });
+      for (const lv of levels.slice(0, levels.indexOf(level) + 1)) if (!(r[lv] <= hit.year)) r[lv] = hit.year;
     }
-    reached.push(r);
-  }
-  const all = reached.flatMap((r) => Object.values(r));
-  if (!all.length) return { years: [], series: {}, milestones: [] };
+    return r;
+  });
+  const total = reached.length;
+  if (!milestones.length) return { years: [], series: {}, milestones: [], total };
   const years = [];
-  for (let y = Math.min(...all); y <= until; y++) years.push(y);
+  for (let y = Math.min(...milestones.map((m) => m.year)); y <= until; y++) years.push(y);
   const series = Object.fromEntries(levels.map((lv) => [lv, years.map((y) => reached.filter((r) => r[lv] <= y).length)]));
-  return { years, series, milestones: [...milestones.values()].sort((a, b) => a.year - b.year), total: reached.length };
+  return { years, series, milestones: milestones.sort((a, b) => a.year - b.year), total };
 }

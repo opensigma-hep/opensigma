@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { columnsFor, cellState, passes } from '../js/matrix.js';
+import { columnsFor, cellState, cellOrder, passes } from '../js/matrix.js';
 import { scatterPoints } from '../js/scatter.js';
 
 const cell = (o = {}) => ({
@@ -65,4 +65,13 @@ test('scatter points skip missing values and follow the projections toggle', () 
   };
   assert.deepEqual(scatterPoints(s, false), [{ id: 'a', x: 1, y: 2 }]);
   assert.deepEqual(scatterPoints(s, true), [{ id: 'a', x: 0.5, y: 2 }, { id: 'b', x: 0.4, y: 3 }]);
+});
+
+test('cellOrder: the EW order stands in when QCD is LO or absent', () => {
+  assert.equal(cellOrder({ max_qcd: 'NNLO', max_ew: 'NLO' }), 'NNLO QCD');
+  assert.equal(cellOrder({ max_qcd: 'LO', max_ew: 'NLO' }), 'NLO EW');
+  assert.equal(cellOrder({ max_qcd: 'LO', max_ew: 'LO' }), 'LO QCD');
+  assert.equal(cellOrder({ max_qcd: 'LO' }), 'LO QCD');
+  assert.equal(cellOrder({ max_qcd: null, max_ew: null }), null);
+  assert.match(cellState(cell({ max_qcd: 'LO', max_ew: 'NLO' }), false).label, /^NLO EW, /);
 });

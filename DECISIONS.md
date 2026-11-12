@@ -113,8 +113,15 @@ uncertainty — repeated per observable.
     ratio only (supersedes the order/ratio switch of #8); each cell prints its highest QCD order. New pages, all derived
     in the browser, nothing stored: `#/gaps` (partial/missing building blocks per process, worst ratio first),
     `#/next-run` (projected measurements vs today's headline theory on the same observable only, never another
-    observable's theory; no estimate = listed as a gap) and `#/timeline` (channels with a prediction at ≥ NLO/NNLO/N3LO
-    per year, year = earliest reference the prediction cites; first-time-per-process milestones link to the observable).
+    observable's theory; no estimate = listed as a gap) and `#/timeline` (processes that had reached ≥ NLO/NNLO/N3LO QCD
+    per year, with one milestone per process and order).
+    **Revised 2026-11-12:** the timeline is read from the building-block grid, not from predictions (dating a prediction by
+    its earliest cited ref, and letting it set lower orders, gave wrong years). A process reaches an order when the `code`
+    cell of that order's own row ("NNLO QCD") is done, year = earliest ref of that cell; an NLO row without a `code` cell
+    counts when all its recorded cells are done, year = the latest of the cells' earliest refs. Rows with a partial `code`
+    cell, or with amplitudes only beyond NLO, are not counted (errs late). Lines count processes (the grid is per process,
+    not per channel) from the first year they reached that order or a higher one. The rule is printed on the page.
+    Cells whose predictions are LO in QCD but higher in EW (e+e− → WW) print the EW order (`derived.cells[].max_ew`).
 25. **Leading-order Feynman diagrams (2026-11-12):** one representative LO diagram per process in `data/diagrams.yaml`
     (keyed by process id; points on a 4 × 3 grid plus typed edges, format in `docs/diagrams.md`), validated by
     `data/schema/diagrams.schema.json` and an integrity check (key is a process, edges join declared points); a process

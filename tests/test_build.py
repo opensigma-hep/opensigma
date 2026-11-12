@@ -111,3 +111,19 @@ def test_bad_yaml_is_one_error_line(tmp_path, capsys, text, msg):
     (root / "processes" / "vector-bosons" / "dy-nc.yaml").write_text(text, encoding="utf-8")
     assert build.main(["--root", str(root), "--out", str(tmp_path / "d.json"), "--offline"]) == 1
     assert capsys.readouterr().out.startswith(f"ERROR {msg}")
+
+
+def test_build_ships_only_tagged_candidates(tmp_path):
+    root = tmp_path / "repo"
+    shutil.copytree(MIN, root)
+    chan = "chan:dy-nc/lhc-13"
+
+    def cand(recid, channels):
+        return {"recid": recid, "title": f"T{recid}", "arxiv": None, "channels": channels, "matched_by": "refersto:recid:1 " * 50}
+
+    (root / "candidates.json").write_text(json.dumps({"proc:dy-nc": [cand(1, [chan]), cand(2, []), cand(3, [chan])], "proc:other": [cand(4, [])]}), encoding="utf-8")
+    out = tmp_path / "data.json"
+    assert build.main(["--root", str(root), "--out", str(out), "--offline"]) == 0
+    d = json.loads(out.read_text(encoding="utf-8"))
+    assert d["candidates"] == {"proc:dy-nc": [{"recid": r, "title": f"T{r}", "arxiv": None, "channels": [chan]} for r in (1, 3)]}
+    assert d["derived"]["cells"][chan]["candidates"] == 2  # counted from the full list, before trimming

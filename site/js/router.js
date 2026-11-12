@@ -12,16 +12,18 @@ function decode(s) {
 
 // A measurement has no page of its own (the observable page lists it): meas: ids land on the parent channel.
 export function parseHash(hash, aliases, ids, parents = {}) {
-  const path = hash.replace(/^#\/?/, '');
+  // Only search reads its query; elsewhere a "?…" and trailing slashes are ignored.
+  const [, bare, query = ''] = /^#?\/?([^?]*)\??(.*)$/s.exec(hash);
+  const path = bare.replace(/\/+$/, '');
   if (path === '') return { view: 'families' };
   if (['about', 'amplitudes', 'parameters', 'processes', 'gaps', 'next-run', 'timeline'].includes(path)) return { view: path };
-  if (path === 'glossary' || path.startsWith('glossary?')) {
-    const raw = path.slice(9).split('&').find((kv) => kv.startsWith('t='));
+  if (path === 'glossary') {
+    const raw = query.split('&').find((kv) => kv.startsWith('t='));
     return raw ? { view: 'glossary', t: decode(raw.slice(2)) } : { view: 'glossary' };
   }
-  if (path === 'search' || path.startsWith('search?')) {
+  if (path === 'search') {
     // Not URLSearchParams: it would turn a literal '+' into a space.
-    const raw = path.slice(7).split('&').find((kv) => kv.startsWith('q='));
+    const raw = query.split('&').find((kv) => kv.startsWith('q='));
     return { view: 'search', q: raw ? decode(raw.slice(2)) : '' };
   }
   const raw = decode(path);

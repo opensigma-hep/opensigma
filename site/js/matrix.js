@@ -14,12 +14,19 @@ const RATIO_EDGES = [0.5, 0.8, 1.25, 2];
 export const RATIO_LABELS = ['< 0.5', '0.5 – 0.8', '0.8 – 1.25', '1.25 – 2', '> 2'];
 export const ratioBin = (r) => RATIO_EDGES.findIndex((e) => r <= e) < 0 ? 4 : RATIO_EDGES.findIndex((e) => r <= e);
 
+/** "NNLO QCD", or the EW order ("NLO EW") when it is higher and QCD is LO or absent; null without predictions. */
+export function cellOrder(cell) {
+  const ew = cell.max_ew ?? 'LO';
+  if (ew !== 'LO' && (cell.max_qcd ?? 'LO') === 'LO') return `${ew} EW`;
+  return cell.max_qcd == null ? null : `${cell.max_qcd} QCD`;
+}
+
 /** Fill (precision ratio), texture and text label for one cell. A missing cell means the process has no channel at that collider. */
 export function cellState(cell, includeProj) {
   if (!cell) return { fill: 'none', pattern: 'none', label: 'no channel' };
   const ratio = includeProj ? cell.ratio_with_projections : cell.ratio;
   const n = cell.n_measurements;
-  const parts = [cell.max_qcd == null ? 'no QCD prediction' : `${cell.max_qcd} QCD`,
+  const parts = [cellOrder(cell) ?? 'no QCD prediction',
     ratio == null ? 'no precision ratio' : `precision ratio ${+ratio.toFixed(2)} (theory/experiment)`,
     `${n} measurement${n === 1 ? '' : 's'}`];
   if (cell.candidates > 0) parts.push(`${cell.candidates} candidate${cell.candidates === 1 ? '' : 's'}`);
