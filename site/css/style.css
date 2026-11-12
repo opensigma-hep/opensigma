@@ -220,3 +220,9 @@ svg.timeline .tl-NNLO { stroke-dasharray: 7 4; }
 .tl-key { display: inline-block; width: 1.6rem; border-top: 3px solid var(--c); vertical-align: middle; }
 .tl-key.tl-NLO { border-top-style: dotted; }
 .tl-key.tl-NNLO { border-top-style: dashed; }
+
+/* Experiments registry: external links are marked */
+a.ext::after { content: "\00a0\2197"; font-size: .85em; }
+.linklist { margin: .25rem 0 .75rem; padding-left: 1.25rem; }
+dl.groups dt { font-weight: 700; margin-top: .9rem; }
+dl.groups dd { margin: .15rem 0 0; }

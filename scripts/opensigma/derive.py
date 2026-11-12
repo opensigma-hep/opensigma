@@ -112,6 +112,8 @@ def derive(repo: dict, today: date) -> dict:
         add(f["id"], "fam", f["name"], f)
     for a in repo["amplitudes"]:
         add(a["id"], "amp", a["id"], a)
+    for e in repo.get("experiments", []):
+        add(e["id"], "exp", e["name"], e, [e.get("full_name", "")])
     for p in repo["parameters"]:
         add(p["id"], "par", p["name"], p, [p["symbol"]])
     for root in [r for k in ("families", "amplitudes", "parameters", "processes") for r in repo[k]]:

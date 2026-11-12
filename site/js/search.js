@@ -1,7 +1,7 @@
 // Pure search over derived.search_index; typed-ASCII physics notation matches the Unicode labels.
 const GREEK = { α: 'alpha', β: 'beta', γ: 'gamma', δ: 'delta', ε: 'epsilon', θ: 'theta', λ: 'lambda',
   μ: 'mu', ν: 'nu', π: 'pi', ρ: 'rho', σ: 'sigma', τ: 'tau', φ: 'phi', χ: 'chi', ψ: 'psi', ω: 'omega', ℓ: 'l' };
-const KIND_ORDER = ['fam', 'proc', 'chan', 'obs', 'amp', 'par', 'meas'];
+const KIND_ORDER = ['fam', 'proc', 'chan', 'obs', 'amp', 'par', 'meas', 'exp'];
 
 export function normalize(s) {
   return s.normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase()

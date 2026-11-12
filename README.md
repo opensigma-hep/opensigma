@@ -1,6 +1,6 @@
 # OpenSigma
 
-A map of collider-physics processes. Data lives as YAML under `data/` (`data/families.yaml`, `data/colliders.yaml`, `data/processes/`, `data/amplitudes/`, `data/parameters/`),
+A map of collider-physics processes. Data lives as YAML under `data/` (`data/families.yaml`, `data/colliders.yaml`, `data/experiments.yaml`, `data/processes/`, `data/amplitudes/`, `data/parameters/`),
 a Python build (`scripts/`) turns it into `site/data.json`, and a static JS site renders it.
 
 ## Setup

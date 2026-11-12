@@ -3,6 +3,7 @@ import { toHash } from './router.js';
 import { statusBadge, refText } from './format.js';
 import { issueUrl, refUrl } from './verify-links.js';
 import { REPO } from './config.js';
+import { expByName } from './experiments.js';
 
 export const BB_COLS = ['born', '1L', '2L', '3L', 'RV', 'RR', 'RRR', 'ir_scheme', 'code'];
 
@@ -17,6 +18,18 @@ export const fill = (host, ...kids) => host.replaceChildren(...kids.flat().filte
 export const none = (what) => el('p', { className: 'none-yet' }, `No ${what} yet.`);
 export const link = (id, text) => el('a', { href: toHash(id) }, text ?? id);
 export const sep = (nodes, s = ', ') => nodes.flatMap((n, i) => (i ? [s, n] : [n]));
+/** Link that leaves the site: new tab, rel=noopener, marked with an arrow (CSS a.ext). */
+export function ext(url, text) {
+  const a = el('a', { className: 'ext', href: url, target: '_blank', rel: 'noopener' }, text ?? url.replace(/^https:\/\/(www\.)?/, '').replace(/\/$/, ''));
+  a.title = `${url} (external site, opens in a new tab)`;
+  return a;
+}
+export const linkList = (links) => el('ul', { className: 'linklist' }, ...(links ?? []).map((l) => el('li', {}, ext(l.url, l.label))));
+/** Experiment name as used in a measurement, linked to its page when it is in the registry. */
+export function expLink(data, name) {
+  const e = expByName(data.experiments).get(name);
+  return e ? link(e.id, name) : name;
+}
 
 const IDX = new WeakMap();
 /** id -> {node, label, kind, proc, chan}, built once per data object. */
@@ -27,6 +40,7 @@ export function index(data) {
   for (const f of data.families ?? []) m.set(f.id, { node: f, label: f.name, kind: 'fam' });
   for (const c of data.colliders ?? []) m.set(c.id, { node: c, label: c.name, kind: 'col' });
   for (const a of data.amplitudes ?? []) m.set(a.id, { node: a, label: a.id, kind: 'amp' });
+  for (const e of data.experiments ?? []) m.set(e.id, { node: e, label: e.name, kind: 'exp' });
   for (const p of data.parameters ?? []) m.set(p.id, { node: p, label: p.name, kind: 'par' });
   for (const p of data.processes ?? []) {
     m.set(p.id, { node: p, label: p.name, kind: 'proc' });
@@ -204,7 +218,7 @@ export function measTable(data, rows) {
     if (m.assumptions) notes.push(m.assumptions);
     const cls = [m.projected && 'projected', m.superseded_by && 'superseded', m.preliminary && 'preliminary'].filter(Boolean).join(' ');
     const tr = el('tr', { className: cls, dataset: { id: m.id } },
-      el('td', {}, m.experiment), el('td', {}, m.dataset ?? ''),
+      el('td', {}, expLink(data, m.experiment)), el('td', {}, m.dataset ?? ''),
       ...(withTotal ? [el('td', {}, total ? [`${total.value_pct} %`, el('br'), prov(total.provenance, `${total.value_pct} %`)] : '—')] : []),
       el('td', {}, refLink(m.ref, refs)),
       el('td', {}, m.hepdata ? el('a', { href: refUrl(m.hepdata), textContent: 'HEPData' }) : '—'),

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "common.schema.json",
   "$defs": {
-    "id": {"type": "string", "pattern": "^(fam|proc|chan|meas|obs|amp|par|col):[A-Za-z0-9][A-Za-z0-9./+-]*$"},
+    "id": {"type": "string", "pattern": "^(fam|proc|chan|meas|obs|amp|par|col|exp|grp):[A-Za-z0-9][A-Za-z0-9./+-]*$"},
     "ref": {
       "type": "string",
       "pattern": "^(inspire:\\d+|arXiv:(\\d{4}\\.\\d{4,5}|[a-z-]+(\\.[A-Z]{2})?/\\d{7})(, .+)?|hepdata:ins\\d+/.+)$"

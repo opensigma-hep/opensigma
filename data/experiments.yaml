@@ -1,0 +1,291 @@
+# Experiments and working groups. `name` is the string used as `experiment:` in data/processes/**.
+# Every URL and every fact below was fetched from the linked pages on 2026-11-12 (see DECISIONS.md #26);
+# `python -m scripts.linkcheck --registry` re-checks the URLs. Facts not found on an official page are left out
+# (e.g. the expansion of "ATLAS", the first year of D0, H1 and ZEUS data taking).
+experiments:
+  - id: "exp:atlas"
+    name: "ATLAS"
+    kind: experiment
+    colliders: ["col:lhc-7", "col:lhc-8", "col:lhc-13", "col:lhc-13.6", "col:lhc-hl"]
+    status: active
+    years: "2009–"
+    description: "One of the two general-purpose detectors at the LHC: a cylinder 46 m long and 25 m in diameter, with six detecting subsystems layered around the collision point and a magnet system that bends the paths of charged particles."
+    links:
+      - {label: "Collaboration website", url: "https://atlas.cern/"}
+      - {label: "Public physics results", url: "https://twiki.cern.ch/twiki/bin/view/AtlasPublic"}
+      - {label: "Standard Model summary plots", url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CombinedSummaryPlots/SM/"}
+      - {label: "Standard Model public results", url: "https://twiki.cern.ch/twiki/bin/view/AtlasPublic/StandardModelPublicResults"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=ATLAS"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AATLAS"}
+      - {label: "Open data", url: "https://opendata.atlas.cern/"}
+    sources:
+      - "https://atlas.cern/Discover/Detector"
+      - "https://home.cern/science/experiments/atlas"
+      - "https://home.cern/science/accelerators/large-hadron-collider"
+
+  - id: "exp:cms"
+    name: "CMS"
+    full_name: "Compact Muon Solenoid"
+    kind: experiment
+    colliders: ["col:lhc-7", "col:lhc-8", "col:lhc-13", "col:lhc-13.6", "col:lhc-hl"]
+    status: active
+    years: "2009–"
+    description: "General-purpose detector at the LHC built around a superconducting solenoid that generates a 4 T field; 21 m long, 15 m wide and 15 m high, 14,000 tonnes."
+    links:
+      - {label: "Collaboration website", url: "https://cms.cern/"}
+      - {label: "Public physics results", url: "https://cms-results.web.cern.ch/cms-results/public-results/publications/"}
+      - {label: "Cross-section summary plots", url: "https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsCombined"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=CMS"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3ACMS"}
+      - {label: "Open data", url: "https://opendata.cern.ch/docs/about-cms"}
+    sources:
+      - "https://home.cern/science/experiments/cms"
+      - "https://home.cern/science/accelerators/large-hadron-collider"
+
+  - id: "exp:lhcb"
+    name: "LHCb"
+    full_name: "Large Hadron Collider beauty"
+    kind: experiment
+    colliders: ["col:lhc-7", "col:lhc-8", "col:lhc-13", "col:lhc-13.6", "col:lhc-hl"]
+    status: active
+    years: "2009–"
+    description: "Forward spectrometer with planar detectors at the LHC (5600 tonnes, 21 m long, 10 m high, 13 m wide), using a series of subdetectors to detect mainly forward particles."
+    links:
+      - {label: "Public website", url: "https://lhcb-outreach.web.cern.ch/"}
+      - {label: "Collaboration page", url: "https://lhcb.web.cern.ch/"}
+      - {label: "Public physics results", url: "https://lhcbproject.web.cern.ch/Publications/LHCbProjectPublic/Summary_all.html"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=LHCb"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3ALHCb"}
+      - {label: "Open data", url: "https://opendata.cern.ch/docs/about-lhcb"}
+    sources:
+      - "https://home.cern/science/experiments/lhcb"
+      - "https://home.cern/science/accelerators/large-hadron-collider"
+
+  - id: "exp:alice"
+    name: "ALICE"
+    full_name: "A Large Ion Collider Experiment"
+    kind: experiment
+    colliders: ["col:lhc-7", "col:lhc-8", "col:lhc-13", "col:lhc-13.6"]
+    status: active
+    years: "2009–"
+    description: "10,000-tonne detector at the LHC (26 m long, 16 m high, 16 m wide) used to study quark-gluon plasma."
+    links:
+      - {label: "Collaboration website", url: "https://alice-collaboration.web.cern.ch/"}
+      - {label: "Public physics results", url: "https://alice-publications.web.cern.ch/publications"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=ALICE"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AALICE"}
+      - {label: "Open data", url: "https://opendata.cern.ch/docs/about-alice"}
+    sources:
+      - "https://home.cern/science/experiments/alice"
+      - "https://home.cern/science/accelerators/large-hadron-collider"
+
+  - id: "exp:cdf"
+    name: "CDF"
+    full_name: "Collider Detector at Fermilab"
+    kind: experiment
+    colliders: ["col:tevatron-1960"]
+    status: completed
+    years: "1985–2011"
+    description: "4,500-ton detector on the Tevatron ring: seven layers of silicon and a large wire chamber for tracking, lead– and steel–scintillator calorimeters, and muon detectors."
+    links:
+      - {label: "Fermilab page", url: "https://www.fnal.gov/pub/tevatron/experiments/cdf.html"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=CDF"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3ACDF"}
+    sources:
+      - "https://www.fnal.gov/pub/tevatron/experiments/index.html"
+      - "https://www.fnal.gov/pub/tevatron/"
+
+  - id: "exp:d0"
+    name: "D0"
+    full_name: "DZero (named for its location, D0, on the Tevatron ring)"
+    kind: experiment
+    colliders: ["col:tevatron-1960"]
+    status: completed
+    years: "until 2011"
+    description: "5,500-ton detector on the Tevatron ring: silicon and scintillating-fibre trackers, liquid-argon calorimeters, and three layers of muon detectors."
+    links:
+      - {label: "Fermilab page", url: "https://www.fnal.gov/pub/tevatron/experiments/dzero.html"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=D0"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AD0"}
+    sources:
+      - "https://www.fnal.gov/pub/tevatron/"
+
+  - id: "exp:aleph"
+    name: "ALEPH"
+    kind: experiment
+    colliders: ["col:lep1", "col:lep2"]
+    status: completed
+    years: "1989–2000"
+    description: "LEP detector built in cylindrical layers around the beam pipe: a silicon vertex detector, an inner drift chamber, a time projection chamber, electromagnetic and hadron calorimeters, a 1.5 T superconducting coil and a muon-detection system."
+    links:
+      - {label: "CERN page", url: "https://home.cern/science/experiments/aleph"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=ALEPH"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AALEPH"}
+    sources:
+      - "https://home.cern/science/accelerators/large-electron-positron-collider"
+
+  - id: "exp:delphi"
+    name: "DELPHI"
+    full_name: "DEtector with Lepton, Photon and Hadron Identification"
+    kind: experiment
+    colliders: ["col:lep1", "col:lep2"]
+    status: completed
+    years: "1989–2000"
+    description: "LEP detector 10 m in length and diameter and weighing 3500 tonnes, with 20 subdetectors, among them ring-imaging Cherenkov counters to tell charged particles apart and a silicon detector for short-lived particles."
+    links:
+      - {label: "Collaboration website", url: "https://delphi-www.web.cern.ch/delphi-www/"}
+      - {label: "Public physics results", url: "https://delphi-www.web.cern.ch/delphi-www/physicsresults.html"}
+      - {label: "CERN page", url: "https://home.cern/science/experiments/delphi"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=DELPHI"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3ADELPHI"}
+      - {label: "Open data", url: "https://opendata.cern.ch/docs/about-delphi"}
+
+  - id: "exp:l3"
+    name: "L3"
+    kind: experiment
+    colliders: ["col:lep1", "col:lep2"]
+    status: completed
+    years: "1989–2000"
+    description: "LEP detector whose three main outer layers were an electromagnetic calorimeter, a hadronic calorimeter and a muon detector, with a silicon vertex detector and a time-expansion chamber near the beam line."
+    links:
+      - {label: "Collaboration website", url: "https://l3.web.cern.ch/l3/"}
+      - {label: "Public physics results", url: "https://l3.web.cern.ch/l3/paper/publications.html"}
+      - {label: "CERN page", url: "https://home.cern/science/experiments/l3"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=L3"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AL3"}
+
+  - id: "exp:opal"
+    name: "OPAL"
+    full_name: "Omni-Purpose Apparatus at LEP"
+    kind: experiment
+    colliders: ["col:lep1", "col:lep2"]
+    status: completed
+    years: "1989–2000"
+    description: "General-purpose LEP detector, about 12 m long, high and wide, with components layered around the beam pipe: a silicon microvertex detector, vertex and jet chambers, electromagnetic and hadron calorimeters, and muon detectors."
+    links:
+      - {label: "Collaboration website", url: "https://opal.web.cern.ch/Opal/"}
+      - {label: "Public physics results", url: "https://opal.web.cern.ch/Opal/PPwelcome.html"}
+      - {label: "CERN page", url: "https://home.cern/science/experiments/opal"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=OPAL"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AOPAL"}
+
+  - id: "exp:sld"
+    name: "SLD"
+    full_name: "SLAC Large Detector"
+    kind: experiment
+    colliders: ["col:slc"]
+    status: completed
+    years: "1992–1998"
+    description: "Detector at the Stanford Linear Collider studying polarized Z bosons produced in electron–positron collisions, with a 3D silicon CCD vertex detector, high-precision tracking, fine-grained calorimetry and Cherenkov ring imaging for particle identification."
+    links:
+      - {label: "Collaboration website", url: "https://www-sld.slac.stanford.edu/sldwww/sld.html"}
+      - {label: "Public physics results", url: "https://www-sld.slac.stanford.edu/sldwww/pubs.html"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=SLD"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3ASLD"}
+    sources:
+      - "https://www-sld.slac.stanford.edu/sldwww/sldintro/sldintro.html"
+      - "https://www-sldnt.slac.stanford.edu/alr/slchistory.htm"
+
+  - id: "exp:h1"
+    name: "H1"
+    kind: experiment
+    colliders: ["col:hera"]
+    status: completed
+    years: "until 2007"
+    description: "Detector built and operated by the H1 collaboration at the positron–proton collider HERA, hosted by DESY in Hamburg."
+    links:
+      - {label: "Collaboration website", url: "https://h1.desy.de/"}
+      - {label: "Public physics results", url: "https://h1.desy.de/e104552/e104555/"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=H1"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AH1"}
+
+  - id: "exp:zeus"
+    name: "ZEUS"
+    kind: experiment
+    colliders: ["col:hera"]
+    status: completed
+    description: "HERA detector (12 m × 10 m × 19 m, 3600 tons) built around a uranium–scintillator calorimeter that encloses wire-chamber tracking in a 1.8 T superconducting solenoid."
+    links:
+      - {label: "Collaboration website", url: "https://www-zeus.desy.de/"}
+      - {label: "Public physics results", url: "https://www-zeus.desy.de/zeus_papers/zeus_papers.html"}
+      - {label: "HEPData records", url: "https://www.hepdata.net/search/?collaboration=ZEUS"}
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3AZEUS"}
+    sources:
+      - "https://www-zeus.desy.de/public/zeus.php3"
+
+  - id: "exp:eic"
+    name: "EIC"
+    full_name: "Electron-Ion Collider"
+    kind: facility
+    colliders: ["col:eic"]
+    status: planned
+    description: "Not a collaboration: measurements listed under EIC are projections for the Electron-Ion Collider being built at Brookhaven National Laboratory. Its detector, ePIC, has a 1.7 T superconducting solenoid, silicon and micro-pattern gas trackers, electromagnetic and hadron calorimeters, and timing and Cherenkov particle identification."
+    links:
+      - {label: "Project website", url: "https://www.bnl.gov/eic/"}
+      - {label: "ePIC collaboration", url: "https://www.epic-eic.org/"}
+      - {label: "INSPIRE papers (ePIC)", url: "https://inspirehep.net/literature?q=collaboration%3AePIC"}
+    sources:
+      - "https://www.epic-eic.org/public/detector.html"
+
+  - id: "exp:combination"
+    name: "combination"
+    kind: combination
+    description: "Not an experiment: a combined result of several experiments (ATLAS + CMS, CDF + D0, the four LEP experiments, H1 + ZEUS, …) entered as its own measurement. The dataset column names the inputs; the working groups that produce many of these combinations are listed on the experiments index."
+
+groups:
+  - id: "grp:lhc-top-wg"
+    name: "LHC Top Working Group"
+    description: "The LHC working group on top-quark physics; maintains summary plots of top-quark cross sections, mass and properties."
+    links:
+      - {label: "Public home page", url: "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCTopWG"}
+      - {label: "Summary plots", url: "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCTopWGSummaryPlots"}
+
+  - id: "grp:lhc-higgs-wg"
+    name: "LHC Higgs Working Group"
+    description: "Recommended Higgs production cross sections and decay branching ratios, documented in the CERN Yellow Reports (Handbook of LHC Higgs Cross Sections)."
+    links:
+      - {label: "Public home page", url: "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG"}
+      - {label: "Cross sections and branching ratios", url: "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/HiggsXSBR"}
+      - {label: "Yellow Report 4: SM Higgs at 13 TeV", url: "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt13TeV"}
+
+  - id: "grp:lhc-ew-wg"
+    name: "LHC Electroweak Working Group"
+    description: "LPCC working group on electroweak precision measurements at the LHC: Drell–Yan and precision measurements, jets and electroweak bosons, multi-boson production, and the LHC–Tevatron W-mass combination."
+    links:
+      - {label: "LPCC home page", url: "https://lpcc.web.cern.ch/electroweak-precision-measurements-lhc-wg"}
+      - {label: "Working pages", url: "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCEW"}
+
+  - id: "grp:lep-ewwg"
+    name: "LEP Electroweak Working Group"
+    description: "Combines the measurements of ALEPH, DELPHI, L3 and OPAL on electroweak observables (cross sections, masses and couplings of the heavy gauge bosons), taking common systematic uncertainties into account."
+    links:
+      - {label: "Home page", url: "https://lepewwg.web.cern.ch/lepewwg/"}
+
+  - id: "grp:tev-ewwg"
+    name: "Tevatron Electroweak Working Group"
+    description: "Combines results of the Tevatron experiments CDF and D0, in particular the mass of the top quark and the mass and width of the W boson. Its own website now requires a Fermilab login, so only the INSPIRE listing is linked."
+    links:
+      - {label: "INSPIRE papers", url: "https://inspirehep.net/literature?q=collaboration%3A%22Tevatron%20Electroweak%20Working%20Group%22"}
+    sources:
+      - "https://lepewwg.web.cern.ch/lepewwg/"
+
+  - id: "grp:h1-zeus"
+    name: "H1 and ZEUS combined results"
+    description: "Combined HERA results of the H1 and ZEUS collaborations. The official DESY page did not respond when checked, so the H1 page that points to it is linked instead."
+    links:
+      - {label: "HERA combined results (H1 site)", url: "https://h1.desy.de/e104552/e104618/"}
+
+  - id: "grp:hflav"
+    name: "HFLAV"
+    full_name: "Heavy Flavor Averaging Group"
+    description: "World averages of heavy-flavour measurements: b-hadron lifetimes and oscillations, semileptonic and rare B decays, unitarity-triangle angles, charm and tau physics."
+    links:
+      - {label: "Home page", url: "https://hflav.web.cern.ch/"}
+
+  - id: "grp:pdg"
+    name: "PDG"
+    full_name: "Particle Data Group"
+    description: "Publishes the Review of Particle Physics: summary tables, reviews and particle listings."
+    links:
+      - {label: "Home page", url: "https://pdg.lbl.gov/"}
+      - {label: "pdgLive interactive listings", url: "https://pdglive.lbl.gov/"}

@@ -115,3 +115,14 @@ uncertainty — repeated per observable.
     `#/next-run` (projected measurements vs today's headline theory on the same observable only, never another
     observable's theory; no estimate = listed as a gap) and `#/timeline` (channels with a prediction at ≥ NLO/NNLO/N3LO
     per year, year = earliest reference the prediction cites; first-time-per-process milestones link to the observable).
+26. **Experiments and colliders as first-class entries (2026-11-12):** `data/experiments.yaml` lists every experiment
+    used as `experiment:` in a measurement (matched by `name`), plus two non-experiment kinds: `facility` (EIC, whose
+    entries are projections) and `combination` (combined results; the dataset names the inputs), and a `groups:` section
+    for working groups and averaging bodies. `exp:` ids get a page (description, official links, every measurement by
+    family) and `#/experiments` an index; experiment names in measurement tables link there; collider pages show the
+    optional `machine/lab/years/url/note/luminosity/sources` fields and their experiments. Rule: every URL and fact in
+    these two files is fetched from an official page, never written from memory; what no reachable official page states
+    is left out (so some start years, acronym expansions and LHC integrated luminosities are absent). An unregistered
+    experiment name is a build WARNING, not an error. `python -m scripts.linkcheck --registry` re-checks the URLs.
+    Not linked because unreachable on 2026-11-12: the CDF, D0 and Tevatron EWWG sites (Fermilab login), the ALEPH and
+    LHeC sites (CERN login), the DESY H1+ZEUS combined-results page (timeout).
