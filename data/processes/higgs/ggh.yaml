@@ -194,6 +194,7 @@ channels:
             compared_to: ["meas:ggh/lhc-13/cms-2025-diff-comb"]
             refs: ["arXiv:1309.0017", "arXiv:1610.07922"]
             provenance: {uid: 3e8b8cc4, ref: "arXiv:2504.13081", locator: "Sec. 6, paragraph on the theoretical predictions (MG5_aMC@NLO v2.6.5 weighted to NNLOPS, ref. [25]; POWHEG also shown) and Fig. 1; NNLOPS accuracy from the abstract of arXiv:1309.0017", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
           - label: "NLO EW corrections to H + jet in the gg → gH channel, full top-mass dependence (G_μ scheme)"
             accuracy:
               qcd: LO

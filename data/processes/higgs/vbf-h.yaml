@@ -131,6 +131,7 @@ channels:
             compared_to: ["meas:vbf-h/lhc-13/atlas-2023-ww-fid"]
             refs: ["inspire:2649598"]
             provenance: {uid: fb7825b2, ref: "inspire:2649598", locator: "Sec. 3.1 and Table 1 (Powheg+Pythia 8: NLO QCD & EW + approx. NNLO QCD, NNPDF3.0NLO, AZNLO); Fig. 9 (comparison with σ_fid)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "NLO+PS QCD (MG5_aMC@NLO + Herwig 7)"
             accuracy: {qcd: NLO, shower_matched: true, approximations: ["LO EW", "CKKW scheme for ME–PS overlap removal", "Higgs decay via MadSpin"]}
             codes: ["MG5_aMC@NLO", "Herwig 7"]
@@ -161,6 +162,7 @@ channels:
                 provenance: {uid: 097eee62, ref: "arXiv:2407.09363", locator: "Sec. III, Eqs. (7)–(8); text after Eq. (8): scale uncertainties ~2% at NNLO do not capture missing higher orders (NNLO is 10% below NLO)", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:2807339"]
             provenance: {uid: 71b2c30b, ref: "arXiv:2407.09363", locator: "Sec. II (Eqs. (1)–(5), combination of NNLO production and decay) and Sec. III (13 TeV, NNPDF31_nnlo_as_0118, selection following the ATLAS analysis, Ref. [7]); fiducial σ reduced by about 40% from LO to NNLO", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:vbf-h/lhc-13/sigma-vbf"
         name: "σ(VBF) in the Higgs decay-channel combination (ATLAS: σ(VBF); CMS: μ_VBF)"
         kind: total
@@ -193,7 +195,7 @@ channels:
               qcd: N3LO
               approximations: ["no colour exchange between the two hadronic systems", "electroweak corrections not included in this prediction"]
             codes: ["proVBFH"]
-            total: {value_pct: 0.13, provenance: {uid: bb6b7514, ref: "arXiv:1606.00840", locator: "Table I, N3LO, 13 TeV: 3.928 pb +0.005/−0.001 pb (scale variation, larger side 0.13%); PDF uncertainty (about 2% at 13 TeV, PDF4LHC15) not included", source: agent, status: cross-checked, date: "2026-10-16"}}
+            total: {value_pct: 2.0, provenance: {uid: bb6b7514, ref: "arXiv:1606.00840", locator: "Table I, N3LO, 13 TeV: 3.928 pb +0.005/−0.001 pb (scale variation, larger side 0.13%) and text after Eq. (6): PDF uncertainty of about 2% at 13 TeV (PDF4LHC15), quoted separately by the paper; total = scale and PDF added in quadrature (0.13% ⊕ 2%), previously scale only", source: agent, status: agent-draft, date: "2026-11-12"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation of both hadronic sectors"
@@ -257,13 +259,13 @@ channels:
         predictions:
           - label: "NLO QCD+EW + approximate NNLO QCD (LHC Higgs Cross Section WG, YR3), m_H = 125.09 GeV, 8 TeV"
             accuracy:
-              qcd: NNLO
+              qcd: NLO
               ew: NLO
-              approximations: ["order quoted as NLO(QCD+EW) + approximate NNLO(QCD)"]
+              approximations: ["order quoted as NLO(QCD+EW) + approximate NNLO(QCD): the complete fixed order is NLO, the NNLO QCD part is an approximation"]
             total: {value_pct: 2.5, provenance: {uid: 37b7192f, ref: "arXiv:1606.02266", locator: "Table 1, 8 TeV column, VBF row: 1.58 ± 0.04 pb; relative uncertainty 0.04/1.58 derived from the rounded values (quadrature sum of QCD scale, PDF and αs, symmetric as quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:vbf-h/lhc-8/atlas-cms-2016-comb"]
             refs: ["arXiv:1307.1347"]
-            provenance: {uid: 01ee8a9a, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_VBF (= 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+            provenance: {uid: 01ee8a9a, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_VBF (= 1)", source: agent, status: agent-draft, date: "2026-11-12"}
             headline: true
   - id: "chan:vbf-h/lhc-13.6"
     collider: "col:lhc-13.6"

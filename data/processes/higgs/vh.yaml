@@ -115,6 +115,7 @@ channels:
             compared_to: ["meas:vh/lhc-13/atlas-2024-vhbb-stxs", "meas:vh/lhc-13/cms-2023-vhbb-stxs"]
             refs: ["inspire:2842826", "inspire:2736546"]
             provenance: {uid: 3fb4c64d, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 1 and notes (qq → VH: Powheg Box v2 + GoSam + MiNLO, Pythia 8, NNLO(QCD)+NLO(EW) normalisation, pT(V)-dependent NLO EW from Hawk; gg → ZH NLO+NLL) and Table 8; arXiv:2312.07562 Sec. 2 (POWHEG v2 + MINLO, rescaled to NNLO QCD and NLO EW with VH@NNLO and HAWK)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:vh/lhc-13/sigma-wh"
         name: "σ(WH) in the Higgs decay-channel combination (ATLAS: σ(WH); CMS: μ_WH)"
         kind: total
@@ -317,6 +318,7 @@ channels:
                 provenance: {uid: 2ab6f565, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 (± 0.01 pb of 3.62 pb, conservative MC + slicing error) and Validation section", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:3175068"]
             provenance: {uid: b385d5b6, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 and Computational Setup (√s = 13.6 TeV, NNPDF40_an3lo_as_01180, m_H = 125.09 GeV, Gμ scheme); N3LO corrections about +1.5% over NNLO in the boosted setup", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:vh/lhc-13.6/sigma-zh-ww"
         name: "σ(ZH) × B(H → WW) at 13.6 TeV (CMS, four-lepton final state)"
         kind: total
@@ -341,3 +343,4 @@ channels:
             compared_to: ["meas:vh/lhc-13.6/cms-2025-zh-ww"]
             refs: ["arXiv:2402.09955"]
             provenance: {uid: d9a9b31d, ref: "arXiv:2505.20483", locator: "Table of measured signal strengths and cross sections, Run 3, ZH only, σ_SM column: 202 fb; caption: ZH cross sections calculated at NNLO; simulation paragraph: cross sections recommended by the LHC Higgs Working Group", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true

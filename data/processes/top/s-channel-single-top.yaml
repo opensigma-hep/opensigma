@@ -106,7 +106,7 @@ channels:
                 full_table: "hepdata:ins2153660/Cross-section measurement"
                 provenance: {uid: 1c17adb7, ref: "hepdata:ins2153660/Cross-section measurement", locator: "Cross-section measurement, error 'syst'", source: hepdata, status: machine-verified, date: "2026-10-17"}
         predictions:
-          - label: "aN3LO QCD (soft-gluon corrections, MSHT20 aN3LO PDFs), t + t̄"
+          - label: "NNLO QCD + third-order soft-gluon corrections (aN3LO, MSHT20 aN3LO PDFs), t + t̄"
             accuracy:
               qcd: NNLO
               approximations: ["NNLO from NLO plus second-order soft-gluon corrections (reported within 0.5% of the exact NNLO of inspire:1681745 at 13 TeV) with third-order soft-gluon corrections added (aN3LO); massless b-quarks; central scale μ = mt = 172.5 GeV"]
