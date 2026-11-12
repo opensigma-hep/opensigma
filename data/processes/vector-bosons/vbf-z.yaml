@@ -1,0 +1,863 @@
+id: proc:vbf-z
+name: Electroweak Zjj production (VBF Z)
+family: fam:vector-bosons
+sector: SM
+description: Purely electroweak production of a Z boson with two jets, pp → Zjj → ℓ⁺ℓ⁻jj at O(α⁴), dominated by vector-boson fusion (WW → Z) with two forward tagging jets and little hadronic activity between them. The signal is extracted statistically from the much larger strong (O(αs²α²)) Zjj production, whose modelling dominates the measurement uncertainty. A proving ground for VBF Higgs and vector-boson-scattering techniques and a probe of the WWZ coupling. Known at NLO QCD (matched to parton showers in the VBF approximation; complete O(αsα⁴) since 2022) and NLO EW; no NNLO QCD calculation exists.
+watch:
+  recids:
+    - 1803608
+    - 2068177
+    - 630522
+  queries:
+    - t electroweak and (t "Z boson" or t "Z-boson" or t Zjj) and (t "two jets" or t dijets or t Zjj) and (collaboration:ATLAS or collaboration:CMS) and not t photon and not t "W boson" and tc article
+    - (t "Zjj" or t "Z + 2 jet" or t "V + 2 jet" or t "electroweak Z") and (t "vector-boson fusion" or t "vector boson fusion" or t electroweak) and (t NLO or t NNLO or t "electroweak corrections" or t "parton shower") and not t Higgs and tc article
+building_blocks:
+  - row: NLO QCD
+    cells:
+      1L:
+        status: done
+        approximations:
+          - 'inspire:630522: VBF approximation (vector-boson-fusion topologies only)'
+          - 'inspire:2068177: complete O(αs α⁴), i.e. NLO QCD corrections to the EW mode with cross-talk between quark lines, t-, u- and s-channel contributions and EW–QCD interference'
+        refs:
+          - inspire:630522
+          - inspire:2068177
+        provenance:
+          uid: '40765448'
+          ref: inspire:630522
+          locator: Abstract (NLO QCD corrections to the electroweak production of ℓνjj and ℓ⁺ℓ⁻jj within typical vector-boson-fusion cuts; corrections of about 10%, remaining scale uncertainties below 2%); inspire:2068177 Sec. 2 (first complete O(αs α⁴) computation beyond the VBF approximation)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      code:
+        status: done
+        refs:
+          - inspire:1122033
+          - inspire:630522
+          - inspire:2068177
+        provenance:
+          uid: 1f18b4c9
+          ref: inspire:1122033
+          locator: Abstract (electroweak Zjj production in the POWHEG framework, NLO QCD matched to parton showers, leptonic decays with photonic and non-resonant contributions); inspire:630522 Abstract (fully flexible NLO parton-level Monte Carlo); inspire:2068177 Sec. 4 (Sherpa+OpenLoops)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+  - row: NLO EW
+    cells:
+      1L:
+        status: done
+        refs:
+          - inspire:2068177
+        provenance:
+          uid: c4bc3a2c
+          ref: inspire:2068177
+          locator: Sec. 2 (the O(α⁵) contribution, EW corrections to the EW mode, considered for the first time)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      code:
+        status: done
+        approximations:
+          - predictions given for VBF-dominated phase space of invisible-Higgs searches, as reweighting factors for Monte Carlo samples
+        refs:
+          - inspire:2068177
+        provenance:
+          uid: 6d309e01
+          ref: inspire:2068177
+          locator: Abstract (NLO QCD and EW predictions for V + 2 jet production, QCD and EW production modes and their interference) and Sec. 4 (all predictions obtained in the Sherpa+OpenLoops framework)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+  - row: NNLO QCD
+    cells:
+      code:
+        status: missing
+        refs:
+          - inspire:2909891
+        provenance:
+          uid: 21513c70
+          ref: inspire:2909891
+          locator: 'Table 4 (pp → V + 2j: known NLO QCD + NLO EW for the QCD and the EW component; desired NNLO QCD) and Sec. 3.3.3'
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+channels:
+  - id: chan:vbf-z/lhc-13
+    collider: col:lhc-13
+    initial_state: pp
+    coverage: partial
+    last_reviewed: '2026-11-12'
+    headline:
+      observable: obs:vbf-z/lhc-13/sigma-fid-ew
+      region: 'Fiducial EW Zjj → ℓℓjj, 13 TeV: mjj > 1000 GeV, |Δy(jj)| > 2 VBF region (ATLAS); mℓℓ > 50 GeV, mjj > 120 GeV, pT(j) > 25 GeV (CMS)'
+    measurements:
+      - id: meas:vbf-z/lhc-13/atlas-2021
+        experiment: ATLAS
+        dataset: 13 TeV, 139 fb⁻¹ (2015–2018), ee + μμ
+        ref: inspire:1803608
+        hepdata: hepdata:ins1803608/Table 1
+      - id: meas:vbf-z/lhc-13/cms-2018-fid
+        experiment: CMS
+        dataset: 13 TeV, 35.9 fb⁻¹ (2016), ee + μμ
+        ref: inspire:1645246
+        hepdata: hepdata:ins1645246/Measured signal cross section
+    observables:
+      - id: obs:vbf-z/lhc-13/sigma-fid-ew
+        name: Fiducial σ(EW Zjj → ℓℓjj)
+        kind: fiducial
+        variable: 'ATLAS particle-level signal region (paper Table 3): dressed leptons, m(ℓℓ) ∈ (81, 101) GeV, pT(ℓℓ) > 20 GeV, pT(j1) > 85 GeV, pT(j2) > 80 GeV, mjj > 1000 GeV, |Δy(jj)| > 2, no jets in the rapidity gap, ξ_Z < 0.5, pT balance < 0.15; CMS: m(ℓℓ) > 50 GeV, mjj > 120 GeV, parton pT(j) > 25 GeV'
+        results:
+          - measurement: meas:vbf-z/lhc-13/atlas-2021
+            total:
+              value_pct: 17.0
+              provenance:
+                uid: 5303b19c
+                ref: inspire:1803608
+                locator: 'Sec. 8 (fiducial cross-section from integrating the differential cross-section in mjj): σ_EW = 37.4 ± 3.5 (stat) ± 5.5 (syst) fb; added in quadrature'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 9.4
+                    - 9.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 390ea099
+                  ref: inspire:1803608
+                  locator: 'Sec. 8 (fiducial cross-section from integrating the differential cross-section in mjj): σ_EW = 37.4 ± 3.5 (stat) ± 5.5 (syst) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Systematic uncertainty (combined; dominated by the modelling of strong Zjj production)
+                size:
+                  range:
+                    - 15.0
+                    - 15.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: eabd1d76
+                  ref: inspire:1803608
+                  locator: 'Sec. 8 (fiducial cross-section from integrating the differential cross-section in mjj): σ_EW = 37.4 ± 3.5 (stat) ± 5.5 (syst) fb; Sec. 7: strong-Zjj modelling uncertainties are the dominant ones in the EW signal extraction'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+          - measurement: meas:vbf-z/lhc-13/cms-2018-fid
+            total:
+              value_pct: 11.0
+              provenance:
+                uid: 0fe96486
+                ref: hepdata:ins1645246/Measured signal cross section
+                locator: Measured signal cross section, quadrature sum of all errors (bin 3); row 3 is the combined dilepton result σ(EW ℓℓjj) = 534 ± 20 (stat) ± 57 (syst) fb; the component ranges span the dielectron, dimuon and combined rows
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: (stat.)
+                size:
+                  range:
+                    - 3.7
+                    - 6.5
+                  asymmetric: false
+                full_table: hepdata:ins1645246/Measured signal cross section
+                provenance:
+                  uid: 1b666080
+                  ref: hepdata:ins1645246/Measured signal cross section
+                  locator: Measured signal cross section, error '(stat.)'; category 'stat' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: (syst.)
+                size:
+                  range:
+                    - 11.0
+                    - 13.0
+                  asymmetric: false
+                full_table: hepdata:ins1645246/Measured signal cross section
+                provenance:
+                  uid: '33763110'
+                  ref: hepdata:ins1645246/Measured signal cross section
+                  locator: Measured signal cross section, error '(syst.)'; category 'syst_combined' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+        predictions:
+          - label: NLO QCD + PS (Herwig7 + VBFNLO), ATLAS fiducial region
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations:
+                - 'VBF approximation: t-channel colour-singlet exchange only, no overlap with diboson (s-channel) topologies'
+                - no EW corrections
+            codes:
+              - Herwig7
+              - VBFNLO
+            total:
+              value_pct: 9.1
+              provenance:
+                uid: 389560bb
+                ref: inspire:1803608
+                locator: 'Sec. 8: Herwig7+Vbfnlo prediction 39.5 ± 3.4 (scale) ± 1.2 (PDF) fb; added in quadrature'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: Scale variation
+                method: scale uncertainty as quoted by ATLAS for the Herwig7+Vbfnlo prediction
+                size:
+                  range:
+                    - 8.6
+                    - 8.6
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: a6639d54
+                  ref: inspire:1803608
+                  locator: 'Sec. 8: Herwig7+Vbfnlo prediction 39.5 ± 3.4 (scale) ± 1.2 (PDF) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: PDF
+                specific: PDF variations
+                pdf_set: MMHT2014LO (PDF set of the Herwig7+Vbfnlo sample)
+                size:
+                  range:
+                    - 3.0
+                    - 3.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: e42ddcd0
+                  ref: inspire:1803608
+                  locator: 'Sec. 8: Herwig7+Vbfnlo prediction 39.5 ± 3.4 (scale) ± 1.2 (PDF) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:vbf-z/lhc-13/atlas-2021
+            refs:
+              - inspire:1803608
+              - inspire:630522
+            provenance:
+              uid: 0879b3a3
+              ref: inspire:1803608
+              locator: Sec. 3 and Table 1 (Herwig 7.1.5 with Vbfnlo 3.0.0 as loop-amplitude provider, MMHT2014LO, VBF approximation); Sec. 8
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: LO (MadGraph5_aMC@NLO), CMS signal definition
+            accuracy:
+              qcd: LO
+              approximations:
+                - LO EW ℓℓjj signal; stated to agree within 5% with NLO predictions (Sec. 3)
+            codes:
+              - MadGraph5_aMC@NLO
+            total:
+              value_pct: 4.4
+              provenance:
+                uid: d0ae34d2
+                ref: inspire:1645246
+                locator: 'Sec. 3: σ_LO(EW ℓℓjj) = 543 +7 −9 (scale) ± 22 (PDF) fb; results: SM prediction σ_LO(EW ℓℓjj) = 543 ± 24 fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μF and μR scale variation
+                method: μF and μR changed simultaneously by factors of 2 and 1/2
+                size:
+                  range:
+                    - 1.3
+                    - 1.7
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 42b1eac8
+                  ref: inspire:1645246
+                  locator: 'Sec. 3: σ_LO(EW ℓℓjj) = 543 +7 −9 (scale) ± 22 (PDF) fb; results: SM prediction σ_LO(EW ℓℓjj) = 543 ± 24 fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: PDF
+                specific: PDF uncertainties
+                pdf_set: NNPDF3.0
+                size:
+                  range:
+                    - 4.1
+                    - 4.1
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 3f28d886
+                  ref: inspire:1645246
+                  locator: 'Sec. 3: σ_LO(EW ℓℓjj) = 543 +7 −9 (scale) ± 22 (PDF) fb; results: SM prediction σ_LO(EW ℓℓjj) = 543 ± 24 fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:vbf-z/lhc-13/cms-2018-fid
+            refs:
+              - inspire:1645246
+            provenance:
+              uid: 46e1a72a
+              ref: inspire:1645246
+              locator: Sec. 3 (signal definition and LO cross section) and results
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NLO QCD + NLO EW, complete O(αs α⁴) and O(α⁵) (Sherpa+OpenLoops)
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations:
+                - evaluated for the VBF-dominated V + 2 jet phase space of invisible-Higgs searches, not for the ATLAS or CMS EW Zjj fiducial regions
+                - no comparison with these measurements
+            codes:
+              - Sherpa
+              - OpenLoops
+            refs:
+              - inspire:2068177
+            provenance:
+              uid: 854ac112
+              ref: inspire:2068177
+              locator: Abstract; Sec. 2 (first complete O(αs α⁴) and first O(α⁵) results); Sec. 4.2.3 (EW production)
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+      - id: obs:vbf-z/lhc-13/mjj
+        name: dσ/dmjj (EW Zjj)
+        kind: differential
+        variable: mjj
+        results:
+          - measurement: meas:vbf-z/lhc-13/atlas-2021
+            total:
+              value_pct: 18.0
+              provenance:
+                uid: f18d02ca
+                ref: hepdata:ins1803608/Table 1
+                locator: 'Table 1, quadrature sum of all errors (min over bins); EW Zjj differential cross section in the ATLAS signal region; paper Sec. 7: the choice of strong-Zjj event generator has the largest impact on the extracted EW yields'
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 13.0
+                    - 26.0
+                  asymmetric: false
+                full_table: hepdata:ins1803608/Table 1
+                provenance:
+                  uid: d6c3622b
+                  ref: hepdata:ins1803608/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: background
+                specific: strongZjj_gen_choice
+                size:
+                  range:
+                    - 7.6
+                    - 14.0
+                  asymmetric: false
+                full_table: hepdata:ins1803608/Table 1
+                provenance:
+                  uid: 96c784f8
+                  ref: hepdata:ins1803608/Table 1
+                  locator: Table 1, error 'strongZjj_gen_choice'; category 'background' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Lumi
+                size:
+                  range:
+                    - 1.5
+                    - 1.7
+                  asymmetric: false
+                full_table: hepdata:ins1803608/Table 1
+                provenance:
+                  uid: b53f0b4b
+                  ref: hepdata:ins1803608/Table 1
+                  locator: Table 1, error 'Lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+        predictions:
+          - label: NLO QCD + PS (Herwig7 + VBFNLO)
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations:
+                - 'VBF approximation: t-channel colour-singlet exchange only, no overlap with diboson (s-channel) topologies'
+                - no EW corrections
+            codes:
+              - Herwig7
+              - VBFNLO
+            total:
+              value_pct: 9.0
+              provenance:
+                uid: 593f96f7
+                ref: hepdata:ins1803608/Table 1
+                locator: "column 'Herwig7 + VBFNLO', 1000 < mjj < 1500 GeV: 0.03775 ± 0.0034 fb/GeV"
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:vbf-z/lhc-13/atlas-2021
+            refs:
+              - inspire:1803608
+              - inspire:630522
+            provenance:
+              uid: 543f21af
+              ref: inspire:1803608
+              locator: Sec. 3 and Table 1; hepdata:ins1803608/Table 1 column 3
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: NLO QCD + PS (Powheg Box + Pythia 8)
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations:
+                - 'VBF approximation: t-channel colour-singlet exchange only, no overlap with diboson (s-channel) topologies'
+                - no EW corrections
+                - CT10nlo PDFs, AZNLO tune
+            codes:
+              - POWHEG
+              - Pythia
+            total:
+              value_pct: 9.0
+              provenance:
+                uid: 4b269286
+                ref: hepdata:ins1803608/Table 1
+                locator: "column 'Powheg + Py8', 1000 < mjj < 1500 GeV: 0.044867 +0.00404 −0.00278 fb/GeV; larger side"
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:vbf-z/lhc-13/atlas-2021
+            refs:
+              - inspire:1803608
+              - inspire:1122033
+            provenance:
+              uid: 593999de
+              ref: inspire:1803608
+              locator: Sec. 3 and Table 1 (Powheg-Box v1, VBF approximation); hepdata:ins1803608/Table 1 column 2
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: LO multileg + PS (Sherpa 2.2.1)
+            accuracy:
+              qcd: LO
+              shower_matched: true
+              approximations:
+                - 'VBF approximation: t-channel colour-singlet exchange only, no overlap with diboson (s-channel) topologies'
+                - LO matrix elements with additional partons merged with the parton shower
+            codes:
+              - Sherpa
+            total:
+              value_pct: 8.1
+              provenance:
+                uid: a105ac45
+                ref: hepdata:ins1803608/Table 1
+                locator: "column 'Sherpa 2.2.1', 1000 < mjj < 1500 GeV: 0.022437 ± 0.00182 fb/GeV"
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:vbf-z/lhc-13/atlas-2021
+            refs:
+              - inspire:1803608
+            provenance:
+              uid: a4dad7f3
+              ref: inspire:1803608
+              locator: 'Sec. 3 (third EW Zjj sample: Sherpa 2.2.1, LO matrix elements, VBF approximation); hepdata:ins1803608/Table 1 column 4'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+  - id: chan:vbf-z/lhc-8
+    collider: col:lhc-8
+    initial_state: pp
+    coverage: partial
+    last_reviewed: '2026-11-12'
+    headline:
+      observable: obs:vbf-z/lhc-8/sigma-fid-ew
+      region: 'Fiducial EW Zjj → ℓℓjj, 8 TeV: ATLAS search region (mjj > 250 GeV); CMS M(ℓℓ) > 50 GeV, M(jj) > 120 GeV, pT(j) > 25 GeV, |η(j)| < 5'
+    measurements:
+      - id: meas:vbf-z/lhc-8/atlas-2014-fid
+        experiment: ATLAS
+        dataset: 8 TeV, 20.3 fb⁻¹ (2012), ee + μμ
+        ref: inspire:1279489
+      - id: meas:vbf-z/lhc-8/cms-2015-fid
+        experiment: CMS
+        dataset: 8 TeV, 19.7 fb⁻¹ (2012), ee + μμ
+        ref: inspire:1321687
+    observables:
+      - id: obs:vbf-z/lhc-8/sigma-fid-ew
+        name: Fiducial σ(EW Zjj → ℓℓjj)
+        kind: fiducial
+        variable: "ATLAS: search region of the paper's Table 1 (mjj > 250 GeV); a second value is given for mjj > 1 TeV (10.7 ± 0.9 ± 1.9 ± 0.3 fb). CMS: M(ℓℓ) > 50 GeV, M(jj) > 120 GeV, pT(j) > 25 GeV, |η(j)| < 5"
+        results:
+          - measurement: meas:vbf-z/lhc-8/atlas-2014-fid
+            total:
+              value_pct: 21.0
+              provenance:
+                uid: '7e358865'
+                ref: inspire:1279489
+                locator: 'Sec. 8 (combined fiducial cross section): σ_EW = 54.7 ± 4.6 (stat) +9.8 −10.4 (syst) ± 1.5 (lumi) fb; quadrature sum with the larger systematic side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 8.4
+                    - 8.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 9c98f0d5
+                  ref: inspire:1279489
+                  locator: 'Sec. 8 (combined fiducial cross section): σ_EW = 54.7 ± 4.6 (stat) +9.8 −10.4 (syst) ± 1.5 (lumi) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Systematic uncertainty excluding luminosity (combined)
+                size:
+                  range:
+                    - 18.0
+                    - 19.0
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 9a25577f
+                  ref: inspire:1279489
+                  locator: 'Sec. 8 (combined fiducial cross section): σ_EW = 54.7 ± 4.6 (stat) +9.8 −10.4 (syst) ± 1.5 (lumi) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.7
+                    - 2.7
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 6345bd47
+                  ref: inspire:1279489
+                  locator: 'Sec. 8 (combined fiducial cross section): σ_EW = 54.7 ± 4.6 (stat) +9.8 −10.4 (syst) ± 1.5 (lumi) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+          - measurement: meas:vbf-z/lhc-8/cms-2015-fid
+            total:
+              value_pct: 24.0
+              provenance:
+                uid: 444a2e98
+                ref: inspire:1321687
+                locator: 'Abstract and results: σ_EW(ℓℓjj) = 174 ± 15 (stat) ± 40 (syst) fb = 174 ± 42 (total) fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 8.6
+                    - 8.6
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 79051f40
+                  ref: inspire:1321687
+                  locator: 'Abstract and results: σ_EW(ℓℓjj) = 174 ± 15 (stat) ± 40 (syst) fb = 174 ± 42 (total) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Systematic uncertainty (combined)
+                size:
+                  range:
+                    - 23.0
+                    - 23.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 2f8e1afb
+                  ref: inspire:1321687
+                  locator: 'Abstract and results: σ_EW(ℓℓjj) = 174 ± 15 (stat) ± 40 (syst) fb = 174 ± 42 (total) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+        predictions:
+          - label: NLO QCD + PS (Powheg Box), ATLAS search region
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations:
+                - no EW corrections
+            codes:
+              - POWHEG
+            total:
+              value_pct: 2.2
+              provenance:
+                uid: f6f141ff
+                ref: inspire:1279489
+                locator: 'Sec. 8: Powheg prediction 46.1 ± 0.2 (stat) +0.3 −0.2 (scale) ± 0.8 (PDF) ± 0.5 (model) fb; quadrature sum with the larger scale side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: Scale variation
+                method: scale variation as quoted by ATLAS for the Powheg prediction
+                size:
+                  range:
+                    - 0.43
+                    - 0.65
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: c5a6ad6b
+                  ref: inspire:1279489
+                  locator: 'Sec. 8: Powheg prediction 46.1 ± 0.2 (stat) +0.3 −0.2 (scale) ± 0.8 (PDF) ± 0.5 (model) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: PDF
+                specific: PDF uncertainty
+                pdf_set: CT10
+                size:
+                  range:
+                    - 1.7
+                    - 1.7
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: dcc5d517
+                  ref: inspire:1279489
+                  locator: 'Sec. 8: Powheg prediction 46.1 ± 0.2 (stat) +0.3 −0.2 (scale) ± 0.8 (PDF) ± 0.5 (model) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: matching_shower
+                specific: Generator modelling ('model')
+                method: modelling uncertainty as quoted by ATLAS for the Powheg prediction
+                size:
+                  range:
+                    - 1.1
+                    - 1.1
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 0794034b
+                  ref: inspire:1279489
+                  locator: 'Sec. 8: Powheg prediction 46.1 ± 0.2 (stat) +0.3 −0.2 (scale) ± 0.8 (PDF) ± 0.5 (model) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:vbf-z/lhc-8/atlas-2014-fid
+            refs:
+              - inspire:1279489
+              - inspire:1122033
+            provenance:
+              uid: '05099584'
+              ref: inspire:1279489
+              locator: Sec. 8 (theoretical prediction from Powheg for the electroweak Zjj cross section)
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: LO (MadGraph), CMS signal definition
+            accuracy:
+              qcd: LO
+              approximations:
+                - LO EW ℓℓjj signal
+            codes:
+              - MadGraph
+            total:
+              value_pct: 8.7
+              provenance:
+                uid: 0bb5d5bf
+                ref: inspire:1321687
+                locator: 'Sec. 3: σ_LO(EW ℓℓjj) = 208 +8 −9 (scale) ± 7 (PDF) fb; results: SM prediction σ_LO(EW ℓℓjj) = 208 ± 18 fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μF and μR scale variation
+                method: μF and μR changed simultaneously by factors of 2 and 1/2
+                size:
+                  range:
+                    - 3.8
+                    - 4.3
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 007e875b
+                  ref: inspire:1321687
+                  locator: 'Sec. 3: σ_LO(EW ℓℓjj) = 208 +8 −9 (scale) ± 7 (PDF) fb; results: SM prediction σ_LO(EW ℓℓjj) = 208 ± 18 fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: PDF
+                specific: PDF uncertainties
+                pdf_set: PDF4LHC prescription (sets as in the paper)
+                size:
+                  range:
+                    - 3.4
+                    - 3.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: b3984321
+                  ref: inspire:1321687
+                  locator: 'Sec. 3: σ_LO(EW ℓℓjj) = 208 +8 −9 (scale) ± 7 (PDF) fb; results: SM prediction σ_LO(EW ℓℓjj) = 208 ± 18 fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:vbf-z/lhc-8/cms-2015-fid
+            refs:
+              - inspire:1321687
+            provenance:
+              uid: e3e397f8
+              ref: inspire:1321687
+              locator: Sec. 3 (signal definition and LO cross section) and results
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+  - id: chan:vbf-z/lhc-7
+    collider: col:lhc-7
+    initial_state: pp
+    coverage: partial
+    last_reviewed: '2026-11-12'
+    headline:
+      observable: obs:vbf-z/lhc-7/sigma-fid-ew
+      region: 'EW Zjj → ℓℓjj, 7 TeV: m(ℓℓ) > 50 GeV, mjj > 120 GeV, pT(j) > 25 GeV, |η(j)| < 4.0 (CMS)'
+    measurements:
+      - id: meas:vbf-z/lhc-7/cms-2013-fid
+        experiment: CMS
+        dataset: 7 TeV, 5 fb⁻¹ (2011), ee + μμ
+        ref: inspire:1236361
+    observables:
+      - id: obs:vbf-z/lhc-7/sigma-fid-ew
+        name: σ(EW Zjj → ℓℓjj)
+        kind: fiducial
+        variable: m(ℓℓ) > 50 GeV, mjj > 120 GeV, pT(j) > 25 GeV, |η(j)| < 4.0
+        results:
+          - measurement: meas:vbf-z/lhc-7/cms-2013-fid
+            total:
+              value_pct: 38.0
+              provenance:
+                uid: 00fd3125
+                ref: inspire:1236361
+                locator: 'Abstract: σ = 154 ± 24 (stat.) ± 46 (exp. syst.) ± 27 (th. syst.) ± 3 (lum.) fb; added in quadrature'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 16.0
+                    - 16.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 699b8ea5
+                  ref: inspire:1236361
+                  locator: 'Abstract: σ = 154 ± 24 (stat.) ± 46 (exp. syst.) ± 27 (th. syst.) ± 3 (lum.) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Experimental systematics (exp. syst.)
+                size:
+                  range:
+                    - 30.0
+                    - 30.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: d2bb580c
+                  ref: inspire:1236361
+                  locator: 'Abstract: σ = 154 ± 24 (stat.) ± 46 (exp. syst.) ± 27 (th. syst.) ± 3 (lum.) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: unfolding_model
+                specific: Theory systematics (th. syst.)
+                size:
+                  range:
+                    - 18.0
+                    - 18.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 64f75204
+                  ref: inspire:1236361
+                  locator: 'Abstract: σ = 154 ± 24 (stat.) ± 46 (exp. syst.) ± 27 (th. syst.) ± 3 (lum.) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 1.9
+                    - 1.9
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 3022e1d0
+                  ref: inspire:1236361
+                  locator: 'Abstract: σ = 154 ± 24 (stat.) ± 46 (exp. syst.) ± 27 (th. syst.) ± 3 (lum.) fb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+        predictions:
+          - label: NLO QCD (VBFNLO)
+            accuracy:
+              qcd: NLO
+              approximations:
+                - no uncertainty quoted for the prediction (166 fb)
+                - no EW corrections
+            codes:
+              - VBFNLO
+            compared_to:
+              - meas:vbf-z/lhc-7/cms-2013-fid
+            refs:
+              - inspire:1236361
+              - inspire:630522
+            provenance:
+              uid: f97b09df
+              ref: inspire:1236361
+              locator: 'Sec. 2: σ_NLO(EW ℓℓjj) = 166 fb, calculated with the VBFNLO program; Sec. 7 (Summary): measured cross section in agreement with the theoretical value of 166 fb'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true

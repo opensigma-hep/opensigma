@@ -1,0 +1,27 @@
+id: amp:2L/qqbar-Wgammag-lc
+process: proc:w-gamma
+loops: 2
+corrections: QCD
+status: partial
+approximations:
+  - leading-colour approximation
+  - pp → W(→ ℓν)γ + j, leptonic W decay included
+evaluation:
+  kind: analytic
+  detail: analytic finite remainders in a basis of special functions, reconstructed with finite-field arithmetic; numerical evaluation demonstrated
+  provenance:
+    uid: 3e88bd66
+    ref: inspire:2008918
+    locator: Abstract (complete reduction with finite field arithmetic; analytic finite remainders in a recently identified basis of special functions; efficient numerical evaluation of colour- and helicity-summed finite remainders)
+    source: agent
+    status: agent-draft
+    date: '2026-11-12'
+refs:
+  - inspire:2008918
+provenance:
+  uid: fe0208cd
+  ref: inspire:2008918
+  locator: Abstract (two-loop leading colour QCD helicity amplitudes for pp → W(→ ℓν)γ + j)
+  source: agent
+  status: agent-draft
+  date: '2026-11-12'

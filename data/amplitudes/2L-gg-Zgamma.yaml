@@ -1,0 +1,27 @@
+id: amp:2L/gg-Zgamma
+process: proc:z-gamma
+loops: 2
+corrections: QCD
+status: done
+approximations:
+  - massless QCD
+  - 'loop-induced channel: the perturbative expansion starts at one loop, so this is the virtual part of the NLO correction to gg → Zγ'
+evaluation:
+  kind: analytic
+  detail: closed analytic form; Laurent coefficients in harmonic polylogarithms (HPLs) and two-dimensional HPLs
+  provenance:
+    uid: cf9a8462
+    ref: inspire:1219005
+    locator: Sec. 1 (helicity amplitudes obtained in closed analytic form) and Sec. 5 (coefficients containing HPLs and 2dHPLs; one-loop and two-loop helicity amplitudes given analytically in the appendices)
+    source: agent
+    status: agent-draft
+    date: '2026-11-12'
+refs:
+  - inspire:1219005
+provenance:
+  uid: 327f9bdc
+  ref: inspire:1219005
+  locator: Abstract (helicity amplitudes for gg → Zg and gg → Zγ to two loops in massless QCD; ingredient of the NLO corrections to Zγ and Z+jet production through gluon fusion)
+  source: agent
+  status: agent-draft
+  date: '2026-11-12'
