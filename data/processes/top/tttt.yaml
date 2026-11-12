@@ -1,0 +1,187 @@
+id: "proc:tttt"
+name: "Four-top-quark production (tt̄tt̄)"
+family: "fam:top"
+sector: SM
+description: "Production of two top-antitop pairs, pp → tt̄tt̄. One of the rarest Standard Model processes observed at the LHC (cross section of order 10 fb at 13 TeV), sensitive to the top Yukawa coupling, the Higgs width, four-fermion operators and top-philic new physics. Observed by ATLAS and CMS in 2023 in same-sign dilepton and multilepton final states. Theory: complete NLO (QCD and EW, with large and partly cancelling subleading EW terms) matched to threshold resummation at NLL′; NNLL resummation is preliminary, NNLO QCD is out of reach (2 → 4 with four massive coloured particles)."
+watch:
+  recids: [2661880, 2648095, 2611719, 1634855]
+  queries:
+    - '(t "four top" or t "four-top" or t "four top quark" or t "four-top-quark" or t "four top quarks" or t "tttt") and (collaboration:ATLAS or collaboration:CMS) and (t "cross section" or t "cross-section" or t observation or t evidence or t measurement or t production)'
+    - '(t "four top" or t "four-top" or t "four top quarks") and (t NLO or t NNLO or t NNLL or t resummation or t "two-loop" or t "off-shell" or t "electroweak corrections")'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1118265", "inspire:1634855", "inspire:1955008", "inspire:2749469"]
+        provenance: {uid: aabe8508, ref: "inspire:1118265", locator: "Abstract (NLO QCD corrections to pp → tt̄tt̄ + X, integrated and differential); inspire:1634855 abstract (complete NLO in MadGraph5_aMC@NLO); inspire:1955008 abstract (POWHEG BOX generator, NLO QCD at O(αs⁵) with LO EW production channels); inspire:2749469 abstract (NLO QCD in production and decays, narrow-width approximation, 4ℓ channel)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: missing
+        provenance: {uid: 79b09f41, ref: "inspire:2611719", locator: "Introduction (the calculation of next-to-next-to-leading order QCD corrections remains out of reach); an INSPIRE title search on 2026-11-12 for two-loop / NNLO four-top amplitudes returned no record", source: agent, status: agent-draft, date: "2026-11-12"}
+      code:
+        status: missing
+        provenance: {uid: fb8be7ef, ref: "inspire:2611719", locator: "Introduction (NNLO QCD corrections out of reach; higher orders are estimated through threshold resummation instead)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - row: "NLO EW"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1634855"]
+        provenance: {uid: 191f05f3, ref: "inspire:1634855", locator: "Abstract (complete-NLO predictions: all non-vanishing O(αs^i α^j) contributions with i + j = 4, 5 for tt̄tt̄ evaluated without any approximation)", source: agent, status: agent-draft, date: "2026-11-12"}
+channels:
+  - id: "chan:tttt/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tttt/lhc-13/sigma-tot", region: "inclusive σ(tt̄tt̄), mt = 172.5 GeV"}
+    measurements:
+      - id: "meas:tttt/lhc-13/atlas-2023-multilepton"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹, two same-sign leptons or at least three leptons"
+        ref: "inspire:2648095"
+        hepdata: "hepdata:ins2648095/The measured and expected cross-sections of tttt production."
+      - id: "meas:tttt/lhc-13/cms-2023-multilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (2016–2018), two same-sign, three or four leptons"
+        ref: "inspire:2661880"
+        hepdata: "hepdata:ins2661880/Figure 8"
+    observables:
+      - id: "obs:tttt/lhc-13/sigma-tot"
+        name: "Inclusive σ(tt̄tt̄)"
+        kind: total
+        variable: "σ_tt̄tt̄"
+        results:
+          - measurement: "meas:tttt/lhc-13/atlas-2023-multilepton"
+            total:
+              value_pct: 29.0
+              provenance: {uid: 2723fb00, ref: "hepdata:ins2648095/The measured and expected cross-sections of tttt production.", locator: "The measured and expected cross-sections of tttt production., quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-11-12"}
+            uncertainties:
+              - category: stat
+                specific: "stat-only"
+                size: {range: [21.0, 21.0], asymmetric: true}
+                full_table: "hepdata:ins2648095/The measured and expected cross-sections of tttt production."
+                provenance: {uid: a5fa0b41, ref: "hepdata:ins2648095/The measured and expected cross-sections of tttt production.", locator: "The measured and expected cross-sections of tttt production., error 'stat-only'", source: hepdata, status: machine-verified, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Total systematic uncertainty"
+                size: {range: [16.0, 20.0], asymmetric: true}
+                provenance: {uid: 44cbf606, ref: "inspire:2648095", locator: "Table 6, Total systematic uncertainty: Δσ/σ = +20 −16 % (+4.6 −3.4 fb of 22.5 fb)", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: acceptance_extrapolation
+                specific: "tt̄tt̄ generator choice"
+                size: {range: [12.0, 17.0], asymmetric: true}
+                provenance: {uid: 73b4edb7, ref: "inspire:2648095", locator: "Table 6, Signal modelling, tt̄tt̄ generator choice: +17 −12 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: acceptance_extrapolation
+                specific: "tt̄tt̄ parton shower model"
+                size: {range: [4.0, 7.0], asymmetric: true}
+                provenance: {uid: fefdc1be, ref: "inspire:2648095", locator: "Table 6, Signal modelling, tt̄tt̄ parton shower model: +7 −4 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: efficiency
+                specific: "Jet flavour tagging (b-jets)"
+                size: {range: [4.0, 5.0], asymmetric: true}
+                provenance: {uid: 25b2cdee, ref: "inspire:2648095", locator: "Table 6, Instrumental, Jet flavour tagging (b-jets): +5 −4 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "Jet uncertainties"
+                size: {range: [3.0, 5.0], asymmetric: true}
+                provenance: {uid: 550cebf5, ref: "inspire:2648095", locator: "Table 6, Instrumental, Jet uncertainties: +5 −3 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "tt̄W+jets modelling"
+                size: {range: [3.0, 4.0], asymmetric: true}
+                provenance: {uid: 3f024caa, ref: "inspire:2648095", locator: "Table 6, Background modelling, tt̄W+jets modelling: +4 −3 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.0, 1.0], asymmetric: false}
+                provenance: {uid: ac896134, ref: "inspire:2648095", locator: "Table 6, Instrumental, Luminosity: +1 −1 %", source: agent, status: agent-draft, date: "2026-11-12"}
+          - measurement: "meas:tttt/lhc-13/cms-2023-multilepton"
+            total:
+              value_pct: 24.0
+              provenance: {uid: 2a69babc, ref: "hepdata:ins2661880/Figure 8", locator: "Figure 8, quadrature sum of all errors (bin 4)", source: hepdata, status: machine-verified, date: "2026-11-12"}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [19.8, 20.9], asymmetric: true}
+                provenance: {uid: eb35f5e2, ref: "inspire:2661880", locator: "Abstract and results section: σ(tt̄tt̄) = 17.7 +3.7 −3.5 (stat) +2.3 −1.9 (syst) fb; +3.7 −3.5 of 17.7", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [10.7, 13.0], asymmetric: true}
+                provenance: {uid: 77227ada, ref: "inspire:2661880", locator: "Abstract and results section: σ(tt̄tt̄) = 17.7 +3.7 −3.5 (stat) +2.3 −1.9 (syst) fb; +2.3 −1.9 of 17.7", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NLO (QCD+EW) + NLL′ threshold resummation"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              resummation: [{accuracy: "NLL′", variable: "soft-gluon absolute-mass threshold (Mellin N)"}]
+              approximations: ["central scale μ0 = 2mt, mt = 172.5 GeV", "the experiments quote the first arXiv version of this result, 13.37 +1.04 −1.78 fb (ATLAS: 13.4 +1.0 −1.8 fb); the latest arXiv version gives 14.65 +1.57 −2.75 fb"]
+            total: {value_pct: 18.8, provenance: {uid: 5316c586, ref: "inspire:2611719", locator: "Numerical results, text below Fig. 2 (latest arXiv version of 2212.03259): σ = 14.65(1) +1.57 −2.75 fb with scale and PDF errors added in quadrature; larger side 2.75/14.65", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μR, μF variation"
+                method: "7-point scale variation around μ0 = 2mt"
+                size: {range: [8.2, 17.4], unit: "%", asymmetric: true}
+                provenance: {uid: 29fee673, ref: "inspire:2611719", locator: "Table I (latest arXiv version), 13 TeV, NLO(QCD+EW)+NLL′: 14.65(2) +8.2% −17.4% fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "LUXqed_plus_PDF4LHC15_nnlo_100"
+                size: {range: [6.9, 6.9], unit: "%", asymmetric: false}
+                provenance: {uid: 7ea36872, ref: "inspire:2611719", locator: "Numerical results, text below Fig. 2 (latest arXiv version): PDF uncertainty of ±6.9% (± 1.01 fb of 14.65 fb)", source: agent, status: agent-draft, date: "2026-11-12"}
+            compared_to: ["meas:tttt/lhc-13/atlas-2023-multilepton", "meas:tttt/lhc-13/cms-2023-multilepton"]
+            refs: ["inspire:2611719", "inspire:1634855"]
+            provenance: {uid: 7da6412e, ref: "inspire:2611719", locator: "Abstract (total cross section at NLL′ matched to NLO strong and electroweak corrections) and Table I; quoted as 13.4 +1.0 −1.8 fb in inspire:2648095 Introduction and inspire:2661880 Introduction and results section", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+          - label: "Complete NLO (QCD+EW, MadGraph5_aMC@NLO), ATLAS reference prediction"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["all O(αs^i α^j) terms with i + j = 4, 5; central scale μ = HT/4", "ATLAS quotes this prediction as 12.0 ± 2.4 fb (relative scale uncertainty ±20%)"]
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 21.0, provenance: {uid: 44153c49, ref: "inspire:1634855", locator: "Table 5, 13 TeV, LO + NLO at μ = HT/4: 11.97 +18% −21% fb; larger side", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μr, μf variation"
+                method: "independent variation of μr and μf in the interval {μc/2, 2μc}, μc = HT/4"
+                size: {range: [18.0, 21.0], unit: "%", asymmetric: true}
+                provenance: {uid: 95c857f7, ref: "inspire:1634855", locator: "Table 5, 13 TeV, LO + NLO: 11.97 +18% −21% fb; scale definition in eqs. (3.4)-(3.5) and text below", source: agent, status: agent-draft, date: "2026-11-12"}
+            compared_to: ["meas:tttt/lhc-13/atlas-2023-multilepton"]
+            refs: ["inspire:1634855", "inspire:2648095"]
+            provenance: {uid: 8e8beadf, ref: "inspire:2648095", locator: "Abstract and Introduction (σ = 12.0 fb at NLO in QCD including electroweak corrections, relative scale uncertainty ±20%, Refs. [16-18]; used as reference throughout the paper)", source: agent, status: agent-draft, date: "2026-11-12"}
+        resummation_ingredients:
+          - name: "Soft-gluon threshold resummation at NNLL for a 2 → 4 process with four massive coloured final-state particles (two-loop soft anomalous dimension matrix, one-loop hard and soft functions)"
+            status: "preliminary NLO+NNLL results for the total cross section and the invariant-mass distribution at 13.6 TeV, shown in figures only (no numbers quoted); NLO+NLL′ published for absolute-mass (13 and 13.6 TeV) and invariant-mass (13.6 TeV) thresholds"
+            refs: ["inspire:3202814", "inspire:2921525", "inspire:2611719"]
+            provenance: {uid: 73d1af37, ref: "inspire:3202814", locator: "Abstract, Sec. 2 (ingredients needed at NNLL) and Sec. 3-4 (preliminary results, 13.6 TeV, central scale μ0 = Q); inspire:2921525 abstract (invariant-mass threshold, NLL′ matched to NLO QCD and complete NLO, 13.6 TeV)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - id: "chan:tttt/lhc-hl"
+    collider: "col:lhc-hl"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tttt/lhc-hl/sigma-tot", region: "inclusive σ(tt̄tt̄), 14 TeV, 3 ab⁻¹"}
+    measurements:
+      - id: "meas:tttt/lhc-hl/atlas-2025-proj"
+        experiment: "ATLAS"
+        dataset: "14 TeV, 3 ab⁻¹ (HL-LHC projection), extrapolated from the 13 TeV 140 fb⁻¹ multilepton analysis"
+        ref: "inspire:2909579"
+        projected: true
+        projection_source: {ref: "inspire:2909579", date: "2025-03-30"}
+        assumptions: "Scenario 2 (S2): tt̄tt̄ generator-choice uncertainty removed, other modelling uncertainties halved, instrumental uncertainties scaled with luminosity, cross sections scaled from 13 to 14 TeV. Scenario 1 (all systematic uncertainties kept at Run 2 levels) gives 17%; combining ATLAS and CMS datasets in S2 gives 6%."
+      - id: "meas:tttt/lhc-hl/cms-2018-proj"
+        experiment: "CMS"
+        dataset: "14 TeV, 3 ab⁻¹ (HL-LHC projection), extrapolated from the 2016 same-sign dilepton and multilepton analysis"
+        ref: "inspire:1707559"
+        projected: true
+        projection_source: {ref: "inspire:1707559", date: "2018-12-07"}
+        assumptions: "YR18+ systematic-uncertainty scenario; the Run 2 and YR18 scenarios give +28 −24 % and +20 −19 %. The note carries no date: the projection_source date is the INSPIRE record creation date."
+    observables:
+      - id: "obs:tttt/lhc-hl/sigma-tot"
+        name: "Inclusive σ(tt̄tt̄), projected precision at 14 TeV"
+        kind: total
+        variable: "σ_tt̄tt̄"
+        results:
+          - measurement: "meas:tttt/lhc-hl/atlas-2025-proj"
+            total: {value_pct: 7.0, provenance: {uid: 34de893c, ref: "inspire:2909579", locator: "Sec. 3.1 and Conclusion (ATL-PHYS-PUB-2025-017): with 3 ab⁻¹ the uncertainty in the tt̄tt̄ cross section is 17%, reduced to 7% with improved systematics (S2); 6% for ATLAS and CMS combined", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties: []
+          - measurement: "meas:tttt/lhc-hl/cms-2018-proj"
+            total: {value_pct: 18.0, provenance: {uid: ba023aaa, ref: "inspire:1707559", locator: "Table 5 (CMS-PAS-FTR-18-031), 3 ab⁻¹, 14 TeV, YR18+: ±18 %", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical only"
+                size: {range: [9.0, 9.0], asymmetric: false}
+                provenance: {uid: 9125970b, ref: "inspire:1707559", locator: "Table 5 (CMS-PAS-FTR-18-031), 3 ab⁻¹, 14 TeV, Stat. only: ±9 %", source: agent, status: agent-draft, date: "2026-11-12"}

@@ -1,0 +1,266 @@
+id: "proc:tzq"
+name: "Single top + Z (tZq)"
+family: "fam:top"
+sector: SM
+description: "Electroweak production of a single top quark (or antiquark) in association with a Z boson and a light quark, pp → tZq, measured in the trilepton final state tℓ⁺ℓ⁻q. Sensitive to the tZ and WWZ couplings and to the top-quark polarisation; irreducible background to FCNC searches and to tt̄Z. Observed by CMS and ATLAS at 13 TeV, with first differential measurements by CMS. Theory: NLO QCD and NLO QCD+EW (on-shell and fully off-shell tℓ⁺ℓ⁻j), with a sizeable four- versus five-flavour-scheme uncertainty; approximate NNLO from soft-gluon corrections exists, no two-loop amplitude."
+watch:
+  recids: [1961177, 1781293, 1801855, 2122428]
+  queries:
+    - '(collaboration:ATLAS or collaboration:CMS) and (t "tZq" or ((t "single top quark" or t "single top-quark" or t "single-top-quark" or t "top quark") and t "Z boson" and t "association")) and not t "flavour-changing" and not t "flavor-changing" and not t "pair"'
+    - '(t "tZj" or t "tZq" or t "tqZ") and (t NLO or t NNLO or t "two-loop" or t "off-shell" or t "soft-gluon" or t electroweak)'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1219814", "inspire:1801855", "inspire:2122428"]
+        provenance: {uid: 3d66159f, ref: "inspire:1219814", locator: "Abstract (single top + Z at NLO including the decays of the top quark and the Z boson); inspire:1801855 abstract (tZj and tℓ⁺ℓ⁻j at NLO QCD+EW in the 5FS, all production channels, with a 4FS-5FS uncertainty); inspire:2122428 abstract (NLO tZj with complete off-shell effects and spin correlations)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: missing
+        provenance: {uid: 184770ee, ref: "inspire:1801855", locator: "Introduction (a calculation at NNLO QCD accuracy is at the moment unfeasible); an INSPIRE title search on 2026-11-12 for two-loop / NNLO tZq (tZj, tqZ) amplitudes returned no record", source: agent, status: agent-draft, date: "2026-11-12"}
+      code:
+        status: partial
+        approximations: ["approximate NNLO: second-order soft-gluon corrections added to the exact NLO result, total cross section and top-quark rapidity distribution only"]
+        refs: ["inspire:2166834"]
+        provenance: {uid: fac83255, ref: "inspire:2166834", locator: "Abstract and text above Table 1 (aNNLO = NLO + second-order soft-gluon corrections; total cross sections at LHC energies and top-quark rapidity distributions)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - row: "NLO EW"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1801855", "inspire:2122428"]
+        provenance: {uid: d33179de, ref: "inspire:1801855", locator: "Abstract (tZj with the Z boson undecayed and the complete final state tℓ⁺ℓ⁻j at NLO QCD+EW accuracy); inspire:2122428 abstract (off-shell tZj combining QCD and electroweak radiative corrections)", source: agent, status: agent-draft, date: "2026-11-12"}
+channels:
+  - id: "chan:tzq/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tzq/lhc-13/sigma-tllq", region: "σ(tℓ⁺ℓ⁻q), mℓℓ > 30 GeV including non-resonant lepton pairs"}
+    measurements:
+      - id: "meas:tzq/lhc-13/cms-2022-trilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹, three leptons (electrons or muons)"
+        ref: "inspire:1961177"
+        hepdata: "hepdata:ins1961177/parton_abs_ZPt"
+      - id: "meas:tzq/lhc-13/atlas-2020-trilepton"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (2015–2018), three leptons and two or three jets"
+        ref: "inspire:1781293"
+      - id: "meas:tzq/lhc-13/cms-2024-multilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (2016–2018), ≥ 3ℓ; tZq measured simultaneously with tt̄Z + tWZ"
+        ref: "inspire:2844499"
+        hepdata: "hepdata:ins2844499/ZPt_absolute_tZq"
+    observables:
+      - id: "obs:tzq/lhc-13/sigma-tllq"
+        name: "Inclusive σ(tℓ⁺ℓ⁻q), mℓℓ > 30 GeV"
+        kind: total
+        variable: "σ(pp → tℓ⁺ℓ⁻q), mℓℓ > 30 GeV, including non-resonant lepton pairs"
+        results:
+          - measurement: "meas:tzq/lhc-13/cms-2022-trilepton"
+            total: {value_pct: 11.9, provenance: {uid: a09882f7, ref: "inspire:1961177", locator: "Abstract and Sec. 7.2: σ_tZq = 87.9 +7.5 −7.3 (stat) +7.3 −6.0 (syst) fb; larger side sqrt(7.5² + 7.3²)/87.9", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [8.3, 8.5], asymmetric: true}
+                provenance: {uid: 0a360d89, ref: "inspire:1961177", locator: "Abstract and Sec. 7.2: +7.5 −7.3 (stat) fb of 87.9 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [6.8, 8.3], asymmetric: true}
+                provenance: {uid: 46e67f08, ref: "inspire:1961177", locator: "Abstract and Sec. 7.2: +7.3 −6.0 (syst) fb of 87.9 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+          - measurement: "meas:tzq/lhc-13/atlas-2020-trilepton"
+            total: {value_pct: 14.0, provenance: {uid: '43e38471', ref: "inspire:1781293", locator: "Results section, text above Table 4: 97 ± 13 (stat.) ± 7 (syst.) fb, corresponding to a total uncertainty of ±14%", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [13.0, 13.0], asymmetric: false}
+                provenance: {uid: f7fb1c71, ref: "inspire:1781293", locator: "Results section, text above Table 4: statistical uncertainty of 13%", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Total systematic uncertainty"
+                size: {range: [7.0, 7.0], asymmetric: false}
+                provenance: {uid: 66544a6b, ref: "inspire:1781293", locator: "Table 4, Total systematic uncertainty: 7.0 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Prompt-lepton background modelling and normalisation"
+                size: {range: [3.3, 3.3], asymmetric: false}
+                provenance: {uid: 1adba31d, ref: "inspire:1781293", locator: "Table 4, Prompt-lepton background modelling and normalisation: 3.3 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "Jets and ETmiss reconstruction and calibration"
+                size: {range: [2.0, 2.0], asymmetric: false}
+                provenance: {uid: ff6e6ce4, ref: "inspire:1781293", locator: "Table 4, Jets and ETmiss reconstruction and calibration: 2.0 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: efficiency
+                specific: "Lepton reconstruction and calibration"
+                size: {range: [2.0, 2.0], asymmetric: false}
+                provenance: {uid: bd3c7734, ref: "inspire:1781293", locator: "Table 4, Lepton reconstruction and calibration: 2.0 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.7, 1.7], asymmetric: false}
+                provenance: {uid: be000860, ref: "inspire:1781293", locator: "Table 4, Luminosity: 1.7 %", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NLO QCD+EW, 5FS with 4FS–5FS scale uncertainty (tℓ⁺ℓ⁻j, mℓℓ > 30 GeV)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["complete tℓ⁺ℓ⁻j final state with off-shell and non-resonant effects, stable top quark; s-channel, t-channel and tW-associated modes included", "scale uncertainty rescaled from the NLO QCD combination of the 4FS and 5FS t-channel results ('5FS scale 4−5' in the paper)"]
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 10.4, provenance: {uid: 1870dd7b, ref: "inspire:1801855", locator: "Table 1, tℓ⁺ℓ⁻j ('inclusive', m(ℓ⁺ℓ⁻) > 30 GeV), NLO QCD+EW, 5FS scale 4−5: 89.6(2) +5.0 (+5.6%) −9.3 (−10.4%) scale, ±0.4 (±0.4%) PDF; larger side sqrt(10.4² + 0.4²)", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "scale and flavour-scheme"
+                method: "scale variations combined across the 4FS and 5FS t-channel NLO QCD results and rescaled to the 5FS central value (Secs. 2.1-2.2 of the paper)"
+                size: {range: [5.6, 10.4], unit: "%", asymmetric: true}
+                provenance: {uid: 723c10e9, ref: "inspire:1801855", locator: "Table 1, tℓ⁺ℓ⁻j ('inclusive'), NLO QCD+EW, 5FS scale 4−5: +5.6% −10.4%; procedure in Sec. 2.1-2.2", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "NNPDF3.1 (NNLO QCD, NLO QED, LUXqed photon)"
+                size: {range: [0.4, 0.4], unit: "%", asymmetric: false}
+                provenance: {uid: 274916cf, ref: "inspire:1801855", locator: "Table 1, tℓ⁺ℓ⁻j ('inclusive'), NLO QCD+EW, 5FS scale 4−5: ±0.4%; PDF choice in Sec. 2", source: agent, status: agent-draft, date: "2026-11-12"}
+            refs: ["inspire:1801855"]
+            provenance: {uid: 50cd9128, ref: "inspire:1801855", locator: "Abstract and Sec. 3.1.2, Table 1 (the NLO QCD+EW prediction in the 5FS scale 4−5 is the most precise and accurate prediction and should be taken as reference)", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+          - label: "NLO QCD, 5FS (MadGraph5_aMC@NLO), ATLAS 2020 comparison"
+            accuracy: {qcd: NLO}
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 5.3, provenance: {uid: 99f7077e, ref: "inspire:1781293", locator: "Sec. 3: σ = 102 fb at NLO in QCD (mℓℓ > 30 GeV), scale uncertainties +5.2 −1.3 %, PDF uncertainty ±1.0%; larger side sqrt(5.2² + 1.0²)", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μr, μf variation"
+                method: "renormalisation and factorisation scale variation around μr = μf = (mt + mZ)/4 (range not stated in the fetched text)"
+                size: {range: [1.3, 5.2], unit: "%", asymmetric: true}
+                provenance: {uid: aa0de364, ref: "inspire:1781293", locator: "Sec. 3: renormalisation and factorisation scale uncertainties +5.2 −1.3 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF (replica method)"
+                pdf_set: "NNPDF30_nlo_as_0118"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: '13650883', ref: "inspire:1781293", locator: "Sec. 3: PDF uncertainty ±1.0%, NNPDF30_nlo_as_0118", source: agent, status: agent-draft, date: "2026-11-12"}
+            compared_to: ["meas:tzq/lhc-13/atlas-2020-trilepton"]
+            refs: ["inspire:1781293"]
+            provenance: {uid: 8d43358f, ref: "inspire:1781293", locator: "Sec. 3 (predicted cross section calculated with MadGraph5_aMC@NLO 2.6.0 in the five-flavour scheme) and results section (SM cross section 102 +5 −2 fb)", source: agent, status: agent-draft, date: "2026-11-12"}
+          - label: "NLO QCD, 5FS, CMS 2022 comparison"
+            accuracy: {qcd: NLO}
+            total: {value_pct: 3.3, provenance: {uid: 8752b972, ref: "inspire:1961177", locator: "Introduction and Sec. 7.2: σ_SM = 94.2 +1.9 −1.8 (scale) ± 2.5 (PDF) fb; larger side sqrt(1.9² + 2.5²)/94.2", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "factorisation and renormalisation scales"
+                method: "variation of the factorisation and renormalisation scales (range not stated in the CMS paper)"
+                size: {range: [1.9, 2.0], unit: "%", asymmetric: true}
+                provenance: {uid: e89569c0, ref: "inspire:1961177", locator: "Introduction and Sec. 7.2: +1.9 −1.8 (scale) fb of 94.2 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF"
+                pdf_set: "not specified where the prediction is quoted in the CMS paper"
+                size: {range: [2.7, 2.7], unit: "%", asymmetric: false}
+                provenance: {uid: 145c029a, ref: "inspire:1961177", locator: "Introduction and Sec. 7.2: ± 2.5 (PDF) fb of 94.2 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+            compared_to: ["meas:tzq/lhc-13/cms-2022-trilepton"]
+            refs: ["inspire:1961177", "inspire:1709180"]
+            provenance: {uid: '02577993', ref: "inspire:1961177", locator: "Sec. 7.2 (predicted cross section for Z → ee, μμ, ττ at NLO in the 5FS including non-resonant lepton pairs with mℓℓ > 30 GeV, Ref. [10] = CMS observation paper inspire:1709180)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tzq/lhc-13/sigma-tzq-zpeak"
+        name: "Inclusive σ(tZq), 70 < mℓℓ < 110 GeV"
+        kind: total
+        variable: "σ(tZq), resonant and non-resonant ℓ⁺ℓ⁻ with 70 < mℓℓ < 110 GeV"
+        results:
+          - measurement: "meas:tzq/lhc-13/cms-2024-multilepton"
+            total: {value_pct: 12.3, provenance: {uid: 7048d63b, ref: "inspire:2844499", locator: "Abstract and Summary: σ(tZq) = 0.81 ± 0.10 pb; 0.10/0.81 (Sec. 6: 0.81 ± 0.07 (stat) ± 0.06 (syst) pb)", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [8.6, 8.6], asymmetric: false}
+                provenance: {uid: d9e2694d, ref: "inspire:2844499", locator: "Sec. 6: ± 0.07 (stat) pb of 0.81 pb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [7.4, 7.4], asymmetric: false}
+                provenance: {uid: 19fdecab, ref: "inspire:2844499", locator: "Sec. 6: ± 0.06 (syst) pb of 0.81 pb", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NLO QCD (MadGraph5_aMC@NLO signal generator), CMS 2024 comparison"
+            accuracy: {qcd: NLO}
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 6.1, provenance: {uid: ba5369fb, ref: "inspire:2844499", locator: "Sec. 6: predicted cross section in the 70 < mℓℓ < 110 GeV phase space from the signal generator, 0.82 ± 0.05 pb for tZq; 0.05/0.82", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:tzq/lhc-13/cms-2024-multilepton"]
+            refs: ["inspire:2844499"]
+            provenance: {uid: 21058cbf, ref: "inspire:2844499", locator: "Sec. 6 (predicted cross sections evaluated from the signal generator MadGraph5_aMC@NLO; measured μ(tZq) = 0.99 ± 0.13)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tzq/lhc-13/pt-z"
+        name: "dσ/dpT(Z), parton level"
+        kind: differential
+        variable: "pT(Z)"
+        results:
+          - measurement: "meas:tzq/lhc-13/cms-2022-trilepton"
+            total:
+              value_pct: 17.0
+              provenance: {uid: ebcb48fa, ref: "hepdata:ins1961177/parton_abs_ZPt", locator: "parton_abs_ZPt, quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-11-12"}
+            uncertainties:
+              - category: stat
+                specific: stat
+                size: {range: [15.0, 29.0], asymmetric: true}
+                full_table: "hepdata:ins1961177/parton_abs_ZPt"
+                provenance: {uid: fc5ac2b4, ref: "hepdata:ins1961177/parton_abs_ZPt", locator: "parton_abs_ZPt, error 'stat'", source: hepdata, status: machine-verified, date: "2026-11-12"}
+              - category: syst_combined
+                specific: syst
+                size: {range: [8.4, 13.0], asymmetric: true}
+                full_table: "hepdata:ins1961177/parton_abs_ZPt"
+                provenance: {uid: 679271b0, ref: "hepdata:ins1961177/parton_abs_ZPt", locator: "parton_abs_ZPt, error 'syst'", source: hepdata, status: machine-verified, date: "2026-11-12"}
+        predictions:
+          - label: "NLO QCD + PS (four- and five-flavour schemes), CMS 2022 comparison"
+            accuracy: {qcd: NLO, shower_matched: true}
+            compared_to: ["meas:tzq/lhc-13/cms-2022-trilepton"]
+            refs: ["inspire:1961177"]
+            provenance: {uid: c5e2bfd4, ref: "inspire:1961177", locator: "Abstract (differential results compared to theoretical predictions with different assumptions on the source of the initial-state b quark, in agreement within uncertainties)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tzq/lhc-13/sigma-tzj-onshell"
+        name: "Total σ(tZj), on-shell Z and top (theory benchmark)"
+        kind: total
+        variable: "σ(pp → tZj), stable top quark and undecayed Z boson"
+        predictions:
+          - label: "aNNLO QCD (soft-gluon corrections on exact NLO, MSHT20), top quark only (tqZ)"
+            accuracy:
+              qcd: NLO
+              approximations: ["exact NLO plus approximate NNLO (second-order) soft-gluon corrections ('aNNLO' in the paper); central scale μ = mt = 172.5 GeV", "top-quark production only (tqZ); the antitop process t̄qZ is given separately in the paper"]
+            total: {value_pct: 1.9, provenance: {uid: d936e6ca, ref: "inspire:2166834", locator: "Text below Table 1: aNNLO with MSHT20 pdf at 13 TeV, 577 +4 −9 (scale) +6 −5 (pdf) fb; larger side sqrt(9² + 6²)/577", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μ variation"
+                method: "scale variation over the range mt/2 to 2mt around μ = mt"
+                size: {range: [0.7, 1.6], unit: "%", asymmetric: true}
+                provenance: {uid: 1c3257e9, ref: "inspire:2166834", locator: "Text below Table 1: 577 +4 −9 (scale) fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "MSHT20 NNLO"
+                size: {range: [0.9, 1.0], unit: "%", asymmetric: true}
+                provenance: {uid: c75d59a4, ref: "inspire:2166834", locator: "Text below Table 1: 577 +6 −5 (pdf) fb", source: agent, status: agent-draft, date: "2026-11-12"}
+            refs: ["inspire:2166834"]
+            provenance: {uid: '33037784', ref: "inspire:2166834", locator: "Abstract and Table 1 (tqZ cross sections at LO, NLO and aNNLO with scale and pdf uncertainties, 7 to 14 TeV)", source: agent, status: agent-draft, date: "2026-11-12"}
+          - label: "NLO QCD+EW, 5FS with 4FS–5FS scale uncertainty (tZj, top + antitop)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["undecayed Z boson, stable top quark; s-channel, t-channel and tW-associated modes included"]
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 11.1, provenance: {uid: b73d2fef, ref: "inspire:1801855", locator: "Table 1, tZj, NLO QCD+EW, 5FS scale 4−5: 904(2) +50 (+5.5%) −100 (−11.1%) scale, ±4 (±0.4%) PDF; larger side sqrt(11.1² + 0.4²)", source: agent, status: agent-draft, date: "2026-11-12"}}
+            refs: ["inspire:1801855"]
+            provenance: {uid: 9e9f0d55, ref: "inspire:1801855", locator: "Sec. 3.1.2, Table 1 (tZj column)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - id: "chan:tzq/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: stub
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tzq/lhc-8/sigma-tllq", region: "σ(pp → tZq → ℓνb ℓ⁺ℓ⁻q), three-lepton final state"}
+    measurements:
+      - id: "meas:tzq/lhc-8/cms-2017-trilepton"
+        experiment: "CMS"
+        dataset: "8 TeV, 19.7 fb⁻¹, three leptons and at least one jet (2.4σ signal)"
+        ref: "inspire:1512295"
+    observables:
+      - id: "obs:tzq/lhc-8/sigma-tllq"
+        name: "σ(pp → tZq → ℓνb ℓ⁺ℓ⁻q)"
+        kind: total
+        variable: "σ(tℓ⁺ℓ⁻q) × B(t → ℓνb)"
+        results:
+          - measurement: "meas:tzq/lhc-8/cms-2017-trilepton"
+            total: {value_pct: 80.0, provenance: {uid: b5ca7628, ref: "inspire:1512295", locator: "Abstract and Summary: σ(pp → tZq → ℓνb ℓ⁺ℓ⁻q) = 10 +8 −7 fb, significance 2.4 standard deviations; larger side 8/10", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties: []
+        predictions:
+          - label: "NLO QCD, 5FS, CMS 2017 comparison"
+            accuracy:
+              qcd: NLO
+              approximations: ["8.2 fb for the three-lepton final state with a theoretical uncertainty quoted as 'less than 10%' (no number stored)"]
+            compared_to: ["meas:tzq/lhc-8/cms-2017-trilepton"]
+            refs: ["inspire:1512295"]
+            provenance: {uid: '31111774', ref: "inspire:1512295", locator: "Introduction: σ(pp → tℓ⁺ℓ⁻q) B(t → ℓνb) = 8.2 fb, calculated in the five-flavour scheme at NLO, theoretical uncertainty of less than 10%", source: agent, status: agent-draft, date: "2026-11-12"}
