@@ -115,3 +115,13 @@ uncertainty — repeated per observable.
     `#/next-run` (projected measurements vs today's headline theory on the same observable only, never another
     observable's theory; no estimate = listed as a gap) and `#/timeline` (channels with a prediction at ≥ NLO/NNLO/N3LO
     per year, year = earliest reference the prediction cites; first-time-per-process milestones link to the observable).
+27. **Glossary, tooltips, front-door docs (2026-11-12):** every abbreviation, label and status the site shows is defined once, in
+    `site/js/glossary.js` (`{term, short, long}` plus aliases and a scope for homonyms such as building-block vs coverage
+    "partial"); no definition is written anywhere else. New page `#/glossary`, with `#/glossary?t=<term>` jumping to one entry.
+    One helper, `term()` in `site/js/leaf.js`, turns a displayed label into a link to its entry with the short definition as
+    `title` (hover, keyboard focus, read out as the link description); it is used for building-block heads, rows and statuses,
+    accuracy chips, status badges, coverage and observable-kind labels, and the matrix legend. Uncertainty categories show their
+    definition as a line of text inside the expanded budget entry. A node test fails when a schema enum (building-block row or
+    column, status, coverage, kind, evaluation kind, uncertainty category) or an order has no entry. The About page gained
+    how-to-read, limitations, citing and contributing sections; `README.md` is the front door, `CONTRIBUTING.md` covers humans and
+    agents, `docs/data-model.md` documents the YAML field by field from the schemas (the schemas stay the authority).

@@ -1,6 +1,7 @@
 import { toHash } from '../router.js';
 import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, passes } from '../matrix.js';
 import { scatterPoints, drawScatter } from '../scatter.js';
+import { term } from '../leaf.js';
 
 // View state lives in the module (no persistence): reset only when the family changes.
 let S = null;
@@ -20,7 +21,7 @@ function el(tag, attrs = {}, ...kids) {
   e.append(...kids);
   return e;
 }
-const field = (legend, ...kids) => el('fieldset', {}, el('legend', {}, legend), ...kids);
+const field = (legend, ...kids) => el('fieldset', {}, el('legend', {}, term(legend)), ...kids);
 const check = (label, key, redraw) => {
   const i = el('input', { type: 'checkbox', checked: S[key] });
   i.addEventListener('change', () => { S[key] = i.checked; redraw(); });
@@ -97,13 +98,13 @@ function legend() {
     return s;
   };
   const item = (fill, pat, text) => { const s = sw(fill, pat); s.append(text); return s; };
-  const rat = el('div', { className: 'legend' }, el('span', {}, 'Theory / experiment uncertainty:'),
+  const rat = el('div', { className: 'legend' }, el('span', {}, term('Theory / experiment uncertainty'), ':'),
     ...RATIO_LABELS.map((t, i) => item(`var(--rat-${i + 1})`, null, t)),
     el('span', {}, '< 1: theory more precise · > 1: theory is the bottleneck'));
   const common = el('div', { className: 'legend' },
-    item('var(--cell-empty)', 'hatch', 'no precision ratio (hatched)'), item('var(--rat-3)', 'partial', 'partial coverage (dotted)'),
-    el('span', {}, 'top label: highest QCD order of any prediction'),
-    el('span', {}, '⚠ may be outdated'), el('span', {}, 'meas. = measurements, cand. = candidate papers'),
+    item('var(--cell-empty)', 'hatch', 'no precision ratio (hatched)'), item('var(--rat-3)', 'partial', term('partial coverage (dotted)', { key: 'partial coverage' })),
+    el('span', {}, 'top label: ', term('highest QCD order'), ' of any prediction'),
+    el('span', {}, '⚠ ', term('may be outdated')), el('span', {}, term('meas.'), ' = measurements, ', term('cand.'), ' = candidate papers'),
     el('span', {}, 'dashed outline: no channel; faded: excluded by filters'));
   return [rat, common];
 }

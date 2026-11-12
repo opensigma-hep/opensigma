@@ -12,18 +12,19 @@ import * as amplitude from './views/amplitude.js';
 import * as parameter from './views/parameter.js';
 import * as about from './views/about.js';
 import * as search from './views/search.js';
+import * as glossary from './views/glossary.js';
 import { copyButton, label } from './leaf.js';
 import { releaseBibtex } from './bibtex.js';
 
 const views = {
   families, notfound,
   family, process, channel, observable, amplitude, parameter, about,
-  search, collider, amplitudes: { render: lists.amplitudes }, parameters: { render: lists.parameters },
+  search, collider, glossary, amplitudes: { render: lists.amplitudes }, parameters: { render: lists.parameters },
   gaps: { render: insights.gaps }, 'next-run': { render: insights.nextRun }, timeline: { render: insights.timeline },
 };
 
 const TITLES = { about: 'About', amplitudes: 'Amplitude library', parameters: 'Parameters', gaps: 'Gap finder',
-  'next-run': 'Next-run ranking', timeline: 'Theory progress' };
+  'next-run': 'Next-run ranking', timeline: 'Theory progress', glossary: 'Glossary' };
 
 const THEME_KEY = 'opensigma-theme';
 const root = document.documentElement;

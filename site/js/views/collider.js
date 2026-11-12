@@ -1,4 +1,4 @@
-import { el, fill, none, link, idLink, index, facts } from '../leaf.js';
+import { el, fill, none, link, idLink, index, facts, term } from '../leaf.js';
 
 // Every channel at one collider, grouped by family: "what is known at LHC 13 TeV?".
 export function render(main, data, route) {
@@ -10,12 +10,12 @@ export function render(main, data, route) {
   const head = ['Process', 'Highest QCD order', 'Measurements', 'Observables', 'Coverage', 'Candidates'];
   const groups = [...byFam].filter(([, l]) => l.length).map(([fid, l]) => [el('h2', {}, idLink(data, fid)),
     el('div', { className: 'table-scroll' }, el('table', { className: 'meas' },
-      el('thead', {}, el('tr', {}, ...head.map((h) => el('th', { scope: 'col' }, h)))),
+      el('thead', {}, el('tr', {}, ...head.map((h) => el('th', { scope: 'col' }, term(h))))),
       el('tbody', {}, ...l.map(([p, c]) => {
         const s = cells[c.id] ?? {};
         return el('tr', {}, el('th', { scope: 'row' }, link(c.id, p.name)), el('td', {}, s.max_qcd ?? '—'),
           el('td', {}, String(s.n_measurements ?? 0)), el('td', {}, String((c.observables ?? []).length)),
-          el('td', {}, c.coverage + (s.stale ? ' (may be outdated)' : '')), el('td', {}, String(s.candidates ?? 0)));
+          el('td', {}, term(c.coverage, { scope: 'coverage' }), s.stale ? [' (', term('may be outdated'), ')'] : null), el('td', {}, String(s.candidates ?? 0)));
       }))))]);
   fill(main,
     el('nav', { className: 'crumbs' }, link('', 'Families')),

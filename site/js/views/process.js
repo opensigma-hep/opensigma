@@ -1,5 +1,4 @@
-import { el, fill, none, link, idLink, index, breadcrumb, facts, bbTable, sep } from '../leaf.js';
-import { accuracyChips } from '../format.js';
+import { el, fill, none, link, idLink, index, breadcrumb, facts, bbTable, sep, term, accChips } from '../leaf.js';
 
 export function render(main, data, route) {
   const proc = index(data).get(route.id).node;
@@ -33,9 +32,9 @@ function channelTable(data, chans) {
     return el('tr', {},
       el('th', { scope: 'row' }, link(c.id, index(data).get(c.collider)?.label ?? c.collider)),
       el('td', {}, h ? link(h.id, h.name) : '—'),
-      el('td', {}, p ? [p.label, el('ul', { className: 'chips' }, ...accuracyChips(p.accuracy).map((t) => el('li', { className: 'chip' }, t)))] : '—'),
+      el('td', {}, p ? [p.label, accChips(p.accuracy)] : '—'),
       el('td', {}, pct(s.th_pct)), el('td', {}, pct(s.exp_pct)), el('td', {}, ratio), el('td', { className: 'small' }, data_));
   });
   return el('div', { className: 'table-scroll' }, el('table', { className: 'meas' },
-    el('thead', {}, el('tr', {}, ...head.map((x) => el('th', { scope: 'col' }, x)))), el('tbody', {}, ...rows)));
+    el('thead', {}, el('tr', {}, ...head.map((x) => el('th', { scope: 'col' }, term(x))))), el('tbody', {}, ...rows)));
 }

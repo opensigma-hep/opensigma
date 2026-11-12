@@ -35,4 +35,10 @@ test('meas: alias also lands on the channel', () => {
   const ids = new Set(['meas:a', 'chan:a']);
   assert.deepEqual(parseHash('#/meas:old', { 'meas:old': 'meas:a' }, ids, { 'meas:a': 'chan:a' }), { view: 'channel', id: 'chan:a', redirected: true });
 });
+test('glossary route, with and without a term', () => {
+  assert.deepEqual(parseHash('#/glossary', {}, new Set()), { view: 'glossary' });
+  assert.deepEqual(parseHash('#/glossary?t=RV', {}, new Set()), { view: 'glossary', t: 'RV' });
+  assert.equal(parseHash('#/glossary?t=theory%20%C3%B7%20experiment', {}, new Set()).t, 'theory ÷ experiment');
+  assert.equal(parseHash('#/glossaryx', {}, new Set()).view, 'notfound');
+});
 test('meas: id without a parent → notfound', () => assert.equal(parseHash('#/meas:a', {}, new Set(['meas:a']), {}).view, 'notfound'));

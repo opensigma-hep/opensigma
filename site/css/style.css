@@ -220,3 +220,10 @@ svg.timeline .tl-NNLO { stroke-dasharray: 7 4; }
 .tl-key { display: inline-block; width: 1.6rem; border-top: 3px solid var(--c); vertical-align: middle; }
 .tl-key.tl-NLO { border-top-style: dotted; }
 .tl-key.tl-NNLO { border-top-style: dashed; }
+
+/* Glossary tooltips and page */
+.term { color: inherit; text-decoration: underline dotted; text-underline-offset: .15em; cursor: help; }
+.term:hover, .term:focus-visible { text-decoration-style: solid; }
+dl.glossary { max-width: 48rem; }
+dl.glossary dt { font-weight: 600; margin-top: .9rem; scroll-margin-top: 4rem; }
+dl.glossary dd { margin: .15rem 0 0; }
