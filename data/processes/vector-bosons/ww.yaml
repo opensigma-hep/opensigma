@@ -488,6 +488,7 @@ channels:
                   date: '2026-10-17'
         predictions:
           - label: nNNLO QCD × NLO EW (MATRIX 2.1, NNPDF3.1 luxQED)
+            headline: true
             accuracy:
               qcd: NNLO
               ew: NLO

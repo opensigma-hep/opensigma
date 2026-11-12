@@ -297,6 +297,7 @@ channels:
                   date: '2026-10-17'
         predictions:
           - label: Fixed order O(αs²) (DYTurbo, CT18NNLO)
+            headline: true
             accuracy:
               qcd: NLO
               approximations:

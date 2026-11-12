@@ -136,6 +136,7 @@ channels:
         variable: "σ_fid for two same-sign leptons + two jets in a tri-boson (W±W±W∓ → ℓνℓνjj) selection: pT(ℓ) > 20 GeV, |y(ℓ)| < 2.5, 40 < mℓℓ < 400 GeV, jets pT > 20 GeV, |y| < 4.5, two hardest jets mjj < 160 GeV and |Δyjj| < 1.5 (simplified ATLAS cuts); WWW, WH and residual VBS all contribute"
         predictions:
           - label: "Complete NLO QCD+EW, off-shell pp → μ⁺νμ e⁺νe jj in tri-boson phase space (Denner–Pellen–Schönherr–Schumann)"
+            headline: true
             accuracy:
               qcd: NLO
               ew: NLO
