@@ -1,5 +1,5 @@
 import { toHash } from '../router.js';
-import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, passes } from '../matrix.js';
+import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, cellOrder, passes } from '../matrix.js';
 import { scatterPoints, drawScatter } from '../scatter.js';
 
 // View state lives in the module (no persistence): reset only when the family changes.
@@ -75,7 +75,7 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
         .attr('rx', 4).attr('fill', fill);
       box('base', st.fill);
       if (st.pattern !== 'none') box('tex', `url(#pm-${st.pattern})`);
-      const ord = cell.max_qcd ?? 'no prediction';
+      const ord = cellOrder(cell)?.replace(' QCD', '') ?? 'no prediction';
       a.append('rect').attr('class', 'badge').attr('x', 8).attr('y', 6).attr('width', ord.length * 7.5 + 10).attr('height', 17).attr('rx', 8);
       a.append('text').attr('class', 'badge-text order').attr('x', 13).attr('y', 18).text(ord);
       const txt = `${cell.n_measurements} meas.` + (cell.candidates > 0 ? ` · ${cell.candidates} cand.` : '');

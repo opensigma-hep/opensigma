@@ -8,7 +8,7 @@ export function issueUrl(repo, action, { uid, value, locator, link, page }) {
 
 /** Landing page for a ref string (any trailing ", locator" is ignored); '' if the format is unknown. */
 export function refUrl(ref) {
-  const key = String(ref).split(',')[0];
+  const key = String(ref).split(', ')[0]; // HEPData table names may hold bare commas
   let m;
   if ((m = /^arXiv:(.+)$/.exec(key))) return `https://arxiv.org/abs/${m[1]}`;
   if ((m = /^inspire:(\d+)$/.exec(key))) return `https://inspirehep.net/literature/${m[1]}`;

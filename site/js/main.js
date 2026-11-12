@@ -51,6 +51,12 @@ toggle.addEventListener('click', () => {
   syncToggle();
 });
 
+// "#main" would be read as a route (Not found): move focus ourselves.
+document.querySelector('.skip').addEventListener('click', (e) => {
+  e.preventDefault();
+  main.focus();
+});
+
 document.getElementById('search-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const q = new FormData(e.target).get('q').trim();
@@ -89,13 +95,27 @@ function route() {
   const { data, idset } = window.PM;
   const r = parseHash(location.hash, data.derived.aliases, idset, data.derived.parents);
   if (r.redirected) history.replaceState(null, '', toHash(r.id));
-  views[r.view].render(main, data, r);
+  try {
+    views[r.view].render(main, data, r);
+  } catch (err) {
+    console.error(err);
+    const code = document.createElement('code');
+    code.textContent = String(err?.message ?? err);
+    const h = document.createElement('h1');
+    h.textContent = 'This page could not be shown';
+    const p = document.createElement('p');
+    p.setAttribute('role', 'alert');
+    p.append('Rendering ', location.hash, ' failed: ', code);
+    main.replaceChildren(h, p);
+  }
   document.title = (r.id ? label(data, r.id) : r.q ?? TITLES[r.view] ?? r.view) + ' · OpenSigma';
   for (const a of document.querySelectorAll('header nav a')) a.toggleAttribute('aria-current', a.hash === '#/' + r.view);
   if (r.view === 'families') document.title = 'OpenSigma';
   if (!first) main.focus({ preventScroll: true });
   first = false;
-  window.scrollTo(0, 0);
+  // A history entry we already rendered (back/forward) keeps the scroll position the browser restores.
+  if (!history.state?.seen) window.scrollTo(0, 0);
+  history.replaceState({ seen: true }, '');
 }
 
 try {
