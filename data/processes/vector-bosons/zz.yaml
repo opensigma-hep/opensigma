@@ -155,7 +155,7 @@ channels:
                 size: {range: [2.9, 3.5], unit: "%", asymmetric: true}
                 full_table: "hepdata:ins1814609/Table 2"
                 provenance: {uid: aadd756b, ref: "hepdata:ins1814609/Table 2", locator: "Table 2, error 'syst'", source: hepdata, status: machine-verified, date: "2026-10-16"}
-              - category: other
+              - category: acceptance_extrapolation
                 specific: "theo"
                 size: {range: [2.2, 2.4], unit: "%", asymmetric: false}
                 full_table: "hepdata:ins1814609/Table 2"
@@ -202,6 +202,7 @@ channels:
             uncertainties: []
         predictions:
           - label: NNLO QCD × NLO EW qq̄ + NLO gg→ZZ (MATRIX), CMS cuts
+            headline: true
             accuracy:
               qcd: NNLO
               ew: NLO

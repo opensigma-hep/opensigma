@@ -221,6 +221,7 @@ channels:
         variable: σ_fid of the LL polarisation state in the VBS fiducial setup of arXiv:2409.03620
         predictions:
           - label: "NLO EW + NLO QCD, polarised pp → e⁺νe μ⁺νμ jj in the double-pole approximation (Denner–Haitz–Pelliccioli)"
+            headline: true
             accuracy:
               qcd: NLO
               ew: NLO
