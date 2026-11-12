@@ -1,0 +1,2723 @@
+id: "proc:h-decays"
+name: "Higgs boson decays (H → γγ, ZZ*, WW*, b b̄, τ⁺τ⁻, μ⁺μ⁻, Zγ)"
+family: "fam:higgs"
+sector: "SM"
+description: "Partial widths and branching fractions of the SM Higgs boson. A decay has no collider initial state of its own, so each channel here is the collider at which σ × B is measured (initial state pp), and each decay mode is one observable: the branching fraction or decay signal strength μ^f = B^f/B^f_SM extracted from a global fit with the production cross sections fixed to the SM. Predictions are the LHC Higgs WG branching ratios (HDECAY and Prophecy4f) with their theory (THU) and parametric (quark masses, αs) uncertainties. The building-block matrix lists per-order ingredients decay by decay; each cell names the decay it refers to."
+watch:
+  recids:
+    - 2104706
+    - 2104672
+    - 2666787
+  queries:
+    - "t Higgs and (t \"branching\" or t \"decay width\" or t \"partial width\" or t \"decay rate\" or t \"decays\") and (t \"QCD\" or t \"electroweak\" or t \"N3LO\" or t \"N$^3$LO\" or t \"N4LO\" or t \"two-loop\" or t \"three-loop\" or t \"four-loop\" or t \"corrections\") and not t search and not t \"pair\" and not t \"dark\" and not t \"invisible\" and not t MSSM"
+    - "t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"dimuon\" or t \"muons\" or t \"Z boson and a photon\" or t \"Z gamma\" or t \"branching\" or t \"couplings\" or t \"combination\" or t \"combined measurement\") and (t \"13 TeV\" or t \"13.6 TeV\" or t evidence or t observation or t \"ten years\") and not t \"pair production\" and not t \"dark\" and not t \"invisible\""
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      2L:
+        status: "done"
+        approximations:
+          - "loop-induced decays H → γγ and H → Zγ: NLO QCD is a two-loop correction to the heavy-quark loop"
+        refs:
+          - "inspire:1366044"
+          - "inspire:1366043"
+          - "inspire:755422"
+        provenance:
+          uid: 408da6c5
+          ref: "inspire:1366044"
+          locator: "Abstract (analytic two-loop QCD corrections to the decay width H → Zγ; polylogarithms up to Li₄ and Li₂,₂); inspire:1366043, abstract (analytic QCD correction to the heavy-quark loop, confirming earlier numerical results); H → γγ: inspire:755422, abstract (complete two-loop QCD and EW corrections)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+  - row: "NNLO QCD"
+    cells:
+      3L:
+        status: "done"
+        approximations:
+          - "H → γγ only (loop-induced: NNLO QCD is a three-loop correction)"
+        refs:
+          - "inspire:1208737"
+        provenance:
+          uid: '06744022'
+          ref: "inspire:1208737"
+          locator: "Abstract (three-loop singlet QCD corrections to H → γγ, non-singlet improved; Γ(H → γγ) completely known at O(G_F α² αs², G_F α³))"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      code:
+        status: "done"
+        approximations:
+          - "H → b b̄ only: fully differential decay rate at NNLO"
+        refs:
+          - "inspire:939519"
+          - "inspire:1341625"
+        provenance:
+          uid: afb53e72
+          ref: "inspire:939519"
+          locator: "Abstract (first fully differential H → b b̄ decay at NNLO in QCD); inspire:1341625, abstract (fully differential NNLO decay rate with a general subtraction scheme)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+  - row: "N3LO QCD"
+    cells:
+      3L:
+        status: "done"
+        approximations:
+          - "H → b b̄ form factor, massless quarks"
+        refs:
+          - "inspire:1308939"
+        provenance:
+          uid: cae107d9
+          ref: "inspire:1308939"
+          locator: "Abstract (three-loop QCD corrections to the H b b̄ Yukawa vertex function for vanishing quark masses; ingredient for the fully differential third-order decay rate)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      code:
+        status: "done"
+        approximations:
+          - "H → b b̄ differential: only diagrams with a direct Higgs–bottom coupling, O(αs³ y_b²) (inspire:1730411)"
+          - "inclusive H → q q̄ width known one order higher, O(αs⁴) = N4LO, for massless quarks (inspire:697094)"
+          - "H → gg (decay to hadrons) in the heavy-top limit known to N3LO (inspire:715182) and N4LO (inspire:1608630)"
+          - "H → γγ: N3LO from the four-loop form factor in the large-m_t expansion (inspire:1860985)"
+        refs:
+          - "inspire:1730411"
+          - "inspire:697094"
+          - "inspire:715182"
+          - "inspire:1608630"
+          - "inspire:1860985"
+        provenance:
+          uid: ab146ddb
+          ref: "inspire:1730411"
+          locator: "Abstract (fully differential H → b b̄ at N3LO, O(αs³ y_b²), Projection-to-Born with N-jettiness slicing); inspire:697094, abstract (O(αs⁴) corrections to the Higgs decay rate into quarks from the five-loop massless scalar correlator); inspire:1608630, abstract (Higgs decay to hadrons at N4LO, heavy top and massless light flavours); inspire:715182, abstract (O(αs⁵) correction to Γ(H → gg), M_H < 2M_t); inspire:1860985, abstract (four-loop QCD corrections to the Higgs–photon form factor in the large-m_t expansion, N3LO for the two-photon width)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+  - row: "NLO EW"
+    cells:
+      1L:
+        status: "done"
+        approximations:
+          - "H → WW/ZZ → 4 fermions (Prophecy4f): off-shell gauge bosons, complex-mass scheme"
+        refs:
+          - "inspire:713692"
+          - "inspire:732075"
+        provenance:
+          uid: 2e95ca8a
+          ref: "inspire:713692"
+          locator: "Abstract (complete O(α) electroweak corrections to H → WW/ZZ → 4 leptons, complex-mass scheme, no on-shell approximation); inspire:732075, abstract (NLO QCD and EW corrections for semileptonic and hadronic four-fermion final states)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      2L:
+        status: "done"
+        approximations:
+          - "loop-induced decays H → γγ and H → Zγ: NLO EW is a two-loop correction"
+          - "H → γγ evaluated numerically (inspire:755422, techniques in inspire:797190)"
+        refs:
+          - "inspire:755422"
+          - "inspire:797190"
+          - "inspire:2783609"
+          - "inspire:2778337"
+        provenance:
+          uid: e36bf95e
+          ref: "inspire:755422"
+          locator: "Abstract (complete two-loop corrections to H → γγ, QCD and electroweak, numerical evaluation, all kinematic regions with complex masses); inspire:2783609, abstract (NLO electroweak correction to H → Zγ, on-shell scheme); inspire:2778337, abstract (NLO EW corrections to H → Zγ)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      code:
+        status: "done"
+        approximations:
+          - "H → Zγ: NLO EW not included in HDECAY (LO only)"
+        refs:
+          - "arXiv:1610.07922"
+          - "arXiv:1107.5909"
+          - "inspire:442662"
+          - "inspire:713692"
+          - "inspire:732075"
+        provenance:
+          uid: b408c65a
+          ref: "arXiv:1610.07922"
+          locator: "Sec. I.3.1.a (HDECAY and Prophecy4f used for all partial widths; complete NLO EW corrections implemented in HDECAY for the decays into fermions); arXiv:1107.5909, Sec. II (Prophecy4f: complete NLO QCD and EW corrections to H → 4f; H → Zγ in HDECAY at LO only)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+  - row: "NNLO QCD×EW"
+    cells:
+      3L:
+        status: "partial"
+        approximations:
+          - "H → b b̄ only"
+          - "optical theorem with asymptotic expansions in mass ratios"
+        refs:
+          - "inspire:1392467"
+        provenance:
+          uid: 16900fe2
+          ref: "inspire:1392467"
+          locator: "Abstract (Γ(H → b b̄) to order α αs from the imaginary part of three-loop Higgs-propagator corrections, asymptotic expansions in mass ratios; same magnitude as the O(αs³) QCD term, opposite sign)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+channels:
+  - id: "chan:h-decays/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: "partial"
+    last_reviewed: "2026-11-12"
+    headline:
+      observable: "obs:h-decays/lhc-13/br-gamgam"
+      region: "H → γγ: branching fraction (ATLAS, m_H = 125.09 GeV) or decay signal strength (CMS, m_H = 125.38 GeV) from the Run-2 combination, production cross sections fixed to the SM"
+    measurements:
+      - id: "meas:h-decays/lhc-13/atlas-2022-comb"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (Run 2), combination of Higgs production and decay analyses; one branching fraction per decay mode, production cross sections fixed to the SM"
+        ref: "inspire:2104706"
+        hepdata: "hepdata:ins2104706/Figure 2b"
+      - id: "meas:h-decays/lhc-13/cms-2022-comb"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of Higgs production and decay analyses; one signal strength per decay mode"
+        ref: "inspire:2104672"
+        hepdata: "hepdata:ins2104672/Decay channel strength modifiers"
+      - id: "meas:h-decays/lhc-13/atlas-cms-2023-zgam"
+        experiment: "combination"
+        dataset: "13 TeV, about 140 fb⁻¹ per experiment (2015–2018), ATLAS + CMS combination of the H → Zγ searches"
+        ref: "inspire:2666787"
+      - id: "meas:h-decays/lhc-13/cms-2020-mumu"
+        experiment: "CMS"
+        dataset: "13 TeV, 137 fb⁻¹, H → μ⁺μ⁻ in ggH, VBF, VH and tt̄H categories"
+        ref: "inspire:1815813"
+    observables:
+      - id: "obs:h-decays/lhc-13/br-gamgam"
+        name: "H → γγ: branching fraction (ATLAS) and decay signal strength μ^γγ (CMS), Run-2 combinations"
+        kind: "ratio"
+        variable: "ATLAS: B(H → γγ) with all production cross sections fixed to the SM, m_H = 125.09 GeV; CMS: μ^f = B^f/(B^f)_SM with σ_i = (σ_i)_SM, m_H = 125.38 GeV"
+        results:
+          - measurement: "meas:h-decays/lhc-13/atlas-2022-comb"
+            total:
+              value_pct: 8.7
+              provenance:
+                uid: de5592c7
+                ref: "hepdata:ins2104706/Figure 2b"
+                locator: "Figure 2b, bin 5 (γγ), column 'Data': B = 0.00247, 'Total uncertainty' +0.000216/−0.000203; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 6.0
+                    - 6.6
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104706/Figure 2b"
+                provenance:
+                  uid: 408ce263
+                  ref: "hepdata:ins2104706/Figure 2b"
+                  locator: "Figure 2b, bin 5 (γγ), error 'Syst. uncertainty': +0.000163/−0.000147 of 0.00247"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2022-comb"
+            total:
+              value_pct: 8.0
+              provenance:
+                uid: 18f6e6cb
+                ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                locator: "Decay channel strength modifiers, bin 4: μ^γγ = 1.13 +0.09/−0.09 (Stat.+Syst.), also Fig. 2 (right) of arXiv:2207.00043; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Data statistics"
+                size:
+                  range:
+                    - 5.3
+                    - 5.3
+                  unit: "%"
+                  asymmetric: false
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 3a4dffa0
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 4 (μ^γγ): +0.06/−0.06 (Stat.) of 1.13"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 5.3
+                    - 6.2
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 9bfd1a62
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 4 (μ^γγ): +0.07/−0.06 (Syst.) of 1.13"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → γγ) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "NLO"
+              ew: "NLO"
+              approximations:
+                - "loop-induced decay: HDECAY includes the full NLO QCD corrections and a grid for the NLO EW corrections (arXiv:1107.5909)"
+                - "THU of the partial width: below 1% (QCD), below 1% (EW), about 1% in total"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.9
+              provenance:
+                uid: d2776003
+                ref: "arXiv:1610.07922"
+                locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, THU +1.73/−1.72%, PU(m_q) +0.97/−0.94%, PU(αs) +0.66/−0.61%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.90/−2.84%, larger side; agrees with the 'SM prediction' column of hepdata:ins2104706/Figure 2b (+2.91/−2.82%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 1.7
+                    - 1.7
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 40958e1e
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, THU column (+1.73/−1.72%); method Sec. I.3.1.a and Table 4, row H → γγ"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.94
+                    - 0.97
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: e9007634
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, PU(m_q) column (+0.97/−0.94%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.61
+                    - 0.66
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: e75e14e3
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, PU(αs) column (+0.66/−0.61%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-decays/lhc-13/atlas-2022-comb"
+              - "meas:h-decays/lhc-13/cms-2022-comb"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 7ee456c4
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → γγ) and Table 176 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-13/br-zz"
+        name: "H → ZZ*: branching fraction (ATLAS) and decay signal strength μ^ZZ* (CMS), Run-2 combinations"
+        kind: "ratio"
+        variable: "ATLAS: B(H → ZZ*) with all production cross sections fixed to the SM, m_H = 125.09 GeV; CMS: μ^f = B^f/(B^f)_SM with σ_i = (σ_i)_SM, m_H = 125.38 GeV"
+        results:
+          - measurement: "meas:h-decays/lhc-13/atlas-2022-comb"
+            total:
+              value_pct: 10.0
+              provenance:
+                uid: f0a78952
+                ref: "hepdata:ins2104706/Figure 2b"
+                locator: "Figure 2b, bin 4 (ZZ*), column 'Data': B = 0.027505, 'Total uncertainty' +0.002846/−0.002643; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 5.1
+                    - 6.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104706/Figure 2b"
+                provenance:
+                  uid: '05508553'
+                  ref: "hepdata:ins2104706/Figure 2b"
+                  locator: "Figure 2b, bin 4 (ZZ*), error 'Syst. uncertainty': +0.001637/−0.001411 of 0.027505"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2022-comb"
+            total:
+              value_pct: 12.0
+              provenance:
+                uid: 30b11aa0
+                ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                locator: "Decay channel strength modifiers, bin 1: μ^ZZ* = 0.97 +0.12/−0.11 (Stat.+Syst.), also Fig. 2 (right) of arXiv:2207.00043; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Data statistics"
+                size:
+                  range:
+                    - 7.2
+                    - 8.2
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: b3e6a4a0
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 1 (μ^ZZ*): +0.08/−0.07 (Stat.) of 0.97"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 8.2
+                    - 9.3
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 9c6ef521
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 1 (μ^ZZ*): +0.09/−0.08 (Syst.) of 0.97"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → ZZ*) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "NLO"
+              ew: "NLO"
+              approximations:
+                - "Prophecy4f: complete NLO QCD and EW corrections to H → WW/ZZ → 4f with off-shell gauge bosons, all interferences (arXiv:1107.5909)"
+                - "THU of the partial width: below 0.5% (QCD), about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.2
+              provenance:
+                uid: 55f2abc2
+                ref: "arXiv:1610.07922"
+                locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, THU +0.99/−0.99%, PU(m_q) +0.98/−0.98%, PU(αs) +0.64/−0.62%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.16/−2.15%, larger side; agrees with the 'SM prediction' column of hepdata:ins2104706/Figure 2b (+2.16/−2.15%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 0.99
+                    - 0.99
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 6a0b8e71
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, THU column (+0.99/−0.99%); method Sec. I.3.1.a and Table 4, row H → WW/ZZ → 4f"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.98
+                    - 0.98
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 784292f8
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, PU(m_q) column (+0.98/−0.98%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.62
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: a15c3645
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, PU(αs) column (+0.64/−0.62%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-decays/lhc-13/atlas-2022-comb"
+              - "meas:h-decays/lhc-13/cms-2022-comb"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 804a1ffb
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → WW/ZZ → 4f) and Table 178 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-13/br-ww"
+        name: "H → WW*: branching fraction (ATLAS) and decay signal strength μ^WW* (CMS), Run-2 combinations"
+        kind: "ratio"
+        variable: "ATLAS: B(H → WW*) with all production cross sections fixed to the SM, m_H = 125.09 GeV; CMS: μ^f = B^f/(B^f)_SM with σ_i = (σ_i)_SM, m_H = 125.38 GeV"
+        results:
+          - measurement: "meas:h-decays/lhc-13/atlas-2022-comb"
+            total:
+              value_pct: 10.0
+              provenance:
+                uid: 7dc32a38
+                ref: "hepdata:ins2104706/Figure 2b"
+                locator: "Figure 2b, bin 2 (WW*), column 'Data': B = 0.25718, 'Total uncertainty' +0.025613/−0.024126; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 8.3
+                    - 8.9
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104706/Figure 2b"
+                provenance:
+                  uid: 96caacc1
+                  ref: "hepdata:ins2104706/Figure 2b"
+                  locator: "Figure 2b, bin 2 (WW*), error 'Syst. uncertainty': +0.022997/−0.021364 of 0.25718"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2022-comb"
+            total:
+              value_pct: 9.3
+              provenance:
+                uid: 481e40ff
+                ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                locator: "Decay channel strength modifiers, bin 7: μ^WW* = 0.97 +0.09/−0.09 (Stat.+Syst.), also Fig. 2 (right) of arXiv:2207.00043; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Data statistics"
+                size:
+                  range:
+                    - 5.2
+                    - 5.2
+                  unit: "%"
+                  asymmetric: false
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: '60632034'
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 7 (μ^WW*): +0.05/−0.05 (Stat.) of 0.97"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 8.2
+                    - 8.2
+                  unit: "%"
+                  asymmetric: false
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 0697cedc
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 7 (μ^WW*): +0.08/−0.08 (Syst.) of 0.97"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → WW*) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "NLO"
+              ew: "NLO"
+              approximations:
+                - "Prophecy4f: complete NLO QCD and EW corrections to H → WW/ZZ → 4f with off-shell gauge bosons, all interferences (arXiv:1107.5909)"
+                - "THU of the partial width: below 0.5% (QCD), about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.2
+              provenance:
+                uid: 2250def8
+                ref: "arXiv:1610.07922"
+                locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, THU +0.99/−0.99%, PU(m_q) +0.98/−0.98%, PU(αs) +0.64/−0.62%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.16/−2.15%, larger side; agrees with the 'SM prediction' column of hepdata:ins2104706/Figure 2b (+2.16/−2.15%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 0.99
+                    - 0.99
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: ebc6643b
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, THU column (+0.99/−0.99%); method Sec. I.3.1.a and Table 4, row H → WW/ZZ → 4f"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.98
+                    - 0.98
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: c0f675b9
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, PU(m_q) column (+0.98/−0.98%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.62
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 95fc2254
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, PU(αs) column (+0.64/−0.62%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-decays/lhc-13/atlas-2022-comb"
+              - "meas:h-decays/lhc-13/cms-2022-comb"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 9b053843
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → WW/ZZ → 4f) and Table 177 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-13/br-bb"
+        name: "H → bb̄: branching fraction (ATLAS) and decay signal strength μ^bb̄ (CMS), Run-2 combinations"
+        kind: "ratio"
+        variable: "ATLAS: B(H → bb̄) with all production cross sections fixed to the SM, m_H = 125.09 GeV; CMS: μ^f = B^f/(B^f)_SM with σ_i = (σ_i)_SM, m_H = 125.38 GeV"
+        results:
+          - measurement: "meas:h-decays/lhc-13/atlas-2022-comb"
+            total:
+              value_pct: 16.0
+              provenance:
+                uid: c176d0dd
+                ref: "hepdata:ins2104706/Figure 2b"
+                locator: "Figure 2b, bin 1 (bb̄), column 'Data': B = 0.52834, 'Total uncertainty' +0.084693/−0.080792; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 11.0
+                    - 12.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104706/Figure 2b"
+                provenance:
+                  uid: b6c1dfd6
+                  ref: "hepdata:ins2104706/Figure 2b"
+                  locator: "Figure 2b, bin 1 (bb̄), error 'Syst. uncertainty': +0.06377/−0.059032 of 0.52834"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2022-comb"
+            total:
+              value_pct: 21.0
+              provenance:
+                uid: 7017f910
+                ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                locator: "Decay channel strength modifiers, bin 3: μ^bb̄ = 1.05 +0.22/−0.21 (Stat.+Syst.), also Fig. 2 (right) of arXiv:2207.00043; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Data statistics"
+                size:
+                  range:
+                    - 14.0
+                    - 14.0
+                  unit: "%"
+                  asymmetric: false
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: e1726b20
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 3 (μ^bb̄): +0.15/−0.15 (Stat.) of 1.05"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 14.0
+                    - 15.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: daeff0ec
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 3 (μ^bb̄): +0.16/−0.15 (Syst.) of 1.05"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → bb̄) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "N4LO"
+              ew: "NLO"
+              approximations:
+                - "HDECAY: complete massless QCD corrections up to and including N4LO for H → b b̄ (arXiv:1107.5909); complete NLO EW corrections for fermionic decays implemented since YR4"
+                - "THU of the partial width: about 0.2% (QCD), about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 1.7
+              provenance:
+                uid: 5d80a1d5
+                ref: "arXiv:1610.07922"
+                locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, THU +0.65/−0.65%, PU(m_q) +0.72/−0.74%, PU(αs) +0.77/−0.79%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +1.70/−1.73%, larger side; agrees with the 'SM prediction' column of hepdata:ins2104706/Figure 2b (+1.70/−1.73%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 0.65
+                    - 0.65
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: aafdd109
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, THU column (+0.65/−0.65%); method Sec. I.3.1.a and Table 4, row H → bb/cc"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.72
+                    - 0.74
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 21f9fb2a
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, PU(m_q) column (+0.72/−0.74%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.77
+                    - 0.79
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: c5ef67b1
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, PU(αs) column (+0.77/−0.79%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-decays/lhc-13/atlas-2022-comb"
+              - "meas:h-decays/lhc-13/cms-2022-comb"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: e8988e6d
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → bb/cc) and Table 174 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-13/br-tautau"
+        name: "H → τ⁺τ⁻: branching fraction (ATLAS) and decay signal strength μ^τ⁺τ⁻ (CMS), Run-2 combinations"
+        kind: "ratio"
+        variable: "ATLAS: B(H → τ⁺τ⁻) with all production cross sections fixed to the SM, m_H = 125.09 GeV; CMS: μ^f = B^f/(B^f)_SM with σ_i = (σ_i)_SM, m_H = 125.38 GeV"
+        results:
+          - measurement: "meas:h-decays/lhc-13/atlas-2022-comb"
+            total:
+              value_pct: 13.0
+              provenance:
+                uid: 84ac055b
+                ref: "hepdata:ins2104706/Figure 2b"
+                locator: "Figure 2b, bin 3 (τ⁺τ⁻), column 'Data': B = 0.060139, 'Total uncertainty' +0.007654/−0.007118; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 9.4
+                    - 10.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104706/Figure 2b"
+                provenance:
+                  uid: bfa61301
+                  ref: "hepdata:ins2104706/Figure 2b"
+                  locator: "Figure 2b, bin 3 (τ⁺τ⁻), error 'Syst. uncertainty': +0.006271/−0.005645 of 0.060139"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2022-comb"
+            total:
+              value_pct: 12.0
+              provenance:
+                uid: b637d79b
+                ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                locator: "Decay channel strength modifiers, bin 5: μ^τ⁺τ⁻ = 0.85 +0.1/−0.1 (Stat.+Syst.), also Fig. 2 (right) of arXiv:2207.00043; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Data statistics"
+                size:
+                  range:
+                    - 7.1
+                    - 7.1
+                  unit: "%"
+                  asymmetric: false
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 6ba99136
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 5 (μ^τ⁺τ⁻): +0.06/−0.06 (Stat.) of 0.85"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 9.4
+                    - 9.4
+                  unit: "%"
+                  asymmetric: false
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 1727a11a
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 5 (μ^τ⁺τ⁻): +0.08/−0.08 (Syst.) of 0.85"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → τ⁺τ⁻) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              ew: "NLO"
+              approximations:
+                - "leptonic decay: no QCD correction to the partial width at this order; complete NLO EW corrections in HDECAY (YR4)"
+                - "THU of the partial width: about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.3
+              provenance:
+                uid: 4106d971
+                ref: "arXiv:1610.07922"
+                locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, THU +1.17/−1.16%, PU(m_q) +0.98/−0.98%, PU(αs) +0.62/−0.6%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.33/−2.31%, larger side; agrees with the 'SM prediction' column of hepdata:ins2104706/Figure 2b (+2.33/−2.31%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 5f2f6113
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, THU column (+1.17/−1.16%); method Sec. I.3.1.a and Table 4, row H → τ⁺τ⁻/μ⁺μ⁻"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.98
+                    - 0.98
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: b2bc1db6
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, PU(m_q) column (+0.98/−0.98%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.6
+                    - 0.62
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: dbae0cdc
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, PU(αs) column (+0.62/−0.6%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-decays/lhc-13/atlas-2022-comb"
+              - "meas:h-decays/lhc-13/cms-2022-comb"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: ab9c3612
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → τ⁺τ⁻/μ⁺μ⁻) and Table 174 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-13/br-mumu"
+        name: "H → μ⁺μ⁻: branching fraction (ATLAS) and decay signal strength μ^μ⁺μ⁻ (CMS), Run-2 combinations"
+        kind: "ratio"
+        variable: "ATLAS: B(H → μ⁺μ⁻) with all production cross sections fixed to the SM, m_H = 125.09 GeV; CMS: μ^f = B^f/(B^f)_SM with σ_i = (σ_i)_SM, m_H = 125.38 GeV; dedicated analyses quote the signal strength σ × B relative to the SM"
+        results:
+          - measurement: "meas:h-decays/lhc-13/atlas-2022-comb"
+            total:
+              value_pct: 51.0
+              provenance:
+                uid: 2f7fc433
+                ref: "hepdata:ins2104706/Figure 2b"
+                locator: "Figure 2b, bin 7 (μ⁺μ⁻), column 'Data': B = 0.000263, 'Total uncertainty' +0.000134/−0.000131; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 9.9
+                    - 13.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104706/Figure 2b"
+                provenance:
+                  uid: ea630874
+                  ref: "hepdata:ins2104706/Figure 2b"
+                  locator: "Figure 2b, bin 7 (μ⁺μ⁻), error 'Syst. uncertainty': +3.4e-05/−2.6e-05 of 0.000263"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2022-comb"
+            total:
+              value_pct: 37.0
+              provenance:
+                uid: b7d9396e
+                ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                locator: "Decay channel strength modifiers, bin 2: μ^μ⁺μ⁻ = 1.21 +0.45/−0.42 (Stat.+Syst.), also Fig. 2 (right) of arXiv:2207.00043; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Data statistics"
+                size:
+                  range:
+                    - 31.0
+                    - 35.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 2137f0cf
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 2 (μ^μ⁺μ⁻): +0.42/−0.38 (Stat.) of 1.21"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 13.0
+                    - 14.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 22d7afd3
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 2 (μ^μ⁺μ⁻): +0.17/−0.16 (Syst.) of 1.21"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2020-mumu"
+            total:
+              value_pct: 36.0
+              provenance:
+                uid: 499bc2e9
+                ref: "inspire:1815813"
+                locator: "Abstract: signal strength 1.19 +0.40/−0.39 (stat) +0.15/−0.14 (syst); stat and syst added in quadrature here (the abstract quotes them separately), larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical uncertainty"
+                size:
+                  range:
+                    - 33.0
+                    - 34.0
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 7b4536d6
+                  ref: "inspire:1815813"
+                  locator: "Abstract: +0.40/−0.39 (stat) of 1.19"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 12.0
+                    - 13.0
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 5af70efd
+                  ref: "inspire:1815813"
+                  locator: "Abstract: +0.15/−0.14 (syst) of 1.19"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → μ⁺μ⁻) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              ew: "NLO"
+              approximations:
+                - "leptonic decay: no QCD correction to the partial width at this order; complete NLO EW corrections in HDECAY (YR4)"
+                - "THU of the partial width: about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.4
+              provenance:
+                uid: 48dd498e
+                ref: "arXiv:1610.07922"
+                locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, THU +1.23/−1.23%, PU(m_q) +0.97/−0.99%, PU(αs) +0.6/−0.64%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.37/−2.41%, larger side; agrees with the 'SM prediction' column of hepdata:ins2104706/Figure 2b (+2.30/−2.30%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: ac9b89f1
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, THU column (+1.23/−1.23%); method Sec. I.3.1.a and Table 4, row H → τ⁺τ⁻/μ⁺μ⁻"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.97
+                    - 0.99
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: b6f3dc66
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, PU(m_q) column (+0.97/−0.99%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.6
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: bbe6d281
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, PU(αs) column (+0.6/−0.64%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-decays/lhc-13/atlas-2022-comb"
+              - "meas:h-decays/lhc-13/cms-2022-comb"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 668e45e9
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → τ⁺τ⁻/μ⁺μ⁻) and Table 175 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-13/br-zgam"
+        name: "H → Zγ: branching fraction (ATLAS) and decay signal strength μ^Zγ (CMS), Run-2 combinations"
+        kind: "ratio"
+        variable: "ATLAS: B(H → Zγ) with all production cross sections fixed to the SM, m_H = 125.09 GeV; CMS: μ^f = B^f/(B^f)_SM with σ_i = (σ_i)_SM, m_H = 125.38 GeV; dedicated analyses quote the signal strength σ × B relative to the SM"
+        results:
+          - measurement: "meas:h-decays/lhc-13/atlas-2022-comb"
+            total:
+              value_pct: 47.0
+              provenance:
+                uid: 1e37150a
+                ref: "hepdata:ins2104706/Figure 2b"
+                locator: "Figure 2b, bin 6 (Zγ), column 'Data': B = 0.003235, 'Total uncertainty' +0.001516/−0.001459; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 16.0
+                    - 18.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104706/Figure 2b"
+                provenance:
+                  uid: a692ce79
+                  ref: "hepdata:ins2104706/Figure 2b"
+                  locator: "Figure 2b, bin 6 (Zγ), error 'Syst. uncertainty': +0.000595/−0.000514 of 0.003235"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/cms-2022-comb"
+            total:
+              value_pct: 41.0
+              provenance:
+                uid: 25c3ee07
+                ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                locator: "Decay channel strength modifiers, bin 6: μ^Zγ = 2.59 +1.07/−0.96 (Stat.+Syst.), also Fig. 2 (right) of arXiv:2207.00043; larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Data statistics"
+                size:
+                  range:
+                    - 36.0
+                    - 37.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 1caf19d5
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 6 (μ^Zγ): +0.97/−0.93 (Stat.) of 2.59"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Systematic uncertainty (all sources combined)"
+                size:
+                  range:
+                    - 9.7
+                    - 17.0
+                  unit: "%"
+                  asymmetric: true
+                full_table: "hepdata:ins2104672/Decay channel strength modifiers"
+                provenance:
+                  uid: 83ffba2c
+                  ref: "hepdata:ins2104672/Decay channel strength modifiers"
+                  locator: "Decay channel strength modifiers, bin 6 (μ^Zγ): +0.45/−0.25 (Syst.) of 2.59"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+          - measurement: "meas:h-decays/lhc-13/atlas-cms-2023-zgam"
+            total:
+              value_pct: 32.0
+              provenance:
+                uid: bdbd2d00
+                ref: "inspire:2666787"
+                locator: "Abstract: signal yield 2.2 ± 0.7 times the SM prediction (3.4 s.d. significance); 0.7/2.2 as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties: []
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → Zγ) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              approximations:
+                - "loop-induced decay included in HDECAY at LO (W, top, bottom and τ loops); QCD corrections neglected, EW corrections not included (arXiv:1107.5909)"
+                - "THU of the partial width: below 1% (QCD), about 5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 6.9
+              provenance:
+                uid: a6abc718
+                ref: "arXiv:1610.07922"
+                locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, THU +5.71/−5.71%, PU(m_q) +0.91/−1.0%, PU(αs) +0.58/−0.64%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +6.79/−6.90%, larger side; agrees with the 'SM prediction' column of hepdata:ins2104706/Figure 2b (+6.81/−6.88%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 5.7
+                    - 5.7
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 25a91b60
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, THU column (+5.71/−5.71%); method Sec. I.3.1.a and Table 4, row H → Zγ"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.91
+                    - 1.0
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: b783e5db
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, PU(m_q) column (+0.91/−1.0%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.58
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: fcb549be
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, PU(αs) column (+0.58/−0.64%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-decays/lhc-13/atlas-2022-comb"
+              - "meas:h-decays/lhc-13/cms-2022-comb"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 315f9a36
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → Zγ) and Table 177 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+  - id: "chan:h-decays/lhc-13.6"
+    collider: "col:lhc-13.6"
+    initial_state: "pp"
+    coverage: "partial"
+    last_reviewed: "2026-11-12"
+    headline:
+      observable: "obs:h-decays/lhc-13.6/mu-mumu"
+      region: "H → μ⁺μ⁻ signal strength, ATLAS Run 3 (165 fb⁻¹ at 13.6 TeV) combined with Run 2"
+    measurements:
+      - id: "meas:h-decays/lhc-13.6/atlas-2025-mumu"
+        experiment: "ATLAS"
+        dataset: "13.6 TeV, 165 fb⁻¹ (Run 3), combined with the Run-2 H → μ⁺μ⁻ result"
+        ref: "inspire:2943644"
+      - id: "meas:h-decays/lhc-13.6/atlas-2025-zgam"
+        experiment: "ATLAS"
+        dataset: "13.6 TeV, 165 fb⁻¹ (2022–2024), combined with 140 fb⁻¹ at 13 TeV, H → Zγ → ℓℓγ"
+        ref: "inspire:2953704"
+      - id: "meas:h-decays/lhc-13.6/cms-2026-zgam-prelim"
+        experiment: "CMS"
+        dataset: "13 and 13.6 TeV, 200 fb⁻¹ in total, H → Zγ → ℓℓγ (CMS-PAS-HIG-25-010)"
+        ref: "inspire:3143906"
+        preliminary: true
+    observables:
+      - id: "obs:h-decays/lhc-13.6/mu-mumu"
+        name: "H → μ⁺μ⁻ signal strength, Run 3 combined with Run 2"
+        kind: "ratio"
+        variable: "μ = σ × B(H → μμ) relative to the SM, all production modes; 13.6 TeV data combined with the 13 TeV result"
+        results:
+          - measurement: "meas:h-decays/lhc-13.6/atlas-2025-mumu"
+            total:
+              value_pct: 29.0
+              provenance:
+                uid: d0687202
+                ref: "inspire:2943644"
+                locator: "Abstract: best-fit signal strength μ = 1.4 ± 0.4 (Run 3 combined with Run 2; 3.4σ observed, 2.5σ expected); 0.4/1.4 as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties: []
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → μ⁺μ⁻) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              ew: "NLO"
+              approximations:
+                - "leptonic decay: no QCD correction to the partial width at this order; complete NLO EW corrections in HDECAY (YR4)"
+                - "THU of the partial width: about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.4
+              provenance:
+                uid: 411af8f4
+                ref: "arXiv:1610.07922"
+                locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, THU +1.23/−1.23%, PU(m_q) +0.97/−0.99%, PU(αs) +0.6/−0.64%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.37/−2.41%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: '46651026'
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, THU column (+1.23/−1.23%); method Sec. I.3.1.a and Table 4, row H → τ⁺τ⁻/μ⁺μ⁻"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.97
+                    - 0.99
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: a6c4e1c2
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, PU(m_q) column (+0.97/−0.99%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.6
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: b9cb9582
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, PU(αs) column (+0.6/−0.64%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 7c832023
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → τ⁺τ⁻/μ⁺μ⁻) and Table 175 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-13.6/mu-zgam"
+        name: "H → Zγ signal strength, Run 3 combined with Run 2"
+        kind: "ratio"
+        variable: "μ = σ × B(H → Zγ) relative to the SM in the ℓℓγ final state; 13.6 TeV data combined with 13 TeV data"
+        results:
+          - measurement: "meas:h-decays/lhc-13.6/atlas-2025-zgam"
+            total:
+              value_pct: 46.0
+              provenance:
+                uid: '28322242'
+                ref: "inspire:2953704"
+                locator: "Abstract: combined 13 TeV + 13.6 TeV signal strength μ = 1.3 +0.6/−0.5 (2.5σ observed, 1.9σ expected); larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties: []
+          - measurement: "meas:h-decays/lhc-13.6/cms-2026-zgam-prelim"
+            total:
+              value_pct: 55.0
+              provenance:
+                uid: 2709acee
+                ref: "inspire:3143906"
+                locator: "Abstract: μ = 1.10 +0.52/−0.61 for m_H = 125.38 GeV (1.9 s.d. observed, 2.3 expected); larger side as % of the central value"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties: []
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → Zγ) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              approximations:
+                - "loop-induced decay included in HDECAY at LO (W, top, bottom and τ loops); QCD corrections neglected, EW corrections not included (arXiv:1107.5909)"
+                - "THU of the partial width: below 1% (QCD), about 5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 6.9
+              provenance:
+                uid: 7cac0893
+                ref: "arXiv:1610.07922"
+                locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, THU +5.71/−5.71%, PU(m_q) +0.91/−1.0%, PU(αs) +0.58/−0.64%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +6.79/−6.90%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 5.7
+                    - 5.7
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: b9e169b2
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, THU column (+5.71/−5.71%); method Sec. I.3.1.a and Table 4, row H → Zγ"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.91
+                    - 1.0
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 798f29ad
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, PU(m_q) column (+0.91/−1.0%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.58
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: cbeffcbc
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, PU(αs) column (+0.58/−0.64%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 7b34fdda
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → Zγ) and Table 177 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+          - label: "H → Zγ partial width at NLO EW (two-loop) and NLO QCD"
+            accuracy:
+              qcd: "NLO"
+              ew: "NLO"
+              approximations:
+                - "on-shell renormalisation; NLO EW correction may reach 7% of the LO width, NLO QCD correction about 0.3% (inspire:2783609)"
+                - "partial width only: not yet part of the LHC Higgs WG branching-ratio recommendation used by the experiments (YR4 includes H → Zγ at LO)"
+            refs:
+              - "inspire:2783609"
+              - "inspire:2778337"
+              - "inspire:1366044"
+              - "inspire:1366043"
+            provenance:
+              uid: 8ee765fe
+              ref: "inspire:2783609"
+              locator: "Abstract (NLO electroweak correction to H → Zγ in the on-shell scheme: up to 7% of LO, NLO QCD about 0.3%); independent calculation: inspire:2778337, abstract"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+  - id: "chan:h-decays/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: "stub"
+    last_reviewed: "2026-11-12"
+    headline:
+      observable: "obs:h-decays/lhc-8/mu-gamgam"
+      region: "μ^γγ, m_H = 125.09 GeV, SM production cross sections assumed, combined 7 and 8 TeV data"
+    measurements:
+      - id: "meas:h-decays/lhc-8/atlas-cms-2016-comb"
+        experiment: "combination"
+        dataset: "7 and 8 TeV, about 5 fb⁻¹ and 20 fb⁻¹ per experiment (Run 1), ATLAS + CMS combination of Higgs decay-channel analyses"
+        ref: "inspire:1468068"
+        hepdata: "hepdata:ins1468068/Table 10"
+    observables:
+      - id: "obs:h-decays/lhc-8/mu-gamgam"
+        name: "Decay signal strength μ^γγ (ATLAS + CMS Run-1 combination)"
+        kind: "ratio"
+        variable: "μ^γγ = B(H → γγ)/B_SM at m_H = 125.09 GeV, assuming SM production cross sections; 7 and 8 TeV data, one signal strength per decay channel"
+        results:
+          - measurement: "meas:h-decays/lhc-8/atlas-cms-2016-comb"
+            total:
+              value_pct: 17.0
+              provenance:
+                uid: c87503ca
+                ref: "hepdata:ins1468068/Table 10"
+                locator: "Table 10, quadrature sum of all errors (bin 1)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties: []
+      - id: "obs:h-decays/lhc-8/mu-zz"
+        name: "Decay signal strength μ^ZZ* (ATLAS + CMS Run-1 combination)"
+        kind: "ratio"
+        variable: "μ^ZZ* = B(H → ZZ*)/B_SM at m_H = 125.09 GeV, assuming SM production cross sections; 7 and 8 TeV data, one signal strength per decay channel"
+        results:
+          - measurement: "meas:h-decays/lhc-8/atlas-cms-2016-comb"
+            total:
+              value_pct: 20.0
+              provenance:
+                uid: 907eb031
+                ref: "hepdata:ins1468068/Table 10"
+                locator: "Table 10, quadrature sum of all errors (bin 2)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties: []
+      - id: "obs:h-decays/lhc-8/mu-ww"
+        name: "Decay signal strength μ^WW* (ATLAS + CMS Run-1 combination)"
+        kind: "ratio"
+        variable: "μ^WW* = B(H → WW*)/B_SM at m_H = 125.09 GeV, assuming SM production cross sections; 7 and 8 TeV data, one signal strength per decay channel"
+        results:
+          - measurement: "meas:h-decays/lhc-8/atlas-cms-2016-comb"
+            total:
+              value_pct: 16.0
+              provenance:
+                uid: 3655a01b
+                ref: "hepdata:ins1468068/Table 10"
+                locator: "Table 10, quadrature sum of all errors (bin 3)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties: []
+      - id: "obs:h-decays/lhc-8/mu-tautau"
+        name: "Decay signal strength μ^τ⁺τ⁻ (ATLAS + CMS Run-1 combination)"
+        kind: "ratio"
+        variable: "μ^τ⁺τ⁻ = B(H → τ⁺τ⁻)/B_SM at m_H = 125.09 GeV, assuming SM production cross sections; 7 and 8 TeV data, one signal strength per decay channel"
+        results:
+          - measurement: "meas:h-decays/lhc-8/atlas-cms-2016-comb"
+            total:
+              value_pct: 22.0
+              provenance:
+                uid: da71fbdd
+                ref: "hepdata:ins1468068/Table 10"
+                locator: "Table 10, quadrature sum of all errors (bin 4)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties: []
+      - id: "obs:h-decays/lhc-8/mu-bb"
+        name: "Decay signal strength μ^bb̄ (ATLAS + CMS Run-1 combination)"
+        kind: "ratio"
+        variable: "μ^bb̄ = B(H → bb̄)/B_SM at m_H = 125.09 GeV, assuming SM production cross sections; 7 and 8 TeV data, one signal strength per decay channel"
+        results:
+          - measurement: "meas:h-decays/lhc-8/atlas-cms-2016-comb"
+            total:
+              value_pct: 41.0
+              provenance:
+                uid: ab84ec64
+                ref: "hepdata:ins1468068/Table 10"
+                locator: "Table 10, quadrature sum of all errors (bin 5)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties: []
+      - id: "obs:h-decays/lhc-8/mu-mumu"
+        name: "Decay signal strength μ^μ⁺μ⁻ (ATLAS + CMS Run-1 combination)"
+        kind: "ratio"
+        variable: "μ^μ⁺μ⁻ = B(H → μ⁺μ⁻)/B_SM at m_H = 125.09 GeV, assuming SM production cross sections; 7 and 8 TeV data, one signal strength per decay channel"
+        results:
+          - measurement: "meas:h-decays/lhc-8/atlas-cms-2016-comb"
+            total:
+              value_pct: 2300.0
+              provenance:
+                uid: ffcfe18e
+                ref: "hepdata:ins1468068/Table 10"
+                locator: "Table 10, quadrature sum of all errors (bin 6)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties: []
+  - id: "chan:h-decays/lhc-hl"
+    collider: "col:lhc-hl"
+    initial_state: "pp"
+    coverage: "partial"
+    last_reviewed: "2026-11-12"
+    headline:
+      observable: "obs:h-decays/lhc-hl/br-gamgam-proj"
+      region: "B(H → γγ)/B_SM, ATLAS + CMS combination, scenario S2, 3000 fb⁻¹ per experiment at 14 TeV"
+    measurements:
+      - id: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+        experiment: "combination"
+        dataset: "14 TeV, 3000 fb⁻¹ per experiment (HL-LHC projection), ATLAS + CMS combination of extrapolated Run-2 analyses"
+        ref: "inspire:1718163"
+        projected: true
+        projection_source:
+          ref: "inspire:1718163"
+          date: "2019-01-31"
+        assumptions: "Scenario S2 ('YR18 systematic uncertainties', reduced with respect to the Run-2 systematic uncertainties of scenario S1); branching ratios normalised to their SM expectations"
+    observables:
+      - id: "obs:h-decays/lhc-hl/br-gamgam-proj"
+        name: "B(H → γγ) normalised to the SM, projected precision (ATLAS + CMS, 3000 fb⁻¹ each)"
+        kind: "pseudo"
+        variable: "expected ±1σ relative uncertainty on B^γγ/B_SM^γγ, scenario S2"
+        results:
+          - measurement: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+            total:
+              value_pct: 2.6
+              provenance:
+                uid: ebac50ae
+                ref: "inspire:1718163"
+                locator: "Fig. 29 (right), numerical values, row B^γγ: Tot 2.6, Stat 1.0, Exp 1.5, Th 1.9 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical"
+                size:
+                  range:
+                    - 1.0
+                    - 1.0
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 1a13b321
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^γγ: Tot 2.6, Stat 1.0, Exp 1.5, Th 1.9 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Experimental systematic uncertainties (S2)"
+                size:
+                  range:
+                    - 1.5
+                    - 1.5
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: cb5e4b87
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^γγ: Tot 2.6, Stat 1.0, Exp 1.5, Th 1.9 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "Theory uncertainties ('Th' in Fig. 29), scenario S2"
+                size:
+                  range:
+                    - 1.9
+                    - 1.9
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: e1d0f314
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^γγ: Tot 2.6, Stat 1.0, Exp 1.5, Th 1.9 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → γγ) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "NLO"
+              ew: "NLO"
+              approximations:
+                - "loop-induced decay: HDECAY includes the full NLO QCD corrections and a grid for the NLO EW corrections (arXiv:1107.5909)"
+                - "THU of the partial width: below 1% (QCD), below 1% (EW), about 1% in total"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.9
+              provenance:
+                uid: b7d5b98f
+                ref: "arXiv:1610.07922"
+                locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, THU +1.73/−1.72%, PU(m_q) +0.97/−0.94%, PU(αs) +0.66/−0.61%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.90/−2.84%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 1.7
+                    - 1.7
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 9e6a37b3
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, THU column (+1.73/−1.72%); method Sec. I.3.1.a and Table 4, row H → γγ"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.94
+                    - 0.97
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 63b5c3ce
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, PU(m_q) column (+0.97/−0.94%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.61
+                    - 0.66
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 7c718c1d
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 176, row M_H = 125.09 GeV: BR(H → γγ) = 2.270e-3, PU(αs) column (+0.66/−0.61%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 26df51a2
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → γγ) and Table 176 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-hl/br-zz-proj"
+        name: "B(H → ZZ*) normalised to the SM, projected precision (ATLAS + CMS, 3000 fb⁻¹ each)"
+        kind: "pseudo"
+        variable: "expected ±1σ relative uncertainty on B^ZZ*/B_SM^ZZ*, scenario S2"
+        results:
+          - measurement: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+            total:
+              value_pct: 2.9
+              provenance:
+                uid: f1f86c08
+                ref: "inspire:1718163"
+                locator: "Fig. 29 (right), numerical values, row B^ZZ*: Tot 2.9, Stat 1.2, Exp 1.5, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical"
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 6517242b
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^ZZ*: Tot 2.9, Stat 1.2, Exp 1.5, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Experimental systematic uncertainties (S2)"
+                size:
+                  range:
+                    - 1.5
+                    - 1.5
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 229fb27c
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^ZZ*: Tot 2.9, Stat 1.2, Exp 1.5, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "Theory uncertainties ('Th' in Fig. 29), scenario S2"
+                size:
+                  range:
+                    - 2.2
+                    - 2.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 46f43d84
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^ZZ*: Tot 2.9, Stat 1.2, Exp 1.5, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → ZZ*) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "NLO"
+              ew: "NLO"
+              approximations:
+                - "Prophecy4f: complete NLO QCD and EW corrections to H → WW/ZZ → 4f with off-shell gauge bosons, all interferences (arXiv:1107.5909)"
+                - "THU of the partial width: below 0.5% (QCD), about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.2
+              provenance:
+                uid: efe2e916
+                ref: "arXiv:1610.07922"
+                locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, THU +0.99/−0.99%, PU(m_q) +0.98/−0.98%, PU(αs) +0.64/−0.62%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.16/−2.15%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 0.99
+                    - 0.99
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: afd46de0
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, THU column (+0.99/−0.99%); method Sec. I.3.1.a and Table 4, row H → WW/ZZ → 4f"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.98
+                    - 0.98
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: f335cfab
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, PU(m_q) column (+0.98/−0.98%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.62
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 51872f3a
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 178, row M_H = 125.09 GeV: BR(H → ZZ*) = 2.641e-2, PU(αs) column (+0.64/−0.62%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 9e469d22
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → WW/ZZ → 4f) and Table 178 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-hl/br-ww-proj"
+        name: "B(H → WW*) normalised to the SM, projected precision (ATLAS + CMS, 3000 fb⁻¹ each)"
+        kind: "pseudo"
+        variable: "expected ±1σ relative uncertainty on B^WW*/B_SM^WW*, scenario S2"
+        results:
+          - measurement: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+            total:
+              value_pct: 2.8
+              provenance:
+                uid: 7f1e26ff
+                ref: "inspire:1718163"
+                locator: "Fig. 29 (right), numerical values, row B^WW*: Tot 2.8, Stat 1.1, Exp 1.2, Th 2.3 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical"
+                size:
+                  range:
+                    - 1.1
+                    - 1.1
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: cdb4d936
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^WW*: Tot 2.8, Stat 1.1, Exp 1.2, Th 2.3 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Experimental systematic uncertainties (S2)"
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: '26671250'
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^WW*: Tot 2.8, Stat 1.1, Exp 1.2, Th 2.3 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "Theory uncertainties ('Th' in Fig. 29), scenario S2"
+                size:
+                  range:
+                    - 2.3
+                    - 2.3
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 70fb1371
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^WW*: Tot 2.8, Stat 1.1, Exp 1.2, Th 2.3 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → WW*) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "NLO"
+              ew: "NLO"
+              approximations:
+                - "Prophecy4f: complete NLO QCD and EW corrections to H → WW/ZZ → 4f with off-shell gauge bosons, all interferences (arXiv:1107.5909)"
+                - "THU of the partial width: below 0.5% (QCD), about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.2
+              provenance:
+                uid: 2574454c
+                ref: "arXiv:1610.07922"
+                locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, THU +0.99/−0.99%, PU(m_q) +0.98/−0.98%, PU(αs) +0.64/−0.62%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.16/−2.15%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 0.99
+                    - 0.99
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: c839c6a9
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, THU column (+0.99/−0.99%); method Sec. I.3.1.a and Table 4, row H → WW/ZZ → 4f"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.98
+                    - 0.98
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: a6e6e457
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, PU(m_q) column (+0.98/−0.98%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.62
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 5fcb37d2
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → WW*) = 2.152e-1, PU(αs) column (+0.64/−0.62%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 1ad4acc7
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → WW/ZZ → 4f) and Table 177 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-hl/br-tautau-proj"
+        name: "B(H → τ⁺τ⁻) normalised to the SM, projected precision (ATLAS + CMS, 3000 fb⁻¹ each)"
+        kind: "pseudo"
+        variable: "expected ±1σ relative uncertainty on B^τ⁺τ⁻/B_SM^τ⁺τ⁻, scenario S2"
+        results:
+          - measurement: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+            total:
+              value_pct: 2.9
+              provenance:
+                uid: 3f29481c
+                ref: "inspire:1718163"
+                locator: "Fig. 29 (right), numerical values, row B^τ⁺τ⁻: Tot 2.9, Stat 1.4, Exp 1.3, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical"
+                size:
+                  range:
+                    - 1.4
+                    - 1.4
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 1cb9a5c8
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^τ⁺τ⁻: Tot 2.9, Stat 1.4, Exp 1.3, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Experimental systematic uncertainties (S2)"
+                size:
+                  range:
+                    - 1.3
+                    - 1.3
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: fca762c8
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^τ⁺τ⁻: Tot 2.9, Stat 1.4, Exp 1.3, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "Theory uncertainties ('Th' in Fig. 29), scenario S2"
+                size:
+                  range:
+                    - 2.2
+                    - 2.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: d1d648b7
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^τ⁺τ⁻: Tot 2.9, Stat 1.4, Exp 1.3, Th 2.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → τ⁺τ⁻) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              ew: "NLO"
+              approximations:
+                - "leptonic decay: no QCD correction to the partial width at this order; complete NLO EW corrections in HDECAY (YR4)"
+                - "THU of the partial width: about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.3
+              provenance:
+                uid: 286b66d4
+                ref: "arXiv:1610.07922"
+                locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, THU +1.17/−1.16%, PU(m_q) +0.98/−0.98%, PU(αs) +0.62/−0.6%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.33/−2.31%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: dcfcd174
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, THU column (+1.17/−1.16%); method Sec. I.3.1.a and Table 4, row H → τ⁺τ⁻/μ⁺μ⁻"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.98
+                    - 0.98
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 86b6aa76
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, PU(m_q) column (+0.98/−0.98%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.6
+                    - 0.62
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 3f54fe39
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → τ⁺τ⁻) = 6.256e-2, PU(αs) column (+0.62/−0.6%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: abf056e5
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → τ⁺τ⁻/μ⁺μ⁻) and Table 174 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-hl/br-bb-proj"
+        name: "B(H → bb̄) normalised to the SM, projected precision (ATLAS + CMS, 3000 fb⁻¹ each)"
+        kind: "pseudo"
+        variable: "expected ±1σ relative uncertainty on B^bb̄/B_SM^bb̄, scenario S2"
+        results:
+          - measurement: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+            total:
+              value_pct: 4.4
+              provenance:
+                uid: fc50766e
+                ref: "inspire:1718163"
+                locator: "Fig. 29 (right), numerical values, row B^bb̄: Tot 4.4, Stat 1.5, Exp 1.3, Th 4.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical"
+                size:
+                  range:
+                    - 1.5
+                    - 1.5
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: c2eb15f2
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^bb̄: Tot 4.4, Stat 1.5, Exp 1.3, Th 4.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Experimental systematic uncertainties (S2)"
+                size:
+                  range:
+                    - 1.3
+                    - 1.3
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 33c3c7d9
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^bb̄: Tot 4.4, Stat 1.5, Exp 1.3, Th 4.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "Theory uncertainties ('Th' in Fig. 29), scenario S2"
+                size:
+                  range:
+                    - 4.0
+                    - 4.0
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: c6d1e00e
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^bb̄: Tot 4.4, Stat 1.5, Exp 1.3, Th 4.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → bb̄) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "N4LO"
+              ew: "NLO"
+              approximations:
+                - "HDECAY: complete massless QCD corrections up to and including N4LO for H → b b̄ (arXiv:1107.5909); complete NLO EW corrections for fermionic decays implemented since YR4"
+                - "THU of the partial width: about 0.2% (QCD), about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 1.7
+              provenance:
+                uid: c6941db2
+                ref: "arXiv:1610.07922"
+                locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, THU +0.65/−0.65%, PU(m_q) +0.72/−0.74%, PU(αs) +0.77/−0.79%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +1.70/−1.73%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 0.65
+                    - 0.65
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 4fdb1c6f
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, THU column (+0.65/−0.65%); method Sec. I.3.1.a and Table 4, row H → bb/cc"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.72
+                    - 0.74
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 2f2ead7f
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, PU(m_q) column (+0.72/−0.74%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.77
+                    - 0.79
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 30a4993b
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 174, row M_H = 125.09 GeV: BR(H → bb̄) = 5.809e-1, PU(αs) column (+0.77/−0.79%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: f44b5878
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → bb/cc) and Table 174 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-hl/br-mumu-proj"
+        name: "B(H → μ⁺μ⁻) normalised to the SM, projected precision (ATLAS + CMS, 3000 fb⁻¹ each)"
+        kind: "pseudo"
+        variable: "expected ±1σ relative uncertainty on B^μ⁺μ⁻/B_SM^μ⁺μ⁻, scenario S2"
+        results:
+          - measurement: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+            total:
+              value_pct: 8.2
+              provenance:
+                uid: 76aafc9d
+                ref: "inspire:1718163"
+                locator: "Fig. 29 (right), numerical values, row B^μ⁺μ⁻: Tot 8.2, Stat 7.4, Exp 1.5, Th 3.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical"
+                size:
+                  range:
+                    - 7.4
+                    - 7.4
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: fc073b84
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^μ⁺μ⁻: Tot 8.2, Stat 7.4, Exp 1.5, Th 3.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Experimental systematic uncertainties (S2)"
+                size:
+                  range:
+                    - 1.5
+                    - 1.5
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 7a305600
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^μ⁺μ⁻: Tot 8.2, Stat 7.4, Exp 1.5, Th 3.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "Theory uncertainties ('Th' in Fig. 29), scenario S2"
+                size:
+                  range:
+                    - 3.0
+                    - 3.0
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: '34e28820'
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^μ⁺μ⁻: Tot 8.2, Stat 7.4, Exp 1.5, Th 3.0 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → μ⁺μ⁻) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              ew: "NLO"
+              approximations:
+                - "leptonic decay: no QCD correction to the partial width at this order; complete NLO EW corrections in HDECAY (YR4)"
+                - "THU of the partial width: about 0.5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 2.4
+              provenance:
+                uid: 1256e4d1
+                ref: "arXiv:1610.07922"
+                locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, THU +1.23/−1.23%, PU(m_q) +0.97/−0.99%, PU(αs) +0.6/−0.64%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +2.37/−2.41%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: c5b48caf
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, THU column (+1.23/−1.23%); method Sec. I.3.1.a and Table 4, row H → τ⁺τ⁻/μ⁺μ⁻"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.97
+                    - 0.99
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 77dace16
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, PU(m_q) column (+0.97/−0.99%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.6
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: 7923a04c
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 175, row M_H = 125.09 GeV: BR(H → μ⁺μ⁻) = 2.171e-4, PU(αs) column (+0.6/−0.64%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: 0829b25d
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → τ⁺τ⁻/μ⁺μ⁻) and Table 175 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+      - id: "obs:h-decays/lhc-hl/br-zgam-proj"
+        name: "B(H → Zγ) normalised to the SM, projected precision (ATLAS + CMS, 3000 fb⁻¹ each)"
+        kind: "pseudo"
+        variable: "expected ±1σ relative uncertainty on B^Zγ/B_SM^Zγ, scenario S2"
+        results:
+          - measurement: "meas:h-decays/lhc-hl/atlas-cms-2019-proj"
+            total:
+              value_pct: 19.1
+              provenance:
+                uid: 8086898b
+                ref: "inspire:1718163"
+                locator: "Fig. 29 (right), numerical values, row B^Zγ: Tot 19.1, Stat 14.3, Exp 3.2, Th 12.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "Statistical"
+                size:
+                  range:
+                    - 14.0
+                    - 14.0
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: c0509d2a
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^Zγ: Tot 19.1, Stat 14.3, Exp 3.2, Th 12.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "syst_combined"
+                specific: "Experimental systematic uncertainties (S2)"
+                size:
+                  range:
+                    - 3.2
+                    - 3.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 1c0613b5
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^Zγ: Tot 19.1, Stat 14.3, Exp 3.2, Th 12.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "Theory uncertainties ('Th' in Fig. 29), scenario S2"
+                size:
+                  range:
+                    - 12.0
+                    - 12.0
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 28f2db68
+                  ref: "inspire:1718163"
+                  locator: "Fig. 29 (right), numerical values, row B^Zγ: Tot 19.1, Stat 14.3, Exp 3.2, Th 12.2 (%), scenario S2, ATLAS + CMS combination, 3000 fb⁻¹ per experiment; text below Fig. 28 (2–4% except B^μμ at 8% and B^Zγ at 19%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+        predictions:
+          - label: "LHC Higgs WG (YR4): BR(H → Zγ) from HDECAY and Prophecy4f, m_H = 125.09 GeV"
+            accuracy:
+              qcd: "LO"
+              approximations:
+                - "loop-induced decay included in HDECAY at LO (W, top, bottom and τ loops); QCD corrections neglected, EW corrections not included (arXiv:1107.5909)"
+                - "THU of the partial width: below 1% (QCD), about 5% (EW)"
+            codes:
+              - "HDECAY"
+              - "Prophecy4f"
+            total:
+              value_pct: 6.9
+              provenance:
+                uid: c3d394ff
+                ref: "arXiv:1610.07922"
+                locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, THU +5.71/−5.71%, PU(m_q) +0.91/−1.0%, PU(αs) +0.58/−0.64%; total derived here following Sec. I.3.1.a (PUs in quadrature, added linearly to the THU): +6.79/−6.90%, larger side"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "THU: missing higher orders in all partial widths, propagated to the BR"
+                method: "estimated relative uncertainty of each partial width (YR4 Table 4) varied one at a time (H → WW/ZZ → 4f fully correlated); resulting BR shifts added linearly"
+                size:
+                  range:
+                    - 5.7
+                    - 5.7
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 592535d2
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, THU column (+5.71/−5.71%); method Sec. I.3.1.a and Table 4, row H → Zγ"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "parametric"
+                specific: "PU(m_q): m_c(3 GeV) = 0.986 ± 0.026 GeV, m_b(m_b) = 4.18 ± 0.03 GeV, m_t = 172.5 ± 1 GeV, added in quadrature"
+                size:
+                  range:
+                    - 0.91
+                    - 1.0
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: ce52b3ee
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, PU(m_q) column (+0.91/−1.0%); inputs Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "alphas"
+                specific: "PU(αs): αs(M_Z) = 0.118 ± 0.0015"
+                size:
+                  range:
+                    - 0.58
+                    - 0.64
+                  unit: "%"
+                  asymmetric: true
+                provenance:
+                  uid: f640cce0
+                  ref: "arXiv:1610.07922"
+                  locator: "Table 177, row M_H = 125.09 GeV: BR(H → Zγ) = 1.541e-3, PU(αs) column (+0.58/−0.64%); input Table 5"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1107.5909"
+              - "inspire:442662"
+              - "inspire:713692"
+              - "inspire:732075"
+            provenance:
+              uid: f2f77d3e
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.3.1.a (all partial widths from HDECAY and Prophecy4f; THU Table 4, row H → Zγ) and Table 177 (also tabulated on the LHC Higgs WG twiki page CERNYellowReportPageBR); perturbative content of the codes from arXiv:1107.5909, Sec. II and the paragraph on the partial-width uncertainties before Table III"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true

@@ -1748,13 +1748,6 @@
    "title": "Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{−1}$ of data collected at $ \\sqrt{s}=13.6 $ TeV with the ATLAS detector"
   },
   {
-   "arxiv": "2202.00487",
-   "channels": [],
-   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
-   "recid": 2023464,
-   "title": "Measurements of the Higgs boson inclusive and differential fiducial cross-sections in the diphoton decay channel with pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
-  },
-  {
    "arxiv": "2503.19420",
    "channels": [],
    "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
