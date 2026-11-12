@@ -269,6 +269,7 @@ dl.groups dd { margin: .15rem 0 0; }
   .vf { display: inline-block; min-width: 24px; min-height: 24px; line-height: 24px; text-align: center; }
   .table-scroll { overflow-x: auto; }
   .proc-intro { flex-direction: column; }
+  .proc-intro > p { flex: none; }
   .proc-intro .feyn, .proc-intro figcaption { max-width: 100%; flex-basis: auto; }
   .atlas { grid-template-columns: 1fr; }
 }
