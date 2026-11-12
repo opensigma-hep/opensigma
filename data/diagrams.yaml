@@ -1,0 +1,388 @@
+# One representative leading-order Feynman diagram per process, keyed by process id. Format: docs/diagrams.md.
+# Grid: x 0..4 (time runs left to right), y 0..3 (downwards). Edges are written in time order; `antifermion`
+# draws the arrow against it. A process without an entry simply shows no diagram.
+
+# ---- Vector bosons ----
+proc:dy-nc:
+  title: "q q̄ → Z/γ* → ℓ⁺ℓ⁻"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: i2, to: a, type: antifermion, label: "q̄"}
+    - {from: a, to: b, type: boson, label: "Z/γ*"}
+    - {from: b, to: o1, type: fermion, label: "ℓ⁻"}
+    - {from: b, to: o2, type: antifermion, label: "ℓ⁺"}
+
+proc:dy-cc:
+  title: "q q̄′ → W⁺ → ℓ⁺ν"
+  note: "Shown for W⁺ (u d̄); W⁻ is the charge conjugate."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: i2, to: a, type: antifermion, label: "d̄"}
+    - {from: a, to: b, type: boson, label: "W⁺"}
+    - {from: b, to: o1, type: fermion, label: "ν"}
+    - {from: b, to: o2, type: antifermion, label: "ℓ⁺"}
+
+proc:w-jet:
+  title: "q q̄′ → W g"
+  note: "One of the O(αs) channels; q g → W q′ is its crossing."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: a, to: b, type: fermion, label: "q"}
+    - {from: i2, to: b, type: antifermion, label: "q̄′"}
+    - {from: a, to: o1, type: gluon, label: "g"}
+    - {from: b, to: o2, type: boson, label: "W"}
+
+proc:z-jet:
+  title: "q g → Z/γ* q"
+  note: "One of the O(αs) channels; q q̄ → Z g is its crossing."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: i2, to: a, type: gluon, label: "g"}
+    - {from: a, to: b, type: fermion, label: "q"}
+    - {from: b, to: o1, type: boson, label: "Z/γ*"}
+    - {from: b, to: o2, type: fermion, label: "q"}
+
+proc:ww:
+  title: "q q̄ → W⁺W⁻"
+  note: "t-channel quark exchange; the s-channel Z/γ* diagram with the triple gauge coupling is not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: a, to: b, type: fermion, label: "d"}
+    - {from: i2, to: b, type: antifermion, label: "ū"}
+    - {from: a, to: o1, type: boson, label: "W⁺"}
+    - {from: b, to: o2, type: boson, label: "W⁻"}
+
+proc:wz:
+  title: "q q̄′ → W* → W Z"
+  note: "s-channel diagram with the WWZ coupling; t- and u-channel quark exchange are not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: i2, to: a, type: antifermion, label: "q̄′"}
+    - {from: a, to: b, type: boson, label: "W*"}
+    - {from: b, to: o1, type: boson, label: "W"}
+    - {from: b, to: o2, type: boson, label: "Z"}
+
+proc:zz:
+  title: "q q̄ → Z Z"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: a, to: b, type: fermion, label: "q"}
+    - {from: i2, to: b, type: antifermion, label: "q̄"}
+    - {from: a, to: o1, type: boson, label: "Z"}
+    - {from: b, to: o2, type: boson, label: "Z"}
+
+proc:www:
+  title: "q q̄′ → W⁺* → W⁺W⁻W⁺"
+  note: "Quartic-coupling diagram; W radiation off the quark line and W* → W Z/γ* → WWW are not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.6, 1.5], o1: [4, 0.4], o2: [4, 1.5], o3: [4, 2.6]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: i2, to: a, type: antifermion, label: "d̄"}
+    - {from: a, to: b, type: boson, label: "W⁺*"}
+    - {from: b, to: o1, type: boson, label: "W⁺"}
+    - {from: b, to: o2, type: boson, label: "W⁻"}
+    - {from: b, to: o3, type: boson, label: "W⁺"}
+
+proc:vbs-ssww:
+  title: "u u → d d W⁺W⁺ (W⁺W⁺ scattering)"
+  note: "Quartic-coupling diagram; Z/γ and Higgs exchange between the W bosons are not shown."
+  points: {i1: [0, 0.3], i2: [0, 2.7], a: [1.5, 0.5], b: [1.5, 2.5], c: [2.4, 1.5], o1: [4, 0.2], o2: [4, 2.8], w1: [4, 1.1], w2: [4, 1.9]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: a, to: o1, type: fermion, label: "d"}
+    - {from: i2, to: b, type: fermion, label: "u"}
+    - {from: b, to: o2, type: fermion, label: "d"}
+    - {from: a, to: c, type: boson, label: "W⁺"}
+    - {from: b, to: c, type: boson, label: "W⁺", flip: true}
+    - {from: c, to: w1, type: boson, label: "W⁺"}
+    - {from: c, to: w2, type: boson, label: "W⁺"}
+
+# ---- Top quark ----
+proc:ttbar:
+  title: "g g → g* → t t̄"
+  note: "Gluon fusion (dominant at the LHC); q q̄ → t t̄ has the same s-channel gluon."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: a, type: gluon, label: "g"}
+    - {from: a, to: b, type: gluon, label: "g"}
+    - {from: b, to: o1, type: fermion, label: "t"}
+    - {from: b, to: o2, type: antifermion, label: "t̄"}
+
+proc:t-channel-single-top:
+  title: "q b → q′ t (t-channel W)"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: a, to: o1, type: fermion, label: "d"}
+    - {from: i2, to: b, type: fermion, label: "b"}
+    - {from: b, to: o2, type: fermion, label: "t"}
+    - {from: a, to: b, type: boson, label: "W"}
+
+proc:s-channel-single-top:
+  title: "q q̄′ → W⁺* → t b̄"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: i2, to: a, type: antifermion, label: "d̄"}
+    - {from: a, to: b, type: boson, label: "W⁺*"}
+    - {from: b, to: o1, type: fermion, label: "t"}
+    - {from: b, to: o2, type: antifermion, label: "b̄"}
+
+proc:tw:
+  title: "g b → t W⁻"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: a, type: fermion, label: "b"}
+    - {from: a, to: b, type: fermion, label: "b"}
+    - {from: b, to: o1, type: boson, label: "W⁻"}
+    - {from: b, to: o2, type: fermion, label: "t"}
+
+proc:ttw:
+  title: "q q̄′ → t t̄ W⁺"
+  note: "The W is radiated off the initial quark line; shown for W⁺ (u d̄)."
+  points: {i1: [0, 0.3], i2: [0, 2.7], a: [0.9, 0.9], b: [1.8, 1.5], c: [3, 1.5], ow: [4, 0.2], o1: [4, 0.9], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "u"}
+    - {from: a, to: b, type: fermion, label: "d", flip: true}
+    - {from: i2, to: b, type: antifermion, label: "d̄"}
+    - {from: a, to: ow, type: boson, label: "W⁺"}
+    - {from: b, to: c, type: gluon, label: "g"}
+    - {from: c, to: o1, type: fermion, label: "t"}
+    - {from: c, to: o2, type: antifermion, label: "t̄"}
+
+proc:ttz:
+  title: "g g → t t̄ Z"
+  note: "The Z is radiated off a top quark; q q̄ initial states also contribute."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1, 1.5], b: [2, 1.5], c: [3, 0.9], o1: [4, 0.3], oz: [4, 1.5], o2: [4, 2.7]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: a, type: gluon, label: "g"}
+    - {from: a, to: b, type: gluon}
+    - {from: b, to: c, type: fermion}
+    - {from: c, to: o1, type: fermion, label: "t"}
+    - {from: c, to: oz, type: boson, label: "Z"}
+    - {from: b, to: o2, type: antifermion, label: "t̄"}
+
+# ---- Higgs ----
+proc:ggh:
+  title: "g g → H (top-quark loop)"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.5, 0.75], b: [1.5, 2.25], c: [2.8, 1.5], o: [4, 1.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: b, type: gluon, label: "g"}
+    - {from: a, to: c, type: fermion}
+    - {from: c, to: b, type: fermion}
+    - {from: b, to: a, type: fermion, label: "t"}
+    - {from: c, to: o, type: scalar, label: "H"}
+
+proc:hh:
+  title: "g g → H H (top-quark box)"
+  note: "Box diagram; the triangle with the trilinear Higgs self-coupling (g g → H* → H H) is not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.4, 0.75], b: [1.4, 2.25], c: [2.7, 0.75], d: [2.7, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: b, type: gluon, label: "g"}
+    - {from: a, to: c, type: fermion, label: "t"}
+    - {from: c, to: d, type: fermion}
+    - {from: d, to: b, type: fermion}
+    - {from: b, to: a, type: fermion}
+    - {from: c, to: o1, type: scalar, label: "H"}
+    - {from: d, to: o2, type: scalar, label: "H"}
+
+proc:vbf-h:
+  title: "q q → q′ q′ H (W/Z fusion)"
+  note: "q′ = q for Z fusion."
+  points: {i1: [0, 0.4], i2: [0, 2.6], a: [2, 0.6], b: [2, 2.4], c: [2, 1.5], o1: [4, 0.3], o2: [4, 2.7], oh: [4, 1.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: a, to: o1, type: fermion, label: "q′"}
+    - {from: i2, to: b, type: fermion, label: "q"}
+    - {from: b, to: o2, type: fermion, label: "q′"}
+    - {from: a, to: c, type: boson, label: "W/Z", flip: true}
+    - {from: b, to: c, type: boson, label: "W/Z", flip: true}
+    - {from: c, to: oh, type: scalar, label: "H"}
+
+proc:vh:
+  title: "q q̄ → V* → V H (V = W, Z)"
+  note: "q q̄′ for V = W. The loop-induced g g → Z H is not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: i2, to: a, type: antifermion, label: "q̄"}
+    - {from: a, to: b, type: boson, label: "V*"}
+    - {from: b, to: o1, type: boson, label: "V"}
+    - {from: b, to: o2, type: scalar, label: "H"}
+
+proc:tth:
+  title: "g g → t t̄ H"
+  note: "The Higgs is radiated off a top quark; q q̄ initial states also contribute."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1, 1.5], b: [2, 1.5], c: [3, 0.9], o1: [4, 0.3], oh: [4, 1.5], o2: [4, 2.7]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: a, type: gluon, label: "g"}
+    - {from: a, to: b, type: gluon}
+    - {from: b, to: c, type: fermion}
+    - {from: c, to: o1, type: fermion, label: "t"}
+    - {from: c, to: oh, type: scalar, label: "H"}
+    - {from: b, to: o2, type: antifermion, label: "t̄"}
+
+# ---- Jets ----
+proc:dijets:
+  title: "q q′ → q q′ (t-channel gluon)"
+  note: "One of many 2 → 2 QCD channels (q g → q g, g g → g g, ...)."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: a, to: o1, type: fermion, label: "q"}
+    - {from: i2, to: b, type: fermion, label: "q′"}
+    - {from: b, to: o2, type: fermion, label: "q′"}
+    - {from: a, to: b, type: gluon, label: "g"}
+
+proc:inclusive-jets:
+  title: "g g → g g (t-channel gluon)"
+  note: "One of many 2 → 2 QCD channels (q g → q g, q q′ → q q′, ...)."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: a, to: o1, type: gluon, label: "g"}
+    - {from: i2, to: b, type: gluon, label: "g"}
+    - {from: b, to: o2, type: gluon, label: "g"}
+    - {from: a, to: b, type: gluon}
+
+# ---- e⁺e⁻ ----
+proc:ee-event-shapes:
+  title: "e⁺e⁻ → γ*/Z → q q̄ g"
+  note: "Event shapes are non-trivial from three partons on: the gluon is radiated off the quark or the antiquark."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1, 1.5], b: [2.2, 1.5], c: [3.1, 0.9], o1: [4, 0.3], og: [4, 1.5], o2: [4, 2.7]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "e⁻"}
+    - {from: i2, to: a, type: antifermion, label: "e⁺"}
+    - {from: a, to: b, type: boson, label: "γ*/Z"}
+    - {from: b, to: c, type: fermion}
+    - {from: c, to: o1, type: fermion, label: "q"}
+    - {from: c, to: og, type: gluon, label: "g"}
+    - {from: b, to: o2, type: antifermion, label: "q̄"}
+
+proc:ee-jet-rates:
+  title: "e⁺e⁻ → γ*/Z → q q̄ g"
+  note: "Three-jet rate and y₂₃ start at this order; the two-jet rate starts at e⁺e⁻ → q q̄."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1, 1.5], b: [2.2, 1.5], c: [3.1, 0.9], o1: [4, 0.3], og: [4, 1.5], o2: [4, 2.7]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "e⁻"}
+    - {from: i2, to: a, type: antifermion, label: "e⁺"}
+    - {from: a, to: b, type: boson, label: "γ*/Z"}
+    - {from: b, to: c, type: fermion}
+    - {from: c, to: o1, type: fermion, label: "q"}
+    - {from: c, to: og, type: gluon, label: "g"}
+    - {from: b, to: o2, type: antifermion, label: "q̄"}
+
+# ---- EW precision ----
+proc:z-pole:
+  title: "e⁺e⁻ → Z → f f̄"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "e⁻"}
+    - {from: i2, to: a, type: antifermion, label: "e⁺"}
+    - {from: a, to: b, type: boson, label: "Z"}
+    - {from: b, to: o1, type: fermion, label: "f"}
+    - {from: b, to: o2, type: antifermion, label: "f̄"}
+
+proc:ee-ww:
+  title: "e⁺e⁻ → W⁺W⁻"
+  note: "t-channel neutrino exchange; the s-channel γ/Z diagrams with the triple gauge couplings are not shown."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "e⁻"}
+    - {from: a, to: b, type: fermion, label: "νₑ"}
+    - {from: i2, to: b, type: antifermion, label: "e⁺"}
+    - {from: a, to: o1, type: boson, label: "W⁻"}
+    - {from: b, to: o2, type: boson, label: "W⁺"}
+
+# ---- Photons ----
+proc:diphoton:
+  title: "q q̄ → γ γ"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: a, to: b, type: fermion, label: "q"}
+    - {from: i2, to: b, type: antifermion, label: "q̄"}
+    - {from: a, to: o1, type: photon, label: "γ"}
+    - {from: b, to: o2, type: photon, label: "γ"}
+
+proc:isolated-photon:
+  title: "q g → q γ (QCD Compton)"
+  note: "q q̄ → g γ is its crossing."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [1.2, 1.5], b: [2.8, 1.5], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "q"}
+    - {from: i2, to: a, type: gluon, label: "g"}
+    - {from: a, to: b, type: fermion, label: "q"}
+    - {from: b, to: o1, type: photon, label: "γ"}
+    - {from: b, to: o2, type: fermion, label: "q"}
+
+# ---- Heavy flavour ----
+proc:b-hadron-production:
+  title: "g g → b b̄"
+  note: "t-channel quark exchange; the b quarks then hadronise. q q̄ → b b̄ also contributes."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: b, type: gluon, label: "g"}
+    - {from: b, to: a, type: fermion, label: "b"}
+    - {from: a, to: o1, type: fermion, label: "b"}
+    - {from: b, to: o2, type: antifermion, label: "b̄"}
+
+proc:charm-production:
+  title: "g g → c c̄"
+  note: "t-channel quark exchange; the charm quarks then hadronise. q q̄ → c c̄ also contributes."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: gluon, label: "g"}
+    - {from: i2, to: b, type: gluon, label: "g"}
+    - {from: b, to: a, type: fermion, label: "c"}
+    - {from: a, to: o1, type: fermion, label: "c"}
+    - {from: b, to: o2, type: antifermion, label: "c̄"}
+
+# ---- DIS ----
+proc:dis-nc:
+  title: "e q → e q (γ/Z exchange)"
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "e⁻"}
+    - {from: a, to: o1, type: fermion, label: "e⁻"}
+    - {from: i2, to: b, type: fermion, label: "q"}
+    - {from: b, to: o2, type: fermion, label: "q"}
+    - {from: a, to: b, type: boson, label: "γ/Z"}
+
+proc:dis-cc:
+  title: "e⁻ q → νₑ q′ (W exchange)"
+  note: "Shown for e⁻ u → νₑ d; e⁺ scattering is the charge conjugate."
+  points: {i1: [0, 0.5], i2: [0, 2.5], a: [2, 0.75], b: [2, 2.25], o1: [4, 0.5], o2: [4, 2.5]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "e⁻"}
+    - {from: a, to: o1, type: fermion, label: "νₑ"}
+    - {from: i2, to: b, type: fermion, label: "u"}
+    - {from: b, to: o2, type: fermion, label: "d"}
+    - {from: a, to: b, type: boson, label: "W"}
+
+proc:dis-jets:
+  title: "e g → e q q̄ (boson–gluon fusion)"
+  note: "One of the two O(αs) channels; the other is QCD Compton scattering, γ* q → q g."
+  points: {i1: [0, 0.3], a: [1.5, 0.5], o1: [4, 0.3], b: [2.5, 1.3], c: [2.5, 2.3], i2: [0, 2.7], o2: [4, 1.1], o3: [4, 2.7]}
+  edges:
+    - {from: i1, to: a, type: fermion, label: "e⁻"}
+    - {from: a, to: o1, type: fermion, label: "e⁻"}
+    - {from: a, to: b, type: photon, label: "γ*"}
+    - {from: i2, to: c, type: gluon, label: "g"}
+    - {from: c, to: b, type: fermion}
+    - {from: b, to: o2, type: fermion, label: "q"}
+    - {from: c, to: o3, type: antifermion, label: "q̄"}

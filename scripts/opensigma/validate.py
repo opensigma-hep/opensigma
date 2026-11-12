@@ -38,6 +38,7 @@ def validate_schema(repo: dict, schema_dir: Path) -> list[Issue]:
 
     check("families", repo["families"], "families.yaml")
     check("colliders", repo["colliders"], "colliders.yaml")
+    check("diagrams", repo.get("diagrams", {}), "diagrams.yaml")
     for key, kind in [("processes", "process"), ("amplitudes", "amplitude"), ("parameters", "parameter")]:
         for obj in repo[key]:
             check(kind, obj, obj["_file"])
@@ -121,6 +122,16 @@ def validate_integrity(repo: dict) -> list[Issue]:
             folder, fam = file.split("/")[1], root["family"]
             if fam != f"fam:{folder}":
                 err(file, ("family",), f"{file}: folder {folder!r} does not match family {fam!r}")
+    procs = {p["id"] for p in repo["processes"]}
+    for pid, d in repo.get("diagrams", {}).items():  # a process without a diagram is fine
+        if pid not in procs:
+            err("diagrams.yaml", (pid,), f"diagrams.yaml: diagram for unknown process {pid!r}")
+        for i, e in enumerate(d["edges"]):
+            for end in ("from", "to"):
+                if e[end] not in d["points"]:
+                    err("diagrams.yaml", (pid, "edges", i, end), f"diagrams.yaml: {pid}: edge {end} {e[end]!r} is not a declared point")
+            if e["from"] == e["to"]:
+                err("diagrams.yaml", (pid, "edges", i), f"diagrams.yaml: {pid}: edge from a point to itself")
     return issues
 
 

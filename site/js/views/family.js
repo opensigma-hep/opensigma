@@ -1,12 +1,13 @@
 import { toHash } from '../router.js';
 import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, passes } from '../matrix.js';
 import { scatterPoints, drawScatter } from '../scatter.js';
+import { diagramSvg } from '../feynman.js';
 
 // View state lives in the module (no persistence): reset only when the family changes.
 let S = null;
 const fresh = (id) => ({ id, proj: false, colliders: null, minOrder: 'any', minStatus: 'any', hasTarget: false, scatter: false });
 
-const CW = 132, CH = 52, LW = 220, HH = 44;
+const CW = 132, CH = 52, LW = 220, HH = 44, TW = 60; // TW: room for the diagram thumbnail in the row head
 
 // Label column wide enough for the longest row label (canvas: the host is not in the DOM yet when first drawn).
 function labelWidth(texts) {
@@ -47,7 +48,7 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   const cells = data.derived.cells, byKey = new Map();
   for (const [id, c] of Object.entries(cells)) byKey.set(c.process + '|' + c.collider, [id, c]);
   const LW = labelWidth(rows.flatMap((p) => [['600 14px system-ui, sans-serif', procName[p]],
-    ...(procFam[p] !== fam.id ? [['11px system-ui, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])]));
+    ...(procFam[p] !== fam.id ? [['11px system-ui, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])])) + TW;
   const W = LW + cols.length * CW, H = HH + rows.length * CH;
   // Scales down to fit the page (CSS width: 100%), never up; below min-width the host scrolls.
   const svg = d3.select(host).append('svg').attr('class', 'matrix').attr('viewBox', `0 0 ${W} ${H}`)
@@ -57,8 +58,10 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   svg.append('g').selectAll('a').data(cols).join('a').attr('class', 'colhead').attr('href', (c) => toHash(c.id)).append('text')
     .attr('x', (_, i) => LW + i * CW + CW / 2).attr('y', HH - 14).attr('text-anchor', 'middle').text((c) => c.name);
   const rowG = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (_, i) => `translate(0,${HH + i * CH})`);
-  rowG.append('a').attr('class', 'rowhead').attr('href', (p) => toHash(p)).append('text').attr('x', 8).attr('y', CH / 2 - 2).text((p) => procName[p]);
-  rowG.filter((p) => procFam[p] !== fam.id).append('text').attr('class', 'muted').attr('x', 8).attr('y', CH / 2 + 13)
+  const head = rowG.append('a').attr('class', 'rowhead').attr('href', (p) => toHash(p));
+  head.append('g').attr('class', 'thumb').html((p) => diagramSvg(data, p, { thumb: true, x: 4, y: 5, width: TW - 6, height: CH - 10 }));
+  head.append('text').attr('x', 8 + TW).attr('y', CH / 2 - 2).text((p) => procName[p]);
+  rowG.filter((p) => procFam[p] !== fam.id).append('text').attr('class', 'muted').attr('x', 8 + TW).attr('y', CH / 2 + 13)
     .text((p) => `(also in ${famName[procFam[p]]})`);
   for (const [r, proc] of rows.entries()) {
     for (const [c, col] of cols.entries()) {

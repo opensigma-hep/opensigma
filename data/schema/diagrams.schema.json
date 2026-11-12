@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "diagrams.schema.json",
+  "type": "object",
+  "propertyNames": {"pattern": "^proc:"},
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["title", "points", "edges"],
+    "properties": {
+      "title": {"type": "string", "minLength": 1},
+      "note": {"type": "string", "minLength": 1},
+      "points": {
+        "type": "object",
+        "minProperties": 2,
+        "propertyNames": {"pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "additionalProperties": {
+          "type": "array",
+          "prefixItems": [
+            {"type": "number", "minimum": 0, "maximum": 4},
+            {"type": "number", "minimum": 0, "maximum": 3}
+          ],
+          "items": false,
+          "minItems": 2
+        }
+      },
+      "edges": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["from", "to", "type"],
+          "properties": {
+            "from": {"type": "string"},
+            "to": {"type": "string"},
+            "type": {"enum": ["fermion", "antifermion", "gluon", "photon", "boson", "scalar", "ghost"]},
+            "label": {"type": "string", "minLength": 1},
+            "flip": {"type": "boolean"}
+          }
+        }
+      }
+    }
+  }
+}

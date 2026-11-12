@@ -33,6 +33,10 @@ def _read_dir(root: Path, pattern: str) -> list[dict]:
     return out
 
 
+def _read_optional(path: Path, root: Path) -> dict:
+    return _read(path, root, dict) if path.exists() else {}
+
+
 def _read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
@@ -45,6 +49,7 @@ def load_repo(root: Path) -> dict:
         "processes": _read_dir(root, "processes/*/*.yaml"),
         "amplitudes": _read_dir(root, "amplitudes/*.yaml"),
         "parameters": _read_dir(root, "parameters/*.yaml"),
+        "diagrams": _read_optional(root / "diagrams.yaml", root),
         "refs": _read_json(root / "refs.json"),
         "candidates": _read_json(root / "candidates.json"),
     }

@@ -220,3 +220,21 @@ svg.timeline .tl-NNLO { stroke-dasharray: 7 4; }
 .tl-key { display: inline-block; width: 1.6rem; border-top: 3px solid var(--c); vertical-align: middle; }
 .tl-key.tl-NLO { border-top-style: dotted; }
 .tl-key.tl-NNLO { border-top-style: dashed; }
+
+/* Feynman diagrams (site/js/feynman.js): process page, family-matrix thumbnails, process atlas */
+.feyn { color: var(--fg); margin: 0; }
+.feyn svg { display: block; width: 100%; max-width: 332px; height: auto; }
+.proc-intro { display: flex; flex-wrap: wrap; gap: .5rem 2rem; align-items: flex-start; }
+.proc-intro > p { flex: 1 1 24rem; margin-top: 0; }
+.proc-intro .feyn { flex: 0 1 332px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .25rem .5rem .5rem; }
+.proc-intro figcaption { font-size: .875rem; max-width: 332px; }
+svg.matrix .thumb { color: var(--fg); }
+.atlas { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+.atlas-card { display: flex; flex-direction: column; gap: .25rem; height: 100%; padding: .5rem .75rem .75rem; text-decoration: none;
+  color: var(--fg); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+.atlas-card:hover { border-color: var(--accent); }
+.atlas-card .feyn svg { margin: 0 auto; }
+.atlas-card .feyn.none-yet { display: grid; place-items: center; aspect-ratio: 332 / 228; }
+.atlas-card span { color: var(--muted); font-size: .875rem; }
+/* not system-ui: San Francisco misplaces the combining macron of q̄, t̄ */
+.feyn figcaption, .atlas-card span { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }

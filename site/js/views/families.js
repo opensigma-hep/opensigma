@@ -55,6 +55,7 @@ export function render(main, data) {
     }))),
     el('h2', {}, 'Browse'),
     el('ul', {},
+      el('li', {}, el('a', { href: '#/processes' }, 'Process atlas'), ' · every process with its leading-order Feynman diagram'),
       el('li', {}, el('a', { href: '#/gaps' }, 'Gap finder'), ' · partial or missing building blocks, where theory limits precision most'),
       el('li', {}, el('a', { href: '#/next-run' }, 'Next-run ranking'), ' · projected measurements against today’s theory'),
       el('li', {}, el('a', { href: '#/timeline' }, 'Theory progress'), ' · channels reaching each QCD order over time'),

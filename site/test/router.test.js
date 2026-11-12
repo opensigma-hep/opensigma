@@ -11,7 +11,7 @@ test('#/ → families, #/about → about', () => {
   assert.equal(parseHash('#/about', {}, new Set()).view, 'about');
   assert.equal(parseHash('#/amplitudes', {}, new Set()).view, 'amplitudes');
   assert.equal(parseHash('#/parameters', {}, new Set()).view, 'parameters');
-  for (const v of ['gaps', 'next-run', 'timeline']) assert.equal(parseHash('#/' + v, {}, new Set()).view, v);
+  for (const v of ['gaps', 'next-run', 'timeline', 'processes']) assert.equal(parseHash('#/' + v, {}, new Set()).view, v);
 });
 test('every id prefix maps to its view', () => {
   const m = {fam:'family', proc:'process', chan:'channel', obs:'observable', amp:'amplitude', par:'parameter', col:'collider'};
