@@ -251,6 +251,15 @@
   "title": "Measurement of the top quark mass using a profile likelihood approach with the lepton + jets final states in proton–proton collisions at $\\sqrt{s}=13\\,\\text {Te}\\hspace{-.08em}\\text {V} $",
   "year": 2023
  },
+ "arXiv:2306.11379": {
+  "arxiv": "2306.11379",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023tnc,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the $H \\rightarrow \\gamma \\gamma $ and $H \\rightarrow ZZ^* \\rightarrow 4 \\ell $ cross-sections in pp collisions at $\\sqrt{s}=13.6$ TeV with the ATLAS detector}\",\n    eprint = \"2306.11379\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-114\",\n    doi = \"10.1140/epjc/s10052-023-12130-5\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"84\",\n    number = \"1\",\n    pages = \"78\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1140/epjc/s10052-023-12130-5",
+  "recid": 2670270,
+  "title": "Measurement of the $H \\rightarrow \\gamma \\gamma $ and $H \\rightarrow ZZ^* \\rightarrow 4 \\ell $ cross-sections in pp collisions at $\\sqrt{s}=13.6$ TeV with the ATLAS detector",
+  "year": 2023
+ },
  "arXiv:2309.02889": {
   "arxiv": "2309.02889",
   "authors_short": "ZEUS Collaboration",
@@ -285,6 +294,15 @@
   "doi": "10.1103/PhysRevLett.132.261902",
   "recid": 2789110,
   "title": "Combination of Measurements of the Top Quark Mass from Data Collected by the ATLAS and CMS Experiments at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>7</mn></math> and 8 TeV",
+  "year": 2024
+ },
+ "arXiv:2402.09955": {
+  "arxiv": "2402.09955",
+  "authors_short": "Karlberg et al.",
+  "bibtex": "@article{Karlberg:2024zxx,\n    author = \"Karlberg, Alexander and others\",\n    title = \"{Ad interim recommendations for the Higgs boson production cross sections at $\\sqrt{s} = 13.6$ TeV}\",\n    eprint = \"2402.09955\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"LHCHWG-2024-001\",\n    month = \"2\",\n    year = \"2024\"\n}\n",
+  "doi": null,
+  "recid": 2758680,
+  "title": "Ad interim recommendations for the Higgs boson production cross sections at $\\sqrt{s} = 13.6$ TeV",
   "year": 2024
  },
  "arXiv:2403.15085": {
@@ -332,6 +350,15 @@
   "title": "On determining α$_{s}$(m$_{Z}$) from dijets in e$^{+}$e$^{−}$ thrust",
   "year": 2024
  },
+ "arXiv:2501.14849": {
+  "arxiv": "2501.14849",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2025wnr,\n    author = \"Chekhovsky, Vladimir and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of the Higgs boson production cross section in the four-lepton final state in proton-proton collisions at $\\sqrt{s}$ = 13.6 TeV}\",\n    eprint = \"2501.14849\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-HIG-24-013, CERN-EP-2024-336\",\n    doi = \"10.1007/JHEP05(2025)079\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"079\",\n    year = \"2025\",\n    note = \"[Erratum: JHEP 09, 167 (2026)]\"\n}\n",
+  "doi": "10.1007/JHEP05(2025)079",
+  "recid": 2872501,
+  "title": "Measurements of the Higgs boson production cross section in the four-lepton final state in proton-proton collisions at $\\sqrt{s}$ = 13.6 TeV",
+  "year": 2025
+ },
  "arXiv:2502.01570": {
   "arxiv": "2502.01570",
   "authors_short": "Aglietti et al.",
@@ -359,6 +386,24 @@
   "title": "Combination and interpretation of differential Higgs boson production cross sections in proton-proton collisions at $ \\sqrt{s}=13 $ TeV",
   "year": 2025
  },
+ "arXiv:2504.17755": {
+  "arxiv": "2504.17755",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2025fwn,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of inclusive and differential Higgs boson production cross sections at $\\sqrt{\\text{s}}=13.6$ TeV in the H {\\textrightarrow} {\\ensuremath{\\gamma}}{\\ensuremath{\\gamma}} decay channel}\",\n    eprint = \"2504.17755\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-HIG-23-014, CERN-EP-2025-067\",\n    doi = \"10.1007/JHEP09(2025)070\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"070\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1007/JHEP09(2025)070",
+  "recid": 2915441,
+  "title": "Measurements of inclusive and differential Higgs boson production cross sections at $\\sqrt{\\text{s}}=13.6$ TeV in the H → γγ decay channel",
+  "year": 2025
+ },
+ "arXiv:2505.20483": {
+  "arxiv": "2505.20483",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2025hlu,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of WWZ and ZH Production Cross Sections at s=13 and 13.6~TeV}\",\n    eprint = \"2505.20483\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-24-015, CERN-EP-2025-102\",\n    doi = \"10.1103/6z3d-zjw4\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"135\",\n    number = \"9\",\n    pages = \"091802\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1103/6z3d-zjw4",
+  "recid": 2925580,
+  "title": "Measurement of <math display=\"inline\"><mi>W</mi><mi>W</mi><mi>Z</mi></math> and <math display=\"inline\"><mi>Z</mi><mi>H</mi></math> Production Cross Sections at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>13</mn></math> and 13.6 TeV",
+  "year": 2025
+ },
  "arXiv:2507.08558": {
   "arxiv": "2507.08558",
   "authors_short": "Alioli et al.",
@@ -375,6 +420,15 @@
   "doi": "10.21468/SciPostPhysCommRep.17",
   "recid": 3071216,
   "title": "The inclusive Higgs boson cross-section in gluon-gluon fusion in soft-virtual approximation at fourth order in QCD",
+  "year": 2025
+ },
+ "arXiv:2511.21911": {
+  "arxiv": "2511.21911",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2025pxp,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Search for $H\\rightarrow c\\bar{c}$ and measurement of $H\\rightarrow b\\bar{b}$ in vector-boson fusion production with the ATLAS Detector}\",\n    eprint = \"2511.21911\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2025-247\",\n    month = \"11\",\n    year = \"2025\"\n}\n",
+  "doi": null,
+  "recid": 3087829,
+  "title": "Search for $H\\rightarrow c\\bar{c}$ and measurement of $H\\rightarrow b\\bar{b}$ in vector-boson fusion production with the ATLAS Detector",
   "year": 2025
  },
  "arXiv:2601.02484": {
@@ -411,6 +465,33 @@
   "doi": null,
   "recid": 3127255,
   "title": "On Thrust Resummation Ambiguities in $e^+e^-$ Annihilation into Hadrons",
+  "year": 2026
+ },
+ "arXiv:2605.15396": {
+  "arxiv": "2605.15396",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2026gqm,\n    author = \"Gevorgyan, Arzunik and others\",\n    collaboration = \"CMS\",\n    title = \"{First measurements of vector boson scattering in W$^{±}$W$^{±}$ and WZ production in all-leptonic final states at $ \\sqrt{s}=13.6 $ TeV}\",\n    eprint = \"2605.15396\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-25-013, CERN-EP-2026-126\",\n    doi = \"10.1007/JHEP10(2026)194\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"194\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1007/JHEP10(2026)194",
+  "recid": 3156639,
+  "title": "First measurements of vector boson scattering in W$^{±}$W$^{±}$ and WZ production in all-leptonic final states at $ \\sqrt{s}=13.6 $ TeV",
+  "year": 2026
+ },
+ "arXiv:2605.19016": {
+  "arxiv": "2605.19016",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2026hsl,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{−1}$ of data collected at $ \\sqrt{s}=13.6 $ TeV with the ATLAS detector}\",\n    eprint = \"2605.19016\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2026-112\",\n    doi = \"10.1007/JHEP08(2026)052\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"052\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1007/JHEP08(2026)052",
+  "recid": 3157992,
+  "title": "Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{−1}$ of data collected at $ \\sqrt{s}=13.6 $ TeV with the ATLAS detector",
+  "year": 2026
+ },
+ "arXiv:2606.04855": {
+  "arxiv": "2606.04855",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2026dao,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Probing the Higgs-top Yukawa interaction in the $t\\bar{t}H$ and $tH$ processes using $H\\rightarrowγγ$ with the ATLAS detector}\",\n    eprint = \"2606.04855\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2026-150\",\n    month = \"6\",\n    year = \"2026\"\n}\n",
+  "doi": null,
+  "recid": 3165013,
+  "title": "Probing the Higgs-top Yukawa interaction in the $t\\bar{t}H$ and $tH$ processes using $H\\rightarrowγγ$ with the ATLAS detector",
   "year": 2026
  },
  "arXiv:2606.05300": {
@@ -3032,6 +3113,15 @@
   "title": "Two-loop helicity amplitudes for V+jet production including axial vector couplings to higher orders in ϵ",
   "year": 2023
  },
+ "inspire:2670270": {
+  "arxiv": "2306.11379",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023tnc,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the $H \\rightarrow \\gamma \\gamma $ and $H \\rightarrow ZZ^* \\rightarrow 4 \\ell $ cross-sections in pp collisions at $\\sqrt{s}=13.6$ TeV with the ATLAS detector}\",\n    eprint = \"2306.11379\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-114\",\n    doi = \"10.1140/epjc/s10052-023-12130-5\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"84\",\n    number = \"1\",\n    pages = \"78\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1140/epjc/s10052-023-12130-5",
+  "recid": 2670270,
+  "title": "Measurement of the $H \\rightarrow \\gamma \\gamma $ and $H \\rightarrow ZZ^* \\rightarrow 4 \\ell $ cross-sections in pp collisions at $\\sqrt{s}=13.6$ TeV with the ATLAS detector",
+  "year": 2023
+ },
  "inspire:2672565": {
   "arxiv": "2306.16311",
   "authors_short": "Buonocore et al.",
@@ -3221,6 +3311,15 @@
   "title": "Measurement and interpretation of same-sign W boson pair production in association with two jets in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector",
   "year": 2023
  },
+ "inspire:2729866": {
+  "arxiv": "2312.00861",
+  "authors_short": "Kidonakis and Foster",
+  "bibtex": "@article{Kidonakis:2023jpj,\n    author = \"Kidonakis, Nikolaos and Foster, Chris\",\n    title = \"{Soft-gluon corrections in tt{\\textasciimacron}W production}\",\n    eprint = \"2312.00861\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.physletb.2024.138708\",\n    journal = \"Phys. Lett. B\",\n    volume = \"854\",\n    pages = \"138708\",\n    year = \"2024\"\n}\n",
+  "doi": "10.1016/j.physletb.2024.138708",
+  "recid": 2729866,
+  "title": "Soft-gluon corrections in <math altimg=\"si1.svg\"><mi>t</mi><mover accent=\"true\"><mrow><mi>t</mi></mrow><mrow><mo stretchy=\"false\">¯</mo></mrow></mover><mi>W</mi></math> production",
+  "year": 2023
+ },
  "inspire:2736546": {
   "arxiv": "2312.07562",
   "authors_short": "CMS Collaboration",
@@ -3282,6 +3381,15 @@
   "doi": "10.1140/epjc/s10052-024-12972-7",
   "recid": 2752463,
   "title": "Yadism: yet another deep-inelastic scattering module",
+  "year": 2024
+ },
+ "inspire:2758680": {
+  "arxiv": "2402.09955",
+  "authors_short": "Karlberg et al.",
+  "bibtex": "@article{Karlberg:2024zxx,\n    author = \"Karlberg, Alexander and others\",\n    title = \"{Ad interim recommendations for the Higgs boson production cross sections at $\\sqrt{s} = 13.6$ TeV}\",\n    eprint = \"2402.09955\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"LHCHWG-2024-001\",\n    month = \"2\",\n    year = \"2024\"\n}\n",
+  "doi": null,
+  "recid": 2758680,
+  "title": "Ad interim recommendations for the Higgs boson production cross sections at $\\sqrt{s} = 13.6$ TeV",
   "year": 2024
  },
  "inspire:2762380": {
@@ -3608,6 +3716,15 @@
   "title": "Precise Predictions for Event Shapes in Diphoton Production at the LHC",
   "year": 2025
  },
+ "inspire:2872501": {
+  "arxiv": "2501.14849",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2025wnr,\n    author = \"Chekhovsky, Vladimir and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of the Higgs boson production cross section in the four-lepton final state in proton-proton collisions at $\\sqrt{s}$ = 13.6 TeV}\",\n    eprint = \"2501.14849\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-HIG-24-013, CERN-EP-2024-336\",\n    doi = \"10.1007/JHEP05(2025)079\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"079\",\n    year = \"2025\",\n    note = \"[Erratum: JHEP 09, 167 (2026)]\"\n}\n",
+  "doi": "10.1007/JHEP05(2025)079",
+  "recid": 2872501,
+  "title": "Measurements of the Higgs boson production cross section in the four-lepton final state in proton-proton collisions at $\\sqrt{s}$ = 13.6 TeV",
+  "year": 2025
+ },
  "inspire:2874702": {
   "arxiv": "2502.00118",
   "authors_short": "Becchetti et al.",
@@ -3743,6 +3860,15 @@
   "title": "Heavy quark mass effects in charged-current deep-inelastic scattering at approximate NNLO in the Aivazis-Collins-Olness-Tung scheme",
   "year": 2025
  },
+ "inspire:2915441": {
+  "arxiv": "2504.17755",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2025fwn,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurements of inclusive and differential Higgs boson production cross sections at $\\sqrt{\\text{s}}=13.6$ TeV in the H {\\textrightarrow} {\\ensuremath{\\gamma}}{\\ensuremath{\\gamma}} decay channel}\",\n    eprint = \"2504.17755\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-HIG-23-014, CERN-EP-2025-067\",\n    doi = \"10.1007/JHEP09(2025)070\",\n    journal = \"JHEP\",\n    volume = \"09\",\n    pages = \"070\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1007/JHEP09(2025)070",
+  "recid": 2915441,
+  "title": "Measurements of inclusive and differential Higgs boson production cross sections at $\\sqrt{\\text{s}}=13.6$ TeV in the H → γγ decay channel",
+  "year": 2025
+ },
  "inspire:2923238": {
   "arxiv": "2505.11310",
   "authors_short": "ATLAS Collaboration",
@@ -3750,6 +3876,15 @@
   "doi": "10.1007/JHEP08(2025)142",
   "recid": 2923238,
   "title": "Measurements of W$^{+}$W$^{−}$ production cross-sections in pp collisions at $ \\sqrt{s}=13 $ TeV with the ATLAS detector",
+  "year": 2025
+ },
+ "inspire:2925580": {
+  "arxiv": "2505.20483",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2025hlu,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of WWZ and ZH Production Cross Sections at s=13 and 13.6~TeV}\",\n    eprint = \"2505.20483\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-24-015, CERN-EP-2025-102\",\n    doi = \"10.1103/6z3d-zjw4\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"135\",\n    number = \"9\",\n    pages = \"091802\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1103/6z3d-zjw4",
+  "recid": 2925580,
+  "title": "Measurement of <math display=\"inline\"><mi>W</mi><mi>W</mi><mi>Z</mi></math> and <math display=\"inline\"><mi>Z</mi><mi>H</mi></math> Production Cross Sections at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>13</mn></math> and 13.6 TeV",
   "year": 2025
  },
  "inspire:2933960": {
@@ -3903,6 +4038,15 @@
   "doi": null,
   "recid": 3078982,
   "title": "Measurement of top quark charge asymmetries in jet-associated top quark pair production at sqrts 13 TeV",
+  "year": 2025
+ },
+ "inspire:3087829": {
+  "arxiv": "2511.21911",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2025pxp,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Search for $H\\rightarrow c\\bar{c}$ and measurement of $H\\rightarrow b\\bar{b}$ in vector-boson fusion production with the ATLAS Detector}\",\n    eprint = \"2511.21911\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2025-247\",\n    month = \"11\",\n    year = \"2025\"\n}\n",
+  "doi": null,
+  "recid": 3087829,
+  "title": "Search for $H\\rightarrow c\\bar{c}$ and measurement of $H\\rightarrow b\\bar{b}$ in vector-boson fusion production with the ATLAS Detector",
   "year": 2025
  },
  "inspire:3088088": {
@@ -4076,6 +4220,24 @@
   "title": "Inclusive charm and bottom quark pair production cross sections at hadron colliders at next-to-next-to-leading-order accuracy",
   "year": 2026
  },
+ "inspire:3156639": {
+  "arxiv": "2605.15396",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2026gqm,\n    author = \"Gevorgyan, Arzunik and others\",\n    collaboration = \"CMS\",\n    title = \"{First measurements of vector boson scattering in W$^{±}$W$^{±}$ and WZ production in all-leptonic final states at $ \\sqrt{s}=13.6 $ TeV}\",\n    eprint = \"2605.15396\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-SMP-25-013, CERN-EP-2026-126\",\n    doi = \"10.1007/JHEP10(2026)194\",\n    journal = \"JHEP\",\n    volume = \"10\",\n    pages = \"194\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1007/JHEP10(2026)194",
+  "recid": 3156639,
+  "title": "First measurements of vector boson scattering in W$^{±}$W$^{±}$ and WZ production in all-leptonic final states at $ \\sqrt{s}=13.6 $ TeV",
+  "year": 2026
+ },
+ "inspire:3157992": {
+  "arxiv": "2605.19016",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2026hsl,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{−1}$ of data collected at $ \\sqrt{s}=13.6 $ TeV with the ATLAS detector}\",\n    eprint = \"2605.19016\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2026-112\",\n    doi = \"10.1007/JHEP08(2026)052\",\n    journal = \"JHEP\",\n    volume = \"08\",\n    pages = \"052\",\n    year = \"2026\"\n}\n",
+  "doi": "10.1007/JHEP08(2026)052",
+  "recid": 3157992,
+  "title": "Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{−1}$ of data collected at $ \\sqrt{s}=13.6 $ TeV with the ATLAS detector",
+  "year": 2026
+ },
  "inspire:3161892": {
   "arxiv": "2605.28667",
   "authors_short": "Armadillo et al.",
@@ -4083,6 +4245,15 @@
   "doi": "10.1007/JHEP10(2026)058",
   "recid": 3161892,
   "title": "Towards the two-loop electroweak corrections to the Drell-Yan process: the complete fermionic contributions",
+  "year": 2026
+ },
+ "inspire:3165013": {
+  "arxiv": "2606.04855",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2026dao,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Probing the Higgs-top Yukawa interaction in the $t\\bar{t}H$ and $tH$ processes using $H\\rightarrowγγ$ with the ATLAS detector}\",\n    eprint = \"2606.04855\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2026-150\",\n    month = \"6\",\n    year = \"2026\"\n}\n",
+  "doi": null,
+  "recid": 3165013,
+  "title": "Probing the Higgs-top Yukawa interaction in the $t\\bar{t}H$ and $tH$ processes using $H\\rightarrowγγ$ with the ATLAS detector",
   "year": 2026
  },
  "inspire:3165416": {
@@ -4119,6 +4290,15 @@
   "doi": null,
   "recid": 3184980,
   "title": "Improved analysis of non-resonant Higgs boson pair production in the $b\\bar{b}τ^+τ^-$ final state with $196$ fb$^{-1}$ of data collected at $\\sqrt{s}$ = 13 TeV and 13.6 TeV with the ATLAS detector",
+  "year": 2026
+ },
+ "inspire:3184989": {
+  "arxiv": null,
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2026bue,\n    author = \"CMS, Collaboration\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the differential cross section for inclusive isolated photon production in proton-proton collisions at sqrt(s) = 13.6 TeV}\",\n    reportNumber = \"CMS-PAS-SMP-25-004, CMS-PAS-SMP-25-004\",\n    year = \"2026\"\n}\n",
+  "doi": null,
+  "recid": 3184989,
+  "title": "Measurement of the differential cross section for inclusive isolated photon production in proton-proton collisions at sqrt(s) = 13.6 TeV",
   "year": 2026
  },
  "inspire:3187331": {
@@ -4200,6 +4380,15 @@
   "doi": null,
   "recid": 3215229,
   "title": "Top-Quark Mass Scheme Uncertainties in Higgs Boson Pair Production via Gluon Fusion",
+  "year": 2026
+ },
+ "inspire:3216569": {
+  "arxiv": null,
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2026alc,\n    collaboration = \"CMS\",\n    title = \"{Measurement of the inclusive cross section of top quark-antiquark pair production in association with a W boson in proton-proton collisions at $\\sqrt{s} = 13.6$ TeV}\",\n    reportNumber = \"CMS-PAS-TOP-25-014\",\n    month = \"10\",\n    year = \"2026\"\n}\n",
+  "doi": null,
+  "recid": 3216569,
+  "title": "Measurement of the inclusive cross section of top quark-antiquark pair production in association with a W boson in proton-proton collisions at $\\sqrt{s} = 13.6$ TeV",
   "year": 2026
  },
  "inspire:332376": {
