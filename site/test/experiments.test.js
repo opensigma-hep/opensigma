@@ -48,7 +48,7 @@ test('routing: exp: ids open the experiment view, #/experiments the index', () =
   assert.equal(parseHash('#/experiments', {}, new Set()).view, 'experiments');
 });
 
-test('search: experiments rank after every other kind on equal match', () => {
+test('search: the experiment itself ranks before its measurements on equal match', () => {
   const idx = [{ id: 'exp:atlas', kind: 'exp', label: 'ATLAS', text: 'ATLAS' }, { id: 'meas:1', kind: 'meas', label: 'ATLAS 139 fb', text: '' }];
-  assert.deepEqual(search(idx, 'atlas').map((h) => h.id), ['meas:1', 'exp:atlas']);
+  assert.deepEqual(search(idx, 'atlas').map((h) => h.id), ['exp:atlas', 'meas:1']);
 });

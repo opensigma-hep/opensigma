@@ -117,14 +117,12 @@ def derive(repo: dict, today: date) -> dict:
         add(f["id"], "fam", f["name"], f)
     for a in repo["amplitudes"]:
         add(a["id"], "amp", a["id"], a)
-    for e in repo.get("experiments", []):
-        add(e["id"], "exp", e["name"], e, [e.get("full_name", "")])
     for p in repo["parameters"]:
         add(p["id"], "par", p["name"], p, [p["symbol"]])
     for c in repo["colliders"]:
         add(c["id"], "col", c["name"], c, [c.get("beams", "")])
     for e in repo.get("experiments") or []:  # optional data/experiments.yaml
-        add(e["id"], "exp", e.get("name", e["id"]), e)
+        add(e["id"], "exp", e.get("name", e["id"]), e, [e.get("full_name", "")])
     for root in [r for k in ("families", "amplitudes", "parameters", "processes") for r in repo[k]]:
         for _, d in _walk(root):
             for al in d.get("aliases", []):
