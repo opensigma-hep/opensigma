@@ -1643,13 +1643,6 @@
    "title": "Evaluation of QCD uncertainties for Higgs boson production through gluon fusion and in association with two top quarks for simplified template cross-section measurements"
   },
   {
-   "arxiv": "2501.14849",
-   "channels": [],
-   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
-   "recid": 2872501,
-   "title": "Measurements of the Higgs boson production cross section in the four-lepton final state in proton-proton collisions at $\\sqrt{s}$ = 13.6 TeV"
-  },
-  {
    "arxiv": null,
    "channels": [],
    "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
@@ -1676,13 +1669,6 @@
    "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
    "recid": 2810563,
    "title": "Differential cross-section measurements of Higgs boson production in the H → τ$^{+}$τ$^{−}$ decay channel in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector"
-  },
-  {
-   "arxiv": "2504.17755",
-   "channels": [],
-   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
-   "recid": 2915441,
-   "title": "Measurements of inclusive and differential Higgs boson production cross sections at $\\sqrt{\\text{s}}=13.6$ TeV in the H → γγ decay channel"
   },
   {
    "arxiv": null,
@@ -1739,13 +1725,6 @@
    "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
    "recid": 2659285,
    "title": "Measurements of inclusive and differential cross sections for the Higgs boson production and decay to four-leptons in proton-proton collisions at $ \\sqrt{s} $ = 13 TeV"
-  },
-  {
-   "arxiv": "2605.19016",
-   "channels": [],
-   "matched_by": "((t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\") and (t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"transverse momentum\" or t \"electroweak\" or t \"top-quark mass\" or t \"bottom\" or t \"cross-section\" or t \"cross section\" or t \"resummation\" or t \"fourth order\") and not t search and not t \"pair\" and not t \"dark\") or (refersto:recid:1653133 and t Higgs and (t \"gluon fusion\" or t \"gluon-fusion\" or t \"gluon-gluon fusion\")) or (t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"13 TeV\" or t \"13.6 TeV\") and (t \"cross section\" or t \"cross-section\" or t \"cross sections\" or t \"production modes\" or t \"gluon\") and not t search and not t \"pair\" and not t \"dark\")) and de > 2021-10-17",
-   "recid": 3157992,
-   "title": "Measurements of the Higgs boson production, fiducial and differential cross-sections in the four lepton decay channel using 164 fb$^{−1}$ of data collected at $ \\sqrt{s}=13.6 $ TeV with the ATLAS detector"
   },
   {
    "arxiv": "2202.00487",
@@ -2058,13 +2037,6 @@
    "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
    "recid": 2849776,
    "title": "QCD anatomy of photon isolation"
-  },
-  {
-   "arxiv": null,
-   "channels": [],
-   "matched_by": "(refersto:recid:1748270 or refersto:recid:1680459 or refersto:recid:1727794 or refersto:recid:1503171 or refersto:recid:584902 or (t \"isolated photon\" and (collaboration:ATLAS or collaboration:CMS) and t cross) or (t \"direct photon\" and (t NNLO or t N3LO or t \"electroweak corrections\")) or (t \"prompt photon\" and (t \"13 TeV\" or t \"13.6 TeV\") and (collaboration:ATLAS or collaboration:CMS))) and de > 2021-10-16",
-   "recid": 3184989,
-   "title": "Measurement of the differential cross section for inclusive isolated photon production in proton-proton collisions at sqrt(s) = 13.6 TeV"
   },
   {
    "arxiv": null,

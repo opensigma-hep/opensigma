@@ -206,8 +206,14 @@ channels:
   - id: "chan:vbs-ssww/lhc-13.6"
     collider: "col:lhc-13.6"
     initial_state: "pp"
-    coverage: stub
-    last_reviewed: "2026-10-22"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    measurements:
+      - id: "meas:vbs-ssww/lhc-13.6/cms-2026-fid-ew"
+        experiment: "CMS"
+        dataset: "13.6 TeV, 171 fb⁻¹ (2022–2024), W±W± → ℓ±νℓ'±ν + 2 jets (ℓ, ℓ' = e, μ)"
+        ref: "inspire:3156639"
+        hepdata: "hepdata:ins3156639/Table 6"
     observables:
       - id: obs:vbs-ssww/lhc-13.6/sigma-fid-ll
         name: Fiducial σ(pp → e⁺νe μ⁺νμ jj), doubly longitudinal W_L W_L (EW production)
@@ -230,3 +236,50 @@ channels:
                 provenance: {uid: '825065e7', ref: "inspire:2825255", locator: "Table 3, LL: +1.0% −2.1%; setup paragraph around eq. (37) (7-point variation) and text after Table 3 (scale uncertainty of 1–3% for the NLO EW+QCD prediction)", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:2825255"]
             provenance: {uid: a23e4a66, ref: "inspire:2825255", locator: "Abstract and Sec. 3.2, Tables 3–4 (NLO EW and QCD corrections to polarised cross sections and polarisation fractions)", source: agent, status: agent-draft, date: "2026-10-22"}
+      - id: "obs:vbs-ssww/lhc-13.6/sigma-fid-ew"
+        name: "Fiducial σ(EW W±W±jj) at 13.6 TeV"
+        kind: fiducial
+        variable: "σ × B of EW W±W±jj → ℓ±νℓ'±ν jj; dressed leptons pT > 25/20 GeV, |η| < 2.5, mℓℓ > 20 GeV; jets pT > 50 GeV, |η| < 4.7, mjj > 500 GeV, |Δηjj| > 2.5"
+        results:
+          - measurement: "meas:vbs-ssww/lhc-13.6/cms-2026-fid-ew"
+            total: {value_pct: 10.0, provenance: {uid: 429018c8, ref: "arXiv:2605.15396", locator: "Table 6 (measured σB and predictions), EW W±W±: 3.81 ± 0.38 fb = ± 0.33 (stat) ± 0.18 (syst) fb; relative total derived here; fiducial region in Table 5", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [8.7, 8.7], unit: "%", asymmetric: false}
+                provenance: {uid: 5c46b137, ref: "arXiv:2605.15396", locator: "Table 6, EW W±W±: ± 0.33 (stat) fb of 3.81 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined; per-source uncertainties on the signal strength in Table 3: limited sample size, jet experimental, lepton experimental, b tagging, theory, luminosity, nonprompt background)"
+                full_table: "hepdata:ins3156639/Table 3"
+                size: {range: [4.7, 4.7], unit: "%", asymmetric: false}
+                provenance: {uid: efca070b, ref: "arXiv:2605.15396", locator: "Table 6, EW W±W±: ± 0.18 (syst) fb of 3.81 fb; per-source breakdown (absolute uncertainties on μ) in Table 3", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "MadGraph5_aMC@NLO LO × NLO QCD+EW corrections (CMS 13.6 TeV setup)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              mixed: "complete NLO (O(αsα⁶) and O(α⁷) corrections of Biedermann–Denner–Pellen) applied to the LO cross section"
+              approximations: ["LO MadGraph5_aMC@NLO O(α⁶) cross section corrected with the NLO O(αsα⁶) and O(α⁷) corrections computed for the leptonic W±W± scattering process (reduction of 10–15%, growing with the dilepton and dijet invariant masses)"]
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 8.8, provenance: {uid: 8fd7cec3, ref: "arXiv:2605.15396", locator: "Table 6, EW W±W±, MadGraph5_aMC@NLO with NLO corrections: 3.51 ± 0.31 fb (statistical, PDF and scale uncertainties); relative uncertainty derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:vbs-ssww/lhc-13.6/cms-2026-fid-ew"]
+            refs: ["inspire:3156639", "inspire:1496632", "inspire:1613898"]
+            provenance: {uid: 002f7c77, ref: "arXiv:2605.15396", locator: "Sec. 3 (signal simulation: LO MadGraph5_aMC@NLO, NLO QCD and EW corrections of refs. [19, 20]) and Table 6", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+          - label: "MadGraph5_aMC@NLO 2.9.9, LO O(α⁶), without NLO corrections (CMS 13.6 TeV setup)"
+            accuracy:
+              qcd: LO
+              shower_matched: true
+            codes: ["MadGraph5_aMC@NLO", "Pythia 8"]
+            total: {value_pct: 8.9, provenance: {uid: deef9401, ref: "arXiv:2605.15396", locator: "Table 6, EW W±W±, MadGraph5_aMC@NLO without NLO corrections: 4.27 ± 0.38 fb (statistical, PDF and scale uncertainties); relative uncertainty derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:vbs-ssww/lhc-13.6/cms-2026-fid-ew"]
+            refs: ["inspire:3156639"]
+            provenance: {uid: 5a7a6c2a, ref: "arXiv:2605.15396", locator: "Sec. 3 (EW W±W± simulated with MadGraph5_aMC@NLO 2.9.9 at LO with six EW and zero QCD vertices, NNPDF3.1 NNLO, Pythia CP5) and Table 6", source: agent, status: agent-draft, date: "2026-11-12"}
+          - label: "Sherpa 2.2.15, LO, without NLO corrections (CMS 13.6 TeV setup)"
+            accuracy:
+              qcd: LO
+            codes: ["Sherpa"]
+            total: {value_pct: 14.8, provenance: {uid: '04018535', ref: "arXiv:2605.15396", locator: "Table 6, EW W±W±, Sherpa without NLO corrections: 3.37 ± 0.50 fb (statistical, PDF and scale uncertainties); relative uncertainty derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:vbs-ssww/lhc-13.6/cms-2026-fid-ew"]
+            refs: ["inspire:3156639"]
+            provenance: {uid: 4a5f0b77, ref: "arXiv:2605.15396", locator: "Sec. 8 (predictions with MadGraph5_aMC@NLO and Sherpa 2.2.15 at LO) and Table 6", source: agent, status: agent-draft, date: "2026-11-12"}

@@ -267,9 +267,27 @@ channels:
   - id: "chan:ggh/lhc-13.6"
     collider: "col:lhc-13.6"
     initial_state: "pp"
-    coverage: stub
-    last_reviewed: "2026-10-22"
+    coverage: partial
+    last_reviewed: "2026-11-12"
     headline: {observable: "obs:ggh/lhc-13.6/sigma-ggf", region: "m_H = 125 GeV, inclusive gg → H cross section"}
+    measurements:
+      - id: "meas:ggh/lhc-13.6/atlas-2026-4l"
+        experiment: "ATLAS"
+        dataset: "13.6 TeV, 164 fb⁻¹ (2022–2024), H → ZZ* → 4ℓ; all production modes, fiducial cross section and extrapolation to the full phase space"
+        ref: "inspire:3157992"
+      - id: "meas:ggh/lhc-13.6/atlas-2023-yy-4l"
+        experiment: "ATLAS"
+        dataset: "13.6 TeV, 31.4 fb⁻¹ (H → γγ) and 29.0 fb⁻¹ (H → ZZ* → 4ℓ) (2022); all production modes, fiducial cross sections and their combination extrapolated to the full phase space (the 4ℓ part is superseded by the 164 fb⁻¹ analysis)"
+        ref: "inspire:2670270"
+      - id: "meas:ggh/lhc-13.6/cms-2025-yy"
+        experiment: "CMS"
+        dataset: "13.6 TeV, 34.7 fb⁻¹ (2022), H → γγ; all production modes, fiducial"
+        ref: "inspire:2915441"
+      - id: "meas:ggh/lhc-13.6/cms-2025-4l"
+        experiment: "CMS"
+        dataset: "13.6 TeV, 34.7 fb⁻¹ (2022), H → ZZ → 4ℓ; all production modes, fiducial"
+        ref: "inspire:2872501"
+        hepdata: "hepdata:ins2872501/Fiducial HZZ cross section per final state"
     observables:
       - id: "obs:ggh/lhc-13.6/sigma-ggf"
         name: "Inclusive σ(gg → H) at 13.6 TeV"
@@ -301,3 +319,212 @@ channels:
             refs: ["inspire:3071216"]
             provenance: {uid: 4d0075ca, ref: "arXiv:2510.17413", locator: "Sec. 2–3, eq. (5) (√S = 13.6 TeV, m_H = 125 GeV, m_t = 172.5 GeV, μ = m_H/2, n_f = 5) and Table 2 (Case-II, αs(m_Z) = 0.118)", source: agent, status: cross-checked, date: "2026-10-22"}
             headline: true
+      - id: "obs:ggh/lhc-13.6/sigma-tot-h"
+        name: "Total Higgs production cross section σ(pp → H + X) at 13.6 TeV, all production modes (ATLAS H → 4ℓ; H → γγ + 4ℓ combination)"
+        kind: total
+        variable: "σ(pp → H + X) in the full phase space, sum of all production modes (ggF-dominated), from fiducial H → ZZ* → 4ℓ and H → γγ measurements extrapolated with SM acceptances and branching fractions"
+        results:
+          - measurement: "meas:ggh/lhc-13.6/atlas-2026-4l"
+            total: {value_pct: 9.6, provenance: {uid: '55833e84', ref: "arXiv:2605.19016", locator: "Sec. 8.1: σ_total = 59.3 ± 4.8 (stat.) ± 3.1 (sys.) pb = 59.3 ± 5.7 pb; relative total derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [8.1, 8.1], unit: "%", asymmetric: false}
+                provenance: {uid: f852fcf3, ref: "arXiv:2605.19016", locator: "Sec. 8.1: ± 4.8 (stat.) pb of 59.3 pb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined; dominated by lepton reconstruction and isolation efficiencies; includes the 1.9% luminosity uncertainty and the 2.2% H → 4ℓ branching-ratio uncertainty of the extrapolation)"
+                size: {range: [5.2, 5.2], unit: "%", asymmetric: false}
+                provenance: {uid: '78440079', ref: "arXiv:2605.19016", locator: "Sec. 8.1: ± 3.1 (sys.) pb of 59.3 pb; sources named in Sec. 7 and Sec. 8.1", source: agent, status: agent-draft, date: "2026-11-12"}
+          - measurement: "meas:ggh/lhc-13.6/atlas-2023-yy-4l"
+            total: {value_pct: 14.9, provenance: {uid: 4d5ffd42, ref: "inspire:2670270", locator: "Abstract: combined σ(pp → H) = 58.2 ± 8.7 pb (H → γγ: 67 +12/−11 pb; H → 4ℓ: 46 ± 12 pb); relative total derived here; no stat/syst split is quoted for the combination", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties: []
+        predictions:
+          - label: "SM sum of production modes (LHC Higgs Working Group cross sections interpolated to 13.6 TeV), ggF at N3LO QCD + NLO EW"
+            accuracy:
+              qcd: N3LO
+              ew: NLO
+              approximations: ["sum over production modes; N3LO QCD + NLO EW refers to the dominant ggF term; VBF and VH at approximate NNLO QCD + NLO EW, ttH at NLO QCD + NLO EW, tH at NLO QCD", "LHC Higgs Working Group predictions interpolated to √s = 13.6 TeV"]
+            total: {value_pct: 5.0, provenance: {uid: 6ed7a989, ref: "arXiv:2605.19016", locator: "Sec. 8.1: SM value σ_total = 59.9 ± 3.0 pb; relative uncertainty derived here (arXiv:2306.11379 quotes 59.9 ± 2.6 pb for the same sum)", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:ggh/lhc-13.6/atlas-2026-4l", "meas:ggh/lhc-13.6/atlas-2023-yy-4l"]
+            refs: ["arXiv:1610.07922"]
+            provenance: {uid: bea38839, ref: "arXiv:2605.19016", locator: "Sec. 3.2.2 (signal normalisation: ggF N3LO QCD + NLO EW; VBF and VH approximate NNLO QCD + NLO EW; ttH NLO QCD + NLO EW; interpolated to 13.6 TeV) and Sec. 8.1", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+      - id: "obs:ggh/lhc-13.6/sigma-fid-4l"
+        name: "Fiducial σ(pp → H → ZZ* → 4ℓ) at 13.6 TeV, all production modes"
+        kind: fiducial
+        variable: "σ_fid × B(H → ZZ* → 4ℓ), ℓ = e, μ, in experiment-specific fiducial regions close to the detector-level selection"
+        results:
+          - measurement: "meas:ggh/lhc-13.6/atlas-2026-4l"
+            total: {value_pct: 9.6, provenance: {uid: 4b4ed0f4, ref: "arXiv:2605.19016", locator: "Sec. 8.1 and abstract: σ_fid = 3.65 ± 0.30 (stat.) +0.18/−0.16 (sys.) fb = 3.65 +0.35/−0.33 fb; larger side as % of the central value", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [8.2, 8.2], unit: "%", asymmetric: false}
+                provenance: {uid: df683c48, ref: "arXiv:2605.19016", locator: "Sec. 8.1: ± 0.30 (stat.) fb of 3.65 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined; dominated by lepton reconstruction and isolation efficiencies)"
+                size: {range: [4.4, 4.9], unit: "%", asymmetric: true}
+                provenance: {uid: 39fa2fa3, ref: "arXiv:2605.19016", locator: "Sec. 8.1: +0.18/−0.16 (sys.) fb of 3.65 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+          - measurement: "meas:ggh/lhc-13.6/cms-2025-4l"
+            total: {value_pct: 20.9, provenance: {uid: 42e618d4, ref: "arXiv:2501.14849", locator: "Sec. 9 (Results), equation for σ_fid, and abstract: 2.89 +0.53/−0.49 (stat) +0.29/−0.21 (syst) fb at m_H = 125.38 GeV; stat and syst upper sides added in quadrature here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [17.0, 18.3], unit: "%", asymmetric: true}
+                provenance: {uid: cdb9ddd0, ref: "arXiv:2501.14849", locator: "Sec. 9, equation for σ_fid: +0.53/−0.49 (stat) fb of 2.89 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [7.3, 10.0], unit: "%", asymmetric: true}
+                provenance: {uid: 17a4e9d1, ref: "arXiv:2501.14849", locator: "Sec. 9, equation for σ_fid: +0.29/−0.21 (syst) fb of 2.89 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: efficiency
+                specific: "Electron-related uncertainties (dominated by the electron selection efficiency)"
+                size: {range: [6.6, 9.0], unit: "%", asymmetric: true}
+                provenance: {uid: c004e373, ref: "arXiv:2501.14849", locator: "Sec. 9, second line of the equation for σ_fid: +0.26/−0.19 (electrons) fb of 2.89 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Reducible background (Z+X)"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                provenance: {uid: d5296f53, ref: "arXiv:2501.14849", locator: "Sec. 9, second line of the equation for σ_fid: ±0.06 (ZX) fb of 2.89 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [1.7, 2.1], unit: "%", asymmetric: true}
+                provenance: {uid: c5e0e513, ref: "arXiv:2501.14849", locator: "Sec. 9, second line of the equation for σ_fid: +0.06/−0.05 (lumi) fb of 2.89 fb; Sec. 8: luminosity known to 1.4%", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Irreducible background"
+                size: {range: [1.4, 1.4], unit: "%", asymmetric: false}
+                provenance: {uid: 65cb0987, ref: "arXiv:2501.14849", locator: "Sec. 9, second line of the equation for σ_fid: ±0.04 (bkg) fb of 2.89 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: efficiency
+                specific: "Muon-related uncertainties"
+                size: {range: [1.0, 1.4], unit: "%", asymmetric: true}
+                provenance: {uid: beef6a8c, ref: "arXiv:2501.14849", locator: "Sec. 9, second line of the equation for σ_fid: +0.04/−0.03 (muons) fb of 2.89 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "SM, LHC Higgs WG cross sections (ggF N3LO QCD + NLO EW) × B(H → 4ℓ) × fiducial acceptance from Powheg NNLOPS + Pythia 8 (ATLAS fiducial region)"
+            accuracy:
+              qcd: N3LO
+              ew: NLO
+              shower_matched: true
+              approximations: ["normalisation: LHC Higgs Working Group predictions interpolated to 13.6 TeV (N3LO QCD + NLO EW for ggF, lower orders for the other modes)", "fiducial acceptance from Powheg Box v2 samples (ggF: HJ-MiNLO reweighted to NNLO in the Higgs rapidity) + Pythia 8", "B(H → ZZ* → 4ℓ) from Prophecy4f"]
+            total: {value_pct: 4.6, provenance: {uid: 0a989e35, ref: "arXiv:2605.19016", locator: "Sec. 8.1 and abstract: SM prediction σ_fid = 3.68 ± 0.17 fb; relative uncertainty derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            codes: ["Powheg Box", "Pythia 8", "Prophecy4f"]
+            compared_to: ["meas:ggh/lhc-13.6/atlas-2026-4l"]
+            refs: ["arXiv:1610.07922"]
+            provenance: {uid: c22fbccd, ref: "arXiv:2605.19016", locator: "Sec. 3.2.1–3.2.2 (signal modelling and normalisation) and Sec. 8.1", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+          - label: "SM, LHC Higgs WG cross sections (ggH normalised to N3LO) × B × acceptance from Powheg reweighted to NNLOPS (CMS fiducial region)"
+            accuracy:
+              qcd: N3LO
+              shower_matched: true
+              approximations: ["cross section and branching fraction from the LHC Higgs Working Group, multiplied by the fiducial acceptance", "ggH acceptance from Powheg 2.0 reweighted to NNLOPS in pT(H) and jet multiplicity; VBF + VH + ttH at NLO (Powheg)"]
+            total: {value_pct: 8.7, provenance: {uid: 86f2916c, ref: "arXiv:2501.14849", locator: "Sec. 9 and abstract: SM expectation 3.09 +0.27/−0.24 fb (scales, PDF, αs and branching fraction); larger side as % of the central value", source: agent, status: agent-draft, date: "2026-11-12"}}
+            codes: ["Powheg", "JHUGen"]
+            compared_to: ["meas:ggh/lhc-13.6/cms-2025-4l"]
+            refs: ["arXiv:1610.07922", "arXiv:2402.09955"]
+            provenance: {uid: f742391b, ref: "arXiv:2501.14849", locator: "Sec. 3 (signal samples, normalised to the LHC Higgs WG cross sections for 13.6 TeV), Sec. 9 (SM expectation) and Fig. 2 caption (ggH predictions normalised to next-to-NNLO)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:ggh/lhc-13.6/sigma-fid-yy"
+        name: "Fiducial σ(pp → H → γγ) at 13.6 TeV, all production modes"
+        kind: fiducial
+        variable: "σ_fid × B(H → γγ) in experiment-specific diphoton fiducial regions (ATLAS: pT(γ)/mγγ > 0.35, 0.25, |η| < 2.37 excluding 1.37–1.52; CMS: √(pT1 pT2)/mγγ > 1/3, pT2/mγγ > 1/4, |η| < 2.5 excluding the barrel–endcap transition)"
+        results:
+          - measurement: "meas:ggh/lhc-13.6/atlas-2023-yy-4l"
+            total: {value_pct: 17.4, provenance: {uid: 0c38b098, ref: "arXiv:2306.11379", locator: "Table 3 (breakdown of relative uncertainties, inclusive di-photon fiducial cross-section), Total; abstract: σ_fid,γγ = 76 +14/−13 fb", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [14.0, 14.0], unit: "%", asymmetric: false}
+                provenance: {uid: 08b322d1, ref: "arXiv:2306.11379", locator: "Table 3, Statistical uncertainty", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [10.3, 10.3], unit: "%", asymmetric: false}
+                provenance: {uid: 01c12473, ref: "arXiv:2306.11379", locator: "Table 3, Systematic uncertainty", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Background modelling (spurious signal)"
+                size: {range: [6.0, 6.0], unit: "%", asymmetric: false}
+                provenance: {uid: beda06b2, ref: "arXiv:2306.11379", locator: "Table 3, Background modelling (spurious signal)", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: efficiency
+                specific: "Photon trigger and selection efficiency"
+                size: {range: [5.8, 5.8], unit: "%", asymmetric: false}
+                provenance: {uid: '94139483', ref: "arXiv:2306.11379", locator: "Table 3, Photon trigger and selection efficiency", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "Photon energy scale and resolution"
+                size: {range: [5.5, 5.5], unit: "%", asymmetric: false}
+                provenance: {uid: 15af18a0, ref: "arXiv:2306.11379", locator: "Table 3, Photon energy scale & resolution", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [2.2, 2.2], unit: "%", asymmetric: false}
+                provenance: {uid: 7772e9a6, ref: "arXiv:2306.11379", locator: "Table 3, Luminosity", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: pileup
+                specific: "Pile-up modelling"
+                size: {range: [1.2, 1.2], unit: "%", asymmetric: false}
+                provenance: {uid: 854860f8, ref: "arXiv:2306.11379", locator: "Table 3, Pile-up modelling", source: agent, status: agent-draft, date: "2026-11-12"}
+          - measurement: "meas:ggh/lhc-13.6/cms-2025-yy"
+            total: {value_pct: 16.2, provenance: {uid: ec3d9bbc, ref: "arXiv:2504.17755", locator: "Sec. 9 (Results), first equation: σ_fid = 74 ± 11 (stat) +5/−4 (syst) fb = 74 ± 12 fb; relative total derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [14.9, 14.9], unit: "%", asymmetric: false}
+                provenance: {uid: 4a34c8e1, ref: "arXiv:2504.17755", locator: "Sec. 9, first equation: ± 11 (stat) fb of 74 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [5.4, 6.8], unit: "%", asymmetric: true}
+                provenance: {uid: 6b534564, ref: "arXiv:2504.17755", locator: "Sec. 9, first equation: +5/−4 (syst) fb of 74 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "Category migration from the per-photon energy resolution"
+                size: {range: [3.5, 4.2], unit: "%", asymmetric: true}
+                provenance: {uid: 103082cd, ref: "arXiv:2504.17755", locator: "Table 2 (magnitude of the systematic uncertainties in the inclusive fiducial cross section), Category migration from energy resolution: +3.5/−4.2", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "Photon energy scale and resolution group"
+                size: {range: [2.8, 3.4], unit: "%", asymmetric: true}
+                provenance: {uid: db166b4c, ref: "arXiv:2504.17755", locator: "Table 2, Photon energy scale and resolution group: +3.4/−2.8", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [1.4, 1.4], unit: "%", asymmetric: false}
+                provenance: {uid: 514ed309, ref: "arXiv:2504.17755", locator: "Table 2, Integrated luminosity", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: efficiency
+                specific: "Photon preselection efficiency"
+                size: {range: [1.4, 1.4], unit: "%", asymmetric: false}
+                provenance: {uid: ddeefac4, ref: "arXiv:2504.17755", locator: "Table 2, Photon preselection efficiency", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: efficiency
+                specific: "Photon identification efficiency"
+                size: {range: [1.0, 1.0], unit: "%", asymmetric: false}
+                provenance: {uid: 32c034c4, ref: "arXiv:2504.17755", locator: "Table 2, Photon identification efficiency", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: pileup
+                specific: "Pileup reweighting"
+                size: {range: [0.8, 0.8], unit: "%", asymmetric: false}
+                provenance: {uid: 52c38526, ref: "arXiv:2504.17755", locator: "Table 2, Pileup reweighting", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "SM, LHC Higgs WG cross sections (ggF N3LO QCD + NLO EW) × B(H → γγ) × acceptance from Powheg + Pythia 8 (ATLAS fiducial region)"
+            accuracy:
+              qcd: N3LO
+              ew: NLO
+              shower_matched: true
+              approximations: ["normalisation: LHC Higgs Working Group predictions interpolated to 13.6 TeV (N3LO QCD + NLO EW for ggF, lower orders for the other modes)", "fiducial acceptance from the Powheg Box v2 + Pythia 8 simulated samples"]
+            total: {value_pct: 5.5, provenance: {uid: 13f6ddad, ref: "inspire:2670270", locator: "Abstract: SM prediction σ_fid,γγ = 67.6 ± 3.7 fb; relative uncertainty derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            codes: ["Powheg Box", "Pythia 8"]
+            compared_to: ["meas:ggh/lhc-13.6/atlas-2023-yy-4l"]
+            refs: ["arXiv:1610.07922"]
+            provenance: {uid: 52241f7a, ref: "arXiv:2306.11379", locator: "Sec. 3.2 (simulated event samples: normalisation of each production mode, interpolated to 13.6 TeV) and Sec. 4.6 (SM prediction corrected for acceptance)", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+          - label: "SM, MadGraph5_aMC@NLO (ggH reweighted to NNLOPS) + Pythia 8, normalised to the N3LO LHC Higgs WG cross section (CMS fiducial region)"
+            accuracy:
+              qcd: N3LO
+              shower_matched: true
+              approximations: ["inclusive prediction normalised to the N3LO computation of the LHC Higgs Working Group, interpolated to 13.6 TeV", "acceptance from MadGraph5_aMC@NLO (NLO, FxFx) with ggH reweighted to NNLOPS in pT(H) and jet multiplicity, Pythia 8 CP5 tune"]
+            total: {value_pct: 5.6, provenance: {uid: f0199e1d, ref: "arXiv:2504.17755", locator: "Sec. 9: prediction 67.8 ± 3.8 fb = 67.8 ± 2.6 (scales) ± 2.3 (PDF+αs) ± 1.4 (B) fb; relative total derived here", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "Renormalisation and factorisation scales (production cross section and acceptance)"
+                method: "LHC Higgs WG scale uncertainty on the cross sections; acceptance: μR, μF varied by a factor of 2, excluding the (2, 1/2) and (1/2, 2) combinations"
+                size: {range: [3.8, 3.8], unit: "%", asymmetric: false}
+                provenance: {uid: 6cee0935, ref: "arXiv:2504.17755", locator: "Sec. 9: ± 2.6 (scales) fb of 67.8 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF + αs (quoted together)"
+                pdf_set: "NNPDF3.1 (acceptance); LHC Higgs WG recommendation (cross sections)"
+                size: {range: [3.4, 3.4], unit: "%", asymmetric: false}
+                provenance: {uid: 397762ac, ref: "arXiv:2504.17755", locator: "Sec. 9: ± 2.3 (PDF+αs) fb of 67.8 fb; αs varied by 0.002 around 0.118", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: parametric
+                specific: "Branching fraction B(H → γγ)"
+                size: {range: [2.1, 2.1], unit: "%", asymmetric: false}
+                provenance: {uid: 28bc6b20, ref: "arXiv:2504.17755", locator: "Sec. 9: ± 1.4 (B) fb of 67.8 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+            codes: ["MadGraph5_aMC@NLO", "NNLOPS", "Pythia 8"]
+            compared_to: ["meas:ggh/lhc-13.6/cms-2025-yy"]
+            refs: ["arXiv:1610.07922", "arXiv:2402.09955"]
+            provenance: {uid: a70b63ea, ref: "arXiv:2504.17755", locator: "Sec. 3 (signal samples and normalisation), Sec. 9 (prediction and its uncertainties; inclusive prediction normalised to the next-to-next-to-next-to-leading order computation)", source: agent, status: agent-draft, date: "2026-11-12"}

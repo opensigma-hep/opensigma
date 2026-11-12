@@ -185,3 +185,41 @@ channels:
             refs: ["arXiv:1307.1347"]
             provenance: {uid: d06fb477, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_ttH (= 1)", source: agent, status: cross-checked, date: "2026-10-17"}
             headline: true
+  - id: "chan:tth/lhc-13.6"
+    collider: "col:lhc-13.6"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tth/lhc-13.6/sigma-tth-yy", region: "σ(tt̄H) × B(H → γγ), m_H = 125.09 GeV, inclusive over production kinematics"}
+    measurements:
+      - id: "meas:tth/lhc-13.6/atlas-2026-yy"
+        experiment: "ATLAS"
+        dataset: "13.6 TeV, 164 fb⁻¹ (Run 3), tt̄H and tH with H → γγ"
+        ref: "inspire:3165013"
+    observables:
+      - id: "obs:tth/lhc-13.6/sigma-tth-yy"
+        name: "σ(tt̄H) × B(H → γγ) at 13.6 TeV"
+        kind: total
+        variable: "σ(pp → tt̄H) × B(H → γγ), from the tt̄H signal strength in diphoton events with the tH and other Higgs production rates fixed to the SM"
+        results:
+          - measurement: "meas:tth/lhc-13.6/atlas-2026-yy"
+            total: {value_pct: 27.4, provenance: {uid: f479ebac, ref: "arXiv:2606.04855", locator: "Abstract and results paragraph: σ(tt̄H) × B(γγ) = 1.46 +0.40/−0.35 fb = 1.46 +0.34/−0.32 (stat.) +0.22/−0.13 (sys.) fb (μ = 1.13 +0.33/−0.28); larger side as % of the central value", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [21.9, 23.3], unit: "%", asymmetric: true}
+                provenance: {uid: 74a00425, ref: "arXiv:2606.04855", locator: "Abstract and results paragraph: +0.34/−0.32 (stat.) fb of 1.46 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined; theory uncertainties of the tt̄H/tH cross sections and of B(H → γγ) removed)"
+                size: {range: [8.9, 15.1], unit: "%", asymmetric: true}
+                provenance: {uid: 1f3a462a, ref: "arXiv:2606.04855", locator: "Abstract and results paragraph: +0.22/−0.13 (sys.) fb of 1.46 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "SM σ(tt̄H) × B(H → γγ) used to normalise the signal (NLO QCD + NLO EW), m_H = 125.09 GeV"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              approximations: ["the letter only states that the Higgs samples are normalised to the SM cross sections and cites the calculations; NLO QCD + NLO EW is read off the titles of the cited tt̄H references", "no numerical value or uncertainty of the prediction is quoted (measured value = 1.13 × SM)"]
+            compared_to: ["meas:tth/lhc-13.6/atlas-2026-yy"]
+            refs: ["inspire:3165013"]
+            provenance: {uid: 99e2f802, ref: "arXiv:2606.04855", locator: "Simulation paragraph: Higgs boson samples normalised to the SM cross sections [54–71, 21] times the SM branching ratio to diphotons, m_H = 125.09 GeV; tt̄H references in the bibliography: NLO QCD corrections to tt̄H production; QCD NLO and EW NLO corrections to tt̄H production", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
