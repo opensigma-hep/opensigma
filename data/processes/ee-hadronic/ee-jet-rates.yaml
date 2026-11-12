@@ -398,3 +398,4 @@ channels:
             compared_to: ["meas:ee-jet-rates/lep1/aleph-2004"]
             refs: ["arXiv:2602.18185"]
             provenance: {uid: 2c52b891, ref: "arXiv:2602.18185", locator: "Abstract; Sec. II (NNLOJET, antenna subtraction, LCA two-loop remainder, OpenLoops2); Sec. III, Fig. 1 (compared to ALEPH EPJC 35 (2004), ref. [100], at √s = 91.2 GeV)", source: agent, status: agent-draft, date: "2026-10-22"}
+            headline: true

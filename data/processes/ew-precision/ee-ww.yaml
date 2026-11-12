@@ -119,6 +119,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: 2a0197e9, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 15.361 pb, RACOONWW 15.368 pb at 182.7 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-188.6"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 188.6 GeV"
         kind: total
@@ -145,6 +146,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: f6c99ccb, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 16.266 pb, RACOONWW 16.249 pb at 188.6 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-191.6"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 191.6 GeV"
         kind: total
@@ -171,6 +173,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: a9308a23, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 16.568 pb, RACOONWW 16.519 pb at 191.6 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-195.5"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 195.5 GeV"
         kind: total
@@ -197,6 +200,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: 742dd669, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 16.841 pb, RACOONWW 16.801 pb at 195.5 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-199.5"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 199.5 GeV"
         kind: total
@@ -223,6 +227,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: 96747fea, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 17.017 pb, RACOONWW 16.979 pb at 199.5 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-201.6"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 201.6 GeV"
         kind: total
@@ -250,6 +255,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: f9c0a069, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 17.076 pb, RACOONWW 17.032 pb at 201.6 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-204.9"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 204.9 GeV"
         kind: total
@@ -277,6 +283,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: e06c50de, ref: "inspire:1219330", locator: "Fig. 5.1 and Table E.4 (YFSWW 17.128 pb, RACOONWW 17.079 pb at 204.9 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-161.3"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 161.3 GeV"
         kind: total
@@ -296,6 +303,7 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: 6d564449, ref: "inspire:1219330", locator: "Sec. 5.2.1 and Fig. 5.1 (predictions compared with LEP data between 155 and 215 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ee-ww/lep2/sigma-ww-172.1"
         name: "σ(e⁺e⁻ → W⁺W⁻), CC03 signal, LEP combination, √s = 172.1 GeV"
         kind: total
@@ -314,3 +322,4 @@ channels:
             compared_to: ["meas:ee-ww/lep2/lep-2013-combination"]
             refs: ["inspire:529378", "inspire:529590", "inspire:1219330"]
             provenance: {uid: b63a4108, ref: "inspire:1219330", locator: "Sec. 5.2.1 and Fig. 5.1 (predictions compared with LEP data between 155 and 215 GeV, mW = 80.35 GeV)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true

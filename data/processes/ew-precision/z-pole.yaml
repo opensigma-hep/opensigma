@@ -135,6 +135,7 @@ channels:
             compared_to: ["meas:z-pole/lep1/lep-2005-combination"]
             refs: ["inspire:1740872", "inspire:1670617"]
             provenance: {uid: 976024df, ref: "inspire:1740872", locator: "Abstract; Sec. 2 (list of included corrections); Table 1 (fit formula for Γ_Z)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:z-pole/lep1/r-lepton"
         name: "R⁰_ℓ: ratio Γ_had/Γ_ℓ of hadronic to leptonic Z widths (massless leptons)"
         kind: pseudo
@@ -165,6 +166,7 @@ channels:
             compared_to: ["meas:z-pole/lep1/lep-2005-combination-lu"]
             refs: ["inspire:1740872", "inspire:1670617"]
             provenance: {uid: f005da2e, ref: "inspire:1740872", locator: "Abstract; Sec. 2 (list of included corrections); Table 1 (fit formula for R_ℓ)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:z-pole/lep1/afb-b"
         name: "A⁰,ᵇ_FB: b-quark pole forward-backward asymmetry"
         kind: pseudo
