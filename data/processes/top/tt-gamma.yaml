@@ -1,0 +1,383 @@
+id: "proc:tt-gamma"
+name: "tt̄γ associated production"
+family: "fam:top"
+sector: SM
+description: "Production of a top-antitop pair in association with an isolated photon, pp → tt̄γ. Probes the top-quark electric charge and the top-photon coupling (electroweak dipole operators). Measured as fiducial cross sections, since photons radiated from the top-quark decay products cannot be separated from those radiated in production; ATLAS also isolates the production component. Theory: NLO QCD including full off-shell effects in the dilepton channel, complete NLO (QCD+EW), and approximate NNLO from soft-gluon corrections; approximate two-loop amplitudes and the leading-colour two-loop integrals exist, a full NNLO calculation does not."
+watch:
+  recids: [2768921, 2013377, 1876579, 3033999, 2606517]
+  queries:
+    - '(collaboration:ATLAS or collaboration:CMS) and t top and (t photon or t photons) and (t "cross section" or t "cross sections" or t "cross-section" or t "cross-sections" or t asymmetry) and not t Higgs and not t "flavor changing" and not t "flavour-changing"'
+    - '(fulltext "ttγ" or t "top-quark pair production with isolated photons" or t "top quark pair production in association with a photon") and (t NNLO or t "two-loop" or t "off-shell" or t "soft-gluon" or t NLO or t resummation)'
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:889007", "inspire:1664327"]
+        provenance: {uid: '969e8770', ref: "inspire:889007", locator: "Abstract (NLO QCD corrections to tt̄γ at the Tevatron and the LHC with top-quark decays in the narrow-width approximation, including photon radiation off the decay products); inspire:1664327 abstract (first full NLO QCD computation for e⁺ν_e μ⁻ν̄_μ b b̄ γ with all resonant and non-resonant diagrams, interferences and off-shell effects)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - row: "NNLO QCD"
+    cells:
+      1L:
+        status: done
+        refs: ["inspire:2921544"]
+        provenance: {uid: 0a2a4151, ref: "inspire:2921544", locator: "Abstract (analytic one-loop QCD helicity amplitudes for tt̄γ and tt̄j through O(ε²), required for the two-loop hard functions of the NNLO computation)", source: agent, status: agent-draft, date: "2026-11-12"}
+      2L:
+        status: partial
+        amplitude: "amp:2L/qqbar-gg-ttbar-gamma-he"
+        approximations: ["IR poles exact; finite remainders only in the high-energy boosted limit (mass factorisation)", "two-loop integrals complete in the leading-colour approximation, finite remainder not yet assembled from them"]
+        refs: ["inspire:3033999", "inspire:3221697"]
+        provenance: {uid: ae37319e, ref: "inspire:3033999", locator: "Abstract (two-loop IR poles with full top-mass dependence, finite remainders approximated in the high-energy boosted limit; a step toward NNLO predictions); inspire:3221697 abstract (two-loop integrals for on-shell tt̄γ in the leading-colour approximation, which will enable the analytic extraction of the two-loop finite remainder)", source: agent, status: agent-draft, date: "2026-11-12"}
+      code:
+        status: partial
+        approximations: ["approximate NNLO: second-order soft-gluon corrections added to the complete NLO result, no full NNLO calculation"]
+        refs: ["inspire:2606517"]
+        provenance: {uid: 41f3bec0, ref: "inspire:2606517", locator: "Abstract (approximate NNLO cross section with second-order soft-gluon corrections added to the complete NLO result); inspire:3033999 Introduction (full NNLO QCD corrections are the current frontier)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - row: "NLO EW"
+    cells:
+      code:
+        status: done
+        refs: ["inspire:1867201", "inspire:2765813"]
+        provenance: {uid: da0914fb, ref: "inspire:1867201", locator: "Abstract (first Complete-NLO predictions for tt̄γ with at least one isolated photon, automated in MadGraph5_aMC@NLO); inspire:2765813 abstract (complete NLO including top-quark decays in the narrow-width approximation, dilepton channel)", source: agent, status: agent-draft, date: "2026-11-12"}
+channels:
+  - id: "chan:tt-gamma/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tt-gamma/lhc-13/sigma-fid-dilepton", region: "fiducial tt̄γ cross section, dilepton channel (CMS particle-level phase space)"}
+    measurements:
+      - id: "meas:tt-gamma/lhc-13/cms-2022-dilepton"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (2016–2018), dilepton channel (eμ, ee, μμ)"
+        ref: "inspire:2013377"
+      - id: "meas:tt-gamma/lhc-13/cms-2021-ljets"
+        experiment: "CMS"
+        dataset: "13 TeV, 137 fb⁻¹ (2016–2018), single-lepton channel"
+        ref: "inspire:1876579"
+      - id: "meas:tt-gamma/lhc-13/atlas-2024-ljets-dilepton"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 140 fb⁻¹, single-lepton and dilepton channels; tt̄γ production (photon from an initial-state parton or a top quark) and total tt̄γ production + decay"
+        ref: "inspire:2768921"
+        hepdata: "hepdata:ins2768921/$t\\bar{t}\\gamma$ production cross-sections"
+      - id: "meas:tt-gamma/lhc-13/atlas-2020-emu"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹, eμ channel; tt̄γ and tWγ measured together"
+        ref: "inspire:1806806"
+    observables:
+      - id: "obs:tt-gamma/lhc-13/sigma-fid-dilepton"
+        name: "Fiducial σ(tt̄γ), dilepton channel (CMS)"
+        kind: fiducial
+        variable: "σ_fid(pp → tt̄γ), dilepton channel, photons from initial state, top quarks or their decay products"
+        results:
+          - measurement: "meas:tt-gamma/lhc-13/cms-2022-dilepton"
+            total: {value_pct: 3.9, provenance: {uid: 6fd756aa, ref: "inspire:2013377", locator: "Abstract and Summary: σ_fid = 175.2 ± 2.5 (stat) ± 6.3 (syst) fb; quadrature sum sqrt(2.5² + 6.3²)/175.2", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [1.4, 1.4], asymmetric: false}
+                provenance: {uid: 05c89f72, ref: "inspire:2013377", locator: "Abstract: ± 2.5 (stat) fb of 175.2 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [3.6, 3.6], asymmetric: false}
+                provenance: {uid: 60771e0c, ref: "inspire:2013377", locator: "Abstract: ± 6.3 (syst) fb of 175.2 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [1.7, 1.7], asymmetric: false}
+                provenance: {uid: 5078a8bf, ref: "inspire:2013377", locator: "Table 3, Integrated luminosity, postfit: 1.7 %", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "aNNLO QCD (soft-gluon corrections on complete NLO, MSHT20 NNLO PDFs)"
+            accuracy:
+              qcd: NLO
+              approximations: ["exact NLO plus approximate NNLO (second-order) soft-gluon corrections ('aNNLO' in the paper); central scale μ = mt = 172.5 GeV", "evaluated for the CMS dilepton fiducial measurement; the corresponding inclusive result for pT(γ) > 20 GeV and an isolated photon is 2.74 +0.18 −0.16 (scale) +0.04 −0.03 (pdf) pb at 13 TeV"]
+            total: {value_pct: 6.6, provenance: {uid: 4cfee68b, ref: "inspire:2606517", locator: "Sec. 3, last paragraph: aNNLO cross section of 173 +11 −10 +3 −2 fb for the CMS dilepton measurement; scale and pdf added in quadrature, larger side sqrt(11² + 3²)/173", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "μ variation"
+                method: "scale variation between mt/2 and 2mt around μ = mt"
+                size: {range: [5.8, 6.4], unit: "%", asymmetric: true}
+                provenance: {uid: 25246d60, ref: "inspire:2606517", locator: "Sec. 3, last paragraph: 173 +11 −10 (scale) fb; scale range stated below Table 1", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF uncertainty"
+                pdf_set: "MSHT20 NNLO"
+                size: {range: [1.2, 1.7], unit: "%", asymmetric: true}
+                provenance: {uid: 9a7cecc4, ref: "inspire:2606517", locator: "Sec. 3, last paragraph: 173 +3 −2 (pdf) fb", source: agent, status: agent-draft, date: "2026-11-12"}
+            compared_to: ["meas:tt-gamma/lhc-13/cms-2022-dilepton"]
+            refs: ["inspire:2606517"]
+            provenance: {uid: 91c8fbc9, ref: "inspire:2606517", locator: "Abstract and Sec. 3 (Table 1 and the comparison with the CMS dilepton measurement 175.2 ± 2.5 ± 6.3 fb)", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+          - label: "NLO QCD (LO MadGraph5_aMC@NLO sample scaled by an NLO K-factor), CMS 2022 comparison"
+            accuracy:
+              qcd: NLO
+              approximations: ["LO event sample normalised with an NLO K-factor"]
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 17.4, provenance: {uid: be147f4b, ref: "inspire:2013377", locator: "Sec. 3 and Summary: σ_SM(pp → tt̄γ) = 155 ± 27 fb, uncertainty from scale variations and the PDF choice; 27/155", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:tt-gamma/lhc-13/cms-2022-dilepton"]
+            refs: ["inspire:2013377"]
+            provenance: {uid: 428376cf, ref: "inspire:2013377", locator: "Text above Table 2 (SM prediction in the fiducial phase space evaluated from the LO event sample with the NLO K-factor)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tt-gamma/lhc-13/sigma-fid-ljets"
+        name: "Fiducial σ(tt̄γ), single-lepton channel (CMS)"
+        kind: fiducial
+        variable: "σ_fid(tt̄γ), single-lepton channel, pT(γ) > 20 GeV, |η(γ)| < 1.4442"
+        results:
+          - measurement: "meas:tt-gamma/lhc-13/cms-2021-ljets"
+            total: {value_pct: 6.1, provenance: {uid: 7a24a89f, ref: "inspire:1876579", locator: "Abstract and eq. (2): σ(tt̄γ) = 798 ± 7 (stat) ± 48 (syst) fb; quadrature sum sqrt(7² + 48²)/798", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [0.9, 0.9], asymmetric: false}
+                provenance: {uid: e51d0845, ref: "inspire:1876579", locator: "Abstract and eq. (2): ± 7 (stat) fb of 798 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [6.0, 6.0], asymmetric: false}
+                provenance: {uid: d67db4fb, ref: "inspire:1876579", locator: "Abstract and eq. (2): ± 48 (syst) fb of 798 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Integrated luminosity"
+                size: {range: [1.8, 1.8], asymmetric: false}
+                provenance: {uid: 05f02b45, ref: "inspire:1876579", locator: "Table 5, Integrated luminosity, uncertainty in σ(tt̄γ): 1.8 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "JES"
+                size: {range: [1.9, 1.9], asymmetric: false}
+                provenance: {uid: d3c2d9dc, ref: "inspire:1876579", locator: "Table 5, JES, uncertainty in σ(tt̄γ): 1.9 %", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NLO QCD (MadGraph5_aMC@NLO), CMS 2021 comparison"
+            accuracy:
+              qcd: NLO
+              approximations: ["NLO effects in the top-quark decays not included"]
+            codes: ["MadGraph5_aMC@NLO"]
+            total: {value_pct: 17.5, provenance: {uid: 8047546c, ref: "inspire:1876579", locator: "Text below Table 2 and below eq. (2): σ_NLO(tt̄γ) = 773 ± 135 fb; 135/773", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:tt-gamma/lhc-13/cms-2021-ljets"]
+            refs: ["inspire:1876579"]
+            provenance: {uid: f6b2ef0e, ref: "inspire:1876579", locator: "Text below Table 2 (fiducial cross section predicted with MadGraph5_aMC@NLO at NLO in QCD; NLO effects in the top-quark decays not included)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tt-gamma/lhc-13/sigma-fid-production"
+        name: "Fiducial σ(tt̄γ production), single-lepton + dilepton combination (ATLAS)"
+        kind: fiducial
+        variable: "σ(tt̄γ production), photon radiated from an initial-state parton or a top quark, pT(γ) > 20 GeV, particle level"
+        results:
+          - measurement: "meas:tt-gamma/lhc-13/atlas-2024-ljets-dilepton"
+            total:
+              value_pct: 4.8
+              provenance: {uid: 55b8b58d, ref: "hepdata:ins2768921/$t\\bar{t}\\gamma$ production cross-sections", locator: "$t\\bar{t}\\gamma$ production cross-sections, quadrature sum of all errors (bin 3)", source: hepdata, status: machine-verified, date: "2026-11-12"}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [1.5, 1.5], asymmetric: false}
+                provenance: {uid: b728cfa9, ref: "hepdata:ins2768921/Table 3", locator: "Table 3, column 3 (combination), Statistical uncertainty: 1.5 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Total systematic uncertainty"
+                size: {range: [5.0, 5.0], asymmetric: false}
+                provenance: {uid: c2b79179, ref: "hepdata:ins2768921/Table 3", locator: "Table 3, column 3 (combination), Total systematic uncertainty: 5.0 % (the table's Total uncertainty is 5.2 %)", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: acceptance_extrapolation
+                specific: "Other tt̄γ production modelling"
+                size: {range: [3.0, 3.0], asymmetric: false}
+                provenance: {uid: 99f7defa, ref: "hepdata:ins2768921/Table 3", locator: "Table 3, column 3 (combination), Other tt̄γ production modelling: 3.0 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "tt̄γ decay normalisation"
+                size: {range: [2.1, 2.1], asymmetric: false}
+                provenance: {uid: 1eaca19b, ref: "hepdata:ins2768921/Table 3", locator: "Table 3, column 3 (combination), tt̄γ decay normalisation: 2.1 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Prompt photon background normalisation"
+                size: {range: [2.0, 2.0], asymmetric: false}
+                provenance: {uid: 2f457234, ref: "hepdata:ins2768921/Table 3", locator: "Table 3, column 3 (combination), Prompt photon background normalisation: 2.0 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "Jet uncertainties"
+                size: {range: [1.7, 1.7], asymmetric: false}
+                provenance: {uid: 41d33f19, ref: "hepdata:ins2768921/Table 3", locator: "Table 3, column 3 (combination), Jet uncertainties: 1.7 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [0.8, 0.8], asymmetric: false}
+                provenance: {uid: 7da10962, ref: "hepdata:ins2768921/Table 3", locator: "Table 3, column 3 (combination), Luminosity: 0.8 %", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NLO QCD + PS (MadGraph5_aMC@NLO + Pythia 8), ATLAS 2024 comparison"
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations: ["ATLAS quotes the prediction per channel only; the numbers here are for the single-lepton fiducial region (255 fb; dilepton: 40.9 +3.9 −4.0 (scale) +0.9 −0.5 (PDF) fb), not for the combined fiducial region of the measurement (319 fb)"]
+            codes: ["MadGraph5_aMC@NLO", "Pythia 8"]
+            total: {value_pct: 10.5, provenance: {uid: ef5176f8, ref: "inspire:2768921", locator: "Sec. 9.1, text above the combined result: 255 +25 −26 (scale) +6 −4 (PDF) fb in the single-lepton channel; larger side sqrt(26² + 6²)/255", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "scale"
+                method: "scale variation (range not stated where the prediction is quoted)"
+                size: {range: [9.8, 10.2], unit: "%", asymmetric: true}
+                provenance: {uid: 7de42bd1, ref: "inspire:2768921", locator: "Sec. 9.1, text above the combined result: +25 −26 (scale) fb of 255 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF"
+                pdf_set: "NNPDF3.0nlo"
+                size: {range: [1.6, 2.4], unit: "%", asymmetric: true}
+                provenance: {uid: 9fe5510d, ref: "inspire:2768921", locator: "Sec. 9.1, text above the combined result: +6 −4 (PDF) fb of 255 fb; PDF set of the tt̄γ samples from Sec. 3", source: agent, status: agent-draft, date: "2026-11-12"}
+            compared_to: ["meas:tt-gamma/lhc-13/atlas-2024-ljets-dilepton"]
+            refs: ["inspire:2768921"]
+            provenance: {uid: a9dcc284, ref: "inspire:2768921", locator: "Sec. 3 (tt̄γ production sample: MadGraph5_aMC@NLO at NLO in QCD as a 2 → 3 process, NNPDF3.0nlo) and Sec. 9 (measured cross sections agree with the NLO predictions, central values about 10% larger)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tt-gamma/lhc-13/pt-gamma"
+        name: "dσ/dpT(γ), tt̄γ production, combined single-lepton + dilepton fiducial region (ATLAS)"
+        kind: differential
+        variable: "pT(γ)"
+        results:
+          - measurement: "meas:tt-gamma/lhc-13/atlas-2024-ljets-dilepton"
+            total:
+              value_pct: 6.9
+              provenance: {uid: f865e22c, ref: "hepdata:ins2768921/Figure 10 (a)", locator: "Figure 10 (a), quadrature sum of all errors (min over bins)", source: hepdata, status: machine-verified, date: "2026-11-12"}
+            uncertainties: []
+        predictions:
+          - label: "NLO QCD + PS (MadGraph5_aMC@NLO + Pythia 8), ATLAS 2024 comparison"
+            accuracy: {qcd: NLO, shower_matched: true}
+            codes: ["MadGraph5_aMC@NLO", "Pythia 8"]
+            compared_to: ["meas:tt-gamma/lhc-13/atlas-2024-ljets-dilepton"]
+            refs: ["inspire:2768921"]
+            provenance: {uid: 7e0ad0df, ref: "inspire:2768921", locator: "Figure 10 and HEPData table 'Figure 10 (a)', column 'MG5_aMC+P8'", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tt-gamma/lhc-13/sigma-fid-emu"
+        name: "Fiducial σ(tt̄γ + tWγ), eμ channel (ATLAS)"
+        kind: fiducial
+        variable: "σ_fid(tt̄γ + tWγ), eμ channel, parton-level fiducial phase space"
+        results:
+          - measurement: "meas:tt-gamma/lhc-13/atlas-2020-emu"
+            total: {value_pct: 6.8, provenance: {uid: 3d638678, ref: "inspire:1806806", locator: "Abstract and Sec. 7: σ_fid = 39.6 ± 0.8 (stat) +2.6 −2.2 (syst) fb = 39.6 +2.7 −2.3 fb; larger side 2.7/39.6", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [2.0, 2.0], asymmetric: false}
+                provenance: {uid: ae99bb55, ref: "inspire:1806806", locator: "Results text above Table 2: ± 0.8 (stat) fb of 39.6 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [5.6, 6.6], asymmetric: true}
+                provenance: {uid: 81dd1b96, ref: "inspire:1806806", locator: "Results text above Table 2: +2.6 −2.2 (syst) fb of 39.6 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: acceptance_extrapolation
+                specific: "tt̄γ/tWγ modelling"
+                size: {range: [3.8, 3.8], asymmetric: false}
+                provenance: {uid: 614ed08c, ref: "inspire:1806806", locator: "Table 2, tt̄γ/tWγ modelling: 3.8 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Background modelling"
+                size: {range: [2.1, 2.1], asymmetric: false}
+                provenance: {uid: a7495e05, ref: "inspire:1806806", locator: "Table 2, Background modelling: 2.1 %", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.8, 1.8], asymmetric: false}
+                provenance: {uid: 9b72f2a6, ref: "inspire:1806806", locator: "Table 2, Luminosity: 1.8 %", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NLO QCD with full off-shell effects (pp → e⁺ν μ⁻ν̄ b b̄ γ), ATLAS 2020 comparison"
+            accuracy:
+              qcd: NLO
+              approximations: ["all resonant and non-resonant diagrams, interferences and off-shell effects of top quarks and W bosons; dedicated calculation for the ATLAS fiducial phase space, scale HT/4, CT14 PDFs"]
+            total: {value_pct: 6.4, provenance: {uid: 023c4382, ref: "inspire:1806806", locator: "Results text above Table 2: σ_fid = 38.50 +0.56 −2.18 (scale) +1.04 −1.18 (PDF) fb; larger side sqrt(2.18² + 1.18²)/38.50", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: MHOU
+                specific: "scale"
+                method: "scale variation around μR = μF = HT/4 (range not stated in the ATLAS paper)"
+                size: {range: [1.5, 5.7], unit: "%", asymmetric: true}
+                provenance: {uid: 7e30437e, ref: "inspire:1806806", locator: "Results text above Table 2: +0.56 −2.18 (scale) fb of 38.50 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: PDF
+                specific: "PDF (rescaled to 68% CL)"
+                pdf_set: "CT14"
+                size: {range: [2.7, 3.1], unit: "%", asymmetric: true}
+                provenance: {uid: 3f2cd8b7, ref: "inspire:1806806", locator: "Results text above Table 2: +1.04 −1.18 (PDF) fb of 38.50 fb, CT14 PDF set", source: agent, status: agent-draft, date: "2026-11-12"}
+            compared_to: ["meas:tt-gamma/lhc-13/atlas-2020-emu"]
+            refs: ["inspire:1806806", "inspire:1664327", "inspire:1695169"]
+            provenance: {uid: b13f68ba, ref: "inspire:1806806", locator: "Results text above Table 2 (dedicated theoretical calculation provided by the authors of Refs. [10, 11] = inspire:1664327, inspire:1695169); inspire:1664327 abstract (full off-shell NLO QCD)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - id: "chan:tt-gamma/lhc-8"
+    collider: "col:lhc-8"
+    initial_state: "pp"
+    coverage: stub
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tt-gamma/lhc-8/sigma-fid-atlas", region: "fiducial tt̄γ cross section, single-lepton channel, pT(γ) > 15 GeV"}
+    measurements:
+      - id: "meas:tt-gamma/lhc-8/atlas-2017-ljets"
+        experiment: "ATLAS"
+        dataset: "8 TeV, 20.2 fb⁻¹ (2012), single-lepton channel"
+        ref: "inspire:1604029"
+      - id: "meas:tt-gamma/lhc-8/cms-2017-ljets"
+        experiment: "CMS"
+        dataset: "8 TeV, 19.7 fb⁻¹, semileptonic channel, measured relative to the inclusive tt̄ cross section"
+        ref: "inspire:1607560"
+    observables:
+      - id: "obs:tt-gamma/lhc-8/sigma-fid-atlas"
+        name: "Fiducial σ(tt̄γ), single-lepton channel (ATLAS)"
+        kind: fiducial
+        variable: "σ_fid(tt̄γ), single-lepton channel, pT(γ) > 15 GeV"
+        results:
+          - measurement: "meas:tt-gamma/lhc-8/atlas-2017-ljets"
+            total: {value_pct: 13.2, provenance: {uid: d69f99e3, ref: "inspire:1604029", locator: "Abstract: 139 ± 7 (stat.) ± 17 (syst.) fb; quadrature sum sqrt(7² + 17²)/139", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [5.0, 5.0], asymmetric: false}
+                provenance: {uid: 2c4c228e, ref: "inspire:1604029", locator: "Abstract: ± 7 (stat.) fb of 139 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [12.2, 12.2], asymmetric: false}
+                provenance: {uid: 1cc578a7, ref: "inspire:1604029", locator: "Abstract: ± 17 (syst.) fb of 139 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NLO QCD, ATLAS 2017 comparison"
+            accuracy: {qcd: NLO}
+            total: {value_pct: 15.9, provenance: {uid: edb741c8, ref: "inspire:1604029", locator: "Abstract: theoretical prediction at next-to-leading order of 151 ± 24 fb; 24/151", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:tt-gamma/lhc-8/atlas-2017-ljets"]
+            refs: ["inspire:1604029"]
+            provenance: {uid: 1e5ee953, ref: "inspire:1604029", locator: "Abstract (good agreement with the theoretical prediction at next-to-leading order)", source: agent, status: agent-draft, date: "2026-11-12"}
+      - id: "obs:tt-gamma/lhc-8/sigma-fid-cms"
+        name: "Fiducial σ(tt̄γ) per semileptonic final state (CMS)"
+        kind: fiducial
+        variable: "σ_fid(tt̄γ) per semileptonic final state, ET(γ) > 25 GeV, |η(γ)| < 1.44"
+        results:
+          - measurement: "meas:tt-gamma/lhc-8/cms-2017-ljets"
+            total: {value_pct: 21.3, provenance: {uid: eb528aa7, ref: "inspire:1607560", locator: "Abstract: 127 ± 27 (stat+syst) fb per semileptonic final state; 27/127", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties: []
+  - id: "chan:tt-gamma/lhc-7"
+    collider: "col:lhc-7"
+    initial_state: "pp"
+    coverage: stub
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tt-gamma/lhc-7/sigma-fid", region: "fiducial σ(tt̄γ) × BR per lepton flavour, single-lepton channel, ET(γ) > 20 GeV"}
+    measurements:
+      - id: "meas:tt-gamma/lhc-7/atlas-2015-ljets"
+        experiment: "ATLAS"
+        dataset: "7 TeV, 4.59 fb⁻¹, single-lepton channel"
+        ref: "inspire:1342452"
+    observables:
+      - id: "obs:tt-gamma/lhc-7/sigma-fid"
+        name: "Fiducial σ(tt̄γ) × BR per lepton flavour"
+        kind: fiducial
+        variable: "σ_fid(tt̄γ) × BR, single-lepton channel, per lepton flavour, ET(γ) > 20 GeV"
+        results:
+          - measurement: "meas:tt-gamma/lhc-7/atlas-2015-ljets"
+            total: {value_pct: 30.0, provenance: {uid: 6c7bebef, ref: "inspire:1342452", locator: "Abstract: 63 ± 8 (stat) +17 −13 (syst) ± 1 (lumi) fb; larger side sqrt(8² + 17² + 1²)/63", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical"
+                size: {range: [12.7, 12.7], asymmetric: false}
+                provenance: {uid: b040a4c8, ref: "inspire:1342452", locator: "Abstract: ± 8 (stat) fb of 63 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic"
+                size: {range: [20.6, 27.0], asymmetric: true}
+                provenance: {uid: d2c365d9, ref: "inspire:1342452", locator: "Abstract: +17 −13 (syst) fb of 63 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: lumi
+                specific: "Luminosity"
+                size: {range: [1.6, 1.6], asymmetric: false}
+                provenance: {uid: a2de3d85, ref: "inspire:1342452", locator: "Abstract: ± 1 (lumi) fb of 63 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "LO calculation normalised to the NLO prediction, ATLAS 2015 comparison"
+            accuracy:
+              qcd: NLO
+              approximations: ["leading-order calculation normalised to the next-to-leading-order prediction"]
+            total: {value_pct: 20.8, provenance: {uid: c4c13c86, ref: "inspire:1342452", locator: "Abstract: leading-order theoretical calculation normalized to the next-to-leading-order theoretical prediction of 48 ± 10 fb; 10/48", source: agent, status: agent-draft, date: "2026-11-12"}}
+            compared_to: ["meas:tt-gamma/lhc-7/atlas-2015-ljets"]
+            refs: ["inspire:1342452"]
+            provenance: {uid: 91dd939d, ref: "inspire:1342452", locator: "Abstract (good agreement with the LO calculation normalised to the NLO prediction)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - id: "chan:tt-gamma/tevatron-1960"
+    collider: "col:tevatron-1960"
+    initial_state: "pp̄"
+    coverage: stub
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:tt-gamma/tevatron-1960/ratio-ttgamma-tt", region: "σ(tt̄γ)/σ(tt̄), ET(γ) > 10 GeV, central photon"}
+    measurements:
+      - id: "meas:tt-gamma/tevatron-1960/cdf-2011"
+        experiment: "CDF"
+        dataset: "1.96 TeV, 6.0 fb⁻¹, lepton + photon + missing ET + b-jet"
+        ref: "inspire:914187"
+    observables:
+      - id: "obs:tt-gamma/tevatron-1960/ratio-ttgamma-tt"
+        name: "σ(tt̄γ)/σ(tt̄)"
+        kind: ratio
+        variable: "σ(tt̄γ)/σ(tt̄), ET(γ) > 10 GeV, central photon"
+        results:
+          - measurement: "meas:tt-gamma/tevatron-1960/cdf-2011"
+            total: {value_pct: 37.5, provenance: {uid: 9242e86d, ref: "inspire:914187", locator: "Abstract: ratio of the tt̄γ to the tt̄ cross section 0.024 ± 0.009; 0.009/0.024", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties: []
