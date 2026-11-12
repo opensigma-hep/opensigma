@@ -221,6 +221,7 @@ channels:
             compared_to: ["meas:ttbar/lhc-13/cms-2021-ljets-diff"]
             refs: ["inspire:1901295"]
             provenance: {uid: cb4bfbd9, ref: "inspire:1901295", locator: "Sec. 2 (NNLO QCD differential cross sections from MATRIX, NNPDF3.1nnlo_as_0118) and Fig. 19 (parton-level m(tt̄) compared to MATRIX); headline bin 2: 400 < m(tt̄) < 480 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:ttbar/lhc-13/entanglement-d"
         name: "Spin-entanglement marker D near the tt̄ threshold (D < −1/3 signals entanglement)"
         kind: asymmetry
@@ -277,6 +278,7 @@ channels:
             compared_to: ["meas:ttbar/lhc-13/cms-2024-entanglement"]
             refs: ["inspire:2795514"]
             provenance: {uid: 44eb4055, ref: "inspire:2795514", locator: "Sec. 5 (POWHEG v2 NLO tt̄ with spin correlations, η_t from MG5_aMC@NLO 2.6.5 at LO) and Fig. 9 (D compared with MC predictions with and without η_t); HEPData Table 3", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "NLO+PS (POWHEG v2 hvq + Pythia 8), ATLAS 2024 comparison"
             accuracy:
               qcd: NLO
@@ -332,6 +334,7 @@ channels:
             compared_to: ["meas:ttbar/lhc-13/atlas-2022-boosted-ljets"]
             refs: ["inspire:2037744"]
             provenance: {uid: 235c05e5, ref: "inspire:2037744", locator: "Sec. 2 (MC normalised to σ(tt̄) NNLO+NNLL = 832 ± 51 pb; NNLO reweighting of pT(t), m(tt̄), pT(tt̄)), Sec. 6 and Fig. 9; HEPData Table 1, column 'SIG (PWG+PY8)' = 1.4806 pb", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:ttbar/lhc-13/pt-nunu"
         name: "Normalised 1/σ dσ/dpT(νν), dilepton, particle level (fiducial)"
         kind: differential
@@ -350,6 +353,7 @@ channels:
             compared_to: ["meas:ttbar/lhc-13/cms-2025-dineutrino"]
             refs: ["inspire:3006250", "inspire:1813241"]
             provenance: {uid: ef7adecb, ref: "inspire:3006250", locator: "Sec. 7 (fixed-order NLO and NNLO predictions of Ref. [29] = Czakon, Mitov, Poncelet, JHEP 05 (2021) 212, narrow-width approximation, ME scale and PDF uncertainties) and Fig. 8", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "NLO+PS (POWHEG v2 + Pythia 8), CMS 2025 comparison"
             accuracy: {qcd: NLO, shower_matched: true}
             codes: ["POWHEG-BOX", "Pythia8"]
@@ -373,13 +377,14 @@ channels:
                 size: {range: [78.6, 104.8], asymmetric: true}
                 provenance: {uid: a61fdb37, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6, M(tt̄) > 750 GeV, Syst +0.33 −0.44 of 0.42 (%); MC statistical ± 0.32 listed separately", source: agent, status: agent-draft, date: "2026-10-22"}
         predictions:
-          - label: "NNLO QCD + NLO EW, CMS 2022 comparison"
+          - label: "Fixed order O(αs⁴) QCD + NLO EW (NLO for A_C), CMS 2022 comparison"
             accuracy: {qcd: NLO, ew: NLO, approximations: ["O(αs⁴) (NNLO for σ(tt̄)); A_C vanishes at Born level, so this is NLO for the asymmetry"]}
             uses_amplitudes: ["amp:2L/qqbar-ttbar", "amp:2L/gg-ttbar"]
             total: {value_pct: 7.4, provenance: {uid: 01bf13c3, ref: "inspire:2132366", locator: "arXiv:2208.02751, results table of Sec. 6, Prediction column, M(tt̄) > 750 GeV: 0.94 +0.05 −0.07 (%); larger side 0.07/0.94", source: agent, status: cross-checked, date: "2026-10-22"}}
             compared_to: ["meas:ttbar/lhc-13/cms-2022-boosted-ac"]
             refs: ["inspire:2132366", "inspire:1635526"]
             provenance: {uid: c93b6117, ref: "inspire:2132366", locator: "arXiv:2208.02751, Sec. 6 and Fig. 3 (theoretical prediction including NNLO QCD and NLO EW corrections from Ref. [5] = Czakon et al., PRD 98 (2018) 014003)", source: agent, status: agent-draft, date: "2026-10-22"}
+            headline: true
       - id: "obs:ttbar/lhc-13/ae-ttj"
         name: "Energy asymmetry A_E in tt̄ + jet, lepton+jets, particle level, π/4 ≤ θj ≤ 3π/5"
         kind: asymmetry
@@ -408,6 +413,7 @@ channels:
             compared_to: ["meas:ttbar/lhc-13/cms-2025-pas-ae"]
             refs: ["inspire:3078982"]
             provenance: {uid: 563fcb3f, ref: "inspire:3078982", locator: "CMS-PAS-TOP-24-015, Sec. 3 (MG5_aMC@NLO 2.4.2 with up to two additional partons at NLO, FxFx, SM reference prediction) and Table 2 (also POWHEG+PYTHIA 8: −0.5 ± 0.3, POWHEG+HERWIG 7: −0.1 ± 0.1)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:ttbar/lhc-13/dphi-ll"
         name: "Normalised 1/σ dσ/dΔφ(ℓ+ℓ−), dilepton, parton level (ATLAS+CMS combination)"
         kind: differential
@@ -431,6 +437,7 @@ channels:
             compared_to: ["meas:ttbar/lhc-13/atlas-cms-2026-dphi-combination"]
             refs: ["inspire:3108862", "inspire:1714024"]
             provenance: {uid: a606e2a5, ref: "inspire:3108862", locator: "CMS-PAS-TOP-22-004, Sec. 2 and Sec. 4 (NNLO QCD of Ref. [29] = Behring et al., PRL 123 (2019) 082001, μR = μF = HT/4) and Table 5 (χ²/DOF 1.7, probability 13% with measurement uncertainties)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "NLO QCD + weak, expanded normalised distribution (μR = μF = mt), ATLAS+CMS comparison"
             accuracy: {qcd: NLO, ew: NLO, approximations: ["normalised distribution expanded in powers of the strong and weak couplings; weak (not full EW) corrections"]}
             compared_to: ["meas:ttbar/lhc-13/atlas-cms-2026-dphi-combination"]

@@ -275,6 +275,7 @@ channels:
                 provenance: {uid: a4b35b89, ref: "arXiv:2610.20551, Table 1", locator: "Table 1, κλ = 1, √s = 13.6 TeV: Δσ_tot +5.2%/−0.2% (Δσ_R +5.0/−0.2, Δσ_δ +1.5/−0.1); same total at 14 TeV in eq. (17)", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:3215229"]
             provenance: {uid: 440913a0, ref: "inspire:3215229", locator: "arXiv:2610.20551, Sec. 3 (dynamical scheme), Sec. 4 Table 1 (κλ = 1: σ = 28.06 fb at 13.6 TeV) and Sec. 5", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
   - id: "chan:hh/lhc-hl"
     collider: "col:lhc-hl"
     initial_state: "pp"
