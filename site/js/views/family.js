@@ -1,5 +1,5 @@
 import { toHash } from '../router.js';
-import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, cellOrder, passes } from '../matrix.js';
+import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, cellOrder, passes, anyTarget } from '../matrix.js';
 import { scatterPoints, drawScatter } from '../scatter.js';
 import { diagramSvg } from '../feynman.js';
 import { term } from '../leaf.js';
@@ -48,8 +48,8 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   host.replaceChildren();
   const cells = data.derived.cells, byKey = new Map();
   for (const [id, c] of Object.entries(cells)) byKey.set(c.process + '|' + c.collider, [id, c]);
-  const LW = labelWidth(rows.flatMap((p) => [['600 14px system-ui, sans-serif', procName[p]],
-    ...(procFam[p] !== fam.id ? [['11px system-ui, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])])) + TW;
+  const LW = labelWidth(rows.flatMap((p) => [['600 14px "Helvetica Neue", system-ui, "Segoe UI", Roboto, Arial, sans-serif', procName[p]],
+    ...(procFam[p] !== fam.id ? [['11px "Helvetica Neue", system-ui, "Segoe UI", Roboto, Arial, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])])) + TW;
   const W = LW + cols.length * CW, H = HH + rows.length * CH;
   // Scales down to fit the page (CSS width: 100%), never up; below min-width the host scrolls.
   const svg = d3.select(host).append('svg').attr('class', 'matrix').attr('viewBox', `0 0 ${W} ${H}`)
@@ -85,8 +85,13 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
       const txt = `${cell.n_measurements} meas.` + (cell.candidates > 0 ? ` · ${cell.candidates} cand.` : '');
       a.append('rect').attr('class', 'badge').attr('x', 8).attr('y', CH - 22).attr('width', txt.length * 6 + 10).attr('height', 17).attr('rx', 8);
       a.append('text').attr('class', 'badge-text').attr('x', 13).attr('y', CH - 10).text(txt);
+      if (st.ratioText) {
+        const w = st.ratioText.length * 7 + 10;
+        a.append('rect').attr('class', 'badge').attr('x', CW - 8 - w).attr('y', 6).attr('width', w).attr('height', 17).attr('rx', 8);
+        a.append('text').attr('class', 'badge-text order').attr('x', CW - 13).attr('y', 18).attr('text-anchor', 'end').text(st.ratioText);
+      }
       if (cell.stale) {
-        a.append('text').attr('x', CW - 12).attr('y', 18).attr('text-anchor', 'middle').attr('fill', 'var(--fg)')
+        a.append('text').attr('x', CW - 12).attr('y', CH - 10).attr('text-anchor', 'middle').attr('fill', 'var(--fg)')
           .style('font-size', '14px').text('⚠').append('title').text('may be outdated');
       }
     }
@@ -103,7 +108,7 @@ function legend() {
   const item = (fill, pat, text) => { const s = sw(fill, pat); s.append(text); return s; };
   const rat = el('div', { className: 'legend' }, el('span', {}, term('Theory / experiment uncertainty'), ':'),
     ...RATIO_LABELS.map((t, i) => item(`var(--rat-${i + 1})`, null, t)),
-    el('span', {}, '< 1: theory more precise · > 1: theory is the bottleneck'));
+    el('span', {}, 'in-cell ×r = theory/experiment · < 1: theory more precise · > 1: theory is the bottleneck'));
   const common = el('div', { className: 'legend' },
     item('var(--cell-empty)', 'hatch', 'no precision ratio (hatched)'), item('var(--rat-3)', 'partial', term('partial coverage (dotted)', { key: 'partial coverage' })),
     el('span', {}, 'top label: ', term('highest QCD order'), ' of any prediction'),
@@ -160,7 +165,7 @@ export function render(el_, data, route) {
     return el('label', {}, i, ' ' + c.name);
   });
   const controls = el('div', { className: 'controls' },
-    field('Data', check('Include projections', 'proj', redraw), check('Has theory target', 'hasTarget', redraw), check('Show scatter', 'scatter', redraw)),
+    field('Data', check('Include projections', 'proj', redraw), ...(anyTarget(data.derived.cells) ? [check('Has theory target', 'hasTarget', redraw)] : []),check('Show scatter', 'scatter', redraw)),
     field('Colliders', ...colChecks),
     select('Min. accuracy', 'minOrder', [['any', 'any'], ...ORDERS.map((o) => [o, `≥ ${o}`])], redraw),
     select('Status (all data at least)', 'minStatus', [['any', 'any'], ...LADDER.map((o) => [o, o])], redraw));
