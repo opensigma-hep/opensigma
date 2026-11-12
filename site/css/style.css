@@ -244,3 +244,8 @@ svg.matrix .thumb { color: var(--fg); }
 dl.glossary { max-width: 48rem; }
 dl.glossary dt { font-weight: 600; margin-top: .9rem; scroll-margin-top: 4rem; }
 dl.glossary dd { margin: .15rem 0 0; }
+/* Experiments registry: external links are marked */
+a.ext::after { content: "\00a0\2197"; font-size: .85em; }
+.linklist { margin: .25rem 0 .75rem; padding-left: 1.25rem; }
+dl.groups dt { font-weight: 700; margin-top: .9rem; }
+dl.groups dd { margin: .15rem 0 0; }

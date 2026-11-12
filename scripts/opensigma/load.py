@@ -43,9 +43,12 @@ def _read_json(path: Path) -> dict:
 
 def load_repo(root: Path) -> dict:
     root = Path(root)
+    reg = _read(root / "experiments.yaml", root, dict) if (root / "experiments.yaml").exists() else {}
     return {
         "families": _read(root / "families.yaml", root),
         "colliders": _read(root / "colliders.yaml", root),
+        "experiments": reg.get("experiments", []),
+        "groups": reg.get("groups", []),
         "processes": _read_dir(root, "processes/*/*.yaml"),
         "amplitudes": _read_dir(root, "amplitudes/*.yaml"),
         "parameters": _read_dir(root, "parameters/*.yaml"),

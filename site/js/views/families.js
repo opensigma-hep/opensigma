@@ -62,6 +62,7 @@ export function render(main, data) {
       el('li', {}, el('a', { href: '#/amplitudes' }, 'Amplitude library'), ' · loop amplitudes shared between processes'),
       el('li', {}, el('a', { href: '#/parameters' }, 'Parameters'), ` · ${data.parameters.map((x) => x.symbol).join(', ')} and their determinations`),
       el('li', {}, el('a', { href: '#/glossary' }, 'Glossary'), ' · every abbreviation, label and status used on this site'),
+      el('li', {}, el('a', { href: '#/experiments' }, 'Experiments'), ' · official pages and every measurement by experiment, plus the working groups'),
       el('li', {}, 'Colliders: ', ...data.colliders.filter((c) => usedCols.has(c.id)).flatMap((c, i) => [i ? ' · ' : '', link(c.id, c.name)]))),
   );
 }

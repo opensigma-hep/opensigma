@@ -33,6 +33,7 @@ npm test
 | Path | What it holds |
 | --- | --- |
 | `data/families.yaml`, `data/colliders.yaml` | The families and the colliders (one list each). |
+| `data/experiments.yaml` | Experiments and working groups, with links to their official pages. |
 | `data/processes/<family>/<process>.yaml` | One file per process: building blocks, channels, measurements, observables, predictions. |
 | `data/amplitudes/*.yaml` | The shared loop-amplitude library. |
 | `data/parameters/*.yaml` | Standard Model parameters and their determinations. |

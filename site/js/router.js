@@ -1,7 +1,7 @@
-// Hash routing: "#/<id>", "#/about", "#/amplitudes", "#/parameters", "#/processes", "#/gaps", "#/next-run", "#/timeline", "#/glossary" or "#/glossary?t=<term>", "#/search?q=…", "" or "#/" for the home view.
+// Hash routing: "#/<id>", "#/about", "#/amplitudes", "#/parameters", "#/processes", "#/experiments", "#/gaps", "#/next-run", "#/timeline", "#/glossary" or "#/glossary?t=<term>", "#/search?q=…", "" or "#/" for the home view.
 const VIEW_BY_PREFIX = {
   fam: 'family', proc: 'process', chan: 'channel', obs: 'observable',
-  amp: 'amplitude', par: 'parameter', col: 'collider',
+  amp: 'amplitude', par: 'parameter', col: 'collider', exp: 'experiment',
 };
 
 export const toHash = (id) => '#/' + id;
@@ -16,7 +16,7 @@ export function parseHash(hash, aliases, ids, parents = {}) {
   const [, bare, query = ''] = /^#?\/?([^?]*)\??(.*)$/s.exec(hash);
   const path = bare.replace(/\/+$/, '');
   if (path === '') return { view: 'families' };
-  if (['about', 'amplitudes', 'parameters', 'processes', 'gaps', 'next-run', 'timeline'].includes(path)) return { view: path };
+  if (['about', 'amplitudes', 'parameters', 'processes', 'experiments', 'gaps', 'next-run', 'timeline'].includes(path)) return { view: path };
   if (path === 'glossary') {
     const raw = query.split('&').find((kv) => kv.startsWith('t='));
     return raw ? { view: 'glossary', t: decode(raw.slice(2)) } : { view: 'glossary' };
