@@ -10,7 +10,7 @@ determinations:
     provenance: {uid: f2f33ad6, ref: "inspire:3193100", locator: "PDG 2026 edition, t-Quark Mass (Direct Measurements) (PDG API summary Q007TP, OUR AVERAGE): 172.60 ± 0.27 GeV, scale factor 1.5", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 172.1
     uncertainty: 0.6
-    extracted_from: []
+    extracted_from: ["meas:ttbar/lhc-7/atlas-cms-2022-combination", "meas:ttbar/lhc-8/atlas-cms-2022-combination"]
     ref: "inspire:3193100"
     provenance: {uid: 7bc6d99b, ref: "inspire:3193100", locator: "PDG 2026 edition, t-Quark Pole Mass from Cross-Section Measurements (PDG API summary Q007TP4, OUR AVERAGE): 172.1 ± 0.6 GeV; pole mass from σ(tt̄)", source: agent, status: cross-checked, date: "2026-10-17"}
   - value: 172.52

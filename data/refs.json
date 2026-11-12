@@ -197,6 +197,15 @@
   "title": "High precision determination of $\\alpha_s$ from a global fit of jet rates",
   "year": 2019
  },
+ "arXiv:1912.02067": {
+  "arxiv": "1912.02067",
+  "authors_short": "Janot and Jadach",
+  "bibtex": "@article{Janot:2019oyi,\n    author = \"Janot, Patrick and Jadach, Stanis{\\l}aw\",\n    title = \"{Improved Bhabha cross section at LEP and the number of light neutrino species}\",\n    eprint = \"1912.02067\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.physletb.2020.135319\",\n    journal = \"Phys. Lett. B\",\n    volume = \"803\",\n    pages = \"135319\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1016/j.physletb.2020.135319",
+  "recid": 1768403,
+  "title": "Improved Bhabha cross section at LEP and the number of light neutrino species",
+  "year": 2019
+ },
  "arXiv:2008.11626": {
   "arxiv": "2008.11626",
   "authors_short": "Baglio et al.",
@@ -1086,6 +1095,15 @@
   "doi": "10.1103/PhysRevLett.114.212001",
   "recid": 1353668,
   "title": "Higgs Boson Gluon-Fusion Production in QCD at Three Loops",
+  "year": 2015
+ },
+ "inspire:1356276": {
+  "arxiv": "1503.07589",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2015yey,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS, CMS\",\n    title = \"{Combined Measurement of the Higgs Boson Mass in $pp$ Collisions at $\\sqrt{s}=7$ and 8 TeV with the ATLAS and CMS Experiments}\",\n    eprint = \"1503.07589\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"ATLAS-HIGG-2014-14, CMS-HIG-14-042, CERN-PH-EP-2015-075\",\n    doi = \"10.1103/PhysRevLett.114.191803\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"114\",\n    pages = \"191803\",\n    year = \"2015\"\n}\n",
+  "doi": "10.1103/PhysRevLett.114.191803",
+  "recid": 1356276,
+  "title": "Combined Measurement of the Higgs Boson Mass in $pp$ Collisions at $\\sqrt{s}=7$ and 8 TeV with the ATLAS and CMS Experiments",
   "year": 2015
  },
  "inspire:1358633": {
@@ -2213,6 +2231,15 @@
   "title": "DYTurbo: Fast predictions for Drell-Yan processes",
   "year": 2019
  },
+ "inspire:1768403": {
+  "arxiv": "1912.02067",
+  "authors_short": "Janot and Jadach",
+  "bibtex": "@article{Janot:2019oyi,\n    author = \"Janot, Patrick and Jadach, Stanis{\\l}aw\",\n    title = \"{Improved Bhabha cross section at LEP and the number of light neutrino species}\",\n    eprint = \"1912.02067\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1016/j.physletb.2020.135319\",\n    journal = \"Phys. Lett. B\",\n    volume = \"803\",\n    pages = \"135319\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1016/j.physletb.2020.135319",
+  "recid": 1768403,
+  "title": "Improved Bhabha cross section at LEP and the number of light neutrino species",
+  "year": 2019
+ },
  "inspire:1768911": {
   "arxiv": "1912.02844",
   "authors_short": "ATLAS Collaboration",
@@ -2256,6 +2283,24 @@
   "doi": "10.1007/JHEP07(2020)210",
   "recid": 1780829,
   "title": "Leading fermionic three-loop corrections to electroweak precision observables",
+  "year": 2020
+ },
+ "inspire:1780985": {
+  "arxiv": "2002.06398",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2020xrn,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{A measurement of the Higgs boson mass in the diphoton decay channel}\",\n    eprint = \"2002.06398\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-HIG-19-004, CERN-EP-2020-004\",\n    doi = \"10.1016/j.physletb.2020.135425\",\n    journal = \"Phys. Lett. B\",\n    volume = \"805\",\n    pages = \"135425\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1016/j.physletb.2020.135425",
+  "recid": 1780985,
+  "title": "A measurement of the Higgs boson mass in the diphoton decay channel",
+  "year": 2020
+ },
+ "inspire:1792999": {
+  "arxiv": "2004.12181",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2020vac,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of CKM matrix elements in single top quark $t$-channel production in proton-proton collisions at $\\sqrt{s} = $ 13 TeV}\",\n    eprint = \"2004.12181\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-TOP-17-012, CERN-EP-2020-047\",\n    doi = \"10.1016/j.physletb.2020.135609\",\n    journal = \"Phys. Lett. B\",\n    volume = \"808\",\n    pages = \"135609\",\n    year = \"2020\"\n}\n",
+  "doi": "10.1016/j.physletb.2020.135609",
+  "recid": 1792999,
+  "title": "Measurement of CKM matrix elements in single top quark $t$-channel production in proton-proton collisions at $\\sqrt{s} = $ 13 TeV",
   "year": 2020
  },
  "inspire:1794169": {
@@ -3032,6 +3077,15 @@
   "title": "Two-loop helicity amplitudes for V+jet production including axial vector couplings to higher orders in ϵ",
   "year": 2023
  },
+ "inspire:2670681": {
+  "arxiv": "2207.00320",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2022zjg,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the Higgs boson mass in the $H \\to ZZ^* \\to 4 \\ell$ decay channel using 139 fb$^{-1}$ of $\\sqrt s$ = 13 TeV $pp$ collisions recorded by the ATLAS detector at the LHC}\",\n    eprint = \"2207.00320\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2022-135\",\n    doi = \"10.1016/j.physletb.2023.137880\",\n    journal = \"Phys. Lett. B\",\n    volume = \"843\",\n    pages = \"137880\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1016/j.physletb.2023.137880",
+  "recid": 2670681,
+  "title": "Measurement of the Higgs boson mass in the $H \\to ZZ^* \\to 4 \\ell$ decay channel using 139 fb$^{-1}$ of $\\sqrt s$ = 13 TeV $pp$ collisions recorded by the ATLAS detector at the LHC",
+  "year": 2022
+ },
  "inspire:2672565": {
   "arxiv": "2306.16311",
   "authors_short": "Buonocore et al.",
@@ -3048,6 +3102,24 @@
   "doi": "10.1016/j.physletb.2023.138369",
   "recid": 2683225,
   "title": "Planar three-loop QCD helicity amplitudes for V+jet production at hadron colliders",
+  "year": 2023
+ },
+ "inspire:2686747": {
+  "arxiv": "2308.04775",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023oaq,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Combined Measurement of the Higgs Boson Mass from the H{\\textrightarrow}{\\ensuremath{\\gamma}}{\\ensuremath{\\gamma}} and H{\\textrightarrow}ZZ*{\\textrightarrow}4{\\ensuremath{\\ell}} Decay Channels with the ATLAS Detector Using s=7, 8, and 13~TeV pp Collision Data}\",\n    eprint = \"2308.04775\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-156\",\n    doi = \"10.1103/PhysRevLett.131.251802\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"131\",\n    number = \"25\",\n    pages = \"251802\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1103/PhysRevLett.131.251802",
+  "recid": 2686747,
+  "title": "Combined Measurement of the Higgs Boson Mass from the <math display=\"inline\"><mrow><mi>H</mi><mo stretchy=\"false\">→</mo><mi>γ</mi><mi>γ</mi></mrow></math> and <math display=\"inline\"><mrow><mi>H</mi><mo stretchy=\"false\">→</mo><mi>Z</mi><msup><mrow><mi>Z</mi></mrow><mrow><mo>*</mo></mrow></msup><mo stretchy=\"false\">→</mo><mn>4</mn><mo>ℓ</mo></mrow></math> Decay Channels with the ATLAS Detector Using <math display=\"inline\"><mrow><msqrt><mrow><mi>s</mi></mrow></msqrt><mo>=</mo><mn>7</mn></mrow></math>, 8, and 13 TeV <math display=\"inline\"><mi>p</mi><mi>p</mi></math> Collision Data",
+  "year": 2023
+ },
+ "inspire:2687977": {
+  "arxiv": "2308.07216",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2023owm,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of the Higgs boson mass with H {\\textrightarrow} {\\ensuremath{\\gamma}}{\\ensuremath{\\gamma}} decays in 140 fb{\\ensuremath{-}}1 of s=13 TeV pp collisions with the ATLAS detector}\",\n    eprint = \"2308.07216\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2023-160\",\n    doi = \"10.1016/j.physletb.2023.138315\",\n    journal = \"Phys. Lett. B\",\n    volume = \"847\",\n    pages = \"138315\",\n    year = \"2023\"\n}\n",
+  "doi": "10.1016/j.physletb.2023.138315",
+  "recid": 2687977,
+  "title": "Measurement of the Higgs boson mass with H → γγ decays in 140 fb−1 of <math altimg=\"si1.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>13</mn></math> TeV pp collisions with the ATLAS detector",
   "year": 2023
  },
  "inspire:2689657": {
@@ -3500,6 +3572,15 @@
   "title": "Higher-order soft-gluon corrections for <math altimg=\"si1.svg\"><mi>t</mi><mover accent=\"true\"><mrow><mi>t</mi></mrow><mrow><mo stretchy=\"false\">¯</mo></mrow></mover><mi>Z</mi></math> cross sections",
   "year": 2024
  },
+ "inspire:2839209": {
+  "arxiv": "2409.13663",
+  "authors_short": "CMS Collaboration",
+  "bibtex": "@article{CMS:2024eka,\n    author = \"Hayrapetyan, Aram and others\",\n    collaboration = \"CMS\",\n    title = \"{Measurement of the Higgs boson mass and width using the four-lepton final state in proton-proton collisions at s=13{\\,}{\\,}TeV}\",\n    eprint = \"2409.13663\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-HIG-21-019, CERN-EP-2024-210\",\n    doi = \"10.1103/PhysRevD.111.092014\",\n    journal = \"Phys. Rev. D\",\n    volume = \"111\",\n    number = \"9\",\n    pages = \"092014\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1103/PhysRevD.111.092014",
+  "recid": 2839209,
+  "title": "Measurement of the Higgs boson mass and width using the four-lepton final state in proton-proton collisions at <math display=\"inline\"><msqrt><mi>s</mi></msqrt><mo>=</mo><mn>13</mn><mtext> </mtext><mtext> </mtext><mi>TeV</mi></math>",
+  "year": 2024
+ },
  "inspire:2842826": {
   "arxiv": "2410.19611",
   "authors_short": "ATLAS Collaboration",
@@ -3543,6 +3624,15 @@
   "doi": "10.1007/JHEP02(2025)170",
   "recid": 2851712,
   "title": "Drell-Yan transverse-momentum spectra at N$^{3}$LL$^{′}$ and approximate N$^{4}$LL with SCETlib",
+  "year": 2024
+ },
+ "inspire:2854934": {
+  "arxiv": "2412.01548",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2024jry,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Measurement of off-shell Higgs boson production in the $H^*\\rightarrow ZZ\\rightarrow 4\\ell$ decay channel using a neural simulation-based inference technique in 13{\\,}TeV pp collisions with the ATLAS detector}\",\n    eprint = \"2412.01548\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2024-298\",\n    doi = \"10.1088/1361-6633/adcd9a\",\n    journal = \"Rept. Prog. Phys.\",\n    volume = \"88\",\n    number = \"5\",\n    pages = \"057803\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1088/1361-6633/adcd9a",
+  "recid": 2854934,
+  "title": "Measurement of off-shell Higgs boson production in the $H^*\\rightarrow ZZ\\rightarrow 4\\ell$ decay channel using a neural simulation-based inference technique in 13 TeV pp collisions with the ATLAS detector",
   "year": 2024
  },
  "inspire:2855546": {
@@ -3714,6 +3804,15 @@
   "doi": "10.21468/SciPostPhysCodeb.69",
   "recid": 2906156,
   "title": "NNLOJET: A parton-level event generator for jet cross sections at NNLO QCD accuracy",
+  "year": 2025
+ },
+ "inspire:2910762": {
+  "arxiv": "2504.07710",
+  "authors_short": "ATLAS Collaboration",
+  "bibtex": "@article{ATLAS:2025okx,\n    author = \"Aad, Georges and others\",\n    collaboration = \"ATLAS\",\n    title = \"{Constraining off-shell Higgs boson production and the Higgs boson total width using WW {\\textrightarrow} {\\ensuremath{\\ell}}{\\ensuremath{\\nu}}{\\ensuremath{\\ell}}{\\ensuremath{\\nu}} final states with the ATLAS detector}\",\n    eprint = \"2504.07710\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CERN-EP-2025-059\",\n    doi = \"10.1016/j.physletb.2025.139898\",\n    journal = \"Phys. Lett. B\",\n    volume = \"870\",\n    pages = \"139898\",\n    year = \"2025\"\n}\n",
+  "doi": "10.1016/j.physletb.2025.139898",
+  "recid": 2910762,
+  "title": "Constraining off-shell Higgs boson production and the Higgs boson total width using WW → ℓνℓν final states with the ATLAS detector",
   "year": 2025
  },
  "inspire:2913464": {
@@ -4373,6 +4472,15 @@
   "title": "Predictions for all processes e+ e- ---> 4 fermions + gamma",
   "year": 1999
  },
+ "inspire:506060": {
+  "arxiv": null,
+  "authors_short": "ALEPH Collaboration",
+  "bibtex": "@article{ALEPH:1999smx,\n    author = \"Barate, R. and others\",\n    collaboration = \"ALEPH\",\n    title = \"{Measurement of the Z resonance parameters at LEP}\",\n    reportNumber = \"CERN-EP-99-104\",\n    doi = \"10.1007/s100520000319\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"14\",\n    pages = \"1--50\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1007/s100520000319",
+  "recid": 506060,
+  "title": "Measurement of the Z resonance parameters at LEP",
+  "year": 1999
+ },
  "inspire:508251": {
   "arxiv": "hep-ph/9910253",
   "authors_short": "Del Duca et al.",
@@ -4407,6 +4515,24 @@
   "doi": "10.1007/s100520000354",
   "recid": 522656,
   "title": "Consistent measurements of alpha(s) from precise oriented event shape distributions",
+  "year": 2000
+ },
+ "inspire:524027": {
+  "arxiv": "hep-ex/0002046",
+  "authors_short": "L3 Collaboration",
+  "bibtex": "@article{L3:2000vgx,\n    author = \"Acciarri, M. and others\",\n    collaboration = \"L3\",\n    title = \"{Measurements of cross-sections and forward backward asymmetries at the $Z$ resonance and determination of electroweak parameters}\",\n    eprint = \"hep-ex/0002046\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-EP-2000-022\",\n    doi = \"10.1007/s100520050001\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"16\",\n    pages = \"1--40\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1007/s100520050001",
+  "recid": 524027,
+  "title": "Measurements of cross-sections and forward backward asymmetries at the $Z$ resonance and determination of electroweak parameters",
+  "year": 2000
+ },
+ "inspire:527605": {
+  "arxiv": null,
+  "authors_short": "DELPHI Collaboration",
+  "bibtex": "@article{DELPHI:2000wje,\n    author = \"Abreu, P. and others\",\n    collaboration = \"DELPHI\",\n    title = \"{Cross-sections and leptonic forward backward asymmetries from the Z0 running of LEP}\",\n    reportNumber = \"CERN-EP-2000-037\",\n    doi = \"10.1007/s100520000392\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"16\",\n    pages = \"371--405\",\n    year = \"2000\"\n}\n",
+  "doi": "10.1007/s100520000392",
+  "recid": 527605,
+  "title": "Cross-sections and leptonic forward backward asymmetries from the Z0 running of LEP",
   "year": 2000
  },
  "inspire:529378": {
@@ -4452,6 +4578,15 @@
   "doi": "10.1016/S0550-3213(01)00080-3",
   "recid": 536445,
   "title": "Two loop QCD corrections to massless identical quark scattering",
+  "year": 2000
+ },
+ "inspire:538108": {
+  "arxiv": "hep-ex/0012018",
+  "authors_short": "OPAL Collaboration",
+  "bibtex": "@article{OPAL:2000ufp,\n    author = \"Abbiendi, G. and others\",\n    collaboration = \"OPAL\",\n    title = \"{Precise determination of the Z resonance parameters at LEP: 'Zedometry'}\",\n    eprint = \"hep-ex/0012018\",\n    archivePrefix = \"arXiv\",\n    reportNumber = \"CERN-EP-2000-148, OPAL-PR-328\",\n    doi = \"10.1007/s100520100627\",\n    journal = \"Eur. Phys. J. C\",\n    volume = \"19\",\n    pages = \"587--651\",\n    year = \"2001\"\n}\n",
+  "doi": "10.1007/s100520100627",
+  "recid": 538108,
+  "title": "Precise determination of the Z resonance parameters at LEP: 'Zedometry'",
   "year": 2000
  },
  "inspire:552493": {
@@ -4976,6 +5111,15 @@
   "title": "Infrared structure of e+ e- ---> 3 jets at NNLO",
   "year": 2007
  },
+ "inspire:765011": {
+  "arxiv": "0710.4112",
+  "authors_short": "CDF Collaboration",
+  "bibtex": "@article{CDF:2007tdb,\n    author = \"Aaltonen, T. and others\",\n    collaboration = \"CDF\",\n    title = \"{A Direct measurement of the $W$ boson width in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV}\",\n    eprint = \"0710.4112\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-07-563-E\",\n    doi = \"10.1103/PhysRevLett.100.071801\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"100\",\n    pages = \"071801\",\n    year = \"2008\"\n}\n",
+  "doi": "10.1103/PhysRevLett.100.071801",
+  "recid": 765011,
+  "title": "A Direct measurement of the $W$ boson width in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV",
+  "year": 2007
+ },
  "inspire:768451": {
   "arxiv": "0711.3717",
   "authors_short": "CDF Collaboration",
@@ -5192,6 +5336,15 @@
   "title": "Next-to-leading order QCD corrections to W+ W+ jj and W- W- jj production via weak-boson fusion",
   "year": 2009
  },
+ "inspire:832308": {
+  "arxiv": "0909.4814",
+  "authors_short": "D0 Collaboration",
+  "bibtex": "@article{D0:2009oet,\n    author = \"Abazov, V. M. and others\",\n    collaboration = \"D0\",\n    title = \"{Direct measurement of the W boson width}\",\n    eprint = \"0909.4814\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-PUB-09-449-E\",\n    doi = \"10.1103/PhysRevLett.103.231802\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"103\",\n    pages = \"231802\",\n    year = \"2009\"\n}\n",
+  "doi": "10.1103/PhysRevLett.103.231802",
+  "recid": 832308,
+  "title": "Direct measurement of the W boson width",
+  "year": 2009
+ },
  "inspire:834437": {
   "arxiv": "0910.3623",
   "authors_short": "CDF Collaboration",
@@ -5226,6 +5379,15 @@
   "doi": "10.1016/j.physletb.2010.09.013",
   "recid": 846483,
   "title": "Measurement of the Dijet Invariant Mass Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV",
+  "year": 2010
+ },
+ "inspire:848923": {
+  "arxiv": "1003.2826",
+  "authors_short": "Tevatron Electroweak Working Group Collaboration",
+  "bibtex": "@article{TevatronElectroweakWorkingGroup:2010mao,\n    collaboration = \"Tevatron Electroweak Working Group\",\n    title = \"{Combination of CDF and D0 Results on the Width of the W boson}\",\n    eprint = \"1003.2826\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"FERMILAB-TM-2460-E\",\n    month = \"3\",\n    year = \"2010\"\n}\n",
+  "doi": null,
+  "recid": 848923,
+  "title": "Combination of CDF and D0 Results on the Width of the W boson",
   "year": 2010
  },
  "inspire:849672": {
