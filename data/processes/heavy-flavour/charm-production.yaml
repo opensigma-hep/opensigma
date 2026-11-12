@@ -75,6 +75,7 @@ channels:
             compared_to: ["meas:charm-production/lhc-13/lhcb-2016-d"]
             refs: ["inspire:1384271"]
             provenance: {uid: ad6b4e27, ref: "inspire:1396331", locator: "Sec. 7 and Fig. 9 (numerical σ(cc̄) values only shown graphically)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
           - label: "POWHEG + NNPDF3.0L (NLO matched)"
             accuracy: {qcd: NLO}
             codes: ["POWHEG"]
@@ -117,6 +118,7 @@ channels:
             compared_to: ["meas:charm-production/lhc-13/alice-2023-charm"]
             refs: ["inspire:468385", "inspire:1116414"]
             provenance: {uid: d8bc9d32, ref: "inspire:2697877", locator: "Sec. 6 (cc̄ production cross section) and Fig. 13 right (numerical values only shown graphically)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
           - label: "NNLO via K-factor scaling of FONLL"
             accuracy:
               qcd: NNLO
@@ -200,6 +202,7 @@ channels:
             compared_to: ["meas:charm-production/lhc-13/atlas-2024-dpm"]
             refs: ["inspire:468385", "inspire:1116414", "inspire:2862073"]
             provenance: {uid: e2633b96, ref: "inspire:2862073", locator: "Table 3 / hepdata Table 2, column FONLL, bin 12 < pT < 15 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
           - label: "GM-VFNS (NLO), CT14nlo"
             accuracy: {qcd: NLO}
             total: {value_pct: 24.0, provenance: {uid: f9b08dcb, ref: "hepdata:ins2862073/Table 2", locator: "Table 2, column 2, quadrature sum of all errors (bin 1); larger side of the asymmetric theory band, bin 12 < pT < 15 GeV", source: agent, status: cross-checked, date: "2026-10-17"}}
@@ -258,6 +261,7 @@ channels:
                 provenance: {uid: 36fb53c4, ref: "inspire:3156631", locator: "Table 5 (√s = 13000 GeV row): σ(cc̄) = 8870 µb: Δαs +0% −0.5%", source: agent, status: cross-checked, date: "2026-10-17"}
             refs: ["inspire:3156631"]
             provenance: {uid: 12e4a00c, ref: "inspire:3156631", locator: "Sec. III.1 and Table 5 (inclusive NNLO σ(cc̄), MaunaKea)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
 
           - label: "NNLO QCD (MaunaKea, nf = 3), CT18"
             accuracy:
@@ -328,6 +332,7 @@ channels:
             compared_to: ["meas:charm-production/tevatron-1960/cdf-2003-d"]
             refs: ["inspire:621749"]
             provenance: {uid: 83dc032e, ref: "inspire:624447", locator: "Fig. 3 and Conclusion (measured differential cross sections higher than NLO predictions by ~100% at low pT, ~50% at high pT; compatible within uncertainties); ref. [16]", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true
       - id: "obs:charm-production/tevatron-1960/sigma-ccbar-total"
         name: "σ(pp̄ → cc̄ X), inclusive (all pT, all y)"
         kind: total

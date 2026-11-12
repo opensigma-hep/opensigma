@@ -169,7 +169,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-17'
-              - category: other
+              - category: unfolding_model
                 specific: model
                 size:
                   range:
@@ -184,7 +184,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-17'
-              - category: other
+              - category: background
                 specific: fake
                 size:
                   range:

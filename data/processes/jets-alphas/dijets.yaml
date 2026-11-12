@@ -114,7 +114,7 @@ channels:
                 size: {"range": [1.5, 12.0], "asymmetric": true}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
                 provenance: {uid: 2ce57292, "ref": "hepdata:ins2741343/CrossSection_2D_Mass_AK4", "locator": "CrossSection_2D_Mass_AK4, error 'TimePtEta'", "source": "hepdata", "status": "machine-verified", "date": "2026-10-16"}
-              - category: other
+              - category: unfolding_model
                 specific: "Model"
                 size: {"range": [0.13, 9.8], "asymmetric": false}
                 full_table: "hepdata:ins2741343/CrossSection_2D_Mass_AK4"
