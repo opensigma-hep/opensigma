@@ -1,0 +1,25 @@
+id: "par:gamma-h"
+name: "Higgs boson total width (from off-shell production)"
+symbol: "Γ_H"
+unit: "MeV"
+determinations:
+  - value: 3.0
+    uncertainty: 1.5
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: 334cff5a, ref: "inspire:3193100", locator: "PDG 2026 edition, H DECAY WIDTH (PDG API summary S126W, OUR AVERAGE): 3.0 +1.5/−0.7 MeV; asymmetric, the larger side (1.5) is stored; relies on equal on- and off-shell effective couplings", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 3.0
+    uncertainty: 2.0
+    extracted_from: []
+    ref: "inspire:2839209"
+    provenance: {uid: 4d1d6363, ref: "inspire:2839209", locator: "Abstract: CMS 13 TeV, 138 fb⁻¹, on- and off-shell H → ZZ → 4ℓ combined with the earlier off-shell ZZ → 2ℓ2ν analysis, Γ_H = 3.0 +2.0/−1.5 MeV; asymmetric, the larger side (2.0) is stored", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 4.3
+    uncertainty: 2.7
+    extracted_from: []
+    ref: "inspire:2854934"
+    provenance: {uid: 46adfdfb, ref: "inspire:2854934", locator: "Abstract: ATLAS 13 TeV, off-shell H* → ZZ → 4ℓ with neural simulation-based inference, combined with on-shell production, observed Γ_H = 4.3 +2.7/−1.9 MeV at 68% CL; asymmetric, the larger side (2.7) is stored", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 0.9
+    uncertainty: 3.4
+    extracted_from: []
+    ref: "inspire:2910762"
+    provenance: {uid: 4407de4b, ref: "inspire:2910762", locator: "Sec. 9 (Results, Higgs boson width measurement): ATLAS 13 TeV, 140 fb⁻¹, off-shell H* → WW → ℓνℓν combined with on-shell WW, observed Γ_H = 0.9 +3.4/−0.9 MeV (Γ_H^SM = 4.1 MeV); asymmetric, the larger side (3.4) is stored", source: agent, status: agent-draft, date: "2026-11-12"}

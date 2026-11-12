@@ -1,0 +1,45 @@
+id: "par:v-tb"
+name: "CKM matrix element |V_tb| from single-top production"
+symbol: "|V_tb|"
+unit: ""
+determinations:
+  - value: 1.002
+    uncertainty: 0.024
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: d9302c04, ref: "inspire:3193100", locator: "PDG 2026 edition, review 12 (CKM Quark-Mixing Matrix, revised March 2026), Sec. 12.2.8, eq. (12.15): average of the Tevatron and LHC single-top values, |V_tb| = 1.002 ± 0.024 (no unitarity assumed)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 0.998
+    uncertainty: 0.026
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: c584e822, ref: "inspire:3193100", locator: "PDG 2026 review 12 (CKM), Sec. 12.2.8: PDG average of the ATLAS and CMS |V_tb| values from t-channel, tW and s-channel cross sections at 7, 8 and 13 TeV (LHC Top WG summary, May 2025), |V_tb| = 0.998 ± 0.026, systematic and theory errors treated as fully correlated", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 1.02
+    uncertainty: 0.06
+    extracted_from: ["meas:t-channel-single-top/tevatron/cdf-d0-2015"]
+    ref: "inspire:1353120"
+    provenance: {uid: a35b22d0, ref: "inspire:1353120", locator: "Abstract: CDF + D0 final combination, from the s+t-channel single-top cross section, |V_tb| = 1.02 +0.06/−0.05; asymmetric, the larger side (0.06) is stored", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 1.02
+    uncertainty: 0.045
+    extracted_from: ["meas:s-channel-single-top/lhc-8/atlas-cms-2019-combination", "obs:t-channel-single-top/lhc-7/sigma-t", "obs:t-channel-single-top/lhc-8/sigma-t", "obs:tw/lhc-7/sigma-tot", "obs:tw/lhc-8/sigma-tot", "obs:s-channel-single-top/lhc-8/sigma-s"]
+    ref: "inspire:1720822"
+    provenance: {uid: 9b5c164d, ref: "inspire:1720822", locator: "Abstract: ATLAS + CMS Run 1 combination of all |f_LV V_tb|² determinations (t-channel, tW and s-channel at 7 and 8 TeV), |f_LV V_tb| = 1.02 ± 0.04 (meas) ± 0.02 (theo); stored uncertainty is the two terms added in quadrature (0.045)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 1.015
+    uncertainty: 0.031
+    extracted_from: ["meas:t-channel-single-top/lhc-13/atlas-2024-run2"]
+    ref: "inspire:2764820"
+    provenance: {uid: 1eed7793, ref: "inspire:2764820", locator: "Sec. 8.3 (Determination of |V_tb|): ATLAS 13 TeV, 140 fb⁻¹, from σ(tq + t̄q) in the t-channel divided by the SM expectation, f_LV·|V_tb| = 1.015 ± 0.031", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 0.98
+    uncertainty: 0.073
+    extracted_from: ["meas:t-channel-single-top/lhc-13/cms-2019-35fb"]
+    ref: "inspire:1712748"
+    provenance: {uid: 2bbaf281, ref: "inspire:1712748", locator: "Sec. 8 (Results) and Sec. 9 (Summary): CMS 13 TeV, 35.9 fb⁻¹, from the total t-channel cross section, |f_LV V_tb| = 0.98 ± 0.07 (exp) ± 0.02 (theo); stored uncertainty is the two terms added in quadrature (0.073)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 0.988
+    uncertainty: 0.024
+    extracted_from: []
+    ref: "inspire:1792999"
+    provenance: {uid: 9ced0902, ref: "inspire:1792999", locator: "Abstract: CMS 13 TeV, 35.9 fb⁻¹, t-channel single-top events with |V_tb|, |V_td|, |V_ts| considered at both the production and decay vertices, all constraints released, |V_tb| = 0.988 ± 0.024 (stat + syst)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 0.97
+    uncertainty: 0.10
+    extracted_from: ["meas:tw/lhc-13/atlas-2024-dilepton"]
+    ref: "inspire:2810155"
+    provenance: {uid: 31f9f4f5, ref: "inspire:2810155", locator: "Abstract: ATLAS 13 TeV, 140 fb⁻¹, from the inclusive tW cross section, |f_LV V_tb| = 0.97 ± 0.10", source: agent, status: agent-draft, date: "2026-11-12"}

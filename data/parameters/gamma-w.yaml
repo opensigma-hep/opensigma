@@ -1,0 +1,35 @@
+id: "par:gamma-w"
+name: "W boson total width"
+symbol: "Γ_W"
+unit: "GeV"
+determinations:
+  - value: 2.14
+    uncertainty: 0.05
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: 3dac8e21, ref: "inspire:3193100", locator: "PDG 2026 edition, W WIDTH (PDG API summary S043W, OUR AVERAGE): 2.14 ± 0.05 GeV, scale factor 1.7 (world average of the LEP-2 and Tevatron averages and the ATLAS result, assuming no correlations)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.202
+    uncertainty: 0.047
+    extracted_from: []
+    ref: "arXiv:2403.15085"
+    provenance: {uid: 495f2e02, ref: "arXiv:2403.15085", locator: "Abstract: ATLAS 7 TeV, fits to the lepton transverse momentum and transverse mass distributions, Γ_W = 2202 ± 32 (stat) ± 34 (syst) MeV = 2202 ± 47 MeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.195
+    uncertainty: 0.083
+    extracted_from: []
+    ref: "inspire:1219330"
+    provenance: {uid: 0e4e2aa7, ref: "inspire:1219330", locator: "Abstract: LEP-2 combination (ALEPH, DELPHI, L3, OPAL, 130-209 GeV), direct reconstruction of W decays in WW events, Γ_W = 2.195 ± 0.083 GeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.046
+    uncertainty: 0.049
+    extracted_from: []
+    ref: "inspire:848923"
+    provenance: {uid: ba94e634, ref: "inspire:848923", locator: "Abstract: Tevatron combination of CDF and D0 Run I and Run II direct measurements (high transverse-mass tail), Γ_W = 2046 ± 49 MeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.028
+    uncertainty: 0.072
+    extracted_from: []
+    ref: "inspire:832308"
+    provenance: {uid: 1ed9c3e5, ref: "inspire:832308", locator: "Abstract: D0 Run II, 1 fb⁻¹, shape of the transverse mass distribution of W → eν candidates, Γ_W = 2.028 ± 0.072 GeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.032
+    uncertainty: 0.073
+    extracted_from: []
+    ref: "inspire:765011"
+    provenance: {uid: b2a57408, ref: "inspire:765011", locator: "Abstract: CDF II, 350 pb⁻¹, fit to the high transverse-mass region 90 < M_T < 200 GeV in W → eν and μν, Γ_W = 2032 ± 45 (stat) ± 57 (syst) MeV; stored uncertainty is the two terms added in quadrature (73 MeV)", source: agent, status: agent-draft, date: "2026-11-12"}
