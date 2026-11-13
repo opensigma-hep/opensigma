@@ -113,5 +113,40 @@ uncertainty — repeated per observable.
     ratio only (supersedes the order/ratio switch of #8); each cell prints its highest QCD order. New pages, all derived
     in the browser, nothing stored: `#/gaps` (partial/missing building blocks per process, worst ratio first),
     `#/next-run` (projected measurements vs today's headline theory on the same observable only, never another
-    observable's theory; no estimate = listed as a gap) and `#/timeline` (channels with a prediction at ≥ NLO/NNLO/N3LO
-    per year, year = earliest reference the prediction cites; first-time-per-process milestones link to the observable).
+    observable's theory; no estimate = listed as a gap) and `#/timeline` (processes that had reached ≥ NLO/NNLO/N3LO QCD
+    per year, with one milestone per process and order).
+    **Revised 2026-11-12:** the timeline is read from the building-block grid, not from predictions (dating a prediction by
+    its earliest cited ref, and letting it set lower orders, gave wrong years). A process reaches an order when the `code`
+    cell of that order's own row ("NNLO QCD") is done, year = earliest ref of that cell; an NLO row without a `code` cell
+    counts when all its recorded cells are done, year = the latest of the cells' earliest refs. Rows with a partial `code`
+    cell, or with amplitudes only beyond NLO, are not counted (errs late). Lines count processes (the grid is per process,
+    not per channel) from the first year they reached that order or a higher one. The rule is printed on the page.
+    Cells whose predictions are LO in QCD but higher in EW (e+e− → WW) print the EW order (`derived.cells[].max_ew`).
+25. **Leading-order Feynman diagrams (2026-11-12):** one representative LO diagram per process in `data/diagrams.yaml`
+    (keyed by process id; points on a 4 × 3 grid plus typed edges, format in `docs/diagrams.md`), validated by
+    `data/schema/diagrams.schema.json` and an integrity check (key is a process, edges join declared points); a process
+    without a diagram is allowed. `site/js/feynman.js` turns a spec into inline SVG (straight fermions with arrows,
+    wavy photon/W/Z, coiled gluons, dashed Higgs; `currentColor`, no dependency). Shown full-size with a caption on the
+    process page, as a thumbnail in the family-matrix row heads, and on the new process atlas `#/processes` (cards by family).
+    Loop-induced processes (gg → H, gg → HH) show the top-quark triangle/box.
+26. **Experiments and colliders as first-class entries (2026-11-12):** `data/experiments.yaml` lists every experiment
+    used as `experiment:` in a measurement (matched by `name`), plus two non-experiment kinds: `facility` (EIC, whose
+    entries are projections) and `combination` (combined results; the dataset names the inputs), and a `groups:` section
+    for working groups and averaging bodies. `exp:` ids get a page (description, official links, every measurement by
+    family) and `#/experiments` an index; experiment names in measurement tables link there; collider pages show the
+    optional `machine/lab/years/url/note/luminosity/sources` fields and their experiments. Rule: every URL and fact in
+    these two files is fetched from an official page, never written from memory; what no reachable official page states
+    is left out (so some start years, acronym expansions and LHC integrated luminosities are absent). An unregistered
+    experiment name is a build WARNING, not an error. `python -m scripts.linkcheck --registry` re-checks the URLs.
+    Not linked because unreachable on 2026-11-12: the CDF, D0 and Tevatron EWWG sites (Fermilab login), the ALEPH and
+    LHeC sites (CERN login), the DESY H1+ZEUS combined-results page (timeout).
+27. **Glossary, tooltips, front-door docs (2026-11-12):** every abbreviation, label and status the site shows is defined once, in
+    `site/js/glossary.js` (`{term, short, long}` plus aliases and a scope for homonyms such as building-block vs coverage
+    "partial"); no definition is written anywhere else. New page `#/glossary`, with `#/glossary?t=<term>` jumping to one entry.
+    One helper, `term()` in `site/js/leaf.js`, turns a displayed label into a link to its entry with the short definition as
+    `title` (hover, keyboard focus, read out as the link description); it is used for building-block heads, rows and statuses,
+    accuracy chips, status badges, coverage and observable-kind labels, and the matrix legend. Uncertainty categories show their
+    definition as a line of text inside the expanded budget entry. A node test fails when a schema enum (building-block row or
+    column, status, coverage, kind, evaluation kind, uncertainty category) or an order has no entry. The About page gained
+    how-to-read, limitations, citing and contributing sections; `README.md` is the front door, `CONTRIBUTING.md` covers humans and
+    agents, `docs/data-model.md` documents the YAML field by field from the schemas (the schemas stay the authority).

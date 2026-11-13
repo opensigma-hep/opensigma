@@ -1,0 +1,15 @@
+id: "amp:2L/qqbar-gg-ttbar-gamma-he"
+process: "proc:tt-gamma"
+loops: 2
+corrections: QCD
+status: partial
+approximations: ["two-loop infrared poles exact, with full top-quark mass dependence", "finite remainders only in the high-energy boosted limit (|s_ij| ≫ mt²) through the mass-factorisation formula; the terms with two fermion loops (nf²) are computed exactly", "quark-antiquark annihilation and gluon-fusion channels; on-shell top quarks"]
+master_integrals:
+  status: partial
+  refs: ["inspire:3221697"]
+evaluation:
+  kind: semi-analytic
+  detail: "massless five-point integrals by IBP reduction to known masters, evaluated numerically with PentagonMI; massive amplitude via mass factorisation"
+  provenance: {uid: 490e87d3, ref: "inspire:3033999", locator: "Conclusion (scalar integrals with vanishing parton masses computed with IBP reduction and existing massless master integrals; massless and semi-massive schemes) and the text citing PentagonMI [77] (numerical evaluation)", source: agent, status: agent-draft, date: "2026-11-12"}
+refs: ["inspire:3033999", "inspire:3221697", "inspire:2921544"]
+provenance: {uid: a48cf5a5, ref: "inspire:3033999", locator: "Abstract and Introduction (approximate two-loop amplitudes for tt̄γ: IR poles from universal anomalous dimensions and one-loop massive amplitudes, finite remainders in the high-energy boosted limit; an exact calculation of the full two-loop amplitudes is still beyond reach); inspire:3221697 abstract (two-loop Feynman integrals for on-shell tt̄γ complete in the leading-colour approximation, evaluated by numerically solving differential equations); inspire:2921544 abstract (one-loop amplitudes through O(ε²))", source: agent, status: agent-draft, date: "2026-11-12"}

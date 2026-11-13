@@ -1,12 +1,14 @@
 import { toHash } from '../router.js';
-import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, passes } from '../matrix.js';
+import { ORDERS, LADDER, RATIO_LABELS, columnsFor, cellState, cellOrder, passes, anyTarget } from '../matrix.js';
 import { scatterPoints, drawScatter } from '../scatter.js';
+import { diagramSvg } from '../feynman.js';
+import { term } from '../leaf.js';
 
 // View state lives in the module (no persistence): reset only when the family changes.
 let S = null;
 const fresh = (id) => ({ id, proj: false, colliders: null, minOrder: 'any', minStatus: 'any', hasTarget: false, scatter: false });
 
-const CW = 132, CH = 52, LW = 220, HH = 44;
+const CW = 132, CH = 52, LW = 220, HH = 44, TW = 60; // TW: room for the diagram thumbnail in the row head
 
 // Label column wide enough for the longest row label (canvas: the host is not in the DOM yet when first drawn).
 function labelWidth(texts) {
@@ -20,7 +22,7 @@ function el(tag, attrs = {}, ...kids) {
   e.append(...kids);
   return e;
 }
-const field = (legend, ...kids) => el('fieldset', {}, el('legend', {}, legend), ...kids);
+const field = (legend, ...kids) => el('fieldset', {}, el('legend', {}, term(legend)), ...kids);
 const check = (label, key, redraw) => {
   const i = el('input', { type: 'checkbox', checked: S[key] });
   i.addEventListener('change', () => { S[key] = i.checked; redraw(); });
@@ -46,8 +48,8 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   host.replaceChildren();
   const cells = data.derived.cells, byKey = new Map();
   for (const [id, c] of Object.entries(cells)) byKey.set(c.process + '|' + c.collider, [id, c]);
-  const LW = labelWidth(rows.flatMap((p) => [['600 14px system-ui, sans-serif', procName[p]],
-    ...(procFam[p] !== fam.id ? [['11px system-ui, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])]));
+  const LW = labelWidth(rows.flatMap((p) => [['600 14px "Helvetica Neue", system-ui, "Segoe UI", Roboto, Arial, sans-serif', procName[p]],
+    ...(procFam[p] !== fam.id ? [['11px "Helvetica Neue", system-ui, "Segoe UI", Roboto, Arial, sans-serif', `(also in ${famName[procFam[p]]})`]] : [])])) + TW;
   const W = LW + cols.length * CW, H = HH + rows.length * CH;
   // Scales down to fit the page (CSS width: 100%), never up; below min-width the host scrolls.
   const svg = d3.select(host).append('svg').attr('class', 'matrix').attr('viewBox', `0 0 ${W} ${H}`)
@@ -57,8 +59,10 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
   svg.append('g').selectAll('a').data(cols).join('a').attr('class', 'colhead').attr('href', (c) => toHash(c.id)).append('text')
     .attr('x', (_, i) => LW + i * CW + CW / 2).attr('y', HH - 14).attr('text-anchor', 'middle').text((c) => c.name);
   const rowG = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (_, i) => `translate(0,${HH + i * CH})`);
-  rowG.append('a').attr('class', 'rowhead').attr('href', (p) => toHash(p)).append('text').attr('x', 8).attr('y', CH / 2 - 2).text((p) => procName[p]);
-  rowG.filter((p) => procFam[p] !== fam.id).append('text').attr('class', 'muted').attr('x', 8).attr('y', CH / 2 + 13)
+  const head = rowG.append('a').attr('class', 'rowhead').attr('href', (p) => toHash(p));
+  head.append('g').attr('class', 'thumb').html((p) => diagramSvg(data, p, { thumb: true, x: 4, y: 5, width: TW - 6, height: CH - 10 }));
+  head.append('text').attr('x', 8 + TW).attr('y', CH / 2 - 2).text((p) => procName[p]);
+  rowG.filter((p) => procFam[p] !== fam.id).append('text').attr('class', 'muted').attr('x', 8 + TW).attr('y', CH / 2 + 13)
     .text((p) => `(also in ${famName[procFam[p]]})`);
   for (const [r, proc] of rows.entries()) {
     for (const [c, col] of cols.entries()) {
@@ -75,14 +79,19 @@ function drawMatrix(host, data, fam, rows, cols, procName, procFam, famName) {
         .attr('rx', 4).attr('fill', fill);
       box('base', st.fill);
       if (st.pattern !== 'none') box('tex', `url(#pm-${st.pattern})`);
-      const ord = cell.max_qcd ?? 'no prediction';
+      const ord = cellOrder(cell)?.replace(' QCD', '') ?? 'no prediction';
       a.append('rect').attr('class', 'badge').attr('x', 8).attr('y', 6).attr('width', ord.length * 7.5 + 10).attr('height', 17).attr('rx', 8);
       a.append('text').attr('class', 'badge-text order').attr('x', 13).attr('y', 18).text(ord);
       const txt = `${cell.n_measurements} meas.` + (cell.candidates > 0 ? ` · ${cell.candidates} cand.` : '');
       a.append('rect').attr('class', 'badge').attr('x', 8).attr('y', CH - 22).attr('width', txt.length * 6 + 10).attr('height', 17).attr('rx', 8);
       a.append('text').attr('class', 'badge-text').attr('x', 13).attr('y', CH - 10).text(txt);
+      if (st.ratioText) {
+        const w = st.ratioText.length * 7 + 10;
+        a.append('rect').attr('class', 'badge').attr('x', CW - 8 - w).attr('y', 6).attr('width', w).attr('height', 17).attr('rx', 8);
+        a.append('text').attr('class', 'badge-text order').attr('x', CW - 13).attr('y', 18).attr('text-anchor', 'end').text(st.ratioText);
+      }
       if (cell.stale) {
-        a.append('text').attr('x', CW - 12).attr('y', 18).attr('text-anchor', 'middle').attr('fill', 'var(--fg)')
+        a.append('text').attr('x', CW - 12).attr('y', CH - 10).attr('text-anchor', 'middle').attr('fill', 'var(--fg)')
           .style('font-size', '14px').text('⚠').append('title').text('may be outdated');
       }
     }
@@ -97,13 +106,13 @@ function legend() {
     return s;
   };
   const item = (fill, pat, text) => { const s = sw(fill, pat); s.append(text); return s; };
-  const rat = el('div', { className: 'legend' }, el('span', {}, 'Theory / experiment uncertainty:'),
+  const rat = el('div', { className: 'legend' }, el('span', {}, term('Theory / experiment uncertainty'), ':'),
     ...RATIO_LABELS.map((t, i) => item(`var(--rat-${i + 1})`, null, t)),
-    el('span', {}, '< 1: theory more precise · > 1: theory is the bottleneck'));
+    el('span', {}, 'in-cell ×r = theory/experiment · < 1: theory more precise · > 1: theory is the bottleneck'));
   const common = el('div', { className: 'legend' },
-    item('var(--cell-empty)', 'hatch', 'no precision ratio (hatched)'), item('var(--rat-3)', 'partial', 'partial coverage (dotted)'),
-    el('span', {}, 'top label: highest QCD order of any prediction'),
-    el('span', {}, '⚠ may be outdated'), el('span', {}, 'meas. = measurements, cand. = candidate papers'),
+    item('var(--cell-empty)', 'hatch', 'no precision ratio (hatched)'), item('var(--rat-3)', 'partial', term('partial coverage (dotted)', { key: 'partial coverage' })),
+    el('span', {}, 'top label: ', term('highest QCD order'), ' of any prediction'),
+    el('span', {}, '⚠ ', term('may be outdated')), el('span', {}, term('meas.'), ' = measurements, ', term('cand.'), ' = candidate papers'),
     el('span', {}, 'dashed outline: no channel; faded: excluded by filters'));
   return [rat, common];
 }
@@ -156,7 +165,7 @@ export function render(el_, data, route) {
     return el('label', {}, i, ' ' + c.name);
   });
   const controls = el('div', { className: 'controls' },
-    field('Data', check('Include projections', 'proj', redraw), check('Has theory target', 'hasTarget', redraw), check('Show scatter', 'scatter', redraw)),
+    field('Data', check('Include projections', 'proj', redraw), ...(anyTarget(data.derived.cells) ? [check('Has theory target', 'hasTarget', redraw)] : []),check('Show scatter', 'scatter', redraw)),
     field('Colliders', ...colChecks),
     select('Min. accuracy', 'minOrder', [['any', 'any'], ...ORDERS.map((o) => [o, `≥ ${o}`])], redraw),
     select('Status (all data at least)', 'minStatus', [['any', 'any'], ...LADDER.map((o) => [o, o])], redraw));

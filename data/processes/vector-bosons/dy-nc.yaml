@@ -416,6 +416,7 @@ channels:
             uncertainties: []
         predictions:
           - label: "N3LO+N3LL QCD (NNLOJET+RadISH)"
+            headline: true
             accuracy:
               qcd: N3LO
               resummation: [{accuracy: "N3LL", variable: "pT(ℓℓ)"}]
@@ -555,6 +556,7 @@ channels:
             refs: ["inspire:1753680"]
             provenance: {uid: 89fdaad7, ref: "inspire:1753680", locator: "Results section ('MG5_aMC@NLO and POWHEG at NLO accuracy in QCD using the NNPDF 3.0 PDF set') and Fig. 5", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NNLO QCD fixed order (FEWZ, NNPDF3.1)"
+            headline: true
             accuracy: {qcd: NNLO}
             codes: ["FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
@@ -571,6 +573,7 @@ channels:
             uncertainties: []
         predictions:
           - label: "NNLO+PS QCD (POWHEG MiNNLO_PS) with NLO+HO weak corrections (POWHEG-z_ew)"
+            headline: true
             accuracy: {qcd: NNLO, ew: NLO, shower_matched: true, approximations: ["EW corrections applied as reweighting from POWHEG-z_ew (NLO virtual weak + universal higher orders)"]}
             codes: ["POWHEG-BOX", "MiNNLO_PS", "Pythia8", "POWHEG-z_ew"]
             uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
@@ -611,6 +614,7 @@ channels:
             refs: ["inspire:3150032"]
             provenance: {uid: 1df2a388, ref: "inspire:3150032", locator: "Sec. 3 (MG5_aMC@NLO v5.2.2.2, NNPDF3.1, NLO, FxFx with up to two partons) and Figs. 3–7", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NNLO+PS QCD (POWHEG MiNNLO_PS + Pythia 8)"
+            headline: true
             accuracy: {qcd: NNLO, shower_matched: true}
             codes: ["POWHEG-BOX", "MiNNLO_PS", "Pythia8"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
@@ -733,6 +737,7 @@ channels:
                 provenance: {uid: 2c29845a, ref: "hepdata:ins744624/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD rapidity distribution (Anastasiou et al.), MSTW2008E / MRST2006E NNLO PDFs"
+            headline: true
             accuracy: {qcd: NNLO}
             uses_amplitudes: ["amp:2L/qqbar-V"]
             compared_to: ["meas:dy-nc/tevatron-1960/cdf-2010-yll"]
@@ -832,6 +837,7 @@ channels:
             refs: ["inspire:856972"]
             provenance: {uid: c3146350, ref: "inspire:856972", locator: "Text after Fig. 2 (mcfm at LO and NLO, MSTW2008, scales sqrt(m² + pT²) varied by 2; PDF uncertainty about half the scale uncertainty at NLO) and Fig. 3(b)", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "ResBos NNLL resummation + O(αs) with O(αs²) K-factors (CTEQ6.6, BLNY), D0 2010 μμ comparison"
+            headline: true
             accuracy:
               qcd: NLO
               resummation: [{accuracy: "NNLL", variable: "pT(μμ)"}]
@@ -857,6 +863,7 @@ channels:
             refs: ["inspire:1456804", "inspire:760769", "inspire:787440"]
             provenance: {uid: 60846f08, ref: "inspire:1456804", locator: "Sec. III.2 (QCD calculations: powheg-box [38, 39] with NNPDF-3.0 NNLO, pythia 6.41 showering, EBA) and Fig. 20", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NLO + NNLL CSS resummation with EBA electroweak form factors (ResBos, CTEQ6.6 NLO)"
+            headline: true
             accuracy:
               qcd: NLO
               resummation: [{accuracy: "NNLL", variable: "pT(ee)"}]
@@ -885,6 +892,7 @@ channels:
                 provenance: {uid: e03d9ef4, ref: "inspire:894312", locator: "Table 1, pT > 55 GeV: ± 0.61 (stat) of 4.97 (×10⁻¹)", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD (FEWZ, MSTW2008 NNLO)"
+            headline: true
             accuracy: {qcd: NLO, approximations: ["fixed order O(αs²): NLO for the distribution; NNLO only for the inclusive normalisation"]}
             codes: ["FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V"]
@@ -1055,6 +1063,7 @@ channels:
                 provenance: {uid: 909e3d0b, ref: "hepdata:ins1373300/Table 1", locator: "Table 1, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "NNLO QCD + NLO EW (DYNNLO 1.5), ATLAS central and forward Z"
+            headline: true
             accuracy: {qcd: NNLO, ew: NLO}
             codes: ["DYNNLO", "FEWZ"]
             uses_amplitudes: ["amp:2L/qqbar-V", "amp:1L/qqbar-ll-ew"]
@@ -1142,6 +1151,7 @@ channels:
             refs: ["inspire:1300647", "inspire:1252862"]
             provenance: {uid: b06f924b, ref: "inspire:1300647", locator: "Sec. 9 and Fig. 7 (ResBos-GNW agrees within 5–7%; uncertainties from PDF, μR and μF variations); Sec. on predictions (ResBos-BLNY = NLO+NNLL, ResBos-GNW = NNLO+NNLL)", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "NNLO+NNLL (Banfi, Dasgupta, Marzani, Tomlinson; CTEQ6m), ATLAS 2014"
+            headline: true
             accuracy:
               qcd: NNLO
               resummation: [{accuracy: "NNLL", variable: "pT(ℓℓ)"}]
@@ -1250,6 +1260,7 @@ channels:
             refs: ["inspire:1204784", "inspire:787440"]
             provenance: {uid: b61431e0, ref: "inspire:1204784", locator: "Sec. 7 (Powheg + Pythia8 describes the data within 5% over the whole φ* range; CT10)", source: agent, status: cross-checked, date: "2026-10-16"}
           - label: "ResBos (approx. NNLO + NNLL, CT10), LHCb 2015"
+            headline: true
             accuracy:
               qcd: NNLO
               resummation: [{accuracy: "NNLL", variable: "pT(Z)"}]
@@ -1471,6 +1482,7 @@ channels:
                 provenance: {uid: 6932fcae, ref: "hepdata:ins1406555/Table 2", locator: "Table 2, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "N3LO QCD + NLO EW (DYTurbo, MSHT20aN3LO), full lepton phase space, 80 < mℓℓ < 100 GeV"
+            headline: true
             accuracy: {qcd: N3LO, ew: NLO, approximations: ["NLO EW applied as a |y|-independent −0.4% (virtual −0.8%, QED ISR +0.4%)", "approximate N3LO PDFs (MSHT20aN3LO)"]}
             codes: ["DYTurbo"]
             uses_amplitudes: ["amp:3L/qqbar-V", "amp:2L/qqbar-Vg"]
@@ -1534,6 +1546,7 @@ channels:
                 provenance: {uid: 3d831788, ref: "hepdata:ins1406555/Table 3", locator: "Table 3, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "aN4LL + O(αs³) (DYTurbo, matched to MCFM), ATLAS 2023"
+            headline: true
             accuracy:
               qcd: N3LO
               resummation: [{accuracy: "aN4LL", variable: "pT(ℓℓ)"}]
@@ -1672,6 +1685,7 @@ channels:
                 provenance: {uid: 101cc8f7, ref: "hepdata:ins1406555/Table 4", locator: "Table 4, error 'sys,lumi'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "N3LL + NNLO (RadISH + NNLOJET; Bizon et al.), ATLAS 2016 cuts"
+            headline: true
             accuracy:
               qcd: NNLO
               resummation: [{accuracy: "N3LL", variable: "φ*_η"}]
@@ -1730,6 +1744,7 @@ channels:
                 provenance: {uid: a2421e91, ref: "hepdata:ins1359451/Table 1", locator: "Table 1, error 'sys'", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "Fixed order O(αs²) (as described in the ATLAS abstract), ATLAS 2016"
+            headline: true
             accuracy: {qcd: NLO, approximations: ["inclusive calculation formally accurate to O(αs²), but the coefficients as a function of pT(Z) are only NLO (Z+jet); cross-checked with FEWZ v3.1.b2 NNLO, agreement within uncertainties; CT10 NLO/NNLO PDFs, scale sqrt(mZ² + pT²)"]}
             codes: ["DYNNLO v1.3"]
             compared_to: ["meas:dy-nc/lhc-8/atlas-2016-ai"]
@@ -1762,6 +1777,7 @@ channels:
         results: []
         predictions:
           - label: "NLO+PS QCD (POWHEG v2 + Pythia 8, NNPDF3.0) templates, CMS 2018"
+            headline: true
             accuracy: {qcd: NLO, shower_matched: true, approximations: ["templates for the sin²θ_eff fit; A_FB is detector-level, no unfolded result"]}
             codes: ["POWHEG-BOX", "Pythia8"]
             uses_amplitudes: ["amp:1L/qqbar-V"]
@@ -1783,6 +1799,7 @@ channels:
                 provenance: {uid: ee3ebf3c, ref: "hepdata:ins1630886/Table 4", locator: "Table 4, error 'stat' (the 332 'sysZ3D…' systematic sources are not listed here)", source: hepdata, status: machine-verified, date: "2026-10-16"}
         predictions:
           - label: "NLO+PS QCD (POWHEG + Pythia 8, CT10) with NNLO QCD and NLO EW K-factors, ATLAS 2017"
+            headline: true
             accuracy: {qcd: NLO, ew: NLO, shower_matched: true, approximations: ["mass-dependent NNLO QCD + NLO EW K-factor from FEWZ 3.1 (MSTW2008NNLO), pT and y reweighting from DYNNLO", "no scale or matching uncertainties included"]}
             codes: ["POWHEG-BOX", "Pythia8", "FEWZ", "DYNNLO"]
             uses_amplitudes: ["amp:1L/qqbar-V"]
@@ -1965,6 +1982,7 @@ channels:
                 provenance: {uid: d709b2e6, ref: "inspire:2689657", locator: "Table 2, R_tt̄/Z column, 'tt̄ parton shower/hadronisation' (total systematic 1.8%)", source: agent, status: cross-checked, date: "2026-10-16"}
         predictions:
           - label: "tt̄ NNLO+NNLL (Top++ 2.0) over Z NNLO QCD + NLO EW (MATRIX), PDF4LHC21, mt = 172.5 GeV"
+            headline: true
             accuracy:
               qcd: NNLO
               resummation: [{accuracy: "NNLL", variable: "tt̄ soft-gluon (threshold)"}]

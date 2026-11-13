@@ -1,0 +1,29 @@
+id: "amp:2L/H-3partons-mt"
+process: "proc:h-jet"
+loops: 2
+corrections: "QCD"
+status: "done"
+approximations:
+  - "full top-quark mass dependence"
+  - "bottom-quark mass neglected in inspire:1651770; amplitudes for arbitrary heavy-quark masses in inspire:2098298"
+evaluation:
+  kind: "numerical"
+  detail: "two-loop integrals evaluated numerically with sector decomposition (inspire:1651770)"
+  provenance:
+    uid: cfdf56b3
+    ref: "inspire:1651770"
+    locator: "Abstract (the two-loop integrals appearing in the virtual contribution are calculated numerically using the method of sector decomposition)"
+    source: "agent"
+    status: "agent-draft"
+    date: "2026-11-12"
+refs:
+  - "inspire:1651770"
+  - "inspire:1944918"
+  - "inspire:2098298"
+provenance:
+  uid: d811c333
+  ref: "inspire:1651770"
+  locator: "Abstract (NLO QCD corrections to H + jet including the full top-quark mass dependence; two-loop virtual contribution); inspire:2098298, abstract (amplitudes valid for arbitrary heavy-quark masses)"
+  source: "agent"
+  status: "agent-draft"
+  date: "2026-11-12"

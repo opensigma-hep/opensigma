@@ -165,6 +165,7 @@ channels:
             compared_to: ["meas:t-channel-single-top/lhc-13/atlas-2026-diff"]
             refs: ["inspire:3098996", "inspire:1834626"]
             provenance: {uid: 68d66b4a, ref: "inspire:3098996", locator: "Sec. 3 (MCFM NNLO, 5FS, dynamic DDIS scale, mt = 172.5 GeV; Ref. [50] = Campbell, Neumann, Sullivan, JHEP 02 (2021) 040) and Fig. 9a (normalised pT(t) vs MCFM LO/NLO/NNLO); headline bin 2: 45 < pT(t) < 65 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
       - id: "obs:t-channel-single-top/lhc-13/pol-z-top"
         name: "Top-quark polarisation P_z′ along the spectator-quark direction, t-channel"
         kind: asymmetry
@@ -207,6 +208,7 @@ channels:
             compared_to: ["meas:t-channel-single-top/lhc-13/atlas-2022-polarisation"]
             refs: ["inspire:2036789", "inspire:1620902"]
             provenance: {uid: 17a3ad2f, ref: "inspire:2036789", locator: "Introduction (NNLO calculation based on Ref. [8] = Berger, Gao, Zhu, JHEP 11 (2017) 158; CT18nnlo, μR = μF = mt/2) and Fig. 5 (red point: parton-level NNLO prediction)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
   - id: "chan:t-channel-single-top/tevatron"
     collider: "col:tevatron-1960"
     initial_state: "pp̄"

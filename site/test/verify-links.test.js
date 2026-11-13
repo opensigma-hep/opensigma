@@ -20,5 +20,7 @@ test('refUrl', () => {
   assert.equal(refUrl('arXiv:hep-ph/0201206'), 'https://arxiv.org/abs/hep-ph/0201206');
   assert.equal(refUrl('inspire:1000001'), 'https://inspirehep.net/literature/1000001');
   assert.equal(refUrl('hepdata:ins1000001/Table 2'), 'https://www.hepdata.net/record/ins1000001?table=Table%202');
+  assert.equal(refUrl('hepdata:ins3098996/Figure 9a,10a,11a'), 'https://www.hepdata.net/record/ins3098996?table=Figure%209a%2C10a%2C11a');
+  assert.equal(refUrl('hepdata:ins1000001/Table 2, row 3'), 'https://www.hepdata.net/record/ins1000001?table=Table%202');
   assert.equal(refUrl('nonsense'), '');
 });

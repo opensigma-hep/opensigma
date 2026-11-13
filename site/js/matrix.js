@@ -14,20 +14,33 @@ const RATIO_EDGES = [0.5, 0.8, 1.25, 2];
 export const RATIO_LABELS = ['< 0.5', '0.5 – 0.8', '0.8 – 1.25', '1.25 – 2', '> 2'];
 export const ratioBin = (r) => RATIO_EDGES.findIndex((e) => r <= e) < 0 ? 4 : RATIO_EDGES.findIndex((e) => r <= e);
 
+/** "NNLO QCD", or the EW order ("NLO EW") when it is higher and QCD is LO or absent; null without predictions. */
+export function cellOrder(cell) {
+  const ew = cell.max_ew ?? 'LO';
+  if (ew !== 'LO' && (cell.max_qcd ?? 'LO') === 'LO') return `${ew} EW`;
+  return cell.max_qcd == null ? null : `${cell.max_qcd} QCD`;
+}
+
+/** "×0.65" for the in-cell ratio badge; null when there is no ratio. */
+export const ratioText = (r) => (r == null ? null : `×${+r.toFixed(2)}`);
+
+/** True when any cell has a theory target (else the "Has theory target" filter would dim everything). */
+export const anyTarget = (cells) => Object.values(cells).some((c) => c.has_target);
+
 /** Fill (precision ratio), texture and text label for one cell. A missing cell means the process has no channel at that collider. */
 export function cellState(cell, includeProj) {
   if (!cell) return { fill: 'none', pattern: 'none', label: 'no channel' };
   const ratio = includeProj ? cell.ratio_with_projections : cell.ratio;
   const n = cell.n_measurements;
-  const parts = [cell.max_qcd == null ? 'no QCD prediction' : `${cell.max_qcd} QCD`,
+  const parts = [cellOrder(cell) ?? 'no QCD prediction',
     ratio == null ? 'no precision ratio' : `precision ratio ${+ratio.toFixed(2)} (theory/experiment)`,
     `${n} measurement${n === 1 ? '' : 's'}`];
   if (cell.candidates > 0) parts.push(`${cell.candidates} candidate${cell.candidates === 1 ? '' : 's'}`);
   if (cell.coverage === 'partial') parts.push('partial coverage');
   if (cell.stale) parts.push('may be outdated');
   const label = parts.join(', ');
-  if (ratio == null) return { fill: 'var(--cell-empty)', pattern: 'hatch', label };
-  return { fill: `var(--rat-${ratioBin(ratio) + 1})`, pattern: cell.coverage === 'partial' ? 'partial' : 'none', label };
+  if (ratio == null) return { ratioText: null, fill: 'var(--cell-empty)', pattern: 'hatch', label };
+  return { ratioText: ratioText(ratio), fill: `var(--rat-${ratioBin(ratio) + 1})`, pattern: cell.coverage === 'partial' ? 'partial' : 'none', label };
 }
 
 /** Cell filters. null min_status / max_qcd pass only when the filter is "any". */

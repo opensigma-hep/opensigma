@@ -36,12 +36,14 @@ jobs:
           ISSUE_URL: ${{ github.event.issue.html_url }}
           LABELS: ${{ join(github.event.issue.labels.*.name, ' ') }}
           LOGIN: ${{ github.event.issue.user.login }}
+          FALLBACK: ${{ vars.FLAG_ASSIGNEE }}
         run: |
           case " $LABELS " in *" verify "*) action=verify ;; *) action=flag ;; esac
           printf '%s' "$ISSUE_BODY" > "$RUNNER_TEMP/issue.md"
           created_at=$(gh api "users/$LOGIN" --jq .created_at)
           python -m scripts.apply_verification --root data --issue-body-file "$RUNNER_TEMP/issue.md" \
             --user "$LOGIN" --created-at "$created_at" --issue-url "$ISSUE_URL" --action-label "$action" \
+            --fallback-assignee "$FALLBACK" \
             | tee -a "$GITHUB_OUTPUT"
           echo "action=$action" >> "$GITHUB_OUTPUT"
       - name: Branch, validate, commit, open PR, auto-merge
@@ -81,6 +83,15 @@ jobs:
           else
             gh issue comment "$ISSUE" --body "No maintainer is configured for this family and the FLAG_ASSIGNEE variable is not set, so this flag is unassigned."
           fi
+      - name: Hand a verify of a disputed datum to the maintainers
+        if: steps.apply.outputs.outcome == 'dispute_needs_maintainer'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          ASSIGNEES: ${{ steps.apply.outputs.maintainers || vars.FLAG_ASSIGNEE }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE" --body "This datum is disputed, and only a maintainer of its family (or the repository owner while none exist) can resolve a dispute, so your verification was not applied. It stays open for them to review."
+          if [ -n "$ASSIGNEES" ]; then gh issue edit "$ISSUE" --add-assignee "$ASSIGNEES"; fi
       - name: Reject with a reason and close
         if: contains(fromJSON('["unknown_uid","same_user","too_young","unparseable"]'), steps.apply.outputs.outcome)
         env:

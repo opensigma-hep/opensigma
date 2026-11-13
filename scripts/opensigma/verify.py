@@ -68,8 +68,11 @@ def maintainers_for(root: Path, uid: str) -> list[str]:
     return list(next((f.get("maintainers") or [] for f in fams if f["id"] == fam), []))
 
 
-def apply(root: Path, uid: str, action: str, user: str, issue_url: str, today: date) -> str:
-    """Edit status fields in place. Returns edited | unknown_uid | same_user | already_disputed_linked."""
+def apply(root: Path, uid: str, action: str, user: str, issue_url: str, today: date, fallback: str = "") -> str:
+    """Edit status fields in place. Returns edited | unknown_uid | same_user | already_disputed_linked | dispute_needs_maintainer.
+
+    Resolving a dispute (DECISIONS #17) is for the family's maintainers or the `fallback` assignee (comma list) only.
+    """
     hit = _locate(root, uid)
     if hit is None:
         return "unknown_uid"
@@ -78,6 +81,10 @@ def apply(root: Path, uid: str, action: str, user: str, issue_url: str, today: d
     if action == "verify":
         if pr.get("verified_by") == user:
             return "same_user"
+        if pr.get("status") == "disputed":
+            allowed = {h.lower() for h in [*maintainers_for(root, uid), *fallback.split(",")] if h.strip()}
+            if user.lower() not in allowed:
+                return "dispute_needs_maintainer"
         pr.pop("issues", None)  # resolves a dispute
         pr.update(status="human-verified", verified_by=user, date=q(today.isoformat()), issue=q(issue_url))
     elif pr.get("status") == "disputed":

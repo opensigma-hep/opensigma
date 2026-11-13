@@ -115,6 +115,7 @@ channels:
             compared_to: ["meas:vh/lhc-13/atlas-2024-vhbb-stxs", "meas:vh/lhc-13/cms-2023-vhbb-stxs"]
             refs: ["inspire:2842826", "inspire:2736546"]
             provenance: {uid: 3fb4c64d, ref: "inspire:2842826", locator: "arXiv:2410.19611, Table 1 and notes (qq → VH: Powheg Box v2 + GoSam + MiNLO, Pythia 8, NNLO(QCD)+NLO(EW) normalisation, pT(V)-dependent NLO EW from Hawk; gg → ZH NLO+NLL) and Table 8; arXiv:2312.07562 Sec. 2 (POWHEG v2 + MINLO, rescaled to NNLO QCD and NLO EW with VH@NNLO and HAWK)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:vh/lhc-13/sigma-wh"
         name: "σ(WH) in the Higgs decay-channel combination (ATLAS: σ(WH); CMS: μ_WH)"
         kind: total
@@ -286,8 +287,13 @@ channels:
   - id: "chan:vh/lhc-13.6"
     collider: "col:lhc-13.6"
     initial_state: "pp"
-    coverage: stub
-    last_reviewed: "2026-10-22"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    measurements:
+      - id: "meas:vh/lhc-13.6/cms-2025-zh-ww"
+        experiment: "CMS"
+        dataset: "13.6 TeV, 62 fb⁻¹ (2022–2023), ZH with H → WW in four-lepton final states, fitted simultaneously with non-resonant WWZ (the paper also analyses 138 fb⁻¹ at 13 TeV)"
+        ref: "inspire:2925580"
     observables:
       - id: "obs:vh/lhc-13.6/sigma-fid-wph-boosted"
         name: "Fiducial σ(pp → W+(→ e+ν)H), boosted Higgs, pT(H) ≥ 250 GeV"
@@ -312,3 +318,29 @@ channels:
                 provenance: {uid: 2ab6f565, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 (± 0.01 pb of 3.62 pb, conservative MC + slicing error) and Validation section", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:3175068"]
             provenance: {uid: b385d5b6, ref: "inspire:3175068", locator: "arXiv:2606.31286, Table 1 and Computational Setup (√s = 13.6 TeV, NNPDF40_an3lo_as_01180, m_H = 125.09 GeV, Gμ scheme); N3LO corrections about +1.5% over NNLO in the boosted setup", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
+      - id: "obs:vh/lhc-13.6/sigma-zh-ww"
+        name: "σ(ZH) × B(H → WW) at 13.6 TeV (CMS, four-lepton final state)"
+        kind: total
+        variable: "σ(pp → ZH) × B(H → WW), from a simultaneous fit of the ZH (H → WW) and non-resonant WWZ signal strengths in four-lepton events"
+        results:
+          - measurement: "meas:vh/lhc-13.6/cms-2025-zh-ww"
+            total: {value_pct: 74.0, provenance: {uid: 1f815d37, ref: "arXiv:2505.20483", locator: "Table of measured signal strengths and cross sections (caption: Measured signal strengths and cross sections for the WWZ, ZH and inclusive processes), Run 3 (√s = 13.6 TeV), ZH only: σ_obs = 320 +230/−180 (stat) +60/−30 (syst) fb, μ = 1.57 +1.12/−0.89 (stat) +0.29/−0.14 (syst); stat and syst upper sides added in quadrature here, as % of the central value", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty"
+                size: {range: [56.0, 72.0], unit: "%", asymmetric: true}
+                provenance: {uid: a4378270, ref: "arXiv:2505.20483", locator: "Table of measured signal strengths and cross sections, Run 3, ZH only: +230/−180 (stat) fb of 320 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [9.0, 19.0], unit: "%", asymmetric: true}
+                provenance: {uid: bcbdd7cf, ref: "arXiv:2505.20483", locator: "Table of measured signal strengths and cross sections, Run 3, ZH only: +60/−30 (syst) fb of 320 fb", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "NNLO QCD ZH cross section (LHC Higgs WG ad interim 13.6 TeV recommendation) × B(H → WW)"
+            accuracy:
+              qcd: NNLO
+              approximations: ["σ_SM = 202 fb quoted without uncertainty; the signal strength does not include the uncertainty of the predicted cross section"]
+            compared_to: ["meas:vh/lhc-13.6/cms-2025-zh-ww"]
+            refs: ["arXiv:2402.09955"]
+            provenance: {uid: d9a9b31d, ref: "arXiv:2505.20483", locator: "Table of measured signal strengths and cross sections, Run 3, ZH only, σ_SM column: 202 fb; caption: ZH cross sections calculated at NNLO; simulation paragraph: cross sections recommended by the LHC Higgs Working Group", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true

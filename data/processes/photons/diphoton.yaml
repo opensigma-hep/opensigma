@@ -44,6 +44,12 @@ building_blocks:
         provenance: {uid: '35016419', ref: "inspire:1887997", locator: "Sec. 8 (NNLOJET: NNLO includes loop-induced gg → γγ at leading-order accuracy; NNLO predictions for the fragmentation component are not yet available, as stated in 2021)", source: agent, status: cross-checked, date: "2026-10-16"}
   - row: "N3LO QCD"
     cells:
+      2L:
+        status: partial
+        approximations: ["two-loop QCD helicity amplitudes with a massive quark loop (full mass dependence) for the loop-induced gluon-fusion channel, which enters at N3LO (inspire:2876679 Sec. 1)"]
+        amplitude: "amp:2L/gg-gammagamma-mq"
+        refs: ["inspire:2876679", "inspire:2874702"]
+        provenance: {uid: 4d116b82, ref: "inspire:2876679", locator: "Abstract (two-loop helicity amplitudes for diphoton production with a massive quark loop, full mass dependence; gluon-initiated channel)", source: agent, status: agent-draft, date: "2026-11-12"}
       3L:
         status: done
         amplitude: "amp:3L/qqbar-gammagamma"
@@ -257,6 +263,7 @@ channels:
             uses_amplitudes: ["amp:2L/qqbar-gammagamma", "amp:3L/qqbar-gammagamma"]
             refs: ["inspire:3144736"]
             provenance: {uid: 75dc24cf, ref: "inspire:3144736", locator: "Results, Fig. 3 (dσ/dmγγ through N3LO; not compared with data in the paper, no numbers transcribed)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
           - label: "NNLO QCD (NNLOJET), hybrid-cone isolation, NNPDF3.0: dσ/dmγγ"
             accuracy:
               qcd: NNLO
@@ -346,6 +353,7 @@ channels:
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
             provenance: {uid: c0881c28, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "MiNNLOPS NNLO+PS (Powheg Box Res + Pythia8), NNPDF3.1: dσ/dpT,γγ"
             accuracy:
               qcd: NLO
@@ -418,6 +426,7 @@ channels:
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
             provenance: {uid: afb46e29, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:diphoton/lhc-13/dsigma-dphistar"
         name: "dσ/dφ*_η, isolated photon pair"
         kind: differential
@@ -481,6 +490,7 @@ channels:
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
             provenance: {uid: 1f9f4fc2, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "MiNNLOPS NNLO+PS (Powheg Box Res + Pythia8), NNPDF3.1: dσ/dφ*η"
             accuracy:
               qcd: NLO
@@ -553,6 +563,7 @@ channels:
             compared_to: ["meas:diphoton/lhc-13/atlas-2021"]
             refs: ["inspire:2872231"]
             provenance: {uid: 6ee82cec, ref: "inspire:2872231", locator: "Sec. II (antenna subtraction in NNLOjet, full-colour two-loop amplitudes) and Sec. III, Table 1 and Fig. 1 (comparison with ATLAS 13 TeV; per-bin values not transcribed)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "MiNNLOPS NNLO+PS (Powheg Box Res + Pythia8), NNPDF3.1: dσ/dφacop"
             accuracy:
               qcd: NLO
@@ -887,3 +898,4 @@ channels:
             compared_to: ["meas:diphoton/tevatron-1960/d0-2013"]
             refs: ["inspire:939520"]
             provenance: {uid: '83893e03', ref: "inspire:1215307", locator: "Abstract and text (comparison with diphox and resbos at NLO, 2γnnlo at NNLO, sherpa matched to parton shower); 2γnnlo uses MSTW2008 NNLO PDFs (Sec. on theory comparison)", source: agent, status: cross-checked, date: "2026-10-16"}
+            headline: true

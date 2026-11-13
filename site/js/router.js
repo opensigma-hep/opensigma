@@ -1,7 +1,7 @@
-// Hash routing: "#/<id>", "#/about", "#/amplitudes", "#/parameters", "#/gaps", "#/next-run", "#/timeline", "#/search?q=…", "" or "#/" for the home view.
+// Hash routing: "#/<id>", "#/about", "#/amplitudes", "#/parameters", "#/processes", "#/experiments", "#/gaps", "#/next-run", "#/timeline", "#/glossary" or "#/glossary?t=<term>", "#/search?q=…", "" or "#/" for the home view.
 const VIEW_BY_PREFIX = {
   fam: 'family', proc: 'process', chan: 'channel', obs: 'observable',
-  amp: 'amplitude', par: 'parameter', col: 'collider',
+  amp: 'amplitude', par: 'parameter', col: 'collider', exp: 'experiment',
 };
 
 export const toHash = (id) => '#/' + id;
@@ -12,12 +12,18 @@ function decode(s) {
 
 // A measurement has no page of its own (the observable page lists it): meas: ids land on the parent channel.
 export function parseHash(hash, aliases, ids, parents = {}) {
-  const path = hash.replace(/^#\/?/, '');
+  // Only search reads its query; elsewhere a "?…" and trailing slashes are ignored.
+  const [, bare, query = ''] = /^#?\/?([^?]*)\??(.*)$/s.exec(hash);
+  const path = bare.replace(/\/+$/, '');
   if (path === '') return { view: 'families' };
-  if (['about', 'amplitudes', 'parameters', 'gaps', 'next-run', 'timeline'].includes(path)) return { view: path };
-  if (path === 'search' || path.startsWith('search?')) {
+  if (['about', 'amplitudes', 'parameters', 'processes', 'experiments', 'gaps', 'next-run', 'timeline'].includes(path)) return { view: path };
+  if (path === 'glossary') {
+    const raw = query.split('&').find((kv) => kv.startsWith('t='));
+    return raw ? { view: 'glossary', t: decode(raw.slice(2)) } : { view: 'glossary' };
+  }
+  if (path === 'search') {
     // Not URLSearchParams: it would turn a literal '+' into a space.
-    const raw = path.slice(7).split('&').find((kv) => kv.startsWith('q='));
+    const raw = query.split('&').find((kv) => kv.startsWith('q='));
     return { view: 'search', q: raw ? decode(raw.slice(2)) : '' };
   }
   const raw = decode(path);

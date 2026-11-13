@@ -1,0 +1,40 @@
+id: "par:gamma-z"
+name: "Z boson total width"
+symbol: "Γ_Z"
+unit: "GeV"
+determinations:
+  - value: 2.4955
+    uncertainty: 0.0023
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: 484b8215, ref: "inspire:3193100", locator: "PDG 2026 edition, Z WIDTH (PDG API summary S044W, OUR EVALUATION): 2.4955 ± 0.0023 GeV (LEP Electroweak Working Group fit procedure, with the luminosity corrections of VOUTSINAS 2020 and JANOT 2020)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.4955
+    uncertainty: 0.0023
+    extracted_from: ["obs:z-pole/lep1/gamma-z"]
+    ref: "arXiv:1912.02067"
+    provenance: {uid: be7877e5, ref: "arXiv:1912.02067", locator: "Appendix B, Tables 12 and 13 and Sec. 7: LEP lineshape combination re-evaluated with the updated Bhabha cross section and the beam-beam luminosity bias correction, Γ_Z = 2.4955 ± 0.0023 GeV (2.4952 before the corrections)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.4952
+    uncertainty: 0.0023
+    extracted_from: ["obs:z-pole/lep1/gamma-z"]
+    ref: "inspire:691576"
+    provenance: {uid: f506b831, ref: "inspire:691576", locator: "Abstract: LEP combination of the Z lineshape (ALEPH, DELPHI, L3, OPAL), Γ_Z = 2.4952 ± 0.0023 GeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.4951
+    uncertainty: 0.0043
+    extracted_from: []
+    ref: "inspire:506060"
+    provenance: {uid: ef1db904, ref: "inspire:3193100", locator: "PDG 2026 edition, Z WIDTH listing (S044W), row BARATE 2000C (ALEPH, lineshape scan at 88-94 GeV): 2.4951 ± 0.0043 GeV; not used in the PDG evaluation (enters through the LEP combination)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.4876
+    uncertainty: 0.0041
+    extracted_from: []
+    ref: "inspire:527605"
+    provenance: {uid: fb46f059, ref: "inspire:3193100", locator: "PDG 2026 edition, Z WIDTH listing (S044W), row ABREU 2000F (DELPHI, lineshape scan at 88-94 GeV): 2.4876 ± 0.0041 GeV; not used in the PDG evaluation (enters through the LEP combination)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.5024
+    uncertainty: 0.0042
+    extracted_from: []
+    ref: "inspire:524027"
+    provenance: {uid: 6e2d0e78, ref: "inspire:3193100", locator: "PDG 2026 edition, Z WIDTH listing (S044W), row ACCIARRI 2000C (L3, lineshape scan at 88-94 GeV): 2.5024 ± 0.0042 GeV; not used in the PDG evaluation (enters through the LEP combination)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 2.4948
+    uncertainty: 0.0041
+    extracted_from: []
+    ref: "inspire:538108"
+    provenance: {uid: 8fa8d4be, ref: "inspire:3193100", locator: "PDG 2026 edition, Z WIDTH listing (S044W), row ABBIENDI 2001A (OPAL, lineshape scan at 88-94 GeV): 2.4948 ± 0.0041 GeV; not used in the PDG evaluation (enters through the LEP combination)", source: agent, status: agent-draft, date: "2026-11-12"}

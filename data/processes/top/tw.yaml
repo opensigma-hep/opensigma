@@ -163,6 +163,7 @@ channels:
             compared_to: ["meas:tw/lhc-13/cms-2022-emu-diff"]
             refs: ["inspire:2129461"]
             provenance: {uid: 02e35f2f, ref: "inspire:2129461", locator: "Sec. 2 (POWHEG v2 NLO tW, DR nominal, PYTHIA 8, NNPDF3.1 NNLO) and Fig. 8 (leading-lepton pT; HEPData 'Figure 8a', column 'tW PH DR + P8'); headline bin 3: 45 < pT(ℓ1) < 55 GeV", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
   - id: "chan:tw/lhc-13.6"
     collider: "col:lhc-13.6"
     initial_state: "pp"
@@ -202,7 +203,7 @@ channels:
                 full_table: "hepdata:ins2827552/Cross section"
                 provenance: {uid: d090a369, ref: "hepdata:ins2827552/Cross section", locator: "Cross section, error 'lumi'", source: hepdata, status: machine-verified, date: "2026-10-17"}
         predictions:
-          - label: "aN3LO QCD (NLO + soft-gluon corrections, PDF4LHC21), CMS 2024 comparison"
+          - label: "NLO QCD + approximate higher-order soft-gluon corrections (aN3LO, PDF4LHC21), CMS 2024 comparison"
             accuracy:
               qcd: NLO
               resummation: [{accuracy: "N3LL (approximate)", variable: "soft-gluon threshold"}]

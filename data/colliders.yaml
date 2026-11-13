@@ -1,20 +1,82 @@
-- {id: "col:lep1", name: "LEP 1", beams: "e+e−", sqrts_gev: 91.2, status: past, order: 1}
-- {id: "col:lep2", name: "LEP 2", beams: "e+e−", sqrts_gev: [130, 209], status: past, order: 2}
-- {id: "col:slc", name: "SLC", beams: "e+e−", sqrts_gev: 91.2, status: past, order: 3}
-- {id: "col:belle2", name: "Belle II", beams: "e+e−", sqrts_gev: 10.58, status: running, order: 4}
-- {id: "col:tevatron-1960", name: "Tevatron 1.96 TeV", beams: "pp̄", sqrts_gev: 1960, status: past, order: 5}
-- {id: "col:hera", name: "HERA", beams: "e±p", sqrts_gev: [300, 320], status: past, order: 6}
-- {id: "col:lhc-7", name: "LHC 7 TeV", beams: "pp", sqrts_gev: 7000, status: past, order: 7}
-- {id: "col:lhc-8", name: "LHC 8 TeV", beams: "pp", sqrts_gev: 8000, status: past, order: 8}
-- {id: "col:lhc-13", name: "LHC 13 TeV", beams: "pp", sqrts_gev: 13000, status: running, order: 9}
-- {id: "col:lhc-13.6", name: "LHC 13.6 TeV", beams: "pp", sqrts_gev: 13600, status: running, order: 10}
-- {id: "col:lhc-hl", name: "HL-LHC", beams: "pp", sqrts_gev: 14000, status: future, order: 11}
-- {id: "col:fcc-ee-z", name: "FCC-ee Z", beams: "e+e−", sqrts_gev: 91.2, status: future, order: 12}
-- {id: "col:fcc-ee-ww", name: "FCC-ee WW", beams: "e+e−", sqrts_gev: 161, status: future, order: 13}
-- {id: "col:fcc-ee-zh", name: "FCC-ee ZH", beams: "e+e−", sqrts_gev: 240, status: future, order: 14}
-- {id: "col:fcc-ee-tt", name: "FCC-ee tt̄", beams: "e+e−", sqrts_gev: 365, status: future, order: 15}
-- {id: "col:fcc-hh", name: "FCC-hh", beams: "pp", sqrts_gev: 85000, status: future, order: 16}
-- {id: "col:eic", name: "EIC", beams: "e p", sqrts_gev: [29, 141], status: future, order: 17}
+# machine / lab / years / url / note / luminosity / sources are optional and were fetched from the linked official pages
+# on 2026-11-12 (DECISIONS.md #26); `url` is the source unless `sources` lists more. Nothing is filled in from memory:
+# a collider without these fields had no reachable official page stating them.
+- {id: "col:lep1", name: "LEP 1", beams: "e+e−", sqrts_gev: 91.2, status: past, order: 1,
+   machine: "Large Electron–Positron collider (LEP)", lab: "CERN", years: "1989–1995",
+   url: "https://home.cern/science/accelerators/large-electron-positron-collider",
+   note: "27-kilometre ring; first beam circulated on 14 July 1989; ran at around 91 GeV in its first phase.",
+   sources: ["https://opal.web.cern.ch/Opal/"]}
+- {id: "col:lep2", name: "LEP 2", beams: "e+e−", sqrts_gev: [130, 209], status: past, order: 2,
+   machine: "Large Electron–Positron collider (LEP)", lab: "CERN", years: "1996–2000",
+   url: "https://home.cern/science/accelerators/large-electron-positron-collider",
+   note: "Upgraded for its second phase in 1995; the energy topped 209 GeV in 2000; closed down on 2 November 2000.",
+   sources: ["https://opal.web.cern.ch/Opal/"]}
+- {id: "col:slc", name: "SLC", beams: "e+e−", sqrts_gev: 91.2, status: past, order: 3,
+   machine: "Stanford Linear Collider (SLC)", lab: "SLAC", years: "1989–1998",
+   url: "https://www-sldnt.slac.stanford.edu/alr/slchistory.htm",
+   note: "Built 1983–1987; physics programme started in 1989 with the Mark II detector; SLD replaced Mark II in 1991, took polarized-beam data from 1992 and completed data taking on 5 June 1998."}
+- {id: "col:belle2", name: "Belle II", beams: "e+e−", sqrts_gev: 10.58, status: running, order: 4,
+   machine: "SuperKEKB", lab: "KEK, Tsukuba", years: "2018–",
+   url: "https://www-superkekb.kek.jp/",
+   note: "Upgrade of the KEKB collider and the Belle detector; first electron–positron collisions reported in April 2018.",
+   luminosity: {text: "914 fb⁻¹ accumulated by Belle II, as stated on its home page on 2026-11-12", source: "https://www.belle2.org/"}}
+- {id: "col:tevatron-1960", name: "Tevatron 1.96 TeV", beams: "pp̄", sqrts_gev: 1960, status: past, order: 5,
+   machine: "Tevatron", lab: "Fermilab", years: "1985–2011",
+   url: "https://www.fnal.gov/pub/tevatron/",
+   note: "Four-mile ring with the CDF and DZero detectors; first proton–antiproton collisions on 13 October 1985, shut down on 30 September 2011. The years are those of the collider as a whole, not only of the 1.96 TeV running.",
+   sources: ["https://www.fnal.gov/pub/tevatron/experiments/cdf.html", "https://www.fnal.gov/pub/tevatron/tevatron-accelerator.html"]}
+- {id: "col:hera", name: "HERA", beams: "e±p", sqrts_gev: [300, 320], status: past, order: 6,
+   machine: "Hadron Electron Ring Accelerator (HERA)", lab: "DESY, Hamburg",
+   url: "https://www-zeus.desy.de/public/hera.php3",
+   note: "Two storage rings in a 6.3 km tunnel, built from May 1984 to November 1990 and commissioned during 1991; H1 data taking stopped in 2007.",
+   sources: ["https://h1.desy.de/"]}
+- {id: "col:lhc-7", name: "LHC 7 TeV", beams: "pp", sqrts_gev: 7000, status: past, order: 7,
+   machine: "Large Hadron Collider (LHC)", lab: "CERN",
+   url: "https://home.cern/science/accelerators/large-hadron-collider",
+   note: "First collisions on 23 November 2009; first high-energy (7 TeV) collisions on 30 March 2010."}
+- {id: "col:lhc-8", name: "LHC 8 TeV", beams: "pp", sqrts_gev: 8000, status: past, order: 8,
+   machine: "Large Hadron Collider (LHC)", lab: "CERN",
+   url: "https://home.cern/science/accelerators/large-hadron-collider"}
+- {id: "col:lhc-13", name: "LHC 13 TeV", beams: "pp", sqrts_gev: 13000, status: running, order: 9,
+   machine: "Large Hadron Collider (LHC)", lab: "CERN",
+   url: "https://home.cern/science/accelerators/large-hadron-collider",
+   note: "Reached 13 TeV in 2015, at the start of its second run."}
+- {id: "col:lhc-13.6", name: "LHC 13.6 TeV", beams: "pp", sqrts_gev: 13600, status: running, order: 10,
+   machine: "Large Hadron Collider (LHC)", lab: "CERN",
+   url: "https://home.cern/science/accelerators/large-hadron-collider",
+   note: "13.6 TeV since 2022, the start of its third run; operates until Long Shutdown 3, starting in July 2026."}
+- {id: "col:lhc-hl", name: "HL-LHC", beams: "pp", sqrts_gev: 14000, status: future, order: 11,
+   machine: "High-Luminosity LHC (HL-LHC)", lab: "CERN",
+   url: "https://home.cern/science/accelerators/hilumi-lhc",
+   note: "Upgrade of the LHC; most components are installed during a four-year shutdown starting in mid-2026, and it should be operational in mid-2030.",
+   luminosity: {text: "design goal: up to 4000 fb⁻¹ over its operational period, more than 250 fb⁻¹ per year", source: "https://home.cern/science/accelerators/hilumi-lhc"},
+   sources: ["https://hilumilhc.web.cern.ch/"]}
+- {id: "col:fcc-ee-z", name: "FCC-ee Z", beams: "e+e−", sqrts_gev: 91.2, status: future, order: 12,
+   machine: "Future Circular Collider (FCC), electron–positron stage", lab: "CERN",
+   url: "https://home.cern/science/accelerators/future-circular-collider",
+   note: "Proposed collider in a tunnel some 91 kilometres in circumference; decision expected in 2028, start-up in the late 2040s."}
+- {id: "col:fcc-ee-ww", name: "FCC-ee WW", beams: "e+e−", sqrts_gev: 161, status: future, order: 13,
+   machine: "Future Circular Collider (FCC), electron–positron stage", lab: "CERN",
+   url: "https://home.cern/science/accelerators/future-circular-collider"}
+- {id: "col:fcc-ee-zh", name: "FCC-ee ZH", beams: "e+e−", sqrts_gev: 240, status: future, order: 14,
+   machine: "Future Circular Collider (FCC), electron–positron stage", lab: "CERN",
+   url: "https://home.cern/science/accelerators/future-circular-collider"}
+- {id: "col:fcc-ee-tt", name: "FCC-ee tt̄", beams: "e+e−", sqrts_gev: 365, status: future, order: 15,
+   machine: "Future Circular Collider (FCC), electron–positron stage", lab: "CERN",
+   url: "https://home.cern/science/accelerators/future-circular-collider"}
+- {id: "col:fcc-hh", name: "FCC-hh", beams: "pp", sqrts_gev: 85000, status: future, order: 16,
+   machine: "Future Circular Collider (FCC), proton–proton stage", lab: "CERN",
+   url: "https://home.cern/science/accelerators/future-circular-collider",
+   note: "Possible later conversion of the FCC into a proton–proton collider reaching collision energies of up to 100 TeV, as stated on the CERN page."}
+- {id: "col:eic", name: "EIC", beams: "e p", sqrts_gev: [29, 141], status: future, order: 17,
+   machine: "Electron-Ion Collider (EIC)", lab: "Brookhaven National Laboratory",
+   url: "https://www.bnl.gov/eic/",
+   note: "Two intersecting accelerators, one for electrons and one for protons or heavier nuclei, with polarized beams; a new electron source, accelerator and storage rings are added inside the existing collider tunnel.",
+   sources: ["https://www.bnl.gov/eic/machine.php"]}
 - {id: "col:lhec", name: "LHeC", beams: "e p", sqrts_gev: 1200, status: future, order: 18}
-- {id: "col:muc-3", name: "Muon collider 3 TeV", beams: "μ+μ−", sqrts_gev: 3000, status: future, order: 19}
-- {id: "col:muc-10", name: "Muon collider 10 TeV", beams: "μ+μ−", sqrts_gev: 10000, status: future, order: 20}
+- {id: "col:muc-3", name: "Muon collider 3 TeV", beams: "μ+μ−", sqrts_gev: 3000, status: future, order: 19,
+   machine: "Muon collider (feasibility study by the International Muon Collider Collaboration)",
+   url: "https://home.cern/science/accelerators/muon-collider", sources: ["https://muoncollider.web.cern.ch/"]}
+- {id: "col:muc-10", name: "Muon collider 10 TeV", beams: "μ+μ−", sqrts_gev: 10000, status: future, order: 20,
+   machine: "Muon collider (feasibility study by the International Muon Collider Collaboration)",
+   url: "https://home.cern/science/accelerators/muon-collider", sources: ["https://muoncollider.web.cern.ch/"]}

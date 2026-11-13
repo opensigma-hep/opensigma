@@ -11,7 +11,7 @@ test('#/ → families, #/about → about', () => {
   assert.equal(parseHash('#/about', {}, new Set()).view, 'about');
   assert.equal(parseHash('#/amplitudes', {}, new Set()).view, 'amplitudes');
   assert.equal(parseHash('#/parameters', {}, new Set()).view, 'parameters');
-  for (const v of ['gaps', 'next-run', 'timeline']) assert.equal(parseHash('#/' + v, {}, new Set()).view, v);
+  for (const v of ['gaps', 'next-run', 'timeline', 'processes']) assert.equal(parseHash('#/' + v, {}, new Set()).view, v);
 });
 test('every id prefix maps to its view', () => {
   const m = {fam:'family', proc:'process', chan:'channel', obs:'observable', amp:'amplitude', par:'parameter', col:'collider'};
@@ -35,4 +35,21 @@ test('meas: alias also lands on the channel', () => {
   const ids = new Set(['meas:a', 'chan:a']);
   assert.deepEqual(parseHash('#/meas:old', { 'meas:old': 'meas:a' }, ids, { 'meas:a': 'chan:a' }), { view: 'channel', id: 'chan:a', redirected: true });
 });
+test('glossary route, with and without a term', () => {
+  assert.deepEqual(parseHash('#/glossary', {}, new Set()), { view: 'glossary' });
+  assert.deepEqual(parseHash('#/glossary?t=RV', {}, new Set()), { view: 'glossary', t: 'RV' });
+  assert.equal(parseHash('#/glossary?t=theory%20%C3%B7%20experiment', {}, new Set()).t, 'theory ÷ experiment');
+  assert.equal(parseHash('#/glossaryx', {}, new Set()).view, 'notfound');
+});
 test('meas: id without a parent → notfound', () => assert.equal(parseHash('#/meas:a', {}, new Set(['meas:a']), {}).view, 'notfound'));
+test('trailing slash and unknown query are tolerated', () => {
+  const ids = new Set(['proc:a/b']);
+  assert.deepEqual(parseHash('#/gaps?x=1', {}, ids), { view: 'gaps' });
+  assert.deepEqual(parseHash('#/about/', {}, ids), { view: 'about' });
+  assert.deepEqual(parseHash('#/timeline/?x=1', {}, ids), { view: 'timeline' });
+  assert.deepEqual(parseHash('#/?x=1', {}, ids), { view: 'families' });
+  assert.deepEqual(parseHash('#/proc:a/b/', {}, ids), { view: 'process', id: 'proc:a/b' });
+  assert.deepEqual(parseHash('#/proc:a/b?x=1', {}, ids), { view: 'process', id: 'proc:a/b' });
+  assert.equal(parseHash('#/search/?q=a%2Fb', {}, ids).q, 'a/b');
+  assert.equal(parseHash('#/search?q=a/', {}, ids).q, 'a/');
+});

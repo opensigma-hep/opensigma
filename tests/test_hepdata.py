@@ -244,3 +244,23 @@ def test_bins_without_errors_are_not_zero_percent():  # CMS ins1949191 "Total cr
         hepdata.total_pct(t, 1)
     with pytest.raises(ValueError, match="no non-zero bins with errors"):
         hepdata.total_pct({"dependent_variables": [{"values": [{"value": 53.2}]}]}, None)
+
+
+@pytest.mark.parametrize("label,cat", [
+    ("Fiducial acceptance", "acceptance_extrapolation"), ("W width", "other"), ("QED effects", "other"),
+    ("Sideband fit", "background"), ("QCD scale", "acceptance_extrapolation"),
+    ("Lum", "lumi"), ("Luminosity", "lumi"), ("lumi", "lumi"),
+    ("theo", "acceptance_extrapolation"), ("Thy unc", "acceptance_extrapolation"),
+    ("BR", "other"), ("Fake rate", "background"), ("Model", "unfolding_model"), ("Unf stat", "stat"),
+    # must keep working
+    ("Lepton ID", "efficiency"), ("muon_ID", "efficiency"), ("Eff", "efficiency"), ("Trigger", "efficiency"),
+    ("Isolation", "efficiency"), ("btag", "efficiency"), ("JES", "energy_scale"), ("Jet energy scale", "energy_scale"),
+    ("Lepton energy scale", "energy_scale"), ("JESFlavorQCD", "energy_scale"), ("FlavorQCD", "energy_scale"),
+    ("sysPhotonID", "efficiency"), ("sysPhotonIsolation", "efficiency"), ("sysLumi", "lumi"),
+    ("ElMuMETUnfTheoLumi", "lumi"), ("syst_JES_Gjet_Stat15", "energy_scale"), ("SCALE_L2GAIN__1down,SCALE_L2GAIN__1up", "energy_scale"),
+    ("sys,-scale_j_FlavorQCD_down,+scale_j_FlavorQCD_up", "energy_scale"),
+    ("sys,-scale_j_PileUpDataMC_correlated_down,+scale_j_PileUpDataMC_correlated_up", "energy_scale"),
+    ("stat", "stat"), ("Unfolding", "unfolding_model"), ("Pileup", "pileup"), ("sys", "syst_combined"),
+])
+def test_label_map_anchored(label, cat):
+    assert hepdata.categorize(label, LABEL_MAP) == cat

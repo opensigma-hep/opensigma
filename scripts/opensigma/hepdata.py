@@ -78,6 +78,18 @@ def _bins(table: dict, column: int = 1) -> list[list[tuple[str, float, bool]] | 
     return out
 
 
+def _words(label: str) -> str:
+    """"sysPhotonID" -> "sys photon id": split camelCase and punctuation so map regexes can anchor short tokens with \\b."""
+    s = re.sub(r"([a-z])([A-Z])", r"\1 \2", label)
+    s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1 \2", s)
+    return re.sub(r"[^A-Za-z0-9]+", " ", s).strip().lower()
+
+
+def categorize(label: str, label_map: dict) -> str:
+    words = _words(label)
+    return next((c for rx, c in label_map.items() if re.search(rx, label) or re.search(rx, words)), "other")
+
+
 def summarize(table: dict, label_map: dict, ref: str, today: date | None = None, column: int = 1) -> list[dict]:
     """One uncertainty_exp per error label; `ref` is `hepdata:ins<recid>/<table>`."""
     name = ref.split("/", 1)[1] + col_locator(column)
@@ -89,7 +101,7 @@ def summarize(table: dict, label_map: dict, ref: str, today: date | None = None,
             per_label.setdefault(label, []).append((pct, asym))
     out = []
     for label, vals in per_label.items():
-        cat = next((c for rx, c in label_map.items() if re.search(rx, label)), "other")
+        cat = categorize(label, label_map)
         pcts = [p for p, _ in vals]
         u = {"category": cat, "specific": label}  # (category, specific) identifies the entry for machine_verify
         u["size"] = {"range": [round_sig(min(pcts)), round_sig(max(pcts))], "asymmetric": any(a for _, a in vals)}

@@ -1,0 +1,1162 @@
+id: "proc:h-jet"
+name: "Higgs + jet and the Higgs transverse-momentum spectrum (pp → H + jet)"
+family: "fam:higgs"
+sector: "SM"
+description: "Higgs production in association with at least one jet, dominated by gluon fusion: jet-multiplicity bins, the leading-jet pT and the Higgs pT spectrum away from pT = 0. Known at NNLO QCD in the heavy-top effective theory and at NLO QCD with the exact top-mass dependence; the small-pT region is resummed to N3LL′. The inclusive gg → H rate and the low-pT part of the spectrum are tracked in proc:ggh."
+watch:
+  recids:
+    - 1365289
+    - 1651770
+    - 1671098
+    - 2023464
+  queries:
+    - "t Higgs and (t \"jet\" or t \"jets\" or t \"transverse momentum\" or t \"high $p_T$\" or t \"boosted\") and (t NNLO or t N3LO or t \"N$^3$LO\" or t \"N3LL\" or t \"N$^3$LL\" or t \"top-quark mass\" or t \"top mass\" or t \"two-loop\" or t \"three-loop\" or t \"electroweak corrections\" or t resummation) and not t search and not t \"pair\" and not t \"dark\" and not t \"vector boson fusion\""
+    - "t Higgs and (collaboration:ATLAS or collaboration:CMS) and (t \"differential\" or t \"fiducial\" or t \"transverse momentum\" or t \"boosted\") and (t \"13 TeV\" or t \"13.6 TeV\") and not t search and not t \"pair production\" and not t \"dark\""
+building_blocks:
+  - row: "NLO QCD"
+    cells:
+      2L:
+        status: "done"
+        approximations:
+          - "with the exact top-mass dependence the Born process is loop-induced, so NLO needs two-loop H + 3 parton amplitudes"
+          - "evaluated numerically"
+        amplitude: "amp:2L/H-3partons-mt"
+        refs:
+          - "inspire:1651770"
+          - "inspire:1944918"
+          - "inspire:2098298"
+        provenance:
+          uid: 8b77bc61
+          ref: "inspire:1651770"
+          locator: "Abstract (two-loop integrals of the virtual contribution with full top-quark mass dependence, calculated numerically with sector decomposition); inspire:2098298, abstract (amplitudes valid for arbitrary heavy-quark masses)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      code:
+        status: "done"
+        approximations:
+          - "heavy-top limit: inspire:495979, inspire:581705, inspire:595944"
+          - "exact top-mass dependence: inspire:1651770, corrected and extended in inspire:1944918; with bottom mass in inspire:2098298"
+        refs:
+          - "inspire:495979"
+          - "inspire:581705"
+          - "inspire:595944"
+          - "inspire:1651770"
+          - "inspire:1944918"
+          - "inspire:2098298"
+        provenance:
+          uid: 7f5a1106
+          ref: "inspire:495979"
+          locator: "Abstract (H + jet at NLO QCD in the large top-mass limit); inspire:581705, abstract (full NLO differential distributions, m_t → ∞, all partonic subprocesses); inspire:595944, abstract (analytic NLO pT and rapidity distributions, infinite-top-mass approximation); exact m_t: inspire:1651770 and inspire:1944918, abstracts"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+  - row: "NNLO QCD"
+    cells:
+      2L:
+        status: "done"
+        approximations:
+          - "effective theory, m_t → ∞"
+        amplitude: "amp:2L/H-3partons-eft"
+        refs:
+          - "inspire:1081564"
+        provenance:
+          uid: 04414d14
+          ref: "inspire:1081564"
+          locator: "Abstract (two-loop QCD corrections to the helicity amplitudes for H → ggg and H → q q̄ g in an effective theory with infinite top-quark mass)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      code:
+        status: "done"
+        approximations:
+          - "effective theory, m_t → ∞ (inspire:1478598: rescaled with the full quark-mass dependence at LO)"
+        refs:
+          - "inspire:1365289"
+          - "inspire:1370434"
+          - "inspire:1311992"
+          - "inspire:1478598"
+        provenance:
+          uid: ea39d0cb
+          ref: "inspire:1370434"
+          locator: "Abstract (complete H + jet through NNLO with jettiness subtraction, in agreement with the gg and qg computation based on sector-improved residue subtraction); inspire:1365289, abstract; inspire:1478598, abstract (second-order corrections with antenna subtraction results, fully differential)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+  - row: "N3LO QCD"
+    cells:
+      2L:
+        status: "done"
+        approximations:
+          - "effective theory, m_t → ∞"
+          - "two-loop amplitudes to higher orders in ε, as needed at N3LO"
+        amplitude: "amp:2L/H-3partons-eft"
+        refs:
+          - "inspire:2626731"
+        provenance:
+          uid: 925213fc
+          ref: "inspire:2626731"
+          locator: "Abstract (one- and two-loop helicity amplitudes for H → ggg and H → q q̄ g in the infinite-top-mass effective theory to higher orders in the dimensional regulator, as a first step towards N3LO H + jet)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      3L:
+        status: "partial"
+        approximations:
+          - "master integrals only: all integral topologies for the three-loop Hggg and Hgq q̄ amplitudes; the amplitudes themselves are not given"
+          - "leading colour"
+          - "effective theory, m_t → ∞"
+        refs:
+          - "inspire:2842844"
+        provenance:
+          uid: e59a68ad
+          ref: "inspire:2842844"
+          locator: "Abstract (all integral topologies relevant to the three-loop Hggg and Hgq q̄ amplitudes evaluated in the leading-colour approximation and heavy-top limit; canonical differential equations)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+      code:
+        status: "missing"
+        provenance:
+          uid: 7ced8b6a
+          ref: "inspire:2626731"
+          locator: "Abstract (N3LO calculations for H + jet described as a goal; the two-loop amplitudes at higher orders in ε are 'the first step towards this goal')"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+  - row: "NLO EW"
+    cells:
+      2L:
+        status: "partial"
+        approximations:
+          - "gg → gH channel only (quark-initiated channels not included)"
+        amplitude: "amp:2L/gg-Hg-ew"
+        refs:
+          - "inspire:2954727"
+        provenance:
+          uid: 4eeb6b18
+          ref: "inspire:2954727"
+          locator: "Abstract (complete NLO electroweak corrections to Higgs production in the gg → gH channel; master integrals by differential equations with optimised masters)"
+          source: "agent"
+          status: "agent-draft"
+          date: "2026-11-12"
+channels:
+  - id: "chan:h-jet/lhc-13"
+    collider: "col:lhc-13"
+    initial_state: "pp"
+    coverage: "partial"
+    last_reviewed: "2026-11-12"
+    headline:
+      observable: "obs:h-jet/lhc-13/sigma-1jet"
+      region: "exactly one jet (ATLAS and theory: pT > 30 GeV), m_H ≈ 125 GeV, all Higgs production modes (theory: gg → H only)"
+    measurements:
+      - id: "meas:h-jet/lhc-13/atlas-2022-gamgam"
+        experiment: "ATLAS"
+        dataset: "13 TeV, 139 fb⁻¹ (Run 2), H → γγ fiducial and differential cross sections"
+        ref: "inspire:2023464"
+        hepdata: "hepdata:ins2023464/N_j_30"
+      - id: "meas:h-jet/lhc-13/cms-2025-diff-comb"
+        experiment: "CMS"
+        dataset: "13 TeV, 138 fb⁻¹ (Run 2), combination of the H → γγ, ZZ, WW and ττ differential measurements, extrapolated to the full phase space, all production modes"
+        ref: "inspire:2913615"
+        hepdata: "hepdata:ins2913615/NJETS"
+    observables:
+      - id: "obs:h-jet/lhc-13/sigma-1jet"
+        name: "Higgs + exactly one jet cross section (N_jets = 1)"
+        kind: "fiducial"
+        variable: "N_jets = 1 bin of the jet-multiplicity distribution; ATLAS: jets with pT > 30 GeV, H → γγ fiducial volume, σ × B in fb; CMS: γγ, ZZ, WW, ττ combination extrapolated to the full phase space (jet definition of the input analyses, not re-checked for this draft); all Higgs production modes"
+        results:
+          - measurement: "meas:h-jet/lhc-13/atlas-2022-gamgam"
+            total:
+              value_pct: 22.0
+              provenance:
+                uid: bd302596
+                ref: "hepdata:ins2023464/N_j_30"
+                locator: "N_j_30, quadrature sum of all errors (bin 2)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "stat"
+                size:
+                  range:
+                    - 11.0
+                    - 40.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: b844323e
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'stat'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "PESPER"
+                size:
+                  range:
+                    - 3.2
+                    - 5.9
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: 9bc9b087
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'PESPER'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "lumi"
+                specific: "lumi"
+                size:
+                  range:
+                    - 1.7
+                    - 1.7
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: 326baf21
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'lumi'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "trigSyst"
+                size:
+                  range:
+                    - 0.94
+                    - 0.95
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: a88ffd3c
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'trigSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "photonSyst"
+                size:
+                  range:
+                    - 2.2
+                    - 2.5
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: aac2cfa3
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'photonSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "pileup"
+                specific: "pileupSyst"
+                size:
+                  range:
+                    - 0.82
+                    - 3.2
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: 90f97ae4
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'pileupSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "jetSyst"
+                size:
+                  range:
+                    - 5.3
+                    - 14.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: 531cffa2
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'jetSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "unfolding_model"
+                specific: "unfoldSyst"
+                size:
+                  range:
+                    - 0.49
+                    - 3.1
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: a70ae978
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'unfoldSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "spurSig"
+                size:
+                  range:
+                    - 1.3
+                    - 5.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/N_j_30"
+                provenance:
+                  uid: e77f1ce7
+                  ref: "hepdata:ins2023464/N_j_30"
+                  locator: "N_j_30, error 'spurSig'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+          - measurement: "meas:h-jet/lhc-13/cms-2025-diff-comb"
+            total:
+              value_pct: 11.0
+              provenance:
+                uid: b4e7e90f
+                ref: "hepdata:ins2913615/NJETS"
+                locator: "NJETS, quadrature sum of all errors (bin 2)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "systematic"
+                size:
+                  range:
+                    - 5.4
+                    - 67.0
+                  asymmetric: true
+                full_table: "hepdata:ins2913615/NJETS"
+                provenance:
+                  uid: cdc0dd91
+                  ref: "hepdata:ins2913615/NJETS"
+                  locator: "NJETS, error 'systematic'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "stat"
+                specific: "statistical"
+                size:
+                  range:
+                    - 5.4
+                    - 110.0
+                  asymmetric: true
+                full_table: "hepdata:ins2913615/NJETS"
+                provenance:
+                  uid: aba2653c
+                  ref: "hepdata:ins2913615/NJETS"
+                  locator: "NJETS, error 'statistical'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+        predictions:
+          - label: "NNLL′+NNLO₀ resummed jet-bin prediction (STWZ, BLPTW; YR4), exclusive 1-jet gg → H cross section, pT cut 30 GeV"
+            accuracy:
+              qcd: "NLO"
+              resummation:
+                - accuracy: "NNLL′"
+                  variable: "leading-jet pT at the 0/1-jet boundary (NLL′+NLO for the 1/2-jet boundary)"
+              approximations:
+                - "NNLO₀ counts from the inclusive cross section, i.e. NLO for the 1-jet bin; the direct 1-jet resummation includes the H + 1 jet NNLO₁ virtual corrections"
+                - "gg → H only, m_t effective theory, R = 0.4, m_H = 125 GeV, PDF4LHC15; σ₁ = 11.94 ± 1.58 pb"
+                - "perturbative uncertainties only (no PDF or αs uncertainty); no jet rapidity cut, so not the fiducial volume of either measurement"
+            total:
+              value_pct: 13.2
+              provenance:
+                uid: d0868728
+                ref: "arXiv:1610.07922"
+                locator: "Sec. I.4.2.c.ii, Table 20, pT cut = 30 GeV, row σ₁: 11.94 ± 1.58 pb, total pert. unc. 13.2%"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "MHOU"
+                specific: "Δμ: overall fixed-order (yield) uncertainty"
+                method: "collective variation of all profile scales in the resummed prediction; reduces to the fixed-order scale variation at large pT cut"
+                size:
+                  range:
+                    - 5.5
+                    - 5.5
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 94eb4143
+                  ref: "arXiv:1610.07922"
+                  locator: "Sec. I.4.2.c.ii, Table 20, pT cut = 30 GeV, row σ₁, column Δμ (5.5%); definition in the text above eq. (I.4.49)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "MHOU"
+                specific: "Δφ (column of Table 20)"
+                method: "Δφ as defined in YR4 Sec. I.4.2.c (related to the complex hard scale μ_H = −i m_H); definition not re-derived for this draft"
+                size:
+                  range:
+                    - 4.8
+                    - 4.8
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 461f6f65
+                  ref: "arXiv:1610.07922"
+                  locator: "Sec. I.4.2.c.ii, Table 20, pT cut = 30 GeV, row σ₁, column Δφ (4.8%)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "MHOU"
+                specific: "Δcut 0/1: migration across the 0/1-jet boundary"
+                method: "resummation (profile-scale) uncertainty of the 0-jet resummation, used as migration uncertainty"
+                size:
+                  range:
+                    - 8.4
+                    - 8.4
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 3e259d50
+                  ref: "arXiv:1610.07922"
+                  locator: "Sec. I.4.2.c.ii, Table 20, pT cut = 30 GeV, row σ₁, column Δcut(0/1) (8.4%); eqs. (I.4.51)–(I.4.52)"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+              - category: "MHOU"
+                specific: "Δcut 1/2: migration across the 1/2-jet boundary"
+                method: "1-jet resummation profile-scale variation and fixed-order ≥2-jet scale variation, added in quadrature"
+                size:
+                  range:
+                    - 7.2
+                    - 7.2
+                  unit: "%"
+                  asymmetric: false
+                provenance:
+                  uid: 8712069e
+                  ref: "arXiv:1610.07922"
+                  locator: "Sec. I.4.2.c.ii, Table 20, pT cut = 30 GeV, row σ₁, column Δcut(1/2) (7.2%); eq. (I.4.52) and the text below Table 20"
+                  source: "agent"
+                  status: "agent-draft"
+                  date: "2026-11-12"
+            compared_to:
+              - "meas:h-jet/lhc-13/atlas-2022-gamgam"
+            refs:
+              - "arXiv:1610.07922"
+              - "arXiv:1307.1808"
+              - "arXiv:1312.4535"
+            provenance:
+              uid: 5b1da328
+              ref: "arXiv:1610.07922"
+              locator: "Sec. I.4.2.c.ii (combining resummed predictions for the 0/1/2-jet bins, 13 TeV, PDF4LHC15) and Table 20; compared with the ATLAS data as 'STWZ, BLPTW' (arXiv:2202.00487, Sec. 8.1 overview of predictions: numerical values taken from YR4, shown for the exclusive one-jet cross section)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+            headline: true
+          - label: "NNLO QCD H + jet in the heavy-top effective theory (1-jet rate)"
+            accuracy:
+              qcd: "NNLO"
+              approximations:
+                - "effective theory with the top quark integrated out; inspire:1478598 supplements it with the full quark-mass dependence at LO"
+                - "inspire:1365289: gg and qg channels; inspire:1370434: all partonic channels (N-jettiness subtraction); inspire:1311992 and inspire:1478598: antenna subtraction (NNLOJET)"
+                - "NNLO reduces the scale dependence by more than a factor of 2 and raises the rate by about 20% over NLO (inspire:1365289)"
+            codes:
+              - "NNLOJET"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-eft"
+            refs:
+              - "inspire:1365289"
+              - "inspire:1370434"
+              - "inspire:1311992"
+              - "inspire:1478598"
+              - "inspire:1387512"
+            provenance:
+              uid: ad763738
+              ref: "inspire:1365289"
+              locator: "Abstract (NNLO QCD corrections to H + jet in the Higgs effective theory, gg and qg channels; scale dependence reduced by more than a factor of 2, rate about 20% above NLO); inspire:1370434, abstract (complete NNLO with jettiness subtraction, agrees with the gg and qg result); inspire:1478598, abstract (NNLO for H + jet and the pT spectrum, EFT with full quark-mass dependence at LO)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "NLO QCD H + jet with full top-quark mass dependence"
+            accuracy:
+              qcd: "NLO"
+              approximations:
+                - "exact top-mass dependence; bottom-quark mass neglected in inspire:1651770 and inspire:1944918, included (on-shell and running-mass schemes) in inspire:2098298"
+                - "inspire:1944918 corrects an error in the earlier results of inspire:1651770"
+                - "relevant at high pT(H), where the top-quark loop is resolved; NLO/LO ratio similar to that of the effective theory (inspire:1651770)"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-mt"
+            refs:
+              - "inspire:1651770"
+              - "inspire:1944918"
+              - "inspire:2098298"
+            provenance:
+              uid: 8e01bcb7
+              ref: "inspire:1651770"
+              locator: "Abstract (NLO QCD corrections to H + jet with full top-quark mass dependence, two-loop integrals by sector decomposition, focus on high pT,H); inspire:1944918, abstract (H + jet exact in m_t, extends the previous calculation and reveals an error in it); inspire:2098298, abstract (exact heavy-quark mass dependence including the bottom quark and a running-mass scheme)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+      - id: "obs:h-jet/lhc-13/dsigma-dptj1"
+        name: "dσ/dpT(j1), leading-jet transverse momentum in Higgs events"
+        kind: "differential"
+        variable: "pT of the leading jet; quoted bins: ATLAS H → γγ fiducial, 120 < pT(j1) < 350 GeV; CMS combination (full phase space), pT(j1) > 200 GeV"
+        results:
+          - measurement: "meas:h-jet/lhc-13/atlas-2022-gamgam"
+            total:
+              value_pct: 25.0
+              provenance:
+                uid: b3b35085
+                ref: "hepdata:ins2023464/pT_j1_30"
+                locator: "pT_j1_30, quadrature sum of all errors (bin 5)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "stat"
+                size:
+                  range:
+                    - 11.0
+                    - 220.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: f9ba38dc
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'stat'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "PESPER"
+                size:
+                  range:
+                    - 2.4
+                    - 94.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: bbfaf7fd
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'PESPER'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "lumi"
+                specific: "lumi"
+                size:
+                  range:
+                    - 1.7
+                    - 4.1
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: 0e75973c
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'lumi'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "trigSyst"
+                size:
+                  range:
+                    - 0.93
+                    - 2.3
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: 46e09cc1
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'trigSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "photonSyst"
+                size:
+                  range:
+                    - 2.0
+                    - 4.8
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: 0661c9ac
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'photonSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "pileup"
+                specific: "pileupSyst"
+                size:
+                  range:
+                    - 0.68
+                    - 2.8
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: 8926caef
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'pileupSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "jetSyst"
+                size:
+                  range:
+                    - 1.6
+                    - 12.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: 8f3d919d
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'jetSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "unfolding_model"
+                specific: "unfoldSyst"
+                size:
+                  range:
+                    - 0.59
+                    - 3.4
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: 997e242a
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'unfoldSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "spurSig"
+                size:
+                  range:
+                    - 1.6
+                    - 12.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_j1_30"
+                provenance:
+                  uid: bb395e26
+                  ref: "hepdata:ins2023464/pT_j1_30"
+                  locator: "pT_j1_30, error 'spurSig'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+          - measurement: "meas:h-jet/lhc-13/cms-2025-diff-comb"
+            total:
+              value_pct: 25.0
+              provenance:
+                uid: 154dda35
+                ref: "hepdata:ins2913615/PT(J1)"
+                locator: "PT(J1), quadrature sum of all errors (bin 9)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "systematic"
+                size:
+                  range:
+                    - 8.3
+                    - 520.0
+                  asymmetric: true
+                full_table: "hepdata:ins2913615/PT(J1)"
+                provenance:
+                  uid: b9915370
+                  ref: "hepdata:ins2913615/PT(J1)"
+                  locator: "PT(J1), error 'systematic'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "stat"
+                specific: "statistical"
+                size:
+                  range:
+                    - 8.3
+                    - 1600.0
+                  asymmetric: true
+                full_table: "hepdata:ins2913615/PT(J1)"
+                provenance:
+                  uid: 5225999d
+                  ref: "hepdata:ins2913615/PT(J1)"
+                  locator: "PT(J1), error 'statistical'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+        predictions:
+          - label: "SCETlib::pTjet, NNLL′+NNLO₀ leading-jet pT spectrum (gg → H)"
+            accuracy:
+              qcd: "NLO"
+              resummation:
+                - accuracy: "NNLL′"
+                  variable: "pT(j1)"
+              approximations:
+                - "NNLO₀ counts from the inclusive cross section: NLO for the pT(j1) spectrum at finite pT"
+                - "gg → H in the narrow-width limit, m_H = 125.09 GeV, top-Yukawa contribution in the rescaled EFT limit"
+                - "available up to pT(j1) = 350 GeV"
+            codes:
+              - "SCETlib"
+            compared_to:
+              - "meas:h-jet/lhc-13/atlas-2022-gamgam"
+            refs:
+              - "arXiv:1307.1808"
+              - "arXiv:1810.12911"
+            provenance:
+              uid: db8341d8
+              ref: "arXiv:2202.00487"
+              locator: "Sec. 8.1, paragraph 'SCETlib::pTj1' (NNLL′+NNLO for the y_t² contribution in the rescaled EFT limit, refs. [161, 168, 169]) and Fig. 11 with its caption (SCETlib available up to 350 GeV)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "NNLO QCD H + jet in the heavy-top effective theory (leading-jet pT and rapidity distributions)"
+            accuracy:
+              qcd: "NNLO"
+              approximations:
+                - "effective theory with the top quark integrated out; inspire:1478598 supplements it with the full quark-mass dependence at LO"
+                - "inspire:1365289: gg and qg channels; inspire:1370434: all partonic channels (N-jettiness subtraction); inspire:1311992 and inspire:1478598: antenna subtraction (NNLOJET)"
+                - "NNLO reduces the scale dependence by more than a factor of 2 and raises the rate by about 20% over NLO (inspire:1365289)"
+            codes:
+              - "NNLOJET"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-eft"
+            refs:
+              - "inspire:1365289"
+              - "inspire:1370434"
+              - "inspire:1311992"
+              - "inspire:1478598"
+              - "inspire:1387512"
+            provenance:
+              uid: 1a32758c
+              ref: "inspire:1365289"
+              locator: "Abstract (NNLO QCD corrections to H + jet in the Higgs effective theory, gg and qg channels; scale dependence reduced by more than a factor of 2, rate about 20% above NLO); inspire:1370434, abstract (complete NNLO with jettiness subtraction, agrees with the gg and qg result); inspire:1478598, abstract (NNLO for H + jet and the pT spectrum, EFT with full quark-mass dependence at LO)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "NLO QCD H + jet with full top-quark mass dependence"
+            accuracy:
+              qcd: "NLO"
+              approximations:
+                - "exact top-mass dependence; bottom-quark mass neglected in inspire:1651770 and inspire:1944918, included (on-shell and running-mass schemes) in inspire:2098298"
+                - "inspire:1944918 corrects an error in the earlier results of inspire:1651770"
+                - "relevant at high pT(H), where the top-quark loop is resolved; NLO/LO ratio similar to that of the effective theory (inspire:1651770)"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-mt"
+            refs:
+              - "inspire:1651770"
+              - "inspire:1944918"
+              - "inspire:2098298"
+            provenance:
+              uid: 18ca98e1
+              ref: "inspire:1651770"
+              locator: "Abstract (NLO QCD corrections to H + jet with full top-quark mass dependence, two-loop integrals by sector decomposition, focus on high pT,H); inspire:1944918, abstract (H + jet exact in m_t, extends the previous calculation and reveals an error in it); inspire:2098298, abstract (exact heavy-quark mass dependence including the bottom quark and a running-mass scheme)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+      - id: "obs:h-jet/lhc-13/dsigma-dpth"
+        name: "dσ/dpT(H) at large transverse momentum (Higgs recoiling against jets)"
+        kind: "differential"
+        variable: "pT(H); quoted bin 200 < pT(H) < 250 GeV; ATLAS: pT(γγ) in the H → γγ fiducial volume; CMS: γγ, ZZ, WW, ττ combination in the full phase space (the same table is used for the low-pT region in proc:ggh)"
+        results:
+          - measurement: "meas:h-jet/lhc-13/atlas-2022-gamgam"
+            total:
+              value_pct: 21.0
+              provenance:
+                uid: 4197fb55
+                ref: "hepdata:ins2023464/pT_yy"
+                locator: "pT_yy, quadrature sum of all errors (bin 16)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "stat"
+                specific: "stat"
+                size:
+                  range:
+                    - 20.0
+                    - 140.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: bfa12854
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'stat'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "PESPER"
+                size:
+                  range:
+                    - 2.5
+                    - 17.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: 6bd00d61
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'PESPER'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "lumi"
+                specific: "lumi"
+                size:
+                  range:
+                    - 1.7
+                    - 2.4
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: 218cfb8a
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'lumi'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "trigSyst"
+                size:
+                  range:
+                    - 0.93
+                    - 1.5
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: c146a1db
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'trigSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "photonSyst"
+                size:
+                  range:
+                    - 1.7
+                    - 3.1
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: ab08e819
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'photonSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "pileup"
+                specific: "pileupSyst"
+                size:
+                  range:
+                    - 0.0
+                    - 1.5
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: 14e4ceac
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'pileupSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "unfolding_model"
+                specific: "unfoldSyst"
+                size:
+                  range:
+                    - 0.38
+                    - 3.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: 1dfd7c9f
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'unfoldSyst'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "other"
+                specific: "spurSig"
+                size:
+                  range:
+                    - 1.1
+                    - 60.0
+                  asymmetric: false
+                full_table: "hepdata:ins2023464/pT_yy"
+                provenance:
+                  uid: 9c29b125
+                  ref: "hepdata:ins2023464/pT_yy"
+                  locator: "pT_yy, error 'spurSig'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+          - measurement: "meas:h-jet/lhc-13/cms-2025-diff-comb"
+            total:
+              value_pct: 23.0
+              provenance:
+                uid: 3289cbb9
+                ref: "hepdata:ins2913615/PT(H)"
+                locator: "PT(H), quadrature sum of all errors (bin 16)"
+                source: "hepdata"
+                status: "machine-verified"
+                date: "2026-11-12"
+            uncertainties:
+              - category: "syst_combined"
+                specific: "systematic"
+                size:
+                  range:
+                    - 4.1
+                    - 270.0
+                  asymmetric: true
+                full_table: "hepdata:ins2913615/PT(H)"
+                provenance:
+                  uid: e21b9c40
+                  ref: "hepdata:ins2913615/PT(H)"
+                  locator: "PT(H), error 'systematic'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+              - category: "stat"
+                specific: "statistical"
+                size:
+                  range:
+                    - 15.0
+                    - 410.0
+                  asymmetric: true
+                full_table: "hepdata:ins2913615/PT(H)"
+                provenance:
+                  uid: 1cddf1c1
+                  ref: "hepdata:ins2913615/PT(H)"
+                  locator: "PT(H), error 'statistical'"
+                  source: "hepdata"
+                  status: "machine-verified"
+                  date: "2026-11-12"
+        predictions:
+          - label: "RadISH + NNLOJET: N3LL′ pT resummation matched to NNLO H + ≥1 jet, with fiducial cuts"
+            accuracy:
+              qcd: "NNLO"
+              resummation:
+                - accuracy: "N3LL′"
+                  variable: "pT(H)"
+              approximations:
+                - "NNLO refers to H + ≥1 jet at large pT(H) (NNLOJET, heavy-top effective theory)"
+                - "includes the resummation of linear fiducial power corrections"
+                - "shown up to pT(γγ) = 450 GeV"
+            codes:
+              - "RadISH"
+              - "NNLOJET"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-eft"
+            compared_to:
+              - "meas:h-jet/lhc-13/atlas-2022-gamgam"
+            refs:
+              - "inspire:1858406"
+              - "inspire:1673183"
+              - "inspire:1478598"
+              - "inspire:1311992"
+              - "inspire:1601293"
+            provenance:
+              uid: affbea57
+              ref: "arXiv:2202.00487"
+              locator: "Sec. 8.1, paragraph 'RadISH+NNLOjet' (RadISH matched to the H + ≥1-jet NNLO calculation from NNLOjet, N3LL′, refs. [149–154]) and Fig. 8 caption (RadISH+NNLOjet up to 450 GeV); accuracy also in inspire:1858406, abstract (N3LL′+NNLO with RadISH)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "SCETlib::qT: N3LL′+N3LO Higgs pT spectrum with fiducial cuts"
+            accuracy:
+              qcd: "NNLO"
+              resummation:
+                - accuracy: "N3LL′"
+                  variable: "pT(H)"
+              approximations:
+                - "N3LO applies to the total fiducial cross section; for the spectrum at finite pT this is NNLO (H + jet)"
+                - "dominant top-quark loop contribution only; fiducial power corrections included"
+                - "shown up to pT(γγ) = 200 GeV"
+            codes:
+              - "SCETlib"
+            compared_to:
+              - "meas:h-jet/lhc-13/atlas-2022-gamgam"
+            refs:
+              - "inspire:1846907"
+            provenance:
+              uid: a154e79f
+              ref: "arXiv:2202.00487"
+              locator: "Sec. 8.1, paragraph 'SCETlib::qT' (N3LL′ including the complete three-loop corrections in the small-pT limit, refs. [161–167]; ref. [162] = arXiv:2102.08039) and Fig. 8 caption (SCETlib::qT up to 200 GeV); inspire:1846907, abstract (N3LL′+N3LO spectrum and total fiducial cross section)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "N3LL + NNLO: NNLO H + jet at large pT matched to N3LL resummation at small pT"
+            accuracy:
+              qcd: "NNLO"
+              resummation:
+                - accuracy: "N3LL"
+                  variable: "pT(H)"
+              approximations:
+                - "perturbative uncertainties ≲ ±6% for pT < 35 GeV (abstract); no number is quoted there for the high-pT region used as the reference bin here"
+            codes:
+              - "NNLOJET"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-eft"
+            refs:
+              - "inspire:1671098"
+              - "inspire:1601293"
+            provenance:
+              uid: 4bd2d422
+              ref: "inspire:1671098"
+              locator: "Abstract (NNLO at large pT matched to N3LL at small pT; perturbative uncertainties ≲ ±6% for pT < 35 GeV); inspire:1601293, abstract (momentum-space resummation, Higgs pT at N3LL+NNLO)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "NNLO QCD H + jet in the heavy-top effective theory (Higgs pT spectrum at large pT)"
+            accuracy:
+              qcd: "NNLO"
+              approximations:
+                - "effective theory with the top quark integrated out; inspire:1478598 supplements it with the full quark-mass dependence at LO"
+                - "inspire:1365289: gg and qg channels; inspire:1370434: all partonic channels (N-jettiness subtraction); inspire:1311992 and inspire:1478598: antenna subtraction (NNLOJET)"
+                - "NNLO reduces the scale dependence by more than a factor of 2 and raises the rate by about 20% over NLO (inspire:1365289)"
+            codes:
+              - "NNLOJET"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-eft"
+            refs:
+              - "inspire:1365289"
+              - "inspire:1370434"
+              - "inspire:1311992"
+              - "inspire:1478598"
+              - "inspire:1387512"
+            provenance:
+              uid: 131860a6
+              ref: "inspire:1365289"
+              locator: "Abstract (NNLO QCD corrections to H + jet in the Higgs effective theory, gg and qg channels; scale dependence reduced by more than a factor of 2, rate about 20% above NLO); inspire:1370434, abstract (complete NNLO with jettiness subtraction, agrees with the gg and qg result); inspire:1478598, abstract (NNLO for H + jet and the pT spectrum, EFT with full quark-mass dependence at LO)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "NLO QCD H + jet with full top-quark mass dependence"
+            accuracy:
+              qcd: "NLO"
+              approximations:
+                - "exact top-mass dependence; bottom-quark mass neglected in inspire:1651770 and inspire:1944918, included (on-shell and running-mass schemes) in inspire:2098298"
+                - "inspire:1944918 corrects an error in the earlier results of inspire:1651770"
+                - "relevant at high pT(H), where the top-quark loop is resolved; NLO/LO ratio similar to that of the effective theory (inspire:1651770)"
+            uses_amplitudes:
+              - "amp:2L/H-3partons-mt"
+            refs:
+              - "inspire:1651770"
+              - "inspire:1944918"
+              - "inspire:2098298"
+            provenance:
+              uid: 2dd4e8f9
+              ref: "inspire:1651770"
+              locator: "Abstract (NLO QCD corrections to H + jet with full top-quark mass dependence, two-loop integrals by sector decomposition, focus on high pT,H); inspire:1944918, abstract (H + jet exact in m_t, extends the previous calculation and reveals an error in it); inspire:2098298, abstract (exact heavy-quark mass dependence including the bottom quark and a running-mass scheme)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+          - label: "NLO EW corrections to gg → gH with full top-mass dependence"
+            accuracy:
+              qcd: "LO"
+              ew: "NLO"
+              approximations:
+                - "gg → gH channel only; LO in QCD for the pT(H) distribution"
+                - "three EW renormalisation schemes compared; scheme dependence strongly reduced at NLO EW"
+            uses_amplitudes:
+              - "amp:2L/gg-Hg-ew"
+            refs:
+              - "inspire:2954727"
+            provenance:
+              uid: fc72e3f1
+              ref: "inspire:2954727"
+              locator: "Abstract (complete NLO electroweak corrections to Higgs production in the gg → gH channel; three renormalisation schemes, differential distributions and total cross section)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+        resummation_ingredients:
+          - name: "All constant terms of relative order αs³ with respect to the Born cross section, needed for N3LL′ pT(H) resummation"
+            status: "done"
+            refs:
+              - "inspire:1858406"
+              - "inspire:1846907"
+            provenance:
+              uid: 05453b6a
+              ref: "inspire:1858406"
+              locator: "Abstract (N3LL resummation in momentum space consistently including all constant terms of relative order αs³ with respect to the Born, thereby N3LL′); inspire:1846907, abstract (third resummed and fixed order, N3LL′+N3LO)"
+              source: "agent"
+              status: "agent-draft"
+              date: "2026-11-12"
+  - id: "chan:h-jet/lhc-hl"
+    collider: "col:lhc-hl"
+    initial_state: "pp"
+    coverage: "partial"
+    last_reviewed: "2026-11-12"
+    headline:
+      observable: "obs:h-jet/lhc-hl/dsigma-dpth-proj"
+      region: "200 < pT(H) < 350 GeV, scenario S2, 3000 fb⁻¹ at 14 TeV"
+    measurements:
+      - id: "meas:h-jet/lhc-hl/atlas-2019-proj"
+        experiment: "ATLAS"
+        dataset: "14 TeV, 3000 fb⁻¹ (HL-LHC projection), H → γγ and H → ZZ* → 4ℓ combined"
+        ref: "inspire:1718163"
+        projected: true
+        projection_source:
+          ref: "inspire:1718163"
+          date: "2019-01-31"
+        assumptions: "Scenario S2 (YR18 systematic uncertainties); combination of the H → γγ and H → ZZ* → 4ℓ channels (CMS: also boosted H → b b̄ above 350 GeV)"
+      - id: "meas:h-jet/lhc-hl/cms-2019-proj"
+        experiment: "CMS"
+        dataset: "14 TeV, 3000 fb⁻¹ (HL-LHC projection), H → γγ, H → ZZ* → 4ℓ and boosted H → b b̄ combined"
+        ref: "inspire:1718163"
+        projected: true
+        projection_source:
+          ref: "inspire:1718163"
+          date: "2019-01-31"
+        assumptions: "Scenario S2 (YR18 systematic uncertainties); combination of the H → γγ and H → ZZ* → 4ℓ channels (CMS: also boosted H → b b̄ above 350 GeV)"
+      - id: "meas:h-jet/lhc-hl/cms-2019-proj-6000"
+        experiment: "CMS"
+        dataset: "14 TeV, 6000 fb⁻¹: CMS projection scaled to twice the luminosity, given in the report as a proxy for an eventual ATLAS + CMS combination"
+        ref: "inspire:1718163"
+        projected: true
+        projection_source:
+          ref: "inspire:1718163"
+          date: "2019-01-31"
+        assumptions: "Scenario S2 (YR18 systematic uncertainties); combination of the H → γγ and H → ZZ* → 4ℓ channels (CMS: also boosted H → b b̄ above 350 GeV)"
+    observables:
+      - id: "obs:h-jet/lhc-hl/dsigma-dpth-proj"
+        name: "dσ/dpT(H), projected relative precision"
+        kind: "pseudo"
+        variable: "expected relative uncertainty of the pT(H) spectrum per bin; quoted bin 200 < pT(H) < 350 GeV"
+        results:
+          - measurement: "meas:h-jet/lhc-hl/atlas-2019-proj"
+            total:
+              value_pct: 4.5
+              provenance:
+                uid: 8a3d6c27
+                ref: "inspire:1718163"
+                locator: "Table 29 (scenario S2), 3000 fb⁻¹ ATLAS, row 'Combination', bin 200–350 GeV: 4.5% (all bins: 3.5–8.2%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties: []
+          - measurement: "meas:h-jet/lhc-hl/cms-2019-proj"
+            total:
+              value_pct: 4.4
+              provenance:
+                uid: 624acaa2
+                ref: "inspire:1718163"
+                locator: "Table 29 (scenario S2), 3000 fb⁻¹ CMS, row 'Combination', bin 200–350 GeV: 4.4% (all bins: 3.3–24.5%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties: []
+          - measurement: "meas:h-jet/lhc-hl/cms-2019-proj-6000"
+            total:
+              value_pct: 3.2
+              provenance:
+                uid: 465fb282
+                ref: "inspire:1718163"
+                locator: "Table 29 (scenario S2), 6000 fb⁻¹, row 'Combination', bin 200–350 GeV: 3.2% (all bins: 2.6–17.9%)"
+                source: "agent"
+                status: "agent-draft"
+                date: "2026-11-12"
+            uncertainties: []

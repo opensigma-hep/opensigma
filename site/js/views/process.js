@@ -1,5 +1,5 @@
-import { el, fill, none, link, idLink, index, breadcrumb, facts, bbTable, sep } from '../leaf.js';
-import { accuracyChips } from '../format.js';
+import { el, fill, none, link, idLink, index, breadcrumb, facts, bbTable, sep, term, accChips } from '../leaf.js';
+import { diagramSvg } from '../feynman.js';
 
 export function render(main, data, route) {
   const proc = index(data).get(route.id).node;
@@ -7,7 +7,7 @@ export function render(main, data, route) {
   fill(main,
     breadcrumb(data, proc.id),
     el('h1', {}, proc.name),
-    proc.description ? el('p', {}, proc.description) : null,
+    el('div', { className: 'proc-intro' }, proc.description ? el('p', {}, proc.description) : null, diagramFigure(data, proc.id)),
     facts([['Also in', proc.also_in?.length ? sep(proc.also_in.map((f) => idLink(data, f))) : null]]),
     el('h2', {}, 'Channels'),
     el('p', { className: 'small' }, 'One row per collider: the headline observable, its headline prediction, and the precision of theory and the best experiment. Every observable of a channel is on its channel page.'),
@@ -15,6 +15,14 @@ export function render(main, data, route) {
     el('h2', {}, 'Building blocks'),
     bbTable(proc, data),
   );
+}
+
+/** Leading-order diagram with its caption; null for a process that has none yet. */
+function diagramFigure(data, id) {
+  const d = data.diagrams?.[id];
+  if (!d) return null;
+  return el('figure', { className: 'feyn' }, el('div', { innerHTML: diagramSvg(data, id) }),
+    el('figcaption', {}, el('strong', {}, 'Leading order: '), d.title, d.note ? el('div', { className: 'small' }, d.note) : null));
 }
 
 function channelTable(data, chans) {
@@ -33,9 +41,9 @@ function channelTable(data, chans) {
     return el('tr', {},
       el('th', { scope: 'row' }, link(c.id, index(data).get(c.collider)?.label ?? c.collider)),
       el('td', {}, h ? link(h.id, h.name) : '—'),
-      el('td', {}, p ? [p.label, el('ul', { className: 'chips' }, ...accuracyChips(p.accuracy).map((t) => el('li', { className: 'chip' }, t)))] : '—'),
+      el('td', {}, p ? [p.label, accChips(p.accuracy)] : '—'),
       el('td', {}, pct(s.th_pct)), el('td', {}, pct(s.exp_pct)), el('td', {}, ratio), el('td', { className: 'small' }, data_));
   });
   return el('div', { className: 'table-scroll' }, el('table', { className: 'meas' },
-    el('thead', {}, el('tr', {}, ...head.map((x) => el('th', { scope: 'col' }, x)))), el('tbody', {}, ...rows)));
+    el('thead', {}, el('tr', {}, ...head.map((x) => el('th', { scope: 'col' }, term(x))))), el('tbody', {}, ...rows)));
 }

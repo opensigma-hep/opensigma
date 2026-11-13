@@ -213,6 +213,7 @@ channels:
                   date: '2026-10-17'
         predictions:
           - label: NNLO QCD × NLO EW(qq) (MATRIX 2.1, NNPDF3.1luxQED), ATLAS fiducial cuts
+            headline: true
             accuracy:
               qcd: NNLO
               ew: NLO
@@ -279,6 +280,7 @@ channels:
                   date: '2026-10-17'
         predictions:
           - label: NNLO QCD × NLO EW(qq) (MATRIX 2.1, NNPDF3.1luxQED)
+            headline: true
             accuracy:
               qcd: NNLO
               ew: NLO
@@ -362,7 +364,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-17'
-              - category: other
+              - category: lumi
                 specific: lum
                 size:
                   range:
@@ -377,7 +379,7 @@ channels:
                   source: hepdata
                   status: machine-verified
                   date: '2026-10-17'
-              - category: other
+              - category: acceptance_extrapolation
                 specific: thy
                 size:
                   range:

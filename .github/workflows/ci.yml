@@ -41,8 +41,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      # full build (validates like --check) so site/test/data-smoke.test.js runs on the real site/data.json
+      - run: python -m scripts.build --offline
       - run: npm test
-      - run: python -m scripts.build --check --offline
       - name: machine_verify (report-only)
         if: steps.data.outputs.changed == 'true' && !startsWith(github.head_ref, 'verify/')
         continue-on-error: true

@@ -1,0 +1,45 @@
+id: "par:m-h"
+name: "Higgs boson mass"
+symbol: "m_H"
+unit: "GeV"
+determinations:
+  - value: 125.13
+    uncertainty: 0.11
+    extracted_from: []
+    ref: "inspire:3193100"
+    provenance: {uid: b2459992, ref: "inspire:3193100", locator: "PDG 2026 edition, H MASS (PDG API summary S126M, OUR AVERAGE): 125.13 ± 0.11 GeV, scale factor 1.5 (world average; inputs: CMS 4ℓ 13 TeV, ATLAS γγ + 4ℓ 13 TeV, CMS γγ 13 TeV, ATLAS + CMS Run 1)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 125.11
+    uncertainty: 0.11
+    extracted_from: []
+    ref: "inspire:2686747"
+    provenance: {uid: 9a81705b, ref: "inspire:2686747", locator: "Abstract: ATLAS Run 1 + Run 2 combination (7, 8 and 13 TeV, 140 fb⁻¹ at 13 TeV), H → γγ and H → ZZ* → 4ℓ, m_H = 125.11 ± 0.09 (stat) ± 0.06 (syst) = 125.11 ± 0.11 GeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 125.22
+    uncertainty: 0.142
+    extracted_from: []
+    ref: "inspire:2687977"
+    provenance: {uid: a8bc702e, ref: "inspire:2687977", locator: "Abstract: ATLAS H → γγ, 13 TeV 140 fb⁻¹ combined with 7 and 8 TeV, m_H = 125.22 ± 0.11 (stat) ± 0.09 (syst) GeV; stored uncertainty is the two terms added in quadrature (0.142)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 124.94
+    uncertainty: 0.173
+    extracted_from: []
+    ref: "inspire:2670681"
+    provenance: {uid: b8eff081, ref: "inspire:2670681", locator: "Abstract: ATLAS H → ZZ* → 4ℓ, 13 TeV 139 fb⁻¹ combined with 7 and 8 TeV, m_H = 124.94 ± 0.17 (stat) ± 0.03 (syst) GeV; stored uncertainty is the two terms added in quadrature (0.173)", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 125.04
+    uncertainty: 0.12
+    extracted_from: []
+    ref: "inspire:2839209"
+    provenance: {uid: '80721863', ref: "inspire:2839209", locator: "Abstract: CMS 13 TeV, 138 fb⁻¹, on-shell H → ZZ → 4ℓ four-lepton invariant mass, m_H = 125.04 ± 0.12 GeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 125.38
+    uncertainty: 0.14
+    extracted_from: []
+    ref: "inspire:1780985"
+    provenance: {uid: fa8e565d, ref: "inspire:1780985", locator: "Abstract: CMS Run 1 + 2016 combination (H → γγ and H → ZZ → 4ℓ, 35.9 fb⁻¹ at 13 TeV plus 2011 and 2012 data), m_H = 125.38 ± 0.14 GeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 125.78
+    uncertainty: 0.26
+    extracted_from: []
+    ref: "inspire:1780985"
+    provenance: {uid: 39ad10c7, ref: "inspire:1780985", locator: "Abstract: CMS H → γγ, 13 TeV, 35.9 fb⁻¹ (2016), m_H = 125.78 ± 0.26 GeV", source: agent, status: agent-draft, date: "2026-11-12"}
+  - value: 125.09
+    uncertainty: 0.237
+    extracted_from: []
+    ref: "inspire:1356276"
+    provenance: {uid: e4c5a080, ref: "inspire:1356276", locator: "Abstract: ATLAS + CMS Run 1 combination (7 and 8 TeV, H → γγ and H → ZZ → 4ℓ), m_H = 125.09 ± 0.21 (stat) ± 0.11 (syst) GeV; stored uncertainty is the two terms added in quadrature (0.237)", source: agent, status: agent-draft, date: "2026-11-12"}

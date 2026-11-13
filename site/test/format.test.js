@@ -16,6 +16,13 @@ test('chips: mixed and approximations', () => assert.deepEqual(
   accuracyChips({ qcd: 'NLO', mixed: 'NNLO QCD×EW', approximations: ['m_t→∞'] }),
   ['NLO QCD', 'NNLO QCD×EW', 'm_t→∞']));
 
+test('chips: EW leads when QCD is only LO', () => {
+  assert.deepEqual(accuracyChips({ qcd: 'LO', ew: 'NLO' }), ['NLO EW', 'LO QCD']);
+  assert.deepEqual(accuracyChips({ ew: 'NLO' }), ['NLO EW']);
+  assert.deepEqual(accuracyChips({ qcd: 'LO', ew: 'LO' }), ['LO QCD', 'LO EW']);
+  assert.deepEqual(accuracyChips({ qcd: 'LO' }), ['LO QCD']);
+});
+
 test('status badges', () => {
   for (const s of ['agent-draft', 'cross-checked', 'machine-verified', 'human-verified', 'disputed']) {
     assert.deepEqual(statusBadge(s), { label: s, cls: 'badge st-' + s });
@@ -26,6 +33,8 @@ test('status badges', () => {
 test('fmtSize', () => {
   assert.equal(fmtSize({ range: [0.4, 6], asymmetric: false }), '0.4–6.0 %');
   assert.equal(fmtSize({ range: [0.01, 0.01], asymmetric: false }), '0.01 %');
+  assert.equal(fmtSize({ range: [1e-7, 1e-7], asymmetric: false }), '1e-7 %');
+  assert.equal(fmtSize({ range: [0, 2.5e-7], asymmetric: false }), '0.0–2.5e-7 %');
   assert.equal(fmtSize({ range: [5, 12.5], unit: 'MeV', asymmetric: true }), '5.0–12.5 MeV');
 });
 

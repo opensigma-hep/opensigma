@@ -142,3 +142,24 @@ def test_search_index():
         assert word in e["text"]
     assert "Drell-Yan" in idx["proc:dy-nc"]["text"] and "m_W" in idx["par:mw"]["text"]
     assert {"fam:top", LHC, TEV, MEAS, "amp:2L/0-qqbarV"} <= set(idx)
+
+
+def test_search_index_ids_colliders_experiments():
+    repo, _, obs = _repo()
+    idx = {e["id"]: e for e in derive(repo, TODAY)["search_index"]}
+    for i in ("proc:dy-nc", obs["id"], MEAS, "fam:top", "par:mw"):
+        assert i in idx[i]["text"].split()
+    col = idx["col:lhc-13"]
+    assert col["kind"] == "col" and col["label"] == "LHC 13 TeV" and "pp" in col["text"].split()
+    assert not any(e["kind"] == "exp" for e in idx.values())
+    repo["experiments"] = [{"id": "exp:fakeexp", "name": "FakeExp", "aliases": ["exp:fe"]}, {"id": "exp:bare"}]
+    idx = {e["id"]: e for e in derive(repo, TODAY)["search_index"]}
+    assert idx["exp:fakeexp"] == {"id": "exp:fakeexp", "kind": "exp", "label": "FakeExp", "text": "FakeExp exp:fakeexp exp:fe"}
+    assert idx["exp:bare"]["label"] == "exp:bare"
+
+
+def test_max_ew_in_cell():
+    repo, chan, _ = _repo()
+    assert derive(repo, TODAY)["cells"][TEV]["max_ew"] is None
+    chan["observables"][0]["predictions"].append({"label": "x", "accuracy": {"qcd": "LO", "ew": "NLO"}})
+    assert derive(repo, TODAY)["cells"][LHC]["max_ew"] == "NLO"

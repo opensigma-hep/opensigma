@@ -1,0 +1,26 @@
+id: amp:2L/qqbar-Vgamma
+process: proc:w-gamma
+loops: 2
+corrections: QCD
+status: done
+approximations:
+  - massless QCD; V = W±, Z with leptonic decay included
+evaluation:
+  kind: analytic
+  detail: finite remainder in one- and two-dimensional harmonic polylogarithms (HPLs, 2dHPLs)
+  provenance:
+    uid: a91e008b
+    ref: inspire:1080394
+    locator: Abstract (analytic expression for the finite remainder of the amplitude in terms of one- and two-dimensional harmonic polylogarithms)
+    source: agent
+    status: agent-draft
+    date: '2026-11-12'
+refs:
+  - inspire:1080394
+provenance:
+  uid: b6dfcfd5
+  ref: inspire:1080394
+  locator: Abstract (two-loop QCD corrections to the helicity amplitudes for q q̄ → W±γ and q q̄ → Z⁰γ, leptonic decay of the vector boson included; physical kinematics for gauge-boson-plus-photon production)
+  source: agent
+  status: agent-draft
+  date: '2026-11-12'

@@ -131,6 +131,7 @@ channels:
             compared_to: ["meas:vbf-h/lhc-13/atlas-2023-ww-fid"]
             refs: ["inspire:2649598"]
             provenance: {uid: fb7825b2, ref: "inspire:2649598", locator: "Sec. 3.1 and Table 1 (Powheg+Pythia 8: NLO QCD & EW + approx. NNLO QCD, NNPDF3.0NLO, AZNLO); Fig. 9 (comparison with σ_fid)", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
           - label: "NLO+PS QCD (MG5_aMC@NLO + Herwig 7)"
             accuracy: {qcd: NLO, shower_matched: true, approximations: ["LO EW", "CKKW scheme for ME–PS overlap removal", "Higgs decay via MadSpin"]}
             codes: ["MG5_aMC@NLO", "Herwig 7"]
@@ -161,6 +162,7 @@ channels:
                 provenance: {uid: 097eee62, ref: "arXiv:2407.09363", locator: "Sec. III, Eqs. (7)–(8); text after Eq. (8): scale uncertainties ~2% at NNLO do not capture missing higher orders (NNLO is 10% below NLO)", source: agent, status: cross-checked, date: "2026-10-22"}
             refs: ["inspire:2807339"]
             provenance: {uid: 71b2c30b, ref: "arXiv:2407.09363", locator: "Sec. II (Eqs. (1)–(5), combination of NNLO production and decay) and Sec. III (13 TeV, NNPDF31_nnlo_as_0118, selection following the ATLAS analysis, Ref. [7]); fiducial σ reduced by about 40% from LO to NNLO", source: agent, status: cross-checked, date: "2026-10-22"}
+            headline: true
       - id: "obs:vbf-h/lhc-13/sigma-vbf"
         name: "σ(VBF) in the Higgs decay-channel combination (ATLAS: σ(VBF); CMS: μ_VBF)"
         kind: total
@@ -193,7 +195,7 @@ channels:
               qcd: N3LO
               approximations: ["no colour exchange between the two hadronic systems", "electroweak corrections not included in this prediction"]
             codes: ["proVBFH"]
-            total: {value_pct: 0.13, provenance: {uid: bb6b7514, ref: "arXiv:1606.00840", locator: "Table I, N3LO, 13 TeV: 3.928 pb +0.005/−0.001 pb (scale variation, larger side 0.13%); PDF uncertainty (about 2% at 13 TeV, PDF4LHC15) not included", source: agent, status: cross-checked, date: "2026-10-16"}}
+            total: {value_pct: 2.0, provenance: {uid: bb6b7514, ref: "arXiv:1606.00840", locator: "Table I, N3LO, 13 TeV: 3.928 pb +0.005/−0.001 pb (scale variation, larger side 0.13%) and text after Eq. (6): PDF uncertainty of about 2% at 13 TeV (PDF4LHC15), quoted separately by the paper; total = scale and PDF added in quadrature (0.13% ⊕ 2%), previously scale only", source: agent, status: agent-draft, date: "2026-11-12"}}
             uncertainties:
               - category: MHOU
                 specific: "μR, μF variation of both hadronic sectors"
@@ -257,11 +259,63 @@ channels:
         predictions:
           - label: "NLO QCD+EW + approximate NNLO QCD (LHC Higgs Cross Section WG, YR3), m_H = 125.09 GeV, 8 TeV"
             accuracy:
-              qcd: NNLO
+              qcd: NLO
               ew: NLO
-              approximations: ["order quoted as NLO(QCD+EW) + approximate NNLO(QCD)"]
+              approximations: ["order quoted as NLO(QCD+EW) + approximate NNLO(QCD): the complete fixed order is NLO, the NNLO QCD part is an approximation"]
             total: {value_pct: 2.5, provenance: {uid: 37b7192f, ref: "arXiv:1606.02266", locator: "Table 1, 8 TeV column, VBF row: 1.58 ± 0.04 pb; relative uncertainty 0.04/1.58 derived from the rounded values (quadrature sum of QCD scale, PDF and αs, symmetric as quoted)", source: agent, status: cross-checked, date: "2026-10-17"}}
             compared_to: ["meas:vbf-h/lhc-8/atlas-cms-2016-comb"]
             refs: ["arXiv:1307.1347"]
-            provenance: {uid: 01ee8a9a, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_VBF (= 1)", source: agent, status: cross-checked, date: "2026-10-17"}
+            provenance: {uid: 01ee8a9a, ref: "arXiv:1606.02266", locator: "Table 1 (predictions at m_H = 125.09 GeV interpolated between 125.0 and 125.1 GeV from the Higgs Cross Section WG, arXiv:1307.1347, Ref. [32] of the combination), used for the SM prediction of μ_VBF (= 1)", source: agent, status: agent-draft, date: "2026-11-12"}
+            headline: true
+  - id: "chan:vbf-h/lhc-13.6"
+    collider: "col:lhc-13.6"
+    initial_state: "pp"
+    coverage: partial
+    last_reviewed: "2026-11-12"
+    headline: {observable: "obs:vbf-h/lhc-13.6/mu-vbf-bb", region: "VBF-enriched all-hadronic H → bb̄ selection, signal strength relative to the SM (VBF and ggF both treated as signal)"}
+    measurements:
+      - id: "meas:vbf-h/lhc-13.6/atlas-2025-bb"
+        experiment: "ATLAS"
+        dataset: "13.6 TeV, 51.5 fb⁻¹ (2022–2023), VBF H → bb̄, inclusive VBF trigger (measured together with a VBF H → cc̄ search that also uses 37.5 fb⁻¹ at 13 TeV)"
+        ref: "inspire:3087829"
+    observables:
+      - id: "obs:vbf-h/lhc-13.6/mu-vbf-bb"
+        name: "Signal strength μ(VBF H → bb̄) at 13.6 TeV"
+        kind: total
+        variable: "μ_bb = σ × B(H → bb̄) / SM in the VBF topology; VBF and ggF Higgs production both treated as signal (expected ggF-to-VBF yield ratio about 1% in SR1 rising to 8% in SR5 and about 45% in SR6)"
+        results:
+          - measurement: "meas:vbf-h/lhc-13.6/atlas-2025-bb"
+            total: {value_pct: 59.0, provenance: {uid: 20e8b6b0, ref: "arXiv:2511.21911", locator: "Abstract and results: μ_bb = 0.97 +0.57/−0.50 = 0.97 ± 0.45 (stat.) +0.35/−0.22 (syst.); larger side as % of the central value", source: agent, status: agent-draft, date: "2026-11-12"}}
+            uncertainties:
+              - category: stat
+                specific: "Statistical uncertainty (data statistics and non-resonant background normalisation and shape)"
+                size: {range: [46.0, 46.0], unit: "%", asymmetric: false}
+                provenance: {uid: c3eee276, ref: "arXiv:2511.21911", locator: "Results: ± 0.45 (stat.) of 0.97; Table 1, Statistical: 0.45", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: syst_combined
+                specific: "Systematic uncertainty (all sources combined)"
+                size: {range: [23.0, 36.0], unit: "%", asymmetric: true}
+                provenance: {uid: c94bb6c4, ref: "arXiv:2511.21911", locator: "Results: +0.35/−0.22 (syst.) of 0.97", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Non-resonant background bias uncertainty"
+                size: {range: [20.0, 20.0], unit: "%", asymmetric: false}
+                provenance: {uid: 57df0fe8, ref: "arXiv:2511.21911", locator: "Table 1 (absolute uncertainties in μ_bb, mean of up and down variations), Non-res. bkgd bias uncertainty: 0.19 of 0.97", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: background
+                specific: "Simulation sample sizes (mainly the QCD V+jets samples)"
+                size: {range: [22.0, 22.0], unit: "%", asymmetric: false}
+                provenance: {uid: 5467ae0f, ref: "arXiv:2511.21911", locator: "Table 1, Simulation sample sizes: 0.21 of 0.97", source: agent, status: agent-draft, date: "2026-11-12"}
+              - category: energy_scale
+                specific: "Jet-related experimental uncertainties"
+                size: {range: [19.0, 19.0], unit: "%", asymmetric: false}
+                provenance: {uid: 44a1e2c3, ref: "arXiv:2511.21911", locator: "Table 1, Experimental / Jet: 0.18 of 0.97", source: agent, status: agent-draft, date: "2026-11-12"}
+        predictions:
+          - label: "SM VBF H → bb̄ signal model: Powheg Box v2 NLO QCD + Pythia 8, NLO EW corrections applied versus pT(H)"
+            accuracy:
+              qcd: NLO
+              ew: NLO
+              shower_matched: true
+              approximations: ["NLO EW corrections computed with MadGraph5_aMC@NLO and applied as a function of the generated Higgs pT", "SM production cross sections and branching ratios and their uncertainties follow the LHC Higgs WG recommendations; the order of the normalisation is not stated in the letter", "ggF contribution from Powheg Box v2 at NNLO QCD"]
+            codes: ["Powheg Box", "Pythia 8", "MadGraph5_aMC@NLO"]
+            compared_to: ["meas:vbf-h/lhc-13.6/atlas-2025-bb"]
+            refs: ["inspire:3087829"]
+            provenance: {uid: 42b96187, ref: "arXiv:2511.21911", locator: "Simulation paragraph (VBF signal at NLO QCD with Powheg Box v2, NNPDF3.0nlo; NLO EW corrections from MadGraph5_aMC@NLO; ggF at NNLO QCD) and systematic-uncertainties paragraph", source: agent, status: agent-draft, date: "2026-11-12"}
             headline: true

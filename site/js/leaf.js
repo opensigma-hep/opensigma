@@ -1,8 +1,10 @@
 // DOM helpers shared by the leaf views (observable, channel, process, amplitude, parameter).
 import { toHash } from './router.js';
-import { statusBadge, refText } from './format.js';
+import { statusBadge, refText, accuracyChips } from './format.js';
+import { define, scan, glossaryHash } from './glossary.js';
 import { issueUrl, refUrl } from './verify-links.js';
 import { REPO } from './config.js';
+import { expByName } from './experiments.js';
 
 export const BB_COLS = ['born', '1L', '2L', '3L', 'RV', 'RR', 'RRR', 'ir_scheme', 'code'];
 
@@ -17,6 +19,42 @@ export const fill = (host, ...kids) => host.replaceChildren(...kids.flat().filte
 export const none = (what) => el('p', { className: 'none-yet' }, `No ${what} yet.`);
 export const link = (id, text) => el('a', { href: toHash(id) }, text ?? id);
 export const sep = (nodes, s = ', ') => nodes.flatMap((n, i) => (i ? [s, n] : [n]));
+/** Link that leaves the site: new tab, rel=noopener, marked with an arrow (CSS a.ext). */
+export function ext(url, text) {
+  const a = el('a', { className: 'ext', href: url, target: '_blank', rel: 'noopener' }, text ?? url.replace(/^https:\/\/(www\.)?/, '').replace(/\/$/, ''));
+  a.title = `${url} (external site, opens in a new tab)`;
+  return a;
+}
+export const linkList = (links) => el('ul', { className: 'linklist' }, ...(links ?? []).map((l) => el('li', {}, ext(l.url, l.label))));
+/** Experiment name as used in a measurement, linked to its page when it is in the registry. */
+export function expLink(data, name) {
+  const e = expByName(data.experiments).get(name);
+  return e ? link(e.id, name) : name;
+}
+
+/**
+ * Glossary tooltip, the one place labels get their definition: `text` as a link to its glossary entry, with the short
+ * definition as title (shown on hover and focus, read out as the link description). Plain text when there is no entry.
+ * key: glossary name if it differs from the text; scope: bb | coverage | kind | evaluation | exp | th | status;
+ * cls: extra class; note: appended to the title; loose: also search inside free text (approximation notes).
+ */
+export function term(text, { key = text, scope, cls, note, loose } = {}) {
+  let d = define(key, scope);
+  if (!d && loose) { const entry = scan(key); d = entry && { entry, title: `${entry.term}: ${entry.short}` }; }
+  if (!d) return cls ? el('span', { className: cls, ...(note ? { title: note } : {}) }, text) : text;
+  return el('a', { className: 'term' + (cls ? ' ' + cls : ''), href: glossaryHash(d.entry.id), title: d.title + (note ? ` · ${note}` : '') }, text);
+}
+/** Short definition as visible text with a glossary link, for places where a link on the label itself would get in the way. */
+export function defLine(key, scope) {
+  const d = define(key, scope);
+  return d ? el('p', { className: 'small' }, d.entry.short, ' ', el('a', { href: glossaryHash(d.entry.id) }, 'Glossary')) : null;
+}
+/** Accuracy chips of a prediction (QCD order, EW order, mixed, resummation, +PS, approximations), each with its tooltip. */
+export function accChips(a) {
+  const mixedAt = a.mixed ? (a.ew ? 2 : 1) : -1;
+  return el('ul', { className: 'chips' }, ...accuracyChips(a).map((c, i) =>
+    el('li', { className: 'chip' }, term(c, i === mixedAt ? { key: 'mixed' } : { loose: true }))));
+}
 
 const IDX = new WeakMap();
 /** id -> {node, label, kind, proc, chan}, built once per data object. */
@@ -27,6 +65,7 @@ export function index(data) {
   for (const f of data.families ?? []) m.set(f.id, { node: f, label: f.name, kind: 'fam' });
   for (const c of data.colliders ?? []) m.set(c.id, { node: c, label: c.name, kind: 'col' });
   for (const a of data.amplitudes ?? []) m.set(a.id, { node: a, label: a.id, kind: 'amp' });
+  for (const e of data.experiments ?? []) m.set(e.id, { node: e, label: e.name, kind: 'exp' });
   for (const p of data.parameters ?? []) m.set(p.id, { node: p, label: p.name, kind: 'par' });
   for (const p of data.processes ?? []) {
     m.set(p.id, { node: p, label: p.name, kind: 'proc' });
@@ -66,6 +105,7 @@ export const refList = (refs, all) => (refs?.length ? sep(refs.map((r) => refLin
 /** Status badge plus ✓/⚑ new-issue links for one provenance record; `value` is the number as displayed. */
 export function prov(p, value, fullTable) {
   if (!p) return el('span', { className: 'prov' }, statusEl(undefined));
+  const where = `${p.ref}, ${p.locator} · ${p.source}, ${p.date}`;
   const linkTo = [p.ref, fullTable].filter(Boolean).map(refUrl).filter(Boolean).join(' ');
   const datum = { uid: p.uid, value, locator: p.locator, link: linkTo, page: location.hash };
   const act = (action, sym, verb) => {
@@ -74,27 +114,25 @@ export function prov(p, value, fullTable) {
     a.title = `${verb} this value on GitHub`;
     return a;
   };
-  const s = el('span', { className: 'prov' }, statusEl(p.status));
+  const s = el('span', { className: 'prov' }, statusEl(p.status, where));
   if (p.status === 'human-verified' && p.verified_by) s.append(` by ${p.verified_by}`);
   if (p.status === 'disputed' && p.issue) s.append(' ', el('a', { href: p.issue, textContent: 'issue' }));
   s.append(' ', act('verify', '✓', 'Verify'), ' ', act('flag', '⚑', 'Flag'));
-  s.title = `${p.ref}, ${p.locator} · ${p.source}, ${p.date}`;
+  s.title = where;
   return s;
 }
-function statusEl(status) {
+function statusEl(status, note) {
   const b = statusBadge(status);
-  return el('span', { className: b.cls }, b.label);
+  return term(b.label, { scope: 'status', cls: b.cls, note });
 }
 
 /** Analytic / semi-analytic / numerical chip for an amplitude; the detail shows on hover. */
 export function evalChip(ev) {
   if (!ev) return null;
-  const c = el('span', { className: 'eval eval-' + ev.kind }, ev.kind);
-  if (ev.detail) c.title = ev.detail;
-  return c;
+  return term(ev.kind, { scope: 'evaluation', cls: 'eval eval-' + ev.kind, note: ev.detail });
 }
 
-const BB_HEAD = { born: 'Born', ir_scheme: 'IR scheme', code: 'Code' };
+export const BB_HEAD = { born: 'Born', ir_scheme: 'IR scheme', code: 'Code' };
 const BB_MARK = { done: '●', partial: '◐', missing: '○' };
 
 /** One building-block cell in full: status, approximations, amplitude link, refs, verification. */
@@ -102,12 +140,12 @@ function stamp(r, c, cell, data) {
   const idx = index(data);
   const note = cell.approximations?.length || cell.amplitude
     ? el('div', { className: 'stamp-note' },
-      cell.approximations?.length ? el('div', {}, cell.approximations.join(', ')) : null,
+      cell.approximations?.length ? el('div', {}, ...sep(cell.approximations.map((x) => term(x, { loose: true })))) : null,
       cell.amplitude ? el('div', {}, link(cell.amplitude, 'amplitude →'), ' ', evalChip(idx.get(cell.amplitude)?.node.evaluation)) : null)
     : null;
   return el('div', { className: 'stamp bb-' + cell.status },
-    el('div', { className: 'stamp-head' }, cell.status),
-    el('strong', {}, `${r.row} · ${BB_HEAD[c] ?? c}`),
+    el('div', { className: 'stamp-head' }, term(cell.status, { scope: 'bb' })),
+    el('strong', {}, term(r.row), ' · ', term(BB_HEAD[c] ?? c)),
     note,
     cell.refs?.length ? el('div', { className: 'small' }, ...refList(cell.refs, data.refs)) : null,
     el('div', {}, prov(cell.provenance, `${r.row} ${c}: ${cell.status}`)));
@@ -123,10 +161,10 @@ export function bbTable(proc, data) {
   all.addEventListener('click', () => panel.replaceChildren(...rows.flatMap((r) =>
     BB_COLS.filter((c) => r.cells?.[c]).map((c) => stamp(r, c, r.cells[c], data)))));
   const t = el('table', { className: 'bb' },
-    el('thead', {}, el('tr', {}, el('th', { scope: 'col' }, 'Correction'), ...BB_COLS.map((c) => el('th', { scope: 'col' }, BB_HEAD[c] ?? c)))));
+    el('thead', {}, el('tr', {}, el('th', { scope: 'col' }, term('Correction', { key: 'building blocks' })), ...BB_COLS.map((c) => el('th', { scope: 'col' }, term(BB_HEAD[c] ?? c))))));
   const body = el('tbody');
   for (const r of rows) {
-    const tr = el('tr', {}, el('th', { scope: 'row' }, r.row));
+    const tr = el('tr', {}, el('th', { scope: 'row' }, term(r.row)));
     for (const c of BB_COLS) {
       const cell = r.cells?.[c];
       if (!cell) { tr.append(el('td', { className: 'empty' })); continue; }
@@ -146,7 +184,8 @@ export function bbTable(proc, data) {
   }
   t.append(body);
   return el('div', {}, el('div', { className: 'matrix-scroll' }, t),
-    el('p', { className: 'legend' }, el('span', {}, '● done · ◐ partial · ○ missing'), el('span', {}, '≈ approximations · A amplitude in the library'), all),
+    el('p', { className: 'legend' }, el('span', {}, '● ', term('done', { scope: 'bb' }), ' · ◐ ', term('partial', { scope: 'bb' }), ' · ○ ', term('missing', { scope: 'bb' })),
+      el('span', {}, '≈ ', term('approximations'), ' · A ', term('amplitude in the library', { key: 'amplitude library' })), all),
     panel);
 }
 
@@ -198,13 +237,13 @@ export function measTable(data, rows) {
   const body = el('tbody');
   for (const { m, total } of rows) {
     const notes = [];
-    if (m.projected) notes.push(el('span', {}, 'projected', m.projection_source ? [' (', refLink(m.projection_source.ref, refs), `, ${m.projection_source.date})`] : ''));
-    if (m.superseded_by) notes.push(el('span', {}, 'superseded by ', idLink(data, m.superseded_by)));
-    if (m.preliminary) notes.push('preliminary');
+    if (m.projected) notes.push(el('span', {}, term('projected'), m.projection_source ? [' (', refLink(m.projection_source.ref, refs), `, ${m.projection_source.date})`] : ''));
+    if (m.superseded_by) notes.push(el('span', {}, term('superseded by'), ' ', idLink(data, m.superseded_by)));
+    if (m.preliminary) notes.push(term('preliminary'));
     if (m.assumptions) notes.push(m.assumptions);
     const cls = [m.projected && 'projected', m.superseded_by && 'superseded', m.preliminary && 'preliminary'].filter(Boolean).join(' ');
     const tr = el('tr', { className: cls, dataset: { id: m.id } },
-      el('td', {}, m.experiment), el('td', {}, m.dataset ?? ''),
+      el('td', {}, expLink(data, m.experiment)), el('td', {}, m.dataset ?? ''),
       ...(withTotal ? [el('td', {}, total ? [`${total.value_pct} %`, el('br'), prov(total.provenance, `${total.value_pct} %`)] : '—')] : []),
       el('td', {}, refLink(m.ref, refs)),
       el('td', {}, m.hepdata ? el('a', { href: refUrl(m.hepdata), textContent: 'HEPData' }) : '—'),

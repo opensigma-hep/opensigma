@@ -37,7 +37,7 @@ def prov(root, uid=UID):
 
 def run(root, **kw):
     a = dict(uid=UID, action="verify", user="alice", issue_url=URL, today=TODAY) | kw
-    return verify.apply(root, a.pop("uid"), a.pop("action"), a.pop("user"), a.pop("issue_url"), a.pop("today"))
+    return verify.apply(root, a.pop("uid"), a.pop("action"), a.pop("user"), a.pop("issue_url"), a.pop("today"), **a)
 
 
 def test_parse_issue_form_body():
@@ -114,9 +114,37 @@ def test_flag_already_linked_url_is_noop(root):
 def test_verify_resolves_dispute(root):
     run(root, action="flag")
     run(root, action="flag", user="bob", issue_url=URL.replace("/7", "/9"))
-    assert run(root, user="carol", issue_url=URL.replace("/7", "/11")) == "edited"
+    assert run(root, user="carol", issue_url=URL.replace("/7", "/11"), fallback="carol") == "edited"
     p = prov(root)
     assert p["status"] == "human-verified" and p["verified_by"] == "carol" and "issues" not in p
+
+
+def _set_maintainers(root, handles):
+    fam = YAML()
+    fams = fam.load(root / "families.yaml")
+    fams[0]["maintainers"] = handles
+    fam.dump(fams, root / "families.yaml")
+
+
+def test_verify_of_disputed_datum_needs_a_maintainer(root):
+    _set_maintainers(root, ["maria"])
+    run(root, action="flag")
+    before = (root / DY).read_text(encoding="utf-8")
+    assert run(root, user="carol", issue_url=URL.replace("/7", "/11")) == "dispute_needs_maintainer"
+    assert (root / DY).read_text(encoding="utf-8") == before  # untouched: still disputed, issues kept
+    assert run(root, user="Maria", issue_url=URL.replace("/7", "/12")) == "edited"  # handles compare case-insensitively
+    assert prov(root)["status"] == "human-verified"
+
+
+def test_fallback_assignee_may_resolve_dispute(root):
+    run(root, action="flag")  # family without maintainers
+    assert run(root, user="carol", fallback="owner") == "dispute_needs_maintainer"
+    assert run(root, user="owner", fallback="owner") == "edited"
+
+
+def test_verify_of_undisputed_datum_stays_open_to_all(root):
+    _set_maintainers(root, ["maria"])
+    assert run(root, user="carol") == "edited"
 
 
 def test_maintainers_for(root):
@@ -129,12 +157,12 @@ def test_maintainers_for(root):
     assert verify.maintainers_for(root, "00000000") == []
 
 
-def cli(root, tmp_path, capsys, text, created="2020-01-01T00:00:00Z", label="verify"):
+def cli(root, tmp_path, capsys, text, created="2020-01-01T00:00:00Z", label="verify", extra=()):
     f = tmp_path / "issue.md"
     f.write_text(text, encoding="utf-8")
     assert apply_verification.main(["--root", str(root), "--issue-body-file", str(f), "--user", "alice",
                                     "--created-at", created, "--issue-url", URL, "--action-label", label,
-                                    "--today", "2026-10-16"]) == 0
+                                    "--today", "2026-10-16", *extra]) == 0
     return dict(l.split("=", 1) for l in capsys.readouterr().out.splitlines())
 
 
@@ -165,3 +193,9 @@ def test_edit_is_minimal_diff(root):
     run(root)
     after = f.read_text(encoding="utf-8").splitlines()
     assert len(before) == len(after) and sum(a != b for a, b in zip(before, after)) == 1
+
+
+def test_cli_dispute_guard_and_fallback(root, tmp_path, capsys):
+    run(root, action="flag", user="bob")
+    assert cli(root, tmp_path, capsys, body())["outcome"] == "dispute_needs_maintainer"
+    assert cli(root, tmp_path, capsys, body(), extra=["--fallback-assignee", "alice"])["outcome"] == "edited"

@@ -405,6 +405,7 @@ channels:
             total: {value_pct: 2.5, provenance: {uid: 10951c86, ref: "arXiv:1411.6633", locator: "Abstract and Conclusions (average perturbative uncertainty of the most accurate description about 2.5% in the fit region 0.25 < C < 0.65 at Q = mZ)", source: agent, status: cross-checked, date: "2026-10-17"}}
             refs: ["arXiv:1411.6633"]
             provenance: {uid: 342d1c63, ref: "arXiv:1411.6633", locator: "Abstract (C-parameter in SCET at N3LL′ with O(αs³) fixed order and R-gap nonperturbative soft function)", source: agent, status: cross-checked, date: "2026-10-17"}
+            headline: true
           - label: "NNLO + NLLA matched"
             accuracy:
               qcd: NNLO

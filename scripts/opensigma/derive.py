@@ -27,6 +27,11 @@ def max_qcd_order(channel) -> str | None:
     return max(orders, key=ORDERS.index, default=None)
 
 
+def max_ew_order(channel) -> str | None:
+    orders = [p["accuracy"]["ew"] for o in channel.get("observables", []) for p in o.get("predictions", []) if "ew" in p["accuracy"]]
+    return max(orders, key=ORDERS.index, default=None)
+
+
 def _headline_obs(channel):
     head = (channel.get("headline") or {}).get("observable")
     return next((o for o in channel.get("observables", []) if o["id"] == head), None)
@@ -105,7 +110,7 @@ def derive(repo: dict, today: date) -> dict:
     fam_chans = {f["id"]: [] for f in repo["families"]}
 
     def add(id_, kind, label, node, extra=()):
-        text = " ".join(dict.fromkeys(str(t) for t in [label, *node.get("aliases", []), *extra, _node_refs(node, repo["refs"])] if t))
+        text = " ".join(dict.fromkeys(str(t) for t in [label, id_, *node.get("aliases", []), *extra, _node_refs(node, repo["refs"])] if t))
         search.append({"id": id_, "kind": kind, "label": label, "text": text})
 
     for f in repo["families"]:
@@ -114,6 +119,10 @@ def derive(repo: dict, today: date) -> dict:
         add(a["id"], "amp", a["id"], a)
     for p in repo["parameters"]:
         add(p["id"], "par", p["name"], p, [p["symbol"]])
+    for c in repo["colliders"]:
+        add(c["id"], "col", c["name"], c, [c.get("beams", "")])
+    for e in repo.get("experiments") or []:  # optional data/experiments.yaml
+        add(e["id"], "exp", e.get("name", e["id"]), e, [e.get("full_name", "")])
     for root in [r for k in ("families", "amplitudes", "parameters", "processes") for r in repo[k]]:
         for _, d in _walk(root):
             for al in d.get("aliases", []):
@@ -138,7 +147,7 @@ def derive(repo: dict, today: date) -> dict:
             observables = ch.get("observables", [])
             mq = max_qcd_order(ch)
             cells[cid] = {
-                "process": pid, "collider": ch["collider"], "max_qcd": mq,
+                "process": pid, "collider": ch["collider"], "max_qcd": mq, "max_ew": max_ew_order(ch),
                 "ratio": precision_ratio(ch, False, meas),
                 "ratio_with_projections": precision_ratio(ch, True, meas),
                 "coverage": ch["coverage"], "stale": is_stale(ch["last_reviewed"], today),

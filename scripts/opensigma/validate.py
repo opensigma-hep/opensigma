@@ -38,6 +38,9 @@ def validate_schema(repo: dict, schema_dir: Path) -> list[Issue]:
 
     check("families", repo["families"], "families.yaml")
     check("colliders", repo["colliders"], "colliders.yaml")
+    check("diagrams", repo.get("diagrams", {}), "diagrams.yaml")
+    if repo.get("experiments") or repo.get("groups"):
+        check("experiments", {"experiments": repo.get("experiments", []), "groups": repo.get("groups", [])}, "experiments.yaml")
     for key, kind in [("processes", "process"), ("amplitudes", "amplitude"), ("parameters", "parameter")]:
         for obj in repo[key]:
             check(kind, obj, obj["_file"])
@@ -56,13 +59,14 @@ def _walk(x, path=()):
 
 
 # keys whose value (str or list of str) must be an existing id
-_REF_KEYS = {"compared_to", "uses_amplitudes", "superseded_by", "also_in", "collider", "family",
+_REF_KEYS = {"compared_to", "uses_amplitudes", "superseded_by", "also_in", "collider", "colliders", "family",
              "measurement", "amplitude", "process", "extracted_from"}
 
 
 def validate_integrity(repo: dict) -> list[Issue]:
     issues = []
     roots = [("families.yaml", o) for o in repo["families"]] + [("colliders.yaml", o) for o in repo["colliders"]]
+    roots += [("experiments.yaml", o) for k in ("experiments", "groups") for o in repo.get(k, [])]
     roots += [(o["_file"], o) for k in ("processes", "amplitudes", "parameters") for o in repo[k]]
 
     def err(file, path, msg, level="error"):
@@ -116,11 +120,29 @@ def validate_integrity(repo: dict) -> list[Issue]:
                     if r["measurement"] in ids and r["measurement"] not in meas:  # unknown ids reported above
                         err(file, ("channels", chan["id"], "observables", o["id"], "results"),
                             f"{file}: result of {o['id']!r} cites {r['measurement']!r}, which is not a measurement of {chan['id']!r}")
+    # A warning, not an error: a new process may use an experiment before it is registered (and no registry = no check).
+    known = {e["name"] for e in repo.get("experiments", [])}
+    for proc in repo["processes"] if known else []:
+        for chan in proc.get("channels", []):
+            for m in chan.get("measurements", []):
+                if m.get("experiment") not in known:
+                    err(proc["_file"], ("channels", chan["id"], "measurements", m["id"]),
+                        f"experiment {m.get('experiment')!r} has no entry in experiments.yaml", "warning")
     for file, root in roots:
         if file.startswith("processes/"):
             folder, fam = file.split("/")[1], root["family"]
             if fam != f"fam:{folder}":
                 err(file, ("family",), f"{file}: folder {folder!r} does not match family {fam!r}")
+    procs = {p["id"] for p in repo["processes"]}
+    for pid, d in repo.get("diagrams", {}).items():  # a process without a diagram is fine
+        if pid not in procs:
+            err("diagrams.yaml", (pid,), f"diagrams.yaml: diagram for unknown process {pid!r}")
+        for i, e in enumerate(d["edges"]):
+            for end in ("from", "to"):
+                if e[end] not in d["points"]:
+                    err("diagrams.yaml", (pid, "edges", i, end), f"diagrams.yaml: {pid}: edge {end} {e[end]!r} is not a declared point")
+            if e["from"] == e["to"]:
+                err("diagrams.yaml", (pid, "edges", i), f"diagrams.yaml: {pid}: edge from a point to itself")
     return issues
 
 

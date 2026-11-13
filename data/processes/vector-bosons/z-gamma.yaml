@@ -1,0 +1,1853 @@
+id: proc:z-gamma
+name: Zγ production (pp → Zγ → ℓ⁺ℓ⁻γ, νν̄γ)
+family: fam:vector-bosons
+sector: SM
+description: Production of a Z boson with an isolated prompt photon, measured in the ℓ⁺ℓ⁻γ and νν̄γ final states. There is no ZZγ or Zγγ vertex in the SM, so the photon comes from the quark line or, for ℓ⁺ℓ⁻γ, the decay leptons; the νν̄γ channel at high ET(γ) is the most sensitive probe of anomalous neutral triple gauge couplings and the main background to mono-photon searches. Known at NNLO QCD (with NNLO+PS and N3LL pT resummation) and NLO EW; NNLO corrections are 8–18% depending on the cuts.
+watch:
+  recids:
+    - 1357993
+    - 1255671
+    - 1764342
+  queries:
+    - (t "Z gamma" or t "Zγ" or t "Z\gamma" or t "\ell^+\ell^-\gamma" or t "\nu\bar{\nu}\gamma" or t "Z boson and a photon") and (collaboration:ATLAS or collaboration:CMS) and (t "cross" or t production) and not t Higgs and not t resonance and not t "two jets" and tc article
+    - (t "Z gamma" or t "Zγ" or t "Z\gamma") and (t NNLO or t N3LO or t "electroweak corrections" or t "two-loop" or t "three-loop" or t resummation or t "parton shower" or t "gluon fusion") and not t Higgs and tc article
+building_blocks:
+  - row: NLO QCD
+    cells:
+      1L:
+        status: done
+        refs:
+          - inspire:467827
+        provenance:
+          uid: 4dc77826
+          ref: inspire:467827
+          locator: Abstract (one-loop QCD helicity amplitudes for q q̄ → Zγ and W±γ with leptonic decay of the massive boson, plus tree-level amplitudes with an additional gluon)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      code:
+        status: done
+        approximations:
+          - leptonic Z decay in the narrow-width approximation with decay-angle correlations (inspire:523928)
+        refs:
+          - inspire:523928
+        provenance:
+          uid: 6040ce94
+          ref: inspire:523928
+          locator: Abstract (general-purpose NLO Monte Carlo program for Wγ and Zγ; leptonic decays in the narrow-width approximation with spin correlations)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+  - row: NNLO QCD
+    cells:
+      2L:
+        status: done
+        amplitude: amp:2L/qqbar-Vgamma
+        refs:
+          - inspire:1080394
+        provenance:
+          uid: d225b114
+          ref: inspire:1080394
+          locator: Abstract (two-loop QCD helicity amplitudes for q q̄ → Z⁰γ, leptonic decay included)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      RV:
+        status: done
+        refs:
+          - inspire:1357993
+        provenance:
+          uid: 2c703ba5
+          ref: inspire:1357993
+          locator: Sec. 2 (all required tree-level and one-loop amplitudes obtained from the OpenLoops generator)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      RR:
+        status: done
+        refs:
+          - inspire:1357993
+        provenance:
+          uid: e15d875d
+          ref: inspire:1357993
+          locator: Sec. 2 (all required tree-level and one-loop amplitudes obtained from the OpenLoops generator)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      ir_scheme:
+        status: done
+        approximations:
+          - qT subtraction (inspire:1255671, inspire:1357993)
+          - N-jettiness slicing (MCFM, inspire:1615212)
+        refs:
+          - inspire:1357993
+          - inspire:1615212
+        provenance:
+          uid: 539c40d6
+          ref: inspire:1357993
+          locator: Sec. 2.1 (the qT subtraction formalism); inspire:1615212 Abstract (jettiness slicing approach in MCFM)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      code:
+        status: done
+        approximations:
+          - direct photons only, smooth-cone (Frixione) isolation; no fragmentation component (inspire:1357993 Sec. 3.1)
+          - loop-induced gg → ℓℓγ and gg → νν̄γ included at their leading (one-loop squared) order (inspire:1357993 Sec. 2)
+        refs:
+          - inspire:1255671
+          - inspire:1357993
+          - inspire:1615212
+          - inspire:1824053
+        provenance:
+          uid: 6cf373b2
+          ref: inspire:1255671
+          locator: Abstract (first complete, fully differential NNLO QCD computation for Zγ); inspire:1357993 Abstract (ℓℓγ and νν̄γ with spin correlations, off-shell effects and final-state photon radiation); inspire:1615212 Abstract (independent NNLO in MCFM for ℓ⁺ℓ⁻γ and νν̄γ); inspire:1824053 Abstract (NNLO+PS with MiNNLO_PS)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+  - row: N3LO QCD
+    cells:
+      2L:
+        status: partial
+        approximations:
+          - 'two-loop gg → Zγ amplitudes in massless QCD: virtual part of the NLO correction to the loop-induced channel, an O(αs³) contribution'
+          - no NLO gg → Zγ cross section found in INSPIRE searches on 2026-11-12
+        amplitude: amp:2L/gg-Zgamma
+        refs:
+          - inspire:1219005
+        provenance:
+          uid: 3a860953
+          ref: inspire:1219005
+          locator: Abstract (helicity amplitudes for gg → Zγ to two loops in massless QCD, an ingredient of the NLO corrections to Zγ production through gluon fusion)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      3L:
+        status: missing
+        approximations:
+          - no three-loop q q̄ → Zγ amplitude found in INSPIRE title and citation searches on 2026-11-12
+          - the three-loop four-point master integrals with one off-shell leg are available (inspire:3215509)
+        refs:
+          - inspire:3215509
+        provenance:
+          uid: d83ad526
+          ref: inspire:3215509
+          locator: Abstract (complete set of massless three-loop four-point master integrals with one off-shell leg; the stated application is the three-loop virtual corrections to Higgs- or vector-boson + jet production)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+  - row: NLO EW
+    cells:
+      1L:
+        status: done
+        refs:
+          - inspire:1401405
+        provenance:
+          uid: '35397735'
+          ref: inspire:1401405
+          locator: Abstract (NLO EW corrections to pp → ℓ⁺ℓ⁻/ν̄ν + γ + X with all off-shell effects in the complex-mass scheme; quark-photon and photon-photon initial states included)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+      code:
+        status: done
+        refs:
+          - inspire:1401405
+        provenance:
+          uid: '7e160886'
+          ref: inspire:1401405
+          locator: Abstract (calculation available as Monte Carlo programs for arbitrary differential cross sections)
+          source: agent
+          status: agent-draft
+          date: '2026-11-12'
+channels:
+  - id: chan:z-gamma/lhc-13
+    collider: col:lhc-13
+    initial_state: pp
+    coverage: partial
+    last_reviewed: '2026-11-12'
+    headline:
+      observable: obs:z-gamma/lhc-13/sigma-fid-llgamma
+      region: Fiducial pp → Z(→ ℓ⁺ℓ⁻)γ, 13 TeV, ET(γ) > 30 GeV (ATLAS particle-level fiducial region)
+    measurements:
+      - id: meas:z-gamma/lhc-13/atlas-2020-llgamma
+        experiment: ATLAS
+        dataset: 13 TeV, 139 fb⁻¹ (2015–2018), e⁺e⁻γ + μ⁺μ⁻γ
+        ref: inspire:1764342
+        hepdata: hepdata:ins1764342/Table 1
+      - id: meas:z-gamma/lhc-13/atlas-2018-nunugamma
+        experiment: ATLAS
+        dataset: 13 TeV, 36.1 fb⁻¹ (2015–2016), νν̄γ
+        ref: inspire:1698006
+        hepdata: hepdata:ins1698006/Table 1
+      - id: meas:z-gamma/lhc-13/cms-2026-nunugamma
+        experiment: CMS
+        dataset: 13 TeV, 138 fb⁻¹ (2016–2018), νν̄γ
+        ref: inspire:3109635
+        hepdata: hepdata:ins3109635/Table3_FiducialCrossSections
+    observables:
+      - id: obs:z-gamma/lhc-13/sigma-fid-llgamma
+        name: Fiducial σ(pp → Z(→ ℓ⁺ℓ⁻)γ)
+        kind: fiducial
+        variable: 'σ_fid per lepton flavour in the ATLAS particle-level fiducial region (paper Table 4): ET(γ) > 30 GeV, dressed leptons with |η| < 2.47, photon isolation ET^cone0.2 < 0.07 ET(γ)'
+        results:
+          - measurement: meas:z-gamma/lhc-13/atlas-2020-llgamma
+            total:
+              value_pct: 2.9
+              provenance:
+                uid: 273edd5d
+                ref: hepdata:ins1764342/Table 1
+                locator: "Table 1, quadrature sum of all errors (bin 1); 533.7 ± 5.1 (uncorr) ± 11.6 (corr) ± 9.1 (lumi) fb in the paper's Table 6; abstract: experimental precision of 2.9%"
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Stat
+                size:
+                  range:
+                    - 0.4
+                    - 0.4
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: b454cf20
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'Stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Uncor
+                size:
+                  range:
+                    - 0.86
+                    - 0.86
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: 7001723a
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'Uncor'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: energy_scale
+                specific: EgammaScale
+                size:
+                  range:
+                    - 0.69
+                    - 0.69
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: 0a8ed8f0
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'EgammaScale'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: efficiency
+                specific: PhotonID
+                size:
+                  range:
+                    - 1.0
+                    - 1.0
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: f0c41074
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'PhotonID'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: efficiency
+                specific: PhotonIso
+                size:
+                  range:
+                    - 0.95
+                    - 0.95
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: e9e967f6
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'PhotonIso'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: background
+                specific: Z+jets
+                size:
+                  range:
+                    - 1.2
+                    - 1.2
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: e38bdb77
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'Z+jets'; category 'background' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: background
+                specific: TtgammaBkg
+                size:
+                  range:
+                    - 0.68
+                    - 0.68
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: f829232b
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'TtgammaBkg'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: background
+                specific: PileupBkg
+                size:
+                  range:
+                    - 0.6
+                    - 0.6
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: 1b6783b8
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'PileupBkg'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Lumi
+                size:
+                  range:
+                    - 1.7
+                    - 1.7
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 1
+                provenance:
+                  uid: 475f8064
+                  ref: hepdata:ins1764342/Table 1
+                  locator: Table 1, error 'Lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+        predictions:
+          - label: NNLO QCD × NLO EW (MATRIX, CT14nnlo), particle level
+            accuracy:
+              qcd: NNLO
+              ew: NLO
+              approximations:
+                - NLO EW corrections applied multiplicatively to the NNLO QCD cross section (the additive combination gives 518.3 fb)
+                - parton-level MATRIX prediction corrected to particle level with the factor C_theory from Sherpa
+                - smooth-cone photon isolation at parton level (δ0 = 0.1, γ = 0.1, n = 2)
+                - SM EW Zγjj cross section included
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 3.9
+              provenance:
+                uid: 792f99bd
+                ref: inspire:1764342
+                locator: "Table 6, 'Matrix NNLO × NLO EW': 513.5 ± 2.0 (stat) ± 2.7 (C_theory) ± 10.8 (PDF) +16.4 −14.9 (scale) fb; quadrature sum with the larger scale side"
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μR and μF scale variation
+                method: μR and μF varied independently by factors of 2 and 0.5 with 0.5 ≤ μF/μR ≤ 2; envelope (Sec. 7)
+                size:
+                  range:
+                    - 2.9
+                    - 3.2
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 89c5c1b7
+                  ref: inspire:1764342
+                  locator: "Table 6, 'Matrix NNLO × NLO EW': +16.4 −14.9 (scale) of 513.5 fb"
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: PDF
+                specific: PDF set and αs
+                pdf_set: NNPDF3.0 NNLO for the uncertainty (αs from the as_0117/as_0119 sets); central value with CT14nnlo
+                size:
+                  range:
+                    - 2.1
+                    - 2.1
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: f2389d85
+                  ref: inspire:1764342
+                  locator: "Table 6, 'Matrix NNLO × NLO EW': ± 10.8 (PDF) of 513.5 fb"
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: nonpert
+                specific: Parton-to-particle correction factor C_theory
+                method: C_theory evaluated with Sherpa 2.2.2 at NLO (Sec. 7)
+                size:
+                  range:
+                    - 0.53
+                    - 0.53
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: ddb7be78
+                  ref: inspire:1764342
+                  locator: "Table 6, 'Matrix NNLO × NLO EW': ± 2.7 (C_theory) of 513.5 fb"
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: numerical
+                specific: Finite number of generated events
+                size:
+                  range:
+                    - 0.39
+                    - 0.39
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 5b33d9ee
+                  ref: inspire:1764342
+                  locator: "Table 6, 'Matrix NNLO × NLO EW': ± 2.0 (stat) of 513.5 fb"
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-13/atlas-2020-llgamma
+            refs:
+              - inspire:1764342
+              - inspire:1357993
+              - inspire:1401405
+            provenance:
+              uid: dc718c59
+              ref: inspire:1764342
+              locator: Sec. 7 (MATRIX setup, EW corrections of the paper's refs. [79–81], uncertainties) and Table 6
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: NNLO QCD (MATRIX, CT14nnlo), particle level
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - parton-level MATRIX prediction corrected to particle level with the factor C_theory from Sherpa
+                - SM EW Zγjj cross section included
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 3.9
+              provenance:
+                uid: b221b200
+                ref: inspire:1764342
+                locator: "Table 6, 'Matrix NNLO': 518.9 ± 2.0 (stat) ± 5.1 (C_theory) ± 10.8 (PDF) +16.4 −14.9 (scale) fb; quadrature sum with the larger scale side"
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μR and μF scale variation
+                method: μR and μF varied independently by factors of 2 and 0.5 with 0.5 ≤ μF/μR ≤ 2; envelope (Sec. 7)
+                size:
+                  range:
+                    - 2.9
+                    - 3.2
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: d03e2d74
+                  ref: inspire:1764342
+                  locator: "Table 6, 'Matrix NNLO': +16.4 −14.9 (scale) of 518.9 fb"
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: PDF
+                specific: PDF set and αs
+                pdf_set: NNPDF3.0 NNLO for the uncertainty (αs from the as_0117/as_0119 sets); central value with CT14nnlo
+                size:
+                  range:
+                    - 2.1
+                    - 2.1
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 6733b288
+                  ref: inspire:1764342
+                  locator: "Table 6, 'Matrix NNLO': ± 10.8 (PDF) of 518.9 fb"
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-13/atlas-2020-llgamma
+            refs:
+              - inspire:1764342
+              - inspire:1357993
+            provenance:
+              uid: 77c573ed
+              ref: inspire:1764342
+              locator: Sec. 7 and Table 6
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NNLO+PS (MiNNLO_PS)
+            accuracy:
+              qcd: NNLO
+              shower_matched: true
+              approximations:
+                - full process pp → ℓ⁺ℓ⁻γ with spin correlations, interferences and off-shell effects
+                - no EW corrections
+                - 'no number extracted: agreement with the ATLAS data stated in the abstract'
+            codes:
+              - MiNNLO_PS
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            compared_to:
+              - meas:z-gamma/lhc-13/atlas-2020-llgamma
+            refs:
+              - inspire:1824053
+            provenance:
+              uid: 99eca682
+              ref: inspire:1824053
+              locator: Abstract (first NNLO+PS computation for Zγ; predictions in very good agreement with recent ATLAS data)
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NLO QCD multijet merged (Sherpa 2.2.8 MEPS@NLO; MadGraph5_aMC@NLO)
+            accuracy:
+              qcd: NLO
+              shower_matched: true
+              approximations:
+                - 'Sherpa: up to one additional parton at NLO, up to three in total; 514.2 ± 5.7 (stat) fb'
+                - 'MadGraph5_aMC@NLO: 503.4 ± 1.8 (stat) fb'
+                - only the MC statistical uncertainty is quoted
+            codes:
+              - Sherpa
+              - MadGraph5_aMC@NLO
+            compared_to:
+              - meas:z-gamma/lhc-13/atlas-2020-llgamma
+            refs:
+              - inspire:1764342
+            provenance:
+              uid: daba92c8
+              ref: inspire:1764342
+              locator: Sec. 7 and Table 6 (rows 'Sherpa NLO' and 'MadGraph NLO')
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+      - id: obs:z-gamma/lhc-13/ptllgamma
+        name: dσ/dpT(ℓℓγ), fiducial
+        kind: differential
+        variable: pT(ℓℓγ)
+        results:
+          - measurement: meas:z-gamma/lhc-13/atlas-2020-llgamma
+            total:
+              value_pct: 4.0
+              provenance:
+                uid: dcf2adae
+                ref: hepdata:ins1764342/Table 5
+                locator: 'Table 5, quadrature sum of all errors (min over bins); cross section per pT(ℓℓγ) bin in fb (not divided by the bin width); paper Sec. 6: the largest systematic uncertainty of all differential cross sections is the background estimation'
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Stat
+                size:
+                  range:
+                    - 0.98
+                    - 2.7
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 5
+                provenance:
+                  uid: 81c14b68
+                  ref: hepdata:ins1764342/Table 5
+                  locator: Table 5, error 'Stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: background
+                specific: Z+jets
+                size:
+                  range:
+                    - 2.4
+                    - 4.1
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 5
+                provenance:
+                  uid: fb68dc74
+                  ref: hepdata:ins1764342/Table 5
+                  locator: Table 5, error 'Z+jets'; category 'background' assigned by hand (label not in hepdata_label_map)
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Lumi
+                size:
+                  range:
+                    - 1.7
+                    - 1.7
+                  asymmetric: false
+                full_table: hepdata:ins1764342/Table 5
+                provenance:
+                  uid: 6eaae5a7
+                  ref: hepdata:ins1764342/Table 5
+                  locator: Table 5, error 'Lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+        predictions:
+          - label: NNLO+N3LL (pT resummation matched to fixed order)
+            accuracy:
+              qcd: NLO
+              resummation:
+                - accuracy: N3LL
+                  variable: pT(ℓℓγ)
+              approximations:
+                - 'fixed order O(αs²): NLO for the pT(ℓℓγ) spectrum; NNLO only for the integrated cross section'
+                - no EW corrections
+                - 'no number extracted: agreement with the 13 TeV ATLAS data at the few-percent level stated in the abstract'
+            compared_to:
+              - meas:z-gamma/lhc-13/atlas-2020-llgamma
+            refs:
+              - inspire:1801433
+            provenance:
+              uid: ccc3da7c
+              ref: inspire:1801433
+              locator: Abstract (N3LL resummation matched to the integrated cross section at NNLO; fully differential ℓ⁺ℓ⁻γ; agreement with the 13 TeV ATLAS data at the few-percent level)
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: N3LL+NNLO (CuTe-MCFM, SCET qT resummation)
+            accuracy:
+              qcd: NLO
+              resummation:
+                - accuracy: N3LL
+                  variable: qT of the colour-singlet system
+              approximations:
+                - 'matched to large-qT fixed-order predictions at relative order αs²: NLO for the spectrum'
+                - no comparison to this measurement recorded here
+            codes:
+              - CuTe-MCFM
+            refs:
+              - inspire:1818832
+            provenance:
+              uid: 33f4063f
+              ref: inspire:1818832
+              locator: Abstract (qT resummation at N3LL+NNLO for colour-singlet processes in CuTe-MCFM; novel results for γγ and Zγ; power corrections from photon isolation discussed)
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+      - id: obs:z-gamma/lhc-13/sigma-fid-nunugamma
+        name: Fiducial σ(pp → Z(→ νν̄)γ)
+        kind: fiducial
+        variable: 'ATLAS extended fiducial region: ET(γ) > 150 GeV, |η(γ)| < 2.37, pT(νν̄) > 150 GeV, Njet ≥ 0; CMS: pT(γ) > 225 GeV, |η(γ)| < 1.44 or 1.57 < |η(γ)| < 2.5 (generator-level region of the paper)'
+        results:
+          - measurement: meas:z-gamma/lhc-13/cms-2026-nunugamma
+            total:
+              value_pct: 6.0
+              provenance:
+                uid: dc1cd63d
+                ref: hepdata:ins3109635/Table3_FiducialCrossSections
+                locator: Table3_FiducialCrossSections, quadrature sum of all errors (bin 3); row 3 is the combined barrel + endcap result 23.3 +1.4 −1.3 fb (the paper's Table 4); HEPData gives only the total uncertainty
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties: []
+          - measurement: meas:z-gamma/lhc-13/atlas-2018-nunugamma
+            total:
+              value_pct: 9.6
+              provenance:
+                uid: d1a09bfe
+                ref: hepdata:ins1698006/Table 1
+                locator: 'Table 1, quadrature sum of all errors (bin 1); row 1 is Njets ≥ 0: 83.7 +3.6 −3.5 (stat) +6.9 −6.2 (syst) +1.7 −2.0 (lumi) fb; the component ranges span the Njets ≥ 0 and Njets = 0 rows'
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 4.3
+                    - 4.6
+                  asymmetric: true
+                full_table: hepdata:ins1698006/Table 1
+                provenance:
+                  uid: 756ad688
+                  ref: hepdata:ins1698006/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 7.6
+                    - 8.2
+                  asymmetric: true
+                full_table: hepdata:ins1698006/Table 1
+                provenance:
+                  uid: fbf54a51
+                  ref: hepdata:ins1698006/Table 1
+                  locator: Table 1, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 2.3
+                    - 2.4
+                  asymmetric: true
+                full_table: hepdata:ins1698006/Table 1
+                provenance:
+                  uid: 32dddd88
+                  ref: hepdata:ins1698006/Table 1
+                  locator: Table 1, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+        predictions:
+          - label: NNLO QCD (MATRIX), CMS fiducial region
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections in the quoted cross section
+                - uncertainty from μR and μF variation and numerical precision; no PDF uncertainty
+            codes:
+              - MATRIX
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 1.6
+              provenance:
+                uid: fde3e61d
+                ref: inspire:3109635
+                locator: "Summary: MATRIX (NNLO) 25.45 +0.41 −0.33 fb; larger side (hepdata:ins3109635/Table3_FiducialCrossSections, column 3, 'Total': 25.4 +0.4 −0.3 fb)"
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μR and μF scale variation (with numerical precision)
+                method: renormalisation and factorisation scale variation as quoted by CMS for the MATRIX prediction
+                size:
+                  range:
+                    - 1.3
+                    - 1.6
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: 3fd4fbf1
+                  ref: inspire:3109635
+                  locator: 'Summary: 25.45 +0.41 −0.33 fb; results section: theoretical predictions carry uncertainties from renormalization and factorization scale variation and numerical precision'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-13/cms-2026-nunugamma
+            refs:
+              - inspire:3109635
+              - inspire:1357993
+            provenance:
+              uid: 78ab65de
+              ref: inspire:3109635
+              locator: 'Results section and Table 4; Summary: 25.45 +0.41 −0.33 fb from MATRIX (NNLO)'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: NLO QCD (MadGraph5_aMC@NLO), CMS fiducial region
+            accuracy:
+              qcd: NLO
+              approximations:
+                - uncertainty from scale variation, numerical precision and PDFs
+            codes:
+              - MadGraph5_aMC@NLO
+            total:
+              value_pct: 3.7
+              provenance:
+                uid: cc488baa
+                ref: inspire:3109635
+                locator: 'Summary: MadGraph5_aMC@NLO 26.07 +0.96 −0.97 fb; larger side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-13/cms-2026-nunugamma
+            refs:
+              - inspire:3109635
+            provenance:
+              uid: 4830de7d
+              ref: inspire:3109635
+              locator: 'Table 4 and Summary: 26.07 +0.96 −0.97 fb from MadGraph5_aMC@NLO'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NNLO QCD (MCFM), ATLAS extended fiducial region, particle level
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - corrected to particle level with parton-to-particle factors
+                - μR = μF = m(Zγ); systematic uncertainty from QCD scale and PDF variations (Sec. 5.4)
+            codes:
+              - MCFM
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 6.0
+              provenance:
+                uid: c75c86ef
+                ref: inspire:1698006
+                locator: 'Table 6, Njets ≥ 0, NNLO MCFM prediction: 78.1 ± 0.2 (stat.) ± 4.7 (syst.) fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-13/atlas-2018-nunugamma
+            refs:
+              - inspire:1698006
+              - inspire:1615212
+            provenance:
+              uid: 4333e34e
+              ref: inspire:1698006
+              locator: Sec. 5.4 and Table 6
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+  - id: chan:z-gamma/lhc-8
+    collider: col:lhc-8
+    initial_state: pp
+    coverage: partial
+    last_reviewed: '2026-11-12'
+    headline:
+      observable: obs:z-gamma/lhc-8/sigma-fid-llgamma
+      region: Fiducial pp → Z(→ ℓ⁺ℓ⁻)γ, 8 TeV, ET(γ) > 15 GeV, ΔR(ℓ,γ) > 0.7 (ATLAS extended fiducial region, Njet ≥ 0)
+    measurements:
+      - id: meas:z-gamma/lhc-8/atlas-2016
+        experiment: ATLAS
+        dataset: 8 TeV, 20.3 fb⁻¹ (2012), e⁺e⁻γ + μ⁺μ⁻γ and νν̄γ
+        ref: inspire:1448301
+        hepdata: hepdata:ins1448301/Table 1
+      - id: meas:z-gamma/lhc-8/cms-2015-llgamma
+        experiment: CMS
+        dataset: 8 TeV, 19.5 fb⁻¹ (2012), e⁺e⁻γ + μ⁺μ⁻γ
+        ref: inspire:1345354
+        hepdata: hepdata:ins1345354/Table 4
+      - id: meas:z-gamma/lhc-8/cms-2016-nunugamma
+        experiment: CMS
+        dataset: 8 TeV, 19.6 fb⁻¹ (2012), νν̄γ
+        ref: inspire:1423069
+        hepdata: hepdata:ins1423069/Table 1
+    observables:
+      - id: obs:z-gamma/lhc-8/sigma-fid-llgamma
+        name: Fiducial σ(pp → Z(→ ℓ⁺ℓ⁻)γ), pT(γ) > 15 GeV
+        kind: fiducial
+        variable: 'ATLAS extended fiducial region (per lepton flavour): ET(γ) > 15 GeV, |η(γ)| < 2.37, pT(ℓ) > 25 GeV, |η(ℓ)| < 2.47, m(ℓℓ) > 40 GeV, ΔR(ℓ,γ) > 0.7, Njet ≥ 0; CMS: pT(γ) > 15 GeV, |η(γ)| < 2.5, pT(ℓ) > 20 GeV, |η(ℓ)| < 2.5, M(ℓℓ) > 50 GeV, ΔR(ℓ,γ) > 0.7'
+        results:
+          - measurement: meas:z-gamma/lhc-8/atlas-2016
+            total:
+              value_pct: 5.6
+              provenance:
+                uid: 2e6a01b3
+                ref: hepdata:ins1448301/Table 1
+                locator: 'Table 1, column 3, quadrature sum of all errors (bin 1); column 3 is the combined ℓ⁺ℓ⁻γ result; row 1 is Njets ≥ 0: 1507 ± 10 (stat) +78 −73 (syst) +29 −28 (lumi) fb; the component ranges span the Njets ≥ 0 and Njets = 0 rows'
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.66
+                    - 0.76
+                  asymmetric: false
+                full_table: hepdata:ins1448301/Table 1
+                provenance:
+                  uid: 3244f81b
+                  ref: hepdata:ins1448301/Table 1
+                  locator: Table 1, column 3, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 5.2
+                    - 5.8
+                  asymmetric: true
+                full_table: hepdata:ins1448301/Table 1
+                provenance:
+                  uid: 325ed32f
+                  ref: hepdata:ins1448301/Table 1
+                  locator: Table 1, column 3, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 1.9
+                    - 1.9
+                  asymmetric: true
+                full_table: hepdata:ins1448301/Table 1
+                provenance:
+                  uid: 1001b25c
+                  ref: hepdata:ins1448301/Table 1
+                  locator: Table 1, column 3, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+          - measurement: meas:z-gamma/lhc-8/cms-2015-llgamma
+            total:
+              value_pct: 5.5
+              provenance:
+                uid: ff78730d
+                ref: hepdata:ins1345354/Table 4
+                locator: Table 4, quadrature sum of all errors (bin 1); row 1 is the inclusive cross section 2063 ± 19 (stat) ± 98 (syst) ± 54 (lumi) fb; the component ranges span the inclusive and jet-veto rows
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 0.92
+                    - 1.0
+                  asymmetric: false
+                full_table: hepdata:ins1345354/Table 4
+                provenance:
+                  uid: 446ddc01
+                  ref: hepdata:ins1345354/Table 4
+                  locator: Table 4, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 4.8
+                    - 6.5
+                  asymmetric: false
+                full_table: hepdata:ins1345354/Table 4
+                provenance:
+                  uid: 7cd71397
+                  ref: hepdata:ins1345354/Table 4
+                  locator: Table 4, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 2.6
+                    - 2.6
+                  asymmetric: false
+                full_table: hepdata:ins1345354/Table 4
+                provenance:
+                  uid: bcaa6738
+                  ref: hepdata:ins1345354/Table 4
+                  locator: Table 4, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+        predictions:
+          - label: NNLO QCD (qT subtraction, MMHT2014), ATLAS fiducial cuts
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - direct photons only, Frixione isolation
+                - 'ATLAS quotes the prediction corrected to particle level: 1483 +19 −37 fb'
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 2.5
+              provenance:
+                uid: a27f1333
+                ref: inspire:1448301
+                locator: 'Table 8, ℓ⁺ℓ⁻γ, Njets ≥ 0, NNLO prediction: 1483 +19 −37 fb (combined statistical and systematic uncertainty); larger side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μR and μF scale variation
+                method: μR and μF varied independently in [0.5 μ0, 2 μ0], μ0 = sqrt(mZ² + pT(γ)²), no constraint on μF/μR (Sec. 3.1)
+                size:
+                  range:
+                    - 1.3
+                    - 2.5
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: e923c770
+                  ref: inspire:1357993
+                  locator: 'Table 2, √s = 8 TeV, Njet ≥ 0: σ_NNLO = 1.504 pb +1.3% −2.5% (parton level)'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: numerical
+                specific: Statistical error and finite r_cut
+                size:
+                  range:
+                    - 0.3
+                    - 0.3
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: f5e6c983
+                  ref: inspire:1357993
+                  locator: 'Table 2 caption: numerical uncertainty conservatively estimated to be about 0.3%'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/atlas-2016
+            refs:
+              - inspire:1448301
+              - inspire:1357993
+              - inspire:1080394
+            provenance:
+              uid: 53af3b10
+              ref: inspire:1448301
+              locator: Table 8 (ℓ⁺ℓ⁻γ, Njets ≥ 0, 'NNLO Prediction') and Sec. 7.1; parton-level values in inspire:1357993 Table 2
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: NLO QCD (MCFM), ATLAS, particle level
+            accuracy:
+              qcd: NLO
+              approximations:
+                - corrected to particle level with parton-to-particle scale factors
+                - no EW corrections
+            codes:
+              - MCFM
+            total:
+              value_pct: 6.1
+              provenance:
+                uid: 951104f3
+                ref: inspire:1448301
+                locator: 'Table 8, ℓ⁺ℓ⁻γ, Njets ≥ 0, MCFM prediction: 1345 +66 −82 fb; larger side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/atlas-2016
+            refs:
+              - inspire:1448301
+            provenance:
+              uid: 5561c1b7
+              ref: inspire:1448301
+              locator: Table 8 ('MCFM Prediction') and Sec. 7.1
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NNLO QCD (Grazzini et al.), CMS cuts
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - scale uncertainty only
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 0.98
+              provenance:
+                uid: 591fc1a4
+                ref: inspire:1345354
+                locator: 'Inclusive cross-section result: NNLO σ_incl = 2241 ± 22 (scale only) fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/cms-2015-llgamma
+            refs:
+              - inspire:1345354
+              - inspire:1255671
+            provenance:
+              uid: 56df7891
+              ref: inspire:1345354
+              locator: "Inclusive cross-section result: NNLO calculation (the paper's ref. [21]) σ_incl = 2241 ± 22 (scale only) fb"
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NLO QCD (MCFM), CMS
+            accuracy:
+              qcd: NLO
+              approximations:
+                - no EW corrections
+            codes:
+              - MCFM
+            total:
+              value_pct: 5.7
+              provenance:
+                uid: a402accf
+                ref: inspire:1345354
+                locator: 'Inclusive cross-section result: MCFM prediction σ_incl = 2100 ± 120 fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/cms-2015-llgamma
+            refs:
+              - inspire:1345354
+            provenance:
+              uid: cbb7a885
+              ref: inspire:1345354
+              locator: 'Inclusive cross-section result: MCFM prediction σ_incl = 2100 ± 120 fb'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+      - id: obs:z-gamma/lhc-8/sigma-fid-nunugamma
+        name: Fiducial σ(pp → Z(→ νν̄)γ)
+        kind: fiducial
+        variable: 'ATLAS extended fiducial region: ET(γ) > 130 GeV, |η(γ)| < 2.37, pT(νν̄) > 100 GeV, Njet ≥ 0; CMS: ET(γ) > 145 GeV, |η(γ)| < 1.44'
+        results:
+          - measurement: meas:z-gamma/lhc-8/cms-2016-nunugamma
+            total:
+              value_pct: 13.0
+              provenance:
+                uid: bf99b7bd
+                ref: hepdata:ins1423069/Table 1
+                locator: Table 1, quadrature sum of all errors (bin 1); row 1 is the observed cross section 52.7 ± 2.1 (stat) ± 6.4 (syst) ± 1.4 (lumi) fb; row 2 is the theory prediction
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 4.0
+                    - 4.0
+                  asymmetric: false
+                full_table: hepdata:ins1423069/Table 1
+                provenance:
+                  uid: f53157b7
+                  ref: hepdata:ins1423069/Table 1
+                  locator: Table 1, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 12.0
+                    - 12.0
+                  asymmetric: false
+                full_table: hepdata:ins1423069/Table 1
+                provenance:
+                  uid: 01c15ec5
+                  ref: hepdata:ins1423069/Table 1
+                  locator: Table 1, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 2.7
+                    - 2.7
+                  asymmetric: false
+                full_table: hepdata:ins1423069/Table 1
+                provenance:
+                  uid: ed849115
+                  ref: hepdata:ins1423069/Table 1
+                  locator: Table 1, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+          - measurement: meas:z-gamma/lhc-8/atlas-2016
+            total:
+              value_pct: 49.0
+              provenance:
+                uid: 4a2276cc
+                ref: hepdata:ins1448301/Table 2
+                locator: 'Table 2, quadrature sum of all errors (bin 1); row 1 is Njets ≥ 0: 68 ± 4 (stat) +33 −32 (syst) ± 1 (lumi) fb; the component ranges span the Njets ≥ 0 and Njets = 0 rows'
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: stat
+                size:
+                  range:
+                    - 4.7
+                    - 5.9
+                  asymmetric: false
+                full_table: hepdata:ins1448301/Table 2
+                provenance:
+                  uid: ba7a1a47
+                  ref: hepdata:ins1448301/Table 2
+                  locator: Table 2, error 'stat'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: sys
+                size:
+                  range:
+                    - 23.0
+                    - 49.0
+                  asymmetric: true
+                full_table: hepdata:ins1448301/Table 2
+                provenance:
+                  uid: 69fc3286
+                  ref: hepdata:ins1448301/Table 2
+                  locator: Table 2, error 'sys'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+              - category: lumi
+                specific: sys,lumi
+                size:
+                  range:
+                    - 1.5
+                    - 2.3
+                  asymmetric: false
+                full_table: hepdata:ins1448301/Table 2
+                provenance:
+                  uid: 44fed7fa
+                  ref: hepdata:ins1448301/Table 2
+                  locator: Table 2, error 'sys,lumi'
+                  source: hepdata
+                  status: machine-verified
+                  date: '2026-11-12'
+        predictions:
+          - label: NNLO QCD (Grazzini et al.), CMS fiducial region
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - calculation provided to CMS by the authors of the NNLO computation
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 4.8
+              provenance:
+                uid: 6867bf8c
+                ref: inspire:1423069
+                locator: 'Abstract: standard model prediction of 50.0 +2.4 −2.2 fb; larger side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/cms-2016-nunugamma
+            refs:
+              - inspire:1423069
+              - inspire:1255671
+            provenance:
+              uid: a1e30eb8
+              ref: inspire:1423069
+              locator: "Abstract and results section: NNLO theoretical prediction (the paper's refs. [31, 32]) 50.0 +2.4 −2.2 fb"
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: NLO QCD (MCFM), CMS fiducial region
+            accuracy:
+              qcd: NLO
+              approximations:
+                - uncertainty from PDF and scale variations
+            codes:
+              - MCFM
+            total:
+              value_pct: 12.0
+              provenance:
+                uid: 647fe161
+                ref: inspire:1423069
+                locator: 'Results section: MCFM (NLO) 40.7 ± 4.9 fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/cms-2016-nunugamma
+            refs:
+              - inspire:1423069
+            provenance:
+              uid: 6bb92dd0
+              ref: inspire:1423069
+              locator: 'Results section: NLO generator MCFM, 40.7 ± 4.9 fb (PDF and scale uncertainties)'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NNLO QCD (qT subtraction, MMHT2014), ATLAS fiducial cuts, particle level
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - corrected to particle level with parton-to-particle scale factors
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 2.9
+              provenance:
+                uid: dedd7273
+                ref: inspire:1448301
+                locator: 'Table 8, νν̄γ, Njets ≥ 0, NNLO prediction: 81.4 +2.4 −2.2 fb; larger side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/atlas-2016
+            refs:
+              - inspire:1448301
+              - inspire:1357993
+            provenance:
+              uid: 7fccf58a
+              ref: inspire:1448301
+              locator: Table 8 (νν̄γ, Njets ≥ 0, 'NNLO Prediction') and Sec. 7.1
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NLO QCD (MCFM), ATLAS, particle level
+            accuracy:
+              qcd: NLO
+              approximations:
+                - corrected to particle level with parton-to-particle scale factors
+            codes:
+              - MCFM
+            total:
+              value_pct: 3.2
+              provenance:
+                uid: d8ca8d47
+                ref: inspire:1448301
+                locator: 'Table 8, νν̄γ, Njets ≥ 0, MCFM prediction: 68.2 ± 2.2 fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-8/atlas-2016
+            refs:
+              - inspire:1448301
+            provenance:
+              uid: 907e02c8
+              ref: inspire:1448301
+              locator: Table 8 (νν̄γ, Njets ≥ 0, 'MCFM Prediction')
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+  - id: chan:z-gamma/lhc-7
+    collider: col:lhc-7
+    initial_state: pp
+    coverage: partial
+    last_reviewed: '2026-11-12'
+    headline:
+      observable: obs:z-gamma/lhc-7/sigma-fid-llgamma
+      region: Fiducial pp → Z(→ ℓ⁺ℓ⁻)γ, 7 TeV, ET(γ) > 15 GeV, ΔR(ℓ,γ) > 0.7 (ATLAS extended fiducial region, Njet ≥ 0)
+    measurements:
+      - id: meas:z-gamma/lhc-7/atlas-2013
+        experiment: ATLAS
+        dataset: 7 TeV, 4.6 fb⁻¹ (2011), e⁺e⁻γ + μ⁺μ⁻γ and νν̄γ
+        ref: inspire:1217863
+        hepdata: hepdata:ins1217863/Table 3
+      - id: meas:z-gamma/lhc-7/cms-2014-llgamma
+        experiment: CMS
+        dataset: 7 TeV, 5.0 fb⁻¹ (2011), e⁺e⁻γ + μ⁺μ⁻γ
+        ref: inspire:1251905
+        hepdata: hepdata:ins1251905/Table 2
+      - id: meas:z-gamma/lhc-7/cms-2013-nunugamma
+        experiment: CMS
+        dataset: 7 TeV, 5.0 fb⁻¹ (2011), νν̄γ
+        ref: inspire:1252719
+    observables:
+      - id: obs:z-gamma/lhc-7/sigma-fid-llgamma
+        name: Fiducial σ(pp → Z(→ ℓ⁺ℓ⁻)γ), pT(γ) > 15 GeV
+        kind: fiducial
+        variable: 'ATLAS extended fiducial region (per lepton flavour): ET(γ) > 15 GeV, |η(γ)| < 2.37, pT(ℓ) > 25 GeV, |η(ℓ)| < 2.47, m(ℓℓ) > 40 GeV, ΔR(ℓ,γ) > 0.7, Njet ≥ 0; CMS: σ × B(Z → ℓℓ) for pT(γ) > 15 GeV, ΔR(ℓ,γ) > 0.7, m(ℓℓ) > 50 GeV'
+        results:
+          - measurement: meas:z-gamma/lhc-7/atlas-2013
+            total:
+              value_pct: 9.3
+              provenance:
+                uid: 1e3c3a9b
+                ref: hepdata:ins1217863/Table 3
+                locator: Table 3, column 3, quadrature sum of all errors (min over bins); column 3 is the combined electron-muon result 1.31 ± 0.02 (stat) ± 0.11 (syst) ± 0.05 (lumi) pb; both systematic entries carry the label 'sys' in HEPData, so the components are taken from the paper
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 1.5
+                    - 1.5
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 4381ee4f
+                  ref: inspire:1217863
+                  locator: 'Table VII, ℓ⁺ℓ⁻γ, Njet ≥ 0: 1.31 ± 0.02 (stat) ± 0.11 (syst) ± 0.05 (lumi) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Systematic uncertainty excluding luminosity (combined)
+                size:
+                  range:
+                    - 8.4
+                    - 8.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: f01e6c88
+                  ref: inspire:1217863
+                  locator: 'Table VII, ℓ⁺ℓ⁻γ, Njet ≥ 0: 1.31 ± 0.02 (stat) ± 0.11 (syst) ± 0.05 (lumi) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 3.8
+                    - 3.8
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: c9299f91
+                  ref: inspire:1217863
+                  locator: 'Table VII, ℓ⁺ℓ⁻γ, Njet ≥ 0: 1.31 ± 0.02 (stat) ± 0.11 (syst) ± 0.05 (lumi) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+          - measurement: meas:z-gamma/lhc-7/cms-2014-llgamma
+            total:
+              value_pct: 5.4
+              provenance:
+                uid: c1d0053b
+                ref: hepdata:ins1251905/Table 2
+                locator: 'Table 2, quadrature sum of all errors (bin 3); row 3 of column 1 is the combined ℓℓγ result for pT(γ) > 15 GeV: 5.33 ± 0.08 (stat) ± 0.25 (syst) pb with a 2.2% luminosity uncertainty; components taken from the paper because the HEPData column also holds the electron, muon and theory rows'
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 1.5
+                    - 1.5
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 26547e3f
+                  ref: inspire:1251905
+                  locator: 'Sec. 5 (Zγ cross section): σ(pp → Zγ) × B(Z → ℓℓ) = 5.33 ± 0.08 (stat.) ± 0.25 (syst.) ± 0.12 (lum.) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Systematic uncertainty excluding luminosity (combined)
+                size:
+                  range:
+                    - 4.7
+                    - 4.7
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 88c8daba
+                  ref: inspire:1251905
+                  locator: 'Sec. 5 (Zγ cross section): σ(pp → Zγ) × B(Z → ℓℓ) = 5.33 ± 0.08 (stat.) ± 0.25 (syst.) ± 0.12 (lum.) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.3
+                    - 2.3
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 29ab4109
+                  ref: inspire:1251905
+                  locator: 'Sec. 5 (Zγ cross section): σ(pp → Zγ) × B(Z → ℓℓ) = 5.33 ± 0.08 (stat.) ± 0.25 (syst.) ± 0.12 (lum.) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+        predictions:
+          - label: NNLO QCD (qT subtraction, MMHT2014), ATLAS fiducial cuts
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - direct photons only, Frixione isolation (ε = 0.5, R = 0.4, n = 1)
+                - parton level, compared with the particle-level measurement
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 2.3
+              provenance:
+                uid: 24777a21
+                ref: inspire:1357993
+                locator: 'Table 2, √s = 7 TeV, Njet ≥ 0: σ_NNLO = 1.320 pb +1.3% −2.3% (scale); larger side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μR and μF scale variation
+                method: μR and μF varied independently in [0.5 μ0, 2 μ0], μ0 = sqrt(mZ² + pT(γ)²), no constraint on μF/μR (Sec. 3.1)
+                size:
+                  range:
+                    - 1.3
+                    - 2.3
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: ec3ab3b4
+                  ref: inspire:1357993
+                  locator: 'Table 2, √s = 7 TeV, Njet ≥ 0: σ_NNLO = 1.320 pb +1.3% −2.3%'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: numerical
+                specific: Statistical error and finite r_cut
+                size:
+                  range:
+                    - 0.3
+                    - 0.3
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 9eb9ddfb
+                  ref: inspire:1357993
+                  locator: 'Table 2 caption: numerical uncertainty conservatively estimated to be about 0.3%'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-7/atlas-2013
+            refs:
+              - inspire:1357993
+              - inspire:1255671
+              - inspire:1080394
+            provenance:
+              uid: 13e12ced
+              ref: inspire:1357993
+              locator: Sec. 3 (ℓ⁺ℓ⁻γ results), Tables 1–2 (soft pT(γ) cut, compared with ATLAS)
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: NLO QCD (MCFM), ATLAS, particle level
+            accuracy:
+              qcd: NLO
+              approximations:
+                - corrected to particle level with parton-to-particle scale factors
+                - no EW corrections
+            codes:
+              - MCFM
+            total:
+              value_pct: 4.2
+              provenance:
+                uid: fe1592de
+                ref: inspire:1217863
+                locator: 'Table VII, ℓ⁺ℓ⁻γ, Njet ≥ 0, MCFM prediction: 1.18 ± 0.05 pb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-7/atlas-2013
+            refs:
+              - inspire:1217863
+            provenance:
+              uid: 52797c19
+              ref: inspire:1217863
+              locator: Table VII (MCFM prediction column) and caption
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NLO QCD (MCFM, CTEQ6.6), CMS
+            accuracy:
+              qcd: NLO
+              approximations:
+                - no EW corrections
+            codes:
+              - MCFM
+            total:
+              value_pct: 5.0
+              provenance:
+                uid: 665dfc6f
+                ref: inspire:1251905
+                locator: 'Sec. 5 (Zγ cross section): NLO cross section of 5.45 ± 0.27 pb (also hepdata:ins1251905/Table 2, row 4)'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-7/cms-2014-llgamma
+            refs:
+              - inspire:1251905
+            provenance:
+              uid: 4ba44307
+              ref: inspire:1251905
+              locator: 'Sec. 5 (Zγ cross section): theoretical NLO cross section computed with MCFM'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+      - id: obs:z-gamma/lhc-7/sigma-fid-nunugamma
+        name: Fiducial σ(pp → Z(→ νν̄)γ)
+        kind: fiducial
+        variable: 'ATLAS extended fiducial region: ET(γ) > 100 GeV, |η(γ)| < 2.37, pT(νν̄) > 90 GeV, Njet ≥ 0; CMS: ET(γ) > 145 GeV, |η(γ)| < 1.4'
+        results:
+          - measurement: meas:z-gamma/lhc-7/atlas-2013
+            total:
+              value_pct: 18.0
+              provenance:
+                uid: 1c30d227
+                ref: hepdata:ins1217863/Table 5
+                locator: Table 5, quadrature sum of all errors (min over bins); 0.133 ± 0.013 (stat) ± 0.020 (syst) ± 0.005 (lumi) pb; both systematic entries carry the label 'sys' in HEPData, so the components are taken from the paper
+                source: hepdata
+                status: machine-verified
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 9.8
+                    - 9.8
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: aa6e5446
+                  ref: inspire:1217863
+                  locator: 'Table VII, νν̄γ, Njet ≥ 0: 0.133 ± 0.013 (stat) ± 0.020 (syst) ± 0.005 (lumi) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Systematic uncertainty excluding luminosity (combined)
+                size:
+                  range:
+                    - 15.0
+                    - 15.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 02fd9121
+                  ref: inspire:1217863
+                  locator: 'Table VII, νν̄γ, Njet ≥ 0: 0.133 ± 0.013 (stat) ± 0.020 (syst) ± 0.005 (lumi) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 3.8
+                    - 3.8
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 8ee36c60
+                  ref: inspire:1217863
+                  locator: 'Table VII, νν̄γ, Njet ≥ 0: 0.133 ± 0.013 (stat) ± 0.020 (syst) ± 0.005 (lumi) pb'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+          - measurement: meas:z-gamma/lhc-7/cms-2013-nunugamma
+            total:
+              value_pct: 29.0
+              provenance:
+                uid: 9cee27e1
+                ref: inspire:1252719
+                locator: 'Abstract: 21.1 ± 4.2 (stat.) ± 4.3 (syst.) ± 0.5 (lum.) fb for ET(γ) > 145 GeV and |η(γ)| < 1.4; added in quadrature'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: stat
+                specific: Data statistics
+                size:
+                  range:
+                    - 20.0
+                    - 20.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 1454fba0
+                  ref: inspire:1252719
+                  locator: 'Abstract: 21.1 ± 4.2 (stat.) ± 4.3 (syst.) ± 0.5 (lum.) fb for ET(γ) > 145 GeV and |η(γ)| < 1.4'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: syst_combined
+                specific: Systematic uncertainty excluding luminosity (combined)
+                size:
+                  range:
+                    - 20.0
+                    - 20.0
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 0dc80f42
+                  ref: inspire:1252719
+                  locator: 'Abstract: 21.1 ± 4.2 (stat.) ± 4.3 (syst.) ± 0.5 (lum.) fb for ET(γ) > 145 GeV and |η(γ)| < 1.4'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: lumi
+                specific: Integrated luminosity
+                size:
+                  range:
+                    - 2.4
+                    - 2.4
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: e7af4fb3
+                  ref: inspire:1252719
+                  locator: 'Abstract: 21.1 ± 4.2 (stat.) ± 4.3 (syst.) ± 0.5 (lum.) fb for ET(γ) > 145 GeV and |η(γ)| < 1.4'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+        predictions:
+          - label: NNLO QCD (qT subtraction, MMHT2014), ATLAS fiducial cuts
+            accuracy:
+              qcd: NNLO
+              approximations:
+                - no EW corrections
+                - 'quoted per neutrino flavour: 46.01 fb, compared in the paper with the ATLAS value divided by three (44.3 fb)'
+                - direct photons only, Frixione isolation
+                - parton level
+            uses_amplitudes:
+              - amp:2L/qqbar-Vgamma
+            total:
+              value_pct: 2.5
+              provenance:
+                uid: aa981e4f
+                ref: inspire:1357993
+                locator: 'Table 5, √s = 7 TeV, Njet ≥ 0: σ_NNLO = 46.01 fb +2.5% −2.3% (scale); larger side'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            uncertainties:
+              - category: MHOU
+                specific: μR and μF scale variation
+                method: μR and μF varied independently in [0.5 μ0, 2 μ0], μ0 = sqrt(mZ² + pT(γ)²), no constraint on μF/μR (Sec. 3.1)
+                size:
+                  range:
+                    - 2.3
+                    - 2.5
+                  unit: '%'
+                  asymmetric: true
+                provenance:
+                  uid: dbc59cad
+                  ref: inspire:1357993
+                  locator: 'Table 5, √s = 7 TeV, Njet ≥ 0: σ_NNLO = 46.01 fb +2.5% −2.3%'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+              - category: numerical
+                specific: Statistical error and finite r_cut
+                size:
+                  range:
+                    - 0.5
+                    - 0.5
+                  unit: '%'
+                  asymmetric: false
+                provenance:
+                  uid: 922cfeab
+                  ref: inspire:1357993
+                  locator: 'Table 5 caption: numerical uncertainty conservatively estimated to be about 0.5%'
+                  source: agent
+                  status: agent-draft
+                  date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-7/atlas-2013
+            refs:
+              - inspire:1357993
+              - inspire:1080394
+            provenance:
+              uid: d21cc856
+              ref: inspire:1357993
+              locator: Sec. 3 (νν̄γ results), Tables 4–5
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+            headline: true
+          - label: NLO QCD (MCFM), ATLAS, particle level
+            accuracy:
+              qcd: NLO
+              approximations:
+                - corrected to particle level with parton-to-particle scale factors
+            codes:
+              - MCFM
+            total:
+              value_pct: 7.7
+              provenance:
+                uid: 6a35b0ba
+                ref: inspire:1217863
+                locator: 'Table VII, νν̄γ, Njet ≥ 0, MCFM prediction: 0.156 ± 0.012 pb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-7/atlas-2013
+            refs:
+              - inspire:1217863
+            provenance:
+              uid: 860f9473
+              ref: inspire:1217863
+              locator: Table VII (MCFM prediction column) and caption
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'
+          - label: NLO QCD, CMS fiducial region
+            accuracy:
+              qcd: NLO
+              approximations:
+                - NLO prediction as quoted by CMS (the paper's ref. [4]); a second NLO estimate of 24.6 ± 2.5 fb is also given
+            total:
+              value_pct: 5.0
+              provenance:
+                uid: 65a2a22c
+                ref: inspire:1252719
+                locator: 'Abstract: standard model prediction of 21.9 ± 1.1 fb'
+                source: agent
+                status: agent-draft
+                date: '2026-11-12'
+            compared_to:
+              - meas:z-gamma/lhc-7/cms-2013-nunugamma
+            refs:
+              - inspire:1252719
+            provenance:
+              uid: 6fa7b89f
+              ref: inspire:1252719
+              locator: 'Abstract and results section: theoretical cross section predicted at NLO, 21.9 ± 1.1 fb'
+              source: agent
+              status: agent-draft
+              date: '2026-11-12'

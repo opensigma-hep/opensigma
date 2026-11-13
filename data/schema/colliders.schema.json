@@ -17,7 +17,19 @@
         ]
       },
       "status": {"enum": ["past", "running", "future"]},
-      "order": {"type": "integer"}
+      "order": {"type": "integer"},
+      "machine": {"type": "string", "minLength": 1, "description": "the accelerator this entry is a running period or stage of"},
+      "lab": {"type": "string", "minLength": 1},
+      "years": {"type": "string", "minLength": 1},
+      "url": {"$ref": "experiments.schema.json#/$defs/url", "description": "official machine/project page; the source of the optional facts"},
+      "note": {"type": "string", "minLength": 1},
+      "luminosity": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "source"],
+        "properties": {"text": {"type": "string", "minLength": 1}, "source": {"$ref": "experiments.schema.json#/$defs/url"}}
+      },
+      "sources": {"$ref": "experiments.schema.json#/$defs/urls"}
     }
   }
 }

@@ -55,11 +55,14 @@ export function render(main, data) {
     }))),
     el('h2', {}, 'Browse'),
     el('ul', {},
+      el('li', {}, el('a', { href: '#/processes' }, 'Process atlas'), ' · every process with its leading-order Feynman diagram'),
       el('li', {}, el('a', { href: '#/gaps' }, 'Gap finder'), ' · partial or missing building blocks, where theory limits precision most'),
       el('li', {}, el('a', { href: '#/next-run' }, 'Next-run ranking'), ' · projected measurements against today’s theory'),
       el('li', {}, el('a', { href: '#/timeline' }, 'Theory progress'), ' · channels reaching each QCD order over time'),
       el('li', {}, el('a', { href: '#/amplitudes' }, 'Amplitude library'), ' · loop amplitudes shared between processes'),
       el('li', {}, el('a', { href: '#/parameters' }, 'Parameters'), ` · ${data.parameters.map((x) => x.symbol).join(', ')} and their determinations`),
+      el('li', {}, el('a', { href: '#/glossary' }, 'Glossary'), ' · every abbreviation, label and status used on this site'),
+      el('li', {}, el('a', { href: '#/experiments' }, 'Experiments'), ' · official pages and every measurement by experiment, plus the working groups'),
       el('li', {}, 'Colliders: ', ...data.colliders.filter((c) => usedCols.has(c.id)).flatMap((c, i) => [i ? ' · ' : '', link(c.id, c.name)]))),
   );
 }

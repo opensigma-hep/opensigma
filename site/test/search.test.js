@@ -49,3 +49,21 @@ test('query that normalises to empty matches nothing', () => {
   assert.deepEqual(ids('_'), []);
   assert.deepEqual(ids('alpha _'), ids('alpha'));
 });
+
+test('every dash folds to an ASCII hyphen', () => {
+  for (const d of ['‐', '‑', '‒', '–', '—', '―', '−']) assert.equal(normalize(`a${d}b`), 'a-b');
+  assert.deepEqual(ids('Drell-Yan'), ['proc:dy']);
+  assert.deepEqual(ids('drell–yan'), ['proc:dy']);
+});
+test('id slug in the text finds labels with combining marks; colliders rank after parameters', () => {
+  const i2 = [{ id: 'col:lhc-13', kind: 'col', label: 'LHC 13 TeV', text: 'LHC 13 TeV col:lhc-13 pp' },
+    { id: 'proc:ttbar', kind: 'proc', label: 'tt̄ production', text: 'tt̄ production proc:ttbar' },
+    { id: 'par:x', kind: 'par', label: 'LHC', text: '' }];
+  const f = (q) => search(i2, q).map((e) => e.id);
+  assert.deepEqual(f('ttbar'), ['proc:ttbar']);
+  assert.deepEqual(f('proc:ttbar'), ['proc:ttbar']);
+  assert.deepEqual(f('tt'), ['proc:ttbar']);
+  assert.deepEqual(f('lhc'), ['par:x', 'col:lhc-13']);
+  // a match on the id ranks with label matches, ahead of text-only ones
+  assert.deepEqual(search([{ id: 'amp:1', kind: 'amp', label: 'x', text: 'ttbar' }, ...i2], 'ttbar').map((e) => e.id), ['proc:ttbar', 'amp:1']);
+});
